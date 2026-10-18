@@ -26,6 +26,9 @@ def main():
     ap.add_argument("--layers", type=int, nargs="+", default=[1, 8, 16, 23])
     ap.add_argument("--pool-size", type=int, default=2000)
     ap.add_argument("--holdout-size", type=int, default=256)
+    ap.add_argument("--tune-size", type=int, default=None,
+                    help="first rows of the holdout = tuning split (E1/E2); the "
+                         "rest = untouched test split (E3). Default holdout // 2")
     ap.add_argument("--seqlen", type=int, default=512)
     ap.add_argument("--data-seed", type=int, default=0)
     ap.add_argument("--batch", type=int, default=8)
@@ -64,7 +67,8 @@ def main():
     elapsed = time.time() - t0
     n_run = last  # layers actually executed
     per_layer_seq = elapsed / max(n_run, 1) / N
-    meta = dict(pool_size=len(pool), holdout_size=len(holdout), seqlen=T,
+    tune_size = args.tune_size if args.tune_size is not None else len(holdout) // 2
+    meta = dict(pool_size=len(pool), holdout_size=len(holdout), tune_size=tune_size, seqlen=T,
                 data_seed=args.data_seed, layers=args.layers,
                 model=MU.MODEL_NAME, num_layers=MU.num_layers(model),
                 cache_seconds=elapsed,

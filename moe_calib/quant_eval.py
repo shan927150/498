@@ -10,7 +10,7 @@ from __future__ import annotations
 import torch
 
 from . import model_utils as MU
-from .gptq import quantize_expert
+from .gptq import gptq_quantize, quantize_expert
 
 
 def fp_weights(model, L, e):
@@ -27,6 +27,22 @@ def quantize_from_acc(model, acc, L, e, blocks=None, bits=4, group_size=128):
     b = blocks if blocks is not None else list(range(acc.K))
     return quantize_from_H(model, L, e, acc.H_sum((L, e, "gu"), b),
                            acc.H_sum((L, e, "down"), b), bits, group_size)
+
+
+@torch.no_grad()
+def quantize_from_acc_or_fallback(model, acc, L, e, bits=4, group_size=128):
+    """Zero-calibration fallback, OUTSIDE the solver. An expert that received
+    no calibration tokens under a strategy has no Hessian; it is quantized
+    with H = I and act-order off, which makes GPTQ exactly per-group
+    asymmetric round-to-nearest. The rule depends only on the FP weights, so
+    it is identical for every strategy. Returns (W_q, used_fallback)."""
+    if acc.tokens((L, e, "gu")) > 0:
+        return quantize_from_acc(model, acc, L, e, None, bits, group_size), False
+    out = {}
+    for name, W in fp_weights(model, L, e).items():
+        I = torch.eye(W.shape[1], dtype=torch.float32, device=MU.GPU)
+        out[name] = gptq_quantize(W, I, bits, group_size, actorder=False)
+    return out, True
 
 
 @torch.no_grad()

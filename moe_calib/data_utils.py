@@ -59,9 +59,25 @@ def load_layer_cache(cache_dir: str, layer: int) -> torch.Tensor:
     return torch.load(os.path.join(cache_dir, f"L{layer}.pt"), mmap=True)
 
 
-def pool_and_holdout_ids(meta: dict):
+def split_ids(meta: dict, tune_size: int | None = None) -> dict:
+    """Three disjoint roles over the cached rows (no re-caching needed):
+      pool  rows 0..P-1          candidate / calibration sequences
+      tune  rows P..P+tune-1     E1 labels -> E2 signal selection + fit
+      test  rows P+tune..P+H-1   E3 final reconstruction ONLY (untouched)
+    The holdout was drawn as a shuffled C4 pass, so a contiguous split is a
+    random split. `definition` must be recorded by every consumer."""
     P, H = meta["pool_size"], meta["holdout_size"]
-    return list(range(P)), list(range(P, P + H))
+    if tune_size is None:
+        tune_size = meta.get("tune_size", H // 2)
+    assert 0 < tune_size < H, f"tune_size={tune_size} must be in (0, {H})"
+    pool = list(range(P))
+    tune = list(range(P, P + tune_size))
+    test = list(range(P + tune_size, P + H))
+    sp, st, ss = set(pool), set(tune), set(test)
+    assert not (sp & st) and not (sp & ss) and not (st & ss), "splits overlap"
+    definition = dict(pool=[0, P], tune=[P, P + tune_size], test=[P + tune_size, P + H],
+                      data_seed=meta.get("data_seed"), seqlen=meta.get("seqlen"))
+    return dict(pool=pool, tune=tune, test=test, definition=definition)
 
 
 @torch.no_grad()

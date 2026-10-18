@@ -29,9 +29,23 @@ up_proj share "gu" since they see the same input (halves memory, and GPTQ
 only needs the INPUT Hessian).
 """
 from __future__ import annotations
+import hashlib
+
 import torch
 
 Key = tuple[int, int, str]   # (layer, expert, "gu"|"down")
+
+
+def block_of(seq_id: int, K: int, block_seed: int = 0) -> int:
+    """Fixed statistical block of a sequence: a hash of (block_seed, seq_id).
+    It never depends on selection order or round, so a sequence stays in the
+    same block for E2 characterization and every E3 adaptive round."""
+    h = hashlib.sha256(f"{block_seed}:{int(seq_id)}".encode()).digest()
+    return int.from_bytes(h[:8], "little") % K
+
+
+def assign_blocks(seq_ids, K: int, block_seed: int = 0) -> list[int]:
+    return [block_of(s, K, block_seed) for s in seq_ids]
 
 
 class BlockHessianAccumulator:

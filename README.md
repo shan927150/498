@@ -23,16 +23,19 @@ model alone is ~28.6 GB. So:
 moe_calib/
   model_utils.py  load on CPU, layer_on_gpu(), run_layer() (kwargs captured
                   from the model itself, so masks/rotary are version-robust)
-  data_utils.py   C4 pool/holdout (one fixed draw), cache I/O (mmap), layer-wise PPL
+  data_utils.py   C4 pool + holdout split into tune/test (one fixed draw), cache I/O, PPL
+  utility.py      E2 predictors of future GPTQ benefit, E3 utility + cold start
+  runid.py        E1 run fingerprints (no silent reuse across configs)
   hessian.py      K-block Hessian accumulator (partial sums -> H(n0), H(2n0), relSE, drift)
   profiler.py     single-layer replay with router/expert hooks
   gptq.py         standard GPTQ, lazy-batch form (identical output to column-wise)
   quant_eval.py   quantize from Hessians, per-held-out-sequence relative error
   stats.py        paired t-test, BH-FDR, AUROC, Spearman, incremental R^2
 cache_inputs.py           step 0: build activation cache (once)
-e1_label_sufficiency.py   E1: t-test sufficiency labels (resumable)
-e2_signals.py             E2: do n0-signals predict E1 beyond token count?
-e3_allocation.py          E3: fixed-budget allocation (random/coverage/tlp/oracle)
+e1_label_sufficiency.py   E1: future-benefit labels rel_delta (n0 -> 2n0) on TUNE split
+e2_signals.py             E2: fit/select a predictor of rel_delta -> e2_model_b*.json
+e3_allocation.py          E3: fixed-budget allocation (random/coverage/tlp/oracle), TEST split
+support_diagnostic.py     no-GPTQ check: do random B-sequence sets stay inside E2's count support?
 scripts/setup_icrn.sh     one-time environment setup
 scripts/run_smoke.sh      ~30 min end-to-end check on a tiny setting
 scripts/run_all.sh        full mini-scale pipeline
@@ -50,7 +53,8 @@ tail -f logs/run_all.log
 
 ICRN limits to respect: sessions end after **24 h**; processes may be killed
 if the browser is disconnected for **> 1 h** (keep the tab open). E1 appends
-each finished (layer, n0, rep) to `runs/e1_raw_b*.jsonl` and resumes from it.
+each finished (layer, n0, rep) to `runs/e1_b*_s*_<hash>/raw.jsonl` and resumes
+from it; the hash covers the full config, and a mismatching run dir is rejected.
 
 Disk (100 GB quota): model ~29 GB (HF cache) + activation cache ~4.6 GB per
 profiled layer (default 4 layers, ~18.5 GB).
@@ -59,10 +63,15 @@ profiled layer (default 4 layers, ~18.5 GB).
 
 | file | content |
 |---|---|
-| `runs/e1_draws.json` | the base/extension sequence ids (shared by E1/E2/E3, all bit-widths) |
-| `runs/e1_labels_b{3,4}.csv` | per (layer, expert, n0, rep): t, p, BH q, delta, rel_delta, significant |
-| `runs/e2_report_b{3,4}.json` | per n0 and signal: AUROC, Spearman, binned Spearman, incremental R^2 |
-| `runs/e3_<strategy>_B<B>_b<bits>_s<seed>.json` | recon mean/p90/p99, usage-weighted recon, PPL, cost breakdown, chosen ids |
+| `runs/e1_b{bits}_s{char_seed}_<hash>/` | `fingerprint.json`, `draws.json`, `raw.jsonl`, `labels.csv` (per layer, expert, n0, rep: rel_delta = primary target; t, p, BH q, significant = diagnostics), `excluded.csv` (unlabelled experts + reason). No token-count quality threshold: `--min-calib-tokens` (technical, default 1) and `--min-paired-seqs` (paired tuning sequences, default 8) |
+| `runs/e2_signals_b{3,4}.csv` | observations: layer, expert, characterization seed, n0, routed count, drift, relse, margin, entropy, future_rel_delta |
+| `runs/e2_model_b{3,4}.json` | fitted predictor per signal (+ fitted count support), selected signal + criterion (leave-one-char-seed-out; run_all uses seeds 0 1 2), support/exclusions per starting budget, split, K, block seed |
+| `runs/eval_universe_<hash>.json` | experts with test-split activations; identical for every E3 strategy (asserted) |
+| `runs/e3_<strategy>[_<signal>_<weighting>]_B<B>_b<bits>_s<seed>.json` | recon mean/p90/p99 on the TEST split over all experts, fallback count, per-round trajectory, PPL, cost, chosen ids |
+
+Data roles: pool rows (calibration candidates), holdout rows split into
+**tune** (E1 labels → E2 selection/fit) and **test** (E3 final metrics only);
+`--tune-size` (default holdout/2), recorded in every output.
 
 ### Total cost (instructor's question)
 
