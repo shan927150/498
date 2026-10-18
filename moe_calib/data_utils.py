@@ -29,7 +29,9 @@ def get_splits(tokenizer, pool_size: int, holdout_size: int, seqlen: int,
                data_seed: int):
     """One shuffled pass over a C4 shard; first pool_size windows -> pool,
     next holdout_size -> holdout. One window per document => disjoint."""
-    ds = load_dataset("allenai/c4", "en",
+    # No "en" config: with it, datasets checks the single shard against the
+    # full en config's split metadata (train+validation, 364M rows) and fails.
+    ds = load_dataset("allenai/c4",
                       data_files={"train": "en/c4-train.00000-of-01024.json.gz"},
                       split="train")
     rng = random.Random(data_seed)

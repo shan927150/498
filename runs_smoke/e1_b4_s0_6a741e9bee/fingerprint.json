@@ -1,0 +1,37 @@
+{
+  "K": 4,
+  "bits": 4,
+  "char_seed": 0,
+  "data_seed": 0,
+  "fdr_q": 0.1,
+  "group_size": 128,
+  "holdout_size": 32,
+  "layers": [
+    8
+  ],
+  "min_calib_tokens": 1,
+  "min_paired_seqs": 4,
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "n0": [
+    8
+  ],
+  "pool_size": 64,
+  "reps": 1,
+  "seqlen": 512,
+  "split": {
+    "data_seed": 0,
+    "pool": [
+      0,
+      64
+    ],
+    "seqlen": 512,
+    "test": [
+      80,
+      96
+    ],
+    "tune": [
+      64,
+      80
+    ]
+  }
+}

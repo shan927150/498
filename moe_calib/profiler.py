@@ -46,11 +46,15 @@ class Profiler:
 
     # ------------------------------------------------------------- hooks
     def _gate_hook(self, module, inputs, output):
-        probs = torch.softmax(output.float(), dim=-1)          # [T, E]
-        topv, topi = torch.topk(probs, self.topk + 1, dim=-1)
+        # Selected experts: the model's exact op (Qwen2MoeSparseMoeBlock:
+        # softmax(dim=1, dtype=float) then topk(k)). Router logits are bf16, so
+        # exact ties are common and topk(k+1)[:k] may break them differently
+        # from topk(k). The k+1 call is used ONLY for the margin values.
+        probs = torch.softmax(output, dim=-1, dtype=torch.float)   # [T, E]
+        sel = torch.topk(probs, self.topk, dim=-1).indices
+        topv = torch.topk(probs, self.topk + 1, dim=-1).values
         margin = topv[:, self.topk - 1] - topv[:, self.topk]
         ent = -(probs * torch.log(probs.clamp_min(1e-12))).sum(-1)
-        sel = topi[:, :self.topk]
         sc = self.seq_counts.setdefault(self.cur_seq, {})
         for e in sel.unique().tolist():
             idx = (sel == e).any(dim=-1).nonzero(as_tuple=True)[0]

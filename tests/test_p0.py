@@ -486,3 +486,68 @@ def test_support_diagnostic_cli(pipeline):
     header = open(base + ".csv").readline().strip().split(",")
     assert header[:4] == ["target_final_B", "stage", "round", "decision_chosen_size"]
     assert os.path.exists(os.path.join(pipeline["out"], "routing_profile.npz"))
+
+
+def _tied_router_model():
+    """Tiny model whose router rows come in identical groups of 3 (k = 2), so
+    every token has exact ties that straddle the top-k boundary: the model
+    must pick 2 of 3 equal scores."""
+    model, _ = tiny_model()
+    with torch.no_grad():
+        for L in LAYERS:
+            g = MU.moe_block(model, L).gate.weight
+            for a in range(0, E, 3):
+                g[a + 1:a + 3] = g[a]
+    return model
+
+
+def _hook_vs_execution_counts(model, cache_dir):
+    """Per (seq, expert): router-profile count vs tokens the expert module
+    actually received (collected by the expert pre-hooks)."""
+    from moe_calib.data_utils import load_layer_cache
+    out = []
+    for L in LAYERS:
+        cache = load_layer_cache(cache_dir, L)
+        ids = list(range(8))
+        P = Profiler(model, L, K=1, collect_holdout=True, holdout_tokens_per_seq=10 ** 6)
+        P.run(cache, ids)
+        for s in ids:
+            for e in range(E):
+                hook = P.seq_counts[s].get((L, e), 0)
+                ex = sum(X.shape[0] for sid, X in P.holdout.get((L, e, "gu"), []) if sid == s)
+                out.append((hook, ex))
+        for e in range(E):
+            assert P.acc.tokens((L, e, "gu")) == sum(P.seq_counts[s].get((L, e), 0) for s in ids)
+    return out
+
+
+def test_router_profile_matches_expert_execution_with_ties(cache_dir):
+    pairs = _hook_vs_execution_counts(_tied_router_model(), cache_dir)
+    assert sum(h for h, _ in pairs) > 0
+    assert all(h == x for h, x in pairs)
+
+
+def test_router_profile_uses_model_topk_not_k_plus_1(cache_dir, monkeypatch):
+    """CPU topk breaks ties identically for every k; CUDA need not. Simulate
+    k-dependent tie-breaking (k != top_k prefers the HIGHER expert index): the
+    model routes with topk(k), so selection derived from topk(k+1)[:k] would
+    now disagree with execution on tied tokens; the fixed hook must not."""
+    model = _tied_router_model()
+    k_model = MU.top_k(model)
+    orig = torch.topk
+
+    def topk(x, k, dim=-1, *a, **kw):
+        if k == k_model:
+            return orig(x, k, dim, *a, **kw)
+        v, i = orig(x.flip(dim), k, dim, *a, **kw)
+        return torch.return_types.topk((v, x.shape[dim] - 1 - i))
+
+    monkeypatch.setattr(torch, "topk", topk)
+    # the simulation must actually change attribution for the old rule
+    p = torch.softmax(MU.moe_block(model, LAYERS[0]).gate(
+        torch.randn(64, model.config.hidden_size).to(torch.bfloat16)), dim=-1, dtype=torch.float)
+    old = torch.topk(p, k_model + 1, dim=-1).indices[:, :k_model]
+    new = torch.topk(p, k_model, dim=-1).indices
+    assert (old.sort(-1).values != new.sort(-1).values).any()
+    pairs = _hook_vs_execution_counts(model, cache_dir)
+    assert all(h == x for h, x in pairs)
