@@ -82,13 +82,13 @@ def gptq_quantize(W: torch.Tensor, H: torch.Tensor, bits: int = 4,
 
 @torch.no_grad()
 def quantize_expert(weights: dict, H_gu: torch.Tensor, H_down: torch.Tensor,
-                    bits: int = 4, group_size: int = 128) -> dict:
+                    bits: int = 4, group_size: int = 128, percdamp: float = 0.01) -> dict:
     """gate_proj/up_proj share H_gu; down_proj uses H_down. Never mutates the
     model: every call starts from the FP weights passed in."""
     from .model_utils import GPU
     Hg, Hd = H_gu.to(GPU), H_down.to(GPU)
     return {
-        "gate_proj": gptq_quantize(weights["gate_proj"], Hg, bits, group_size),
-        "up_proj": gptq_quantize(weights["up_proj"], Hg, bits, group_size),
-        "down_proj": gptq_quantize(weights["down_proj"], Hd, bits, group_size),
+        "gate_proj": gptq_quantize(weights["gate_proj"], Hg, bits, group_size, percdamp),
+        "up_proj": gptq_quantize(weights["up_proj"], Hg, bits, group_size, percdamp),
+        "down_proj": gptq_quantize(weights["down_proj"], Hd, bits, group_size, percdamp),
     }

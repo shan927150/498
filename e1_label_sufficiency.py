@@ -102,8 +102,12 @@ def main(argv=None):
     ap.add_argument("--tune-size", type=int, default=None,
                     help="rows of the cached holdout used as the tuning split "
                          "(default: meta tune_size or holdout_size // 2)")
+    ap.add_argument("--percdamp", type=float, default=None,
+                    help="GPTQ damping (fraction of mean diag H). Recorded in the run "
+                         "fingerprint and dir name. Omit only to resume legacy 1%% runs.")
     ap.add_argument("--outdir", default="runs")
     args = ap.parse_args(argv)
+    percdamp = 0.01 if args.percdamp is None else args.percdamp
 
     meta = load_meta(args.cache_dir)
     layers = args.layers or meta["layers"]
@@ -117,10 +121,12 @@ def main(argv=None):
               bits=args.bits, group_size=args.group_size,
               min_calib_tokens=args.min_calib_tokens, min_paired_seqs=args.min_paired_seqs,
               fdr_q=FDR_Q, split=split["definition"])
+    if args.percdamp is not None:
+        fp["percdamp"] = float(args.percdamp)
     run_dir = e1_run_dir(args.outdir, fp)
     raw_path = os.path.join(run_dir, "raw.jsonl")
     draws_path = os.path.join(run_dir, "draws.json")
-    print(f"[E1] run dir {run_dir}", flush=True)
+    print(f"[E1] run dir {run_dir} (GPTQ percdamp={percdamp:g})", flush=True)
 
     draws = make_draws(pool_ids, args.n0, args.reps, args.char_seed)
     if os.path.exists(draws_path):
@@ -170,9 +176,9 @@ def main(argv=None):
                     Hg1 = Hg0 + Bp.acc.H_sum(kg, list(range(args.K)))
                     Hd1 = Hd0 + Bp.acc.H_sum(kd, list(range(args.K)))
                     e0 = per_seq_rel_errors(model, L, e, quantize_from_H(
-                        model, L, e, Hg0, Hd0, args.bits, args.group_size), HO)
+                        model, L, e, Hg0, Hd0, args.bits, args.group_size, percdamp), HO)
                     e1 = per_seq_rel_errors(model, L, e, quantize_from_H(
-                        model, L, e, Hg1, Hd1, args.bits, args.group_size), HO)
+                        model, L, e, Hg1, Hd1, args.bits, args.group_size, percdamp), HO)
                     lab, why = label_expert(e0, e1, ntok, args.min_calib_tokens,
                                             args.min_paired_seqs)
                     if lab is None:

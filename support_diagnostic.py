@@ -26,6 +26,7 @@ import numpy as np
 
 from e3_allocation import DEFAULT_ROUNDS, round_schedule
 from moe_calib import model_utils as MU
+from moe_calib.runid import damp_tag
 from moe_calib.data_utils import load_meta, split_ids
 
 FINAL = "FINAL_STATE_ONLY"
@@ -110,10 +111,13 @@ def main(argv=None):
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     ap.add_argument("--rounds", type=int, default=DEFAULT_ROUNDS, help="must match E3 --rounds")
     ap.add_argument("--layers", type=int, nargs="+", default=None)
+    ap.add_argument("--percdamp", type=float, default=None,
+                    help="use e2_model_b{bits}_d{percdamp}.json (omit = legacy name)")
     ap.add_argument("--outdir", default="runs")
     args = ap.parse_args(argv)
 
-    sm_path = args.signal_model or os.path.join(args.outdir, f"e2_model_b{args.bits}.json")
+    dtag = f"_{damp_tag(args.percdamp)}" if args.percdamp is not None else ""
+    sm_path = args.signal_model or os.path.join(args.outdir, f"e2_model_b{args.bits}{dtag}.json")
     sigmodel = json.load(open(sm_path))
     signal = sigmodel["selected_signal"] if args.signal == "auto" else args.signal
     lo, hi = sigmodel["predictors"][signal]["count_range"]
@@ -122,18 +126,19 @@ def main(argv=None):
     meta = load_meta(args.cache_dir)
     layers = args.layers or meta["layers"]
     pool_ids = split_ids(meta, None)["pool"]
-    rp_path = os.path.join(args.outdir, "routing_profile.npz")
+    # v2 cache only (model topk(k) rule); the pre-fix routing_profile.npz is ignored
+    from e3_allocation import ROUTING_CACHE, cached_routing_profile
+    rp_path = os.path.join(args.outdir, ROUTING_CACHE)
     C = None
     if os.path.exists(rp_path):
         z = np.load(rp_path)
-        if z["layers"].tolist() == list(layers) and z["pool_ids"].tolist() == pool_ids:
+        if (z["layers"].tolist() == list(layers) and z["pool_ids"].tolist() == pool_ids
+                and str(z["rule"]) == "model_topk"):
             C, E = z["C"], int(z["E"])
     if C is None:
-        from e3_allocation import routing_profile   # router-only replay, no GPTQ
         model, _ = MU.load_model()
         E = MU.num_experts(model)
-        C, _ = routing_profile(model, args.cache_dir, layers, pool_ids)
-        np.savez(rp_path, C=C, layers=np.array(layers), pool_ids=np.array(pool_ids), E=E)
+        C, _ = cached_routing_profile(model, args.cache_dir, layers, pool_ids, args.outdir)
 
     rows, report = support_coverage(C, pool_ids, layers, E, lo, hi, args.budgets,
                                     args.seeds, K, args.rounds)
@@ -141,7 +146,7 @@ def main(argv=None):
                proxy="warm start = exact E3 tlp/oracle draw; later checkpoints extend it "
                      "with uniform random sequences (proxy for adaptive selection)",
                budgets=args.budgets, seeds=args.seeds, layers=layers, report=report)
-    base = os.path.join(args.outdir, f"support_diagnostic_b{args.bits}")
+    base = os.path.join(args.outdir, f"support_diagnostic_b{args.bits}{dtag}")
     json.dump(out, open(base + ".json", "w"), indent=2)
     with open(base + ".csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CSV_FIELDS)

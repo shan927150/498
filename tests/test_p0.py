@@ -485,7 +485,7 @@ def test_support_diagnostic_cli(pipeline):
     base = os.path.join(pipeline["out"], "support_diagnostic_b4")
     header = open(base + ".csv").readline().strip().split(",")
     assert header[:4] == ["target_final_B", "stage", "round", "decision_chosen_size"]
-    assert os.path.exists(os.path.join(pipeline["out"], "routing_profile.npz"))
+    assert os.path.exists(os.path.join(pipeline["out"], "routing_profile_v2.npz"))
 
 
 def _tied_router_model():

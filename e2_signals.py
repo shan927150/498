@@ -34,7 +34,7 @@ from moe_calib import model_utils as MU
 from moe_calib.data_utils import load_layer_cache
 from moe_calib.hessian import assign_blocks
 from moe_calib.profiler import Profiler
-from moe_calib.runid import load_e1_runs
+from moe_calib.runid import load_e1_runs, damp_tag, fp_percdamp
 from moe_calib.stats import auroc, spearman, binned_spearman, incremental_r2
 from moe_calib.utility import SIGNALS, ORIENT, fit_predictor, select_signal
 
@@ -50,10 +50,13 @@ def main(argv=None):
     ap.add_argument("--min-char-seeds", type=int, default=1,
                     help="fail unless at least this many characterization seeds "
                          "are combined (real experiments: 3)")
+    ap.add_argument("--percdamp", type=float, default=None,
+                    help="use the E1 runs made with this GPTQ damping; artifacts are "
+                         "then named e2_*_b{bits}_d{percdamp}.* (omit = legacy runs/names)")
     ap.add_argument("--outdir", default="runs")
     args = ap.parse_args(argv)
-    tag = f"b{args.bits}"
-    runs, common = load_e1_runs(args.outdir, args.bits, args.e1_dirs)
+    tag = f"b{args.bits}" + (f"_{damp_tag(args.percdamp)}" if args.percdamp is not None else "")
+    runs, common = load_e1_runs(args.outdir, args.bits, args.e1_dirs, args.percdamp)
     K = common["K"]
     if len(runs) < args.min_char_seeds:
         raise RuntimeError(f"found {len(runs)} characterization seed(s) "
@@ -169,7 +172,8 @@ def main(argv=None):
         support_by_starting_budget=support, excluded_observations=excluded,
         characterization_seeds=sorted(r["char_seed"] for r in runs),
         e1_runs=[r["dir"] for r in runs], e1_config=common,
-        split=common["split"], K=K, block_seed=args.block_seed, bits=args.bits)
+        split=common["split"], K=K, block_seed=args.block_seed, bits=args.bits,
+        percdamp=fp_percdamp(common))
     with open(os.path.join(args.outdir, f"e2_model_{tag}.json"), "w") as f:
         json.dump(artifact, f, indent=2, default=float)
     with open(os.path.join(args.outdir, f"e2_signals_{tag}.csv"), "w", newline="") as f:

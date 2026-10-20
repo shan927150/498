@@ -20,7 +20,7 @@ import argparse, csv, json, os
 
 import numpy as np
 
-from moe_calib.runid import load_e1_runs
+from moe_calib.runid import load_e1_runs, damp_tag
 from moe_calib.stats import spearman, binned_spearman, incremental_r2
 from moe_calib.utility import SIGNALS, ORIENT, fit_predictor, predict
 
@@ -96,9 +96,11 @@ def metrics(o, mask, preds):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--bits", type=int, default=4)
+    ap.add_argument("--percdamp", type=float, default=None,
+                    help="analyse the *_d{percdamp} E2 artifacts (omit = legacy names)")
     ap.add_argument("--outdir", default="runs")
     args = ap.parse_args(argv)
-    tag = f"b{args.bits}"
+    tag = f"b{args.bits}" + (f"_{damp_tag(args.percdamp)}" if args.percdamp is not None else "")
     art = json.load(open(os.path.join(args.outdir, f"e2_model_{tag}.json")))
     runs, _ = load_e1_runs(args.outdir, args.bits, art["e1_runs"])
     o = load_obs(os.path.join(args.outdir, f"e2_signals_{tag}.csv"))

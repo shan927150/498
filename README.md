@@ -8,6 +8,9 @@ the marginal GPTQ reconstruction benefit of additional calibration data
 *beyond routed-token count*, and can that information improve calibration
 allocation under a fixed sequence budget?
 
+> **Current plan and run order:** see [`NEXT_STEPS.md`](NEXT_STEPS.md)
+> (P0 damping freeze → P1 E1 + gate → P2 E2 + go/no-go gate → P3/P4 minimal E3).
+
 Setup: **Qwen/Qwen1.5-MoE-A2.7B** (60 routed experts/layer, top-4),
 **4-bit weight-only GPTQ** (group size 128), **C4** calibration data,
 **expert-level reconstruction** evaluation (plus WikiText-2 PPL). The
