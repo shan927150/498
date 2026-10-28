@@ -38,6 +38,7 @@ import torch
 
 from moe_calib import model_utils as MU
 from moe_calib.data_utils import load_meta, load_layer_cache, split_ids
+from moe_calib.frozen import check_e1_fp, load_frozen
 from moe_calib.profiler import Profiler
 from moe_calib.quant_eval import quantize_from_H, per_seq_rel_errors
 from moe_calib.runid import e1_run_dir
@@ -105,8 +106,14 @@ def main(argv=None):
     ap.add_argument("--percdamp", type=float, default=None,
                     help="GPTQ damping (fraction of mean diag H). Recorded in the run "
                          "fingerprint and dir name. Omit only to resume legacy 1%% runs.")
+    ap.add_argument("--frozen-config", default=None,
+                    help="configs/frozen_*.json: supplies --percdamp if omitted and "
+                         "rejects a run whose fingerprint deviates from it")
     ap.add_argument("--outdir", default="runs")
     args = ap.parse_args(argv)
+    frozen = load_frozen(args.frozen_config) if args.frozen_config else None
+    if frozen and args.percdamp is None:
+        args.percdamp = float(frozen["gptq"]["percdamp"])
     percdamp = 0.01 if args.percdamp is None else args.percdamp
 
     meta = load_meta(args.cache_dir)
@@ -123,6 +130,8 @@ def main(argv=None):
               fdr_q=FDR_Q, split=split["definition"])
     if args.percdamp is not None:
         fp["percdamp"] = float(args.percdamp)
+    if frozen:
+        check_e1_fp(frozen, fp)
     run_dir = e1_run_dir(args.outdir, fp)
     raw_path = os.path.join(run_dir, "raw.jsonl")
     draws_path = os.path.join(run_dir, "draws.json")

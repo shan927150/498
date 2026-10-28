@@ -4,12 +4,17 @@ Order of work follows the 10/18 log: **freeze GPTQ → rerun E1 → rerun E2 →
 yes/no on the core hypothesis**, and only then E3. Each step has a script and
 an explicit pass/fail rule so nothing downstream runs on an unvalidated input.
 
+**Status:** P0 done — `percdamp = 1.0` frozen in `configs/frozen_b4.json`
+(grid 0.01/0.1/0.2/0.3/0.5/1.0/1.5/2.0, tuning split only; 1.0 is the best
+interior value). **P1 is active.** Damping is not retuned on E1/E2 results or
+the test split.
+
 | step | what | script | stop rule |
 |---|---|---|---|
-| P0 | extended damping grid (0.01 … 1.0) + per-projection threshold / effective-rank test | `scripts/p0_damping.sh` | freeze the best value only if it is **interior** to the grid |
-| P1 | E1 under the frozen damping, 3 seeds × 4 layers × n0 16/32/64/128 | `scripts/p1p2_characterize.sh <d>` | `e1_gate.py` must PASS |
+| P0 ✅ | extended damping grid (0.01 … 2.0) + per-projection threshold / effective-rank test | `scripts/p0_damping.sh` | freeze the best value only if it is **interior** to the grid |
+| P1 | E1 under the frozen damping, 3 seeds × 4 layers × n0 16/32/64/128 | `P1_ONLY=1 bash scripts/p1p2_characterize.sh` | `e1_gate.py` must PASS |
 | P2 | E2 under the frozen damping, then the go/no-go gate | (same script) | `e2_gate.py` case A / A_budget → E3; B → discuss; C → negative finding |
-| P3 | support diagnostic with the fixed routing cache → decide on n0 = 256 | `scripts/p3p4_e3_min.sh <d>` | only after case A |
+| P3 | support diagnostic with the fixed routing cache → decide on n0 = 256 | `scripts/p3p4_e3_min.sh` | only after case A |
 | P4 | minimal E3: B = 128 × seeds 0/1/2 × random / coverage / tlp / oracle + equal-compute random | (same script) | no B sweep unless tlp or oracle beats random/coverage |
 | P5 | budgets 64/256/512, all-layer PPL, candidate-pool multiplier k = 2/4/8, distribution constraint, 3-bit | — | only after P4 shows an improvement |
 

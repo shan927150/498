@@ -35,8 +35,10 @@ a signal is useful only if it predicts future reconstruction benefit beyond
 count on held-out characterization seeds.
 
 The GPTQ algorithm is identical across all allocation strategies. A single
-GPTQ configuration is to be chosen on tuning data and frozen *before*
-characterization and final evaluation (see [Damping study](#damping-study)).
+GPTQ configuration was chosen on tuning data and frozen *before*
+characterization and final evaluation: **4-bit, group size 128, act-order on,
+`percdamp = 1.0`**, recorded in [`configs/frozen_b4.json`](configs/frozen_b4.json)
+(see [Damping study](#damping-study)).
 
 ## Current pipeline
 
@@ -112,7 +114,8 @@ seeds, selection criterion and metrics, split, K and block seed.
 
 > The existing E2 artifact was produced under the original GPTQ damping
 > (`percdamp = 0.01`) and is **diagnostic only**. It must not be used for
-> final E3 until E1/E2 are rerun under the final frozen GPTQ configuration.
+> final E3; E1/E2 are being rerun under the frozen `percdamp = 1.0`
+> (artifacts named `*_b4_d1*`).
 
 ### Support diagnostic (`support_diagnostic.py`)
 
@@ -228,12 +231,27 @@ prefixes):
 | 0.05 | 0.00629 | −0.00050 | 62.3% |
 | 0.10 | 0.00576 | −0.00103 | 76.3% |
 
-- 0.10 is the best tested value at every prefix, layer and seed.
-- With 0.10 the 16 → 32 step becomes positive on average; later doubling
-  steps stay positive.
-- 0.10 is the current leading candidate, but it is the edge of the tested
-  grid. The production default in `moe_calib/gptq.py` is **still 0.01**
-  until the team decides whether to test larger fixed values (e.g. 0.2, 0.3).
+0.10 was best but at the grid edge, so P0 (`scripts/p0_damping.sh`,
+`diagnostics/damping_threshold.py`) extended the grid on the same design
+(seeds 0/1, layers 1/8/16/23, prefixes 16–256, tuning split only):
+
+| percdamp | 0.01 | 0.1 | 0.2 | 0.3 | 0.5 | **1.0** | 1.5 | 2.0 |
+|---|---|---|---|---|---|---|---|---|
+| mean tuning error | 0.00775 | 0.00576 | 0.00533 | 0.00514 | 0.00497 | **0.00487** | 0.00487 | 0.00490 |
+| % experts better than RTN | 44.5 | 76.3 | 93.5 | 98.8 | 100 | 100 | 100 | 100 |
+| 16 → 32 improved % | 10 | 93 | 100 | 100 | 100 | 100 | 100 | 100 |
+
+- **P0 is complete; production damping is frozen at `percdamp = 1.0`**, the
+  best overall value and interior to the grid (1.5 is within 0.05 % and not
+  better; 2.0 is worse). All doubling transitions improve for 100 % of
+  experts at 1.0.
+- The per-prefix optimum drifts with budget (2.0 at 16–32 sequences, 0.5 at
+  256); one fixed value is used by design.
+- The value was selected on the tuning split before final characterization.
+  It must **not** be retuned using E1/E2 results or the test split.
+- `moe_calib/gptq.py` keeps its legacy default of 0.01 so that old runs stay
+  interpretable; production runs pass the frozen value explicitly (E1 and the
+  E1 gate validate against `configs/frozen_b4.json` via `--frozen-config`).
 
 ## Current experimental status
 
@@ -246,9 +264,10 @@ prefixes):
 | E2 multi-seed signal validation | Completed at old 0.01 damping |
 | Routing profile correctness | Fixed / validated |
 | Low-data GPTQ diagnostic | Completed |
-| Fixed damping study | Completed |
-| Final production GPTQ damping | Pending freeze |
-| E1/E2 rerun under final damping | Pending |
+| Fixed damping study (P0, extended grid) | Completed |
+| Final production GPTQ damping | Frozen: `percdamp = 1.0` |
+| E1 rerun under frozen damping (P1) | **Active** |
+| E2 rerun under frozen damping (P2) | Pending P1 gate |
 | Final E3 Random / Coverage / Sufficiency study | Not yet run |
 | 3-bit robustness | Not yet run |
 | PPL / overhead / peak-memory evaluation | Not yet run |
@@ -267,8 +286,11 @@ one-time setup. Use the A100 option (the model needs ~29 GB of CPU RAM).
 # end-to-end smoke on a tiny setting (1 layer, 64-sequence pool; PRELIMINARY E2)
 bash scripts/run_smoke.sh 2>&1 | tee logs/smoke.log
 
-# real 4-bit characterization: cache (if missing) -> E1 seeds 0,1,2 (n0 16 32 64 128)
-#   -> E2 (--min-char-seeds 3) -> support diagnostic. Resumable: rerun the same command.
+# P1: E1 seeds 0,1,2 under the frozen config (percdamp 1.0) -> E1 gate, then stop.
+#   Resumable: rerun the same command. Without P1_ONLY=1 it continues to E2 + E2 gate (P2).
+P1_ONLY=1 nohup bash scripts/p1p2_characterize.sh > logs/p1.log 2>&1 &
+
+# legacy (1% damping) characterization: cache (if missing) -> E1 -> E2 -> support diagnostic
 mkdir -p logs && nohup bash scripts/run_characterization_b4.sh > logs/characterization_b4.log 2>&1 &
 
 # support diagnostic (delete the stale runs/routing_profile.npz first if it predates the routing fix)
@@ -278,9 +300,10 @@ python support_diagnostic.py --cache-dir ~/moe_cache --bits 4 --budgets 64 128 2
 python analyze_characterization.py --bits 4 --outdir runs
 ```
 
-`scripts/run_all.sh` still runs 3-bit characterization and E3 under the
-current GPTQ default; do not use it for final results before the GPTQ
-configuration is frozen and E1/E2 are rerun.
+`scripts/run_all.sh` and `scripts/run_characterization_b4.sh` still use the
+legacy GPTQ default (0.01); do not use them for final results. Use
+`scripts/p1p2_characterize.sh` and `scripts/p3p4_e3_min.sh`, which read the
+frozen damping from `configs/frozen_b4.json`.
 
 Diagnostics (write only to `runs_diag/`, tuning split only):
 
@@ -304,13 +327,15 @@ moe_calib/
   data_utils.py   C4 pool/holdout, pool/tune/test split, cache I/O, WikiText-2 PPL
   profiler.py     single-layer replay with router/expert hooks
   hessian.py      K-block Hessian accumulator; fixed hash blocks; relSE, drift
-  gptq.py         standard GPTQ (lazy-batch), percdamp default 0.01
+  gptq.py         standard GPTQ (lazy-batch), percdamp default 0.01 (legacy)
+  frozen.py       load / validate configs/frozen_*.json (production GPTQ + E1 design)
   quant_eval.py   quantize from Hessians, zero-token RTN fallback, per-sequence error
   utility.py      E2 predictors, support-aware delta_hat, E3 utility, exploration cover
   runid.py        E1 run fingerprints
   stats.py        paired t-test, BH-FDR, Spearman, incremental R^2
 cache_inputs.py, e1_label_sufficiency.py, e2_signals.py, e3_allocation.py,
 support_diagnostic.py, analyze_characterization.py
+configs/          frozen_b4.json (frozen production configuration)
 diagnostics/      low-data, routing and damping diagnostics (not part of the pipeline)
 scripts/          setup_icrn.sh, run_smoke.sh, run_characterization_b4.sh, run_all.sh
 tests/            CPU tests

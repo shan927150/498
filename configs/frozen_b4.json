@@ -1,0 +1,31 @@
+{
+  "name": "frozen_b4",
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+  },
+  "layers": [1, 8, 16, 23],
+  "e1": {
+    "n0": [16, 32, 64, 128],
+    "char_seeds": [0, 1, 2],
+    "reps": 3,
+    "K": 4
+  },
+  "split": {
+    "pool": [0, 2000],
+    "tune": [2000, 2128],
+    "test": [2128, 2256],
+    "data_seed": 0,
+    "seqlen": 512
+  },
+  "provenance": {
+    "stage": "P0",
+    "selected_on": "tuning split only (runs_diag/damping_threshold_report.md)",
+    "grid": [0.01, 0.1, 0.2, 0.3, 0.5, 1.0, 1.5, 2.0],
+    "rule": "lowest mean tuning error over nested prefixes 16..256, seeds 0/1, layers 1/8/16/23; must be interior to the grid",
+    "note": "do not retune on E1/E2 results or on the test split"
+  }
+}

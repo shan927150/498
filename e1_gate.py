@@ -19,6 +19,7 @@ import argparse, csv, json, os, sys
 
 import numpy as np
 
+from moe_calib.frozen import check_e1_fp, load_frozen
 from moe_calib.runid import damp_tag, fp_percdamp, load_e1_runs
 
 
@@ -95,9 +96,20 @@ def main(argv=None):
     ap.add_argument("--percdamp", type=float, default=None)
     ap.add_argument("--e1-dirs", nargs="+", default=None)
     ap.add_argument("--max-neg", type=float, default=0.25)
+    ap.add_argument("--frozen-config", default=None,
+                    help="configs/frozen_*.json: supplies --percdamp if omitted and requires "
+                         "the runs to match it, with exactly its characterization seeds")
     ap.add_argument("--outdir", default="runs")
     a = ap.parse_args(argv)
+    frozen = load_frozen(a.frozen_config) if a.frozen_config else None
+    if frozen and a.percdamp is None:
+        a.percdamp = float(frozen["gptq"]["percdamp"])
     runs, common = load_e1_runs(a.outdir, a.bits, a.e1_dirs, a.percdamp)
+    if frozen:
+        check_e1_fp(frozen, common, check_seed=False)
+        seeds = sorted(r["char_seed"] for r in runs)
+        if seeds != sorted(frozen["e1"]["char_seeds"]):
+            raise ValueError(f"E1 seeds {seeds} != frozen {frozen['e1']['char_seeds']}")
     tag = f"b{a.bits}" + (f"_{damp_tag(a.percdamp)}" if a.percdamp is not None else "")
     res = evaluate(load_rows(runs), a.max_neg)
     res.update(percdamp=fp_percdamp(common), e1_runs=[r["dir"] for r in runs])
