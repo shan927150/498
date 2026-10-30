@@ -32,6 +32,7 @@ import numpy as np
 
 from moe_calib import model_utils as MU
 from moe_calib.data_utils import load_layer_cache
+from moe_calib.frozen import check_e1_fp, load_frozen
 from moe_calib.hessian import assign_blocks
 from moe_calib.profiler import Profiler
 from moe_calib.runid import load_e1_runs, damp_tag, fp_percdamp
@@ -53,10 +54,21 @@ def main(argv=None):
     ap.add_argument("--percdamp", type=float, default=None,
                     help="use the E1 runs made with this GPTQ damping; artifacts are "
                          "then named e2_*_b{bits}_d{percdamp}.* (omit = legacy runs/names)")
+    ap.add_argument("--frozen-config", default=None,
+                    help="configs/frozen_*.json: supplies --percdamp if omitted and requires "
+                         "the E1 runs to match it, with exactly its characterization seeds")
     ap.add_argument("--outdir", default="runs")
     args = ap.parse_args(argv)
+    frozen = load_frozen(args.frozen_config) if args.frozen_config else None
+    if frozen and args.percdamp is None:
+        args.percdamp = float(frozen["gptq"]["percdamp"])
     tag = f"b{args.bits}" + (f"_{damp_tag(args.percdamp)}" if args.percdamp is not None else "")
     runs, common = load_e1_runs(args.outdir, args.bits, args.e1_dirs, args.percdamp)
+    if frozen:
+        check_e1_fp(frozen, common, check_seed=False)
+        seeds = sorted(r["char_seed"] for r in runs)
+        if seeds != sorted(frozen["e1"]["char_seeds"]):
+            raise ValueError(f"E1 seeds {seeds} != frozen {frozen['e1']['char_seeds']}")
     K = common["K"]
     if len(runs) < args.min_char_seeds:
         raise RuntimeError(f"found {len(runs)} characterization seed(s) "

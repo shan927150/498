@@ -25,7 +25,8 @@ fi
 if [ "${P1_ONLY:-0}" = 1 ]; then
   echo "P1 PASS — ready for P2, but P2 has not been started."; exit 0
 fi
-python e2_signals.py --cache-dir $C --bits $B --min-char-seeds 3 --percdamp $D --outdir $O
+python e2_signals.py --cache-dir $C --bits $B --min-char-seeds 3 --percdamp $D \
+    --frozen-config $CFG --outdir $O
 python analyze_characterization.py --bits $B --percdamp $D --outdir $O
 set +e
 python e2_gate.py --bits $B --percdamp $D --outdir $O --permutations 200
