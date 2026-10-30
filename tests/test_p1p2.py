@@ -194,3 +194,55 @@ def test_spectrum_stats_known():
     import damping_threshold as DT
     er, pr = DT.spectrum_stats(torch.diag(torch.tensor([1.0, 1.0, 1.0, 0.0])))
     assert er == pytest.approx(3.0, rel=1e-6) and pr == pytest.approx(3.0, rel=1e-6)
+
+
+def test_p2b_regime_budget_vs_static():
+    """A real seed-varying signal that helps in every budget -> BUDGET; a static
+    per-expert descriptor is excluded from the decision."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "diagnostics"))
+    import p2b_regime_diagnostic as P
+    rng = np.random.default_rng(0)
+    E, rows = 40, []
+    static = {L: rng.normal(size=E) for L in (1, 8, 16, 23)}         # fixed per expert
+    for seed in range(3):
+        for L in (1, 8, 16, 23):
+            for n0 in (16, 32, 64, 128):
+                cnt = rng.lognormal(np.log(35 * n0), 0.3, E)
+                hidden = rng.normal(size=E)
+                y = 0.3 * np.sin(np.log(cnt) - 7.0) + 0.03 * hidden + 0.02 * rng.normal(size=E)
+                rows += [(seed, L, n0, cnt[e], y[e], hidden[e] + 0.5 * rng.normal(), e, static[L][e])
+                         for e in range(E)]
+    a = np.array(rows)
+    d = dict(seed=a[:, 0], layer=a[:, 1], budget=a[:, 2], count=a[:, 3], y=a[:, 4], expert=a[:, 6])
+    for s in e2_gate.STATE_SIGNALS:
+        d[s] = a[:, 5] if s == "relse" else rng.normal(size=len(a))
+    d["margin"] = a[:, 7]                                             # pure expert id
+    rng2 = np.random.default_rng(1)
+    B = P.budget_analysis(d, 20, rng2, 0.02, 0.05)
+    Lr = P.layer_analysis(d, 20, rng2, 0.02, 0.05)
+    assert P.expert_share(d, "margin") > 0.99 and P.expert_share(d, "relse") < 0.5
+    dec = P.decide(B, Lr, 0.02, 0.05, [s for s in e2_gate.STATE_SIGNALS if s != "margin"])
+    assert dec["decision"] == "BUDGET" and dec["signal"] == "relse"
+
+
+def test_p2c_separates_layer_intercept_from_layer_slope():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "diagnostics"))
+    import p2c_layer_exposure as P
+    rng = np.random.default_rng(0)
+
+    def synth(slopes):
+        rows = []
+        for seed in range(3):
+            for i, L in enumerate((1, 8, 16, 23)):
+                for n0 in (16, 32, 64, 128):
+                    cnt = rng.lognormal(np.log(35 * n0), 0.15, 30)
+                    y = 0.05 + 0.01 * i + slopes[i] * (np.log(cnt) - 7.5) + 0.003 * rng.normal(size=30)
+                    rows += [(seed, L, n0, e, cnt[e], y[e]) for e in range(30)]
+        a = np.array(rows)
+        return dict(seed=a[:, 0], layer=a[:, 1], budget=a[:, 2], expert=a[:, 3], count=a[:, 4], y=a[:, 5])
+
+    for slopes, curve in (((-0.02, -0.005, -0.01, 0.0), True), ((-0.01,) * 4, False)):
+        d = synth(slopes)
+        L, _ = P.cv_block(d, P.loso_folds(d), d["seed"], ("M1", "M2", "M3"))
+        assert L["M2"]["gain_vs_M1"] > 0.05
+        assert (L["M3"]["gain_vs_M2"] > 0.05) == curve

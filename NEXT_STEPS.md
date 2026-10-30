@@ -6,14 +6,34 @@ an explicit pass/fail rule so nothing downstream runs on an unvalidated input.
 
 **Status:** P0 done — `percdamp = 1.0` frozen in `configs/frozen_b4.json`
 (grid 0.01/0.1/0.2/0.3/0.5/1.0/1.5/2.0, tuning split only; 1.0 is the best
-interior value). **P1 is active.** Damping is not retuned on E1/E2 results or
-the test split.
+interior value). P1 done — E1 gate PASS. P2 done — **CASE B** (state
+signals beat flexible exposure in pooled LOSO but are unstable across seeds,
+held-out layers and budgets; see `runs/e2_gate_b4_d1.md`). P2b done —
+**P2b-UNSTABLE** (`runs/p2b_regime_b4_d1.md`): neither per-budget nor per-layer
+conditioning yields a state signal that holds up on held-out seeds and layers;
+the per-layer gains of margin/entropy come from expert identity (~99 % of their
+variance), not calibration state. **E3 (P3/P4) remains blocked**; the core
+sufficiency hypothesis is unsupported / strongly context-dependent on these
+signals. Damping is not retuned on
+E1/E2 results or the test split.
+
+**Pivot (P2c, exposure-only): LA-A** (`runs/p2c_layer_exposure.md`). A
+layer-specific exposure curve beats layer intercepts by +22.5 % LOSO (every
+seed, held-out experts, permutation p = 0.001), and its expert ranking beats
+coverage and global exposure in every (seed, budget) cell. A **minimal**
+allocation experiment is now justified. It is not yet run, and the E3
+controller has not been modified. It must include a layer × budget-weighted
+coverage baseline, which matches the layer curve in P2c, and must note that
+only layers 1/8/16/23 are characterized: an all-layer allocator needs per-layer
+characterization or parameter sharing.
 
 | step | what | script | stop rule |
 |---|---|---|---|
 | P0 ✅ | extended damping grid (0.01 … 2.0) + per-projection threshold / effective-rank test | `scripts/p0_damping.sh` | freeze the best value only if it is **interior** to the grid |
-| P1 | E1 under the frozen damping, 3 seeds × 4 layers × n0 16/32/64/128 | `P1_ONLY=1 bash scripts/p1p2_characterize.sh` | `e1_gate.py` must PASS |
-| P2 | E2 under the frozen damping, then the go/no-go gate | (same script) | `e2_gate.py` case A / A_budget → E3; B → discuss; C → negative finding |
+| P1 ✅ | E1 under the frozen damping, 3 seeds × 4 layers × n0 16/32/64/128 | `P1_ONLY=1 bash scripts/p1p2_characterize.sh` | `e1_gate.py` must PASS |
+| P2 ✅ (B) | E2 under the frozen damping, then the go/no-go gate | (same script) | `e2_gate.py` case A / A_budget → E3; B → discuss; C → negative finding |
+| P2b ✅ (UNSTABLE) | budget- vs layer-conditioned validation of the P2 signals (read-only, CPU) | `python diagnostics/p2b_regime_diagnostic.py --permutations 1000` | BUDGET / LAYER / BOTH → structured predictor + new gate; UNSTABLE → stop |
+| P2c ✅ (LA-A) | exposure-only layer-aware hypothesis: M0–M4 ladder, LOSO + expert-grouped CV, interaction permutation, fixed-budget expert ranking vs coverage | `python diagnostics/p2c_layer_exposure.py --permutations 1000` | LA-A → minimal allocation experiment; LA-B → layer-weighted coverage; LA-C/D → stop |
 | P3 | support diagnostic with the fixed routing cache → decide on n0 = 256 | `scripts/p3p4_e3_min.sh` | only after case A |
 | P4 | minimal E3: B = 128 × seeds 0/1/2 × random / coverage / tlp / oracle + equal-compute random | (same script) | no B sweep unless tlp or oracle beats random/coverage |
 | P5 | budgets 64/256/512, all-layer PPL, candidate-pool multiplier k = 2/4/8, distribution constraint, 3-bit | — | only after P4 shows an improvement |

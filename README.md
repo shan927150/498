@@ -266,8 +266,10 @@ prefixes):
 | Low-data GPTQ diagnostic | Completed |
 | Fixed damping study (P0, extended grid) | Completed |
 | Final production GPTQ damping | Frozen: `percdamp = 1.0` |
-| E1 rerun under frozen damping (P1) | **Active** |
-| E2 rerun under frozen damping (P2) | Pending P1 gate |
+| E1 rerun under frozen damping (P1) | Completed — E1 gate PASS (0 % negative at every budget) |
+| E2 rerun under frozen damping (P2) | Completed — **CASE B**; E3 blocked pending investigation |
+| P2b regime diagnostic (budget vs layer) | Completed — **P2b-UNSTABLE**; E3 remains blocked |
+| P2c layer-aware exposure (revised hypothesis) | Completed — **LA-A** (gate passed, with caveats); minimal allocation experiment justified, not yet run |
 | Final E3 Random / Coverage / Sufficiency study | Not yet run |
 | 3-bit robustness | Not yet run |
 | PPL / overhead / peak-memory evaluation | Not yet run |
@@ -275,6 +277,50 @@ prefixes):
 The E2 result under `percdamp = 0.01` (relSE selected, ~1.75% LOSO MSE
 improvement over count) is diagnostic, **not** the final sufficiency-signal
 conclusion.
+
+**P2 (`percdamp = 1.0`, `runs/e2_gate_b4_d1.md`): CASE B.** The flexible
+exposure baseline already beats linear count by 12.7 % (LOSO) / 11.0 % (LOLO).
+Against it, drift/relSE gain +2–3 % (common slope) or +9 % (budget-aware) in
+pooled LOSO with permutation p = 0.005, but fail on seed 0 and on held-out
+layers 16/23, and their per-budget slopes flip sign (negative at n0 ≤ 32,
+positive at n0 ≥ 64). Margin/entropy fail leave-one-layer-out badly (their
+scale is layer-specific). No signal is robust, so E3 is blocked pending an
+investigation of this instability. `e2_model_b4_d1.json` (which names relSE
+via E2's own linear-count selection) must not be consumed by E3.
+
+**P2b (`diagnostics/p2b_regime_diagnostic.py`, `runs/p2b_regime_b4_d1.md`):
+P2b-UNSTABLE.** Same P2 rows, read-only. Conditioning on budget does not fix it:
+no signal is robust in any fixed budget (drift/relSE lose on held-out layers
+16/23 at every budget except 64, and on seed 0 at n0 ≤ 32). Conditioning on layer
+does not fix it either: drift/relSE add nothing over a per-layer exposure model
+(−1.4 to −4 % LOSO, seed 0 negative everywhere). Margin/entropy pass within some
+layers, but ~99 % of their variance is expert identity (constant across seeds
+and budgets), so they are static expert descriptors, not calibration state, and
+their within-layer slopes change sign across layers. A per-layer exposure model
+alone beats P2's global exposure baseline by +30 % LOSO. Instability is
+therefore neither purely budget- nor purely layer-driven; the tested state
+signals are context-dependent and not reliable enough for adaptive allocation.
+
+**Pivot — P2c (`diagnostics/p2c_layer_exposure.py`, `runs/p2c_layer_exposure.md`):
+LA-A.** The dynamic-state hypothesis (P2/P2b) is *not* supported and stays
+recorded as a negative finding. The revised, exposure-only hypothesis is that
+the marginal value of routed-token exposure is layer-dependent. On the same P2
+rows (count, layer, budget, `future_rel_delta` only), compared with the global
+flexible exposure model M1, using leave-one-seed-out CV (LOSO):
+layer intercepts (M2) gain +10.1 % [95 % CI +4.4, +15.3]. A layer-specific
+exposure curve (M4: layer × lc, lc²) gains a further +22.5 % over M2: positive
+for every held-out seed (+20 to +26 %), Freedman–Lane p = 0.001, and +24.6 %
+over M2 on held-out experts (grouped CV), positive in every fold and layer.
+About two thirds of the gain is the curve, one third the intercept. The curves
+cross: L1 has the highest benefit at n0 ≤ 32 and the lowest at n0 = 128, while
+L8 is flatter. Ranking experts at a fixed budget (held-out seed), the layer-aware
+utility f_L(n)/n captures 96.2 % of the oracle's top-q utility, versus 93.4 % for
+coverage 1/n and for the global model, and wins in all 12 (seed, budget) cells
+(+7 pp at n0 = 16, +1–2 pp at n0 ≥ 32). **Caveat:** routed count is ~proportional
+to budget, so the curve is identified from between-budget shifts. A model with
+one mean per (layer, budget) and no layer × count term fits and ranks as well
+(within-budget layer-specific slope: +0.1 %), so a layer × budget-weighted
+coverage baseline must be part of any allocation comparison.
 
 ## Running the code
 
