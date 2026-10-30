@@ -3,18 +3,33 @@
 CS 498 research project on calibration-data allocation for post-training
 quantization (PTQ) of Mixture-of-Experts models.
 
-**Research question.** Can an MoE expert's current calibration state predict
-the marginal GPTQ reconstruction benefit of additional calibration data
-*beyond routed-token count*, and can that information improve calibration
-allocation under a fixed sequence budget?
+**Original research question.** Can an MoE expert's current calibration
+state predict the marginal GPTQ reconstruction benefit of additional
+calibration data *beyond routed-token count*, and can that information improve
+calibration allocation under a fixed sequence budget?
 
-> **Current plan and run order:** see [`NEXT_STEPS.md`](NEXT_STEPS.md)
-> (P0 damping freeze → P1 E1 + gate → P2 E2 + go/no-go gate → P3/P4 minimal E3).
+**Where it stands (P0–P2c).** Under strict held-out validation, the
+*dynamic-state* hypothesis was **not supported**: drift, relSE, router margin
+and entropy add no robust value beyond a flexible, layer-aware exposure
+model (P2 CASE B, P2b UNSTABLE). What the data do support is a revised,
+exposure-only hypothesis:
+
+> The marginal value of routed-token exposure is strongly **layer- and
+> calibration-regime-dependent**.
+
+It holds on held-out seeds and held-out experts, and it ranks experts better
+than plain coverage (P2c LA-A). Whether that survives sequence-routing
+constraints in an actual allocation run is the **next, not-yet-run**
+experiment.
+
+> **Detailed experimental history (P0 → P2c, with numbers):**
+> [`update_10.29.md`](update_10.29.md). Earlier log:
+> [`update_10_18.md`](update_10_18.md). Run order and stop rules:
+> [`NEXT_STEPS.md`](NEXT_STEPS.md).
 
 Setup: **Qwen/Qwen1.5-MoE-A2.7B** (60 routed experts/layer, top-4),
 **4-bit weight-only GPTQ** (group size 128), **C4** calibration data,
-**expert-level reconstruction** evaluation (plus WikiText-2 PPL). The
-hypothesis has **not** been confirmed yet; see [Current status](#current-experimental-status).
+**expert-level reconstruction** evaluation (plus WikiText-2 PPL).
 
 ## Research principle
 
@@ -30,9 +45,13 @@ future benefit:
 | router margin | k-th minus (k+1)-th router probability |
 | router entropy | router distribution |
 
-Statistical stability of the Hessian alone is **not** treated as sufficiency;
-a signal is useful only if it predicts future reconstruction benefit beyond
-count on held-out characterization seeds.
+Statistical significance is **not** treated as sufficiency: a t-test only
+says the benefit is nonzero, while allocation needs its *magnitude*. In P1,
+100 % of expert/budget transitions were significant, but the size of the
+remaining benefit varied systematically by budget and layer. A signal is
+useful only if it predicts future benefit beyond a **flexible** exposure
+baseline on held-out characterization seeds, held-out layers or held-out
+experts.
 
 The GPTQ algorithm is identical across all allocation strategies. A single
 GPTQ configuration was chosen on tuning data and frozen *before*
@@ -54,6 +73,15 @@ E2      test signals beyond token count     e2_signals.py
 E3      adaptive fixed-budget allocation    e3_allocation.py
    ↓
         final GPTQ reconstruction / PPL     e3_allocation.py --ppl
+```
+
+Validation gates between E1/E2 and E3 (read-only, CPU, on E1/E2 outputs):
+
+```
+P1   e1_gate.py                           is future benefit a stable target?
+P2   e2_gate.py                           state signals vs flexible exposure
+P2b  diagnostics/p2b_regime_diagnostic.py budget- vs layer-conditioned signals
+P2c  diagnostics/p2c_layer_exposure.py    layer/regime-aware exposure model + ranking
 ```
 
 ### Step 0 — Activation cache (`cache_inputs.py`)
@@ -112,10 +140,10 @@ Outputs: `runs/e2_signals_b{bits}.csv` (observations) and
 coefficients, signal orientation, fitted count support, characterization
 seeds, selection criterion and metrics, split, K and block seed.
 
-> The existing E2 artifact was produced under the original GPTQ damping
-> (`percdamp = 0.01`) and is **diagnostic only**. It must not be used for
-> final E3; E1/E2 are being rerun under the frozen `percdamp = 1.0`
-> (artifacts named `*_b4_d1*`).
+> E2 artifacts from the original damping (`*_b4.*`, `percdamp = 0.01`) are
+> diagnostic only. The frozen-damping artifacts are `*_b4_d1*`. Their
+> `e2_model_b4_d1.json` names relSE via E2's own linear-count selection,
+> which the P2 gate rejected; it **must not** be consumed by E3.
 
 ### Support diagnostic (`support_diagnostic.py`)
 
@@ -164,7 +192,10 @@ maximize  sum_e w_e * per_token_value_e * y_e
 - Every strategy uses the same fixed budget B; natural MoE routing is
   preserved; the GPTQ solver is not changed by the allocation method.
 
-E3 has **not** produced final research results yet.
+E3 has **not** produced final research results yet. Its utility is still the
+original signal-based `delta_hat`. The next experiment replaces it with
+layer/regime-aware exposure utilities, leaving the LP, routing and GPTQ
+unchanged.
 
 ## Data isolation
 
@@ -257,70 +288,70 @@ prefixes):
 
 | component | status |
 |---|---|
-| Real Qwen/CUDA smoke | Passed |
-| Pool / tune / test split | Implemented |
-| E1 future-benefit characterization | Implemented |
-| 3-seed characterization | Completed at old 0.01 damping |
-| E2 multi-seed signal validation | Completed at old 0.01 damping |
-| Routing profile correctness | Fixed / validated |
-| Low-data GPTQ diagnostic | Completed |
-| Fixed damping study (P0, extended grid) | Completed |
-| Final production GPTQ damping | Frozen: `percdamp = 1.0` |
-| E1 rerun under frozen damping (P1) | Completed — E1 gate PASS (0 % negative at every budget) |
-| E2 rerun under frozen damping (P2) | Completed — **CASE B**; E3 blocked pending investigation |
-| P2b regime diagnostic (budget vs layer) | Completed — **P2b-UNSTABLE**; E3 remains blocked |
-| P2c layer-aware exposure (revised hypothesis) | Completed — **LA-A** (gate passed, with caveats); minimal allocation experiment justified, not yet run |
-| Final E3 Random / Coverage / Sufficiency study | Not yet run |
-| 3-bit robustness | Not yet run |
-| PPL / overhead / peak-memory evaluation | Not yet run |
+| Real Qwen/CUDA smoke | complete |
+| Data split (pool / tune / test) and activation cache | complete |
+| Routing profiler correctness fix | complete |
+| Low-data GPTQ diagnosis | complete — genuine under-regularization, not a bug |
+| Damping freeze (P0) | complete — `percdamp = 1.0` |
+| P1 target validation (E1 + gate) | **PASS** |
+| P2 dynamic-state validation (E2 + gate) | **CASE B** — not robust |
+| P2b instability diagnosis | **UNSTABLE** — layer heterogeneity dominates |
+| P2c layer-aware exposure validation | **LA-A** — supported |
+| Minimal layer-aware allocation experiment (B = 128) | **next — not yet run** |
+| Multi-budget allocation evaluation (64/256/512) | pending |
+| PPL | pending |
+| Equal-compute evaluation | pending |
+| Overhead / peak memory | pending |
+| 3-bit robustness | pending |
 
-The E2 result under `percdamp = 0.01` (relSE selected, ~1.75% LOSO MSE
-improvement over count) is diagnostic, **not** the final sufficiency-signal
-conclusion.
+Key results (details and tables in [`update_10.29.md`](update_10.29.md);
+reports in `runs/`, which is gitignored):
 
-**P2 (`percdamp = 1.0`, `runs/e2_gate_b4_d1.md`): CASE B.** The flexible
-exposure baseline already beats linear count by 12.7 % (LOSO) / 11.0 % (LOLO).
-Against it, drift/relSE gain +2–3 % (common slope) or +9 % (budget-aware) in
-pooled LOSO with permutation p = 0.005, but fail on seed 0 and on held-out
-layers 16/23, and their per-budget slopes flip sign (negative at n0 ≤ 32,
-positive at n0 ≥ 64). Margin/entropy fail leave-one-layer-out badly (their
-scale is layer-specific). No signal is robust, so E3 is blocked pending an
-investigation of this instability. `e2_model_b4_d1.json` (which names relSE
-via E2's own linear-count selection) must not be consumed by E3.
+- **P1 — PASS** (`runs/e1_gate_b4_d1.md`). Median `future_rel_delta`:
+  +0.057 / +0.057 / +0.045 / +0.031 for n0 = 16 / 32 / 64 / 128. 0 % of experts
+  are negative at every budget, every seed and layer is positive, and returns
+  diminish.
+- **P2 — CASE B** (`runs/e2_gate_b4_d1.md`). The flexible exposure baseline
+  alone beats linear count by +12.7 % (LOSO) / +11.0 % (LOLO). Against it,
+  relSE/drift with budget-specific slopes reach ≈ +9 % pooled LOSO
+  (permutation p = 0.005). But seed 0 and held-out layers 16/23 get worse,
+  and the slopes change sign between low and high budgets. Margin/entropy
+  collapse when a layer is held out. **Negative finding for the original
+  hypothesis.**
+- **P2b — UNSTABLE** (`runs/p2b_regime_b4_d1.md`).
+  - Fixing the budget does not help: no signal is robust in any budget.
+  - A per-layer exposure model alone gains +30.2 % LOSO; a per-budget one
+    gains +0.1 %.
+  - Against per-layer exposure, drift/relSE give −1.5 / −1.4 %.
+  - Margin/entropy are ~99 % explained by expert identity, i.e. static
+    expert descriptors rather than calibration state.
+  - **This negative result stands.**
+- **P2c — LA-A** (`runs/p2c_layer_exposure.md`). Exposure-only; no state
+  signals.
+  - Layer intercepts gain +10.1 % LOSO over global flexible exposure.
+  - A layer-specific curve gains a further **+22.5 %** (every held-out seed;
+    permutation p = 0.001), about two thirds of the total.
+  - It transfers to held-out experts: +24.6 % over intercepts, every fold
+    positive.
+  - The most valuable layer changes with regime: L1 at n0 ≤ 32, L8 at n0 = 128.
+  - Ranking experts at a fixed budget, it captures 0.962 of the oracle's
+    utility, versus 0.934 for coverage 1/n. It wins in all 12 (seed, budget)
+    cells: +7 pp at n0 = 16, +1–2 pp at n0 ≥ 32.
+  - **Caveat:** routed count is ~proportional to budget, and layer × budget
+    means (no continuous layer × count curve) perform just as well. The
+    supported claim is *layer- and regime-dependent* marginal value, not a
+    uniquely identified continuous curve. The ranking also ignores
+    sequence-routing coupling.
 
-**P2b (`diagnostics/p2b_regime_diagnostic.py`, `runs/p2b_regime_b4_d1.md`):
-P2b-UNSTABLE.** Same P2 rows, read-only. Conditioning on budget does not fix it:
-no signal is robust in any fixed budget (drift/relSE lose on held-out layers
-16/23 at every budget except 64, and on seed 0 at n0 ≤ 32). Conditioning on layer
-does not fix it either: drift/relSE add nothing over a per-layer exposure model
-(−1.4 to −4 % LOSO, seed 0 negative everywhere). Margin/entropy pass within some
-layers, but ~99 % of their variance is expert identity (constant across seeds
-and budgets), so they are static expert descriptors, not calibration state, and
-their within-layer slopes change sign across layers. A per-layer exposure model
-alone beats P2's global exposure baseline by +30 % LOSO. Instability is
-therefore neither purely budget- nor purely layer-driven; the tested state
-signals are context-dependent and not reliable enough for adaptive allocation.
-
-**Pivot — P2c (`diagnostics/p2c_layer_exposure.py`, `runs/p2c_layer_exposure.md`):
-LA-A.** The dynamic-state hypothesis (P2/P2b) is *not* supported and stays
-recorded as a negative finding. The revised, exposure-only hypothesis is that
-the marginal value of routed-token exposure is layer-dependent. On the same P2
-rows (count, layer, budget, `future_rel_delta` only), compared with the global
-flexible exposure model M1, using leave-one-seed-out CV (LOSO):
-layer intercepts (M2) gain +10.1 % [95 % CI +4.4, +15.3]. A layer-specific
-exposure curve (M4: layer × lc, lc²) gains a further +22.5 % over M2: positive
-for every held-out seed (+20 to +26 %), Freedman–Lane p = 0.001, and +24.6 %
-over M2 on held-out experts (grouped CV), positive in every fold and layer.
-About two thirds of the gain is the curve, one third the intercept. The curves
-cross: L1 has the highest benefit at n0 ≤ 32 and the lowest at n0 = 128, while
-L8 is flatter. Ranking experts at a fixed budget (held-out seed), the layer-aware
-utility f_L(n)/n captures 96.2 % of the oracle's top-q utility, versus 93.4 % for
-coverage 1/n and for the global model, and wins in all 12 (seed, budget) cells
-(+7 pp at n0 = 16, +1–2 pp at n0 ≥ 32). **Caveat:** routed count is ~proportional
-to budget, so the curve is identified from between-budget shifts. A model with
-one mean per (layer, budget) and no layer × count term fits and ranks as well
-(within-budget layer-specific slope: +0.1 %), so a layer × budget-weighted
-coverage baseline must be part of any allocation comparison.
+**Next step — minimal layer-aware allocation experiment.**
+- B = 128, seeds 0/1/2.
+- Compare Random, Coverage, Global exposure, Layer × budget, Layer-aware and
+  Oracle.
+- Same frozen GPTQ, budget, routing and LP / sequence selection; only the
+  utility changes.
+- Question: *does the expert-level advantage survive sequence-routing
+  coupling?*
+- Only if it does: budgets 64/256/512, PPL, equal-compute, overhead, 3-bit.
 
 ## Running the code
 
@@ -344,6 +375,12 @@ python support_diagnostic.py --cache-dir ~/moe_cache --bits 4 --budgets 64 128 2
 
 # read-only report on finished E1/E2 (LOSO metrics overall and per n0, per-fold coefficients)
 python analyze_characterization.py --bits 4 --outdir runs
+
+# validation gates on the frozen-damping E1/E2 outputs (CPU, seconds to a minute)
+python e1_gate.py --bits 4 --percdamp 1.0 --outdir runs
+python e2_gate.py --bits 4 --percdamp 1.0 --outdir runs
+python diagnostics/p2b_regime_diagnostic.py --permutations 1000
+python diagnostics/p2c_layer_exposure.py --permutations 1000
 ```
 
 `scripts/run_all.sh` and `scripts/run_characterization_b4.sh` still use the
@@ -389,13 +426,17 @@ tests/            CPU tests
 
 ## Known limitations
 
-- Only four profiled layers (1, 8, 16, 23).
+- Only four profiled layers (1, 8, 16, 23). A layer-aware allocator over all
+  24 layers needs every layer characterized, or a parameter-sharing scheme.
+- Layer-aware exposure value is identified across calibration regimes: per-expert
+  count and budget move together, so their effects cannot be separated.
 - Non-sequential GPTQ: every layer is quantized from full-precision inputs.
 - Only routed experts are quantized; attention and the shared expert stay BF16.
 - Characterization is currently 4-bit only.
 - Predictor validity is limited to the characterized routed-count support.
 - The allocator approximates the benefit between n and 2n from the n0 → 2n0 labels.
-- The final Random / Coverage / Sufficiency comparison has not been run.
+- No allocation experiment has been run. E3 still uses the original
+  signal-based utility.
 - Equal-compute `random_plus` evaluation is pending.
 - Final cost and peak-memory analysis is pending.
 - `--unbiased` (Horvitz–Thompson weighting) is experimental and not part of
