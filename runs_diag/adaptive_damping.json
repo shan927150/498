@@ -1,0 +1,77 @@
+{
+  "damps": [
+    0.01,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "layers": [
+    1,
+    8,
+    16,
+    23
+  ],
+  "frozen": 1.0,
+  "rows": [
+    {
+      "n": 16,
+      "frozen_err": 0.005389656474432978,
+      "per_prefix": 2.356434526046891,
+      "per_layer_prefix": 2.4782914907684916,
+      "per_token_bin": 2.324890487647746,
+      "per_expert_oracle": 2.675145478044494,
+      "doubled": 5.726634386023122,
+      "best_per_prefix_all_seeds": 3.0
+    },
+    {
+      "n": 32,
+      "frozen_err": 0.005081010553479578,
+      "per_prefix": 0.9472726063663894,
+      "per_layer_prefix": 1.1300351094456484,
+      "per_token_bin": 0.9514046980523716,
+      "per_expert_oracle": 1.3403507683997562,
+      "doubled": 5.197851551378574,
+      "best_per_prefix_all_seeds": 2.0
+    },
+    {
+      "n": 64,
+      "frozen_err": 0.00481690716759983,
+      "per_prefix": 0.0,
+      "per_layer_prefix": 0.16459976870996096,
+      "per_token_bin": 0.0525374304021442,
+      "per_expert_oracle": 0.4413886151091506,
+      "doubled": 4.542232513824329,
+      "best_per_prefix_all_seeds": 1.0
+    },
+    {
+      "n": 128,
+      "frozen_err": 0.0045981120440723765,
+      "per_prefix": 0.0,
+      "per_layer_prefix": 0.4230400139790258,
+      "per_token_bin": 0.045208896185433556,
+      "per_expert_oracle": 0.6024132876579436,
+      "doubled": 3.1139542460836167,
+      "best_per_prefix_all_seeds": 1.0
+    },
+    {
+      "n": 256,
+      "frozen_err": 0.0044549289388363025,
+      "per_prefix": 1.5021704374757916,
+      "per_layer_prefix": 1.7110505618131433,
+      "per_token_bin": 1.5021704374757916,
+      "per_expert_oracle": 1.8360574012866282,
+      "doubled": null,
+      "best_per_prefix_all_seeds": 0.5
+    }
+  ]
+}

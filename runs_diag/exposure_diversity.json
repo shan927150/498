@@ -1,0 +1,46 @@
+{
+  "32": {
+    "spread/natural": {
+      "ratio": 0.969582110229178,
+      "frac_A_better": 0.9916666666666667,
+      "n": 480
+    },
+    "conc/natural": {
+      "ratio": 1.0536300980726865,
+      "frac_A_better": 0.0020833333333333333,
+      "n": 480
+    },
+    "half_tok/half_seq": {
+      "ratio": 0.9865860986318259,
+      "frac_A_better": 0.9604166666666667,
+      "n": 480
+    },
+    "natural/half_tok": {
+      "ratio": 0.9542702832615009,
+      "frac_A_better": 1.0,
+      "n": 480
+    }
+  },
+  "128": {
+    "spread/natural": {
+      "ratio": 0.9878168413783036,
+      "frac_A_better": 0.99375,
+      "n": 480
+    },
+    "conc/natural": {
+      "ratio": 1.0192366997395301,
+      "frac_A_better": 0.004166666666666667,
+      "n": 480
+    },
+    "half_tok/half_seq": {
+      "ratio": 0.9855392051142815,
+      "frac_A_better": 0.9979166666666667,
+      "n": 480
+    },
+    "natural/half_tok": {
+      "ratio": 0.9710497371787732,
+      "frac_A_better": 1.0,
+      "n": 480
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "K": 1,
+  "bits": 4,
+  "char_seed": 0,
+  "data_seed": 0,
+  "fdr_q": 0.1,
+  "group_size": 128,
+  "holdout_size": 256,
+  "layers": [
+    1,
+    8,
+    16,
+    23
+  ],
+  "min_calib_tokens": 1,
+  "min_paired_seqs": 8,
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "n0": [
+    16,
+    32,
+    64,
+    128
+  ],
+  "percdamp": 1.0,
+  "pool_size": 2000,
+  "reps": 2,
+  "seqlen": 512,
+  "split": {
+    "data_seed": 0,
+    "pool": [
+      0,
+      2000
+    ],
+    "seqlen": 512,
+    "test": [
+      2128,
+      2256
+    ],
+    "tune": [
+      2000,
+      2128
+    ]
+  }
+}
