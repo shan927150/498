@@ -147,3 +147,15 @@ def test_headroom_run_resume_report(cache_dir, tmp_path):
     HR.main(["report", "--outdir", out])
     rep = json.load(open(os.path.join(out, "headroom_report.json")))
     assert [r["B"] for r in rep["rows"]] == [0, 4, 8]
+
+
+def test_within_layer_single_seed_uses_expert_folds():
+    d = _labels(None, np.random.default_rng(3))
+    one = {k: v[d["seed"] == 0] for k, v in d.items()}
+    group, how = WL.folds_of(one)
+    assert how.startswith("expert-grouped") and len(set(group.tolist())) == 5
+    for g in set(group.tolist()):                       # an expert never spans folds
+        assert set(one["expert"][group == g].tolist()).isdisjoint(one["expert"][group != g].tolist())
+    agg, wins, ncells = WL.summarize(WL.run(one))
+    assert ncells == 5 * 4
+    assert abs(agg["layer_aware"]["within_layer"] - agg["coverage"]["within_layer"]) < 0.01

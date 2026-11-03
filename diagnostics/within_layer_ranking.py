@@ -10,7 +10,7 @@ decreases in n, f_L(n)/n orders experts exactly like coverage 1/n.
 P2c scored rankings over all 240 experts pooled across layers. This script
 repeats that capture test both pooled (P2c's view) and WITHIN each layer
 (the only reallocation sequence selection can make), held out by
-characterization seed.
+characterization seed (or, with one seed, by expert groups).
 
 Utility rules (realized value = future_rel_delta / n, P2c's definition):
   coverage      1 / n
@@ -85,16 +85,26 @@ def spearman(a, b):
     return float(np.corrcoef(ra, rb)[0, 1])
 
 
+def folds_of(d, k=5):
+    """Held-out unit: the characterization seed when there are >= 2 seeds;
+    with a single seed, experts (expert id mod k: every layer's expert e in
+    the same fold, so a held-out expert is never seen in training)."""
+    if len(set(d["seed"].tolist())) >= 2:
+        return d["seed"], "leave-one-seed-out"
+    return d["expert"] % k, f"expert-grouped {k}-fold"
+
+
 def run(d):
-    seeds, layers, budgets = (sorted(set(d[k].tolist())) for k in ("seed", "layer", "budget"))
+    layers, budgets = (sorted(set(d[k].tolist())) for k in ("layer", "budget"))
+    group, _ = folds_of(d)
     rows = []
-    for s in seeds:
-        tr = d["seed"] != s
+    for s in sorted(set(group.tolist())):
+        tr = group != s
         mu, sd = np.log(d["count"][tr]).mean(), np.log(d["count"][tr]).std() + 1e-12
         bG = fit(d, tr, budgets, mu, sd)
         bL = {L: fit(d, tr & (d["layer"] == L), budgets, mu, sd) for L in layers}
         for b in budgets:
-            m = (d["seed"] == s) & (d["budget"] == b)
+            m = (group == s) & (d["budget"] == b)
             n, real, lay = d["count"][m], d["y"][m] / d["count"][m], d["layer"][m]
             X = design(n, d["budget"][m], budgets, mu, sd)
             fG = X @ bG
@@ -102,7 +112,7 @@ def run(d):
             utils = dict(coverage=1.0 / n, global_=np.maximum(fG, 0) / n,
                          layer_aware=np.maximum(fL, 0) / n, oracle=real)
             for name, u in utils.items():
-                rows.append(dict(seed=s, budget=b, rule=name.rstrip("_"),
+                rows.append(dict(fold=s, budget=b, rule=name.rstrip("_"),
                                  pooled=capture(u, real),
                                  within_layer=capture(u, real, lay),
                                  within_spearman=float(np.mean(
@@ -119,17 +129,17 @@ def summarize(rows):
         rs = [x for x in rows if x["rule"] == r]
         agg[r] = {k: float(np.mean([x[k] for x in rs]))
                   for k in ("pooled", "within_layer", "within_spearman", "same_order_as_coverage")}
-    cells = sorted({(x["seed"], x["budget"]) for x in rows})
-    get = lambda r, c, k: next(x[k] for x in rows if x["rule"] == r and (x["seed"], x["budget"]) == c)
+    cells = sorted({(x["fold"], x["budget"]) for x in rows})
+    get = lambda r, c, k: next(x[k] for x in rows if x["rule"] == r and (x["fold"], x["budget"]) == c)
     wins = {k: sum(get("layer_aware", c, k) > get("coverage", c, k) + 1e-12 for c in cells)
             for k in ("pooled", "within_layer")}
     return agg, wins, len(cells)
 
 
-def render(agg, wins, ncells, tag):
+def render(agg, wins, ncells, tag, validation=""):
     dp = agg["layer_aware"]["pooled"] - agg["coverage"]["pooled"]
     dw = agg["layer_aware"]["within_layer"] - agg["coverage"]["within_layer"]
-    M = [f"# Exp1 — within-layer ranking check ({tag})", "",
+    M = [f"# Exp1 — within-layer ranking check ({tag})", "", f"Validation: {validation}.", "",
          f"Layer-aware minus coverage capture: pooled across layers {100 * dp:+.2f} pp "
          f"(wins {wins['pooled']}/{ncells} cells), within layers {100 * dw:+.2f} pp "
          f"(wins {wins['within_layer']}/{ncells}).", "",
@@ -158,7 +168,7 @@ def main(argv=None):
     base = os.path.join(a.outdir, f"within_layer_ranking_{tag}")
     json.dump(dict(summary=agg, wins=wins, cells=ncells, rows=rows), open(base + ".json", "w"),
               indent=2, default=float)
-    md = render(agg, wins, ncells, tag)
+    md = render(agg, wins, ncells, tag, folds_of(d)[1])
     open(base + ".md", "w").write(md + "\n")
     print(md)
     return agg

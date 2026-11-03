@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# New layers 4/12/20 (seed 0) -> runs_newlayers/, then the depth analysis vs runs_own/.
+set -euo pipefail; source scripts/parallel/env.sh
+export MOE_LOAD_LAYERS=4,12,20
+python e1_label_sufficiency.py --cache-dir $NEWCACHE --layers 4 12 20 --bits 4 \
+    --n0 16 32 64 128 --reps 2 --K 1 --char-seed 0 --percdamp $DAMP --outdir runs_newlayers
+unset MOE_LOAD_LAYERS
+python diagnostics/depth_generalization.py --old-outdir runs_own --new-outdir runs_newlayers \
+    --percdamp $DAMP
