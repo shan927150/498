@@ -47,6 +47,8 @@ def cmd_run(a):
         argv = ["--strategy", "random", "--B", str(B), "--seed", str(s), "--K", "1",
                 "--bits", str(a.bits), "--percdamp", str(a.percdamp),
                 "--cache-dir", a.cache_dir, "--outdir", a.outdir]
+        if a.layers:
+            argv += ["--layers", *map(str, a.layers)]
         if not a.no_ppl:
             argv += ["--ppl", "--ppl-windows", str(a.ppl_windows)]
             if B == 0:
@@ -101,6 +103,8 @@ def main(argv=None):
     ap.add_argument("--percdamp", type=float, default=1.0)
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     ap.add_argument("--budgets", type=int, nargs="+", default=ORDER)
+    ap.add_argument("--layers", type=int, nargs="+", default=None,
+                    help="layers to quantize (default: every layer in the cache)")
     ap.add_argument("--ppl-windows", type=int, default=40)
     ap.add_argument("--no-ppl", action="store_true", help="reconstruction only (tests)")
     a = ap.parse_args(argv)
