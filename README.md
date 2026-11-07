@@ -31,7 +31,10 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
-> **Final:** [`update_aggregate_constraint.md`](update_aggregate_constraint.md)
+> **Pilot (after the final allocation test):** [`update_activation_swap.md`](update_activation_swap.md)
+> (activation-aware single-sequence swaps, layer 16, 8 experts: ACTIVATION-SIGNAL-INCONCLUSIVE —
+> predicted diagonal-mismatch gain vs actual GPTQ gain Spearman +0.12 over 9 swaps, effects ≤ 0.085 %);
+> **Final allocation test:** [`update_aggregate_constraint.md`](update_aggregate_constraint.md)
 > (aggregate-shift-constrained Coverage-LP on a locked, document-disjoint confirmation split:
 > AGGREGATE-ALLOCATION-PARTIAL — beats Full Coverage-LP by 1.7 % but is 1.5 % worse than
 > Typical Random on 3/3 seeds; exposure-based allocator development ends here;

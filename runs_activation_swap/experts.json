@@ -1,0 +1,24 @@
+{
+ "layer": 16,
+ "experts": [
+  30,
+  53,
+  9,
+  42,
+  24,
+  50,
+  16,
+  0
+ ],
+ "rule": "8 largest routed-token totals of layer 16 over the original 2,000-sequence pool (routing_profile_v2.npz); ties -> lower id",
+ "routed_tokens": {
+  "30": 84253.0,
+  "53": 84232.0,
+  "9": 84079.0,
+  "42": 79362.0,
+  "24": 78089.0,
+  "50": 77943.0,
+  "16": 77267.0,
+  "0": 76576.0
+ }
+}
