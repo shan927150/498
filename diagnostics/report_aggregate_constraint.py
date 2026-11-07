@@ -181,27 +181,28 @@ def figures(res, outdir):
                 linewidth=1, zorder=1)
     ax.set_xticks(range(len(order)), [NAMES[k] for k in order], rotation=12)
     ax.set_ylabel("mean relative expert error\n(confirmation split, lower is better)")
-    ax.set_title("Confirmation reconstruction by strategy (dots = seeds 0/1/2, bar = mean)", loc="left")
+    ax.set_title("Confirmation error by strategy (dots: seeds 0/1/2; bar: mean)", loc="left")
     ax.grid(axis="y")
     fig.tight_layout()
     for ext in ("pdf", "png"):
         fig.savefig(os.path.join(fd, f"confirmation_recon.{ext}"), dpi=200)
     plt.close(fig)
 
-    # 2. aggregate routing shift vs error (one point per strategy x seed)
-    fig, ax = plt.subplots(figsize=(5.6, 3.8))
-    for k in order:
-        xs = [res["runs"][f"{k}_s{s}"]["aggregate_l1_mean"] for s in seeds]
-        ys = [res["runs"][f"{k}_s{s}"]["recon_mean"] for s in seeds]
-        ax.scatter(xs, ys, s=40, color=COLORS[k], marker=MARKERS[k], label=NAMES[k], edgecolor="white",
-                   linewidth=1.5, zorder=3)
-        ax.annotate(NAMES[k], (np.mean(xs), np.mean(ys)), xytext=(6, 4), textcoords="offset points",
-                    fontsize=8, color="#333333")
-    ax.set_xlabel("aggregate routing L1 to pool, mean over layers 1/8/16/23")
-    ax.set_ylabel("mean relative expert error (confirmation)")
-    ax.set_title("Aggregate routing shift vs confirmation error", loc="left")
-    ax.grid(True)
-    ax.legend(frameon=False, fontsize=7, loc="lower right")
+    # 2. two routing proxies vs error (small multiples, shared error axis)
+    fig, axes = plt.subplots(1, 2, figsize=(7.6, 3.6), sharey=True)
+    for ax, key, lab in ((axes[0], "aggregate_l1_mean", "aggregate routing L1 to pool\n(mean over layers)"),
+                         (axes[1], "d_post_warm", "mean per-sequence d(s)\nof the 96 post-warm picks")):
+        for k in order:
+            xs = [res["runs"][f"{k}_s{s}"][key] for s in seeds]
+            ys = [res["runs"][f"{k}_s{s}"]["recon_mean"] for s in seeds]
+            ax.scatter(xs, ys, s=40, color=COLORS[k], marker=MARKERS[k], label=NAMES[k], edgecolor="white",
+                       linewidth=1.5, zorder=3)
+        ax.set_xlabel(lab)
+        ax.grid(True)
+    axes[0].set_ylabel("mean relative expert error (confirmation)")
+    axes[0].set_title("Aggregate shift", loc="left")
+    axes[1].set_title("Per-sequence atypicality", loc="left")
+    axes[1].legend(frameon=False, fontsize=7, loc="upper left")
     fig.tight_layout()
     for ext in ("pdf", "png"):
         fig.savefig(os.path.join(fd, f"shift_vs_error.{ext}"), dpi=200)

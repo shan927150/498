@@ -31,7 +31,12 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
-> **Latest:** [`update_repr_constrained.md`](update_repr_constrained.md)
+> **Final:** [`update_aggregate_constraint.md`](update_aggregate_constraint.md)
+> (aggregate-shift-constrained Coverage-LP on a locked, document-disjoint confirmation split:
+> AGGREGATE-ALLOCATION-PARTIAL — beats Full Coverage-LP by 1.7 % but is 1.5 % worse than
+> Typical Random on 3/3 seeds; exposure-based allocator development ends here;
+> [`runs_aggregate_constraint/summary.md`](runs_aggregate_constraint/summary.md));
+> **Previous:** [`update_repr_constrained.md`](update_repr_constrained.md)
 > (representativeness-constrained Coverage-LP: REPR-ALLOCATION-NO-GAIN — mitigates
 > the coverage penalty by 1.6 % but stays 1.0 % worse than Typical Random on 3/3 seeds);
 > [`update_matched_typicality_11.06.md`](update_matched_typicality_11.06.md)
