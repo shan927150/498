@@ -46,6 +46,7 @@ from scipy import stats
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from p2b_regime_diagnostic import check_table, fold_gains, gain   # noqa: E402
+from moe_calib.alloc_models import design                         # noqa: E402
 
 MODELS = ("M0", "M1", "M2", "M3", "M4", "M4c", "Dlb", "DlbS")
 LAYER_AWARE = ("M3", "M4", "M4c")
@@ -84,22 +85,9 @@ class LDesign:
         return self
 
     def X(self, d):
+        # one implementation shared with the E3 controller artifact
         lc = (np.log(d["count"]) - self.mu) / self.sd
-        cols = [np.ones_like(lc), lc]
-        if self.name == "M0":
-            return np.stack(cols, 1)
-        B = [(d["budget"] == b).astype(float) for b in self.budgets[1:]]
-        cols += [lc ** 2, lc ** 3] + B + [x * lc for x in B]
-        if self.name == "M1":
-            return np.stack(cols, 1)
-        L = [(d["layer"] == l).astype(float) for l in self.layers[1:]]
-        cols += L
-        if self.name in ("Dlb", "DlbS"):
-            cols += [x * y for x in L for y in B]
-        powers = {"M3": 1, "M4": 2, "M4c": 3, "DlbS": 1}.get(self.name, 0)
-        for p in range(1, powers + 1):
-            cols += [x * lc ** p for x in L]
-        return np.stack(cols, 1)
+        return design(self.name, lc, d["budget"], d["layer"], self.budgets, self.layers)[0]
 
 
 def fit(d, name):

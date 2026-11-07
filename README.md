@@ -18,10 +18,25 @@ exposure-only hypothesis:
 > calibration-regime-dependent**.
 
 It holds on held-out seeds and held-out experts, and it ranks experts better
-than plain coverage (P2c LA-A). Whether that survives sequence-routing
-constraints in an actual allocation run is the **next, not-yet-run**
-experiment.
+than plain coverage (P2c LA-A).
 
+**Minimal allocation experiment (11/06): ALLOCATION-NO-GAIN.** The
+question was whether that advantage survives sequence-routing coupling in
+real whole-sequence selection.
+- Setup: B = 128, seeds 0/1/2, frozen GPTQ, test split.
+- Layer-aware utility matches matched-controller LP coverage: +0.02 % mean;
+  per seed −0.32 / −0.28 / +0.67 %.
+- **Every** routing-driven strategy is 1.1–1.8 % *worse than random* on every
+  seed. This includes greedy coverage, LP coverage, M1, Dlb and M4.
+- The adaptive picks are atypical sequences. Their per-expert token counts
+  change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
+
+> **Latest:** [`update_repr_constrained.md`](update_repr_constrained.md)
+> (representativeness-constrained Coverage-LP: REPR-ALLOCATION-NO-GAIN — mitigates
+> the coverage penalty by 1.6 % but stays 1.0 % worse than Typical Random on 3/3 seeds);
+> [`update_matched_typicality_11.06.md`](update_matched_typicality_11.06.md)
+> (matched-warm-start typicality validation: MATCHED-TYPICALITY-SUPPORTED);
+> [`update_11.06.md`](update_11.06.md) (minimal allocation + unmatched typicality test).
 > **Detailed experimental history (P0 → P2c, with numbers):**
 > [`update_10.29.md`](update_10.29.md). Earlier log:
 > [`update_10_18.md`](update_10_18.md). Run order and stop rules:
@@ -297,7 +312,10 @@ prefixes):
 | P2 dynamic-state validation (E2 + gate) | **CASE B** — not robust |
 | P2b instability diagnosis | **UNSTABLE** — layer heterogeneity dominates |
 | P2c layer-aware exposure validation | **LA-A** — supported |
-| Minimal layer-aware allocation experiment (B = 128) | **next — not yet run** |
+| Minimal layer-aware allocation experiment (B = 128) | **evaluated — ALLOCATION-NO-GAIN** (all adaptive strategies lose to random) |
+| Typicality-controlled allocation test | **evaluated — TYPICALITY-SUPPORTED** (coverage penalty +1.32 % → +0.01 % in the typical half; random-half control +1.43 %) |
+| Matched-warm-start typicality validation | **evaluated — MATCHED-TYPICALITY-SUPPORTED** (T-C vs F-C −2.47 %, I and J < 0 on 3/3 seeds) |
+| Representativeness-constrained Coverage-LP (mean d ≤ 0.321) | next — not yet run |
 | Multi-budget allocation evaluation (64/256/512) | pending |
 | PPL | pending |
 | Equal-compute evaluation | pending |
@@ -343,17 +361,80 @@ reports in `runs/`, which is gitignored):
     uniquely identified continuous curve. The ranking also ignores
     sequence-routing coupling.
 
-**Next step — minimal layer-aware allocation experiment.**
-- B = 128, seeds 0/1/2.
-- Compare Random, Coverage, Global exposure, Layer × budget, Layer-aware and
-  Oracle.
-- Same frozen GPTQ, budget, routing and LP / sequence selection; only the
-  utility changes.
-- Question: *does the expert-level advantage survive sequence-routing
-  coupling?*
-- Only if it does: budgets 64/256/512, PPL, equal-compute, overhead, 3-bit.
+- **Minimal allocation — ALLOCATION-NO-GAIN** (`runs_allocation_minimal/summary.md`,
+  [`update_11.06.md`](update_11.06.md)). Setup: B = 128, seeds 0/1/2, 18/18
+  runs, mean expert reconstruction error on the test split.
+
+  | strategy | error | vs random |
+  |---|---|---|
+  | random | 0.004616 | – |
+  | coverage (greedy) | 0.004683 | +1.45 % |
+  | coverage_lp | 0.004677 | +1.32 % |
+  | global_exposure (M1) | 0.004666 | +1.09 % |
+  | layer_budget (Dlb) | 0.004700 | +1.82 % |
+  | layer_aware (M4) | 0.004678 | +1.35 % |
+
+  - Layer-aware vs coverage_lp: +0.02 % (seeds −0.32 / −0.28 / +0.67 %).
+    The selected sets differ (18–32 % of adaptive picks shared), but quality
+    does not.
+  - Adaptive picks are atypical sequences (routing L1 to pool 0.40–0.42 vs
+    0.33 for random). Counts move by only ≈5 %.
+  - Selection overhead: 2,000 full-model forwards for the routing profile.
+
+- **Typicality test — TYPICALITY-SUPPORTED** (`runs_typicality/summary.md`,
+  [`update_11.06.md`](update_11.06.md) §10).
+  - Typical half = the 1,000 sequences with the lowest routing L1 to the
+    pool.
+  - Coverage_lp's penalty versus random falls from +1.32 % (full pool) to
+    +0.01 % (typical half). A random half does not do this (+1.43 %).
+  - Interaction and pool-size control are both negative on 3/3 seeds.
+  - Count balancing becomes harmless, not beneficial. Typical random beats
+    full random by only 0.17 %.
+
+- **Matched warm start — MATCHED-TYPICALITY-SUPPORTED**
+  (`runs_typicality_matched/summary.md`,
+  [`update_matched_typicality_11.06.md`](update_matched_typicality_11.06.md)).
+  - All 6 conditions of a seed share the same ordered 32-sequence warm start
+    drawn from typical ∩ random half.
+  - Typical eligibility lowers Coverage-LP error by 2.47 %: −2.35 / −2.50 /
+    −2.55 % per seed, in every layer.
+  - Coverage penalty vs Random: +2.48 % (full), +0.17 % (typical),
+    +1.78 % (random half). I and J are negative on 3/3 seeds.
+  - Token balance is unchanged while error drops. Source diversity moves
+    with typicality (confounded).
+  - Typical Coverage-LP still does not beat typical Random.
+
+**Next step — representativeness-constrained Coverage-LP** on the full pool
+(mean d of adaptive picks ≤ 0.321) under the same matched warm starts. No
+budget sweep, PPL or 3-bit before that.
 
 ## Running the code
+
+Minimal allocation experiment (11/06):
+
+```bash
+python diagnostics/export_allocation_models.py           # P2c M1/Dlb/M4 -> runs/allocation_models_b4_d1.json
+SEEDS=0 bash scripts/run_minimal_allocation.sh            # smoke (all 6 strategies, seed 0)
+SEEDS="1 2" PAR=2 bash scripts/run_minimal_allocation.sh  # remaining seeds; resumable
+python diagnostics/report_minimal_allocation.py           # runs_allocation_minimal/summary.{md,json}
+```
+
+Routing-typicality test (reuses the full-pool runs above):
+
+```bash
+python diagnostics/typicality_pools.py                    # pools from routing_profile_v2.npz (CPU)
+bash scripts/run_typicality_experiment.sh                  # 12 filtered-pool runs; resumable, PAR=2
+python diagnostics/report_typicality.py                    # runs_typicality/summary.{md,json}
+```
+
+Matched-warm-start typicality validation:
+
+```bash
+python diagnostics/typicality_warm_starts.py              # shared warm starts W_s from typical ∩ random half
+bash scripts/run_typicality_matched.sh                     # 18 runs; seed-0 smoke + warm-start check; resumable
+python diagnostics/report_typicality_matched.py            # summary.{md,json} + figures/
+```
+
 
 Environment (ICRN): a venv with a CUDA build of torch that matches the
 driver, plus `requirements.txt`; `scripts/setup_icrn.sh` is the original

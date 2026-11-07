@@ -34,9 +34,24 @@ characterization or parameter sharing.
 | P2 ✅ (B) | E2 under the frozen damping, then the go/no-go gate | (same script) | `e2_gate.py` case A / A_budget → E3; B → discuss; C → negative finding |
 | P2b ✅ (UNSTABLE) | budget- vs layer-conditioned validation of the P2 signals (read-only, CPU) | `python diagnostics/p2b_regime_diagnostic.py --permutations 1000` | BUDGET / LAYER / BOTH → structured predictor + new gate; UNSTABLE → stop |
 | P2c ✅ (LA-A) | exposure-only layer-aware hypothesis: M0–M4 ladder, LOSO + expert-grouped CV, interaction permutation, fixed-budget expert ranking vs coverage | `python diagnostics/p2c_layer_exposure.py --permutations 1000` | LA-A → minimal allocation experiment; LA-B → layer-weighted coverage; LA-C/D → stop |
+| P3m ✅ (NO-GAIN) | minimal allocation, B = 128 × seeds 0/1/2: random, coverage, coverage_lp, global_exposure (M1), layer_budget (Dlb), layer_aware (M4); one shared LP controller | `scripts/run_minimal_allocation.sh` → `diagnostics/report_minimal_allocation.py` | PASS → next ablation; NO-GAIN → stop expansion. **Result: every adaptive strategy loses to random (+1.1–1.8 %); layer_aware ≈ coverage_lp (+0.02 %)** — see `update_11.06.md` |
+| P3t ✅ (TYPICALITY-SUPPORTED) | typicality-controlled test: random vs coverage_lp from full / typical-half (lowest d) / random-half pools, B = 128 × 3 seeds | `scripts/run_typicality_experiment.sh` → `diagnostics/report_typicality.py` | **Result:** coverage penalty +1.32 % (full) → +0.01 % (typical) vs +1.43 % (random half); I < 0 and P_T − P_H < 0 on 3/3 seeds. Count balancing is neutral inside typical candidates |
+| P3m2 ✅ (MATCHED-TYPICALITY-SUPPORTED) | matched-warm-start validation: same ordered 32-seq warm start (from typical ∩ random half) for all 6 pool × strategy conditions per seed | `scripts/run_typicality_matched.sh` → `diagnostics/report_typicality_matched.py` | **Result:** T-C vs F-C −2.47 % (3/3), I = −106.9e-6, J = −74.6e-6 (3/3); T-C vs T-R +0.17 % (no balancing gain) — `update_matched_typicality_11.06.md` |
+| P3c | representativeness-constrained Coverage-LP on the full pool (mean d of adaptive picks ≤ 0.321), matched warm starts, B = 128 × 3 seeds | — (not yet implemented) | ≈ T-C and ≥ Random → usable allocator; < Random → report typicality as the finding, stop allocation work |
+| P3d | (deferred) typicality dose-response with random selection | — | only if P3c motivates it |
 | P3 | support diagnostic with the fixed routing cache → decide on n0 = 256 | `scripts/p3p4_e3_min.sh` | only after case A |
 | P4 | minimal E3: B = 128 × seeds 0/1/2 × random / coverage / tlp / oracle + equal-compute random | (same script) | no B sweep unless tlp or oracle beats random/coverage |
 | P5 | budgets 64/256/512, all-layer PPL, candidate-pool multiplier k = 2/4/8, distribution constraint, 3-bit | — | only after P4 shows an improvement |
+
+**Update 11/06 — ALLOCATION-NO-GAIN** (`update_11.06.md`). The exposure-only
+utilities (M1 / Dlb / M4) and the matched LP coverage all run on one shared E3
+controller (`moe_calib/alloc_models.py`, `e3_allocation.py --frozen-config
+--alloc-models`).
+- None of them beats random at B = 128. All lose by 1.1–1.8 % on every
+  seed.
+- Layer-aware vs coverage_lp: +0.02 %.
+- P4/P5 (tlp/oracle, budget sweeps, PPL, 3-bit) stay **blocked**.
+- The single next experiment is P3t.
 
 ## What changed in the code
 

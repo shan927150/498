@@ -1,0 +1,7 @@
+{
+ "run": "runs_typicality_matched/e3_random_B128_b4_d1_s0_warm-71f4c159.json",
+ "stored": 0.004609548874536215,
+ "recomputed": 0.004609548874536215,
+ "exact": true,
+ "max_abs_expert_diff": 0.0
+}

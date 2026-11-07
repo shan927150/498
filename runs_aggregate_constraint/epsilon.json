@@ -1,0 +1,29 @@
+{
+ "eps": [
+  0.021305114746093746,
+  0.03392446899414061,
+  0.028923126220703137,
+  0.040309600830078125
+ ],
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "rule": "eps_L = median over 3 seeds x 1000 uniform completions of the fixed warm start (numpy default_rng([20261107, seed]), choice without replacement)",
+ "eps_seed": 20261107,
+ "n_draws": 1000,
+ "tokens_per_seq_layer": 2048.0,
+ "B": 128,
+ "routing_cache": "runs_typicality_matched/routing_profile_v2.npz",
+ "routing_sha256": "f0bb65eddb4c44c0143b3d70d3ae49aa8b1bfc00e6835c08b88549e60a9ecfc7",
+ "pool_fingerprint": "49f227928f299287",
+ "warm_hashes": {
+  "0": "71f4c1599ef18971",
+  "1": "1d2b3965567279e4",
+  "2": "ba99ad010c44de11"
+ },
+ "construction_s": 0.15728545188903809,
+ "reference": "p_pool = original 2,000-sequence candidate pool routing (fixed)"
+}
