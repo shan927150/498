@@ -1,0 +1,21 @@
+{
+ "windows": [
+  {
+   "window": 0,
+   "hf_loss_mean_nll": 1.7633984088897705,
+   "our_scorer_on_hf_logits": 1.7633983555101596,
+   "layerwise_mean_nll": 1.7642844976348069,
+   "abs_diff_layerwise_vs_hf": 0.000886088745036373,
+   "rel_diff_layerwise_vs_hf": 0.0005024892506250198
+  },
+  {
+   "window": 1,
+   "hf_loss_mean_nll": 2.3857898712158203,
+   "our_scorer_on_hf_logits": 2.385789998488794,
+   "layerwise_mean_nll": 2.383898286242809,
+   "abs_diff_layerwise_vs_hf": 0.001891584973011451,
+   "rel_diff_layerwise_vs_hf": 0.0007928548091485868
+  }
+ ],
+ "note": "independent HF forward with device_map offload (batch 1) vs the layer-wise evaluator (batch 8)"
+}

@@ -31,6 +31,9 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **Partial-model PPL validation (routed experts of layers 1/8/16/23 GPTQ-4bit, rest BF16):** [`update_partial_ppl.md`](update_partial_ppl.md)
+> (PPL-RECON-ALIGNED, narrowly — WikiText-2 PPL BF16 9.2371; Full Coverage-LP worse than Full Random on 3/3 seeds
+> (+0.03–0.14 % PPL), Typical Random ≈ Full Random; Spearman(recon, PPL) +0.52 over 12 configs, 0.00 without Full Coverage-LP);
 > **Extreme low-budget scarcity (CPU only, B = 4/8):** [`update_extreme_low_budget.md`](update_extreme_low_budget.md)
 > (EXTREME-SCARCITY-NO-OPPORTUNITY — B = 4 is count-scarce (≈ 42 % of experts < 128 tokens in every random set, never zero),
 > but Coverage-LP worsens min/p10/Gini on 6/6 paired seeds; B = 8 is not scarce; no GPU experiment justified);
