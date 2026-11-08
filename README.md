@@ -31,6 +31,9 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **Full-depth routed-expert GPTQ pilot (all 24 layers, seed 0, rest BF16):** [`update_full_depth_pilot.md`](update_full_depth_pilot.md)
+> (FULL-DEPTH-PENALTY-NOT-OBSERVED — PPL BF16 9.2371, FR24 9.3647, FC24 9.3707; Δ24 +0.0059 vs Δ4 +0.0101, window-bootstrap CI includes 0;
+> PPL shifts up to 0.0099 from numerically equivalent BF16 calibration inputs, the same order as Δ4);
 > **Partial-model PPL validation (routed experts of layers 1/8/16/23 GPTQ-4bit, rest BF16):** [`update_partial_ppl.md`](update_partial_ppl.md)
 > (PPL-RECON-ALIGNED, narrowly — WikiText-2 PPL BF16 9.2371; Full Coverage-LP worse than Full Random on 3/3 seeds
 > (+0.03–0.14 % PPL), Typical Random ≈ Full Random; Spearman(recon, PPL) +0.52 over 12 configs, 0.00 without Full Coverage-LP);

@@ -189,3 +189,62 @@ def expert_output_check(model, L, e, Wq32, W_orig, X):
                bf16_compute_noise_rel=_rel(y_orig_bf16, y_fp))       # same deviation for untouched weights
     out["ratio_to_quant_effect"] = out["installed_vs_e3_rel"] / max(q, 1e-30)
     return out
+
+
+# ---------------------------------------------------------------- full-depth helpers
+def resolve_layers(spec, model):
+    """'all' -> every decoder layer that has a routed-expert MoE block; else a list of ints.
+    Raises if a requested layer has no routed experts (would silently skip experts)."""
+    n = MU.num_layers(model)
+    moe = [L for L in range(n) if hasattr(MU.moe_block(model, L), "experts")]
+    if spec in ("all", ["all"]):
+        return moe
+    layers = sorted({int(x) for x in (spec if isinstance(spec, (list, tuple)) else str(spec).split(","))})
+    bad = [L for L in layers if L not in moe]
+    if bad:
+        raise ValueError(f"layers {bad} have no routed experts")
+    return layers
+
+
+@torch.no_grad()
+def target_tensor_digests(model, layers):
+    """{'L.e.proj': sha1} for every target expert projection (pristine / installed identity)."""
+    E = MU.num_experts(model)
+    return {f"{L}.{e}.{k}": _digest(w.view(torch.int16))
+            for L in layers for e in range(E) for k, w in MU.get_expert_weights(model, L, e).items()}
+
+
+@torch.no_grad()
+def nonfinite_targets(model, layers):
+    E = MU.num_experts(model)
+    return [f"{L}.{e}.{k}" for L in layers for e in range(E)
+            for k, w in MU.get_expert_weights(model, L, e).items() if not torch.isfinite(w).all()]
+
+
+@torch.no_grad()
+def layer_digest(model, L):
+    h = hashlib.sha256()
+    for e in range(MU.num_experts(model)):
+        for k, w in MU.get_expert_weights(model, L, e).items():
+            h.update(w.detach().contiguous().cpu().view(torch.int16).numpy().tobytes())
+    return h.hexdigest()
+
+
+@torch.no_grad()
+def save_layer(model, L, path):
+    """Installed (BF16 effective GPTQ) weights of one layer; written atomically."""
+    import os
+    d = {f"{e}.{k}": w.detach().cpu().clone() for e in range(MU.num_experts(model))
+         for k, w in MU.get_expert_weights(model, L, e).items()}
+    tmp = path + ".tmp"
+    torch.save(d, tmp)
+    os.replace(tmp, path)
+
+
+@torch.no_grad()
+def install_layer_file(model, L, path):
+    d = torch.load(path)
+    E = MU.num_experts(model)
+    assert len(d) == E * len(PROJ), f"{path}: {len(d)} tensors"
+    for e in range(E):
+        MU.set_expert_weights(model, L, e, {k: d[f"{e}.{k}"] for k in PROJ})
