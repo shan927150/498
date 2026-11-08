@@ -109,15 +109,17 @@ def capture_installs(keys):
         MU.set_expert_weights = orig
 
 
-def quantize_install(model, cache_dir, layers, chosen, eval_ids, K, bits, group_size, percdamp, capture=()):
+def quantize_install(model, cache_dir, layers, chosen, eval_ids, K, bits, group_size, percdamp, capture=(),
+                     eval_cache_dir=None):
     """E3's quantize_and_score with write_back=True (all 60 x len(layers) experts
     quantized and installed). Returns E3's per-expert scores and counts plus
-    the captured FP32 W_q for `capture` experts."""
+    the captured FP32 W_q for `capture` experts. `eval_cache_dir` (E3's own option): reconstruction
+    activations from a different cache than calibration (eval_ids index ITS rows)."""
     import e3_allocation as E3
     with capture_installs(capture) as cap:
         results, counts, orig, t_h, t_q = E3.quantize_and_score(
             model, cache_dir, layers, chosen, {}, eval_ids, K, bits, group_size,
-            write_back=True, percdamp=percdamp)
+            write_back=True, percdamp=percdamp, eval_cache_dir=eval_cache_dir)
     assert counts["n_experts_quantized_total"] == len(layers) * MU.num_experts(model)
     return dict(results=results, counts=counts, hessian_s=t_h, gptq_s=t_q, captured=cap)
 

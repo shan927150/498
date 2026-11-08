@@ -31,6 +31,10 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **Calibration batch-composition sensitivity (four layers, FR s0 / FC s0, three cache groupings):** [`update_batch_sensitivity.md`](update_batch_sensitivity.md)
+> (BATCH-SENSITIVITY-DOMINANT — regrouping the SAME calibration sequences into different BF16 forward batches moves PPL by up to
+> 0.012 (1.2× the FR-vs-FC difference) and reverses FC − FR (+0.0101 → −0.0040 / −0.0124), while reconstruction moves ≤ 0.012 %;
+> mechanism measured: near-tie routing flips → Hessian membership → act-order/group changes → ~54 % of 4-bit weights differ);
 > **Full-depth routed-expert GPTQ pilot (all 24 layers, seed 0, rest BF16):** [`update_full_depth_pilot.md`](update_full_depth_pilot.md)
 > (FULL-DEPTH-PENALTY-NOT-OBSERVED — PPL BF16 9.2371, FR24 9.3647, FC24 9.3707; Δ24 +0.0059 vs Δ4 +0.0101, window-bootstrap CI includes 0;
 > PPL shifts up to 0.0099 from numerically equivalent BF16 calibration inputs, the same order as Δ4);

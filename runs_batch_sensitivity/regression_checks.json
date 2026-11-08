@@ -1,0 +1,27 @@
+{
+ "configs": {
+  "FR": {
+   "ppl": 9.267851290916612,
+   "ppl_reference": 9.267851290916612,
+   "ppl_exact": true,
+   "sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+   "sha256_reference": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+   "weights_exact": true,
+   "recon": 0.004609548874536215,
+   "recon_reference": 0.004609548874536215,
+   "recon_exact": true
+  },
+  "FC": {
+   "ppl": 9.277908190612935,
+   "ppl_reference": 9.277908190612935,
+   "ppl_exact": true,
+   "sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4",
+   "sha256_reference": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4",
+   "weights_exact": true,
+   "recon": 0.004727047496005081,
+   "recon_reference": 0.004727047496005081,
+   "recon_exact": true
+  }
+ },
+ "passed": true
+}
