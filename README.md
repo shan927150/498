@@ -31,6 +31,10 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **Low-budget sweep (exploratory, old test split):** [`update_low_budget_sweep.md`](update_low_budget_sweep.md)
+> (B = 16/32/64/128 × Full/Typical Random/Coverage-LP, seeds 0/1/2: LOW-BUDGET-COVERAGE-NO-GAIN —
+> Coverage-LP worse than matched Random on 12/12 full and 11/12 typical seed-budget pairs (one tie); G_full ≈ +1.4–2.6 %,
+> no expert starvation even at B = 16);
 > **Pilot (after the final allocation test):** [`update_activation_swap.md`](update_activation_swap.md)
 > (activation-aware single-sequence swaps, layer 16, 8 experts: ACTIVATION-SIGNAL-INCONCLUSIVE —
 > predicted diagonal-mismatch gain vs actual GPTQ gain Spearman +0.12 over 9 swaps, effects ≤ 0.085 %);
