@@ -31,6 +31,9 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **Extreme low-budget scarcity (CPU only, B = 4/8):** [`update_extreme_low_budget.md`](update_extreme_low_budget.md)
+> (EXTREME-SCARCITY-NO-OPPORTUNITY — B = 4 is count-scarce (≈ 42 % of experts < 128 tokens in every random set, never zero),
+> but Coverage-LP worsens min/p10/Gini on 6/6 paired seeds; B = 8 is not scarce; no GPU experiment justified);
 > **Low-budget sweep (exploratory, old test split):** [`update_low_budget_sweep.md`](update_low_budget_sweep.md)
 > (B = 16/32/64/128 × Full/Typical Random/Coverage-LP, seeds 0/1/2: LOW-BUDGET-COVERAGE-NO-GAIN —
 > Coverage-LP worse than matched Random on 12/12 full and 11/12 typical seed-budget pairs (one tie); G_full ≈ +1.4–2.6 %,
