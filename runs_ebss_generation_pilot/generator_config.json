@@ -1,0 +1,32 @@
+{
+ "model": "Qwen/Qwen1.5-MoE-A2.7B",
+ "snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+ "precision": "bf16",
+ "attention": "eager",
+ "w": 4,
+ "tau": 1.3,
+ "seqlen": 512,
+ "n_sentences": 16,
+ "vocab_limit": 151646,
+ "choices": {
+  "usage_frequency": "u_l^e = (# tokens of the branch routed to expert e at layer l, top-k membership, each token once per selected expert) / (# tokens of the branch). Paper: 'usage frequency', normalisation undocumented. Per-token rate chosen because it reproduces the scale of the authors' reported Expert Balance STD (rebuttal: wikitext2 0.0427 / EBSS 0.0052 on 64-expert DeepSeek).",
+  "routed_counts_not_affinities": "counts of selected (top-k) experts; routing probabilities are not used",
+  "shared_expert": "excluded (always active; not part of the 60 routed experts)",
+  "layers_in_sigma": "all 24 MoE layers (Eq. 3: L = number of MoE layers); layers 1/8/16/23 reported separately",
+  "balance_scope": "per branch (prefix S of the candidate); no state is shared between sentences",
+  "first_token": "uniform Random(V) over the non-special tokenizer ids 0..151642 with numpy default_rng(INIT_SEED); sampled once and shared by both methods",
+  "first_token_logprob": "the unconditioned first token contributes 0 to R; it counts toward |S| and the 512 tokens and its routing counts toward sigma",
+  "vocabulary_V": "tokenizer ids 0..151645 (all real tokens incl. the 3 specials); embedding padding rows 151646..151935 (never trained) are excluded",
+  "eos": "no stop rule (Algorithm 1 iterates exactly Seqlen-1 steps over all of V); an EOS/special token is an ordinary candidate and generation continues; every one of the 512 tokens is a real model choice",
+  "length": "Seqlen = 512 counts the first token: 1 random + 511 generated; no padding",
+  "final_selection": "argmin Score(c) over the w surviving branches (Alg. 1 line 20 says argmax; resolved to the minimisation objective of Eq. 9-10/13)",
+  "ties": "candidates ordered by (score, parent beam index, token id): stable sort of the flattened [w, V] score array; final selection ties -> lowest beam index",
+  "sentence_batching": "all sentences decoded in lock-step in one batch (rebuttal R3/R6: sequences stitched along the batch dimension); KV cache reordered by parent index after every pruning",
+  "precision": "BF16 weights/activations, eager attention; log_softmax in fp32; R and scores in fp64"
+ },
+ "methods": {
+  "EBSS": "Eq. 13 score with sigma(M,S)/tau",
+  "PROBABILITY_ONLY": "Eq. 13 score without the balance term (identical candidates, normalisation, scheduling, starts)"
+ },
+ "no_tuning": "w, tau, starts, seed fixed before any generation; no repetition penalty, no sampling temperature, no top-k/nucleus sampling, no prompt template"
+}

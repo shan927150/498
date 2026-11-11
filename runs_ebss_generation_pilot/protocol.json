@@ -1,0 +1,162 @@
+{
+ "experiment": "Model-matched EBSS reproduction + Probability-Only ablation (pilot 16 x 512, one seed)",
+ "hypotheses": {
+  "H1": "EBSS balancing reduces expert-exposure inequality vs Probability-Only (tested)",
+  "H2": "balance guidance may improve the lower tail but change distribution/diversity (tested)",
+  "H3": "probability-only beam generation may be repetitive; EBSS may mitigate or worsen (tested)",
+  "H4": "better balance need not improve GPTQ reconstruction (B=16 pilot only)",
+  "H5": "generation overhead may dominate calibration cost (measured)"
+ },
+ "generator": {
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+  "precision": "bf16",
+  "attention": "eager",
+  "w": 4,
+  "tau": 1.3,
+  "seqlen": 512,
+  "n_sentences": 16,
+  "vocab_limit": 151646,
+  "choices": {
+   "usage_frequency": "u_l^e = (# tokens of the branch routed to expert e at layer l, top-k membership, each token once per selected expert) / (# tokens of the branch). Paper: 'usage frequency', normalisation undocumented. Per-token rate chosen because it reproduces the scale of the authors' reported Expert Balance STD (rebuttal: wikitext2 0.0427 / EBSS 0.0052 on 64-expert DeepSeek).",
+   "routed_counts_not_affinities": "counts of selected (top-k) experts; routing probabilities are not used",
+   "shared_expert": "excluded (always active; not part of the 60 routed experts)",
+   "layers_in_sigma": "all 24 MoE layers (Eq. 3: L = number of MoE layers); layers 1/8/16/23 reported separately",
+   "balance_scope": "per branch (prefix S of the candidate); no state is shared between sentences",
+   "first_token": "uniform Random(V) over the non-special tokenizer ids 0..151642 with numpy default_rng(INIT_SEED); sampled once and shared by both methods",
+   "first_token_logprob": "the unconditioned first token contributes 0 to R; it counts toward |S| and the 512 tokens and its routing counts toward sigma",
+   "vocabulary_V": "tokenizer ids 0..151645 (all real tokens incl. the 3 specials); embedding padding rows 151646..151935 (never trained) are excluded",
+   "eos": "no stop rule (Algorithm 1 iterates exactly Seqlen-1 steps over all of V); an EOS/special token is an ordinary candidate and generation continues; every one of the 512 tokens is a real model choice",
+   "length": "Seqlen = 512 counts the first token: 1 random + 511 generated; no padding",
+   "final_selection": "argmin Score(c) over the w surviving branches (Alg. 1 line 20 says argmax; resolved to the minimisation objective of Eq. 9-10/13)",
+   "ties": "candidates ordered by (score, parent beam index, token id): stable sort of the flattened [w, V] score array; final selection ties -> lowest beam index",
+   "sentence_batching": "all sentences decoded in lock-step in one batch (rebuttal R3/R6: sequences stitched along the batch dimension); KV cache reordered by parent index after every pruning",
+   "precision": "BF16 weights/activations, eager attention; log_softmax in fp32; R and scores in fp64"
+  },
+  "methods": {
+   "EBSS": "Eq. 13 score with sigma(M,S)/tau",
+   "PROBABILITY_ONLY": "Eq. 13 score without the balance term (identical candidates, normalisation, scheduling, starts)"
+  },
+  "no_tuning": "w, tau, starts, seed fixed before any generation; no repetition penalty, no sampling temperature, no top-k/nucleus sampling, no prompt template"
+ },
+ "initialization": {
+  "seed": 20261110,
+  "pilot_start_ids": [
+   117006,
+   94940,
+   124969,
+   21551,
+   33730,
+   96708,
+   9883,
+   79557,
+   80721,
+   107342,
+   126676,
+   92741,
+   45944,
+   133771,
+   147278,
+   39127
+  ]
+ },
+ "smoke": {
+  "n": 4,
+  "seqlen": 32,
+  "w": 4,
+  "record_steps": [
+   1,
+   2,
+   16,
+   31
+  ],
+  "checks": [
+   "incremental_equals_recount",
+   "deterministic",
+   "logprob_identity",
+   "ranking_recomputed",
+   "po_ignores_balance",
+   "ebss_includes_balance",
+   "length_exact",
+   "token_ids_valid",
+   "no_chat_template",
+   "replay_logprob_close",
+   "parents_intact",
+   "dispatch_mismatches == 0"
+  ],
+  "replay_tolerance": "batch-1 no-cache replay of every chosen smoke sequence: mean |delta log p| <= 0.05 nats and Pearson r >= 0.99 (BF16 batch-shape rounding; exact equality is not expected, see update_batch_sensitivity.md)"
+ },
+ "pilot": {
+  "n": 16,
+  "seqlen": 512,
+  "tokens_per_method": 8192,
+  "progress_positions": [
+   32,
+   64,
+   128,
+   256,
+   512
+  ]
+ },
+ "gptq_pilot": {
+  "configs": [
+   "C4R_s0",
+   "C4R_s1",
+   "C4R_s2",
+   "PO",
+   "EBSS"
+  ],
+  "c4_random_sources": {
+   "0": "runs_low_budget/e3_random_B16_b4_d1_s0_warm-b7ef3d2f.json",
+   "1": "runs_low_budget/e3_random_B16_b4_d1_s1_warm-7c1251cd.json",
+   "2": "runs_low_budget/e3_random_B16_b4_d1_s2_warm-1bcd0994.json"
+  },
+  "B": 16,
+  "K": 4,
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "act_order": true
+  },
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "extraction": "CANONICAL-B1 (each sequence alone, BF16)",
+  "reconstruction": "E3 held-out rows 2128-2255 of ~/moe_cache (unchanged)",
+  "ppl": "frozen 128 x 512 WikiText-2 windows (secondary)",
+  "rtn_fallback": "E3 semantics preserved (zero-token experts fall back to RTN); counted and reported, never presented as GPTQ"
+ },
+ "representativeness": {
+  "reference": "runs_low_budget/routing_profile_v2.npz C4-pool reference, layers 1/8/16/23 (moe_calib.typicality)",
+  "routing_source": "CANONICAL-B1 replay"
+ },
+ "decision_rule": {
+  "precedence": "RUN-BLOCKED -> QUALITY-GAIN (only if the optional B=16 GPTQ comparison completed validly) -> balancing classes",
+  "RUN-BLOCKED": "a generator correctness gate fails, the 16 x 512 pilot does not complete for BOTH methods, a generated set is invalid (not 16 distinct full 512-token sequences of real ids), or resources prevent the measurement",
+  "MODEL-MATCHED-EBSS-QUALITY-GAIN": "B=16 GPTQ valid for all configs AND EBSS mean reconstruction is lower than Probability-Only by >= 0.5 % AND lower than every C4 Random B=16 seed AND >= 0.5 % lower than the C4 Random seed mean",
+  "MODEL-MATCHED-EBSS-BALANCING-SUPPORTED": "EBSS set-level paper sigma (Eq. 3/4, all 24 MoE layers) AND mean per-layer load CV (all 24 layers) are both lower than Probability-Only",
+  "MODEL-MATCHED-EBSS-BALANCING-NOT-SUPPORTED": "neither is lower (EBSS equal or worse on both)",
+  "MODEL-MATCHED-EBSS-MIXED": "exactly one of the two balance metrics is lower",
+  "notes": "set-level metrics over the 16 x 512 = 8,192 tokens of each set; lower-tail exposure (min / p5 / p10 / zero-exposure experts), per-layer results and layers 1/8/16/23 are reported separately and do not enter the label. With exactly k = 4 routed experts per token the per-layer mean count is fixed, so sigma_l and CV_l are proportional within a layer; the two means can still differ only through layer weighting (ddof differs). One seed, one start-token draw: no statistical generality."
+ },
+ "hard_constraints": "no checkpoint change, no chat model, no quantized generator, no AGQ, no GPTQ change, no new sampling, no repetition penalty, no tau/w tuning, same starts for both methods, no padding, no C4 mixing, no held-out-based sample selection, no automatic B=128 run",
+ "code_sha256": {
+  "moe_calib/ebss_generator.py": "a923ed816d6f07cf6e118d27759132e9b48655fea1d4270184de5c2d524ad17b",
+  "moe_calib/ebss_pilot.py": "6c5686229aa3c8be31dac3fc7f1b1d8ef729e6b36f5168c98e24eed9c9ad870c",
+  "diagnostics/ebss_generation_pilot.py": "65fb5e5c3b6040009eefe502532bd094cda94164c8772a751f93a39669ada648",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d"
+ },
+ "frozen_before_any_generation": true,
+ "created": "2026-11-10 02:15:39",
+ "amendments": [
+  {
+   "time": "2026-11-10 02:16:05",
+   "before_any_pilot_generation": true,
+   "text": "Decision metrics (paper sigma, mean per-layer CV over 24 layers) are computed from the CANONICAL-B1 replay routing of the generated 16 x 512 sets (the routing the calibration pipeline and the C4 comparisons see). Generation-time (batched KV-decode) routing statistics are reported alongside; their token-layer agreement with the replay is reported."
+  }
+ ]
+}

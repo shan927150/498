@@ -1,0 +1,86 @@
+{
+ "FR_G20261111": {
+  "ppl": 9.27818211130394,
+  "mean_nll": 2.2276656344300796,
+  "recon": 0.0046093061654286765,
+  "installed_weights_sha256": "cfb345d546b2da2389fcfc671b94c4d91ace21daf78e9aaeb3e5e059df0e8bc4",
+  "result": "runs_multigroup_robustness/results/FR_G20261111.json"
+ },
+ "FR_G20261112": {
+  "ppl": 9.268158859041973,
+  "mean_nll": 2.226584747019042,
+  "recon": 0.004609174462278613,
+  "installed_weights_sha256": "5ff5ca36817886aa5eb10b3c9b8f0b9d3447423bd3297f79cec303ac4a3c0a43",
+  "result": "runs_multigroup_robustness/results/FR_G20261112.json"
+ },
+ "FR_G20261113": {
+  "ppl": 9.271035028712841,
+  "mean_nll": 2.226895026927797,
+  "recon": 0.004609191796680007,
+  "installed_weights_sha256": "63723820c2282a78b2bbeea4a3b573a618f223a37d47208dac50ff8681a3f9f0",
+  "result": "runs_multigroup_robustness/results/FR_G20261113.json"
+ },
+ "FR_G20261114": {
+  "ppl": 9.27810155650864,
+  "mean_nll": 2.227656952217979,
+  "recon": 0.004609145104734846,
+  "installed_weights_sha256": "0fc4fe0a4c48b3d73faa39b6d60b2084731762885fb8b11ca0f12d1019c7362f",
+  "result": "runs_multigroup_robustness/results/FR_G20261114.json"
+ },
+ "FR_G20261115": {
+  "ppl": 9.272716715317005,
+  "mean_nll": 2.227076401941008,
+  "recon": 0.004609322975674954,
+  "installed_weights_sha256": "5ef00c3cacc586cc091a842761ba9984b378a4d605beca00499bb4eb1dea6e86",
+  "result": "runs_multigroup_robustness/results/FR_G20261115.json"
+ },
+ "FC_G20261111": {
+  "ppl": 9.274112980052,
+  "mean_nll": 2.2272269683462174,
+  "recon": 0.00472659043022214,
+  "installed_weights_sha256": "79f620d4aa7adc6b95e579d139aaffb34acf01fa83d64ee632a618b630b91533",
+  "result": "runs_multigroup_robustness/results/FC_G20261111.json"
+ },
+ "FC_G20261112": {
+  "ppl": 9.275760327784997,
+  "mean_nll": 2.227404581175156,
+  "recon": 0.00472710846674847,
+  "installed_weights_sha256": "4e87e8dca96e1592836eb4782b9552878edd7c1b006c778e3d898055fa88b5b5",
+  "result": "runs_multigroup_robustness/results/FC_G20261112.json"
+ },
+ "FC_G20261113": {
+  "ppl": 9.265146343350965,
+  "mean_nll": 2.226259654901404,
+  "recon": 0.004726795729267332,
+  "installed_weights_sha256": "3dc2769398a781ed1b27ed89280c10c215fbb7c964f518698a69a028b7b4f3b2",
+  "result": "runs_multigroup_robustness/results/FC_G20261113.json"
+ },
+ "FC_G20261114": {
+  "ppl": 9.269707287208588,
+  "mean_nll": 2.226751802726317,
+  "recon": 0.004726948710344033,
+  "installed_weights_sha256": "d65e02a28903f1ca8debeeddcb3e86494731dcf8bd4d0ada87258492b457e432",
+  "result": "runs_multigroup_robustness/results/FC_G20261114.json"
+ },
+ "FC_G20261115": {
+  "ppl": 9.27380803129674,
+  "mean_nll": 2.2271940860889443,
+  "recon": 0.0047270534291537405,
+  "installed_weights_sha256": "7e8c041c01d0b5b1e6f2b580dd1fd611466105972194eb3b0ddf4845a4a032e5",
+  "result": "runs_multigroup_robustness/results/FC_G20261115.json"
+ },
+ "FR_OO": {
+  "ppl": 9.267851290916612,
+  "mean_nll": 2.2265515610072844,
+  "recon": 0.004609548874536215,
+  "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+  "result": "runs_multigroup_robustness/results/CTRL_FR_ORIGINAL.json"
+ },
+ "FC_OO": {
+  "ppl": 9.277908190612935,
+  "mean_nll": 2.2276361108950495,
+  "recon": 0.004727047496005081,
+  "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4",
+  "result": "runs_multigroup_robustness/results/CTRL_FC_ORIGINAL.json"
+ }
+}

@@ -1,0 +1,2941 @@
+{
+ "EBSS": {
+  "n_steps": 31,
+  "n_pruning_decisions": 31,
+  "all_decisions_match_oracle": true,
+  "all_decisions_match_fp64_oracle": true,
+  "max_score_abs_vs_oracle": 3.552713678800501e-15,
+  "max_score_abs_vs_fp64_oracle": 6.577382318795344e-07,
+  "max_logsoftmax_fp64_abs": 3.869621522767375e-06,
+  "max_sigma_abs": 5.551115123125783e-17,
+  "max_cum_vs_fsum_abs": 0.0,
+  "counts_recount_exact": true,
+  "prefix_length_ok": true,
+  "sigma_nonneg": true,
+  "logp_nonpos": true,
+  "prob_component_nonneg": true,
+  "propagation_ok": true,
+  "max_cum_propagation_abs": 0.0,
+  "steps_with_ebss_change": 4,
+  "min_cut_gap": 0.0,
+  "final": {
+   "final_score_max_abs": 1.1102230246251565e-16,
+   "pick_production": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "pick_oracle": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "pick_matches": true,
+   "counts_exact": true,
+   "length_ok": true
+  },
+  "mismatches": [],
+  "passed": true,
+  "teacher_forced": {
+   "per_sentence": [
+    {
+     "sentence": 0,
+     "max_abs": 0.08085155487060547,
+     "mean_abs": 0.02641700241797333,
+     "cum_replay": -41.53041342936922,
+     "cum_generation": -41.30893646768527,
+     "rel_cum": 0.00536147818419877,
+     "pearson": 0.9993032845161335
+    },
+    {
+     "sentence": 1,
+     "max_abs": 0.053300946950912476,
+     "mean_abs": 0.007244913275503824,
+     "cum_replay": -13.151432181708515,
+     "cum_generation": -13.07471615751274,
+     "rel_cum": 0.005867509724231705,
+     "pearson": 0.9998628954268131
+    },
+    {
+     "sentence": 2,
+     "max_abs": 0.14632058143615723,
+     "mean_abs": 0.025834970243830604,
+     "cum_replay": -25.40786711310693,
+     "cum_generation": -24.75354764392341,
+     "rel_cum": 0.026433361334537612,
+     "pearson": 0.9993536233784321
+    },
+    {
+     "sentence": 3,
+     "max_abs": 0.08388042449951172,
+     "mean_abs": 0.02412606678215877,
+     "cum_replay": -26.596036911418196,
+     "cum_generation": -26.73736364764045,
+     "rel_cum": 0.005285739390193247,
+     "pearson": 0.9989779534879845
+    }
+   ],
+   "mean_abs": 0.020905738179866632,
+   "min_pearson": 0.9989779534879845,
+   "flag": false
+  },
+  "excluded_vocab_mass": {
+   "max": 0.0001612910709809512,
+   "mean": 2.919815187851782e-06
+  },
+  "dispatch_mismatches": 0,
+  "examples": [
+   {
+    "why": "early step",
+    "step": 1,
+    "sentence": 0,
+    "prefix_len": 1,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 9370,
+      "R_parent": 0.0,
+      "logp_v": -0.7279984951019287,
+      "prob_component": 0.36399924755096436,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 0.5574983816226811,
+      "production_score": 0.5574983816226811,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": 0.0,
+      "logp_v": -2.1029984951019287,
+      "prob_component": 1.0514992475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.244998381622681,
+      "production_score": 1.244998381622681,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 1773,
+      "R_parent": 0.0,
+      "logp_v": -3.5404984951019287,
+      "prob_component": 1.7702492475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.963748381622681,
+      "production_score": 1.963748381622681,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 104310,
+      "R_parent": 0.0,
+      "logp_v": -3.5404984951019287,
+      "prob_component": 1.7702492475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.963748381622681,
+      "production_score": 1.963748381622681,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 105437,
+      "R_parent": 0.0,
+      "logp_v": -3.6029984951019287,
+      "prob_component": 1.8014992475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.994998381622681,
+      "production_score": 1.994998381622681,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 8997,
+      "R_parent": 0.0,
+      "logp_v": -4.290498733520508,
+      "prob_component": 2.145249366760254,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 2.3387485008319704,
+      "production_score": 2.3387485008319704,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 28946,
+      "R_parent": 0.0,
+      "logp_v": -4.352998733520508,
+      "prob_component": 2.176499366760254,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 2.3699985008319704,
+      "production_score": 2.3699985008319704,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 100623,
+      "R_parent": 0.0,
+      "logp_v": -4.415498733520508,
+      "prob_component": 2.207749366760254,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 2.4012485008319704,
+      "production_score": 2.4012485008319704,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      1773
+     ],
+     [
+      0,
+      3837
+     ],
+     [
+      0,
+      9370
+     ],
+     [
+      0,
+      104310
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "early step",
+    "step": 2,
+    "sentence": 0,
+    "prefix_len": 2,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 106564,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -2.8768348693847656,
+      "prob_component": 1.2016111214955647,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.3414641206736109,
+      "production_score": 1.3414641206736109,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 105502,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.2518348693847656,
+      "prob_component": 1.3266111214955647,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.4664641206736109,
+      "production_score": 1.4664641206736109,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 3,
+      "token": 47534,
+      "R_parent": -3.5404984951019287,
+      "logp_v": -0.8021122217178345,
+      "prob_component": 1.4475369056065877,
+      "sigma_parent": 0.18152664500403903,
+      "balance": 0.1396358807723377,
+      "oracle_score": 1.5871727863789253,
+      "production_score": 1.5871727863789253,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 108789,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.7518348693847656,
+      "prob_component": 1.4932777881622314,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.6331307873402776,
+      "production_score": 1.6331307873402776,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 109262,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.8768348693847656,
+      "prob_component": 1.5349444548288982,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.6747974540069444,
+      "production_score": 1.6747974540069441,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.9393348693847656,
+      "prob_component": 1.5557777881622314,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.6956307873402776,
+      "production_score": 1.6956307873402776,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 47815,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -4.126834869384766,
+      "prob_component": 1.6182777881622314,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.7581307873402776,
+      "production_score": 1.7581307873402776,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 101079,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -4.189334869384766,
+      "prob_component": 1.6391111214955647,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.7789641206736109,
+      "production_score": 1.7789641206736109,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      105502
+     ],
+     [
+      0,
+      106564
+     ],
+     [
+      0,
+      108789
+     ],
+     [
+      3,
+      47534
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "EBSS changes the probability-only kept set",
+    "step": 3,
+    "sentence": 2,
+    "prefix_len": 3,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 124376,
+      "R_parent": -3.8683158606290817,
+      "logp_v": -1.0430101156234741,
+      "prob_component": 1.227831494063139,
+      "sigma_parent": 0.1647510935305961,
+      "balance": 0.12673161040815084,
+      "oracle_score": 1.3545631044712898,
+      "production_score": 1.3545631044712898,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 3,
+      "token": 11071,
+      "R_parent": -5.230778455734253,
+      "logp_v": -0.25035423040390015,
+      "prob_component": 1.3702831715345383,
+      "sigma_parent": 0.17179003905129428,
+      "balance": 0.13214618388561097,
+      "oracle_score": 1.5024293554201493,
+      "production_score": 1.502429355420149,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 2,
+      "token": 125006,
+      "R_parent": -4.52811998128891,
+      "logp_v": -1.686718463897705,
+      "prob_component": 1.5537096112966537,
+      "sigma_parent": 0.1629947258321926,
+      "balance": 0.12538055833245584,
+      "oracle_score": 1.6790901696291096,
+      "production_score": 1.6790901696291096,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 1,
+      "token": 198,
+      "R_parent": -4.355778455734253,
+      "logp_v": -1.858656644821167,
+      "prob_component": 1.553608775138855,
+      "sigma_parent": 0.16949180863356286,
+      "balance": 0.13037831433350988,
+      "oracle_score": 1.6839870894723648,
+      "production_score": 1.6839870894723648,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 1,
+      "token": 124376,
+      "R_parent": -4.355778455734253,
+      "logp_v": -1.858656644821167,
+      "prob_component": 1.553608775138855,
+      "sigma_parent": 0.16949180863356286,
+      "balance": 0.13037831433350988,
+      "oracle_score": 1.6839870894723648,
+      "production_score": 1.6839870894723648,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 2,
+      "token": 56794,
+      "R_parent": -4.52811998128891,
+      "logp_v": -1.999218463897705,
+      "prob_component": 1.6318346112966537,
+      "sigma_parent": 0.1629947258321926,
+      "balance": 0.12538055833245584,
+      "oracle_score": 1.7572151696291096,
+      "production_score": 1.7572151696291096,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 68785,
+      "R_parent": -3.8683158606290817,
+      "logp_v": -2.8555102348327637,
+      "prob_component": 1.6809565238654613,
+      "sigma_parent": 0.1647510935305961,
+      "balance": 0.12673161040815084,
+      "oracle_score": 1.8076881342736122,
+      "production_score": 1.8076881342736122,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 39434,
+      "R_parent": -3.8683158606290817,
+      "logp_v": -3.1055102348327637,
+      "prob_component": 1.7434565238654613,
+      "sigma_parent": 0.1647510935305961,
+      "balance": 0.12673161040815084,
+      "oracle_score": 1.8701881342736122,
+      "production_score": 1.8701881342736122,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      124376
+     ],
+     [
+      1,
+      198
+     ],
+     [
+      2,
+      125006
+     ],
+     [
+      3,
+      11071
+     ]
+    ],
+    "probability_only_kept": [
+     [
+      0,
+      124376
+     ],
+     [
+      3,
+      11071
+     ],
+     [
+      1,
+      198
+     ],
+     [
+      1,
+      124376
+     ]
+    ]
+   },
+   {
+    "why": "EBSS changes the probability-only kept set",
+    "step": 4,
+    "sentence": 0,
+    "prefix_len": 4,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 2,
+      "token": 3837,
+      "R_parent": -5.153909087181091,
+      "logp_v": -1.3909744024276733,
+      "prob_component": 1.308976697921753,
+      "sigma_parent": 0.14515346532593568,
+      "balance": 0.11165651178918129,
+      "oracle_score": 1.4206332097109342,
+      "production_score": 1.4206332097109342,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 2,
+      "token": 5373,
+      "R_parent": -5.153909087181091,
+      "logp_v": -1.9534744024276733,
+      "prob_component": 1.421476697921753,
+      "sigma_parent": 0.14515346532593568,
+      "balance": 0.11165651178918129,
+      "oracle_score": 1.5331332097109343,
+      "production_score": 1.5331332097109343,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 2,
+      "token": 33108,
+      "R_parent": -5.153909087181091,
+      "logp_v": -2.078474521636963,
+      "prob_component": 1.4464767217636108,
+      "sigma_parent": 0.14515346532593568,
+      "balance": 0.11165651178918129,
+      "oracle_score": 1.558133233552792,
+      "production_score": 1.5581332335527922,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 1,
+      "token": 104653,
+      "R_parent": -5.126145124435425,
+      "logp_v": -2.7955946922302246,
+      "prob_component": 1.5843479633331299,
+      "sigma_parent": 0.1309465294854495,
+      "balance": 0.10072809960419192,
+      "oracle_score": 1.6850760629373218,
+      "production_score": 1.6850760629373218,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 2,
+      "token": 20412,
+      "R_parent": -5.153909087181091,
+      "logp_v": -2.765974521636963,
+      "prob_component": 1.583976721763611,
+      "sigma_parent": 0.14515346532593568,
+      "balance": 0.11165651178918129,
+      "oracle_score": 1.6956332335527922,
+      "production_score": 1.6956332335527922,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 1,
+      "token": 110248,
+      "R_parent": -5.126145124435425,
+      "logp_v": -2.9205946922302246,
+      "prob_component": 1.6093479633331298,
+      "sigma_parent": 0.1309465294854495,
+      "balance": 0.10072809960419192,
+      "oracle_score": 1.7100760629373217,
+      "production_score": 1.710076062937322,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 2,
+      "token": 198,
+      "R_parent": -5.153909087181091,
+      "logp_v": -2.953474521636963,
+      "prob_component": 1.6214767217636108,
+      "sigma_parent": 0.14515346532593568,
+      "balance": 0.11165651178918129,
+      "oracle_score": 1.733133233552792,
+      "production_score": 1.7331332335527923,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 20412,
+      "R_parent": -5.001145124435425,
+      "logp_v": -3.3638041019439697,
+      "prob_component": 1.672989845275879,
+      "sigma_parent": 0.13797167716270095,
+      "balance": 0.1061320593559238,
+      "oracle_score": 1.7791219046318028,
+      "production_score": 1.7791219046318028,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      1,
+      104653
+     ],
+     [
+      2,
+      3837
+     ],
+     [
+      2,
+      5373
+     ],
+     [
+      2,
+      33108
+     ]
+    ],
+    "probability_only_kept": [
+     [
+      2,
+      3837
+     ],
+     [
+      2,
+      5373
+     ],
+     [
+      2,
+      33108
+     ],
+     [
+      2,
+      20412
+     ]
+    ]
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 7,
+    "sentence": 0,
+    "prefix_len": 7,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 107205,
+      "R_parent": -8.902234822511673,
+      "logp_v": -2.583240509033203,
+      "prob_component": 1.4356844164431095,
+      "sigma_parent": 0.12081021768809584,
+      "balance": 0.09293093668315064,
+      "oracle_score": 1.52861535312626,
+      "production_score": 1.52861535312626,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 3,
+      "token": 5373,
+      "R_parent": -10.512389600276947,
+      "logp_v": -0.9783822298049927,
+      "prob_component": 1.4363464787602425,
+      "sigma_parent": 0.12087836441889348,
+      "balance": 0.09298335724530267,
+      "oracle_score": 1.5293298360055452,
+      "production_score": 1.5293298360055452,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 110248,
+      "R_parent": -8.902234822511673,
+      "logp_v": -2.770740509033203,
+      "prob_component": 1.4591219164431095,
+      "sigma_parent": 0.12081021768809584,
+      "balance": 0.09293093668315064,
+      "oracle_score": 1.55205285312626,
+      "production_score": 1.55205285312626,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 99396,
+      "R_parent": -8.902234822511673,
+      "logp_v": -3.208240509033203,
+      "prob_component": 1.5138094164431095,
+      "sigma_parent": 0.12081021768809584,
+      "balance": 0.09293093668315064,
+      "oracle_score": 1.60674035312626,
+      "production_score": 1.60674035312626,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 3,
+      "token": 101034,
+      "R_parent": -10.512389600276947,
+      "logp_v": -1.6033822298049927,
+      "prob_component": 1.5144714787602425,
+      "sigma_parent": 0.12087836441889348,
+      "balance": 0.09298335724530267,
+      "oracle_score": 1.6074548360055452,
+      "production_score": 1.6074548360055452,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 114777,
+      "R_parent": -8.902234822511673,
+      "logp_v": -3.270740509033203,
+      "prob_component": 1.5216219164431095,
+      "sigma_parent": 0.12081021768809584,
+      "balance": 0.09293093668315064,
+      "oracle_score": 1.61455285312626,
+      "production_score": 1.61455285312626,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 103163,
+      "R_parent": -8.902234822511673,
+      "logp_v": -3.333240509033203,
+      "prob_component": 1.5294344164431095,
+      "sigma_parent": 0.12081021768809584,
+      "balance": 0.09293093668315064,
+      "oracle_score": 1.62236535312626,
+      "production_score": 1.62236535312626,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 71304,
+      "R_parent": -8.902234822511673,
+      "logp_v": -3.458240509033203,
+      "prob_component": 1.5450594164431095,
+      "sigma_parent": 0.12081021768809584,
+      "balance": 0.09293093668315064,
+      "oracle_score": 1.63799035312626,
+      "production_score": 1.63799035312626,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      99396
+     ],
+     [
+      0,
+      107205
+     ],
+     [
+      0,
+      110248
+     ],
+     [
+      3,
+      5373
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 10,
+    "sentence": 0,
+    "prefix_len": 10,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": -12.37671047123149,
+      "logp_v": -0.5944175720214844,
+      "prob_component": 1.1791934584775432,
+      "sigma_parent": 0.1077704977093531,
+      "balance": 0.08290038285334854,
+      "oracle_score": 1.2620938413308918,
+      "production_score": 1.2620938413308918,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 3,
+      "token": 107249,
+      "R_parent": -13.626710530836135,
+      "logp_v": -0.14663156867027283,
+      "prob_component": 1.252122009046037,
+      "sigma_parent": 0.11101408708370984,
+      "balance": 0.08539545160285372,
+      "oracle_score": 1.3375174606488907,
+      "production_score": 1.3375174606488909,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 5373,
+      "R_parent": -12.37671047123149,
+      "logp_v": -2.2194175720214844,
+      "prob_component": 1.326920731204816,
+      "sigma_parent": 0.1077704977093531,
+      "balance": 0.08290038285334854,
+      "oracle_score": 1.4098211140581645,
+      "production_score": 1.4098211140581645,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 14053,
+      "R_parent": -12.37671047123149,
+      "logp_v": -3.0944175720214844,
+      "prob_component": 1.4064661857502705,
+      "sigma_parent": 0.1077704977093531,
+      "balance": 0.08290038285334854,
+      "oracle_score": 1.489366568603619,
+      "production_score": 1.489366568603619,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 20412,
+      "R_parent": -12.37671047123149,
+      "logp_v": -3.0944175720214844,
+      "prob_component": 1.4064661857502705,
+      "sigma_parent": 0.1077704977093531,
+      "balance": 0.08290038285334854,
+      "oracle_score": 1.489366568603619,
+      "production_score": 1.489366568603619,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 2,
+      "token": 110248,
+      "R_parent": -13.066933639347553,
+      "logp_v": -2.481835126876831,
+      "prob_component": 1.4135244332931258,
+      "sigma_parent": 0.11718541452443033,
+      "balance": 0.0901426265572541,
+      "oracle_score": 1.5036670598503799,
+      "production_score": 1.5036670598503799,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 1,
+      "token": 101034,
+      "R_parent": -12.816933639347553,
+      "logp_v": -2.9121947288513184,
+      "prob_component": 1.429920760745352,
+      "sigma_parent": 0.11130765175540897,
+      "balance": 0.08562127058108382,
+      "oracle_score": 1.5155420313264356,
+      "production_score": 1.5155420313264356,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 1,
+      "token": 105566,
+      "R_parent": -12.816933639347553,
+      "logp_v": -2.9746947288513184,
+      "prob_component": 1.4356025789271702,
+      "sigma_parent": 0.11130765175540897,
+      "balance": 0.08562127058108382,
+      "oracle_score": 1.521223849508254,
+      "production_score": 1.521223849508254,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      3837
+     ],
+     [
+      0,
+      5373
+     ],
+     [
+      0,
+      14053
+     ],
+     [
+      3,
+      107249
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "EBSS changes the probability-only kept set",
+    "step": 16,
+    "sentence": 0,
+    "prefix_len": 16,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 1,
+      "token": 104080,
+      "R_parent": -22.86076071532443,
+      "logp_v": -0.6600520610809326,
+      "prob_component": 1.383577222141492,
+      "sigma_parent": 0.0883987479938606,
+      "balance": 0.06799903691835431,
+      "oracle_score": 1.4515762590598462,
+      "production_score": 1.4515762590598462,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 100002,
+      "R_parent": -22.77654751809314,
+      "logp_v": -2.3543694019317627,
+      "prob_component": 1.4782892305897002,
+      "sigma_parent": 0.09324074536841227,
+      "balance": 0.07172365028339406,
+      "oracle_score": 1.5500128808730942,
+      "production_score": 1.550012880873094,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 20412,
+      "R_parent": -22.77654751809314,
+      "logp_v": -2.4168694019317627,
+      "prob_component": 1.4819657011779355,
+      "sigma_parent": 0.09324074536841227,
+      "balance": 0.07172365028339406,
+      "oracle_score": 1.5536893514613295,
+      "production_score": 1.5536893514613295,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 3,
+      "token": 101084,
+      "R_parent": -23.23576071532443,
+      "logp_v": -2.282724142074585,
+      "prob_component": 1.5010873445528834,
+      "sigma_parent": 0.08863190322912694,
+      "balance": 0.06817838709932841,
+      "oracle_score": 1.5692657316522118,
+      "production_score": 1.5692657316522118,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 2,
+      "token": 101084,
+      "R_parent": -22.90154751809314,
+      "logp_v": -2.630620241165161,
+      "prob_component": 1.5018922211328412,
+      "sigma_parent": 0.09114284065737542,
+      "balance": 0.07010987742875033,
+      "oracle_score": 1.5720020985615915,
+      "production_score": 1.5720020985615915,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": -22.77654751809314,
+      "logp_v": -2.7293694019317627,
+      "prob_component": 1.5003480541191119,
+      "sigma_parent": 0.09324074536841227,
+      "balance": 0.07172365028339406,
+      "oracle_score": 1.5720717044025059,
+      "production_score": 1.5720717044025059,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 1,
+      "token": 3837,
+      "R_parent": -22.86076071532443,
+      "logp_v": -2.7225520610809326,
+      "prob_component": 1.5049007515532566,
+      "sigma_parent": 0.0883987479938606,
+      "balance": 0.06799903691835431,
+      "oracle_score": 1.572899788471611,
+      "production_score": 1.572899788471611,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 2,
+      "token": 99555,
+      "R_parent": -22.90154751809314,
+      "logp_v": -2.943120241165161,
+      "prob_component": 1.5202745740740176,
+      "sigma_parent": 0.09114284065737542,
+      "balance": 0.07010987742875033,
+      "oracle_score": 1.5903844515027679,
+      "production_score": 1.5903844515027679,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      20412
+     ],
+     [
+      0,
+      100002
+     ],
+     [
+      1,
+      104080
+     ],
+     [
+      3,
+      101084
+     ]
+    ],
+    "probability_only_kept": [
+     [
+      1,
+      104080
+     ],
+     [
+      0,
+      100002
+     ],
+     [
+      0,
+      20412
+     ],
+     [
+      0,
+      3837
+     ]
+    ]
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 21,
+    "sentence": 0,
+    "prefix_len": 21,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 104794,
+      "R_parent": -29.657861140090972,
+      "logp_v": -1.4908833503723145,
+      "prob_component": 1.4158520222937858,
+      "sigma_parent": 0.07709381677767238,
+      "balance": 0.059302935982824906,
+      "oracle_score": 1.4751549582766108,
+      "production_score": 1.4751549582766108,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 106621,
+      "R_parent": -29.657861140090972,
+      "logp_v": -2.2408833503723145,
+      "prob_component": 1.4499429313846948,
+      "sigma_parent": 0.07709381677767238,
+      "balance": 0.059302935982824906,
+      "oracle_score": 1.5092458673675198,
+      "production_score": 1.50924586736752,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 1,
+      "token": 101084,
+      "R_parent": -31.34536125930026,
+      "logp_v": -1.5863540172576904,
+      "prob_component": 1.4968961489344523,
+      "sigma_parent": 0.07660462864656373,
+      "balance": 0.058926637420433636,
+      "oracle_score": 1.555822786354886,
+      "production_score": 1.555822786354886,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 99555,
+      "R_parent": -29.657861140090972,
+      "logp_v": -3.3658833503723145,
+      "prob_component": 1.5010792950210585,
+      "sigma_parent": 0.07709381677767238,
+      "balance": 0.059302935982824906,
+      "oracle_score": 1.5603822310038835,
+      "production_score": 1.5603822310038835,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 105670,
+      "R_parent": -29.657861140090972,
+      "logp_v": -3.3658833503723145,
+      "prob_component": 1.5010792950210585,
+      "sigma_parent": 0.07709381677767238,
+      "balance": 0.059302935982824906,
+      "oracle_score": 1.5603822310038835,
+      "production_score": 1.5603822310038835,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 2,
+      "token": 26939,
+      "R_parent": -31.40786125930026,
+      "logp_v": -1.6785157918930054,
+      "prob_component": 1.503926229599694,
+      "sigma_parent": 0.07712912799563713,
+      "balance": 0.059330098458182406,
+      "oracle_score": 1.5632563280578764,
+      "production_score": 1.5632563280578764,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 99885,
+      "R_parent": -29.657861140090972,
+      "logp_v": -3.6783833503723145,
+      "prob_component": 1.515283840475604,
+      "sigma_parent": 0.07709381677767238,
+      "balance": 0.059302935982824906,
+      "oracle_score": 1.574586776458429,
+      "production_score": 1.574586776458429,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 2,
+      "token": 101084,
+      "R_parent": -31.40786125930026,
+      "logp_v": -1.9285157918930054,
+      "prob_component": 1.5152898659633303,
+      "sigma_parent": 0.07712912799563713,
+      "balance": 0.059330098458182406,
+      "oracle_score": 1.5746199644215126,
+      "production_score": 1.5746199644215126,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      99555
+     ],
+     [
+      0,
+      104794
+     ],
+     [
+      0,
+      106621
+     ],
+     [
+      1,
+      101084
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "EBSS changes the probability-only kept set",
+    "step": 24,
+    "sentence": 1,
+    "prefix_len": 24,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 11,
+      "R_parent": -12.382146328222007,
+      "logp_v": -0.03232153505086899,
+      "prob_component": 0.496578714530915,
+      "sigma_parent": 0.09441340783074577,
+      "balance": 0.0726256983313429,
+      "oracle_score": 0.5692044128622579,
+      "production_score": 0.5692044128622579,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 1,
+      "token": 87,
+      "R_parent": -12.668061253731139,
+      "logp_v": -0.03679802641272545,
+      "prob_component": 0.5081943712057546,
+      "sigma_parent": 0.08704222761700765,
+      "balance": 0.0669555597053905,
+      "oracle_score": 0.5751499309111451,
+      "production_score": 0.5751499309111451,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 2,
+      "token": 87,
+      "R_parent": -13.185105512849987,
+      "logp_v": -0.012173992581665516,
+      "prob_component": 0.5278911802172661,
+      "sigma_parent": 0.08458528373210757,
+      "balance": 0.06506560287085197,
+      "oracle_score": 0.5929567830881181,
+      "production_score": 0.5929567830881181,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 3,
+      "token": 1583,
+      "R_parent": -15.778909347718582,
+      "logp_v": -0.590349018573761,
+      "prob_component": 0.6547703346516937,
+      "sigma_parent": 0.08563018661347449,
+      "balance": 0.0658693743180573,
+      "oracle_score": 0.7206397089697509,
+      "production_score": 0.720639708969751,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 1583,
+      "R_parent": -12.382146328222007,
+      "logp_v": -3.9073214530944824,
+      "prob_component": 0.6515787112526595,
+      "sigma_parent": 0.09441340783074577,
+      "balance": 0.0726256983313429,
+      "oracle_score": 0.7242044095840025,
+      "production_score": 0.7242044095840025,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 1,
+      "token": 9020,
+      "R_parent": -12.668061253731139,
+      "logp_v": -4.536798000335693,
+      "prob_component": 0.6881943701626733,
+      "sigma_parent": 0.08704222761700765,
+      "balance": 0.0669555597053905,
+      "oracle_score": 0.7551499298680637,
+      "production_score": 0.7551499298680637,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 87,
+      "R_parent": -12.382146328222007,
+      "logp_v": -5.032321453094482,
+      "prob_component": 0.6965787112526596,
+      "sigma_parent": 0.09441340783074577,
+      "balance": 0.0726256983313429,
+      "oracle_score": 0.7692044095840025,
+      "production_score": 0.7692044095840025,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 1,
+      "token": 9264,
+      "R_parent": -12.668061253731139,
+      "logp_v": -5.536798000335693,
+      "prob_component": 0.7281943701626733,
+      "sigma_parent": 0.08704222761700765,
+      "balance": 0.0669555597053905,
+      "oracle_score": 0.7951499298680638,
+      "production_score": 0.7951499298680638,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      11
+     ],
+     [
+      1,
+      87
+     ],
+     [
+      2,
+      87
+     ],
+     [
+      3,
+      1583
+     ]
+    ],
+    "probability_only_kept": [
+     [
+      0,
+      11
+     ],
+     [
+      1,
+      87
+     ],
+     [
+      2,
+      87
+     ],
+     [
+      0,
+      1583
+     ]
+    ]
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 26,
+    "sentence": 0,
+    "prefix_len": 26,
+    "tau": 1.3,
+    "use_balance": true,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 3,
+      "token": 26288,
+      "R_parent": -35.70259417267516,
+      "logp_v": -2.0338528156280518,
+      "prob_component": 1.397646184751971,
+      "sigma_parent": 0.07060756291123757,
+      "balance": 0.0543135099317212,
+      "oracle_score": 1.4519596946836921,
+      "production_score": 1.451959694683692,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 68536,
+      "R_parent": -35.32093730242923,
+      "logp_v": -2.501304864883423,
+      "prob_component": 1.4008237839745428,
+      "sigma_parent": 0.07142481991598225,
+      "balance": 0.05494216916614019,
+      "oracle_score": 1.455765953140683,
+      "production_score": 1.4557659531406828,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 18493,
+      "R_parent": -35.32093730242923,
+      "logp_v": -2.626304864883423,
+      "prob_component": 1.4054534136041723,
+      "sigma_parent": 0.07142481991598225,
+      "balance": 0.05494216916614019,
+      "oracle_score": 1.4603955827703126,
+      "production_score": 1.4603955827703126,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 2,
+      "token": 68536,
+      "R_parent": -35.58412947924808,
+      "logp_v": -2.440809488296509,
+      "prob_component": 1.4083310728720217,
+      "sigma_parent": 0.07204753684269669,
+      "balance": 0.05542118218668975,
+      "oracle_score": 1.4637522550587114,
+      "production_score": 1.4637522550587112,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 1,
+      "token": 68536,
+      "R_parent": -35.57709410460666,
+      "logp_v": -2.4793379306793213,
+      "prob_component": 1.4094974827883695,
+      "sigma_parent": 0.0713345141701917,
+      "balance": 0.05487270320783976,
+      "oracle_score": 1.4643701859962093,
+      "production_score": 1.4643701859962093,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 3,
+      "token": 70790,
+      "R_parent": -35.70259417267516,
+      "logp_v": -2.4713528156280518,
+      "prob_component": 1.4138498884556745,
+      "sigma_parent": 0.07060756291123757,
+      "balance": 0.0543135099317212,
+      "oracle_score": 1.4681633983873956,
+      "production_score": 1.4681633983873956,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 3,
+      "token": 112805,
+      "R_parent": -35.70259417267516,
+      "logp_v": -2.4713528156280518,
+      "prob_component": 1.4138498884556745,
+      "sigma_parent": 0.07060756291123757,
+      "balance": 0.0543135099317212,
+      "oracle_score": 1.4681633983873956,
+      "production_score": 1.4681633983873956,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 2,
+      "token": 18493,
+      "R_parent": -35.58412947924808,
+      "logp_v": -2.565809488296509,
+      "prob_component": 1.4129607025016513,
+      "sigma_parent": 0.07204753684269669,
+      "balance": 0.05542118218668975,
+      "oracle_score": 1.468381884688341,
+      "production_score": 1.468381884688341,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      18493
+     ],
+     [
+      0,
+      68536
+     ],
+     [
+      2,
+      68536
+     ],
+     [
+      3,
+      26288
+     ]
+    ],
+    "probability_only_kept": null
+   }
+  ],
+  "chosen_tokens": [
+   [
+    117006,
+    9370,
+    106564,
+    5373,
+    104653,
+    85767,
+    5373,
+    99396,
+    69721,
+    9370,
+    107249,
+    3837,
+    43288,
+    44991,
+    28946,
+    100374,
+    104080,
+    3837,
+    80158,
+    106131,
+    99258,
+    104794,
+    39953,
+    18493,
+    99345,
+    15946,
+    26288,
+    53222,
+    62945,
+    99414,
+    34187,
+    1773
+   ],
+   [
+    94940,
+    25,
+    3056,
+    3782,
+    90,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220
+   ],
+   [
+    124969,
+    32790,
+    52704,
+    11071,
+    198,
+    32,
+    13,
+    6567,
+    234,
+    229,
+    19793,
+    198,
+    33,
+    13,
+    6567,
+    234,
+    229,
+    19793,
+    31548,
+    198,
+    34,
+    13,
+    6567,
+    234,
+    229,
+    100179,
+    198,
+    35,
+    13,
+    6567,
+    234,
+    229
+   ],
+   [
+    21551,
+    5203,
+    304,
+    279,
+    3639,
+    4180,
+    11,
+    2670,
+    11643,
+    8877,
+    11,
+    16703,
+    8877,
+    11,
+    323,
+    14533,
+    8877,
+    13,
+    4220,
+    5203,
+    614,
+    16601,
+    21240,
+    323,
+    31773,
+    2022,
+    6814,
+    3693,
+    3840,
+    11,
+    323,
+    862
+   ]
+  ]
+ },
+ "PROBABILITY_ONLY": {
+  "n_steps": 31,
+  "n_pruning_decisions": 31,
+  "all_decisions_match_oracle": true,
+  "all_decisions_match_fp64_oracle": true,
+  "max_score_abs_vs_oracle": 1.7763568394002505e-15,
+  "max_score_abs_vs_fp64_oracle": 6.577382318795344e-07,
+  "max_logsoftmax_fp64_abs": 3.670321746085392e-06,
+  "max_sigma_abs": 5.551115123125783e-17,
+  "max_cum_vs_fsum_abs": 0.0,
+  "counts_recount_exact": true,
+  "prefix_length_ok": true,
+  "sigma_nonneg": true,
+  "logp_nonpos": true,
+  "prob_component_nonneg": true,
+  "propagation_ok": true,
+  "max_cum_propagation_abs": 0.0,
+  "steps_with_ebss_change": 0,
+  "min_cut_gap": 0.0,
+  "final": {
+   "final_score_max_abs": 0.0,
+   "pick_production": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "pick_oracle": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "pick_matches": true,
+   "counts_exact": true,
+   "length_ok": true
+  },
+  "mismatches": [],
+  "passed": true,
+  "teacher_forced": {
+   "per_sentence": [
+    {
+     "sentence": 0,
+     "max_abs": 0.10729718208312988,
+     "mean_abs": 0.025894962393889023,
+     "cum_replay": -41.53041342936922,
+     "cum_generation": -41.51628981123213,
+     "rel_cum": 0.0003401946127967892,
+     "pearson": 0.9992628074873299
+    },
+    {
+     "sentence": 1,
+     "max_abs": 0.13286364078521729,
+     "mean_abs": 0.008843163182328065,
+     "cum_replay": -13.151432181708515,
+     "cum_generation": -13.007911854307167,
+     "rel_cum": 0.011033310265999777,
+     "pearson": 0.9995953436519625
+    },
+    {
+     "sentence": 2,
+     "max_abs": 0.10924327373504639,
+     "mean_abs": 0.020338666383567686,
+     "cum_replay": -27.493033033150596,
+     "cum_generation": -27.301667263741024,
+     "rel_cum": 0.007009307071283596,
+     "pearson": 0.9994796668649653
+    },
+    {
+     "sentence": 3,
+     "max_abs": 0.096244215965271,
+     "mean_abs": 0.019138769010051845,
+     "cum_replay": -26.535165635636076,
+     "cum_generation": -26.536579884472303,
+     "rel_cum": 5.3294314579487285e-05,
+     "pearson": 0.9992939625226773
+    }
+   ],
+   "mean_abs": 0.018553890242459157,
+   "min_pearson": 0.9992628074873299,
+   "flag": false
+  },
+  "excluded_vocab_mass": {
+   "max": 0.00016573112225160003,
+   "mean": 2.9144607651687693e-06
+  },
+  "dispatch_mismatches": 0,
+  "examples": [
+   {
+    "why": "early step",
+    "step": 1,
+    "sentence": 0,
+    "prefix_len": 1,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 9370,
+      "R_parent": 0.0,
+      "logp_v": -0.7279984951019287,
+      "prob_component": 0.36399924755096436,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 0.36399924755096436,
+      "production_score": 0.36399924755096436,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": 0.0,
+      "logp_v": -2.1029984951019287,
+      "prob_component": 1.0514992475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.0514992475509644,
+      "production_score": 1.0514992475509644,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 1773,
+      "R_parent": 0.0,
+      "logp_v": -3.5404984951019287,
+      "prob_component": 1.7702492475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.7702492475509644,
+      "production_score": 1.7702492475509644,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 104310,
+      "R_parent": 0.0,
+      "logp_v": -3.5404984951019287,
+      "prob_component": 1.7702492475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.7702492475509644,
+      "production_score": 1.7702492475509644,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 105437,
+      "R_parent": 0.0,
+      "logp_v": -3.6029984951019287,
+      "prob_component": 1.8014992475509644,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 1.8014992475509644,
+      "production_score": 1.8014992475509644,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 8997,
+      "R_parent": 0.0,
+      "logp_v": -4.290498733520508,
+      "prob_component": 2.145249366760254,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 2.145249366760254,
+      "production_score": 2.145249366760254,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 28946,
+      "R_parent": 0.0,
+      "logp_v": -4.352998733520508,
+      "prob_component": 2.176499366760254,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 2.176499366760254,
+      "production_score": 2.176499366760254,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 100623,
+      "R_parent": 0.0,
+      "logp_v": -4.415498733520508,
+      "prob_component": 2.207749366760254,
+      "sigma_parent": 0.2515488742932317,
+      "balance": 0.19349913407171668,
+      "oracle_score": 2.207749366760254,
+      "production_score": 2.207749366760254,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      1773
+     ],
+     [
+      0,
+      3837
+     ],
+     [
+      0,
+      9370
+     ],
+     [
+      0,
+      104310
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "early step",
+    "step": 2,
+    "sentence": 0,
+    "prefix_len": 2,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 106564,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -2.8768348693847656,
+      "prob_component": 1.2016111214955647,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.2016111214955647,
+      "production_score": 1.2016111214955647,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 105502,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.2518348693847656,
+      "prob_component": 1.3266111214955647,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.3266111214955647,
+      "production_score": 1.3266111214955647,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 3,
+      "token": 47534,
+      "R_parent": -3.5404984951019287,
+      "logp_v": -0.8021122217178345,
+      "prob_component": 1.4475369056065877,
+      "sigma_parent": 0.18152664500403903,
+      "balance": 0.1396358807723377,
+      "oracle_score": 1.4475369056065877,
+      "production_score": 1.4475369056065877,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 108789,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.7518348693847656,
+      "prob_component": 1.4932777881622314,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.4932777881622314,
+      "production_score": 1.4932777881622314,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 109262,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.8768348693847656,
+      "prob_component": 1.5349444548288982,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.5349444548288982,
+      "production_score": 1.534944454828898,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -3.9393348693847656,
+      "prob_component": 1.5557777881622314,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.5557777881622314,
+      "production_score": 1.5557777881622314,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 47815,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -4.126834869384766,
+      "prob_component": 1.6182777881622314,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.6182777881622314,
+      "production_score": 1.6182777881622314,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 101079,
+      "R_parent": -0.7279984951019287,
+      "logp_v": -4.189334869384766,
+      "prob_component": 1.6391111214955647,
+      "sigma_parent": 0.18180889893146002,
+      "balance": 0.13985299917804617,
+      "oracle_score": 1.6391111214955647,
+      "production_score": 1.6391111214955647,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      105502
+     ],
+     [
+      0,
+      106564
+     ],
+     [
+      0,
+      108789
+     ],
+     [
+      3,
+      47534
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 7,
+    "sentence": 0,
+    "prefix_len": 7,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 107205,
+      "R_parent": -8.895217776298523,
+      "logp_v": -2.563873052597046,
+      "prob_component": 1.432386353611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.432386353611946,
+      "production_score": 1.432386353611946,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 110248,
+      "R_parent": -8.895217776298523,
+      "logp_v": -2.751373052597046,
+      "prob_component": 1.455823853611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.455823853611946,
+      "production_score": 1.455823853611946,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 99396,
+      "R_parent": -8.895217776298523,
+      "logp_v": -3.188873052597046,
+      "prob_component": 1.510511353611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.510511353611946,
+      "production_score": 1.510511353611946,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 103163,
+      "R_parent": -8.895217776298523,
+      "logp_v": -3.313873052597046,
+      "prob_component": 1.526136353611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.526136353611946,
+      "production_score": 1.526136353611946,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 114777,
+      "R_parent": -8.895217776298523,
+      "logp_v": -3.313873052597046,
+      "prob_component": 1.526136353611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.526136353611946,
+      "production_score": 1.526136353611946,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 3,
+      "token": 101034,
+      "R_parent": -10.520217776298523,
+      "logp_v": -1.736615777015686,
+      "prob_component": 1.5321041941642761,
+      "sigma_parent": 0.11665647353819945,
+      "balance": 0.08973574887553804,
+      "oracle_score": 1.5321041941642761,
+      "production_score": 1.5321041941642761,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 71304,
+      "R_parent": -8.895217776298523,
+      "logp_v": -3.438873052597046,
+      "prob_component": 1.541761353611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.541761353611946,
+      "production_score": 1.541761353611946,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 16530,
+      "R_parent": -8.895217776298523,
+      "logp_v": -3.501373052597046,
+      "prob_component": 1.549573853611946,
+      "sigma_parent": 0.12061364618463977,
+      "balance": 0.09277972783433829,
+      "oracle_score": 1.549573853611946,
+      "production_score": 1.549573853611946,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      99396
+     ],
+     [
+      0,
+      103163
+     ],
+     [
+      0,
+      107205
+     ],
+     [
+      0,
+      110248
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 10,
+    "sentence": 0,
+    "prefix_len": 10,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": -12.35019685991574,
+      "logp_v": -0.5942738652229309,
+      "prob_component": 1.1767700659216975,
+      "sigma_parent": 0.10742871321093468,
+      "balance": 0.08263747170071899,
+      "oracle_score": 1.1767700659216975,
+      "production_score": 1.1767700659216975,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 3,
+      "token": 107249,
+      "R_parent": -13.60019685991574,
+      "logp_v": -0.16018083691596985,
+      "prob_component": 1.250943426984701,
+      "sigma_parent": 0.11095696905693221,
+      "balance": 0.08535151465917862,
+      "oracle_score": 1.250943426984701,
+      "production_score": 1.250943426984701,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 5373,
+      "R_parent": -12.35019685991574,
+      "logp_v": -2.219273805618286,
+      "prob_component": 1.324497333230366,
+      "sigma_parent": 0.10742871321093468,
+      "balance": 0.08263747170071899,
+      "oracle_score": 1.324497333230366,
+      "production_score": 1.3244973332303662,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 14053,
+      "R_parent": -12.35019685991574,
+      "logp_v": -3.094273805618286,
+      "prob_component": 1.4040427877758206,
+      "sigma_parent": 0.10742871321093468,
+      "balance": 0.08263747170071899,
+      "oracle_score": 1.4040427877758206,
+      "production_score": 1.4040427877758206,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 20412,
+      "R_parent": -12.35019685991574,
+      "logp_v": -3.094273805618286,
+      "prob_component": 1.4040427877758206,
+      "sigma_parent": 0.10742871321093468,
+      "balance": 0.08263747170071899,
+      "oracle_score": 1.4040427877758206,
+      "production_score": 1.4040427877758206,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 2,
+      "token": 110248,
+      "R_parent": -13.043505184352398,
+      "logp_v": -2.493889093399048,
+      "prob_component": 1.412490388886495,
+      "sigma_parent": 0.11721091928597051,
+      "balance": 0.0901622456045927,
+      "oracle_score": 1.412490388886495,
+      "production_score": 1.412490388886495,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 1,
+      "token": 101034,
+      "R_parent": -12.793505184352398,
+      "logp_v": -2.773864984512329,
+      "prob_component": 1.4152154698967934,
+      "sigma_parent": 0.11131667949173484,
+      "balance": 0.08562821499364218,
+      "oracle_score": 1.4152154698967934,
+      "production_score": 1.4152154698967934,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 1,
+      "token": 105566,
+      "R_parent": -12.793505184352398,
+      "logp_v": -2.961364984512329,
+      "prob_component": 1.432260924442248,
+      "sigma_parent": 0.11131667949173484,
+      "balance": 0.08562821499364218,
+      "oracle_score": 1.432260924442248,
+      "production_score": 1.432260924442248,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      3837
+     ],
+     [
+      0,
+      5373
+     ],
+     [
+      0,
+      14053
+     ],
+     [
+      3,
+      107249
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 15,
+    "sentence": 0,
+    "prefix_len": 15,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 1,
+      "token": 100413,
+      "R_parent": -20.57116334803868,
+      "logp_v": -2.2874557971954346,
+      "prob_component": 1.4286636965771322,
+      "sigma_parent": 0.09510521116148359,
+      "balance": 0.07315785473960276,
+      "oracle_score": 1.4286636965771322,
+      "production_score": 1.4286636965771322,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 100374,
+      "R_parent": -20.32116334803868,
+      "logp_v": -2.5599427223205566,
+      "prob_component": 1.4300691293974523,
+      "sigma_parent": 0.09255920043387576,
+      "balance": 0.0711993849491352,
+      "oracle_score": 1.4300691293974523,
+      "production_score": 1.4300691293974523,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 1,
+      "token": 20412,
+      "R_parent": -20.57116334803868,
+      "logp_v": -2.3499557971954346,
+      "prob_component": 1.4325699465771322,
+      "sigma_parent": 0.09510521116148359,
+      "balance": 0.07315785473960276,
+      "oracle_score": 1.4325699465771322,
+      "production_score": 1.4325699465771322,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 2,
+      "token": 20412,
+      "R_parent": -21.023614606936462,
+      "logp_v": -2.223843574523926,
+      "prob_component": 1.4529661363412743,
+      "sigma_parent": 0.09283749566294335,
+      "balance": 0.07141345820226411,
+      "oracle_score": 1.4529661363412743,
+      "production_score": 1.4529661363412743,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 20412,
+      "R_parent": -20.32116334803868,
+      "logp_v": -2.9349427223205566,
+      "prob_component": 1.4535066293974523,
+      "sigma_parent": 0.09255920043387576,
+      "balance": 0.0711993849491352,
+      "oracle_score": 1.4535066293974523,
+      "production_score": 1.4535066293974523,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 2,
+      "token": 100002,
+      "R_parent": -21.023614606936462,
+      "logp_v": -2.286343574523926,
+      "prob_component": 1.4568723863412743,
+      "sigma_parent": 0.09283749566294335,
+      "balance": 0.07141345820226411,
+      "oracle_score": 1.4568723863412743,
+      "production_score": 1.4568723863412743,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 100002,
+      "R_parent": -20.32116334803868,
+      "logp_v": -3.0599427223205566,
+      "prob_component": 1.4613191293974523,
+      "sigma_parent": 0.09255920043387576,
+      "balance": 0.0711993849491352,
+      "oracle_score": 1.4613191293974523,
+      "production_score": 1.4613191293974523,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 20929,
+      "R_parent": -20.32116334803868,
+      "logp_v": -3.1224427223205566,
+      "prob_component": 1.4652253793974523,
+      "sigma_parent": 0.09255920043387576,
+      "balance": 0.0711993849491352,
+      "oracle_score": 1.4652253793974523,
+      "production_score": 1.4652253793974523,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      100374
+     ],
+     [
+      1,
+      20412
+     ],
+     [
+      1,
+      100413
+     ],
+     [
+      2,
+      20412
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 18,
+    "sentence": 0,
+    "prefix_len": 18,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 80158,
+      "R_parent": -24.570274463971145,
+      "logp_v": -2.5839695930480957,
+      "prob_component": 1.429170739843118,
+      "sigma_parent": 0.08503996179937967,
+      "balance": 0.06541535523029206,
+      "oracle_score": 1.429170739843118,
+      "production_score": 1.429170739843118,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 1,
+      "token": 102236,
+      "R_parent": -26.070274463971145,
+      "logp_v": -1.7048585414886475,
+      "prob_component": 1.4618491055505154,
+      "sigma_parent": 0.08768437599839934,
+      "balance": 0.06744951999876872,
+      "oracle_score": 1.4618491055505154,
+      "production_score": 1.4618491055505154,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 0,
+      "token": 100698,
+      "R_parent": -24.570274463971145,
+      "logp_v": -3.2089695930480957,
+      "prob_component": 1.4620654766852232,
+      "sigma_parent": 0.08503996179937967,
+      "balance": 0.06541535523029206,
+      "oracle_score": 1.4620654766852232,
+      "production_score": 1.4620654766852232,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 99258,
+      "R_parent": -24.570274463971145,
+      "logp_v": -3.2714695930480957,
+      "prob_component": 1.4653549503694336,
+      "sigma_parent": 0.08503996179937967,
+      "balance": 0.06541535523029206,
+      "oracle_score": 1.4653549503694336,
+      "production_score": 1.4653549503694336,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 101207,
+      "R_parent": -24.570274463971145,
+      "logp_v": -3.2714695930480957,
+      "prob_component": 1.4653549503694336,
+      "sigma_parent": 0.08503996179937967,
+      "balance": 0.06541535523029206,
+      "oracle_score": 1.4653549503694336,
+      "production_score": 1.4653549503694336,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 0,
+      "token": 104077,
+      "R_parent": -24.570274463971145,
+      "logp_v": -3.5214695930480957,
+      "prob_component": 1.478512845106276,
+      "sigma_parent": 0.08503996179937967,
+      "balance": 0.06541535523029206,
+      "oracle_score": 1.478512845106276,
+      "production_score": 1.4785128451062757,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 1,
+      "token": 114408,
+      "R_parent": -26.070274463971145,
+      "logp_v": -2.1423585414886475,
+      "prob_component": 1.484875421339989,
+      "sigma_parent": 0.08768437599839934,
+      "balance": 0.06744951999876872,
+      "oracle_score": 1.484875421339989,
+      "production_score": 1.484875421339989,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 106131,
+      "R_parent": -24.570274463971145,
+      "logp_v": -3.6464695930480957,
+      "prob_component": 1.485091792474697,
+      "sigma_parent": 0.08503996179937967,
+      "balance": 0.06541535523029206,
+      "oracle_score": 1.485091792474697,
+      "production_score": 1.485091792474697,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      80158
+     ],
+     [
+      0,
+      99258
+     ],
+     [
+      0,
+      100698
+     ],
+     [
+      1,
+      102236
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 21,
+    "sentence": 0,
+    "prefix_len": 21,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 104794,
+      "R_parent": -29.827197781880386,
+      "logp_v": -1.4985417127609253,
+      "prob_component": 1.4238972497564233,
+      "sigma_parent": 0.07706225549383511,
+      "balance": 0.05927865807218085,
+      "oracle_score": 1.4238972497564233,
+      "production_score": 1.4238972497564233,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 0,
+      "token": 106621,
+      "R_parent": -29.827197781880386,
+      "logp_v": -2.248541831970215,
+      "prob_component": 1.4579881642659365,
+      "sigma_parent": 0.07706225549383511,
+      "balance": 0.05927865807218085,
+      "oracle_score": 1.4579881642659365,
+      "production_score": 1.4579881642659365,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 1,
+      "token": 101084,
+      "R_parent": -31.452197781880386,
+      "logp_v": -1.5865521430969238,
+      "prob_component": 1.5017613602262414,
+      "sigma_parent": 0.07658672616723684,
+      "balance": 0.05891286628248988,
+      "oracle_score": 1.5017613602262414,
+      "production_score": 1.5017613602262414,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 0,
+      "token": 99555,
+      "R_parent": -29.827197781880386,
+      "logp_v": -3.373541831970215,
+      "prob_component": 1.5091245279023,
+      "sigma_parent": 0.07706225549383511,
+      "balance": 0.05927865807218085,
+      "oracle_score": 1.5091245279023,
+      "production_score": 1.5091245279023,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 105670,
+      "R_parent": -29.827197781880386,
+      "logp_v": -3.373541831970215,
+      "prob_component": 1.5091245279023,
+      "sigma_parent": 0.07706225549383511,
+      "balance": 0.05927865807218085,
+      "oracle_score": 1.5091245279023,
+      "production_score": 1.5091245279023,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 3,
+      "token": 26939,
+      "R_parent": -31.514697781880386,
+      "logp_v": -1.7036430835723877,
+      "prob_component": 1.5099245847933078,
+      "sigma_parent": 0.07700135404319428,
+      "balance": 0.05923181080245713,
+      "oracle_score": 1.5099245847933078,
+      "production_score": 1.509924584793308,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 0,
+      "token": 99885,
+      "R_parent": -29.827197781880386,
+      "logp_v": -3.623541831970215,
+      "prob_component": 1.5204881642659365,
+      "sigma_parent": 0.07706225549383511,
+      "balance": 0.05927865807218085,
+      "oracle_score": 1.5204881642659365,
+      "production_score": 1.5204881642659365,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 3,
+      "token": 101084,
+      "R_parent": -31.514697781880386,
+      "logp_v": -1.9536430835723877,
+      "prob_component": 1.5212882211569443,
+      "sigma_parent": 0.07700135404319428,
+      "balance": 0.05923181080245713,
+      "oracle_score": 1.5212882211569443,
+      "production_score": 1.5212882211569443,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      99555
+     ],
+     [
+      0,
+      104794
+     ],
+     [
+      0,
+      106621
+     ],
+     [
+      1,
+      101084
+     ]
+    ],
+    "probability_only_kept": null
+   },
+   {
+    "why": "near tie at the cut",
+    "step": 25,
+    "sentence": 0,
+    "prefix_len": 25,
+    "tau": 1.3,
+    "use_balance": false,
+    "candidates": [
+     {
+      "rank": 0,
+      "parent": 0,
+      "token": 1773,
+      "R_parent": -34.701988807995804,
+      "logp_v": -0.6903220415115356,
+      "prob_component": 1.3612427249810515,
+      "sigma_parent": 0.0731820079200399,
+      "balance": 0.056293852246184536,
+      "oracle_score": 1.3612427249810515,
+      "production_score": 1.3612427249810515,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 1,
+      "parent": 1,
+      "token": 1773,
+      "R_parent": -34.99615215428639,
+      "logp_v": -0.7053926587104797,
+      "prob_component": 1.3731363389614182,
+      "sigma_parent": 0.07311197320124892,
+      "balance": 0.05623997938557609,
+      "oracle_score": 1.3731363389614182,
+      "production_score": 1.3731363389614182,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 2,
+      "parent": 2,
+      "token": 1773,
+      "R_parent": -35.14296304353047,
+      "logp_v": -0.626335084438324,
+      "prob_component": 1.3757422356911075,
+      "sigma_parent": 0.07372487974790914,
+      "balance": 0.05671144595993011,
+      "oracle_score": 1.3757422356911075,
+      "production_score": 1.3757422356911075,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 3,
+      "parent": 3,
+      "token": 15946,
+      "R_parent": -35.810068479855545,
+      "logp_v": -0.19458366930484772,
+      "prob_component": 1.384794313429246,
+      "sigma_parent": 0.07104705896041501,
+      "balance": 0.05465158381570385,
+      "oracle_score": 1.384794313429246,
+      "production_score": 1.384794313429246,
+      "kept_by_oracle": true
+     },
+     {
+      "rank": 4,
+      "parent": 0,
+      "token": 3837,
+      "R_parent": -34.701988807995804,
+      "logp_v": -1.3153220415115356,
+      "prob_component": 1.3852811865195132,
+      "sigma_parent": 0.0731820079200399,
+      "balance": 0.056293852246184536,
+      "oracle_score": 1.3852811865195132,
+      "production_score": 1.3852811865195132,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 5,
+      "parent": 1,
+      "token": 3837,
+      "R_parent": -34.99615215428639,
+      "logp_v": -1.330392599105835,
+      "prob_component": 1.3971747982073934,
+      "sigma_parent": 0.07311197320124892,
+      "balance": 0.05623997938557609,
+      "oracle_score": 1.3971747982073934,
+      "production_score": 1.3971747982073934,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 6,
+      "parent": 2,
+      "token": 3837,
+      "R_parent": -35.14296304353047,
+      "logp_v": -1.2513351440429688,
+      "prob_component": 1.3997806995220554,
+      "sigma_parent": 0.07372487974790914,
+      "balance": 0.05671144595993011,
+      "oracle_score": 1.3997806995220554,
+      "production_score": 1.3997806995220554,
+      "kept_by_oracle": false
+     },
+     {
+      "rank": 7,
+      "parent": 0,
+      "token": 102236,
+      "R_parent": -34.701988807995804,
+      "logp_v": -2.690321922302246,
+      "prob_component": 1.4381657973191557,
+      "sigma_parent": 0.0731820079200399,
+      "balance": 0.056293852246184536,
+      "oracle_score": 1.4381657973191557,
+      "production_score": 1.438165797319156,
+      "kept_by_oracle": false
+     }
+    ],
+    "production_kept": [
+     [
+      0,
+      1773
+     ],
+     [
+      1,
+      1773
+     ],
+     [
+      2,
+      1773
+     ],
+     [
+      3,
+      15946
+     ]
+    ],
+    "probability_only_kept": null
+   }
+  ],
+  "chosen_tokens": [
+   [
+    117006,
+    9370,
+    106564,
+    5373,
+    104653,
+    85767,
+    5373,
+    99396,
+    69721,
+    9370,
+    107249,
+    3837,
+    43288,
+    44991,
+    28946,
+    100374,
+    104080,
+    3837,
+    80158,
+    106131,
+    99258,
+    104794,
+    39953,
+    18493,
+    99345,
+    15946,
+    26288,
+    53222,
+    62945,
+    99414,
+    34187,
+    1773
+   ],
+   [
+    94940,
+    25,
+    3056,
+    3782,
+    90,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220,
+    15,
+    11,
+    220
+   ],
+   [
+    124969,
+    32790,
+    52704,
+    11071,
+    198,
+    32,
+    13,
+    18137,
+    246,
+    123,
+    72225,
+    102044,
+    198,
+    33,
+    13,
+    18137,
+    246,
+    123,
+    72225,
+    102044,
+    72881,
+    198,
+    34,
+    13,
+    18137,
+    246,
+    123,
+    72225,
+    102044,
+    17340,
+    198,
+    35
+   ],
+   [
+    21551,
+    5203,
+    304,
+    279,
+    3639,
+    4180,
+    11,
+    2670,
+    11643,
+    8877,
+    11,
+    16703,
+    8877,
+    11,
+    323,
+    14533,
+    8877,
+    13,
+    4220,
+    5203,
+    614,
+    16601,
+    21240,
+    323,
+    31773,
+    2022,
+    6814,
+    547,
+    808,
+    13,
+    3840,
+    11
+   ]
+  ]
+ },
+ "load": {
+  "model_load_s": 19.68565082550049,
+  "pristine_all_parameters": true,
+  "digest_s": 121.71137642860413,
+  "place_s": 174.19402503967285,
+  "gpu_resident_gb": 4.75655424,
+  "expert_layer_bytes": 1038090240
+ },
+ "config": {
+  "n": 4,
+  "seqlen": 32,
+  "w": 4,
+  "tau": 1.3,
+  "starts": [
+   117006,
+   94940,
+   124969,
+   21551
+  ],
+  "vocab_limit": 151646
+ }
+}

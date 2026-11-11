@@ -1,0 +1,62 @@
+{
+ "seed": 20261110,
+ "n_sets": 300,
+ "results": {
+  "logp_up_improves": {
+   "checked": 300,
+   "failed": 0
+  },
+  "history_up_improves": {
+   "checked": 300,
+   "failed": 0
+  },
+  "sigma_up_worsens": {
+   "checked": 300,
+   "failed": 0
+  },
+  "sigma0_equals_po": {
+   "checked": 300,
+   "failed": 0
+  },
+  "tau_inf_equals_po": {
+   "checked": 300,
+   "failed": 0
+  },
+  "tau_up_shrinks_balance_spread": {
+   "checked": 300,
+   "failed": 0
+  },
+  "constant_shift_invariant": {
+   "checked": 300,
+   "failed": 0
+  },
+  "enumeration_order_invariant": {
+   "checked": 300,
+   "failed": 0
+  },
+  "production_equals_oracle": {
+   "checked": 300,
+   "failed": 0
+  },
+  "logp_nll_identity": {
+   "checked": 300,
+   "failed": 0
+  },
+  "counterfactual_ordering": {
+   "checked": 230,
+   "failed": 0
+  }
+ },
+ "wrong_variant_detection": {
+  "n_multi_parent_sets": 230,
+  "sets_where_variant_changes_kept_set": {
+   "wrong_nll_sign": 190,
+   "maximise": 230,
+   "per_parent_topk": 183,
+   "reversed_sigma": 122,
+   "probability_only": 72
+  }
+ },
+ "failing_examples": [],
+ "passed": true
+}

@@ -1,0 +1,78 @@
+{
+ "summary": {
+  "n_seeds": 3,
+  "groupings_per_seed": 5,
+  "mean_delta": {
+   "0": -0.0019318602382217165,
+   "1": 0.0006871982444071279,
+   "2": -0.0024980664929316275
+  },
+  "sd_grouping": {
+   "0": 0.006364178643728711,
+   "1": 0.0051763618636375954,
+   "2": 0.008623872264796209
+  },
+  "se_grouping_mean": {
+   "0": 0.0028461472136659624,
+   "1": 0.002314939400646232,
+   "2": 0.0038567129226718777
+  },
+  "median_delta_per_seed": {
+   "0": -0.0040691312519403056,
+   "1": -0.0005266762392182045,
+   "2": -0.004531279076493533
+  },
+  "n_fc_worse": {
+   "0": 2,
+   "1": 2,
+   "2": 2
+  },
+  "n_fc_better": {
+   "0": 3,
+   "1": 3,
+   "2": 3
+  },
+  "overall_mean_delta": -0.0012475761622487388,
+  "overall_median_delta": -0.003677348635330091,
+  "n_fc_worse_total": 6,
+  "n_fc_better_total": 9,
+  "min_delta": -0.013548852228240094,
+  "max_delta": 0.009934220514541181,
+  "pooled_within_sd": 0.006871891170852839,
+  "sd_between_seed_means": 0.0016993120326196942,
+  "expected_sd_of_seed_means_from_grouping_only": 0.0030732031584015137,
+  "between_seed_variance_component": 0.0,
+  "between_seed_sd_component": 0.0,
+  "note": "seed means include finite-grouping averaging error (expected SD pooled/sqrt(k)); the variance component max(0, Var(seed means) - pooled^2/k) is a descriptive, highly uncertain estimate with 3 seeds"
+ },
+ "hierarchical_bootstrap": {
+  "point": -0.0012475761622487388,
+  "ci95": [
+   -0.004777081840922672,
+   0.0021549580959289542
+  ],
+  "frac_boot_positive": 0.24345,
+  "n_boot": 20000,
+  "seed": 20261120,
+  "n_seeds": 3,
+  "k": 5,
+  "n_distinct_seed_resamples": 10,
+  "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+ },
+ "decision": "GROUPING-VARIATION-DOMINATES",
+ "decision_details": {
+  "confident_positive_seeds": [],
+  "confident_negative_seeds": [],
+  "scale_disagreement": false,
+  "frac_opposite_sign_to_overall": 0.4,
+  "abs_M_over_W": 0.18154771826718377,
+  "ambiguous": false
+ },
+ "uncertainty_levels": {
+  "window_bootstrap": "evaluation-text sampling uncertainty CONDITIONAL on one fixed pair of quantized models (s, g)",
+  "grouping_replication": "sensitivity to calibration execution conditions (BF16 batch membership) within a seed",
+  "allocation_seeds": "variation in the selected calibration sets (only 3 seeds: outer unit)",
+  "combination": "not combined into a single interval; the hierarchical bootstrap covers seeds and groupings only, with the evaluation windows held fixed"
+ },
+ "pseudoreplication_note": "the 15 Delta[s,g] are NOT 15 independent replicates: groupings are nested within 3 allocation seeds; no flat 15-observation bootstrap is used"
+}

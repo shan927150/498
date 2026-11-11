@@ -1,0 +1,424 @@
+{
+ "configs": {
+  "FR_AO_G20261111": {
+   "reused": true,
+   "valid": true,
+   "ppl": 9.265860908067534,
+   "mean_nll": 2.2263367758810926,
+   "recon": 0.0046090978061805446,
+   "installed_weights_sha256": "5c2307e3bd42cee27c5fd67956e935452e4a36ce7eb969402d4d069cb401e49e",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0065765380859375,
+    "8": 0.037872314453125,
+    "16": 0.03558349609375,
+    "23": 0.0645599365234375
+   },
+   "quantize_s": 299.7323877811432,
+   "eval_s": 43.60145854949951,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.145376,
+   "result": "runs_frozen_routing/results/FR_AO.json"
+  },
+  "FR_AO_G20261112": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.27091581858232,
+   "mean_nll": 2.2268821685040527,
+   "recon": 0.004609392905757611,
+   "installed_weights_sha256": "01f93cefdf8b9ccc9ca8e173b785cf203c7cd8db73182884ddc4832f34150e43",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.006195068359375,
+    "8": 0.0364227294921875,
+    "16": 0.0362091064453125,
+    "23": 0.0634765625
+   },
+   "quantize_s": 280.75604152679443,
+   "eval_s": 36.60702919960022,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.035748,
+   "result": "runs_frozen_routing_robustness/results/FR_AO_G20261112.json"
+  },
+  "FR_AO_G20261113": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.276042886122434,
+   "mean_nll": 2.2274350427248177,
+   "recon": 0.004609455618209842,
+   "installed_weights_sha256": "b5fb9b06e2c8b7fc5d04ae0cd52ccaed57dcf82ec2a290527d4e9185f43ebf9b",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.006683349609375,
+    "8": 0.0380401611328125,
+    "16": 0.035491943359375,
+    "23": 0.063934326171875
+   },
+   "quantize_s": 298.2175874710083,
+   "eval_s": 41.23481464385986,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.037276,
+   "result": "runs_frozen_routing_robustness/results/FR_AO_G20261113.json"
+  },
+  "FR_AO_G20261114": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.27327903307253,
+   "mean_nll": 2.227137042282279,
+   "recon": 0.004609346548348779,
+   "installed_weights_sha256": "74b781a862e232ffd6fc3b66e8d169052775d8774599d1728ef895c94aa90aec",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0066375732421875,
+    "8": 0.037567138671875,
+    "16": 0.0355224609375,
+    "23": 0.0637359619140625
+   },
+   "quantize_s": 309.45315647125244,
+   "eval_s": 43.40699601173401,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.037164,
+   "result": "runs_frozen_routing_robustness/results/FR_AO_G20261114.json"
+  },
+  "FR_AO_G20261115": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.268226346100228,
+   "mean_nll": 2.2265920285960603,
+   "recon": 0.0046093000146378345,
+   "installed_weights_sha256": "8fe64eaf5e9841ad2fabf9e7453511c88382d59dfc0d466955968f81e8a516bc",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0060882568359375,
+    "8": 0.0380096435546875,
+    "16": 0.03668212890625,
+    "23": 0.063934326171875
+   },
+   "quantize_s": 305.51993560791016,
+   "eval_s": 36.29947519302368,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.422084,
+   "result": "runs_frozen_routing_robustness/results/FR_AO_G20261115.json"
+  },
+  "FC_AO_G20261111": {
+   "reused": true,
+   "valid": true,
+   "ppl": 9.277880596192395,
+   "mean_nll": 2.227633136683513,
+   "recon": 0.004726594033182554,
+   "installed_weights_sha256": "9c615a4b9965923817e90e87d3a1c32dcf182e90eaa370422e83ffbae6678987",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0058135986328125,
+    "8": 0.03985595703125,
+    "16": 0.0417327880859375,
+    "23": 0.0703582763671875
+   },
+   "quantize_s": 282.45556926727295,
+   "eval_s": 36.84083867073059,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.039948,
+   "result": "runs_frozen_routing/results/FC_AO.json"
+  },
+  "FC_AO_G20261112": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.274432059487202,
+   "mean_nll": 2.227261373140184,
+   "recon": 0.004726960000558341,
+   "installed_weights_sha256": "61a2797259072b1197863704104c5e0bdf711c12853df9bec41d6194f230f45d",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0059356689453125,
+    "8": 0.0395355224609375,
+    "16": 0.0418853759765625,
+    "23": 0.069305419921875
+   },
+   "quantize_s": 295.55366945266724,
+   "eval_s": 40.509493589401245,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.04468,
+   "result": "runs_frozen_routing_robustness/results/FC_AO_G20261112.json"
+  },
+  "FC_AO_G20261113": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.273312308452768,
+   "mean_nll": 2.227140630583722,
+   "recon": 0.004727028979352394,
+   "installed_weights_sha256": "2f1f3afc962e146f925e6a042165ee3bb30e735732120e4f6bccf1df58ff09a3",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0062103271484375,
+    "8": 0.0403594970703125,
+    "16": 0.042022705078125,
+    "23": 0.06866455078125
+   },
+   "quantize_s": 287.66131377220154,
+   "eval_s": 39.85084295272827,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.033468,
+   "result": "runs_frozen_routing_robustness/results/FC_AO_G20261113.json"
+  },
+  "FC_AO_G20261114": {
+   "reused": false,
+   "valid": false,
+   "ppl": 9.27413689847134,
+   "mean_nll": 2.2272295473948605,
+   "recon": 0.004726793955344869,
+   "installed_weights_sha256": "fd75e415f59b3a380050046413422ca24be8cf44d3c8386f3f89f5206442b071",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": false,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.0062103271484375,
+    "8": 0.03985595703125,
+    "16": 0.0414276123046875,
+    "23": 0.0698394775390625
+   },
+   "quantize_s": 297.5495665073395,
+   "eval_s": 37.444584608078,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.027916,
+   "result": "runs_frozen_routing_robustness/results/FC_AO_G20261114.json"
+  },
+  "FC_AO_G20261115": {
+   "reused": false,
+   "valid": true,
+   "ppl": 9.27472885539555,
+   "mean_nll": 2.227293374146562,
+   "recon": 0.0047268068248912535,
+   "installed_weights_sha256": "58790091ff5227f8f0f06d127162bab490d51f2cf321184232f426f4be8b97cf",
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "nonfinite_weights": 0,
+   "projections_unchanged_from_bf16": 0,
+   "router_weights_unchanged": true,
+   "untouched_params_unchanged": true,
+   "forced_token_counts_match_table": true,
+   "expert_checks_pass": true,
+   "repeat_eval_abs_diff_ppl": 0.0,
+   "repeat_eval_per_window_identical": true,
+   "forced_routing_frac_set_diff": {
+    "1": 0.00634765625,
+    "8": 0.039276123046875,
+    "16": 0.0420074462890625,
+    "23": 0.068817138671875
+   },
+   "quantize_s": 293.2590661048889,
+   "eval_s": 38.06396412849426,
+   "peak_gpu_gb": 8.412874752,
+   "peak_cpu_gb": 41.028088,
+   "result": "runs_frozen_routing_robustness/results/FC_AO_G20261115.json"
+  }
+ },
+ "token_count_invariant": {
+  "FR": {
+   "identical_across_groupings": true,
+   "equal_R_O_expected": true,
+   "aa_counts_vary_across_groupings": true,
+   "n_experts_with_tokens": 240
+  },
+  "FC": {
+   "identical_across_groupings": true,
+   "equal_R_O_expected": true,
+   "aa_counts_vary_across_groupings": true,
+   "n_experts_with_tokens": 240
+  }
+ },
+ "regression": {
+  "passed": true,
+  "ao_G20261111": {
+   "FR": {
+    "result": "runs_frozen_routing/results/FR_AO.json",
+    "hessians_bitwise": "480/480",
+    "token_counts_identical": true,
+    "installed_digest_equal": true,
+    "ppl_stored": 9.265860908067534,
+    "ppl_reevaluated": 9.265860908067534,
+    "ppl_exact": true,
+    "per_window_exact": true,
+    "mean_nll_exact": true,
+    "eval_s": 43.449087381362915,
+    "passed": true
+   },
+   "FC": {
+    "result": "runs_frozen_routing/results/FC_AO.json",
+    "hessians_bitwise": "480/480",
+    "token_counts_identical": true,
+    "installed_digest_equal": true,
+    "ppl_stored": 9.277880596192395,
+    "ppl_reevaluated": 9.277880596192395,
+    "ppl_exact": true,
+    "per_window_exact": true,
+    "mean_nll_exact": true,
+    "eval_s": 20.8405499458313,
+    "passed": true
+   }
+  },
+  "fingerprints": {
+   "FR_OO_ORIGINAL": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FR_AA_G20261111": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FR_AA_G20261112": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FR_AA_G20261113": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FR_AA_G20261114": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FR_AA_G20261115": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FR_AO_G20261111": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_OO_ORIGINAL": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_AA_G20261111": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_AA_G20261112": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_AA_G20261113": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_AA_G20261114": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_AA_G20261115": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   },
+   "FC_AO_G20261111": {
+    "result_json": true,
+    "weight_files": true,
+    "n_weight_files": 4
+   }
+  },
+  "fingerprint_s": 223.30907821655273,
+  "model_load_s": 8.286652088165283,
+  "note": "G20261111 AO PPL compared with the stored JSON floats (9.265860908067534 / FC stored value), not rounded numbers"
+ }
+}

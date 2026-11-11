@@ -1,0 +1,150 @@
+{
+ "thresholds": {
+  "reference": "EQ4_RATE, same run protocol; thresholds frozen here",
+  "G1_beam": "counterfactual D_v (vs EQ4_RATE, primary pools) >= 0.05 AND >= 5 changed sentence-steps",
+  "G2_balance": "|relative difference of canonical set mean CV (24 layers, B1)| >= 0.10 vs EQ4_RATE, same sign under generation-time routing",
+  "G3_lower_tail": "|relative difference of mean p10 exposure| >= 0.10 OR |relative difference of mean min exposure| >= 0.20 vs EQ4_RATE (B1), same sign under generation-time routing",
+  "G4_repetition": "|delta distinct-2| >= 0.05 OR |delta repetition rate| >= 0.05 OR |relative delta mean longest repeated n-gram| >= 0.25 vs EQ4_RATE",
+  "G5_routing": "|relative difference routing L1 (mean of 1/8/16/23)| >= 0.10 OR |delta fraction atypical| >= 0.25 vs EQ4_RATE",
+  "qualifies": "a variant qualifies for B=16 if it passes G1 or any of G2-G5",
+  "context": "the PO - EQ4_RATE difference of every statistic is reported next to each variant (4 sequences x 128 tokens: one draw, no error bars)",
+  "selection": "ALG1_SHARE and ALG1_RATE run at B=16 if they qualify (at most two new variants); EQ4_SHARE only if fewer than two ALG1 variants qualify and it qualifies; if none qualifies no longer generation is run"
+ },
+ "per_variant": {
+  "EQ4_SHARE": {
+   "G1_beam": {
+    "D_v": 0.06349206349206349,
+    "n_changed": 32,
+    "pass_": true
+   },
+   "G2_balance": {
+    "rel_cv": 0.2455277698528284,
+    "rel_cv_gen": 0.24847927556552743,
+    "pass_": true
+   },
+   "G3_lower_tail": {
+    "rel_p10": -0.11143238434163712,
+    "rel_min": -0.1758793969849246,
+    "rel_p10_gen": -0.11071348691567882,
+    "rel_min_gen": -0.17258883248730966,
+    "pass_": true
+   },
+   "G4_repetition": {
+    "d_distinct2": 0.021653543307086576,
+    "d_repetition": -0.029296875,
+    "rel_longest_ngram": -0.1286549707602339,
+    "pass_": false
+   },
+   "G5_routing": {
+    "rel_l1": 0.15866583287989386,
+    "d_atypical": 0.0,
+    "pass_": true
+   },
+   "qualifies": true
+  },
+  "ALG1_SHARE": {
+   "G1_beam": {
+    "D_v": 0.047619047619047616,
+    "n_changed": 24,
+    "pass_": false
+   },
+   "G2_balance": {
+    "rel_cv": 0.07760703133611695,
+    "rel_cv_gen": 0.07871327281388223,
+    "pass_": false
+   },
+   "G3_lower_tail": {
+    "rel_p10": -0.08296263345195751,
+    "rel_min": -0.010050251256281265,
+    "rel_p10_gen": -0.08007157235517784,
+    "rel_min_gen": 0.010152284263959246,
+    "pass_": false
+   },
+   "G4_repetition": {
+    "d_distinct2": 0.0610236220472441,
+    "d_repetition": -0.009765625,
+    "rel_longest_ngram": -0.19883040935672514,
+    "pass_": true
+   },
+   "G5_routing": {
+    "rel_l1": 0.07105694286222651,
+    "d_atypical": 0.0,
+    "pass_": false
+   },
+   "qualifies": true
+  },
+  "ALG1_RATE": {
+   "G1_beam": {
+    "D_v": 0.28174603174603174,
+    "n_changed": 142,
+    "pass_": true
+   },
+   "G2_balance": {
+    "rel_cv": -0.03075866752240972,
+    "rel_cv_gen": -0.02748361323876162,
+    "pass_": false
+   },
+   "G3_lower_tail": {
+    "rel_p10": 0.014012455516014197,
+    "rel_min": -0.07035175879396982,
+    "rel_p10_gen": 0.002460299709237358,
+    "rel_min_gen": -0.06598984771573607,
+    "pass_": false
+   },
+   "G4_repetition": {
+    "d_distinct2": 0.1417322834645669,
+    "d_repetition": -0.087890625,
+    "rel_longest_ngram": -0.7894736842105263,
+    "pass_": true
+   },
+   "G5_routing": {
+    "rel_l1": 0.00014323019528752914,
+    "d_atypical": 0.0,
+    "pass_": false
+   },
+   "qualifies": true
+  }
+ },
+ "po_vs_eq4_rate_context": {
+  "cv": {
+   "PO_minus_EQ4_RATE": 0.09976467838968067,
+   "rel": 0.24572379350828072
+  },
+  "p10": {
+   "PO_minus_EQ4_RATE": -2.5041666666666664,
+   "rel": -0.13367437722419928
+  },
+  "min": {
+   "PO_minus_EQ4_RATE": -0.9999999999999991,
+   "rel": -0.12060301507537678
+  },
+  "distinct2": {
+   "PO_minus_EQ4_RATE": 0.051181102362204745,
+   "rel": 0.09352517985611514
+  },
+  "repetition_rate": {
+   "PO_minus_EQ4_RATE": -0.03125,
+   "rel": -0.05177993527508091
+  },
+  "longest_repeated_ngram_mean": {
+   "PO_minus_EQ4_RATE": -7.25,
+   "rel": -0.1695906432748538
+  },
+  "routing_l1": {
+   "PO_minus_EQ4_RATE": 0.05362854003906242,
+   "rel": 0.16217681841438242
+  },
+  "frac_atypical": {
+   "PO_minus_EQ4_RATE": 0.0,
+   "rel": 0.0
+  }
+ },
+ "selected_for_B16": [
+  "ALG1_SHARE",
+  "ALG1_RATE"
+ ],
+ "excluded": {
+  "EQ4_SHARE": "qualified but lower fidelity priority than the two Algorithm-1 variants (max two new variants)"
+ },
+ "short_stage_material": true
+}

@@ -1,0 +1,134 @@
+{
+ "title": "MoEQuant EBSS balance-strength fidelity experiment",
+ "frozen_at": "2026-11-10, before any normalisation-variant test, counterfactual ranking or generation",
+ "generator": {
+  "file": "moe_calib/ebss_generator.py",
+  "sha256_before_study": "17cc9b07e13cbcb7b6890db3c9c340df4c82a109339361656ee04fcd00c6f462",
+  "frozen_copy": "runs_ebss_balance_fidelity/logs/ebss_generator_pre_fidelity.py",
+  "change": "balance_sigma(counts, n, balance_std_mode, usage_mode, top_k) + the two options threaded through generate(); nothing else"
+ },
+ "model": {
+  "name": "Qwen/Qwen1.5-MoE-A2.7B",
+  "snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+  "precision": "bf16",
+  "backend": "HFOffloadBackend (same as pilot)"
+ },
+ "fixed": {
+  "w": 4,
+  "tau": 1.3,
+  "vocab_limit": 151646,
+  "scoring": "Eq. 13 minimisation, cumulative logP (audited SCORE-SIGN-CORRECT)",
+  "start_ids_source": "runs_ebss_generation_pilot/initialization_manifest.json pilot_start_ids"
+ },
+ "variants": [
+  "EQ4_RATE",
+  "EQ4_SHARE",
+  "ALG1_SHARE",
+  "ALG1_RATE"
+ ],
+ "default_regression": {
+  "synthetic": "EQ4_RATE (options omitted AND passed explicitly) vs the frozen pre-study generator on synthetic backends: tokens, cum_logp, token_logp, sigma, final scores, picks, every step's score matrix and pruning decision -- bitwise",
+  "historical": "balance_sigma default on the stored 16 x 512 pilot counts = stored sigma bitwise (EBSS and PO); final scores bitwise",
+  "real_model": "in the 4 x 128 EQ4_RATE and PO short runs the beam state at |S| = 32, put through the length-32 final selection, must equal the score-audit 4 x 32 production outputs (same starts, same batch layout) token-for-token",
+  "gate": "any regression failure -> BALANCE-NORMALIZATION-RUN-BLOCKED, no further generation"
+ },
+ "short_generation": {
+  "n": 4,
+  "start_ids": [
+   117006,
+   94940,
+   124969,
+   21551
+  ],
+  "seqlen": 128,
+  "conditions": [
+   "PROBABILITY_ONLY",
+   "EQ4_RATE",
+   "EQ4_SHARE",
+   "ALG1_SHARE",
+   "ALG1_RATE"
+  ],
+  "order": "one process, one backend load, conditions in the listed order",
+  "historical_po_reuse": "NOT reused: the historical PO set was decoded with 16 sentences per batch (64 rows) and selected at length 512, so its first 128 tokens are not the output of a 4 x 128 run under the same execution protocol; PO is regenerated at 4 x 128",
+  "pool_capture": "opt-in audit hook; at every step every parent's top-(w+1) tokens by (logP desc, token id asc) with parent cum logP, logP and full [24, 60] routing counts; this reduced pool provably contains the global top-(w+1) for ANY per-parent sigma, so it is exact for counterfactual ranking"
+ },
+ "counterfactual": {
+  "primary_pools": "EQ4_RATE short-run trajectory (all sentence-steps with >1 parent)",
+  "also": "pools of every other short / B=16 trajectory, reported separately",
+  "method": "independent oracle (normalization_oracle.py): sigma of each variant from the parent counts, Eq. 13 scores, global top-w; PO = no sigma term",
+  "D_v": "steps whose kept (parent, token) SET differs from EQ4_RATE's / tested steps; D_v_PO same vs Probability-Only; identical sets with different scores are not changes",
+  "bins": [
+   [
+    1,
+    32
+   ],
+   [
+    33,
+    64
+   ],
+   [
+    65,
+    128
+   ],
+   [
+    129,
+    256
+   ],
+   [
+    257,
+    511
+   ]
+  ],
+  "strength": "per step: balance spread = max - min over parents of sigma_v/tau; probability spread = max - min over parents of the parent's best-child probability component",
+  "caveat": "local counterfactual on fixed pools, not a trajectory prediction"
+ },
+ "diagnostics": {
+  "primary_routing": "CANONICAL-B1 replay (forward_b1_sel of the pilot, model PPL from the same pass)",
+  "secondary_routing": "generation-time batched-KV routing",
+  "canonical_balance": "all cross-variant balance outcomes use the EQ4_RATE definition (set_exposure: paper sigma, CV, Gini, min, p10, zero, per-layer CV); each variant's internal sigma is reported separately and never compared raw across variants",
+  "text": "ED.text_diagnostics + distinct-3 + longest repeated n-gram + near-duplicates + zlib compression ratio (pilot text_block)",
+  "representativeness": "routing L1 vs the frozen C4 reference (layers 1/8/16/23) and fraction routing-atypical (pilot d*); 128-token sequences are noisier than the 512-token reference, so C4 truncated to 128 tokens is reported as context"
+ },
+ "scientific_gate": {
+  "reference": "EQ4_RATE, same run protocol; thresholds frozen here",
+  "G1_beam": "counterfactual D_v (vs EQ4_RATE, primary pools) >= 0.05 AND >= 5 changed sentence-steps",
+  "G2_balance": "|relative difference of canonical set mean CV (24 layers, B1)| >= 0.10 vs EQ4_RATE, same sign under generation-time routing",
+  "G3_lower_tail": "|relative difference of mean p10 exposure| >= 0.10 OR |relative difference of mean min exposure| >= 0.20 vs EQ4_RATE (B1), same sign under generation-time routing",
+  "G4_repetition": "|delta distinct-2| >= 0.05 OR |delta repetition rate| >= 0.05 OR |relative delta mean longest repeated n-gram| >= 0.25 vs EQ4_RATE",
+  "G5_routing": "|relative difference routing L1 (mean of 1/8/16/23)| >= 0.10 OR |delta fraction atypical| >= 0.25 vs EQ4_RATE",
+  "qualifies": "a variant qualifies for B=16 if it passes G1 or any of G2-G5",
+  "context": "the PO - EQ4_RATE difference of every statistic is reported next to each variant (4 sequences x 128 tokens: one draw, no error bars)",
+  "selection": "ALG1_SHARE and ALG1_RATE run at B=16 if they qualify (at most two new variants); EQ4_SHARE only if fewer than two ALG1 variants qualify and it qualifies; if none qualifies no longer generation is run"
+ },
+ "full_generation": {
+  "n": 16,
+  "seqlen": 512,
+  "start_ids": "pilot_start_ids (16)",
+  "reuse": [
+   "PO (pilot)",
+   "EQ4_RATE = pilot EBSS",
+   "C4 Random s0/s1/s2"
+  ],
+  "compatibility": "new variants use the identical generate() call of the pilot (16 sentences in one batch, record_steps 1/2/64/256/511) + pool capture hook (read-only)"
+ },
+ "quantization": {
+  "pipeline": "unchanged OV.quant_config: GPTQ 4-bit, group 128, percdamp 1.0, act-order, layers [1,8,16,23], 240 experts, CANONICAL-B1 extraction, E3 held-out reconstruction, WikiText-2 partial PPL",
+  "cache": "new CANONICAL-B1 capture in ~/moe_cache_ebss_balance_fidelity of the new sets + C4R_s0's 16 rows; compatibility = those C4 rows bitwise equal to the pilot cache at layers 1/8/16/23, else reference configurations are re-quantized",
+  "historical_reuse": "C4R_s0/1/2, PO, EBSS(EQ4_RATE) results from runs_ebss_generation_pilot/results (read-only)"
+ },
+ "decision": {
+  "primary": {
+   "RUN_BLOCKED": "a regression/correctness/resource failure prevents a valid comparison",
+   "MATERIAL": "at least one alternative variant passes G1 on the counterfactual pools, or passes any of G2-G5 in the short generation (or at B=16 with the same thresholds)",
+   "IMMATERIAL": "no alternative variant passes any gate criterion"
+  },
+  "secondary_quality": {
+   "margin_pct": 0.5,
+   "GAIN": "some new variant: reconstruction >= 0.5 % below EQ4_RATE AND below every C4 Random seed AND >= 0.5 % below the C4 seed mean",
+   "MIXED": "no GAIN, but some new variant is >= 0.5 % below EQ4_RATE (or below the C4 seed mean) on reconstruction",
+   "NO_GAIN": "no new variant is >= 0.5 % below EQ4_RATE and none is below the C4 seed mean",
+   "ppl": "reported, not used for the label"
+  }
+ },
+ "constraints": "no tau/w tuning, no sampling/penalty changes, no B=128, no GPTQ change, no AGQ/rotation, no numerical-sensitivity study, no overwrite of earlier artifacts"
+}

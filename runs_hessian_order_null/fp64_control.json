@@ -1,0 +1,74 @@
+{
+ "FR": {
+  "summary": {
+   "O20261121": {
+    "n_hessians": 480,
+    "fp32_n_hessians_changed": 480,
+    "fp64_n_hessians_changed": 0,
+    "fp64_cast_n_hessians_changed": 0,
+    "fp32_frac_elements_changed": 0.7184504339486282,
+    "fp64_frac_elements_changed": 0.0,
+    "fp64_cast_frac_elements_changed": 0.0,
+    "fp32_rel_fro_median": 8.674693382111493e-08,
+    "fp64_rel_fro_median": 0.0,
+    "fp32_rel_fro_max": 1.2387263198752797e-07,
+    "fp64_rel_fro_max": 0.0,
+    "ratio_median_fp64_over_fp32": 0.0
+   },
+   "O20261122": {
+    "n_hessians": 480,
+    "fp32_n_hessians_changed": 480,
+    "fp64_n_hessians_changed": 0,
+    "fp64_cast_n_hessians_changed": 0,
+    "fp32_frac_elements_changed": 0.712566781149408,
+    "fp64_frac_elements_changed": 0.0,
+    "fp64_cast_frac_elements_changed": 0.0,
+    "fp32_rel_fro_median": 8.432830666023167e-08,
+    "fp64_rel_fro_median": 0.0,
+    "fp32_rel_fro_max": 1.3063173286634144e-07,
+    "fp64_rel_fro_max": 0.0,
+    "ratio_median_fp64_over_fp32": 0.0
+   },
+   "fp32_path_equals_preflight_all": true,
+   "fp32_accumulation_error_vs_fp64_rel_fro_median": 6.523377307721978e-08
+  },
+  "design": "the same per-sequence contribution outer = Xf.T @ Xf (FP32 GEMM, as in BlockHessianAccumulator.add) accumulated per original block in FP32 (H32) and FP64 (H64), blocks summed in the same precision; only accumulation precision differs. Diagnostic only, never used for GPTQ.",
+  "seconds": 366.0518584251404
+ },
+ "FC": {
+  "summary": {
+   "O20261121": {
+    "n_hessians": 480,
+    "fp32_n_hessians_changed": 480,
+    "fp64_n_hessians_changed": 0,
+    "fp64_cast_n_hessians_changed": 0,
+    "fp32_frac_elements_changed": 0.7357118500322499,
+    "fp64_frac_elements_changed": 0.0,
+    "fp64_cast_frac_elements_changed": 0.0,
+    "fp32_rel_fro_median": 9.279662823726654e-08,
+    "fp64_rel_fro_median": 0.0,
+    "fp32_rel_fro_max": 2.5152559081589477e-07,
+    "fp64_rel_fro_max": 0.0,
+    "ratio_median_fp64_over_fp32": 0.0
+   },
+   "O20261122": {
+    "n_hessians": 480,
+    "fp32_n_hessians_changed": 480,
+    "fp64_n_hessians_changed": 0,
+    "fp64_cast_n_hessians_changed": 0,
+    "fp32_frac_elements_changed": 0.7306850416485342,
+    "fp64_frac_elements_changed": 0.0,
+    "fp64_cast_frac_elements_changed": 0.0,
+    "fp32_rel_fro_median": 9.054348218941988e-08,
+    "fp64_rel_fro_median": 0.0,
+    "fp32_rel_fro_max": 1.7602455060970675e-07,
+    "fp64_rel_fro_max": 0.0,
+    "ratio_median_fp64_over_fp32": 0.0
+   },
+   "fp32_path_equals_preflight_all": true,
+   "fp32_accumulation_error_vs_fp64_rel_fro_median": 7.0316302135706e-08
+  },
+  "design": "the same per-sequence contribution outer = Xf.T @ Xf (FP32 GEMM, as in BlockHessianAccumulator.add) accumulated per original block in FP32 (H32) and FP64 (H64), blocks summed in the same precision; only accumulation precision differs. Diagnostic only, never used for GPTQ.",
+  "seconds": 360.39836263656616
+ }
+}

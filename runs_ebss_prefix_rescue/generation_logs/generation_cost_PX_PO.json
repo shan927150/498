@@ -1,0 +1,75 @@
+{
+ "condition": "PX_PO",
+ "wall_s": 1117.4786841869354,
+ "gpu_seconds": 1117.4786841869354,
+ "timing": {
+  "total_s": 1117.4742748737335,
+  "stats_s": 0.11021709442138672,
+  "score_s": 0.060822248458862305,
+  "select_s": 1.5276570320129395,
+  "reorder_gather_s": 0.47649693489074707,
+  "prefill_wall_s": 3.2446658611297607,
+  "forward_s": 1102.10058259964,
+  "expert_transfer_s": 891.1232855319977,
+  "routing_hook_s": 0.7644305229187012,
+  "prefill_s": 3.2200875282287598,
+  "prefill_expert_transfer_s": 1.9029719829559326
+ },
+ "forward_calls": 449,
+ "rows_forwarded": 28688,
+ "bytes_host_to_device": 11186460426240,
+ "h2d_gb_per_s": 12.553213015370506,
+ "accounting": {
+  "prefix_tokens": 1024,
+  "emitted_continuation_tokens": 7168,
+  "final_calibration_tokens": 8192,
+  "prefill_token_positions": 1024,
+  "decode_forward_rows": 28672,
+  "scored_candidates": 4340715104,
+  "forward_calls": 449
+ },
+ "prefill_expert_transfer_s": 1.9029719829559326,
+ "breakdown_s": {
+  "prefix_prefill": 3.2200875282287598,
+  "decode_model_forward_compute": 212.11583852767944,
+  "decode_expert_weight_transfer": 889.2203135490417,
+  "routing_capture_hook": 0.7644305229187012,
+  "expert_statistics_update": 0.11021709442138672,
+  "beam_scoring": 0.060822248458862305,
+  "beam_pruning_selection": 1.5276570320129395,
+  "beam_state_gather_and_kv_reorder": 0.47649693489074707,
+  "other": 9.978411436080933
+ },
+ "breakdown_frac": {
+  "prefix_prefill": 0.0028815764269764566,
+  "decode_model_forward_compute": 0.18981720053613493,
+  "decode_expert_weight_transfer": 0.7957411938181013,
+  "routing_capture_hook": 0.0006840699066697318,
+  "expert_statistics_update": 9.863054291235514e-05,
+  "beam_scoring": 5.442832092553968e-05,
+  "beam_pruning_selection": 0.0013670623712438961,
+  "beam_state_gather_and_kv_reorder": 0.00042640528341879525,
+  "other": 0.008929432793617034
+ },
+ "continuation_tokens_per_s": 6.414440025954816,
+ "final_tokens_per_s": 7.330788601091219,
+ "peak_gpu_gb": 11.611035136,
+ "kv_cache_peak_gb": 6.442450944,
+ "peak_cpu_gb": 40.200536,
+ "validation": {
+  "shape_ok": true,
+  "ids_in_vocab": true,
+  "distinct_sequences": true,
+  "padding_tokens": 0,
+  "valid": true
+ },
+ "gpu_seconds_note": "one 20 GB MIG slice used exclusively; GPU-seconds = wall",
+ "load": {
+  "model_load_s": 8.767364740371704,
+  "pristine_all_parameters": true,
+  "digest_s": 20.84763741493225,
+  "place_s": 73.38585019111633,
+  "gpu_resident_gb": 4.75655424,
+  "expert_layer_bytes": 1038090240
+ }
+}

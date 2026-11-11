@@ -1,0 +1,39 @@
+{
+ "condition": "C4_NATURAL = C4R_s0",
+ "definition": "64 C4 prefix tokens + the original 448 C4 tokens of the same windows = the B=16 C4 Random seed-0 calibration set",
+ "parent_rows": [
+  1820,
+  820,
+  1633,
+  1897,
+  1731,
+  788,
+  1553,
+  1826,
+  862,
+  82,
+  530,
+  1981,
+  1048,
+  996,
+  830,
+  1883
+ ],
+ "reuse": {
+  "gptq_result": "runs_ebss_generation_pilot/results/C4R_s0.json",
+  "reason": "identical windows, CANONICAL-B1 extraction and OV.quant_config; re-verified by the bitwise cache-compatibility check of stage capture"
+ },
+ "historical_references": {
+  "RS_PO": "runs_ebss_generation_pilot/results/PO.json",
+  "RS_EBSS": "runs_ebss_balance_fidelity/results/ALG1_RATE.json",
+  "C4R_s1": "runs_ebss_generation_pilot/results/C4R_s1.json",
+  "C4R_s2": "runs_ebss_generation_pilot/results/C4R_s2.json"
+ },
+ "sha256": {
+  "C4R_s0": "fda1efdeb67995387b514d148f29349a10484e5ef6b180701f82a59b1fabcfc5",
+  "C4R_s1": "09c2f0d0833f27a392f49c09a1e3a2a5b17f592aaee2d83555bfe64fe31b4c99",
+  "C4R_s2": "8bb1b9fbe3cb926f01d7d23ea2e6f8522b7aeaf45a73484e2d693ef87d6d8e0f",
+  "RS_PO": "c66b91072ec0e7cbd6587c3b3f3290998e3143574c935bc48c3265a1fc98b75a",
+  "RS_EBSS": "1cea6ed606e29584177f9f5ec6d21afbb1968faa06034d07925d0e7219e2f0fc"
+ }
+}

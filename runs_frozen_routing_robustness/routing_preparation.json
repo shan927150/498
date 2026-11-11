@@ -1,0 +1,803 @@
+{
+ "R_O": {
+  "1": {
+   "routing_sha256": "b9d0dd9f30dd10854a4493fef8bb68618f4e04b3994364639ed3b18c8b5d9d55",
+   "matches_manifest": true,
+   "shapes": [
+    [
+     512,
+     4
+    ]
+   ],
+   "experts_in_range": true,
+   "distinct_topk": true
+  },
+  "8": {
+   "routing_sha256": "bb03ecb5e3876494f9941b1d8034e5b20bb949ebed4afd8c1df9cbb4bf74272c",
+   "matches_manifest": true,
+   "shapes": [
+    [
+     512,
+     4
+    ]
+   ],
+   "experts_in_range": true,
+   "distinct_topk": true
+  },
+  "16": {
+   "routing_sha256": "02f61deb3d423dd2820a55edb844f2d991813782373a851e4d46623173fb588c",
+   "matches_manifest": true,
+   "shapes": [
+    [
+     512,
+     4
+    ]
+   ],
+   "experts_in_range": true,
+   "distinct_topk": true
+  },
+  "23": {
+   "routing_sha256": "645416279f158f3128a7d73826ced91c35677619f727cc6642236dfa54708a11",
+   "matches_manifest": true,
+   "shapes": [
+    [
+     512,
+     4
+    ]
+   ],
+   "experts_in_range": true,
+   "distinct_topk": true
+  }
+ },
+ "caches": {
+  "G20261111": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "8": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "16": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "23": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   }
+  },
+  "G20261112": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "8": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "16": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "23": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   }
+  },
+  "G20261113": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "8": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "16": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "23": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   }
+  },
+  "G20261114": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "8": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "16": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "23": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   }
+  },
+  "G20261115": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "8": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "16": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   },
+   "23": {
+    "shape": [
+     217,
+     512,
+     2048
+    ],
+    "rows_equal_union": true,
+    "tokens_per_row_equal_routing": true
+   }
+  }
+ },
+ "expected_ao_token_counts": {
+  "FR": {
+   "1": [
+    4539,
+    4287,
+    4393,
+    4935,
+    4101,
+    4489,
+    3830,
+    4035,
+    4340,
+    4066,
+    4574,
+    4253,
+    4112,
+    4191,
+    4439,
+    4082,
+    4316,
+    4401,
+    4489,
+    4024,
+    4258,
+    4335,
+    4804,
+    4399,
+    4508,
+    4326,
+    4174,
+    4183,
+    5075,
+    4097,
+    4719,
+    4344,
+    4225,
+    4537,
+    4525,
+    4688,
+    4702,
+    3800,
+    4463,
+    4377,
+    4651,
+    4030,
+    4226,
+    4367,
+    4642,
+    4369,
+    4245,
+    5002,
+    3971,
+    4467,
+    4230,
+    3907,
+    4984,
+    4591,
+    4103,
+    4733,
+    4357,
+    4325,
+    4148,
+    4361
+   ],
+   "8": [
+    4659,
+    4270,
+    4905,
+    3594,
+    4009,
+    3850,
+    3999,
+    4218,
+    4146,
+    3969,
+    3859,
+    4757,
+    3995,
+    4535,
+    4178,
+    3653,
+    4162,
+    4510,
+    4845,
+    4363,
+    4711,
+    3347,
+    4468,
+    4629,
+    4560,
+    4508,
+    4393,
+    4377,
+    4479,
+    3876,
+    3968,
+    4350,
+    4423,
+    3982,
+    4305,
+    4350,
+    4681,
+    4409,
+    4538,
+    4604,
+    3882,
+    4572,
+    3634,
+    3759,
+    4950,
+    4764,
+    4131,
+    4575,
+    4806,
+    4791,
+    4808,
+    4605,
+    5093,
+    4541,
+    4578,
+    4917,
+    4559,
+    4040,
+    4848,
+    4857
+   ],
+   "16": [
+    4909,
+    3264,
+    4753,
+    4683,
+    4403,
+    3963,
+    3655,
+    4760,
+    4810,
+    5564,
+    4106,
+    4545,
+    4731,
+    4902,
+    3866,
+    3842,
+    4690,
+    4960,
+    4249,
+    4392,
+    4123,
+    4029,
+    3856,
+    4541,
+    4897,
+    4000,
+    4009,
+    4241,
+    4120,
+    4131,
+    5439,
+    3764,
+    3892,
+    4117,
+    4243,
+    4677,
+    4311,
+    4277,
+    4451,
+    5039,
+    4099,
+    4251,
+    5184,
+    3844,
+    4891,
+    4027,
+    4251,
+    4244,
+    4261,
+    3685,
+    5297,
+    4456,
+    3884,
+    5393,
+    4833,
+    3843,
+    4228,
+    4087,
+    4171,
+    4011
+   ],
+   "23": [
+    4570,
+    4180,
+    4300,
+    4115,
+    4949,
+    3703,
+    4227,
+    3928,
+    4400,
+    4280,
+    4284,
+    5304,
+    4196,
+    5650,
+    3995,
+    4290,
+    5361,
+    3963,
+    3991,
+    3978,
+    5003,
+    3870,
+    4885,
+    5210,
+    4265,
+    4702,
+    3027,
+    4649,
+    4155,
+    3928,
+    4013,
+    3834,
+    4297,
+    3858,
+    3904,
+    4299,
+    4633,
+    4048,
+    4133,
+    3336,
+    4137,
+    4012,
+    4151,
+    4016,
+    4690,
+    4967,
+    5942,
+    4530,
+    4365,
+    3930,
+    4152,
+    4071,
+    4872,
+    4353,
+    5507,
+    4344,
+    6430,
+    4111,
+    3668,
+    4183
+   ]
+  },
+  "FC": {
+   "1": [
+    4542,
+    4310,
+    4405,
+    5554,
+    4533,
+    4302,
+    4136,
+    4472,
+    4443,
+    4396,
+    4372,
+    4662,
+    4158,
+    4578,
+    4598,
+    4179,
+    4795,
+    4214,
+    4156,
+    4458,
+    4430,
+    4460,
+    4182,
+    4435,
+    4366,
+    3939,
+    4354,
+    4732,
+    4221,
+    3563,
+    4244,
+    3855,
+    4580,
+    4662,
+    4009,
+    4463,
+    4021,
+    3736,
+    4369,
+    4436,
+    4376,
+    4409,
+    4409,
+    4449,
+    4054,
+    4739,
+    4076,
+    4675,
+    4386,
+    4653,
+    4475,
+    4396,
+    4155,
+    4021,
+    4254,
+    4557,
+    4330,
+    4149,
+    4435,
+    4826
+   ],
+   "8": [
+    4064,
+    4269,
+    4904,
+    4660,
+    4744,
+    4440,
+    5304,
+    4003,
+    4406,
+    4756,
+    4175,
+    4466,
+    4228,
+    4659,
+    4177,
+    4255,
+    4572,
+    4274,
+    3960,
+    3915,
+    4638,
+    4183,
+    4546,
+    4379,
+    4303,
+    4203,
+    4072,
+    4054,
+    4425,
+    4113,
+    4704,
+    3968,
+    4262,
+    4869,
+    4801,
+    4553,
+    4302,
+    4722,
+    4035,
+    4143,
+    4825,
+    4175,
+    4890,
+    4528,
+    3812,
+    3978,
+    4445,
+    4281,
+    3942,
+    4006,
+    4256,
+    4600,
+    4161,
+    4612,
+    4217,
+    4572,
+    4206,
+    4477,
+    4220,
+    4435
+   ],
+   "16": [
+    4316,
+    4297,
+    4130,
+    3639,
+    4699,
+    4797,
+    4297,
+    4352,
+    3948,
+    4159,
+    4291,
+    4153,
+    4179,
+    4265,
+    4338,
+    3806,
+    4976,
+    4214,
+    4124,
+    4159,
+    4663,
+    4238,
+    4356,
+    4630,
+    4241,
+    5134,
+    4878,
+    4296,
+    4764,
+    4128,
+    4482,
+    4834,
+    4282,
+    4336,
+    3841,
+    3985,
+    4239,
+    3940,
+    4226,
+    3952,
+    4811,
+    4278,
+    4442,
+    4368,
+    4423,
+    4049,
+    4426,
+    4067,
+    4804,
+    5010,
+    4133,
+    4468,
+    4536,
+    4544,
+    4002,
+    4467,
+    4121,
+    4605,
+    4980,
+    5026
+   ],
+   "23": [
+    4574,
+    4579,
+    4003,
+    4580,
+    4165,
+    3961,
+    4550,
+    4179,
+    4603,
+    4358,
+    4912,
+    4188,
+    4517,
+    4386,
+    4394,
+    4310,
+    5080,
+    4584,
+    4430,
+    4308,
+    4058,
+    3995,
+    5087,
+    4307,
+    4083,
+    3692,
+    4239,
+    3710,
+    4249,
+    4342,
+    5202,
+    3926,
+    4385,
+    4842,
+    4034,
+    4378,
+    4009,
+    5216,
+    4383,
+    4525,
+    4709,
+    3855,
+    5083,
+    4184,
+    3791,
+    4016,
+    4477,
+    4721,
+    4513,
+    3769,
+    3979,
+    4536,
+    3736,
+    4395,
+    4161,
+    4337,
+    4786,
+    4505,
+    4912,
+    4356
+   ]
+  }
+ },
+ "G20261111_AO_counts_match": true,
+ "valid": true,
+ "note": "R_O is the factorial study's ORIGINAL routing table (not recomputed); the expected AO routed-token counts depend only on R_O and the chosen sequence ids, so they must be identical for every grouping",
+ "aa_hessians": {
+  "FR_G20261111": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FR_AA_G20261111.pt",
+   "file_sha256": "a27ae9eda404875781c05c52785b5bbae1786e7d4e05fc037ef97037bbdab4f4",
+   "seconds": 42.11477708816528,
+   "bitwise_equal_factorial_AA": "480/480"
+  },
+  "FC_G20261111": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FC_AA_G20261111.pt",
+   "file_sha256": "2246096190f4358eeebe4aaeaae7d28b12bacf96fbfdcf46d16641da190b9de5",
+   "seconds": 34.94199228286743,
+   "bitwise_equal_factorial_AA": "480/480"
+  },
+  "FR_G20261112": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FR_AA_G20261112.pt",
+   "file_sha256": "107d4a18b67eafae9d1bf0d347eab0c34b1ad9ed317d6951afd06ad441e933b7",
+   "seconds": 33.333805322647095
+  },
+  "FC_G20261112": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FC_AA_G20261112.pt",
+   "file_sha256": "510496bc7abac57d477945b48c5b939cd0dc8ee18f7118a859f70d68e68e45e4",
+   "seconds": 33.02180862426758
+  },
+  "FR_G20261113": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FR_AA_G20261113.pt",
+   "file_sha256": "8249abedd6077d2eccadbdb0610b2be72ebd28ff7009be110597b33dc2c249c6",
+   "seconds": 33.14621329307556
+  },
+  "FC_G20261113": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FC_AA_G20261113.pt",
+   "file_sha256": "9846175d44d833757be581c37a827a1ad9424603aeff8b43f44762c47019910e",
+   "seconds": 33.125715255737305
+  },
+  "FR_G20261114": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FR_AA_G20261114.pt",
+   "file_sha256": "adec8db3cbe88a294385a50c05e6f5236e27f9309fde8e484cdb904f683324c0",
+   "seconds": 33.13825869560242
+  },
+  "FC_G20261114": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FC_AA_G20261114.pt",
+   "file_sha256": "fbc5a3d148b4e29a4d8ac91c571bfd2d890fc6fb53783fd73baa3f14bd1d9c19",
+   "seconds": 33.55049276351929
+  },
+  "FR_G20261115": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FR_AA_G20261115.pt",
+   "file_sha256": "ecf1288e56bb0f2eea1e10f4ea384d6ab7477b5e1120b9f2b9fd01a6d8e47acf",
+   "seconds": 33.34799146652222
+  },
+  "FC_G20261115": {
+   "file": "/home/kaixuan6/moe_cache_frozen_routing/robustness/hessians/FC_AA_G20261115.pt",
+   "file_sha256": "7ff6cc796e8a779e18cdf3ad0707484c5cf257f025bd705183dbb8e07d51239b",
+   "seconds": 33.129343032836914
+  }
+ }
+}

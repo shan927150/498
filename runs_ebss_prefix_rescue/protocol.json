@@ -1,0 +1,113 @@
+{
+ "title": "C4-prefix diversity rescue (B=16, P=64, G=448)",
+ "frozen_at": "2026-11-10 21:06:38 UTC",
+ "conditions": {
+  "C4_NATURAL": "C4R_s0 windows (existing)",
+  "PX_PO": "64 C4 + 448 PO",
+  "PX_EBSS": "64 C4 + 448 ALG1_RATE EBSS"
+ },
+ "historical": {
+  "RS_PO": "pilot PO 16x512 (1 random token + 511)",
+  "RS_EBSS": "fidelity ALG1_RATE 16x512",
+  "C4R": [
+   "s0",
+   "s1",
+   "s2"
+  ]
+ },
+ "comparison_status": {
+  "PX_PO_vs_PX_EBSS": "matched intervention (only the balance term differs)",
+  "PX_vs_RS": "descriptive (initial content and number of generated tokens differ)"
+ },
+ "smoke": {
+  "n": 4,
+  "prefix": 64,
+  "generated": 32,
+  "kv_check_steps": [
+   64,
+   65,
+   72,
+   95
+  ],
+  "replay_tolerance": {
+   "mean_abs_dlogp": 0.05,
+   "pearson_r": 0.99
+  },
+  "note": "batched-KV BF16 vs batch-1 no-cache BF16 replay differ by kernel-shape rounding; the pilot used the same tolerance"
+ },
+ "regions": {
+  "prefix": [
+   0,
+   64
+  ],
+  "continuation": [
+   64,
+   512
+  ],
+  "full": [
+   0,
+   512
+  ],
+  "historical_slicing": "random-start sequences are sliced identically: continuation = [64:512] (448 generated tokens at the same absolute positions; the random first token and generated tokens 1..63 are excluded), full = [0:512]"
+ },
+ "repetition": {
+  "loop_onset": "first continuation offset whose next 16 tokens copy an earlier 16-gram of the sequence (prefix included)",
+  "coverage": "fraction of continuation positions inside an 8-gram occurring >= 2x in the sequence",
+  "long_span": "continuation longest repeated n-gram > 64",
+  "long_single_token_loop": "continuation identical-token run >= 16",
+  "halves": {
+   "first_half": [
+    64,
+    288
+   ],
+   "second_half": [
+    288,
+    512
+   ]
+  }
+ },
+ "routing": {
+  "primary": "CANONICAL-B1 replay of every 512-token sequence; generation-time routing reported separately",
+  "exposure_decomposition": "per-region counts from the same B1 replay, normalised to relative load count/(tokens*k/E)"
+ },
+ "gptq": {
+  "pipeline": "OV.quant_config unchanged",
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true,
+  "extraction": "CANONICAL-B1",
+  "K": 4
+ },
+ "decision": {
+  "primary": {
+   "BEATS_C4": "PX_EBSS mean reconstruction < each of C4R_s0, s1, s2",
+   "PARTIAL": "not BEATS_C4, and PX_PO < RS_PO or PX_EBSS < RS_EBSS (strict)",
+   "NO_GAIN": "neither prefix method below its random-start counterpart",
+   "RUN_BLOCKED": "correctness/data/memory/execution failure",
+   "reported": "relative change and a 'material' flag (<= -0.5 %, the margin of the fidelity study) per method; gap recovery G_m; PPL separately"
+  },
+  "diversity": {
+   "threshold_distinct2": 0.05,
+   "threshold_repetition_pp": 10.0,
+   "rule": "see moe_calib/ebss_prefix.diversity_label"
+  }
+ },
+ "constraints": [
+  "no checkpoint/w/tau/normalisation change",
+  "no repetition penalty or sampling",
+  "single draw",
+  "no prefix-length tuning",
+  "no B=128",
+  "no full-depth quantization",
+  "GPTQ unchanged",
+  "no new numerical-sensitivity study",
+  "no offloading optimisation"
+ ]
+}

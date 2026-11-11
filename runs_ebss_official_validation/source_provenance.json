@@ -1,0 +1,44 @@
+{
+ "repository": "https://github.com/chenzx921020/MoEQuant",
+ "commit": "d77ba1b7f31f4131a90798f5a6df5bf5d3b414b0",
+ "clone_head": "d77ba1b7f31f4131a90798f5a6df5bf5d3b414b0",
+ "clone_head_equals_commit": true,
+ "path": "code/EBSS_data/EBSS_qwen.jsonl",
+ "download_url": "https://raw.githubusercontent.com/chenzx921020/MoEQuant/d77ba1b7f31f4131a90798f5a6df5bf5d3b414b0/code/EBSS_data/EBSS_qwen.jsonl",
+ "local_copy": "runs_ebss_official_validation/official_data/EBSS_qwen.jsonl",
+ "bytes": 2480736,
+ "sha256": "691c7a50618afbec7217168349835fe005eae869a7c5d98321b375c288253de9",
+ "clone_file_sha256": "691c7a50618afbec7217168349835fe005eae869a7c5d98321b375c288253de9",
+ "download_equals_clone": true,
+ "git_blob_sha1_in_commit": "22d3c94a81fe6f987d535575321343eb87f00af7",
+ "git_blob_sha1_of_download": "22d3c94a81fe6f987d535575321343eb87f00af7",
+ "git_blob_match": true,
+ "file_history": [
+  {
+   "commit": "c9784c2b302d7100f98935caa542dc93d9c039e4",
+   "date": "2025-04-07 18:29:43 +0800",
+   "author": "zhixuan.chen",
+   "subject": "add code init version"
+  }
+ ],
+ "download_s": 1.2636184692382812e-05,
+ "official_consumption": {
+  "loader": "code/fake_quant/main.py (--EBSS_calib --calib_path): reads the FIRST args.nsamples (default 128) JSONL lines, DataLoader(batch_size=1, shuffle=True)",
+  "tokenization": "code/fake_quant/gptq_utils.py gptq_fwrd: the branch that handles text records (`if args.llmqat_calib`) tokenizes with truncation at model.seqlen = 2048, padding=True, then F.pad(..., value 0) to 2048 tokens and calls model(input_ids) with no attention mask; `--llmqat_calib` is not defined in the released argument parser (utils.py), so the released EBSS path is not runnable as published",
+  "seqlen": 2048,
+  "nsamples": 128,
+  "readme_example": "uses --calib_path ./gen_data/EBSS_mixtral_8x7b.json (not the released EBSS_data file)",
+  "supported_qwen_paths": [
+   "/ssd/model/qwen15_moe_2.7b_chat",
+   "/ssd/model/qwen1.5_moe_a2.7b"
+  ],
+  "qwen_model_code_dir": "code/qwen_moe_14b_chat/ (configuration_qwen2_moe.py, modeling_qwen2_moe.py)"
+ },
+ "authors_descriptions": {
+  "rebuttal_tables": "Tables_for_R2/R3/R4*.md: 'MoEQuant generates 128 sequences of 512 length' (time-cost tables); Table R4 'snapshot of generated samples by Qwen-MoE-14B' begins '! ### GMAT Club Daily Prep ...' (record 0 of EBSS_qwen.jsonl begins '! A A. 1 B. 2 C. 3 D. 4 ... ### GMAT Club Daily Prep ...'); EBSS generation time 'Qwen-MoE-14B 18 mins' (A800, Table R6)",
+  "paper": "ICML 2025 (PMLR 267:8245-8260; text read from arXiv 2505.03804 HTML, the PMLR PDF could not be parsed): Sec. 4.2 EBSS = beam-like search keeping w branches scored by cumulative log-probability and the per-layer SD of expert usage (tau = 1.2, w = 4); 'Qwen-MoE-14B' cites huggingface.co/Qwen/Qwen1.5-MoE-A2.7B; the number and length of EBSS sequences are not stated; reported Qwen results combine EBSS with AGQ and QuaRot-style Hadamard rotation; no EBSS generation time in the paper"
+ },
+ "generating_checkpoint": "UNDOCUMENTED for this artifact: no metadata in the file; the paper evaluates Qwen1.5-MoE-A2.7B (base) and also a Chat variant elsewhere; the repo ships a 'qwen_moe_14b_chat' model directory and lists both base and chat local paths",
+ "generation_procedure": "consistent with one self-generated continuation per start token: records 0-93 begin exactly with the text of vocabulary token id i (single-byte tokens); later records begin with a lone byte that decodes to U+FFFD or merges with the next bytes, so the seed token cannot be verified from text for them (official_dataset_audit.json); length up to ~2048 tokens; search / sampling settings for this file are not documented",
+ "raw_file_unchanged": "the local copy is the byte-exact official blob; it is never edited"
+}

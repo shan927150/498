@@ -1,0 +1,108 @@
+{
+ "experiment": "Official MoEQuant EBSS calibration-quality validation (cross-checkpoint transfer, provenance undocumented)",
+ "central_question": "Does the released EBSS_qwen.jsonl yield lower held-out expert reconstruction error and partial-model PPL than C4 Full Random and Typical Random under the identical GPTQ pipeline?",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B",
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "B": 128,
+ "seqlen": 512,
+ "n_experts": 240,
+ "n_projections": 720,
+ "projections": [
+  "gate_proj",
+  "up_proj",
+  "down_proj"
+ ],
+ "calibration": "non-sequential; Hessians from CANONICAL-B1 layer inputs via the unchanged E3 Profiler (K = 4)",
+ "configs": [
+  "FR_s0",
+  "FR_s1",
+  "FR_s2",
+  "TR_s0",
+  "TR_s1",
+  "TR_s2",
+  "FC_s0",
+  "FC_s1",
+  "FC_s2",
+  "EBSS"
+ ],
+ "quantization_order": [
+  "FR_s0",
+  "EBSS",
+  "TR_s0",
+  "FC_s0",
+  "FR_s1",
+  "TR_s1",
+  "FC_s1",
+  "FR_s2",
+  "TR_s2",
+  "FC_s2"
+ ],
+ "repeat_config": "FR_s0",
+ "reconstruction": "E3 per-expert held-out relative reconstruction on ~/moe_cache rows 2128-2255 (eval_cache_dir); config score = mean over the 240 experts (unchanged aggregation)",
+ "exposure_deciles": "deciles of each expert's natural routing frequency p (runs_low_budget/routing_profile_v2.npz, C4 pool), fixed and method-independent",
+ "exposure_thresholds": {
+  "absolute": [
+   32,
+   128,
+   512
+  ],
+  "relative_to_uniform": [
+   0.1,
+   0.25,
+   0.5
+  ]
+ },
+ "typicality": "existing d(s) (moe_calib.typicality) against the C4-pool reference of routing_profile_v2; atypical = d(s) > d*, d* = largest d in the frozen typical half (pool_typical_half.json)",
+ "ppl": {
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "n_windows": 128,
+  "targets": 65408,
+  "bf16_reference": 9.23709
+ },
+ "decision_rule": {
+  "precedence": "1 data availability -> 2 numerical / quantization correctness -> 3 source-checkpoint provenance -> 4 reconstruction and PPL criteria",
+  "DATA-BLOCKED": "the official file cannot be acquired / parsed, or the frozen extraction policy yields fewer than 128 valid 512-token windows",
+  "RUN-BLOCKED": "a primary configuration (FR/TR/FC s0-2, EBSS) is missing or invalid (install check, untouched parameters, non-finite or unchanged projections, repeat-evaluation PPL difference != 0, RTN fallback in a C4 baseline), the quantization-pipeline regression (FR s0 on the historical cache) does not reproduce the partial-PPL weights/PPL/reconstruction exactly, the extraction implementation regression or the batch-1 repeatability control fails, or the BF16 PPL differs from 9.237090",
+  "OFFICIAL-EBSS-TRANSFER-LIMITED": "provenance class != MATCHED-DOCUMENTED (generating checkpoint differs or cannot be established). Takes precedence over the quality classes; the quality class that would otherwise apply is still reported",
+  "quality criteria": {
+   "R (reconstruction gain)": "EBSS mean expert reconstruction < FR_s and < TR_s for s = 0, 1, 2 AND mean_s RelativePenalty(EBSS, FR_s) <= -0.5 % AND mean_s RelativePenalty(EBSS, TR_s) <= -0.5 %",
+   "P (PPL gain)": "EBSS PPL < FR_s and < TR_s PPL for s = 0, 1, 2 (matched protocol)",
+   "OFFICIAL-EBSS-QUALITY-GAIN": "R and P",
+   "OFFICIAL-EBSS-RECONSTRUCTION-GAIN-ONLY": "R and not P",
+   "OFFICIAL-EBSS-PPL-GAIN-ONLY": "P and not R",
+   "OFFICIAL-EBSS-NO-CONSISTENT-GAIN": "neither"
+  },
+  "notes": "FC is a negative control and is not part of R or P. One EBSS set: no EBSS SD is computed; experts are not treated as independent replications."
+ },
+ "tau_relative_gain_pct": 0.5,
+ "provenance_classification": "UNDOCUMENTED",
+ "extraction_policy_ref": "execution_policy.json",
+ "ebss_manifest_sha256": "41293e8c84d69314c7b6d755fe5192055d3f60b57182c9264bb1b3d0ebeb7c7a",
+ "baseline_manifest_sha256": "97d4dada1888c7aeefd97453d8f92ba6358a5a458ceeb525fd5a2836beb20aaf",
+ "execution_policy_sha256": "39b83abbc589e506b4d2f11cc4c68b75c1386d65b9ae6878423af043a61d28d0",
+ "code_sha256": {
+  "moe_calib/ebss_official_data.py": "43440414b14125308eec963c2d14871bf313e52dc3749315480e373cedd481ea",
+  "diagnostics/official_ebss_validation.py": "68905a2e2ee864554c4fdc6825b779d15d0f7b441dda07c1aca6518e43c9ac73",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/profiler.py": "5f56e51131a3fb992eef9df254e164a2c282e32b19594aac3326f02e7fcbf351",
+  "moe_calib/hessian.py": "33c5d11bf2c9bd83bb9bf2129c0b36fe0665f9b78a3187bb74f39b169610fd97",
+  "moe_calib/partial_model_quant.py": "877b126274571fc6d2a1c28f34ccff612b6de5226a186f2030a8865d27d336f2",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "f65d1d464a2c6437cb9e7d1fbc4f243b7a4543dd4680c52edb9c2bb6756ee449",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684"
+ },
+ "hard_constraints": "no GPTQ / solver / bit / group / damping / checkpoint change; no AGQ, rotation or new allocator; no EBSS regeneration or C4 mixing; no tuning on held-out results; one EBSS set; no numerical-sensitivity sweep",
+ "frozen_before_any_new_quality_result": true,
+ "created": "2026-11-09 21:46:57"
+}

@@ -1,0 +1,15 @@
+{
+ "paper": "arXiv 2505.03804 (MoEQuant), Sec. 4.2 / Alg. 1",
+ "status": "modified EBSS (natural-text prefix initialisation); not paper-faithful; ALG1_RATE is one of four paper-grounded normalisations (update_ebss_balance_fidelity.md), chosen for its near-C4 expert balance, not known to be the authors' implementation and not the best-reconstruction variant",
+ "generator": {
+  "path": "moe_calib/ebss_generator.py",
+  "pre_study_copy": "runs_ebss_prefix_rescue/logs/ebss_generator_pre_prefix.py",
+  "pre_study_sha256": "dc9cc32ab76582501ae3278b68a805d12cb8175ad07941b0a8dc185852f3965e"
+ },
+ "prior_studies": [
+  "update_ebss_generation_pilot.md",
+  "update_ebss_score_audit.md",
+  "update_ebss_balance_fidelity.md",
+  "update_ebss_official_validation.md"
+ ]
+}

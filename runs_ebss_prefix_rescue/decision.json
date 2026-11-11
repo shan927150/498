@@ -1,0 +1,66 @@
+{
+ "primary": {
+  "label": "PREFIX-RESCUE-PARTIAL",
+  "ebss_below_all_c4": false,
+  "po_below_all_c4": false,
+  "improved_vs_random_start": {
+   "PO": true,
+   "EBSS": true
+  },
+  "rel_vs_random_start_pct": {
+   "PO": -6.311581197228378,
+   "EBSS": -6.7423897604883205
+  },
+  "material_vs_random_start": {
+   "PO": true,
+   "EBSS": true
+  }
+ },
+ "diversity": {
+  "label": "NO-DIVERSITY-IMPROVEMENT",
+  "mixed": false,
+  "per_method": {
+   "PO": {
+    "d_cont_distinct2": -0.1570190156599552,
+    "d_cont_repetition": 0.0817522321428572,
+    "d_full_distinct2": -0.10273972602739723,
+    "cont_distinct2_pass": false,
+    "cont_repetition_pass": false,
+    "continuation_improved": false,
+    "full_improved": false
+   },
+   "EBSS": {
+    "d_cont_distinct2": -0.1438758389261745,
+    "d_cont_repetition": 0.0938895089285714,
+    "d_full_distinct2": -0.07240704500978468,
+    "cont_distinct2_pass": false,
+    "cont_repetition_pass": false,
+    "continuation_improved": false,
+    "full_improved": false
+   }
+  },
+  "rule": {
+   "CONTINUATION_DIVERSITY_IMPROVED": "both PO and EBSS: continuation distinct-2 >= +0.05 AND continuation repetition rate <= -0.1 vs the same [64:512] slice of their random-start sets",
+   "PREFIX_CONTENT_ONLY": "not the above, but full-sequence distinct-2 >= +0.05 for some method",
+   "NO_DIVERSITY_IMPROVEMENT": "neither",
+   "mixed": "some but not all continuation criteria met"
+  }
+ },
+ "valid_run": true,
+ "deltas": {
+  "delta_PO": -0.00038517565252243514,
+  "delta_EBSS": -0.0004117700913000592,
+  "delta_balance_given_prefix": -2.2092067843982634e-05,
+  "gap_recovery": {
+   "PO": 0.5375023825914039,
+   "EBSS": 0.5710264902815322
+  },
+  "vs_c4_mean_pct": {
+   "RS_PO": 13.30472148271642,
+   "RS_EBSS": 13.388314235342813,
+   "PX_PO": 6.153401986041307,
+   "PX_EBSS": 5.743232146748722
+  }
+ },
+ "ppl_note": "PPL secondary; differences at the accumulation-order noise scale are not interpreted"
+}

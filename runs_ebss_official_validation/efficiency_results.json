@@ -1,0 +1,168 @@
+{
+ "definitions": {
+  "tokenization_s": "EBSS: measured tokenization time of the 600 records x (records scanned / 600); C4: not re-measured (pre-tokenized ids from the historical cache build) -> 0 in T_measured",
+  "activation_s": "sum over the config's 128 rows of the measured per-row batch-1 compute time through layers 0..22 (+ layer 23 for the NLL diagnostic) + 128/N of the layer-transfer overhead",
+  "hessian_s": "E3 Profiler time on the calibration rows (quantize_and_score t_h)",
+  "gptq_s": "E3 quantization loop time (GPTQ solves + per-expert held-out scoring + write-back; the scoring cannot be separated without changing the frozen code)",
+  "T_measured": "tokenization + activation + Hessian + GPTQ, each once",
+  "excluded": [
+   "EBSS sample generation (unknown; pre-generated artifact)",
+   "C4 download / selection cost (historical)",
+   "model loading",
+   "PPL evaluation (reported separately)"
+  ]
+ },
+ "capture": {
+  "seconds_total": 491.96670150756836,
+  "layer_transfer_s": 4.87543511390686,
+  "n_rows": 874,
+  "peak_gpu_gb": 2.45074944,
+  "peak_cpu_gb": 49.708704,
+  "cache_bytes": 7331649402
+ },
+ "dataset": {
+  "download_s": 1.2636184692382812e-05,
+  "tokenization_all_records_s": 0.6953902244567871
+ },
+ "ebss_generation_cost": {
+  "measured": null,
+  "status": "UNKNOWN: pre-generated artifact; the paper gives no time; the authors' rebuttal table R6 states 18 min for Qwen-MoE-14B on one A800 (for 128 x 512 sequences, settings not given) - external claim, not verified here"
+ },
+ "configs": {
+  "FR_s0": {
+   "tokenization_s": 0.0,
+   "activation_s": 62.510629312942996,
+   "hessian_s": 29.178961753845215,
+   "gptq_s": 258.99179315567017,
+   "T_measured_s": 350.6813842224584,
+   "ppl_eval_s": 40.5653715133667,
+   "quantize_total_s": 350.5218553543091,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.060312,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "FR_s1": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.09310473675586,
+   "hessian_s": 28.75242304801941,
+   "gptq_s": 257.73248171806335,
+   "T_measured_s": 347.57800950283865,
+   "ppl_eval_s": 43.88616609573364,
+   "quantize_total_s": 349.10831451416016,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.183056,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "FR_s2": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.16617573971607,
+   "hessian_s": 28.893189668655396,
+   "gptq_s": 265.5238342285156,
+   "T_measured_s": 355.5831996368871,
+   "ppl_eval_s": 42.68073916435242,
+   "quantize_total_s": 364.01220202445984,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.466196,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "TR_s0": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.17996944660999,
+   "hessian_s": 29.32285714149475,
+   "gptq_s": 270.08683347702026,
+   "T_measured_s": 360.58966006512503,
+   "ppl_eval_s": 44.74309277534485,
+   "quantize_total_s": 361.9267704486847,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.447584,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "TR_s1": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.117868559311404,
+   "hessian_s": 29.180116415023804,
+   "gptq_s": 269.6924800872803,
+   "T_measured_s": 359.9904650616155,
+   "ppl_eval_s": 42.0137357711792,
+   "quantize_total_s": 362.64671993255615,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.072544,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "TR_s2": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.05253781552173,
+   "hessian_s": 28.800493478775024,
+   "gptq_s": 271.0064368247986,
+   "T_measured_s": 360.85946811909537,
+   "ppl_eval_s": 40.42826318740845,
+   "quantize_total_s": 362.7981550693512,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.54318,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "FC_s0": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.258296625565066,
+   "hessian_s": 28.67904806137085,
+   "gptq_s": 269.6144483089447,
+   "T_measured_s": 359.55179299588065,
+   "ppl_eval_s": 43.27812147140503,
+   "quantize_total_s": 358.23372626304626,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.40128,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "FC_s1": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.12838114971973,
+   "hessian_s": 29.60966920852661,
+   "gptq_s": 263.45718932151794,
+   "T_measured_s": 354.1952396797643,
+   "ppl_eval_s": 40.18592047691345,
+   "quantize_total_s": 356.8461880683899,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.414272,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "FC_s2": {
+   "tokenization_s": 0.0,
+   "activation_s": 61.1947785782323,
+   "hessian_s": 28.675482034683228,
+   "gptq_s": 254.9917984008789,
+   "T_measured_s": 344.86205901379446,
+   "ppl_eval_s": 40.5506854057312,
+   "quantize_total_s": 344.4571967124939,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.27034,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  },
+  "EBSS": {
+   "tokenization_s": 0.3082896661758423,
+   "activation_s": 59.31507457966663,
+   "hessian_s": 27.178563356399536,
+   "gptq_s": 251.41571593284607,
+   "T_measured_s": 338.2176435350881,
+   "ppl_eval_s": 42.93318748474121,
+   "quantize_total_s": 338.7418134212494,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.687512,
+   "calibration_tokens": 65536,
+   "weights_bytes": 4152536576
+  }
+ },
+ "storage": {
+  "cache_gb": 7.331649402,
+  "weights_gb": 41.52536576,
+  "official_data_mb": 2.480736
+ }
+}

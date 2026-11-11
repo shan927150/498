@@ -1,0 +1,82 @@
+{
+ "FR_AO_G20261111": {
+  "ppl": 9.265860908067534,
+  "recon": 0.0046090978061805446,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "5c2307e3bd42cee27c5fd67956e935452e4a36ce7eb969402d4d069cb401e49e",
+  "result": "runs_frozen_routing/results/FR_AO.json"
+ },
+ "FR_AO_G20261112": {
+  "ppl": 9.27091581858232,
+  "recon": 0.004609392905757611,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "01f93cefdf8b9ccc9ca8e173b785cf203c7cd8db73182884ddc4832f34150e43",
+  "result": "runs_frozen_routing_robustness/results/FR_AO_G20261112.json"
+ },
+ "FR_AO_G20261113": {
+  "ppl": 9.276042886122434,
+  "recon": 0.004609455618209842,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "b5fb9b06e2c8b7fc5d04ae0cd52ccaed57dcf82ec2a290527d4e9185f43ebf9b",
+  "result": "runs_frozen_routing_robustness/results/FR_AO_G20261113.json"
+ },
+ "FR_AO_G20261114": {
+  "ppl": 9.27327903307253,
+  "recon": 0.004609346548348779,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "74b781a862e232ffd6fc3b66e8d169052775d8774599d1728ef895c94aa90aec",
+  "result": "runs_frozen_routing_robustness/results/FR_AO_G20261114.json"
+ },
+ "FR_AO_G20261115": {
+  "ppl": 9.268226346100228,
+  "recon": 0.0046093000146378345,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "8fe64eaf5e9841ad2fabf9e7453511c88382d59dfc0d466955968f81e8a516bc",
+  "result": "runs_frozen_routing_robustness/results/FR_AO_G20261115.json"
+ },
+ "FC_AO_G20261111": {
+  "ppl": 9.277880596192395,
+  "recon": 0.004726594033182554,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "9c615a4b9965923817e90e87d3a1c32dcf182e90eaa370422e83ffbae6678987",
+  "result": "runs_frozen_routing/results/FC_AO.json"
+ },
+ "FC_AO_G20261112": {
+  "ppl": 9.274432059487202,
+  "recon": 0.004726960000558341,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "61a2797259072b1197863704104c5e0bdf711c12853df9bec41d6194f230f45d",
+  "result": "runs_frozen_routing_robustness/results/FC_AO_G20261112.json"
+ },
+ "FC_AO_G20261113": {
+  "ppl": 9.273312308452768,
+  "recon": 0.004727028979352394,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "2f1f3afc962e146f925e6a042165ee3bb30e735732120e4f6bccf1df58ff09a3",
+  "result": "runs_frozen_routing_robustness/results/FC_AO_G20261113.json"
+ },
+ "FC_AO_G20261114": {
+  "ppl": 9.27413689847134,
+  "recon": 0.004726793955344869,
+  "valid_under_frozen_old_check": false,
+  "installed_weights_sha256": "fd75e415f59b3a380050046413422ca24be8cf44d3c8386f3f89f5206442b071",
+  "result": "runs_frozen_routing_robustness/results/FC_AO_G20261114.json"
+ },
+ "FC_AO_G20261115": {
+  "ppl": 9.27472885539555,
+  "recon": 0.0047268068248912535,
+  "valid_under_frozen_old_check": true,
+  "installed_weights_sha256": "58790091ff5227f8f0f06d127162bab490d51f2cf321184232f426f4be8b97cf",
+  "result": "runs_frozen_routing_robustness/results/FC_AO_G20261115.json"
+ },
+ "FR_OO": {
+  "ppl": 9.267851290916612,
+  "recon": 0.004609548874536215,
+  "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066"
+ },
+ "FC_OO": {
+  "ppl": 9.277908190612935,
+  "recon": 0.004727047496005081,
+  "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4"
+ }
+}

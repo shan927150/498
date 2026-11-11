@@ -1,0 +1,61 @@
+{
+ "passed": true,
+ "configs": {
+  "FR_OO": {
+   "reference": "runs_multigroup_robustness/results/CTRL_FR_ORIGINAL.json",
+   "routing_identical_to_natural": true,
+   "token_counts_identical": true,
+   "hessians_bitwise_identical": "480/480",
+   "actorder_identical": "implied by bitwise Hessians",
+   "weights_exact": true,
+   "recon_exact": true,
+   "per_expert_recon_exact": true,
+   "reference_ppl": 9.267851290916612,
+   "reference_mean_nll": 2.2265515610072844,
+   "ppl_note": "weights bitwise identical to the frozen configuration and the evaluator is deterministic (repeat |dPPL| = 0 in every earlier run): PPL identical by construction, not re-evaluated",
+   "passed": true
+  },
+  "FR_AA": {
+   "reference": "runs_multigroup_robustness/results/FR_G20261111.json",
+   "routing_identical_to_natural": true,
+   "token_counts_identical": true,
+   "hessians_bitwise_identical": "480/480",
+   "actorder_identical": "implied by bitwise Hessians",
+   "weights_exact": true,
+   "recon_exact": true,
+   "per_expert_recon_exact": true,
+   "reference_ppl": 9.27818211130394,
+   "reference_mean_nll": 2.2276656344300796,
+   "ppl_note": "weights bitwise identical to the frozen configuration and the evaluator is deterministic (repeat |dPPL| = 0 in every earlier run): PPL identical by construction, not re-evaluated",
+   "passed": true
+  },
+  "FC_OO": {
+   "reference": "runs_multigroup_robustness/results/CTRL_FC_ORIGINAL.json",
+   "routing_identical_to_natural": true,
+   "token_counts_identical": true,
+   "hessians_bitwise_identical": "480/480",
+   "actorder_identical": "implied by bitwise Hessians",
+   "weights_exact": true,
+   "recon_exact": true,
+   "per_expert_recon_exact": true,
+   "reference_ppl": 9.277908190612935,
+   "reference_mean_nll": 2.2276361108950495,
+   "ppl_note": "weights bitwise identical to the frozen configuration and the evaluator is deterministic (repeat |dPPL| = 0 in every earlier run): PPL identical by construction, not re-evaluated",
+   "passed": true
+  },
+  "FC_AA": {
+   "reference": "runs_multigroup_robustness/results/FC_G20261111.json",
+   "routing_identical_to_natural": true,
+   "token_counts_identical": true,
+   "hessians_bitwise_identical": "480/480",
+   "actorder_identical": "implied by bitwise Hessians",
+   "weights_exact": true,
+   "recon_exact": true,
+   "per_expert_recon_exact": true,
+   "reference_ppl": 9.274112980052,
+   "reference_mean_nll": 2.2272269683462174,
+   "ppl_note": "weights bitwise identical to the frozen configuration and the evaluator is deterministic (repeat |dPPL| = 0 in every earlier run): PPL identical by construction, not re-evaluated",
+   "passed": true
+  }
+ }
+}

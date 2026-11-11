@@ -31,6 +31,53 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **EBSS C4-prefix diversity rescue (64 C4R_s0 prefix tokens + 448 generated, PX_PO vs PX_EBSS = ALG1_RATE, B=16 GPTQ on four layers):** [`update_ebss_prefix_rescue.md`](update_ebss_prefix_rescue.md)
+> (PREFIX-RESCUE-PARTIAL; diversity NO-DIVERSITY-IMPROVEMENT
+> — prefixes are reproduced exactly and generation default-path is bitwise unchanged (35/35 CPU, 15/15 smoke); loops persist (16/16 PO, 13/16 EBSS), continuation distinct-2 falls to 0.20 / 0.28 (random start 0.36 / 0.42; C4 0.86);
+> EBSS barely more balanced than PO (CV 0.305 vs 0.318; random start 0.166 vs 0.261); recon −6.3 % / −6.7 % vs random start (240/240 experts; gap recovery 0.54 / 0.57),
+> matched balance effect −0.39 %, still +5.7 % vs C4 Random (0/240 experts) at about 1120 s generation per set; PPL at noise scale. Recommendation C: stop EBSS development and finalize.)
+> **MoEQuant EBSS balance-strength fidelity (Eq. 4 vs Algorithm 1 STD × per-token rate vs assignment share; oracle + 4 × 128 counterfactual/short generation, gate-selected ALG1_SHARE/ALG1_RATE at 16 × 512 + B=16 GPTQ on four layers):** [`update_ebss_balance_fidelity.md`](update_ebss_balance_fidelity.md)
+> (BALANCE-NORMALIZATION-MATERIAL; secondary BALANCE-VARIANT-QUALITY-MIXED — Alg. 1 is √E = 7.75× stronger than Eq. 4, rate vs share ×4; no source fixes the authors' choice;
+> default path bitwise unchanged, oracle = production on all 18k sentence-steps; ALG1_RATE changes 28 % of pruning decisions; at B=16 load CV 0.248 → 0.186 / 0.166 (C4 0.13–0.18), min exposure +12 %,
+> but repetition unchanged (distinct-2 0.41 vs C4 0.87, self-PPL 1.2); recon −0.78 % / −0.38 % vs EQ4_RATE yet still +12.9 / +13.4 % vs C4 (0/240 experts), PPL at noise scale;
+> pilot "weak balancing" is specific to the Eq. 4-rate reading; balance does not explain the C4 gap);
+> **EBSS score/sign correctness audit (independent NumPy oracle; synthetic, historical-pilot and 4 × 32 real-model full-pool traces; no new data/GPTQ):** [`update_ebss_score_audit.md`](update_ebss_score_audit.md)
+> (SCORE-SIGN-CORRECT; secondary SCORE-CORRECT-PAPER-AMBIGUOUS — code stores cumulative logP and scores −(cum+logp)/(|S|+1)+σ_parent/τ, minimised globally; no NLL sign trap;
+> 62/62 real pruning decisions, propagations and final picks = oracle; cross-parent trap, τ* = 2 tradeoff, deferred σ and 11 metamorphic invariants pass, wrong variants detectable;
+> pilot conclusions stand; residual ambiguity is balance-term strength (Alg. 1 √E factor, rate vs share), not sign);
+> **Model-matched EBSS generation pilot + Probability-Only ablation (Qwen1.5-MoE base, BF16, w = 4, τ = 1.3, 16 × 512, B=16 GPTQ on four layers):** [`update_ebss_generation_pilot.md`](update_ebss_generation_pilot.md)
+> (MODEL-MATCHED-EBSS-BALANCING-SUPPORTED — vs PO: paper σ −4.9 %, load CV 0.248 vs 0.261 (18/24 layers), balance term alters the kept beam set in 4.4 % of steps,
+> effect fades after ~128 tokens; both sets less balanced than C4 Random (CV 0.15) and repetitive (distinct-1 0.22, self-PPL 1.2);
+> GPTQ recon EBSS +0.46 % vs PO, +13.8 % vs C4 (0/240 experts improved), PPL inside C4 seed spread; 22 min/set on MIG, 80 % expert H2D transfer, balance compute < 1 %);
+> **Official MoEQuant EBSS calibration-quality validation (four layers, released `EBSS_qwen.jsonl`, 128 × 512 windows, CANONICAL-B1 extraction for all 10 configs):** [`update_ebss_official_validation.md`](update_ebss_official_validation.md)
+> (OFFICIAL-EBSS-TRANSFER-LIMITED — generating checkpoint undocumented; quality class otherwise NO-CONSISTENT-GAIN: EBSS reconstruction +29.4 % vs FR / +29.6 % vs TR,
+> 0/240 experts improved, every layer and exposure decile; PPL 9.2732 inside the C4 seed spread (ΔPPL −0.0015…+0.0140); the released set is the least
+> expert-balanced (load CV 0.33 vs 0.10) and highly repetitive (distinct-1 0.13, self-PPL 1.26); all correctness gates passed);
+> **FP32 Hessian accumulation-order null experiment (four layers, FR/FC s0, ORIGINAL activations/routing/act-order; 5 replay orders, 10 configs):** [`update_hessian_order_null.md`](update_hessian_order_null.md)
+> (ORDER-SENSITIVE-PPL — only the FP32 `+=` order inside each Hessian block changes: 480/480 Hessians differ by ~9e-8 rel (FP64 accumulation: 0 change);
+> 0.007 % of weights differ (vs 17 % AOF), recon ≈ 1e-6; PPL SD FR 0.0018 / FC 0.0017 (≈ 0.7× AOF), Δ SD 0.0029, max |PPL−OO| 0.0036 > τ; no sign reversal; repeat run bitwise);
+> **GPTQ act-order ablation after frozen routing (four layers, FR/FC s0, five groupings; AOF = act-order fixed to ORIGINAL, 10 configs):** [`update_actorder_ablation.md`](update_actorder_ablation.md)
+> (ACTORDER-CONTRIBUTES-TO-WEIGHT-SENSITIVITY-ONLY — Hessians bitwise = AO, permutations = ORIGINAL; weight rel L2 vs OO −41 % (changed elements 39–40 % → 17–18 %),
+> grid nearly frozen (scales 0.0024 vs 0.030 rel diff); PPL SD ratio FR 0.60, FC 1.37, Δ(FC−FR) 0.30; ranking preserved 5/5; recon unchanged (≤ 0.01 %));
+> **Installation audit of the FC AO G20261114 tolerance exceedance:** [`update_installation_audit.md`](update_installation_audit.md)
+> (AUDIT-CONFIRMED-BF16-REPRESENTATION — 193 expert checks bitwise-correct installation and exact reproduction; exceedance = BF16 arithmetic on 5 outlier tokens
+> (1.88× the original-weight noise); old tolerance misses wrong-expert / truncation / 1-ulp corruptions, new exact checks catch all; earlier RUN-BLOCKED unchanged);
+> **Frozen-routing robustness across five calibration groupings (four layers, FR/FC s0, AO_g = GPTQ(X_g, R_O) for G20261111–15, 8 new configs):** [`update_frozen_routing_robustness.md`](update_frozen_routing_robustness.md)
+> (RUN-BLOCKED — FC AO G20261114 failed one installation-tolerance check (L1 e0, 1.075× tol; install bitwise correct; tolerance not retuned).
+> Descriptively: frozen routing stabilizes Hessians in every grouping (AO/AA 0.27–0.34) but still re-rounds 39–40 % of weights; PPL SD ratio
+> FR 0.91, FC 0.41, Δ(FC−FR) 0.88; ranking preserved 4/5 (AO) vs 2/5 (AA); G20261111 was the most favourable AO draw; conditional rule
+> output PARTIALLY-STABILIZES, not the decision);
+> **Frozen-routing 2×2 factorial ablation (four layers, FR/FC s0, ORIGINAL vs G20261111; activation source × routing source of the calibration Hessians):** [`update_frozen_routing.md`](update_frozen_routing.md)
+> (ROUTING-AND-ACTIVATION-INTERACT — natural OO/AA reproduced bitwise (480/480 Hessians, weights, recon); routing-only reproduces 78–87 % of the
+> Hessian change (median 0.0123 vs 0.0141/0.0158), frozen routing leaves ~30 %, but GPTQ still re-rounds 39–40 % of weights under frozen routing
+> (vs 54–55 %); frozen routing kept PPL ≈ OO (FR −0.0020, FC −0.00003) and Δ_AO +0.0120 ≈ Δ_OO +0.0101, yet FR's +0.0103 natural jump is almost
+> entirely interaction (+0.0112); single draws at grouping-noise scale);
+> **Cross-seed × calibration-grouping robustness (four layers, FR vs FC, allocation seeds 0/1/2 × 5 groupings, 30 configs):** [`update_cross_seed_grouping.md`](update_cross_seed_grouping.md)
+> (GROUPING-VARIATION-DOMINATES — grouping-averaged FC − FR per seed −0.0019 / +0.0007 / −0.0025, none distinguishable from 0;
+> overall −0.0012 = 0.18× the within-seed grouping SD 0.0069; hierarchical-bootstrap interval [−0.0048, +0.0022]; FC worse in 6/15;
+> FC reconstruction penalty +2.2–2.7 % in 15/15 does not carry to PPL; ORIGINAL-extraction Δ positive on 3/3 seeds — policy-specific);
+> **Multi-grouping robustness (four layers, FR s0 / FC s0, five seeded groupings):** [`update_multigroup_robustness.md`](update_multigroup_robustness.md)
+> (GROUPING-DEPENDENT-RANKING — FC better in 3/5 groupings, mean Δ −0.0019, SD 0.0064 = 0.63× |Δ_ORIGINAL|);
 > **Calibration batch-composition sensitivity (four layers, FR s0 / FC s0, three cache groupings):** [`update_batch_sensitivity.md`](update_batch_sensitivity.md)
 > (BATCH-SENSITIVITY-DOMINANT — regrouping the SAME calibration sequences into different BF16 forward batches moves PPL by up to
 > 0.012 (1.2× the FR-vs-FC difference) and reverses FC − FR (+0.0101 → −0.0040 / −0.0124), while reconstruction moves ≤ 0.012 %;

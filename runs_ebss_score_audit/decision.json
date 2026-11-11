@@ -1,0 +1,31 @@
+{
+ "decision": "SCORE-SIGN-CORRECT",
+ "secondary_finding": "SCORE-CORRECT-PAPER-AMBIGUOUS",
+ "checks": {
+  "fixed_counterexamples": true,
+  "tradeoff_threshold": true,
+  "deferred_sigma_end_to_end": true,
+  "cross_parent_trap": true,
+  "metamorphic": true,
+  "beam_width_ranking": true,
+  "synthetic_generate_traces": true,
+  "historical_pilot": true,
+  "production_capture": true
+ },
+ "wrong_variants_detectable": true,
+ "wrong_variant_power": {
+  "wrong_nll_sign": 190,
+  "maximise": 230,
+  "per_parent_topk": 183,
+  "reversed_sigma": 122,
+  "probability_only": 72
+ },
+ "rule": {
+  "precedence": "SCORE-SIGN-BUG-CONFIRMED -> AUDIT-INCONCLUSIVE -> SCORE-SIGN-CORRECT (paper ambiguity reported as a secondary finding, SCORE-CORRECT-PAPER-AMBIGUOUS only if score correctness cannot be the primary label)",
+  "SCORE-SIGN-CORRECT": "production matches the independent oracle for the minimisation objective: every fixed counterexample, cross-parent trap, metamorphic invariant, deferred-sigma test and every captured production pruning decision / cumulative update / routing-statistics propagation / final selection agrees (ties within tolerance excepted and reported)",
+  "SCORE-SIGN-BUG-CONFIRMED": "at least one reproducible production example where the implemented score or ranking differs from the canonical objective because of a sign, log-probability, normalisation or sorting error",
+  "SCORE-CORRECT-PAPER-AMBIGUOUS": "implementation matches its documented convention but fidelity to the authors' intent cannot be established; secondary when SCORE-SIGN-CORRECT applies",
+  "AUDIT-INCONCLUSIVE": "the executed path cannot be traced/captured, or the tests cannot distinguish the deliberately wrong variants (wrong-sign NLL, maximisation, per-parent top-w, reversed sigma, wrong-parent sigma) from the correct one"
+ },
+ "pilot_validity": "B=16 pilot generation remains valid under the documented interpretation"
+}

@@ -1,0 +1,886 @@
+{
+ "parents_L": [
+  -0.5,
+  -1.4,
+  -0.9
+ ],
+ "next_token_probs": [
+  [
+   0.5,
+   0.2,
+   0.15,
+   0.1,
+   0.05
+  ],
+  [
+   0.6,
+   0.25,
+   0.08,
+   0.05,
+   0.02
+  ],
+  [
+   0.4,
+   0.3,
+   0.2,
+   0.06,
+   0.04
+  ]
+ ],
+ "parent_sigma": [
+  0.4,
+  0.05,
+  0.2
+ ],
+ "prefix_len": 6,
+ "tau": 1.3,
+ "cases": [
+  {
+   "w": 2,
+   "use_balance": true,
+   "production_kept": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "production_scores": [
+    0.3114366275709657,
+    0.41331625839960456
+   ],
+   "oracle_kept": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "oracle_scores": [
+    0.3114366275709657,
+    0.41331625839960456
+   ],
+   "production_matches_oracle_in_order": true,
+   "wrong_variant_kept": {
+    "maximise": [
+     [
+      0,
+      4
+     ],
+     [
+      1,
+      4
+     ]
+    ],
+    "per_parent_topk": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "wrong_nll_sign": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "probability_only": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "balance_after_pruning": [
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "wrong_parent_sigma(rolled)": [
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "wrong_parent_history(rolled)": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "reversed_sigma": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "wrong_variant_differs_from_correct": {
+    "maximise": true,
+    "per_parent_topk": false,
+    "wrong_nll_sign": true,
+    "probability_only": true,
+    "balance_after_pruning": true,
+    "wrong_parent_sigma(rolled)": true,
+    "wrong_parent_history(rolled)": true,
+    "reversed_sigma": true
+   }
+  },
+  {
+   "w": 2,
+   "use_balance": false,
+   "production_kept": [
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "production_scores": [
+    0.17044959722284933,
+    0.2594701045534507
+   ],
+   "oracle_kept": [
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "oracle_scores": [
+    0.17044959722284933,
+    0.2594701045534507
+   ],
+   "production_matches_oracle_in_order": true,
+   "wrong_variant_kept": {
+    "maximise": [
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "per_parent_topk": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "wrong_nll_sign": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "probability_only": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "balance_after_pruning": [
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "wrong_parent_sigma(rolled)": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "wrong_parent_history(rolled)": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "reversed_sigma": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ]
+   },
+   "wrong_variant_differs_from_correct": {
+    "maximise": true,
+    "per_parent_topk": false,
+    "wrong_nll_sign": true,
+    "probability_only": false,
+    "balance_after_pruning": false,
+    "wrong_parent_sigma(rolled)": false,
+    "wrong_parent_history(rolled)": true,
+    "reversed_sigma": false
+   }
+  },
+  {
+   "w": 4,
+   "use_balance": true,
+   "production_kept": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "production_scores": [
+    0.3114366275709657,
+    0.41331625839960456,
+    0.4365035900500942,
+    0.4544136973212876
+   ],
+   "oracle_kept": [
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "oracle_scores": [
+    0.3114366275709657,
+    0.41331625839960456,
+    0.4365035900500942,
+    0.4544136973212876
+   ],
+   "production_matches_oracle_in_order": true,
+   "wrong_variant_kept": {
+    "maximise": [
+     [
+      0,
+      4
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      0,
+      3
+     ]
+    ],
+    "per_parent_topk": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "wrong_nll_sign": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "probability_only": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "balance_after_pruning": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "wrong_parent_sigma(rolled)": [
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "wrong_parent_history(rolled)": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "reversed_sigma": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ]
+    ]
+   },
+   "wrong_variant_differs_from_correct": {
+    "maximise": true,
+    "per_parent_topk": false,
+    "wrong_nll_sign": false,
+    "probability_only": true,
+    "balance_after_pruning": true,
+    "wrong_parent_sigma(rolled)": true,
+    "wrong_parent_history(rolled)": true,
+    "reversed_sigma": true
+   }
+  },
+  {
+   "w": 4,
+   "use_balance": false,
+   "production_kept": [
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "production_scores": [
+    0.17044959722284933,
+    0.2594701045534507,
+    0.27297508910942725,
+    0.30056754347513376
+   ],
+   "oracle_kept": [
+    [
+     0,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "oracle_scores": [
+    0.17044959722284933,
+    0.2594701045534507,
+    0.27297508910942725,
+    0.30056754347513376
+   ],
+   "production_matches_oracle_in_order": true,
+   "wrong_variant_kept": {
+    "maximise": [
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "per_parent_topk": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "wrong_nll_sign": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "probability_only": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "balance_after_pruning": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "wrong_parent_sigma(rolled)": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "wrong_parent_history(rolled)": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "reversed_sigma": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ]
+   },
+   "wrong_variant_differs_from_correct": {
+    "maximise": true,
+    "per_parent_topk": false,
+    "wrong_nll_sign": true,
+    "probability_only": false,
+    "balance_after_pruning": false,
+    "wrong_parent_sigma(rolled)": false,
+    "wrong_parent_history(rolled)": true,
+    "reversed_sigma": false
+   }
+  }
+ ],
+ "stable_tie_breaking": "exact ties ordered by (parent, token): see 5e and the tie block below",
+ "passed": true,
+ "synthetic_generate_traces": {
+  "seed0_EBSS": {
+   "n_steps": 11,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 4.440892098500626e-16,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 7,
+   "final": {
+    "final_score_max_abs": 1.1102230246251565e-16,
+    "pick_production": [
+     0,
+     0,
+     0
+    ],
+    "pick_oracle": [
+     0,
+     0,
+     0
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  },
+  "seed0_PO": {
+   "n_steps": 11,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 0.0,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 0,
+   "final": {
+    "final_score_max_abs": 0.0,
+    "pick_production": [
+     0,
+     0,
+     0
+    ],
+    "pick_oracle": [
+     0,
+     0,
+     0
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  },
+  "seed1_EBSS": {
+   "n_steps": 11,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 4.440892098500626e-16,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 4,
+   "final": {
+    "final_score_max_abs": 1.1102230246251565e-16,
+    "pick_production": [
+     0,
+     0,
+     0
+    ],
+    "pick_oracle": [
+     0,
+     0,
+     0
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  },
+  "seed1_PO": {
+   "n_steps": 11,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 0.0,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 0,
+   "final": {
+    "final_score_max_abs": 0.0,
+    "pick_production": [
+     0,
+     0,
+     0
+    ],
+    "pick_oracle": [
+     0,
+     0,
+     0
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  },
+  "seed2_EBSS": {
+   "n_steps": 11,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 8.881784197001252e-16,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 9,
+   "final": {
+    "final_score_max_abs": 0.0,
+    "pick_production": [
+     0,
+     0,
+     0
+    ],
+    "pick_oracle": [
+     0,
+     0,
+     0
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  },
+  "seed2_PO": {
+   "n_steps": 11,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 0.0,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 0,
+   "final": {
+    "final_score_max_abs": 0.0,
+    "pick_production": [
+     0,
+     0,
+     0
+    ],
+    "pick_oracle": [
+     0,
+     0,
+     0
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  },
+  "seed7_EBSS_tau0.05_flat_logits": {
+   "n_steps": 15,
+   "all_decisions_match_oracle": true,
+   "all_decisions_match_fp64_oracle": true,
+   "max_score_abs_vs_oracle": 1.7763568394002505e-15,
+   "propagation_ok": true,
+   "steps_with_ebss_change": 42,
+   "final": {
+    "final_score_max_abs": 8.881784197001252e-16,
+    "pick_production": [
+     1,
+     3,
+     1
+    ],
+    "pick_oracle": [
+     1,
+     3,
+     1
+    ],
+    "pick_matches": true,
+    "counts_exact": true,
+    "length_ok": true
+   },
+   "passed": true
+  }
+ }
+}

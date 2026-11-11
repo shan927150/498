@@ -1,0 +1,626 @@
+{
+ "FR": {
+  "20261121": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 149611,
+    "d2": 0.4403037561569363,
+    "o2": 661637.4392700195,
+    "frac_differ": 7.20606909857856e-05,
+    "rel_l2": 0.00081576704917241
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 33051,
+     "frac_differ": 6.367654511422822e-05,
+     "d2": 0.08698939625173807,
+     "o2": 144598.32275390625,
+     "rel_l2": 0.0007756245209213369,
+     "n_tensors": 180,
+     "n_tensors_identical": 62
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 35638,
+     "frac_differ": 6.866069755168876e-05,
+     "d2": 0.10424493346363306,
+     "o2": 163733.185546875,
+     "rel_l2": 0.0007979195804687338,
+     "n_tensors": 180,
+     "n_tensors_identical": 72
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 37082,
+     "frac_differ": 7.144272929490215e-05,
+     "d2": 0.11341812857426703,
+     "o2": 169406.91571044922,
+     "rel_l2": 0.000818230512613078,
+     "n_tensors": 180,
+     "n_tensors_identical": 57
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 43840,
+     "frac_differ": 8.446279198232323e-05,
+     "d2": 0.13565129786729813,
+     "o2": 183899.01525878906,
+     "rel_l2": 0.0008588597985857373,
+     "n_tensors": 180,
+     "n_tensors_identical": 54
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 245,
+   "n_experts_changed": 235,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 235,
+    "h_changed_w_same": 5,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261122": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 144032,
+    "d2": 0.4309291646350175,
+    "o2": 661637.4392700195,
+    "frac_differ": 6.937354502051768e-05,
+    "rel_l2": 0.0008070359993525825
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 30325,
+     "frac_differ": 5.842459322226168e-05,
+     "d2": 0.07855848129838705,
+     "o2": 144598.32275390625,
+     "rel_l2": 0.0007370804830468882,
+     "n_tensors": 180,
+     "n_tensors_identical": 53
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 33525,
+     "frac_differ": 6.458976052024148e-05,
+     "d2": 0.09489451162517071,
+     "o2": 163733.185546875,
+     "rel_l2": 0.000761293622799272,
+     "n_tensors": 180,
+     "n_tensors_identical": 63
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 31594,
+     "frac_differ": 6.086946737886679e-05,
+     "d2": 0.10103481193073094,
+     "o2": 169406.91571044922,
+     "rel_l2": 0.0007722713986806214,
+     "n_tensors": 180,
+     "n_tensors_identical": 68
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 48588,
+     "frac_differ": 9.361035896070076e-05,
+     "d2": 0.15644135978072882,
+     "o2": 183899.01525878906,
+     "rel_l2": 0.0009223294783440796,
+     "n_tensors": 180,
+     "n_tensors_identical": 51
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 235,
+   "n_experts_changed": 231,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 231,
+    "h_changed_w_same": 9,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261123": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 140076,
+    "d2": 0.42411293275654316,
+    "o2": 661637.4392700195,
+    "frac_differ": 6.74681230024858e-05,
+    "rel_l2": 0.000800627903143721
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 35410,
+     "frac_differ": 6.82214293817077e-05,
+     "d2": 0.09364034701138735,
+     "o2": 144598.32275390625,
+     "rel_l2": 0.0008047294210271675,
+     "n_tensors": 180,
+     "n_tensors_identical": 70
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 27782,
+     "frac_differ": 5.352521183514836e-05,
+     "d2": 0.07859810162335634,
+     "o2": 163733.185546875,
+     "rel_l2": 0.0006928475293303659,
+     "n_tensors": 180,
+     "n_tensors_identical": 76
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 34856,
+     "frac_differ": 6.715408479324495e-05,
+     "d2": 0.1118152653798461,
+     "o2": 169406.91571044922,
+     "rel_l2": 0.0008124281849558809,
+     "n_tensors": 180,
+     "n_tensors_identical": 66
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 42028,
+     "frac_differ": 8.097176599984218e-05,
+     "d2": 0.14005921874195337,
+     "o2": 183899.01525878906,
+     "rel_l2": 0.0008727023549763548,
+     "n_tensors": 180,
+     "n_tensors_identical": 55
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 267,
+   "n_experts_changed": 230,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 230,
+    "h_changed_w_same": 10,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261124": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 140401,
+    "d2": 0.42921104677952826,
+    "o2": 661637.4392700195,
+    "frac_differ": 6.762466045341107e-05,
+    "rel_l2": 0.0008054255632117007
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 32662,
+     "frac_differ": 6.292709196456756e-05,
+     "d2": 0.08669703360646963,
+     "o2": 144598.32275390625,
+     "rel_l2": 0.0007743200257772676,
+     "n_tensors": 180,
+     "n_tensors_identical": 64
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 25962,
+     "frac_differ": 5.0018772934422346e-05,
+     "d2": 0.075879973359406,
+     "o2": 163733.185546875,
+     "rel_l2": 0.0006807618803058869,
+     "n_tensors": 180,
+     "n_tensors_identical": 76
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 31661,
+     "frac_differ": 6.099855056916825e-05,
+     "d2": 0.10143767693080008,
+     "o2": 169406.91571044922,
+     "rel_l2": 0.0007738095397815772,
+     "n_tensors": 180,
+     "n_tensors_identical": 66
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 50116,
+     "frac_differ": 9.655422634548611e-05,
+     "d2": 0.16519636288285255,
+     "o2": 183899.01525878906,
+     "rel_l2": 0.0009477865443982595,
+     "n_tensors": 180,
+     "n_tensors_identical": 55
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 261,
+   "n_experts_changed": 229,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 229,
+    "h_changed_w_same": 11,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261125": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 147231,
+    "d2": 0.44293114938773215,
+    "o2": 661637.4392700195,
+    "frac_differ": 7.091435519131747e-05,
+    "rel_l2": 0.0008181973632979
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 40384,
+     "frac_differ": 7.780441130050505e-05,
+     "d2": 0.10996941570192575,
+     "o2": 144598.32275390625,
+     "rel_l2": 0.00087207599277454,
+     "n_tensors": 180,
+     "n_tensors_identical": 56
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 26340,
+     "frac_differ": 5.074703332149621e-05,
+     "d2": 0.07378109451383352,
+     "o2": 163733.185546875,
+     "rel_l2": 0.0006712807465209505,
+     "n_tensors": 180,
+     "n_tensors_identical": 72
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 31260,
+     "frac_differ": 6.022597804214015e-05,
+     "d2": 0.09559948672540486,
+     "o2": 169406.91571044922,
+     "rel_l2": 0.0007512114735845161,
+     "n_tensors": 180,
+     "n_tensors_identical": 71
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 49247,
+     "frac_differ": 9.487999810112848e-05,
+     "d2": 0.163581152446568,
+     "o2": 183899.01525878906,
+     "rel_l2": 0.0009431416625848041,
+     "n_tensors": 180,
+     "n_tensors_identical": 54
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 253,
+   "n_experts_changed": 231,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 231,
+    "h_changed_w_same": 9,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  }
+ },
+ "FC": {
+  "20261121": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 158147,
+    "d2": 0.4843430146574974,
+    "o2": 661644.6172485352,
+    "frac_differ": 7.617208692762587e-05,
+    "rel_l2": 0.0008555869040210667
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 45106,
+     "frac_differ": 8.69018862945865e-05,
+     "d2": 0.12093035690486431,
+     "o2": 144598.9141845703,
+     "rel_l2": 0.0009145030356101366,
+     "n_tensors": 180,
+     "n_tensors_identical": 52
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 36158,
+     "frac_differ": 6.966253723761048e-05,
+     "d2": 0.11035550758242607,
+     "o2": 163737.87677001953,
+     "rel_l2": 0.0008209608161898283,
+     "n_tensors": 180,
+     "n_tensors_identical": 55
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 33287,
+     "frac_differ": 6.413122620245423e-05,
+     "d2": 0.09996926691383123,
+     "o2": 169405.4161376953,
+     "rel_l2": 0.00076819169574407,
+     "n_tensors": 180,
+     "n_tensors_identical": 62
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 43596,
+     "frac_differ": 8.399269797585228e-05,
+     "d2": 0.1530878832563758,
+     "o2": 183902.41015625,
+     "rel_l2": 0.0009123819787622884,
+     "n_tensors": 180,
+     "n_tensors_identical": 47
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 216,
+   "n_experts_changed": 231,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 231,
+    "h_changed_w_same": 9,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261122": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 155712,
+    "d2": 0.4875566326081753,
+    "o2": 661644.6172485352,
+    "frac_differ": 7.499926017992424e-05,
+    "rel_l2": 0.0008584206227216174
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 44707,
+     "frac_differ": 8.613316699711963e-05,
+     "d2": 0.12511301692575216,
+     "o2": 144598.9141845703,
+     "rel_l2": 0.000930183716065489,
+     "n_tensors": 180,
+     "n_tensors_identical": 54
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 37465,
+     "frac_differ": 7.218062275587911e-05,
+     "d2": 0.11332530062645674,
+     "o2": 163737.87677001953,
+     "rel_l2": 0.0008319339789036309,
+     "n_tensors": 180,
+     "n_tensors_identical": 57
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 27508,
+     "frac_differ": 5.299731938525884e-05,
+     "d2": 0.0815439522266388,
+     "o2": 169405.4161376953,
+     "rel_l2": 0.0006937967047057244,
+     "n_tensors": 180,
+     "n_tensors_identical": 75
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 46032,
+     "frac_differ": 8.86859315814394e-05,
+     "d2": 0.16757436282932758,
+     "o2": 183902.41015625,
+     "rel_l2": 0.0009545750477663753,
+     "n_tensors": 180,
+     "n_tensors_identical": 43
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 229,
+   "n_experts_changed": 230,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 230,
+    "h_changed_w_same": 10,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261123": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 155038,
+    "d2": 0.47535474598407745,
+    "o2": 661644.6172485352,
+    "frac_differ": 7.467462558939e-05,
+    "rel_l2": 0.0008476108850675655
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 41469,
+     "frac_differ": 7.989478833747633e-05,
+     "d2": 0.11351780127733946,
+     "o2": 144598.9141845703,
+     "rel_l2": 0.0008860321270425916,
+     "n_tensors": 180,
+     "n_tensors_identical": 61
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 35894,
+     "frac_differ": 6.915391093552714e-05,
+     "d2": 0.1056417440995574,
+     "o2": 163737.87677001953,
+     "rel_l2": 0.0008032360726987816,
+     "n_tensors": 180,
+     "n_tensors_identical": 58
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 33275,
+     "frac_differ": 6.410810682508681e-05,
+     "d2": 0.09782491158694029,
+     "o2": 169405.4161376953,
+     "rel_l2": 0.0007599081221344364,
+     "n_tensors": 180,
+     "n_tensors_identical": 62
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 44400,
+     "frac_differ": 8.55416962594697e-05,
+     "d2": 0.1583702890202403,
+     "o2": 183902.41015625,
+     "rel_l2": 0.0009279896749159191,
+     "n_tensors": 180,
+     "n_tensors_identical": 49
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 230,
+   "n_experts_changed": 230,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 230,
+    "h_changed_w_same": 10,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261124": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 150124,
+    "d2": 0.4507138719782233,
+    "o2": 661644.6172485352,
+    "frac_differ": 7.230777933139993e-05,
+    "rel_l2": 0.0008253498384377788
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 42080,
+     "frac_differ": 8.107194996843434e-05,
+     "d2": 0.11210503429174423,
+     "o2": 144598.9141845703,
+     "rel_l2": 0.0008805013821651718,
+     "n_tensors": 180,
+     "n_tensors_identical": 60
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 37785,
+     "frac_differ": 7.279713948567708e-05,
+     "d2": 0.11223973147571087,
+     "o2": 163737.87677001953,
+     "rel_l2": 0.0008279397468898776,
+     "n_tensors": 180,
+     "n_tensors_identical": 59
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 29470,
+     "frac_differ": 5.67773375848327e-05,
+     "d2": 0.08559089340269566,
+     "o2": 169405.4161376953,
+     "rel_l2": 0.0007108044436599585,
+     "n_tensors": 180,
+     "n_tensors_identical": 68
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 40789,
+     "frac_differ": 7.858469028665561e-05,
+     "d2": 0.14077821280807257,
+     "o2": 183902.41015625,
+     "rel_l2": 0.0008749314206681574,
+     "n_tensors": 180,
+     "n_tensors_identical": 56
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 243,
+   "n_experts_changed": 233,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 233,
+    "h_changed_w_same": 7,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  },
+  "20261125": {
+   "total": {
+    "n": 2076180480,
+    "n_differ": 154978,
+    "d2": 0.4785260437056422,
+    "o2": 661644.6172485352,
+    "frac_differ": 7.464572636768071e-05,
+    "rel_l2": 0.0008504335750021621
+   },
+   "per_layer": {
+    "1": {
+     "n": 519045120,
+     "n_differ": 38544,
+     "frac_differ": 7.425944010416666e-05,
+     "d2": 0.1061432333663106,
+     "o2": 144598.9141845703,
+     "rel_l2": 0.0008567687955930068,
+     "n_tensors": 180,
+     "n_tensors_identical": 56
+    },
+    "8": {
+     "n": 519045120,
+     "n_differ": 34982,
+     "frac_differ": 6.73968382556029e-05,
+     "d2": 0.10428103432059288,
+     "o2": 163737.87677001953,
+     "rel_l2": 0.0007980462989028799,
+     "n_tensors": 180,
+     "n_tensors_identical": 58
+    },
+    "16": {
+     "n": 519045120,
+     "n_differ": 35805,
+     "frac_differ": 6.898244222005208e-05,
+     "d2": 0.1068072309717536,
+     "o2": 169405.4161376953,
+     "rel_l2": 0.000794029581516417,
+     "n_tensors": 180,
+     "n_tensors_identical": 65
+    },
+    "23": {
+     "n": 519045120,
+     "n_differ": 45647,
+     "frac_differ": 8.79441848909012e-05,
+     "d2": 0.16129454504698515,
+     "o2": 183902.41015625,
+     "rel_l2": 0.000936518000992249,
+     "n_tensors": 180,
+     "n_tensors_identical": 52
+    }
+   },
+   "n_projections": 720,
+   "n_projections_identical": 231,
+   "n_experts_changed": 230,
+   "hessian_vs_weight_change": {
+    "h_changed_w_changed": 230,
+    "h_changed_w_same": 10,
+    "h_same_w_changed": 0,
+    "h_same_w_same": 0
+   },
+   "installed_equal_OO": false
+  }
+ }
+}

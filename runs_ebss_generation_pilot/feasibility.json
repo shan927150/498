@@ -1,0 +1,38 @@
+{
+ "load": {
+  "model_load_s": 8.261316061019897,
+  "pristine_all_parameters": true,
+  "digest_s": 20.854393005371094,
+  "place_s": 70.33078813552856,
+  "gpu_resident_gb": 4.75655424,
+  "expert_layer_bytes": 1038090240
+ },
+ "probe": {
+  "n_sentences": 16,
+  "w": 4,
+  "steps": 11,
+  "rows": 64,
+  "total_s": 26.903669595718384,
+  "per_step_s": 2.4457881450653076,
+  "timing": {
+   "total_s": 26.903669595718384,
+   "stats_s": 0.004380226135253906,
+   "score_s": 0.003846406936645508,
+   "select_s": 0.25707316398620605,
+   "reorder_gather_s": 0.011392354965209961,
+   "forward_s": 26.618935108184814,
+   "expert_transfer_s": 20.5297794342041,
+   "routing_hook_s": 0.06384563446044922
+  },
+  "peak_gpu_gb": 5.223002624
+ },
+ "gpu_total_gb": 20.937965568,
+ "kv_cache_at_512_gb": 6.442450944,
+ "gpu_needed_estimate_gb": 12.199005184,
+ "host_mem_available_gb_at_start": 222.064236,
+ "peak_cpu_gb": 40.199204,
+ "estimated_generation_s_per_method": 1437.2674034476279,
+ "note": "per-step time measured with 64 rows at short context; x1.15 allowance for attention growth to 512. Generator precision BF16, weights unchanged (experts streamed from pinned host memory).",
+ "passed": true,
+ "status": "FEASIBLE"
+}

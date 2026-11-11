@@ -1,0 +1,211 @@
+{
+ "tests": [
+  {
+   "test": "production_equals_oracle[EQ4_RATE]",
+   "passed": true,
+   "oracle": 0.24933707394501825,
+   "production": 0.24933707394501825
+  },
+  {
+   "test": "production_equals_oracle[EQ4_SHARE]",
+   "passed": true,
+   "oracle": 0.12466853697250913,
+   "production": 0.12466853697250913
+  },
+  {
+   "test": "production_equals_oracle[ALG1_SHARE]",
+   "passed": true,
+   "oracle": 0.30537430256194653,
+   "production": 0.30537430256194653
+  },
+  {
+   "test": "production_equals_oracle[ALG1_RATE]",
+   "passed": true,
+   "oracle": 0.6107486051238931,
+   "production": 0.6107486051238931
+  },
+  {
+   "test": "hand_layer0[eq4_rate]",
+   "passed": true,
+   "hand": 0.34960294939005054,
+   "oracle": 0.34960294939005054
+  },
+  {
+   "test": "hand_layer0[alg1_rate]",
+   "passed": true,
+   "hand": 0.8563488385776753,
+   "oracle": 0.8563488385776753
+  },
+  {
+   "test": "hand_layer0[eq4_share]",
+   "passed": true,
+   "hand": 0.17480147469502527,
+   "oracle": 0.17480147469502527
+  },
+  {
+   "test": "hand_layer0[alg1_share]",
+   "passed": true,
+   "hand": 0.42817441928883765,
+   "oracle": 0.42817441928883765
+  },
+  {
+   "test": "analytic_ratios_E60_k4",
+   "passed": true,
+   "ratios": {
+    "EQ4_RATE": 1.0,
+    "EQ4_SHARE": 0.25,
+    "ALG1_SHARE": 1.9364916731037085,
+    "ALG1_RATE": 7.745966692414834
+   }
+  },
+  {
+   "test": "analytic_ratios_E8_k2",
+   "passed": true,
+   "ratios": {
+    "EQ4_RATE": 1.0,
+    "EQ4_SHARE": 0.5,
+    "ALG1_SHARE": 1.4142135623730951,
+    "ALG1_RATE": 2.8284271247461903
+   }
+  },
+  {
+   "test": "sqrtE_relation_E60",
+   "passed": true,
+   "value": 7.745966692414834
+  },
+  {
+   "test": "share_is_rate_over_k",
+   "passed": true
+  },
+  {
+   "test": "strengths_table",
+   "passed": true,
+   "strengths": {
+    "EQ4_RATE": 1.0,
+    "EQ4_SHARE": 0.25,
+    "ALG1_SHARE": 1.9364916731037085,
+    "ALG1_RATE": 7.745966692414834
+   }
+  },
+  {
+   "test": "uniform_zero_nonuniform_positive[EQ4_RATE]",
+   "passed": true,
+   "uniform": 0.0,
+   "nonuniform": 0.24933707394501825
+  },
+  {
+   "test": "uniform_zero_nonuniform_positive[EQ4_SHARE]",
+   "passed": true,
+   "uniform": 0.0,
+   "nonuniform": 0.12466853697250913
+  },
+  {
+   "test": "uniform_zero_nonuniform_positive[ALG1_SHARE]",
+   "passed": true,
+   "uniform": 0.0,
+   "nonuniform": 0.30537430256194653
+  },
+  {
+   "test": "uniform_zero_nonuniform_positive[ALG1_RATE]",
+   "passed": true,
+   "uniform": 0.0,
+   "nonuniform": 0.6107486051238931
+  },
+  {
+   "test": "heterogeneous_E_per_layer_oracle",
+   "passed": true,
+   "oracle": 1.654653670707977,
+   "hand": 1.654653670707977,
+   "note": "production stores counts as one [L, E] tensor; the Qwen checkpoint has E = 60 at all 24 layers"
+  },
+  {
+   "test": "balanced_parent_scores_lower[EQ4_RATE]",
+   "passed": true,
+   "balanced": 0.5,
+   "imbalanced": 2.0384615384615383
+  },
+  {
+   "test": "deferred_prefix_cross_parent_generate[EQ4_RATE]",
+   "passed": true,
+   "parent_sigma_oracle": [
+    0.5773502691896257,
+    0.0
+   ],
+   "parent_sigma_production": [
+    0.5773502691896257,
+    0.0
+   ],
+   "kept_children_of_parent_token": [
+    2,
+    2
+   ]
+  },
+  {
+   "test": "balanced_parent_scores_lower[EQ4_SHARE]",
+   "passed": true,
+   "balanced": 0.5,
+   "imbalanced": 0.8846153846153846
+  },
+  {
+   "test": "deferred_prefix_cross_parent_generate[EQ4_SHARE]",
+   "passed": true,
+   "parent_sigma_oracle": [
+    0.28867513459481287,
+    0.0
+   ],
+   "parent_sigma_production": [
+    0.28867513459481287,
+    0.0
+   ],
+   "kept_children_of_parent_token": [
+    2,
+    2
+   ]
+  },
+  {
+   "test": "balanced_parent_scores_lower[ALG1_SHARE]",
+   "passed": true,
+   "balanced": 0.5,
+   "imbalanced": 1.2692307692307692
+  },
+  {
+   "test": "deferred_prefix_cross_parent_generate[ALG1_SHARE]",
+   "passed": true,
+   "parent_sigma_oracle": [
+    0.5773502691896257,
+    0.0
+   ],
+   "parent_sigma_production": [
+    0.5773502691896257,
+    0.0
+   ],
+   "kept_children_of_parent_token": [
+    2,
+    2
+   ]
+  },
+  {
+   "test": "balanced_parent_scores_lower[ALG1_RATE]",
+   "passed": true,
+   "balanced": 0.5,
+   "imbalanced": 3.5769230769230766
+  },
+  {
+   "test": "deferred_prefix_cross_parent_generate[ALG1_RATE]",
+   "passed": true,
+   "parent_sigma_oracle": [
+    1.1547005383792515,
+    0.0
+   ],
+   "parent_sigma_production": [
+    1.1547005383792515,
+    0.0
+   ],
+   "kept_children_of_parent_token": [
+    2,
+    2
+   ]
+  }
+ ],
+ "passed": true
+}

@@ -18,26 +18,36 @@ def fp_weights(model, L, e):
 
 
 @torch.no_grad()
-def quantize_from_H(model, L, e, H_gu, H_down, bits=4, group_size=128, percdamp=0.01):
-    return quantize_expert(fp_weights(model, L, e), H_gu, H_down, bits, group_size, percdamp)
+def quantize_from_H(model, L, e, H_gu, H_down, bits=4, group_size=128, percdamp=0.01, perms=None, infos=None):
+    if perms is None and infos is None:
+        return quantize_expert(fp_weights(model, L, e), H_gu, H_down, bits, group_size, percdamp)
+    return quantize_expert(fp_weights(model, L, e), H_gu, H_down, bits, group_size, percdamp,
+                           perms=perms, infos=infos)
 
 
 @torch.no_grad()
-def quantize_from_acc(model, acc, L, e, blocks=None, bits=4, group_size=128, percdamp=0.01):
+def quantize_from_acc(model, acc, L, e, blocks=None, bits=4, group_size=128, percdamp=0.01, perms=None, infos=None):
     b = blocks if blocks is not None else list(range(acc.K))
-    return quantize_from_H(model, L, e, acc.H_sum((L, e, "gu"), b),
-                           acc.H_sum((L, e, "down"), b), bits, group_size, percdamp)
+    if perms is None and infos is None:
+        return quantize_from_H(model, L, e, acc.H_sum((L, e, "gu"), b),
+                               acc.H_sum((L, e, "down"), b), bits, group_size, percdamp)
+    return quantize_from_H(model, L, e, acc.H_sum((L, e, "gu"), b), acc.H_sum((L, e, "down"), b), bits,
+                           group_size, percdamp, perms=perms, infos=infos)
 
 
 @torch.no_grad()
-def quantize_from_acc_or_fallback(model, acc, L, e, bits=4, group_size=128, percdamp=0.01):
+def quantize_from_acc_or_fallback(model, acc, L, e, bits=4, group_size=128, percdamp=0.01, perms=None, infos=None):
     """Zero-calibration fallback, OUTSIDE the solver. An expert that received
     no calibration tokens under a strategy has no Hessian; it is quantized
     with H = I and act-order off, which makes GPTQ exactly per-group
     asymmetric round-to-nearest. The rule depends only on the FP weights, so
     it is identical for every strategy. Returns (W_q, used_fallback)."""
     if acc.tokens((L, e, "gu")) > 0:
-        return quantize_from_acc(model, acc, L, e, None, bits, group_size, percdamp), False
+        if perms is None and infos is None:
+            return quantize_from_acc(model, acc, L, e, None, bits, group_size, percdamp), False
+        return quantize_from_acc(model, acc, L, e, None, bits, group_size, percdamp, perms=perms, infos=infos), False
+    if perms:
+        raise ValueError("actorder override requested for a zero-token (RTN fallback) expert")
     out = {}
     for name, W in fp_weights(model, L, e).items():
         I = torch.eye(W.shape[1], dtype=torch.float32, device=MU.GPU)

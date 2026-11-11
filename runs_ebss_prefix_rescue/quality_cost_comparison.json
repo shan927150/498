@@ -1,0 +1,82 @@
+{
+ "configs": {
+  "C4R_s0": {
+   "recon": 0.0053817881215029425,
+   "ppl": 9.267487480465205,
+   "T_generation_s": 0.0,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 7.205605506896973,
+   "T_gptq_s": 726.7294101715088,
+   "T_quantize_total_s": 1252.8650805950165,
+   "T_total_measured_s": 1265.8509553909303,
+   "T_data": "not measured"
+  },
+  "C4R_s1": {
+   "recon": 0.005394993762483961,
+   "ppl": 9.268870781320336,
+   "T_generation_s": 0.0,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 7.6376097202301025,
+   "T_gptq_s": 733.1891815662384,
+   "T_quantize_total_s": 1257.558756828308,
+   "T_total_measured_s": 1270.544631624222,
+   "T_data": "not measured"
+  },
+  "C4R_s2": {
+   "recon": 0.005381452384591753,
+   "ppl": 9.275386326931468,
+   "T_generation_s": 0.0,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 7.507199764251709,
+   "T_gptq_s": 746.8961081504822,
+   "T_quantize_total_s": 1266.4888908863068,
+   "T_total_measured_s": 1279.4747656822205,
+   "T_data": "not measured"
+  },
+  "RS_PO": {
+   "recon": 0.006102680778179296,
+   "ppl": 9.26831113261005,
+   "T_generation_s": 1264.104237794876,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 8.153339862823486,
+   "T_gptq_s": 733.8368363380432,
+   "T_quantize_total_s": 1256.7754609584808,
+   "T_total_measured_s": 2533.8655735492707,
+   "T_data": "not measured"
+  },
+  "RS_EBSS": {
+   "recon": 0.006107183149112938,
+   "ppl": 9.274363038925387,
+   "T_generation_s": 1376.5615365505219,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 7.011178970336914,
+   "T_gptq_s": 788.2485427856445,
+   "T_quantize_total_s": 1366.3935210704803,
+   "T_total_measured_s": 2755.940932416916,
+   "T_data": "not measured"
+  },
+  "PX_PO": {
+   "recon": 0.005717505125656861,
+   "ppl": 9.27226870270831,
+   "T_generation_s": 1117.4786841869354,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 7.587550640106201,
+   "T_gptq_s": 280.32663106918335,
+   "T_quantize_total_s": 355.4294693470001,
+   "T_total_measured_s": 1485.8940283298493,
+   "T_data": "not measured"
+  },
+  "PX_EBSS": {
+   "recon": 0.0056954130578128785,
+   "ppl": 9.266020822566118,
+   "T_generation_s": 1118.7819652557373,
+   "T_activation_capture_s_derived": 12.985874795913697,
+   "T_hessian_s": 7.560762405395508,
+   "T_gptq_s": 276.7149484157562,
+   "T_quantize_total_s": 354.0845386981964,
+   "T_total_measured_s": 1485.8523787498475,
+   "T_data": "not measured"
+  }
+ },
+ "definition": "T_total = T_generation + T_activation + T_quantize_total (Hessian + GPTQ + install/eval bookkeeping as measured by quant_config); T_activation is the B1 capture of this study's 80 rows scaled to 16 rows (derived); T_data not measured"
+}

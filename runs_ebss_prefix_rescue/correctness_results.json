@@ -1,0 +1,180 @@
+{
+ "cpu": {
+  "tests": [
+   {
+    "test": "default_bitwise_vs_pre_study[seed0,balanceFalse,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed0,balanceFalse,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed0,balanceTrue,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed0,balanceTrue,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed1,balanceFalse,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed1,balanceFalse,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed1,balanceTrue,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed1,balanceTrue,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed2,balanceFalse,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed2,balanceFalse,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed2,balanceTrue,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed2,balanceTrue,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed3,balanceFalse,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed3,balanceFalse,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed3,balanceTrue,EQ4_RATE]",
+    "passed": true
+   },
+   {
+    "test": "default_bitwise_vs_pre_study[seed3,balanceTrue,ALG1_RATE]",
+    "passed": true
+   },
+   {
+    "test": "P1_prefix_equals_historical[balanceFalse]",
+    "passed": true
+   },
+   {
+    "test": "P1_prefix_equals_historical[balanceTrue]",
+    "passed": true
+   },
+   {
+    "test": "prefix_oracle[case0,P7,balanceFalse]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case0,P7,balanceTrue]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case1,P6,balanceFalse]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case1,P6,balanceTrue]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case2,P2,balanceFalse]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case2,P2,balanceTrue]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case3,P3,balanceFalse]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case3,P3,balanceTrue]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case4,P8,balanceFalse]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case4,P8,balanceTrue]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case5,P4,balanceFalse]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "prefix_oracle[case5,P4,balanceTrue]",
+    "passed": true,
+    "steps_checked": 30
+   },
+   {
+    "test": "po_invariant_to_normalisation[prefix]",
+    "passed": true
+   },
+   {
+    "test": "length_and_prefix_identity",
+    "passed": true
+   },
+   {
+    "test": "counts_equal_recount",
+    "passed": true
+   },
+   {
+    "test": "counts_total",
+    "passed": true
+   },
+   {
+    "test": "R_equals_sum_token_logp",
+    "passed": true
+   }
+  ],
+  "passed": true,
+  "n": 35
+ },
+ "smoke": {
+  "checks": {
+   "prefill_logits_match_teacher_forcing": true,
+   "prefix_routing_matches_teacher_forcing": true,
+   "prefix_identity": true,
+   "appended_exactly_32": true,
+   "prefix_routing_counts": true,
+   "cumulative_scores": true,
+   "identical_prefixes_po_ebss": true,
+   "first_expansion_single_branch": true,
+   "ranking_matches_oracle": true,
+   "sigma_matches_oracle": true,
+   "kv_cache_parent": true,
+   "replay_logprob_close": true,
+   "deterministic": true,
+   "historical_generator_unchanged": true,
+   "dispatch_mismatches_zero": true
+  },
+  "passed": true
+ }
+}

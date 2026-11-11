@@ -1,0 +1,221 @@
+{
+  "routing_cache": "runs_typicality_matched/routing_profile_v2.npz",
+  "routing_sha256": "f0bb65eddb4c44c0143b3d70d3ae49aa8b1bfc00e6835c08b88549e60a9ecfc7",
+  "n_pool": 2000,
+  "layers": [
+    1,
+    8,
+    16,
+    23
+  ],
+  "E": 60,
+  "d_max_abs_diff_vs_scores_csv": 0.0,
+  "typical_half_reproduced": true,
+  "tau": 0.32096783447265625,
+  "tau_rule": "median d(s) over the original candidate pool",
+  "d_quantiles": {
+    "0": 0.202545166015625,
+    "0.1": 0.26958969726562504,
+    "0.25": 0.29081216430664064,
+    "0.5": 0.32096783447265625,
+    "0.75": 0.3625824890136719,
+    "0.9": 0.41925458984375,
+    "1": 0.9206112060546876
+  },
+  "typical_half_max_d": 0.32095556640625,
+  "seeds": {
+    "0": {
+      "warm_hash": "71f4c1599ef18971",
+      "min_post_warm_sum": 23.307704956054685,
+      "budget": 30.812912109375,
+      "feasible": true,
+      "final": {
+        "tau": 0.32096783447265625,
+        "n_post": 96,
+        "budget_total": 30.812912109375,
+        "spent": 30.741701904296875,
+        "mean_post_warm_d": 0.32022606150309246,
+        "satisfied": true,
+        "slack": 0.07121020507812403,
+        "tightness": 0.9976889492033291,
+        "per_round_spent": [
+          15.3974287109375,
+          15.344273193359376
+        ]
+      },
+      "n_unique": 128,
+      "warm_ok": true,
+      "n_outside_typical_half": 37,
+      "overlap_with_FC": 0.3359375,
+      "unconstrained_replay_matches_stored_FC": true,
+      "FC_post_warm_mean_d": 0.4471647440592448,
+      "rounds": [
+        {
+          "round_d_sum": 15.3974287109375,
+          "round_d_cap": 15.406456054687501,
+          "round_d_mean": 0.3207797648111979,
+          "paced_cap": 15.406456054687501,
+          "reserve_future": 12.061570068359377,
+          "lp_fractional_d_sum": 15.406456054687506,
+          "naive_rounding_d_sum": 15.497427124023439,
+          "naive_rounding_violates": true,
+          "n_rounding_repairs": 2,
+          "rounding_objective_loss": 0.06284310715332708,
+          "rounding_objective_loss_rel": 0.00026202289986738145,
+          "n_lp_positive_value_selected": 48,
+          "n_zero_marginal_random_fill": 0,
+          "n_exploration_sequences": 0,
+          "round_select_s": 0.32856202125549316,
+          "round_objective": 239.77538166302548
+        },
+        {
+          "round_d_sum": 15.344273193359376,
+          "round_d_cap": 15.415483398437498,
+          "round_d_mean": 0.319672358194987,
+          "paced_cap": 15.415483398437498,
+          "reserve_future": 0.0,
+          "lp_fractional_d_sum": 15.415483398437486,
+          "naive_rounding_d_sum": 15.344273193359376,
+          "naive_rounding_violates": false,
+          "n_rounding_repairs": 0,
+          "rounding_objective_loss": 0.0,
+          "rounding_objective_loss_rel": 0.0,
+          "n_lp_positive_value_selected": 48,
+          "n_zero_marginal_random_fill": 0,
+          "n_exploration_sequences": 0,
+          "round_select_s": 0.8640532493591309,
+          "round_objective": 147.49469853582926
+        }
+      ]
+    },
+    "1": {
+      "warm_hash": "1d2b3965567279e4",
+      "min_post_warm_sum": 23.294895263671876,
+      "budget": 30.812912109375,
+      "feasible": true,
+      "final": {
+        "tau": 0.32096783447265625,
+        "n_post": 96,
+        "budget_total": 30.812912109375,
+        "spent": 30.80938146972656,
+        "mean_post_warm_d": 0.32093105697631835,
+        "satisfied": true,
+        "slack": 0.0035306396484386937,
+        "tightness": 0.9998854168786155,
+        "per_round_spent": [
+          15.289714721679687,
+          15.519666748046875
+        ]
+      },
+      "n_unique": 128,
+      "warm_ok": true,
+      "n_outside_typical_half": 44,
+      "overlap_with_FC": 0.3203125,
+      "unconstrained_replay_matches_stored_FC": true,
+      "FC_post_warm_mean_d": 0.45101352818806967,
+      "rounds": [
+        {
+          "round_d_sum": 15.289714721679687,
+          "round_d_cap": 15.406456054687501,
+          "round_d_mean": 0.3185357233683268,
+          "paced_cap": 15.406456054687501,
+          "reserve_future": 12.048760375976563,
+          "lp_fractional_d_sum": 15.406456054687517,
+          "naive_rounding_d_sum": 15.289714721679687,
+          "naive_rounding_violates": false,
+          "n_rounding_repairs": 0,
+          "rounding_objective_loss": 0.0,
+          "rounding_objective_loss_rel": 0.0,
+          "n_lp_positive_value_selected": 48,
+          "n_zero_marginal_random_fill": 0,
+          "n_exploration_sequences": 0,
+          "round_select_s": 0.2968888282775879,
+          "round_objective": 239.9800752018374
+        },
+        {
+          "round_d_sum": 15.519666748046875,
+          "round_d_cap": 15.523197387695312,
+          "round_d_mean": 0.3233263905843099,
+          "paced_cap": 15.523197387695312,
+          "reserve_future": 0.0,
+          "lp_fractional_d_sum": 15.523197387695276,
+          "naive_rounding_d_sum": 15.5457490234375,
+          "naive_rounding_violates": true,
+          "n_rounding_repairs": 2,
+          "rounding_objective_loss": 0.0006484063102050186,
+          "rounding_objective_loss_rel": 4.42699966663863e-06,
+          "n_lp_positive_value_selected": 48,
+          "n_zero_marginal_random_fill": 0,
+          "n_exploration_sequences": 0,
+          "round_select_s": 0.9189167022705078,
+          "round_objective": 146.46566264659896
+        }
+      ]
+    },
+    "2": {
+      "warm_hash": "ba99ad010c44de11",
+      "min_post_warm_sum": 23.32701892089844,
+      "budget": 30.812912109375,
+      "feasible": true,
+      "final": {
+        "tau": 0.32096783447265625,
+        "n_post": 96,
+        "budget_total": 30.812912109375,
+        "spent": 30.734087036132813,
+        "mean_post_warm_d": 0.3201467399597168,
+        "satisfied": true,
+        "slack": 0.0788250732421858,
+        "tightness": 0.997441816827881,
+        "per_round_spent": [
+          15.34887463378906,
+          15.38521240234375
+        ]
+      },
+      "n_unique": 128,
+      "warm_ok": true,
+      "n_outside_typical_half": 41,
+      "overlap_with_FC": 0.3046875,
+      "unconstrained_replay_matches_stored_FC": true,
+      "FC_post_warm_mean_d": 0.44888485717773435,
+      "rounds": [
+        {
+          "round_d_sum": 15.34887463378906,
+          "round_d_cap": 15.406456054687501,
+          "round_d_mean": 0.3197682215372721,
+          "paced_cap": 15.406456054687501,
+          "reserve_future": 12.071478515625,
+          "lp_fractional_d_sum": 15.40645605468751,
+          "naive_rounding_d_sum": 15.34887463378906,
+          "naive_rounding_violates": false,
+          "n_rounding_repairs": 0,
+          "rounding_objective_loss": 0.0,
+          "rounding_objective_loss_rel": 0.0,
+          "n_lp_positive_value_selected": 48,
+          "n_zero_marginal_random_fill": 0,
+          "n_exploration_sequences": 0,
+          "round_select_s": 0.31644439697265625,
+          "round_objective": 239.84129907975722
+        },
+        {
+          "round_d_sum": 15.38521240234375,
+          "round_d_cap": 15.464037475585938,
+          "round_d_mean": 0.32052525838216145,
+          "paced_cap": 15.464037475585938,
+          "reserve_future": 0.0,
+          "lp_fractional_d_sum": 15.464037475585318,
+          "naive_rounding_d_sum": 15.577937622070312,
+          "naive_rounding_violates": true,
+          "n_rounding_repairs": 1,
+          "rounding_objective_loss": 0.059332448916762814,
+          "rounding_objective_loss_rel": 0.0004031523857251679,
+          "n_lp_positive_value_selected": 48,
+          "n_zero_marginal_random_fill": 0,
+          "n_exploration_sequences": 0,
+          "round_select_s": 0.9242684841156006,
+          "round_objective": 147.11193831025022
+        }
+      ]
+    }
+  },
+  "all_ok": true
+}

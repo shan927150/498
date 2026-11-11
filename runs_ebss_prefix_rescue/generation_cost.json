@@ -1,0 +1,112 @@
+{
+ "conditions": {
+  "PX_PO": {
+   "wall_s": 1117.4786841869354,
+   "gpu_seconds": 1117.4786841869354,
+   "breakdown_s": {
+    "prefix_prefill": 3.2200875282287598,
+    "decode_model_forward_compute": 212.11583852767944,
+    "decode_expert_weight_transfer": 889.2203135490417,
+    "routing_capture_hook": 0.7644305229187012,
+    "expert_statistics_update": 0.11021709442138672,
+    "beam_scoring": 0.060822248458862305,
+    "beam_pruning_selection": 1.5276570320129395,
+    "beam_state_gather_and_kv_reorder": 0.47649693489074707,
+    "other": 9.978411436080933
+   },
+   "breakdown_frac": {
+    "prefix_prefill": 0.0028815764269764566,
+    "decode_model_forward_compute": 0.18981720053613493,
+    "decode_expert_weight_transfer": 0.7957411938181013,
+    "routing_capture_hook": 0.0006840699066697318,
+    "expert_statistics_update": 9.863054291235514e-05,
+    "beam_scoring": 5.442832092553968e-05,
+    "beam_pruning_selection": 0.0013670623712438961,
+    "beam_state_gather_and_kv_reorder": 0.00042640528341879525,
+    "other": 0.008929432793617034
+   },
+   "accounting": {
+    "prefix_tokens": 1024,
+    "emitted_continuation_tokens": 7168,
+    "final_calibration_tokens": 8192,
+    "prefill_token_positions": 1024,
+    "decode_forward_rows": 28672,
+    "scored_candidates": 4340715104,
+    "forward_calls": 449
+   },
+   "s_per_generated_token": 0.15589825393232917,
+   "s_per_final_token": 0.13641097219078802,
+   "peak_gpu_gb": 11.611035136,
+   "peak_cpu_gb": 40.200536,
+   "kv_cache_peak_gb": 6.442450944,
+   "h2d_gb_per_s": 12.553213015370506,
+   "bytes_host_to_device": 11186460426240
+  },
+  "PX_EBSS": {
+   "wall_s": 1118.7819652557373,
+   "gpu_seconds": 1118.7819652557373,
+   "breakdown_s": {
+    "prefix_prefill": 2.846237897872925,
+    "decode_model_forward_compute": 217.3666274547577,
+    "decode_expert_weight_transfer": 880.0989506244659,
+    "routing_capture_hook": 0.7644662857055664,
+    "expert_statistics_update": 0.14217495918273926,
+    "beam_scoring": 0.07284092903137207,
+    "beam_pruning_selection": 9.83558964729309,
+    "beam_state_gather_and_kv_reorder": 0.6500437259674072,
+    "other": 7.001058101654053
+   },
+   "breakdown_frac": {
+    "prefix_prefill": 0.002544059611705964,
+    "decode_model_forward_compute": 0.1942893312796003,
+    "decode_expert_weight_transfer": 0.7866609450537471,
+    "routing_capture_hook": 0.0006833047242564807,
+    "expert_statistics_update": 0.0001270805830120739,
+    "beam_scoring": 6.51075814029259e-05,
+    "beam_pruning_selection": 0.008791368563285438,
+    "beam_state_gather_and_kv_reorder": 0.0005810301346603652,
+    "other": 0.006257772468329389
+   },
+   "accounting": {
+    "prefix_tokens": 1024,
+    "emitted_continuation_tokens": 7168,
+    "final_calibration_tokens": 8192,
+    "prefill_token_positions": 1024,
+    "decode_forward_rows": 28672,
+    "scored_candidates": 4340715104,
+    "forward_calls": 449
+   },
+   "s_per_generated_token": 0.15608007327786513,
+   "s_per_final_token": 0.136570064118132,
+   "peak_gpu_gb": 11.61540352,
+   "peak_cpu_gb": 40.200116,
+   "kv_cache_peak_gb": 6.442450944,
+   "h2d_gb_per_s": 12.68364009699582,
+   "bytes_host_to_device": 11186460426240
+  },
+  "RS_PO": {
+   "wall_s": 1264.104237794876,
+   "generated_tokens": 8176,
+   "s_per_generated_token": 0.15461157507275883,
+   "peak_gpu_gb": 11.610304,
+   "peak_cpu_gb": 40.199336,
+   "expert_transfer_frac": 0.7898666114309447
+  },
+  "RS_EBSS": {
+   "wall_s": 1376.5615365505219,
+   "wall_incl_audit_hook_s": 2415.0876162052155,
+   "generated_tokens": 8176,
+   "s_per_generated_token": 0.16836613705363526,
+   "peak_gpu_gb": 11.616108544,
+   "peak_cpu_gb": 40.201048,
+   "expert_transfer_frac": 0.7254682540663573,
+   "note": "excludes the read-only pool-capture audit hook of the fidelity study"
+  },
+  "C4_NATURAL": {
+   "wall_s": 0.0,
+   "note": "no generation; data acquisition/tokenisation cost not measured in this repository and not invented"
+  }
+ },
+ "gpu": "one 20 GB A100 MIG slice; GPU-seconds = wall",
+ "token_denominators": "prefix runs: 16 x 448 generated continuation tokens; random-start: 16 x 511"
+}

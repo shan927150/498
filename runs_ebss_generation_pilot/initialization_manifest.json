@@ -1,0 +1,50 @@
+{
+ "policy": "uniform Random(V) over non-special ids 0..151642 (Alg. 1 line 4; distribution assumed)",
+ "generator": "numpy.random.default_rng(seed).integers(0, 151643, size=16)",
+ "seed": 20261110,
+ "pilot_start_ids": [
+  117006,
+  94940,
+  124969,
+  21551,
+  33730,
+  96708,
+  9883,
+  79557,
+  80721,
+  107342,
+  126676,
+  92741,
+  45944,
+  133771,
+  147278,
+  39127
+ ],
+ "smoke_start_ids": [
+  117006,
+  94940,
+  124969,
+  21551
+ ],
+ "start_tokens_decoded": [
+  "\u51fa\u4f17",
+  "\tBlock",
+  "\u0645\u0624",
+  " ethnic",
+  "regar",
+  " initWithNibName",
+  "prev",
+  " Accord",
+  " rhythms",
+  "\u4e00\u70b9\u70b9",
+  "\u0e17\u0e33\u0e07\u0e32\u0e19",
+  " Mounted",
+  " recreation",
+  " \u0437\u0430\u0434\u0430\u0447",
+  "\u101c",
+  "ivation"
+ ],
+ "shared_by_both_methods": true,
+ "frozen_before_generation": true,
+ "created": "2026-11-10 02:15:39"
+}

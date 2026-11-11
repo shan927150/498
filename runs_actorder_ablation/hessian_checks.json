@@ -1,0 +1,266 @@
+{
+ "FR": {
+  "G20261111": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7012536255228851,
+    "mean_frac_columns_changed_group": 0.02592477509816591,
+    "by_proj": {
+     "gate_proj": 0.030118815104166665,
+     "up_proj": 0.030118815104166665,
+     "down_proj": 0.0175366950861644
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.0039038052538613362,
+    "AOF": 0.0039038052538613362,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261112": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7005660855521758,
+    "mean_frac_columns_changed_group": 0.02611071654375539,
+    "by_proj": {
+     "gate_proj": 0.0302734375,
+     "up_proj": 0.0302734375,
+     "down_proj": 0.01778527463126617
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.003826567141474958,
+    "AOF": 0.003826567141474958,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261113": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.6996951943884293,
+    "mean_frac_columns_changed_group": 0.025719598342483448,
+    "by_proj": {
+     "gate_proj": 0.0299072265625,
+     "up_proj": 0.0299072265625,
+     "down_proj": 0.017344341902450346
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.003820863663418464,
+    "AOF": 0.003820863663418464,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261114": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7017045460227463,
+    "mean_frac_columns_changed_group": 0.025766453615182802,
+    "by_proj": {
+     "gate_proj": 0.029931640625,
+     "up_proj": 0.029931640625,
+     "down_proj": 0.017436079595548413
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.0038400312082671117,
+    "AOF": 0.0038400312082671117,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261115": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.6959763650058044,
+    "mean_frac_columns_changed_group": 0.025966944858535297,
+    "by_proj": {
+     "gate_proj": 0.03009033203125,
+     "up_proj": 0.03009033203125,
+     "down_proj": 0.017720170513105888
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.003905724999099813,
+    "AOF": 0.003905724999099813,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  }
+ },
+ "FC": {
+  "G20261111": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7077095416477985,
+    "mean_frac_columns_changed_group": 0.028136590515108157,
+    "by_proj": {
+     "gate_proj": 0.03253987630208333,
+     "up_proj": 0.03253987630208333,
+     "down_proj": 0.01933001894115781
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.0049044036621909495,
+    "AOF": 0.0049044036621909495,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261112": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7081889455103212,
+    "mean_frac_columns_changed_group": 0.028237452659393765,
+    "by_proj": {
+     "gate_proj": 0.032568359375,
+     "up_proj": 0.032568359375,
+     "down_proj": 0.019575639228181292
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.004937871833606422,
+    "AOF": 0.004937871833606422,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261113": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7093218565194144,
+    "mean_frac_columns_changed_group": 0.028167909565511056,
+    "by_proj": {
+     "gate_proj": 0.03256022135416667,
+     "up_proj": 0.03256022135416667,
+     "down_proj": 0.019383285988199835
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.004920456385936352,
+    "AOF": 0.004920456385936352,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261114": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7135749586133493,
+    "mean_frac_columns_changed_group": 0.028157798694964084,
+    "by_proj": {
+     "gate_proj": 0.03238525390625,
+     "up_proj": 0.03238525390625,
+     "down_proj": 0.019702888272392253
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.004960808186451506,
+    "AOF": 0.004960808186451506,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  },
+  "G20261115": {
+   "AOF_hessians_equal_AO": "480/480",
+   "AOF_perm_equal_OO": "240/240",
+   "AOF_vs_OO_actorder": {
+    "frac_positions_changed": 0.0,
+    "frac_columns_changed_group": 0.0,
+    "basis": "every applied permutation verified equal to the ORIGINAL one"
+   },
+   "AO_vs_OO_actorder": {
+    "n_identical": 0,
+    "n": 720,
+    "mean_frac_positions_changed": 0.7135427768031756,
+    "mean_frac_columns_changed_group": 0.028260387076685826,
+    "by_proj": {
+     "gate_proj": 0.032450358072916664,
+     "up_proj": 0.032450358072916664,
+     "down_proj": 0.019880445084224145
+    }
+   },
+   "hessian_median_rel_fro_vs_OO": {
+    "AO": 0.0049348453018545485,
+    "AOF": 0.0049348453018545485,
+    "note": "AOF Hessians are bitwise the AO Hessians"
+   },
+   "routed_token_counts_equal_R_O": true
+  }
+ }
+}

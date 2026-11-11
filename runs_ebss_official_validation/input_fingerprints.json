@@ -1,0 +1,74 @@
+{
+ "raw_dataset_sha256": "691c7a50618afbec7217168349835fe005eae869a7c5d98321b375c288253de9",
+ "ebss_windows_tensor_sha256": "926770f5e21154796571c2543d436c50bb540f784cee858208e60b0db42244ed",
+ "ebss_ordered_set_sha256": "926770f5e21154796571c2543d436c50bb540f784cee858208e60b0db42244ed",
+ "cache_token_sha256": "e7df5ec2fbfe593a02d085d99f2b8b4c852834a9a304e0c0b5f35ba76e221d1c",
+ "cache_files": {
+  "1": {
+   "shape": [
+    874,
+    512,
+    2048
+   ],
+   "sha256": "268583ef1e775abaeb2dc4f3cfa1296b99c0481691653b878206c665fc7d2da1",
+   "tensor_sha256": "9fcf945583597f3fde60e65e1e9cf0c0396d02aa8e47394267a7430283a942f2",
+   "nonfinite": 0
+  },
+  "8": {
+   "shape": [
+    874,
+    512,
+    2048
+   ],
+   "sha256": "8817597efe8729d14f267bbe58ddbab6962ba28ca1a65adf3368322b2f038d1c",
+   "tensor_sha256": "70308c44510976ba7d3b967ff05b52525d609cef9d434dc5bed8edc831d02fa5",
+   "nonfinite": 0
+  },
+  "16": {
+   "shape": [
+    874,
+    512,
+    2048
+   ],
+   "sha256": "4db44daba91fb09ad2c8771844c10f9efb2c0f7004628f8ed4674762639325ad",
+   "tensor_sha256": "1ae7b856f52995e35dc10e8829294916856602a0b5c7db152f03474b717b7452",
+   "nonfinite": 0
+  },
+  "23": {
+   "shape": [
+    874,
+    512,
+    2048
+   ],
+   "sha256": "6b6e9bd2ccad1459cdc17a4f443e06fa4e5d4441146fbcde68ac90d7165b03a4",
+   "tensor_sha256": "c875dd0920fc1dc26545b1410ce5eb54056eef4491768e7cf45b9390dfbd4623",
+   "nonfinite": 0
+  }
+ },
+ "c4_selection_ids_hash": {
+  "FR_s0": "ec355fb8d866e4ff",
+  "FR_s1": "e36d91e6b151320b",
+  "FR_s2": "cf1f867af56f29d1",
+  "TR_s0": "cc3f2c76225a8a3a",
+  "TR_s1": "adf3bf99c91d7adc",
+  "TR_s2": "f04aaf80fedf8619",
+  "FC_s0": "0353229b6d3090db",
+  "FC_s1": "325e8efc5aa125e7",
+  "FC_s2": "f63a4a6122b79aab"
+ },
+ "ppl_windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+ "reconstruction_cache": "~/moe_cache (historical, unchanged), rows 2128-2255",
+ "installed_weights_sha256": {
+  "FR_s0": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "FR_s1": "277117a9fcac690166350c1c902910e4437474ed536edbdd16a60bb2592ea6af",
+  "FR_s2": "8f18b500e156ce6cbd26bd6dd08ce1874b5280caed58515d2b567c86e4b691e3",
+  "TR_s0": "e87860e95b7fcb4622173253f0547605ccfb8ff2f1f8900fdebedb7eef14c199",
+  "TR_s1": "64a5ecff98fd65c200a21c68a09ddfaae61750f31a5f321b8f4bef67cb3b9a84",
+  "TR_s2": "7e7781fbdac9bc782d461489b90186a9ff9d040a437c35dec5c034f7dbfdd25f",
+  "FC_s0": "14c54a787aef7fc0f2701d3f8eb1180066d3f3d865f810ae8461fac12fb9dd8e",
+  "FC_s1": "2733327a5a2b1b9a1d2e688dde2d748a88aef924b60d70b4050ceba759bd06f6",
+  "FC_s2": "8ba4760dc95fd2cc57ab9171ad37b1a539e6fd18a4f6b9d5349d4754617ed804",
+  "EBSS": "09664bff11698ac60303b9b1b07a332e5af954b2a6c367f74a50bb25ed461094"
+ },
+ "protocol_sha256": "ecbdb62c12238da371d8e4764691fe11fa27ba12e060f292cfb73eb6a0346f33"
+}

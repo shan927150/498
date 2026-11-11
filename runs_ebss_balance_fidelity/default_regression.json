@@ -1,0 +1,195 @@
+{
+ "synthetic_vs_frozen_pre_study_generator": {
+  "cases": [
+   {
+    "seed": 0,
+    "use_balance": true,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 0,
+    "use_balance": true,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 0,
+    "use_balance": false,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 0,
+    "use_balance": false,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 1,
+    "use_balance": true,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 1,
+    "use_balance": true,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 1,
+    "use_balance": false,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 1,
+    "use_balance": false,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 2,
+    "use_balance": true,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 2,
+    "use_balance": true,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 2,
+    "use_balance": false,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 2,
+    "use_balance": false,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 3,
+    "use_balance": true,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 3,
+    "use_balance": true,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 3,
+    "use_balance": false,
+    "options_explicit": false,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   },
+   {
+    "seed": 3,
+    "use_balance": false,
+    "options_explicit": true,
+    "outputs_bitwise": true,
+    "every_step_scores_and_decisions_bitwise": true
+   }
+  ],
+  "passed": true
+ },
+ "historical_pilot_artifacts": {
+  "ebss": {
+   "sigma_bitwise_vs_frozen": true,
+   "final_beam_sigma_bitwise_vs_frozen": true,
+   "final_scores_bitwise_vs_frozen": true,
+   "sigma_vs_stored_max_abs": 2.7755575615628914e-17,
+   "final_scores_vs_stored_max_abs": 5.551115123125783e-17,
+   "final_pick_reproduced": true,
+   "passed": true
+  },
+  "po": {
+   "sigma_bitwise_vs_frozen": true,
+   "final_beam_sigma_bitwise_vs_frozen": true,
+   "final_scores_bitwise_vs_frozen": true,
+   "sigma_vs_stored_max_abs": 1.3877787807814457e-17,
+   "final_scores_vs_stored_max_abs": 0.0,
+   "final_pick_reproduced": true,
+   "passed": true
+  },
+  "passed": true
+ },
+ "invariance": {
+  "EQ4_RATE": {
+   "po_bitwise_identical_under_variant_options": true,
+   "score_minus_po_equals_sigma_over_tau_max_abs": 2.220446049250313e-16,
+   "config_serialised": {
+    "balance_std_mode": "eq4",
+    "usage_mode": "per_token",
+    "top_k": 2
+   },
+   "passed": true
+  },
+  "EQ4_SHARE": {
+   "po_bitwise_identical_under_variant_options": true,
+   "score_minus_po_equals_sigma_over_tau_max_abs": 2.0816681711721685e-16,
+   "config_serialised": {
+    "balance_std_mode": "eq4",
+    "usage_mode": "assignment_share",
+    "top_k": 2
+   },
+   "passed": true
+  },
+  "ALG1_SHARE": {
+   "po_bitwise_identical_under_variant_options": true,
+   "score_minus_po_equals_sigma_over_tau_max_abs": 3.885780586188048e-16,
+   "config_serialised": {
+    "balance_std_mode": "algorithm1",
+    "usage_mode": "assignment_share",
+    "top_k": 2
+   },
+   "passed": true
+  },
+  "ALG1_RATE": {
+   "po_bitwise_identical_under_variant_options": true,
+   "score_minus_po_equals_sigma_over_tau_max_abs": 3.3306690738754696e-16,
+   "config_serialised": {
+    "balance_std_mode": "algorithm1",
+    "usage_mode": "per_token",
+    "top_k": 2
+   },
+   "passed": true
+  },
+  "passed": true
+ },
+ "real_model": {
+  "PROBABILITY_ONLY": {
+   "length32_selection_equals_score_audit_outputs": true
+  },
+  "EQ4_RATE": {
+   "length32_selection_equals_score_audit_outputs": true
+  },
+  "passed": true,
+  "note": "beam state of the 4 x 128 run at |S| = 32 put through the length-32 final selection vs the score audit's 4 x 32 production outputs (same starts/layout)"
+ },
+ "passed_cpu": true,
+ "passed": true
+}

@@ -1,0 +1,36 @@
+{
+ "decision": "MODEL-MATCHED-EBSS-BALANCING-SUPPORTED",
+ "balancing_class_ignoring_gptq": "MODEL-MATCHED-EBSS-BALANCING-SUPPORTED",
+ "rule": {
+  "precedence": "RUN-BLOCKED -> QUALITY-GAIN (only if the optional B=16 GPTQ comparison completed validly) -> balancing classes",
+  "RUN-BLOCKED": "a generator correctness gate fails, the 16 x 512 pilot does not complete for BOTH methods, a generated set is invalid (not 16 distinct full 512-token sequences of real ids), or resources prevent the measurement",
+  "MODEL-MATCHED-EBSS-QUALITY-GAIN": "B=16 GPTQ valid for all configs AND EBSS mean reconstruction is lower than Probability-Only by >= 0.5 % AND lower than every C4 Random B=16 seed AND >= 0.5 % lower than the C4 Random seed mean",
+  "MODEL-MATCHED-EBSS-BALANCING-SUPPORTED": "EBSS set-level paper sigma (Eq. 3/4, all 24 MoE layers) AND mean per-layer load CV (all 24 layers) are both lower than Probability-Only",
+  "MODEL-MATCHED-EBSS-BALANCING-NOT-SUPPORTED": "neither is lower (EBSS equal or worse on both)",
+  "MODEL-MATCHED-EBSS-MIXED": "exactly one of the two balance metrics is lower",
+  "notes": "set-level metrics over the 16 x 512 = 8,192 tokens of each set; lower-tail exposure (min / p5 / p10 / zero-exposure experts), per-layer results and layers 1/8/16/23 are reported separately and do not enter the label. With exactly k = 4 routed experts per token the per-layer mean count is fixed, so sigma_l and CV_l are proportional within a layer; the two means can still differ only through layer weighting (ddof differs). One seed, one start-token draw: no statistical generality."
+ },
+ "inputs": {
+  "pilot_complete": true,
+  "gates_ok": true,
+  "d_paper_sigma": -0.0008578613635025281,
+  "d_cv": -0.012760237216706771,
+  "gptq": {
+   "valid": true,
+   "ebss": 0.006130761893495209,
+   "po": 0.006102680778179296,
+   "c4": [
+    0.0053817881215029425,
+    0.005394993762483961,
+    0.005381452384591753
+   ]
+  }
+ },
+ "lower_tail": {
+  "d_min": -5.625,
+  "d_p10": 11.445833333333326,
+  "d_n_zero": 0.0
+ },
+ "layers_cv_improved_of_24": 18,
+ "scope": "16 x 512 pilot, one seed, one start-token draw; not full-budget EBSS effectiveness"
+}

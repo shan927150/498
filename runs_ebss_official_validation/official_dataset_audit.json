@@ -1,0 +1,140 @@
+{
+ "n_lines": 600,
+ "n_records": 600,
+ "parse_errors": [],
+ "keys": {
+  "text": 600
+ },
+ "content_format": "raw text in key 'text'; no token ids, no source / tokenizer / model metadata",
+ "tokenizer": "Qwen/Qwen1.5-MoE-A2.7B snapshot 1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+ "tokenization_s": 0.6953902244567871,
+ "token_counts": {
+  "quantiles": {
+   "min": 16.0,
+   "p5": 35.0,
+   "p25": 83.75,
+   "median": 2044.5,
+   "p75": 2048.0,
+   "p95": 2048.0,
+   "max": 2062.0
+  },
+  "mean": 1141.4116666666666,
+  "total": 684847,
+  "histogram": {
+   "[0,64)": 114,
+   "[64,128)": 86,
+   "[128,256)": 39,
+   "[256,512)": 34,
+   "[512,1024)": 11,
+   "[1024,2048)": 87,
+   "[2048,2049)": 227,
+   ">=2049": 2
+  }
+ },
+ "n_records_ge_512_tokens": 327,
+ "frac_records_with_complete_512_window": 0.545,
+ "n_records_ge_2048_tokens": 229,
+ "first_128_records": {
+  "n_ge_512": 55,
+  "median_tokens": 285.0
+ },
+ "n_unique_texts": 553,
+ "exact_duplicate_records": 47,
+ "n_duplicate_groups": 8,
+ "exact_duplicate_first512_windows": 40,
+ "record_i_first_token_equals_i": {
+  "n": 148,
+  "of": 600,
+  "first_mismatch": 94,
+  "note": "records 0-93 start with token id i; from record 94 the seed would be a lone byte token (U+FFFD / merged on decode), so re-tokenization cannot recover it"
+ },
+ "records_starting_with_replacement_char": 135,
+ "special_strings_in_text": {
+  "<|endoftext|>": 0,
+  "<|im_start|>": 0,
+  "<|im_end|>": 0
+ },
+ "special_token_ids_in_tokenization": 0,
+ "decode_roundtrip_exact": 598,
+ "decode_roundtrip_mismatch_records": [
+  156,
+  333
+ ],
+ "records_with_cjk_chars": 355,
+ "text_diagnostics_first512_of_long_records": {
+  "n_windows": 327,
+  "exact_duplicate_windows": 40,
+  "distinct1_mean": 0.1195587251529052,
+  "distinct2_mean": 0.22726320640107245,
+  "distinct1_quantiles": {
+   "min": 0.00390625,
+   "p10": 0.008984375000000003,
+   "median": 0.078125,
+   "p90": 0.33281250000000007,
+   "max": 0.51171875
+  },
+  "distinct2_quantiles": {
+   "min": 0.005870841487279843,
+   "p10": 0.011741682974559686,
+   "median": 0.17221135029354206,
+   "p90": 0.5996086105675147,
+   "max": 1.0
+  },
+  "frac_windows_distinct1_below_0_1": 0.5565749235474006,
+  "set_distinct1": 0.04370938455657492,
+  "set_distinct2": 0.153042843378397,
+  "n_unique_token_types": 7318,
+  "repetition_rate_mean": 0.8804412748470948,
+  "longest_identical_token_run": {
+   "min": 1.0,
+   "p10": 1.0,
+   "median": 2.0,
+   "p90": 248.80000000000348,
+   "max": 509.0
+  },
+  "zlib_ratio": {
+   "min": 0.01416015625,
+   "p10": 0.01884765625,
+   "median": 0.115234375,
+   "p90": 0.3642578125000001,
+   "max": 0.49853515625
+  }
+ },
+ "near_duplicates_first512_of_long_records": {
+  "n_pairs": 53301,
+  "max_jaccard": 1.0,
+  "mean_jaccard": 0.014363662651598637,
+  "pairs_jaccard_ge_0.5": 756,
+  "pairs_jaccard_ge_0.8": 748,
+  "windows_in_a_pair_ge_0.5": 63,
+  "windows_in_a_pair_ge_0.8": 52
+ },
+ "sample_for_format_validation": [
+  {
+   "record": 0,
+   "n_tokens": 2048,
+   "head": "! A A. 1 B. 2 C. 3 D. 4\n\n2\n\n### GMAT Club Daily Prep\n\n#### Thank you for using the timer - this advanced tool can estimate your performance and suggest more pra"
+  },
+  {
+   "record": 1,
+   "n_tokens": 69,
+   "head": "\"\u5728\u4e13\u7528\u7535\u8bdd\u7cfb\u7edf\u4e2d\uff0c\u5f53\u6240\u62e8\u53f7\u7801\u53d1\u751f\u5404\u79cd\u7c7b\u578b\u7684\u9519\u8bef\u65f6\uff0c\u4f1a\u53d7\u5230\u62e6\u622a\u5904\u7406\uff0c\u6b64\u65f6\u76ee\u6807\u4f1a\u544a\u8bc9\u7cfb\u7edf\u5982\u4f55\u8fdb\u884c\u540e\u7eed\u5904\u7406\uff0c\u62e6\u622a\u5904\u7406\u6709____\u3002\nA. \u76f4\u63a5\u63a5\u901a\nB. \u8d77\u547c\nC. \u9519\u8bef\u5904\u7406\nD. \u4e0d\u53bb\u7535\"\n\u7b54\u6848:\nABCD"
+  },
+  {
+   "record": 5,
+   "n_tokens": 2048,
+   "head": "&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.0000&0.000"
+  },
+  {
+   "record": 127,
+   "n_tokens": 2047,
+   "head": "\u00f3\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n\u00d7\n"
+  },
+  {
+   "record": 300,
+   "n_tokens": 38,
+   "head": "\ufffd\u6c14\nA. \u2460\u2461\nB. \u2461\u2462\nC. \u2460\u2462\nD. \u2461\u2463\n\u7b54\u6848:\n\nB"
+  }
+ ],
+ "note": "statistics describe the artifact only; no record is altered or excluded on subjective quality grounds"
+}

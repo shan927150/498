@@ -1,0 +1,106 @@
+{
+ "passed": true,
+ "ao_G20261111": {
+  "FR": {
+   "result": "runs_frozen_routing/results/FR_AO.json",
+   "hessians_bitwise": "480/480",
+   "token_counts_identical": true,
+   "installed_digest_equal": true,
+   "ppl_stored": 9.265860908067534,
+   "ppl_reevaluated": 9.265860908067534,
+   "ppl_exact": true,
+   "per_window_exact": true,
+   "mean_nll_exact": true,
+   "eval_s": 43.449087381362915,
+   "passed": true
+  },
+  "FC": {
+   "result": "runs_frozen_routing/results/FC_AO.json",
+   "hessians_bitwise": "480/480",
+   "token_counts_identical": true,
+   "installed_digest_equal": true,
+   "ppl_stored": 9.277880596192395,
+   "ppl_reevaluated": 9.277880596192395,
+   "ppl_exact": true,
+   "per_window_exact": true,
+   "mean_nll_exact": true,
+   "eval_s": 20.8405499458313,
+   "passed": true
+  }
+ },
+ "fingerprints": {
+  "FR_OO_ORIGINAL": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FR_AA_G20261111": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FR_AA_G20261112": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FR_AA_G20261113": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FR_AA_G20261114": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FR_AA_G20261115": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FR_AO_G20261111": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_OO_ORIGINAL": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_AA_G20261111": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_AA_G20261112": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_AA_G20261113": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_AA_G20261114": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_AA_G20261115": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  },
+  "FC_AO_G20261111": {
+   "result_json": true,
+   "weight_files": true,
+   "n_weight_files": 4
+  }
+ },
+ "fingerprint_s": 223.30907821655273,
+ "model_load_s": 8.286652088165283,
+ "note": "G20261111 AO PPL compared with the stored JSON floats (9.265860908067534 / FC stored value), not rounded numbers"
+}

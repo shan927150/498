@@ -1,0 +1,75 @@
+{
+ "condition": "PX_EBSS",
+ "wall_s": 1118.7819652557373,
+ "gpu_seconds": 1118.7819652557373,
+ "timing": {
+  "total_s": 1118.7779896259308,
+  "stats_s": 0.14217495918273926,
+  "score_s": 0.07284092903137207,
+  "select_s": 9.83558964729309,
+  "reorder_gather_s": 0.6500437259674072,
+  "prefill_wall_s": 2.8585355281829834,
+  "forward_s": 1098.2300443649292,
+  "expert_transfer_s": 881.9597797393799,
+  "routing_hook_s": 0.7644662857055664,
+  "prefill_s": 2.846237897872925,
+  "prefill_expert_transfer_s": 1.8608291149139404
+ },
+ "forward_calls": 449,
+ "rows_forwarded": 28688,
+ "bytes_host_to_device": 11186460426240,
+ "h2d_gb_per_s": 12.68364009699582,
+ "accounting": {
+  "prefix_tokens": 1024,
+  "emitted_continuation_tokens": 7168,
+  "final_calibration_tokens": 8192,
+  "prefill_token_positions": 1024,
+  "decode_forward_rows": 28672,
+  "scored_candidates": 4340715104,
+  "forward_calls": 449
+ },
+ "prefill_expert_transfer_s": 1.8608291149139404,
+ "breakdown_s": {
+  "prefix_prefill": 2.846237897872925,
+  "decode_model_forward_compute": 217.3666274547577,
+  "decode_expert_weight_transfer": 880.0989506244659,
+  "routing_capture_hook": 0.7644662857055664,
+  "expert_statistics_update": 0.14217495918273926,
+  "beam_scoring": 0.07284092903137207,
+  "beam_pruning_selection": 9.83558964729309,
+  "beam_state_gather_and_kv_reorder": 0.6500437259674072,
+  "other": 7.001058101654053
+ },
+ "breakdown_frac": {
+  "prefix_prefill": 0.002544059611705964,
+  "decode_model_forward_compute": 0.1942893312796003,
+  "decode_expert_weight_transfer": 0.7866609450537471,
+  "routing_capture_hook": 0.0006833047242564807,
+  "expert_statistics_update": 0.0001270805830120739,
+  "beam_scoring": 6.51075814029259e-05,
+  "beam_pruning_selection": 0.008791368563285438,
+  "beam_state_gather_and_kv_reorder": 0.0005810301346603652,
+  "other": 0.006257772468329389
+ },
+ "continuation_tokens_per_s": 6.406967776211426,
+ "final_tokens_per_s": 7.322248887098772,
+ "peak_gpu_gb": 11.61540352,
+ "kv_cache_peak_gb": 6.442450944,
+ "peak_cpu_gb": 40.200116,
+ "validation": {
+  "shape_ok": true,
+  "ids_in_vocab": true,
+  "distinct_sequences": true,
+  "padding_tokens": 0,
+  "valid": true
+ },
+ "gpu_seconds_note": "one 20 GB MIG slice used exclusively; GPU-seconds = wall",
+ "load": {
+  "model_load_s": 9.286884069442749,
+  "pristine_all_parameters": true,
+  "digest_s": 20.674723148345947,
+  "place_s": 66.10974860191345,
+  "gpu_resident_gb": 4.75655424,
+  "expert_layer_bytes": 1038090240
+ }
+}

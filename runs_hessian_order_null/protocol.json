@@ -1,0 +1,194 @@
+{
+ "experiment": "FP32 Hessian accumulation-order null experiment (FR s0 / FC s0, layers 1/8/16/23)",
+ "question": "Can changing only the FP32 accumulation order of the same expert Hessian contributions produce different GPTQ solutions and measurable model-level PPL variation?",
+ "inputs": {
+  "input_manifest_sha256": "deb4fb1fe5ae08469607bb81fa52e731b52a5de068676cb19ebe1a891d10a9a0"
+ },
+ "mechanism": "per-sequence contribution Xf.T @ Xf (FP32 GEMM, unchanged) added with FP32 += into the block of the sequence's ORIGINAL replay position (K=4 contiguous blocks of 32); blocks summed over dim 0; intervention permutes the replay order, keeping every sequence's block, so only the FP32 addition order inside each block changes",
+ "orders": {
+  "20261121": {
+   "file": "runs_hessian_order_null/order_manifests/O20261121.json",
+   "manifest_sha256": "560c1fdfa030f98f6ec7cf9cd9b81f532a5d115c4a54fcf5702ad212d05fd74a",
+   "file_sha256": "cc12ae9e01cfafe6434a07620793b5e2b71184e10ccdc83191f6a5a36cbf4e1a"
+  },
+  "20261122": {
+   "file": "runs_hessian_order_null/order_manifests/O20261122.json",
+   "manifest_sha256": "c5e1bdc2031573b234e024613972000dc181fb9511521ddf061396c23d59a9fe",
+   "file_sha256": "e02d75138fd4c7a05476c5b4a831a1601d44558b3752be2c59bcaa5705b77738"
+  },
+  "20261123": {
+   "file": "runs_hessian_order_null/order_manifests/O20261123.json",
+   "manifest_sha256": "e69de150ac4725998df919db61840ff883da26a28da8d42699e79e7730d32e2f",
+   "file_sha256": "7883021071514c7e03001590cb6af2e0eb3b214c3da7f2b47717b50d2e6350cf"
+  },
+  "20261124": {
+   "file": "runs_hessian_order_null/order_manifests/O20261124.json",
+   "manifest_sha256": "9d10abb39dfd8ede64a6acbaf4db9bd204c8fa690a90d315cec8078c181d4e3a",
+   "file_sha256": "eb83fa77fbaf0a6288184902716ed00a15fb0bcdbbf6c0bc988eb7fef7590845"
+  },
+  "20261125": {
+   "file": "runs_hessian_order_null/order_manifests/O20261125.json",
+   "manifest_sha256": "9f5d08178ce125f472af26cad4bf0a2101186d750daa21235530211bf189bc41",
+   "file_sha256": "7fce507ecc15dd826893d962092d6341e47463fd1a650e477dd8e1c859197891"
+  }
+ },
+ "fp64_control_seeds": [
+  20261121,
+  20261122
+ ],
+ "fixed": {
+  "selections": {
+   "FR": "ec355fb8d866e4ff5ae3386b4c165460442988dc307cac2fced7fca3b0fa620c",
+   "FC": "0353229b6d3090db8e16664425b8869e09b777c5fa5fd702a25d64fce22a862c"
+  },
+  "activations": {
+   "1": "e3a32ff74da11f1c01f45b5aee2cd8fb175c89861082353df4707b224ea3e5a7",
+   "8": "193fb667d0d2404b8e87455be116881a79c68f50bb4be2a1eade90ae2585de13",
+   "16": "8e7b4550deba31d988f858afce709ed48e625ad9dc04c9dc9ac3a2698a00cbec",
+   "23": "602e778071f5a8dc7b50ff3aa5e75aa2b4f0d5f2f60a54702e6a9e1030dec81b"
+  },
+  "routing": "629fa75f57a2e66e0e4289c5eb7a5ea868d32cf79c37efede6429a2263c9a1bb",
+  "actorder": "ddb60df585d3c10fb2730cab5544849597264e550503af01cc08d1b17cfa4741",
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "act_order": true
+  },
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "eval_batch": 8
+ },
+ "baseline_regression": {
+  "FR": {
+   "passed": true,
+   "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066"
+  },
+  "FC": {
+   "passed": true,
+   "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4"
+  }
+ },
+ "integrity_protocol": {
+  "name": "precision-aware installation integrity (actorder ablation); supersedes nothing: the frozen tolerance check of earlier studies is unchanged and still computed and reported for every configuration",
+  "I1": "every one of the 720 installed BF16 projection tensors is bitwise equal to bfloat16(W_solver) of the FP32 solver output written back by E3 (checked at write-back for all 240 experts)",
+  "I2": "for the 8 prespecified check experts (layers 1/8/16/23 x experts 0/30) the installed module's BF16 output on the frozen validation inputs is bitwise equal to an independent BF16 reference built from bfloat16(W_solver) with F.linear in the module's operation order (gate, up, act, mul, down)",
+  "I3": "elementwise |W_bf16 - W_solver| <= 2^-8 |W_solver| (correct round-to-nearest; zeros stay zero) for all 720 tensors",
+  "I4": "installed weights and checked outputs are finite",
+  "not_a_criterion": "the relative FP32-vs-BF16 output deviation; it is reported (decomposed into weight representation and arithmetic) but never gates, because it measures the BF16 execution environment rather than installation correctness"
+ },
+ "frozen_old_tolerance": "reported, not gating (installation audit)",
+ "decision_rule": {
+  "tau_PPL": "1e-4 x BF16 PPL = 0.000923709 (operational materiality threshold, not a significance test)",
+  "precedence": [
+   "RUN-BLOCKED: any correctness requirement fails - baseline (original-order) regression (Hessians 480/480 == frozen OO, natural act-order == P_O, weights / reconstruction / PPL / per-window NLL == frozen OO), routing == R_O for every token, identical per-(expert, block) contributing sequences and token counts across orders, bitwise-identical per-sequence contributions of the diagnostic experts across orders, non-finite Hessians, any required quantized configuration missing or invalid (240 experts, 720 tensors, 0 RTN fallbacks, permutation == P_O 240/240, Hessians == preflight 480/480, integrity I1-I4, repeat evaluation identical), or the deterministic repeatability control differs",
+   "NULL-ORDER-INVARIANT: all 10 shuffled-order Hessian sets (480 Hessians each) are bitwise identical to the original-order Hessians (no GPTQ is run)",
+   "ORDER-SENSITIVE-HESSIAN-ONLY: some Hessian differs, but the installed effective weights of all 10 configurations are bitwise identical to OO",
+   "ORDER-SENSITIVE-WEIGHTS-ONLY: effective weights differ in at least one configuration, and max over the 10 configurations of |PPL - PPL_OO| <= tau_PPL",
+   "ORDER-SENSITIVE-PPL: effective weights differ and at least one |PPL - PPL_OO| > tau_PPL"
+  ],
+  "reported_not_gating": "strategies affected, paired Delta change (|Delta_g - Delta_OO| > tau_PPL), FR/FC sign reversals, SDs vs the earlier AA / AO / AOF spreads (context only, never pooled)",
+  "repeatability_config": "the first configuration in the prespecified order (FR then FC; seeds ascending) whose Hessians differ from the original-order Hessians is quantized twice in fresh processes",
+  "frozen": "fixed before any shuffled-order GPTQ / PPL; never adjusted after outcomes"
+ },
+ "tau_ppl": 0.0009237089824789335,
+ "diag_keys": [
+  [
+   1,
+   0,
+   "gu"
+  ],
+  [
+   1,
+   0,
+   "down"
+  ],
+  [
+   1,
+   30,
+   "gu"
+  ],
+  [
+   1,
+   30,
+   "down"
+  ],
+  [
+   8,
+   0,
+   "gu"
+  ],
+  [
+   8,
+   0,
+   "down"
+  ],
+  [
+   8,
+   30,
+   "gu"
+  ],
+  [
+   8,
+   30,
+   "down"
+  ],
+  [
+   16,
+   0,
+   "gu"
+  ],
+  [
+   16,
+   0,
+   "down"
+  ],
+  [
+   16,
+   30,
+   "gu"
+  ],
+  [
+   16,
+   30,
+   "down"
+  ],
+  [
+   23,
+   0,
+   "gu"
+  ],
+  [
+   23,
+   0,
+   "down"
+  ],
+  [
+   23,
+   30,
+   "gu"
+  ],
+  [
+   23,
+   30,
+   "down"
+  ]
+ ],
+ "code_sha256": {
+  "moe_calib/hessian_order_null.py": "e1242a0863bb901bb4a84cb7a3d335aec7894498dac183a0b7d9fd17f667d127",
+  "diagnostics/hessian_order_null.py": "9bcaa8b3eeda8817e5dc77bf1128280fa8c7a18344ba053e911e61c79b10915b",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "5f56e51131a3fb992eef9df254e164a2c282e32b19594aac3326f02e7fcbf351",
+  "moe_calib/hessian.py": "33c5d11bf2c9bd83bb9bf2129c0b36fe0665f9b78a3187bb74f39b169610fd97",
+  "moe_calib/frozen_routing.py": "01fe9b0f6b34fcab83c14189a9458aea312cfc12ff37e03ff373cd6b24859d3d",
+  "moe_calib/actorder_ablation.py": "e644c9384fc746f0114d7cef865cac5c46dbc38cd172f2f2d0f624ba680a3f4e",
+  "diagnostics/actorder_ablation.py": "6006b991bec3922396259d4468684b948e84ef60a42b9b39818b1598d0fa0037",
+  "e3_allocation.py": "f65d1d464a2c6437cb9e7d1fbc4f243b7a4543dd4680c52edb9c2bb6756ee449",
+  "moe_calib/partial_model_quant.py": "877b126274571fc6d2a1c28f34ccff612b6de5226a186f2030a8865d27d336f2",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "diagnostics/report_hessian_order_null.py": "d888d552df7cde520a3d5ecdd0b7256dd97c49a16e98693e98a02d618f20f64b"
+ },
+ "hard_constraints": "no change of selections, caches, routing, act-order, group membership, GPTQ hyperparameters, precision, installation, evaluation; FP64 only as a diagnostic; no adaptive orders; earlier results untouched",
+ "protocol_sha256": "be5c440f46b2db34bdb70f4fcabb7526186ebe30713c070f836775378bc806ad",
+ "created": "2026-11-09 16:22:18"
+}

@@ -1,0 +1,40 @@
+{
+  "title": "MoEQuant EBSS score/sign correctness audit",
+  "frozen_at": "2026-11-10, before any new audit test, oracle comparison or audit smoke run was executed",
+  "audited_generator": {
+    "file": "moe_calib/ebss_generator.py",
+    "sha256_before_audit": "737aabb2f40a936382f0852a25559aa350a52cb696597347fd57f710fd656137",
+    "production_entry": "generate() (called by EBSSGenerator / ProbabilityOnlyGenerator and by diagnostics/ebss_generation_pilot.py stage_generate / stage_smoke)"
+  },
+  "historical_files_preserved_sha256": {
+    "runs_ebss_generation_pilot/logs/generated_ebss.pt": "0bd680a0406c8989fca5c3aa9e65bee7f53d50f560e46ef8e654558141e17aca",
+    "runs_ebss_generation_pilot/logs/generated_po.pt": "3012d474a31eac14f372dc0d769a1699c73d0ed32cdda80538e7e5f398ceb77e",
+    "runs_ebss_generation_pilot/generated_ebss.jsonl": "1c8be7408e8af81cce08721a1d4be5c8324c9480c33f09076344d8c6657860c8",
+    "runs_ebss_generation_pilot/generated_probability_only.jsonl": "e94d54588f0369ce0b2309338289c112a223a6cd3c8ec31e59426db39e683de0"
+  },
+  "canonical_objective": {
+    "logp_form": "J(S||v) = -(L(S) + p_v)/(|S|+1) + sigma(S)/tau, L(S) = sum_i log P(s_i | s_<i) <= 0, p_v = log P(v|S) <= 0; LOWER is better",
+    "nll_form": "J(S||v) = (N(S) - p_v)/(|S|+1) + sigma(S)/tau, N(S) = -L(S) >= 0",
+    "sigma": "Eq. 3/4: mean over the 24 MoE layers of sqrt(1/(E-1) sum_e (u_e - mean u)^2), u_e = routed top-4 count of the PARENT prefix / |S|; shared expert excluded",
+    "pruning": "global top-w SMALLEST J over all (parent, token) pairs of one sentence; ties by (parent, token)",
+    "final": "argmin over the w surviving branches of -L(c)/|c| + sigma(c)/tau (balance term omitted for Probability-Only)",
+    "frozen_conventions_audited_not_changed": "first token unconditioned (contributes 0 to L, counts in |S| and in sigma); V = ids 0..151645 (log-softmax over this range); no EOS stop; tau = 1.3; w = 4"
+  },
+  "oracle_requirements": "NumPy float64 / Python math.fsum; does not import moe_calib.ebss_generator; recomputes L from per-token log-probabilities, sigma from routing-id tensors, log-softmax from logits, and ranks with np.lexsort / sorted() (no torch.sort)",
+  "tolerances": {
+    "score_identity_logp_vs_nll": "abs <= 1e-12 (float64 algebra)",
+    "production_vs_oracle_score_given_production_logp": "abs <= 1e-9 (same float64 algebra, different summation order)",
+    "production_vs_oracle_logsoftmax_fp64_from_logits": "abs <= 1e-5 (production log_softmax runs in fp32)",
+    "selection_decision": "exact identity of the kept (parent, token) set; a mismatch counts as a numerical tie only when the oracle score gap between the disputed candidates is <= 1e-9 (production-logp oracle) / <= 2e-5 (fp64-logit oracle)",
+    "teacher_forced_logp": "reported, not gated bitwise: BF16 batched KV decoding vs batch-1 replay; flag if mean |dlogp| > 0.05 or Pearson r < 0.99 (same thresholds as the pilot smoke gate)"
+  },
+  "audit_smoke_run": "at most 4 sequences x 32 tokens per method, same model/snapshot/BF16/backend, opt-in capture of the full pre-pruning candidate state at every step; not used as calibration data",
+  "decision_rule": {
+    "precedence": "SCORE-SIGN-BUG-CONFIRMED -> AUDIT-INCONCLUSIVE -> SCORE-SIGN-CORRECT (paper ambiguity reported as a secondary finding, SCORE-CORRECT-PAPER-AMBIGUOUS only if score correctness cannot be the primary label)",
+    "SCORE-SIGN-CORRECT": "production matches the independent oracle for the minimisation objective: every fixed counterexample, cross-parent trap, metamorphic invariant, deferred-sigma test and every captured production pruning decision / cumulative update / routing-statistics propagation / final selection agrees (ties within tolerance excepted and reported)",
+    "SCORE-SIGN-BUG-CONFIRMED": "at least one reproducible production example where the implemented score or ranking differs from the canonical objective because of a sign, log-probability, normalisation or sorting error",
+    "SCORE-CORRECT-PAPER-AMBIGUOUS": "implementation matches its documented convention but fidelity to the authors' intent cannot be established; secondary when SCORE-SIGN-CORRECT applies",
+    "AUDIT-INCONCLUSIVE": "the executed path cannot be traced/captured, or the tests cannot distinguish the deliberately wrong variants (wrong-sign NLL, maximisation, per-parent top-w, reversed sigma, wrong-parent sigma) from the correct one"
+  },
+  "hard_constraints": "no new 16x512 / 128x512 data, no GPTQ / reconstruction / PPL, no objective/tau/w changes, generator numerics untouched unless a bug is demonstrated; deliberately wrong variants are evaluated on frozen candidate pools only"
+}

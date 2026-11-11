@@ -1,0 +1,170 @@
+{
+ "decision": "BALANCE-NORMALIZATION-MATERIAL",
+ "quality_label": "BALANCE-VARIANT-QUALITY-MIXED",
+ "regression_ok": true,
+ "short_stage_material": true,
+ "qualifying_variants": {
+  "EQ4_SHARE": true,
+  "ALG1_SHARE": true,
+  "ALG1_RATE": true
+ },
+ "b16_material": {
+  "ALG1_SHARE": true,
+  "ALG1_RATE": true
+ },
+ "selected_for_B16": [
+  "ALG1_SHARE",
+  "ALG1_RATE"
+ ],
+ "excluded": {
+  "EQ4_SHARE": "qualified but lower fidelity priority than the two Algorithm-1 variants (max two new variants)"
+ },
+ "counterfactual_D": {
+  "PROBABILITY_ONLY": {
+   "vs_EQ4_RATE": 0.08928571428571429,
+   "vs_PO": 0.0
+  },
+  "EQ4_RATE": {
+   "vs_EQ4_RATE": 0.0,
+   "vs_PO": 0.08928571428571429
+  },
+  "EQ4_SHARE": {
+   "vs_EQ4_RATE": 0.06349206349206349,
+   "vs_PO": 0.027777777777777776
+  },
+  "ALG1_SHARE": {
+   "vs_EQ4_RATE": 0.047619047619047616,
+   "vs_PO": 0.125
+  },
+  "ALG1_RATE": {
+   "vs_EQ4_RATE": 0.28174603174603174,
+   "vs_PO": 0.31547619047619047
+  }
+ },
+ "rule": {
+  "primary": {
+   "RUN_BLOCKED": "a regression/correctness/resource failure prevents a valid comparison",
+   "MATERIAL": "at least one alternative variant passes G1 on the counterfactual pools, or passes any of G2-G5 in the short generation (or at B=16 with the same thresholds)",
+   "IMMATERIAL": "no alternative variant passes any gate criterion"
+  },
+  "secondary_quality": {
+   "margin_pct": 0.5,
+   "GAIN": "some new variant: reconstruction >= 0.5 % below EQ4_RATE AND below every C4 Random seed AND >= 0.5 % below the C4 seed mean",
+   "MIXED": "no GAIN, but some new variant is >= 0.5 % below EQ4_RATE (or below the C4 seed mean) on reconstruction",
+   "NO_GAIN": "no new variant is >= 0.5 % below EQ4_RATE and none is below the C4 seed mean",
+   "ppl": "reported, not used for the label"
+  }
+ },
+ "quality_numbers": {
+  "ALG1_SHARE": {
+   "PROBABILITY_ONLY": {
+    "relative_pct": -0.3216894108762913,
+    "frac_experts_improved": 0.6291666666666667,
+    "per_layer_relative_pct": {
+     "1": -0.15708395762514815,
+     "8": -0.36973776868203245,
+     "16": -0.42912899947082916,
+     "23": -0.2914967573772742
+    }
+   },
+   "EQ4_RATE": {
+    "relative_pct": -0.7782522627329813,
+    "frac_experts_improved": 0.75,
+    "per_layer_relative_pct": {
+     "1": -0.39456811853939566,
+     "8": -0.5397114380469525,
+     "16": -0.958991715537516,
+     "23": -1.0856478822542925
+    }
+   },
+   "C4R_s0": {
+    "relative_pct": 13.03025988762878,
+    "frac_experts_improved": 0.0,
+    "per_layer_relative_pct": {
+     "1": 15.335262734647003,
+     "8": 8.206024510310739,
+     "16": 12.101058512020014,
+     "23": 16.884485027883713
+    }
+   },
+   "C4R_s1": {
+    "relative_pct": 12.753589126219023,
+    "frac_experts_improved": 0.0,
+    "per_layer_relative_pct": {
+     "1": 14.937758746472628,
+     "8": 8.019880310489569,
+     "16": 12.080980967495258,
+     "23": 16.325671641638273
+    }
+   },
+   "C4R_s2": {
+    "relative_pct": 13.037311595534673,
+    "frac_experts_improved": 0.0,
+    "per_layer_relative_pct": {
+     "1": 14.529543715653492,
+     "8": 8.102692391016086,
+     "16": 12.726619727651855,
+     "23": 16.9475068703955
+    }
+   },
+   "C4R_mean": {
+    "relative_pct": 12.940232191683654
+   }
+  },
+  "ALG1_RATE": {
+   "PROBABILITY_ONLY": {
+    "relative_pct": 0.07377693668231267,
+    "frac_experts_improved": 0.49583333333333335,
+    "per_layer_relative_pct": {
+     "1": -0.12881396607330453,
+     "8": 0.18188906358176382,
+     "16": 0.12411469551685261,
+     "23": 0.07657668304199561
+    }
+   },
+   "EQ4_RATE": {
+    "relative_pct": -0.38459729462479997,
+    "frac_experts_improved": 0.6416666666666667,
+    "per_layer_relative_pct": {
+     "1": -0.36636536936677233,
+     "8": 0.010974294246812732,
+     "16": -0.40869208645915034,
+     "23": -0.7205060467357138
+    }
+   },
+   "C4R_s0": {
+    "relative_pct": 13.478699109533476,
+    "frac_experts_improved": 0.0,
+    "per_layer_relative_pct": {
+     "1": 15.367919301906664,
+     "8": 8.805133106390684,
+     "16": 12.723923444304175,
+     "23": 17.315963519052737
+    }
+   },
+   "C4R_s1": {
+    "relative_pct": 13.200930677277945,
+    "frac_experts_improved": 0.0,
+    "per_layer_relative_pct": {
+     "1": 14.970302762588638,
+     "8": 8.617958274580895,
+     "16": 12.703734343309069,
+     "23": 16.755087275990267
+    }
+   },
+   "C4R_s2": {
+    "relative_pct": 13.485778794570535,
+    "frac_experts_improved": 0.0,
+    "per_layer_relative_pct": {
+     "1": 14.561972147850955,
+     "8": 8.701228864044651,
+     "16": 13.352960453558183,
+     "23": 17.379218006380558
+    }
+   },
+   "C4R_mean": {
+    "relative_pct": 13.388314235342813
+   }
+  }
+ }
+}

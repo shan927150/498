@@ -1,0 +1,1396 @@
+{
+ "short_PROBABILITY_ONLY": {
+  "trajectory": "PROBABILITY_ONLY",
+  "n_sentence_steps": 504,
+  "oracle_reproduces_production_decisions": true,
+  "median_probability_spread": 0.04479234158630599,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.0992063492063492,
+    "n_changed_vs_EQ4_RATE": 50,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.03225806451612903,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.078125,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.14285714285714285,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2261904761904763,
+    "median_margin": 0.005640198166033172,
+    "median_min_score": 0.6829422293501624,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.0992063492063492,
+    "n_changed_vs_PO": 50,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03225806451612903
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.078125
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.14285714285714285
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2281746031746033,
+    "median_margin": 0.0056751302625153155,
+    "median_min_score": 0.7403639858795867,
+    "median_balance_spread": 0.001496978118418625,
+    "median_balance_to_probability_spread": 0.04086993940737884
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.07738095238095238,
+    "n_changed_vs_EQ4_RATE": 39,
+    "D_vs_PO": 0.02976190476190476,
+    "n_changed_vs_PO": 15,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.016129032258064516,
+      "D_vs_PO": 0.016129032258064516
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.046875,
+      "D_vs_PO": 0.03125
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.12301587301587301,
+      "D_vs_PO": 0.03571428571428571
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.238095238095238,
+    "median_margin": 0.005670245803874874,
+    "median_min_score": 0.6959679110977688,
+    "median_balance_spread": 0.0003742445296046563,
+    "median_balance_to_probability_spread": 0.01021748485184471
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.10119047619047619,
+    "n_changed_vs_EQ4_RATE": 51,
+    "D_vs_PO": 0.1765873015873016,
+    "n_changed_vs_PO": 89,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.04838709677419355,
+      "D_vs_PO": 0.08064516129032258
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0546875,
+      "D_vs_PO": 0.1171875
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.15079365079365079,
+      "D_vs_PO": 0.25396825396825395
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.1825396825396823,
+    "median_margin": 0.005792694133205545,
+    "median_min_score": 0.7879950196953536,
+    "median_balance_spread": 0.002898885661136129,
+    "median_balance_to_probability_spread": 0.07914429734264283
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.32341269841269843,
+    "n_changed_vs_EQ4_RATE": 163,
+    "D_vs_PO": 0.3492063492063492,
+    "n_changed_vs_PO": 176,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.20161290322580644,
+      "D_vs_PO": 0.23387096774193547
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.328125,
+      "D_vs_PO": 0.3828125
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.38095238095238093,
+      "D_vs_PO": 0.3888888888888889
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 2.9523809523809526,
+    "median_margin": 0.004861272965864083,
+    "median_min_score": 1.081295588409374,
+    "median_balance_spread": 0.011595542644544515,
+    "median_balance_to_probability_spread": 0.31657718937057133
+   }
+  }
+ },
+ "short_EQ4_RATE": {
+  "trajectory": "EQ4_RATE",
+  "n_sentence_steps": 504,
+  "oracle_reproduces_production_decisions": true,
+  "max_abs_sigma_oracle_vs_production": 5.551115123125783e-17,
+  "median_probability_spread": 0.03516853807205772,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.08928571428571429,
+    "n_changed_vs_EQ4_RATE": 45,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.03225806451612903,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.1171875,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.10317460317460317,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.3313492063492065,
+    "median_margin": 0.007812499689559105,
+    "median_min_score": 0.6633396832187577,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.08928571428571429,
+    "n_changed_vs_PO": 45,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03225806451612903
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.1171875
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.10317460317460317
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.3551587301587302,
+    "median_margin": 0.007812499689559105,
+    "median_min_score": 0.713197217911946,
+    "median_balance_spread": 0.0016443171818307442,
+    "median_balance_to_probability_spread": 0.0463334975916998
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.06349206349206349,
+    "n_changed_vs_EQ4_RATE": 32,
+    "D_vs_PO": 0.027777777777777776,
+    "n_changed_vs_PO": 14,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.008064516129032258,
+      "D_vs_PO": 0.024193548387096774
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.078125,
+      "D_vs_PO": 0.0390625
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.08333333333333333,
+      "D_vs_PO": 0.023809523809523808
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.3412698412698414,
+    "median_margin": 0.007871678686890843,
+    "median_min_score": 0.6751461284016662,
+    "median_balance_spread": 0.00041107929545768605,
+    "median_balance_to_probability_spread": 0.01158337439792495
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.047619047619047616,
+    "n_changed_vs_EQ4_RATE": 24,
+    "D_vs_PO": 0.125,
+    "n_changed_vs_PO": 63,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.016129032258064516,
+      "D_vs_PO": 0.04838709677419355
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.046875,
+      "D_vs_PO": 0.15625
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.06349206349206349,
+      "D_vs_PO": 0.14682539682539683
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.357142857142857,
+    "median_margin": 0.00841000275088008,
+    "median_min_score": 0.757265674433742,
+    "median_balance_spread": 0.0031842065305565798,
+    "median_balance_to_probability_spread": 0.08972443227209717
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.28174603174603174,
+    "n_changed_vs_EQ4_RATE": 142,
+    "D_vs_PO": 0.31547619047619047,
+    "n_changed_vs_PO": 159,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.14516129032258066,
+      "D_vs_PO": 0.1693548387096774
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.296875,
+      "D_vs_PO": 0.3515625
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.3412698412698413,
+      "D_vs_PO": 0.36904761904761907
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2023809523809526,
+    "median_margin": 0.007137202614732385,
+    "median_min_score": 1.0262841812288883,
+    "median_balance_spread": 0.012736826122226319,
+    "median_balance_to_probability_spread": 0.3588977290883887
+   }
+  }
+ },
+ "short_EQ4_SHARE": {
+  "trajectory": "EQ4_SHARE",
+  "n_sentence_steps": 504,
+  "oracle_reproduces_production_decisions": true,
+  "max_abs_sigma_oracle_vs_production": null,
+  "median_probability_spread": 0.03784503509462178,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.10714285714285714,
+    "n_changed_vs_EQ4_RATE": 54,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.03225806451612903,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.078125,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.15873015873015872,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2043650793650795,
+    "median_margin": 0.005401196754077797,
+    "median_min_score": 0.6667180252869256,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.10714285714285714,
+    "n_changed_vs_PO": 54,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03225806451612903
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.078125
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.15873015873015872
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2123015873015874,
+    "median_margin": 0.005201380276572298,
+    "median_min_score": 0.7189182391173102,
+    "median_balance_spread": 0.0012380079463790127,
+    "median_balance_to_probability_spread": 0.035471319083048514
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.08333333333333333,
+    "n_changed_vs_EQ4_RATE": 42,
+    "D_vs_PO": 0.02976190476190476,
+    "n_changed_vs_PO": 15,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.008064516129032258,
+      "D_vs_PO": 0.024193548387096774
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0625,
+      "D_vs_PO": 0.015625
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.13095238095238096,
+      "D_vs_PO": 0.03968253968253968
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2182539682539684,
+    "median_margin": 0.005222874143679168,
+    "median_min_score": 0.6801443099505717,
+    "median_balance_spread": 0.00030950198659475316,
+    "median_balance_to_probability_spread": 0.008867829770762128
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.08928571428571429,
+    "n_changed_vs_EQ4_RATE": 45,
+    "D_vs_PO": 0.1765873015873016,
+    "n_changed_vs_PO": 89,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.016129032258064516,
+      "D_vs_PO": 0.04838709677419355
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.046875,
+      "D_vs_PO": 0.1171875
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.14682539682539683,
+      "D_vs_PO": 0.2698412698412698
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.1746031746031744,
+    "median_margin": 0.005250227441250921,
+    "median_min_score": 0.7637710685423291,
+    "median_balance_spread": 0.002397392079399187,
+    "median_balance_to_probability_spread": 0.0686899140383276
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.30158730158730157,
+    "n_changed_vs_EQ4_RATE": 152,
+    "D_vs_PO": 0.32936507936507936,
+    "n_changed_vs_PO": 166,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.1532258064516129,
+      "D_vs_PO": 0.1774193548387097
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.296875,
+      "D_vs_PO": 0.3359375
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.376984126984127,
+      "D_vs_PO": 0.4007936507936508
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 2.9722222222222223,
+    "median_margin": 0.004539088383707812,
+    "median_min_score": 1.0522096259647835,
+    "median_balance_spread": 0.009589568317596747,
+    "median_balance_to_probability_spread": 0.2747596561533104
+   }
+  }
+ },
+ "short_ALG1_SHARE": {
+  "trajectory": "ALG1_SHARE",
+  "n_sentence_steps": 504,
+  "oracle_reproduces_production_decisions": true,
+  "max_abs_sigma_oracle_vs_production": null,
+  "median_probability_spread": 0.035348974338317504,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.05952380952380952,
+    "n_changed_vs_EQ4_RATE": 30,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.03225806451612903,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.109375,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.047619047619047616,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2857142857142856,
+    "median_margin": 0.006900287248916448,
+    "median_min_score": 0.6602465756281137,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.05952380952380952,
+    "n_changed_vs_PO": 30,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03225806451612903
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.109375
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.047619047619047616
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.3174603174603177,
+    "median_margin": 0.007562335674810294,
+    "median_min_score": 0.7080655978788155,
+    "median_balance_spread": 0.001645115617210778,
+    "median_balance_to_probability_spread": 0.04660258891475574
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.04563492063492063,
+    "n_changed_vs_EQ4_RATE": 23,
+    "D_vs_PO": 0.013888888888888888,
+    "n_changed_vs_PO": 7,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.016129032258064516,
+      "D_vs_PO": 0.016129032258064516
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0859375,
+      "D_vs_PO": 0.0234375
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.03968253968253968,
+      "D_vs_PO": 0.007936507936507936
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2976190476190474,
+    "median_margin": 0.007275830026144972,
+    "median_min_score": 0.6706991396968596,
+    "median_balance_spread": 0.0004112789043026945,
+    "median_balance_to_probability_spread": 0.011650647228688934
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.05555555555555555,
+    "n_changed_vs_EQ4_RATE": 28,
+    "D_vs_PO": 0.11507936507936507,
+    "n_changed_vs_PO": 58,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.03225806451612903,
+      "D_vs_PO": 0.06451612903225806
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.078125,
+      "D_vs_PO": 0.1875
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.05555555555555555,
+      "D_vs_PO": 0.10317460317460317
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.3392857142857144,
+    "median_margin": 0.007722889919224929,
+    "median_min_score": 0.7535106750548417,
+    "median_balance_spread": 0.0031857526940215486,
+    "median_balance_to_probability_spread": 0.09024552537849975
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.3134920634920635,
+    "n_changed_vs_EQ4_RATE": 158,
+    "D_vs_PO": 0.3392857142857143,
+    "n_changed_vs_PO": 171,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.1935483870967742,
+      "D_vs_PO": 0.21774193548387097
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.34375,
+      "D_vs_PO": 0.390625
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.35714285714285715,
+      "D_vs_PO": 0.373015873015873
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2162698412698414,
+    "median_margin": 0.006567423032811437,
+    "median_min_score": 1.033310236349424,
+    "median_balance_spread": 0.012743010776086194,
+    "median_balance_to_probability_spread": 0.360982101513999
+   }
+  }
+ },
+ "short_ALG1_RATE": {
+  "trajectory": "ALG1_RATE",
+  "n_sentence_steps": 504,
+  "oracle_reproduces_production_decisions": true,
+  "max_abs_sigma_oracle_vs_production": null,
+  "median_probability_spread": 0.04734625050319374,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.04563492063492063,
+    "n_changed_vs_EQ4_RATE": 23,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.04838709677419355,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.03125,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.051587301587301584,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.1904761904761907,
+    "median_margin": 0.006099586606011342,
+    "median_min_score": 0.6655438061499451,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.04563492063492063,
+    "n_changed_vs_PO": 23,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.04838709677419355
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03125
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.051587301587301584
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2162698412698414,
+    "median_margin": 0.006537365679140927,
+    "median_min_score": 0.7108194928673891,
+    "median_balance_spread": 0.0014201734523886754,
+    "median_balance_to_probability_spread": 0.03424014741484176
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.03571428571428571,
+    "n_changed_vs_EQ4_RATE": 18,
+    "D_vs_PO": 0.00992063492063492,
+    "n_changed_vs_PO": 5,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.016129032258064516,
+      "D_vs_PO": 0.03225806451612903
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.03125,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.047619047619047616,
+      "D_vs_PO": 0.003968253968253968
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.1984126984126986,
+    "median_margin": 0.00598677108604348,
+    "median_min_score": 0.67609658795122,
+    "median_balance_spread": 0.00035504336309716885,
+    "median_balance_to_probability_spread": 0.00856003685371044
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.02976190476190476,
+    "n_changed_vs_EQ4_RATE": 15,
+    "D_vs_PO": 0.07539682539682539,
+    "n_changed_vs_PO": 38,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.024193548387096774,
+      "D_vs_PO": 0.07258064516129033
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.046875,
+      "D_vs_PO": 0.078125
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.023809523809523808,
+      "D_vs_PO": 0.07539682539682539
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2281746031746033,
+    "median_margin": 0.006360861695954428,
+    "median_min_score": 0.7524488208424315,
+    "median_balance_spread": 0.0027501540649136347,
+    "median_balance_to_probability_spread": 0.0663057603546845
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.21031746031746032,
+    "n_changed_vs_EQ4_RATE": 106,
+    "D_vs_PO": 0.25,
+    "n_changed_vs_PO": 126,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 124,
+      "D_vs_EQ4_RATE": 0.16129032258064516,
+      "D_vs_PO": 0.20967741935483872
+     },
+     "33-64": {
+      "n": 128,
+      "D_vs_EQ4_RATE": 0.234375,
+      "D_vs_PO": 0.265625
+     },
+     "65-128": {
+      "n": 252,
+      "D_vs_EQ4_RATE": 0.2222222222222222,
+      "D_vs_PO": 0.2619047619047619
+     },
+     "129-256": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     },
+     "257-511": {
+      "n": 0,
+      "D_vs_EQ4_RATE": null,
+      "D_vs_PO": null
+     }
+    },
+    "mean_parents_in_kept": 3.2857142857142856,
+    "median_margin": 0.006437085512610685,
+    "median_min_score": 1.0312134766337584,
+    "median_balance_spread": 0.011000616259654539,
+    "median_balance_to_probability_spread": 0.265223041418738
+   }
+  }
+ },
+ "full_ALG1_SHARE": {
+  "trajectory": "ALG1_SHARE",
+  "n_sentence_steps": 8160,
+  "oracle_reproduces_production_decisions": true,
+  "max_abs_sigma_oracle_vs_production": null,
+  "median_probability_spread": 0.01220321685247501,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.047058823529411764,
+    "n_changed_vs_EQ4_RATE": 384,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.06048387096774194,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.033203125,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.0283203125,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.033203125,
+      "D_vs_PO": 0.0
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.058823529411764705,
+      "D_vs_PO": 0.0
+     }
+    },
+    "mean_parents_in_kept": 3.5800245098039216,
+    "median_margin": 0.0038063801298192645,
+    "median_min_score": 0.30971131371699645,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.047058823529411764,
+    "n_changed_vs_PO": 384,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.06048387096774194
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.033203125
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.0283203125
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.033203125
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.058823529411764705
+     }
+    },
+    "mean_parents_in_kept": 3.603308823529412,
+    "median_margin": 0.003963478209844676,
+    "median_min_score": 0.34410047456343373,
+    "median_balance_spread": 0.000441232350243681,
+    "median_balance_to_probability_spread": 0.043841211385805164
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.033823529411764704,
+    "n_changed_vs_EQ4_RATE": 276,
+    "D_vs_PO": 0.013848039215686274,
+    "n_changed_vs_PO": 113,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.034274193548387094,
+      "D_vs_PO": 0.02620967741935484
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.03125,
+      "D_vs_PO": 0.001953125
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.0205078125,
+      "D_vs_PO": 0.0078125
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.02685546875,
+      "D_vs_PO": 0.00634765625
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.04093137254901961,
+      "D_vs_PO": 0.01911764705882353
+     }
+    },
+    "mean_parents_in_kept": 3.588112745098039,
+    "median_margin": 0.00390625,
+    "median_min_score": 0.3183588615360329,
+    "median_balance_spread": 0.00011030808756092025,
+    "median_balance_to_probability_spread": 0.010960302846451291
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.03333333333333333,
+    "n_changed_vs_EQ4_RATE": 272,
+    "D_vs_PO": 0.07818627450980392,
+    "n_changed_vs_PO": 638,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.036290322580645164,
+      "D_vs_PO": 0.0967741935483871
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.029296875,
+      "D_vs_PO": 0.060546875
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.025390625,
+      "D_vs_PO": 0.0537109375
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.02978515625,
+      "D_vs_PO": 0.06201171875
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.03725490196078431,
+      "D_vs_PO": 0.09240196078431373
+     }
+    },
+    "mean_parents_in_kept": 3.6112745098039216,
+    "median_margin": 0.0039989789117288455,
+    "median_min_score": 0.3759374590867537,
+    "median_balance_spread": 0.0008544427721508645,
+    "median_balance_to_probability_spread": 0.0848981407873878
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.21887254901960784,
+    "n_changed_vs_EQ4_RATE": 1786,
+    "D_vs_PO": 0.2375,
+    "n_changed_vs_PO": 1938,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.2560483870967742,
+      "D_vs_PO": 0.28024193548387094
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.181640625,
+      "D_vs_PO": 0.197265625
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.1806640625,
+      "D_vs_PO": 0.203125
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.19140625,
+      "D_vs_PO": 0.2109375
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.24240196078431372,
+      "D_vs_PO": 0.2593137254901961
+     }
+    },
+    "mean_parents_in_kept": 3.5139705882352943,
+    "median_margin": 0.0036407767713648176,
+    "median_min_score": 0.5689170332593558,
+    "median_balance_spread": 0.003417771088603458,
+    "median_balance_to_probability_spread": 0.3395925631495512
+   }
+  }
+ },
+ "full_ALG1_RATE": {
+  "trajectory": "ALG1_RATE",
+  "n_sentence_steps": 8160,
+  "oracle_reproduces_production_decisions": true,
+  "max_abs_sigma_oracle_vs_production": null,
+  "median_probability_spread": 0.012231742084696143,
+  "per_condition": {
+   "PROBABILITY_ONLY": {
+    "D_vs_EQ4_RATE": 0.03602941176470588,
+    "n_changed_vs_EQ4_RATE": 294,
+    "D_vs_PO": 0.0,
+    "n_changed_vs_PO": 0,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.04032258064516129,
+      "D_vs_PO": 0.0
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.03125,
+      "D_vs_PO": 0.0
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.033203125,
+      "D_vs_PO": 0.0
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.0439453125,
+      "D_vs_PO": 0.0
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.03284313725490196,
+      "D_vs_PO": 0.0
+     }
+    },
+    "mean_parents_in_kept": 3.4763480392156865,
+    "median_margin": 0.003996828338291791,
+    "median_min_score": 0.2817451261381607,
+    "median_balance_spread": 0.0,
+    "median_balance_to_probability_spread": 0.0
+   },
+   "EQ4_RATE": {
+    "D_vs_EQ4_RATE": 0.0,
+    "n_changed_vs_EQ4_RATE": 0,
+    "D_vs_PO": 0.03602941176470588,
+    "n_changed_vs_PO": 294,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.04032258064516129
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03125
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.033203125
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.0439453125
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.0,
+      "D_vs_PO": 0.03284313725490196
+     }
+    },
+    "mean_parents_in_kept": 3.4998774509803923,
+    "median_margin": 0.0040515395289995315,
+    "median_min_score": 0.31209315446318237,
+    "median_balance_spread": 0.0004561924914399749,
+    "median_balance_to_probability_spread": 0.04207488982929246
+   },
+   "EQ4_SHARE": {
+    "D_vs_EQ4_RATE": 0.02610294117647059,
+    "n_changed_vs_EQ4_RATE": 213,
+    "D_vs_PO": 0.010049019607843138,
+    "n_changed_vs_PO": 82,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.03024193548387097,
+      "D_vs_PO": 0.010080645161290322
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.0234375,
+      "D_vs_PO": 0.0078125
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.025390625,
+      "D_vs_PO": 0.0078125
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.03271484375,
+      "D_vs_PO": 0.01123046875
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.022794117647058822,
+      "D_vs_PO": 0.010294117647058823
+     }
+    },
+    "mean_parents_in_kept": 3.4830882352941175,
+    "median_margin": 0.003989361702127686,
+    "median_min_score": 0.28913056938118964,
+    "median_balance_spread": 0.00011404812285999372,
+    "median_balance_to_probability_spread": 0.010518722457323115
+   },
+   "ALG1_SHARE": {
+    "D_vs_EQ4_RATE": 0.032965686274509805,
+    "n_changed_vs_EQ4_RATE": 269,
+    "D_vs_PO": 0.06666666666666667,
+    "n_changed_vs_PO": 544,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.028225806451612902,
+      "D_vs_PO": 0.06854838709677419
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.02734375,
+      "D_vs_PO": 0.056640625
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.029296875,
+      "D_vs_PO": 0.0625
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.04345703125,
+      "D_vs_PO": 0.08349609375
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.029901960784313727,
+      "D_vs_PO": 0.060294117647058824
+     }
+    },
+    "mean_parents_in_kept": 3.520343137254902,
+    "median_margin": 0.004168139844738419,
+    "median_min_score": 0.3411881004158952,
+    "median_balance_spread": 0.0008834129610059589,
+    "median_balance_to_probability_spread": 0.08147767380118026
+   },
+   "ALG1_RATE": {
+    "D_vs_EQ4_RATE": 0.18333333333333332,
+    "n_changed_vs_EQ4_RATE": 1496,
+    "D_vs_PO": 0.20796568627450981,
+    "n_changed_vs_PO": 1697,
+    "by_prefix_bin": {
+     "1-32": {
+      "n": 496,
+      "D_vs_EQ4_RATE": 0.1875,
+      "D_vs_PO": 0.2157258064516129
+     },
+     "33-64": {
+      "n": 512,
+      "D_vs_EQ4_RATE": 0.19140625,
+      "D_vs_PO": 0.20703125
+     },
+     "65-128": {
+      "n": 1024,
+      "D_vs_EQ4_RATE": 0.1796875,
+      "D_vs_PO": 0.208984375
+     },
+     "129-256": {
+      "n": 2048,
+      "D_vs_EQ4_RATE": 0.18798828125,
+      "D_vs_PO": 0.21826171875
+     },
+     "257-511": {
+      "n": 4080,
+      "D_vs_EQ4_RATE": 0.1803921568627451,
+      "D_vs_PO": 0.2017156862745098
+     }
+    },
+    "mean_parents_in_kept": 3.6317401960784315,
+    "median_margin": 0.004750375136696405,
+    "median_min_score": 0.5367365205360901,
+    "median_balance_spread": 0.0035336518440238357,
+    "median_balance_to_probability_spread": 0.32591069520472105
+   }
+  }
+ },
+ "primary": "short_EQ4_RATE",
+ "caveat": "local counterfactual on fixed pools, not a trajectory prediction"
+}

@@ -1,0 +1,75 @@
+{
+ "decision": "OFFICIAL-EBSS-TRANSFER-LIMITED",
+ "rule": {
+  "precedence": "1 data availability -> 2 numerical / quantization correctness -> 3 source-checkpoint provenance -> 4 reconstruction and PPL criteria",
+  "DATA-BLOCKED": "the official file cannot be acquired / parsed, or the frozen extraction policy yields fewer than 128 valid 512-token windows",
+  "RUN-BLOCKED": "a primary configuration (FR/TR/FC s0-2, EBSS) is missing or invalid (install check, untouched parameters, non-finite or unchanged projections, repeat-evaluation PPL difference != 0, RTN fallback in a C4 baseline), the quantization-pipeline regression (FR s0 on the historical cache) does not reproduce the partial-PPL weights/PPL/reconstruction exactly, the extraction implementation regression or the batch-1 repeatability control fails, or the BF16 PPL differs from 9.237090",
+  "OFFICIAL-EBSS-TRANSFER-LIMITED": "provenance class != MATCHED-DOCUMENTED (generating checkpoint differs or cannot be established). Takes precedence over the quality classes; the quality class that would otherwise apply is still reported",
+  "quality criteria": {
+   "R (reconstruction gain)": "EBSS mean expert reconstruction < FR_s and < TR_s for s = 0, 1, 2 AND mean_s RelativePenalty(EBSS, FR_s) <= -0.5 % AND mean_s RelativePenalty(EBSS, TR_s) <= -0.5 %",
+   "P (PPL gain)": "EBSS PPL < FR_s and < TR_s PPL for s = 0, 1, 2 (matched protocol)",
+   "OFFICIAL-EBSS-QUALITY-GAIN": "R and P",
+   "OFFICIAL-EBSS-RECONSTRUCTION-GAIN-ONLY": "R and not P",
+   "OFFICIAL-EBSS-PPL-GAIN-ONLY": "P and not R",
+   "OFFICIAL-EBSS-NO-CONSISTENT-GAIN": "neither"
+  },
+  "notes": "FC is a negative control and is not part of R or P. One EBSS set: no EBSS SD is computed; experts are not treated as independent replications."
+ },
+ "data_ok": true,
+ "correctness": {
+  "all_configs_valid": true,
+  "c4_rtn_fallbacks": 0,
+  "ebss_rtn_fallbacks": 0,
+  "quant_pipeline_regression": true,
+  "extraction_impl_regression": true,
+  "bf16_ppl_exact": true,
+  "capture_repeatability": true,
+  "quant_repeat_bitwise": true,
+  "profiler_count_crosscheck_mismatches": 0
+ },
+ "correctness_ok": true,
+ "provenance": "UNDOCUMENTED",
+ "quality": {
+  "R": false,
+  "P": false,
+  "quality_class": "OFFICIAL-EBSS-NO-CONSISTENT-GAIN",
+  "mean_rel_penalty_vs_FR": 29.368032688802927,
+  "mean_rel_penalty_vs_TR": 29.63645333013547,
+  "rel_penalty_vs_FR": [
+   29.53042463085889,
+   29.069396797741078,
+   29.504276637808815
+  ],
+  "rel_penalty_vs_TR": [
+   29.45983582117988,
+   29.79682556537766,
+   29.65269860384887
+  ]
+ },
+ "quality_class_ignoring_provenance": "OFFICIAL-EBSS-NO-CONSISTENT-GAIN",
+ "fc_negative_control": {
+  "ebss_vs_fc": {
+   "mean_baseline_recon": 0.004729943292305284,
+   "relative_penalty_pct": [
+    26.310878963767248,
+    26.29062980518666,
+    26.092383934838747
+   ],
+   "mean_relative_penalty_pct": 26.231297567930884,
+   "best_pct": 26.092383934838747,
+   "worst_pct": 26.310878963767248,
+   "ebss_better_recon_all_seeds": false,
+   "delta_ppl": [
+    0.00290136205553182,
+    0.005776154075068263,
+    -0.0013683719768362579
+   ],
+   "ebss_lower_ppl_all_seeds": false,
+   "frac_experts_improved": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ }
+}

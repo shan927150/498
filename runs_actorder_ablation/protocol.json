@@ -1,0 +1,97 @@
+{
+ "experiment": "GPTQ act-order ablation after frozen-routing calibration (FR s0 / FC s0, layers 1/8/16/23, five groupings)",
+ "question": "Are GPTQ's Hessian-dependent act-order permutation and its induced quantization-group membership responsible for a substantial fraction of the residual weight / PPL sensitivity under frozen routing?",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B",
+ "model_snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "B": 128,
+ "allocation_seed": 0,
+ "quant_layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "n_quantized_experts": 240,
+ "n_projection_tensors": 720,
+ "selections": {
+  "FR": {
+   "ids_hash": "ec355fb8d866e4ff",
+   "K": 4
+  },
+  "FC": {
+   "ids_hash": "0353229b6d3090db",
+   "K": 4
+  }
+ },
+ "groupings": {
+  "G20261111": "227b7d9c11e13914ce757c2e23de209b2dfd14c454cbb81f0412a96f4e473e99",
+  "G20261112": "33f4242421ecc3b2b73b17ab56e2331b32bf8094416792592907ad3ac4562b1d",
+  "G20261113": "49c173c4cb1638e1c3b84360f986d3a1e66552507a4be71b3a706385f4312627",
+  "G20261114": "169ae91027ba68c2f89f711048c1b1dc54bc35442ee259afb9472a7bc9b96115",
+  "G20261115": "fc47b7b2e4827f0db89ac8d95b22978d562cb89ff264be31eb25f91cbe7decb3"
+ },
+ "routing_original_sha256": "629fa75f57a2e66e0e4289c5eb7a5ea868d32cf79c37efede6429a2263c9a1bb",
+ "conditions": {
+  "OO": "GPTQ(H_O), natural act-order (frozen reference)",
+  "AO": "GPTQ(H_AO,g), act-order from H_AO,g (reused)",
+  "AOF": "GPTQ(H_AO,g) with actorder_override = captured ORIGINAL permutation P_O (new, 10 configs)"
+ },
+ "identification": "AOF fixes the permutation AND the induced column->group membership jointly; scales, zeros, damping, Cholesky factor, error feedback are recomputed from H_AO,g",
+ "evaluation": {
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "batching": "EP.layerwise_nll batch 8",
+  "repeats": 2
+ },
+ "installation_audit": {
+  "decision": "AUDIT-CONFIRMED-BF16-REPRESENTATION",
+  "file_sha256": "287ca70177ed341474fc1d57267cbc4f984c51084f7dab7c762668d19b40d636"
+ },
+ "integrity_protocol": {
+  "name": "precision-aware installation integrity (actorder ablation); supersedes nothing: the frozen tolerance check of earlier studies is unchanged and still computed and reported for every configuration",
+  "I1": "every one of the 720 installed BF16 projection tensors is bitwise equal to bfloat16(W_solver) of the FP32 solver output written back by E3 (checked at write-back for all 240 experts)",
+  "I2": "for the 8 prespecified check experts (layers 1/8/16/23 x experts 0/30) the installed module's BF16 output on the frozen validation inputs is bitwise equal to an independent BF16 reference built from bfloat16(W_solver) with F.linear in the module's operation order (gate, up, act, mul, down)",
+  "I3": "elementwise |W_bf16 - W_solver| <= 2^-8 |W_solver| (correct round-to-nearest; zeros stay zero) for all 720 tensors",
+  "I4": "installed weights and checked outputs are finite",
+  "not_a_criterion": "the relative FP32-vs-BF16 output deviation; it is reported (decomposed into weight representation and arithmetic) but never gates, because it measures the BF16 execution environment rather than installation correctness"
+ },
+ "frozen_old_tolerance": "reported for every AOF configuration, unchanged, not gating",
+ "decision_rule": {
+  "metrics": {
+   "WeightReduction[c]": "mean over the five groupings of 1 - D_AOF,g / D_AO,g, D = aggregate relative L2 of all 720 effective BF16 tensors vs OO (sqrt(sum ||W - W_OO||^2 / sum ||W_OO||^2))",
+   "SD_ratio[c]": "std_g(PPL_AOF,g, ddof=1) / std_g(PPL_AO,g, ddof=1)",
+   "SD_Delta_ratio": "std_g(Delta_AOF,g) / std_g(Delta_AO,g), Delta = PPL_FC - PPL_FR (same grouping)",
+   "undefined_ratio": "denominator <= 1e-12 -> undefined; an undefined ratio never satisfies a criterion"
+  },
+  "criteria": {
+   "W": "WeightReduction[FR] >= 0.25 AND WeightReduction[FC] >= 0.25",
+   "P": "SD_ratio[FR] <= 0.7 AND SD_ratio[FC] <= 0.7",
+   "D": "SD_Delta_ratio <= 0.7",
+   "W_none": "WeightReduction[FR] < 0.25 AND WeightReduction[FC] < 0.25",
+   "P_none": "SD_ratio[FR] > 0.7 AND SD_ratio[FC] > 0.7 AND SD_Delta_ratio > 0.7"
+  },
+  "precedence": [
+   "RUN-BLOCKED: installation audit not AUDIT-CONFIRMED-BF16-REPRESENTATION, a solver regression fails, an AOF configuration is missing or fails a correctness / integrity / invariance check (Hessian == AO, permutation == ORIGINAL, routed-token counts == R_O)",
+   "ACTORDER-CONTRIBUTES-TO-WEIGHT-AND-PPL-SENSITIVITY: W AND P AND D",
+   "ACTORDER-CONTRIBUTES-TO-WEIGHT-SENSITIVITY-ONLY: W AND NOT (P AND D)",
+   "ACTORDER-NOT-PRIMARY: W_none AND P_none",
+   "ACTORDER-MIXED-EFFECT: otherwise (the satisfied / failed items are reported)"
+  ],
+  "note": "exploratory practical criteria, frozen (with this module's sha256) before any AOF quantization or PPL"
+ },
+ "code_sha256": {
+  "moe_calib/actorder_ablation.py": "e644c9384fc746f0114d7cef865cac5c46dbc38cd172f2f2d0f624ba680a3f4e",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "diagnostics/actorder_ablation.py": "6006b991bec3922396259d4468684b948e84ef60a42b9b39818b1598d0fa0037",
+  "diagnostics/report_actorder_ablation.py": "d7878022db4b7bb3164537bc050e4b62e1ea578d9e1e5779cc65e03e9f926120"
+ },
+ "hard_constraints": "no re-selection / new groupings / layers / strategies; GPTQ bits, group size, damping unchanged; scales and zeros never frozen; no forced routing at inference; earlier RUN-BLOCKED unchanged",
+ "protocol_sha256": "6fd73236771cdcc0f241ac7f5a3ed0b7d53b4ceb3dfc4921e1ac8df256014694",
+ "created": "2026-11-09 07:11:21"
+}

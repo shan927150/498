@@ -1,0 +1,42 @@
+{
+ "notation": "E = routed experts of the layer (read from the counts tensor, 60 for every Qwen1.5-MoE-A2.7B layer: config num_experts=60, num_experts_per_tok=4, decoder_sparse_step=1, 24 layers), k = top-k = 4, c_e(S) routed-token count of expert e in prefix S, n = |S|",
+ "usage": {
+  "per_token": "u_e = c_e / n",
+  "assignment_share": "u_e = c_e / (k n) = (c_e / n) / k"
+ },
+ "std": {
+  "eq4": "sigma_l = sqrt( 1/(E-1) sum_e (u_e - mean u)^2 )  [paper Eq. 4]",
+  "algorithm1": "sigma_l = sqrt( E/(E-1) sum_e (u_e - mean u)^2 )  [Algorithm 1 line 30, transcribed from asserts/Algorithm_1_EBSS.png] = sqrt(E) * eq4"
+ },
+ "aggregation": "sigma = (1/L) sum_l sigma_l over all L = 24 MoE layers (Eq. 3); Algorithm 1 line 30 shows a single sigma without an explicit layer mean -- the layer mean of Eq. 3 is kept for every variant (only the per-layer normalisation varies)",
+ "prefix": "sigma of the PARENT prefix S (deferred balance, Eq. 13 / Sec. 4.2), unchanged",
+ "tau": "divides sigma, tau = 1.3 for every variant (never altered to emulate a normalisation)",
+ "variants": {
+  "EQ4_RATE": {
+   "balance_std_mode": "eq4",
+   "usage_mode": "per_token",
+   "relative_strength": 1.0,
+   "effective_tau_equivalent": 1.3
+  },
+  "EQ4_SHARE": {
+   "balance_std_mode": "eq4",
+   "usage_mode": "assignment_share",
+   "relative_strength": 0.25,
+   "effective_tau_equivalent": 5.2
+  },
+  "ALG1_SHARE": {
+   "balance_std_mode": "algorithm1",
+   "usage_mode": "assignment_share",
+   "relative_strength": 1.9364916731037085,
+   "effective_tau_equivalent": 0.6713171133426189
+  },
+  "ALG1_RATE": {
+   "balance_std_mode": "algorithm1",
+   "usage_mode": "per_token",
+   "relative_strength": 7.745966692414834,
+   "effective_tau_equivalent": 0.16782927833565472
+  }
+ },
+ "effective_tau_note": "reported for explanation only; the implementation applies the normalisation explicitly with tau = 1.3",
+ "reference": "EQ4_RATE = historical generator default (bitwise)"
+}

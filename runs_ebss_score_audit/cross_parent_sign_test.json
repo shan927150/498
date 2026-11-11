@@ -1,0 +1,76 @@
+{
+ "setup": {
+  "L_A": -0.2,
+  "L_B": -2.0,
+  "N_A": 0.2,
+  "N_B": 2.0,
+  "next_token_p": 0.5,
+  "p_v": -0.6931471805599453,
+  "sigma": 0.1,
+  "tau": 1.3,
+  "prefix_len": 4,
+  "new_length": 5
+ },
+ "hand_calculation": {
+  "correct": "A: (0.2 + 0.693147)/5 + 0.1/1.3 = 0.255553; B: (2.0 + 0.693147)/5 + 0.1/1.3 = 0.615553",
+  "wrong": "A: -(0.2 - 0.693147)/5 + 0.0769 = 0.175553; B: -(2.0 - 0.693147)/5 + 0.0769 = -0.184447"
+ },
+ "formulas": {
+  "correct_logp": {
+   "score_A": 0.255552513035066,
+   "score_B": 0.6155525130350661,
+   "prefers": "A"
+  },
+  "correct_nll": {
+   "score_A": 0.255552513035066,
+   "score_B": 0.6155525130350661,
+   "prefers": "A"
+  },
+  "wrong_minus_nll_plus_logp": {
+   "score_A": 0.17555251303506597,
+   "score_B": -0.18444748696493402,
+   "prefers": "B"
+  },
+  "production_candidate_scores": {
+   "score_A": 0.255552513035066,
+   "score_B": 0.6155525130350661,
+   "prefers": "A"
+  }
+ },
+ "end_to_end_generate": {
+  "EBSS": {
+   "parents_cum_logp": [
+    -0.2000001072883606,
+    -2.0
+   ],
+   "kept_children_parent_token": [
+    0,
+    0
+   ],
+   "chosen_sentence": [
+    3,
+    0,
+    0
+   ],
+   "cum_logp": -1.5862944722175598
+  },
+  "PO": {
+   "parents_cum_logp": [
+    -0.2000001072883606,
+    -2.0
+   ],
+   "kept_children_parent_token": [
+    0,
+    0
+   ],
+   "chosen_sentence": [
+    3,
+    0,
+    0
+   ],
+   "cum_logp": -1.5862944722175598
+  },
+  "passed": true
+ },
+ "passed": true
+}

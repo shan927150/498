@@ -1,0 +1,46 @@
+{
+ "std_normalisation": {
+  "source": [
+   "paper Eq. 4: sqrt(1/(E-1) sum (u - u_hat)^2)",
+   "Algorithm 1 line 30: sqrt(E/(E-1) sum (expert_usage[e]-mu)^2), annotated '> Eq. 4'"
+  ],
+  "status": "unresolved: the algorithm cites Eq. 4 but writes a different constant; neither source is privileged here",
+  "ranking_effect": "scales sigma by sqrt(E) = 7.746 (E = 60)"
+ },
+ "usage_definition": {
+  "source": [
+   "paper Sec. 3: 'standard deviation in the frequency of expert usage'",
+   "Algorithm 1 line 29: expert_usage <- M.get_expert_activations(sequence)",
+   "rebuttal R3 Table R1: 'standard deviation on frequency of expert'"
+  ],
+  "status": "unresolved: frequency per token vs share of assignments vs raw activations; no code released",
+  "ranking_effect": "share = rate / k (k = 4); raw counts (not frequencies) would make sigma grow with |S| and are excluded as inconsistent with 'frequency'"
+ },
+ "layer_aggregation": {
+  "source": [
+   "Eq. 3 mean over L MoE layers",
+   "Alg. 1 line 30 single-layer form"
+  ],
+  "status": "Eq. 3 mean kept for all variants"
+ },
+ "prefix_vs_candidate": {
+  "source": [
+   "Eq. 13 sigma(M,S)",
+   "Sec. 4.2 deferred expert imbalance",
+   "Alg. 1 line 14 sigma(M,new_candidate)"
+  ],
+  "status": "prefix (score audit A2); unchanged"
+ },
+ "tau": {
+  "source": [
+   "Eq. 9-13 sigma/tau",
+   "App. A.1"
+  ],
+  "status": "division; tau = 1.3 (rebuttal Qwen: 1.2 -> 49.60, 1.3 -> 49.61)"
+ },
+ "published_qwen_normalisation": {
+  "status": "NOT established by any accessible source: the official repository contains no generator and no expert-frequency/STD code (searched fake_quant/, model files); OpenReview inaccessible",
+  "scale_evidence": "rebuttal R3 Table R1 (DeepSeek-MoE-16B, 64 routed experts, top-6): wikitext2 0.0427, EBSS 0.0052. Implied per-token-rate CV of wikitext2 under each variant: EQ4_RATE 0.46, EQ4_SHARE 2.7 (implausible for natural text), ALG1_SHARE 0.34, ALG1_RATE 0.057. Only EQ4_SHARE is made implausible; the table cannot discriminate the other three without DeepSeek routing data and is not used to choose a variant."
+ },
+ "official_code_dirs_note": "official code directories are named qwen_moe_14b_chat / deepseek_moe_16b_chat; provenance of the generator checkpoint remains undocumented (see update_ebss_official_validation.md)"
+}
