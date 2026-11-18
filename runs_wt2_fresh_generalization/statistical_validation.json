@@ -1,0 +1,31 @@
+{
+ "design": "semi-parametric: windows drawn from effect-free ORIGINAL-WT2 MoE paired-effect articles (keeps real window/article covariance), arranged into clusters with the exact fresh_article sizes [5, 5, 1, 8, 3, 3, 5, 2, 2, 1]; 'effect' adds true within-seed effects with variance = original V_corr and the original ranking",
+ "moe": {
+  "null": {
+   "reps": 150,
+   "frac_null_p_below_05": 0.03333333333333333,
+   "mean_V_corr": 3.4678417537543247e-07,
+   "true_V": 0.0,
+   "median_split_half_r": 0.017623172264882882,
+   "frac_split_half_ge_0p5": 0.02,
+   "median_r_with_original_estimate": 0.07540510925724578,
+   "frac_r_with_original_gt_0": 0.6533333333333333
+  },
+  "effect_equal_original_Vcorr": {
+   "reps": 150,
+   "frac_null_p_below_05": 0.1,
+   "mean_V_corr": 9.130801000475666e-07,
+   "true_V": 4.1124376749502784e-07,
+   "median_split_half_r": 0.17658842715108525,
+   "frac_split_half_ge_0p5": 0.08,
+   "median_r_with_original_estimate": 0.5376906339178578,
+   "frac_r_with_original_gt_0": 0.98
+  }
+ },
+ "original_V_corr": 4.11243767495028e-07,
+ "original_V_obs": 5.493389200210434e-07,
+ "inherited_validation": "runs_evaluation_uncertainty/statistical_validation.json (tests A-F, all passed)",
+ "interpretation": "frac_null_p_below_05 under 'null' = size of the common-effect null test with 10 article clusters; under 'effect' = power to detect the original-magnitude effect",
+ "seconds": 12.120694637298584,
+ "passed_size": true
+}

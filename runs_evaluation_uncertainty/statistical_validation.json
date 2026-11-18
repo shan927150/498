@@ -1,0 +1,79 @@
+{
+ "A_no_true_differences": {
+  "reps": 200,
+  "mean_V_corr": -3.692205396305426e-09,
+  "se_mean": 6.260533796808481e-09,
+  "mean_V_samp": 1.2377978192215295e-07,
+  "bias_relative_to_V_samp": -0.029828824537980782,
+  "frac_negative": 0.61,
+  "pivot_ci_coverage_of_zero": 1.0,
+  "n_coverage_reps": 60,
+  "passed": true
+ },
+ "B_stable_differences": {
+  "per_n": {
+   "128": {
+    "mean_V_corr": 4.83253256436012e-07,
+    "true_finite_set_V": 5.077811538787204e-07,
+    "ratio": 0.9516959279497664,
+    "median_split_half_r": 0.7670178687895715
+   },
+   "1024": {
+    "mean_V_corr": 5.057856037674255e-07,
+    "true_finite_set_V": 5.077811538787204e-07,
+    "ratio": 0.9960700587328778,
+    "median_split_half_r": 0.9612130521352591
+   }
+  },
+  "passed": true
+ },
+ "C_domain_dependent": {
+  "true_cross_corr_of_effects": 0.6688887186988456,
+  "per_n": {
+   "128": {
+    "within_domain1": 0.4053981677170376,
+    "within_domain2": 0.6830450868363455,
+    "cross_domain": 0.548686078263945
+   },
+   "1024": {
+    "within_domain1": 0.9028386975909297,
+    "within_domain2": 0.9401909996234781,
+    "cross_domain": 0.6560002633398636
+   },
+   "4096": {
+    "within_domain1": 0.9683057462658837,
+    "within_domain2": 0.9849101594982695,
+    "cross_domain": 0.6313826626797937
+   }
+  },
+  "passed": true
+ },
+ "D_serial_correlation": {
+  "ar1": 0.8,
+  "true_sd_of_mean": 0.003730585449894421,
+  "mean_se_naive_window": 0.001210811453147805,
+  "mean_se_block16": 0.0029246748675130375,
+  "naive_over_true": 0.3245633880821768,
+  "block_over_true": 0.7839720887765239,
+  "passed": true
+ },
+ "E_nested_moe": {
+  "true_within_seed_V": 2.3546705442250314e-07,
+  "mean_V_corr_within": 2.3393142598428848e-07,
+  "mean_V_corr_flattened": 9.320653538614233e-06,
+  "ratio_within": 0.9934783724118821,
+  "ratio_flat": 39.58368427155844,
+  "passed": true
+ },
+ "F_exact_null": {
+  "null_contrast_exactly_zero_all_draws": true,
+  "null_contrast_sign_in_halves": 0.0,
+  "sign_agreement_including_null_counts_it_as": "disagreement (sign 0)",
+  "mean_sign_agreement_incl": 0.4825,
+  "mean_sign_agreement_excl": 0.6433333333333334,
+  "rule": "null contrasts are excluded from sign denominators; correlations use the 5 grouping values (the duplicate is one realized grouping, not two)",
+  "passed": true
+ },
+ "all_passed": true,
+ "seconds": 22.525090217590332
+}

@@ -1,0 +1,656 @@
+{
+ "cohort": "A: fresh articles (article-disjoint)",
+ "rule": "articles with NO token in any historical evaluation window (any-token rule, stricter than the majority rule); every complete 512-token window of the historical flattened-stream tokenization, non-overlapping, starting at the article's first token; article tails < 512 tokens are not evaluated (reported)",
+ "unevaluated_tail_tokens": 2779,
+ "n_windows": 35,
+ "n_articles": 10,
+ "articles": [
+  7,
+  13,
+  14,
+  18,
+  27,
+  34,
+  39,
+  50,
+  51,
+  55
+ ],
+ "article_titles": {
+  "7": "Hed PE",
+  "13": "Dvorak technique",
+  "14": "New York State Route 31B",
+  "18": "Head VI",
+  "27": "Constant k filter",
+  "34": "Shackleton ( crater )",
+  "39": "Attalea ( palm )",
+  "50": "Operation USA",
+  "51": "Typhoon Krosa ( 2013 )",
+  "55": "Tatwine"
+ },
+ "windows_per_article": {
+  "7": 5,
+  "13": 5,
+  "14": 1,
+  "18": 8,
+  "27": 3,
+  "34": 3,
+  "39": 5,
+  "50": 2,
+  "51": 2,
+  "55": 1
+ },
+ "scored_targets": 17885,
+ "historical_scored_targets": 65408,
+ "never_represented_articles": [
+  7,
+  13,
+  14,
+  18,
+  27,
+  34,
+  39,
+  50,
+  51,
+  55
+ ],
+ "never_represented_without_eligible_window": [],
+ "n_never_represented_articles": 10,
+ "windows": [
+  {
+   "window": 0,
+   "article": 7,
+   "article_title": "Hed PE",
+   "token_range": [
+    37340,
+    37852
+   ],
+   "segment": [
+    37340,
+    40315
+   ],
+   "token_sha256": "d28e99ee31eb35aba5dfaec7ef7050e17504a2aae1b91f06f23e62805884f6e4",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 1,
+   "article": 7,
+   "article_title": "Hed PE",
+   "token_range": [
+    37852,
+    38364
+   ],
+   "segment": [
+    37340,
+    40315
+   ],
+   "token_sha256": "37f9302d205c7f11f451a856cc177792092b4ace2c0f89ce0c0f256bfade21f4",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 2,
+   "article": 7,
+   "article_title": "Hed PE",
+   "token_range": [
+    38364,
+    38876
+   ],
+   "segment": [
+    37340,
+    40315
+   ],
+   "token_sha256": "d5aecf2ae0ccbce5e503c9a450f1043f599e380cd8674037115cbef146792e5b",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 3,
+   "article": 7,
+   "article_title": "Hed PE",
+   "token_range": [
+    38876,
+    39388
+   ],
+   "segment": [
+    37340,
+    40315
+   ],
+   "token_sha256": "e7df82e241df8c58c5c0743bacfaa3487b7e42bebb78558776cbe456dba8fede",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 4,
+   "article": 7,
+   "article_title": "Hed PE",
+   "token_range": [
+    39388,
+    39900
+   ],
+   "segment": [
+    37340,
+    40315
+   ],
+   "token_sha256": "d872b53d401b46b752860e116cae7080023d5b17b99783becec3b74f31002cc0",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 5,
+   "article": 13,
+   "article_title": "Dvorak technique",
+   "token_range": [
+    71357,
+    71869
+   ],
+   "segment": [
+    71357,
+    74082
+   ],
+   "token_sha256": "fdd935855fb7bd0ca11a28c1dd2d87ea8aaa1e695d2aec0650c3c0f317b02a3f",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 6,
+   "article": 13,
+   "article_title": "Dvorak technique",
+   "token_range": [
+    71869,
+    72381
+   ],
+   "segment": [
+    71357,
+    74082
+   ],
+   "token_sha256": "8dd6869129a75eefe09174fbfaf28b9edde397c4f8deb209d673148074f2627f",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 7,
+   "article": 13,
+   "article_title": "Dvorak technique",
+   "token_range": [
+    72381,
+    72893
+   ],
+   "segment": [
+    71357,
+    74082
+   ],
+   "token_sha256": "0c1db30723e52801aced748457324c51f4861518dae3aefa0256fed25d45f969",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 8,
+   "article": 13,
+   "article_title": "Dvorak technique",
+   "token_range": [
+    72893,
+    73405
+   ],
+   "segment": [
+    71357,
+    74082
+   ],
+   "token_sha256": "2ac1a549298c6cd156063f04031355941f58c5cd16cd1f1eefde4a0255b53883",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 9,
+   "article": 13,
+   "article_title": "Dvorak technique",
+   "token_range": [
+    73405,
+    73917
+   ],
+   "segment": [
+    71357,
+    74082
+   ],
+   "token_sha256": "2a91db03c5962d0e84427a4286048baac4cf3b4c033aa20ce6ac70121917937d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 10,
+   "article": 14,
+   "article_title": "New York State Route 31B",
+   "token_range": [
+    74082,
+    74594
+   ],
+   "segment": [
+    74082,
+    74726
+   ],
+   "token_sha256": "4a6a7c17f4ff7e4a59339cd6601326059c97cfecca30ff0207177bf146a343c9",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 11,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    86974,
+    87486
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "b506c1761ce8d1d11cee557bf7e696404d606b6fabfd3f8a5779adfc139b0c14",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 12,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    87486,
+    87998
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "df6cd8d018b390367612e7d4b3f9705d25e6139b1502681dbf6f03b4c24504a7",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 13,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    87998,
+    88510
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "016bc6ce9fd0717c0f121cc848e74206b54653c66477e628d125941b5d920483",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 14,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    88510,
+    89022
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "dddf9c6eb3d9fdacf646deb4aa1eecf53e188940c34bfccc3af8c0229539d082",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 15,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    89022,
+    89534
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "e06999cbadaed37e36c8a646fd11d2f607cfc5eaa58c9ffe2945f84309dee4fa",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 16,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    89534,
+    90046
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "599b0c093582f7f816d79c8b68d9ff5dc474f693521824180fcf6f8b6a029380",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 17,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    90046,
+    90558
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "859cc9c73305b1bab3d1de8e8afde11cc0cde61f432fa69d0cb6608ed29a1137",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 18,
+   "article": 18,
+   "article_title": "Head VI",
+   "token_range": [
+    90558,
+    91070
+   ],
+   "segment": [
+    86974,
+    91516
+   ],
+   "token_sha256": "6f55596a663c76dea7c86e6dc4c7bbe209c7b7c5fc097a71939a01611378768c",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 19,
+   "article": 27,
+   "article_title": "Constant k filter",
+   "token_range": [
+    145547,
+    146059
+   ],
+   "segment": [
+    145547,
+    147357
+   ],
+   "token_sha256": "6dd83d888bda2f83b4dbd9623af56a6c24e3485b3ee19e79f3a113fd0fa606ea",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 20,
+   "article": 27,
+   "article_title": "Constant k filter",
+   "token_range": [
+    146059,
+    146571
+   ],
+   "segment": [
+    145547,
+    147357
+   ],
+   "token_sha256": "ac41b5b18f74365528bc47eaeaa0811e17f648d627a934fd2dc836930fbd62dc",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 21,
+   "article": 27,
+   "article_title": "Constant k filter",
+   "token_range": [
+    146571,
+    147083
+   ],
+   "segment": [
+    145547,
+    147357
+   ],
+   "token_sha256": "7820b3579d6c650d896924a87697c87379d93929beb2e09ddf18ca8c7cbfe0b5",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 22,
+   "article": 34,
+   "article_title": "Shackleton ( crater )",
+   "token_range": [
+    183181,
+    183693
+   ],
+   "segment": [
+    183181,
+    185046
+   ],
+   "token_sha256": "be8cd72bac14cc37398f0e8ddaf5cddcd5c3905be5ac3d79c21bf60d524f26e5",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 23,
+   "article": 34,
+   "article_title": "Shackleton ( crater )",
+   "token_range": [
+    183693,
+    184205
+   ],
+   "segment": [
+    183181,
+    185046
+   ],
+   "token_sha256": "68f53a5a5f573b9530e7c6bdbe5dcde9f32b06a46a6b7a2d9acd7f45aef5b1be",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 24,
+   "article": 34,
+   "article_title": "Shackleton ( crater )",
+   "token_range": [
+    184205,
+    184717
+   ],
+   "segment": [
+    183181,
+    185046
+   ],
+   "token_sha256": "40c1c89c1fe665123712476e809f2651384309a387d079c3bd4ab7f46386016a",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 25,
+   "article": 39,
+   "article_title": "Attalea ( palm )",
+   "token_range": [
+    230541,
+    231053
+   ],
+   "segment": [
+    230541,
+    233486
+   ],
+   "token_sha256": "72bebb2069ea031e04b7966c8d5961f20980b33e39e4ea82801188b0e4b022d9",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 26,
+   "article": 39,
+   "article_title": "Attalea ( palm )",
+   "token_range": [
+    231053,
+    231565
+   ],
+   "segment": [
+    230541,
+    233486
+   ],
+   "token_sha256": "5cc78a7524cc3fef5de71e1486f6fe06d2d4be6d918af9d60573d3771d77a814",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 27,
+   "article": 39,
+   "article_title": "Attalea ( palm )",
+   "token_range": [
+    231565,
+    232077
+   ],
+   "segment": [
+    230541,
+    233486
+   ],
+   "token_sha256": "acd9c07912d01d1a98174df2dcd799cf903a3c3c06dca2cedb005bdf86da788c",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 28,
+   "article": 39,
+   "article_title": "Attalea ( palm )",
+   "token_range": [
+    232077,
+    232589
+   ],
+   "segment": [
+    230541,
+    233486
+   ],
+   "token_sha256": "d59abad493b6fb830f84d4345588c43eb9c74de55a71bff1a6f2a2d215742f2d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 29,
+   "article": 39,
+   "article_title": "Attalea ( palm )",
+   "token_range": [
+    232589,
+    233101
+   ],
+   "segment": [
+    230541,
+    233486
+   ],
+   "token_sha256": "ec2ec953adb83d478a5200a245ef52481ee16377f5f8b4f8fd16a4d68ce22b19",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 30,
+   "article": 50,
+   "article_title": "Operation USA",
+   "token_range": [
+    265388,
+    265900
+   ],
+   "segment": [
+    265388,
+    266658
+   ],
+   "token_sha256": "da98648349f1745779e1aef30414edaafbc0eab3004cac151a7b1d963e3f16a3",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 31,
+   "article": 50,
+   "article_title": "Operation USA",
+   "token_range": [
+    265900,
+    266412
+   ],
+   "segment": [
+    265388,
+    266658
+   ],
+   "token_sha256": "aa90b8d58a3683fe58e59c1f501af78f476ae4f17512a183054efc11bbe4040d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 32,
+   "article": 51,
+   "article_title": "Typhoon Krosa ( 2013 )",
+   "token_range": [
+    266658,
+    267170
+   ],
+   "segment": [
+    266658,
+    267957
+   ],
+   "token_sha256": "b0f884926b2cead4929c33aa8e618c32a39788b391a596555829505d070ccc43",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 33,
+   "article": 51,
+   "article_title": "Typhoon Krosa ( 2013 )",
+   "token_range": [
+    267170,
+    267682
+   ],
+   "segment": [
+    266658,
+    267957
+   ],
+   "token_sha256": "d7f19ce732c264aa8d69935511444e3c95a2d3db0c19c721ab1392565811da63",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 34,
+   "article": 55,
+   "article_title": "Tatwine",
+   "token_range": [
+    278592,
+    279104
+   ],
+   "segment": [
+    278592,
+    279216
+   ],
+   "token_sha256": "70c99e7946ec02517aa407b8c20f41396c98de92d9d7674003817f49f11bb11d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  }
+ ]
+}

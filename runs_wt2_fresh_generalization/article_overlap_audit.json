@@ -1,0 +1,60 @@
+{
+ "grid": {
+  "n_full_windows": 584,
+  "historical": 128,
+  "unused": 456,
+  "category_A": 30,
+  "category_B": 381,
+  "category_C": 45,
+  "category_C_reasons": {
+   "crosses article boundary": 45
+  },
+  "stream_tail_tokens_unused": 70
+ },
+ "verified_unused_456": true,
+ "grid_note": "grid inventory (verification of the 456 unused i*512 windows); the evaluated cohorts use article-aligned windows (see manifests) so that short never-represented articles are not lost to the grid",
+ "token_overlap_A_with_historical": 0,
+ "token_overlap_B_with_historical": 0,
+ "token_overlap_A_with_B": 0,
+ "article_overlap_A_with_historical_any": [],
+ "article_overlap_A_with_historical_major": [],
+ "exact_duplicate_windows_A_or_B_vs_historical": 0,
+ "prior_use": {
+  "early_dev_eval": {
+   "source": "e3_allocation.py --ppl (moe_calib.data_utils.wikitext2_ppl, seqlen 2048, default --ppl-windows 40): first 81,920 test-stream tokens; runs_smoke result",
+   "tokens": [
+    0,
+    81920
+   ],
+   "articles": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "cohort_A_articles_flagged": [
+    7,
+    13,
+    14
+   ],
+   "cohort_A_windows_flagged": 11,
+   "cohort_B_windows_flagged": 104
+  },
+  "calibration": "WikiText-2 TEST never used for calibration (C4-train; domain ablation used WT2 train)",
+  "other_diagnostics": "all later WT2 evaluations / activation caches used the 128 historical windows (or a 32-window subset); no other test-stream text was used"
+ },
+ "note": "category A/B windows reuse the historical i*512 grid and tokenization slice (historical semantics); boundary-crossing unused windows (category C) are excluded so no cross-article transition is scored"
+}

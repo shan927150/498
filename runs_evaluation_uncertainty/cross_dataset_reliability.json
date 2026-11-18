@@ -1,0 +1,387 @@
+{
+ "sets": {
+  "moe": {
+   "pearson_full_WT2_vs_C4": -0.21370780172454318,
+   "pearson_bootstrap_ci": [
+    -0.5620909213095939,
+    0.27411754721265663
+   ],
+   "spearman_full": -0.06666666666666667,
+   "pair_order_agreement": 0.4666666666666667,
+   "n_pairs": 30,
+   "sign_agreement_contrasts": 0.4666666666666667,
+   "n_contrasts": 15,
+   "sign_disagreements": [
+    "s0_G20261111",
+    "s0_G20261115",
+    "s1_G20261112",
+    "s1_G20261114",
+    "s2_G20261111",
+    "s2_G20261113",
+    "s2_G20261114",
+    "s2_G20261115"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.6414194403598148,
+    "C4HO": 0.14043574135552986
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.7815423950616907,
+    "C4HO": 0.24628435651903885
+   },
+   "reliability_lambda": {
+    "WT2": 0.7506675976690956,
+    "C4HO": 0.19547116447623908
+   },
+   "expected_cross_r_if_identical_true_effects": 0.3830585718280679,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dense4": {
+   "pearson_full_WT2_vs_C4": -0.3178985946909938,
+   "pearson_bootstrap_ci": [
+    -0.8784007277341199,
+    0.7621465441926057
+   ],
+   "spearman_full": -0.3,
+   "pair_order_agreement": 0.4,
+   "n_pairs": 10,
+   "sign_agreement_contrasts": 0.75,
+   "n_contrasts": 4,
+   "sign_disagreements": [
+    "G20261112"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.7481851209260587,
+    "C4HO": -0.43352577512165835
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.8559563995484937,
+    "C4HO": -1.5306107712659447
+   },
+   "reliability_lambda": {
+    "WT2": 0.7888786250281126,
+    "C4HO": -1.583025514292854
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dense3": {
+   "pearson_full_WT2_vs_C4": -0.8389085415737405,
+   "pearson_bootstrap_ci": [
+    -0.9380634184568708,
+    0.642730431065212
+   ],
+   "spearman_full": -0.7,
+   "pair_order_agreement": 0.2,
+   "n_pairs": 10,
+   "sign_agreement_contrasts": 0.25,
+   "n_contrasts": 4,
+   "sign_disagreements": [
+    "G20261111",
+    "G20261112",
+    "G20261113"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.9026906188986565,
+    "C4HO": -0.6209074929277061
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.9488569606982824,
+    "C4HO": -3.275757137607035
+   },
+   "reliability_lambda": {
+    "WT2": 0.912453386420869,
+    "C4HO": -3.1213257813256776
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_natural_k1": {
+   "pearson_full_WT2_vs_C4": -0.042193728154130625,
+   "pearson_bootstrap_ci": [
+    -0.6848914779243481,
+    0.6480986290590578
+   ],
+   "spearman_full": 0.2619047619047619,
+   "pair_order_agreement": 0.5714285714285714,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.5,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k001_r3",
+    "k001_r4",
+    "k001_r5",
+    "k001_r7"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.3593942052823701,
+    "C4HO": -0.3151953797673367
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.5287564179482692,
+    "C4HO": -0.9205410432547859
+   },
+   "reliability_lambda": {
+    "WT2": 0.4579887393350628,
+    "C4HO": -0.9648962188371508
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_natural_k4": {
+   "pearson_full_WT2_vs_C4": -0.17155031123205952,
+   "pearson_bootstrap_ci": [
+    -0.6467323031479654,
+    0.5086155800725066
+   ],
+   "spearman_full": -0.07142857142857142,
+   "pair_order_agreement": 0.4642857142857143,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.5,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k004_r0",
+    "k004_r3",
+    "k004_r5",
+    "k004_r6"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.6145367708145982,
+    "C4HO": 0.06990024840740067
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.7612545987472803,
+    "C4HO": 0.1306668514404976
+   },
+   "reliability_lambda": {
+    "WT2": 0.7117426649853668,
+    "C4HO": 0.016395718976336064
+   },
+   "expected_cross_r_if_identical_true_effects": 0.10802561140104035,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_natural_k16": {
+   "pearson_full_WT2_vs_C4": -0.11747812296873801,
+   "pearson_bootstrap_ci": [
+    -0.6222884246952312,
+    0.5887094290850441
+   ],
+   "spearman_full": -0.11904761904761904,
+   "pair_order_agreement": 0.4642857142857143,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.625,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k016_r2",
+    "k016_r3",
+    "k016_r5"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.5889407987074996,
+    "C4HO": -0.01103686369581194
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.7412998636406903,
+    "C4HO": -0.02232007097262964
+   },
+   "reliability_lambda": {
+    "WT2": 0.6803617800982473,
+    "C4HO": -0.14723954528389788
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_natural_k64": {
+   "pearson_full_WT2_vs_C4": -0.11351010066181896,
+   "pearson_bootstrap_ci": [
+    -0.6366605507830823,
+    0.5631867133190811
+   ],
+   "spearman_full": -0.14285714285714285,
+   "pair_order_agreement": 0.42857142857142855,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.125,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k064_r0",
+    "k064_r1",
+    "k064_r2",
+    "k064_r3",
+    "k064_r5",
+    "k064_r6",
+    "k064_r7"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.31214240535351134,
+    "C4HO": -0.2583145423242289
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.4757751964725435,
+    "C4HO": -0.6965608928984865
+   },
+   "reliability_lambda": {
+    "WT2": 0.37572312456382484,
+    "C4HO": -0.8825294792717795
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_fixed_k1": {
+   "pearson_full_WT2_vs_C4": 0.561643645640926,
+   "pearson_bootstrap_ci": [
+    -0.39582340102694197,
+    0.8094364994980571
+   ],
+   "spearman_full": 0.5952380952380952,
+   "pair_order_agreement": 0.7142857142857143,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.75,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k001_r0",
+    "k001_r4"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.015815757472444916,
+    "C4HO": 0.07297174105105442
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.031139027635873104,
+    "C4HO": 0.1360180110234278
+   },
+   "reliability_lambda": {
+    "WT2": -0.04589661150505169,
+    "C4HO": 0.024899204575386837
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_fixed_k4": {
+   "pearson_full_WT2_vs_C4": -0.2652638774839185,
+   "pearson_bootstrap_ci": [
+    -0.6950363582962318,
+    0.5935925625568493
+   ],
+   "spearman_full": -0.2619047619047619,
+   "pair_order_agreement": 0.39285714285714285,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.5,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k004_r1",
+    "k004_r3",
+    "k004_r5",
+    "k004_r7"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.5624614032553394,
+    "C4HO": -0.6372262274244509
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.7199683807657183,
+    "C4HO": -3.5130777117673024
+   },
+   "reliability_lambda": {
+    "WT2": 0.6487424393411019,
+    "C4HO": -3.173193192976583
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_fixed_k16": {
+   "pearson_full_WT2_vs_C4": 0.3553182958524926,
+   "pearson_bootstrap_ci": [
+    -0.40979507533498494,
+    0.768762190793186
+   ],
+   "spearman_full": 0.40476190476190477,
+   "pair_order_agreement": 0.6071428571428571,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.5,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k016_r0",
+    "k016_r1",
+    "k016_r3",
+    "k016_r5"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.4178828418674402,
+    "C4HO": 0.011834458582481193
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.5894462215468556,
+    "C4HO": 0.02339208450967474
+   },
+   "reliability_lambda": {
+    "WT2": 0.5365737844393973,
+    "C4HO": -0.07673615314015528
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  },
+  "dose_fixed_k64": {
+   "pearson_full_WT2_vs_C4": 0.24125955676187028,
+   "pearson_bootstrap_ci": [
+    -0.5352335142001728,
+    0.7369467564087677
+   ],
+   "spearman_full": 0.35714285714285715,
+   "pair_order_agreement": 0.6071428571428571,
+   "n_pairs": 28,
+   "sign_agreement_contrasts": 0.5,
+   "n_contrasts": 8,
+   "sign_disagreements": [
+    "k064_r1",
+    "k064_r2",
+    "k064_r4",
+    "k064_r7"
+   ],
+   "split_half_median_pearson": {
+    "WT2": 0.5084676852370766,
+    "C4HO": -0.07339703636380383
+   },
+   "spearman_brown_full_length_reliability": {
+    "WT2": 0.6741512466104488,
+    "C4HO": -0.15842176043939582
+   },
+   "reliability_lambda": {
+    "WT2": 0.6281285928516863,
+    "C4HO": -0.22085237916263795
+   },
+   "expected_cross_r_if_identical_true_effects": null,
+   "disattenuated_cross_r": null,
+   "disattenuation_reported": false,
+   "note": "full-vs-full correlation of centred effects (MoE: within-seed centred); bootstrap resamples both datasets independently with the primary schemes; the 15 MoE / 5 dense values are not independent evidence"
+  }
+ },
+ "method": {
+  "statistics": [
+   "Pearson / Spearman of full-data centred effects",
+   "sign agreement of contrasts",
+   "pairwise order agreement"
+  ],
+  "ci": "independent primary-scheme bootstraps of the two datasets, percentile",
+  "comparability": "split-half medians are stepped up to full length with Spearman-Brown 2r/(1+r) before comparison with the full-vs-full cross correlation; expected cross correlation under identical true effects = sqrt(lam_WT2 lam_C4), lam = V_corr / V_obs (only if both > 0)"
+ }
+}

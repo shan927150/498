@@ -1,0 +1,6587 @@
+{
+ "cohort": "B: fresh windows from previously represented articles (window-disjoint, article-overlapping)",
+ "rule": "articles with >= 1 token in a historical window; every maximal run of article tokens not covered by a historical window is cut into non-overlapping complete 512-token windows from the run start; remainders < 512 not evaluated",
+ "unevaluated_remainder_tokens": 17771,
+ "n_windows": 381,
+ "n_articles": 48,
+ "articles": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  9,
+  10,
+  11,
+  12,
+  15,
+  16,
+  17,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  35,
+  36,
+  37,
+  38,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  52,
+  54,
+  56,
+  57,
+  58,
+  59
+ ],
+ "windows_per_article": {
+  "0": 1,
+  "1": 5,
+  "2": 3,
+  "3": 16,
+  "4": 3,
+  "5": 3,
+  "6": 22,
+  "8": 18,
+  "9": 2,
+  "10": 4,
+  "11": 16,
+  "12": 1,
+  "15": 3,
+  "16": 12,
+  "17": 1,
+  "19": 6,
+  "20": 8,
+  "21": 1,
+  "22": 6,
+  "23": 20,
+  "24": 3,
+  "25": 11,
+  "26": 21,
+  "28": 8,
+  "29": 3,
+  "30": 10,
+  "31": 2,
+  "32": 15,
+  "33": 14,
+  "35": 21,
+  "36": 5,
+  "37": 15,
+  "38": 21,
+  "41": 9,
+  "42": 3,
+  "43": 1,
+  "44": 2,
+  "45": 13,
+  "46": 1,
+  "47": 2,
+  "48": 5,
+  "49": 5,
+  "52": 1,
+  "54": 13,
+  "56": 5,
+  "57": 10,
+  "58": 5,
+  "59": 6
+ },
+ "scored_targets": 194691,
+ "windows": [
+  {
+   "window": 0,
+   "article": 0,
+   "article_title": "Robert Boulter",
+   "token_range": [
+    512,
+    1024
+   ],
+   "segment": [
+    512,
+    1389
+   ],
+   "token_sha256": "793d44029dd9534bdfb4b86025cac19adbc42726b174b7aeca1ed15e302d1bb0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 1,
+   "article": 1,
+   "article_title": "Du Fu",
+   "token_range": [
+    2560,
+    3072
+   ],
+   "segment": [
+    2560,
+    4608
+   ],
+   "token_sha256": "51954b65c396c10b974a141ae227ecccfaf91d637d27b5de515774a2d9d9e38e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 2,
+   "article": 1,
+   "article_title": "Du Fu",
+   "token_range": [
+    3072,
+    3584
+   ],
+   "segment": [
+    2560,
+    4608
+   ],
+   "token_sha256": "c0609ff57b49ab0f61f43cebe5a8cc38baca7905c5f043827454b9572a2e471f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 3,
+   "article": 1,
+   "article_title": "Du Fu",
+   "token_range": [
+    3584,
+    4096
+   ],
+   "segment": [
+    2560,
+    4608
+   ],
+   "token_sha256": "36eaa24f66548bd53657b84add7ebc66e95c72773484fc5bd3a028d7b36063d8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 4,
+   "article": 1,
+   "article_title": "Du Fu",
+   "token_range": [
+    4096,
+    4608
+   ],
+   "segment": [
+    2560,
+    4608
+   ],
+   "token_sha256": "cdcc57e00e8cea72e63174efd855dd8ec583546a97d27a31b76cdf503b65a394",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 5,
+   "article": 1,
+   "article_title": "Du Fu",
+   "token_range": [
+    5120,
+    5632
+   ],
+   "segment": [
+    5120,
+    5632
+   ],
+   "token_sha256": "73a6f5cba0c0dfa28101b51d37e3e871f50942696ca073644a018b70d7ed0f2c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 6,
+   "article": 2,
+   "article_title": "Kiss You ( One Direction song )",
+   "token_range": [
+    8192,
+    8704
+   ],
+   "segment": [
+    8192,
+    9869
+   ],
+   "token_sha256": "ec67e30808729e65f2c77244b66a6cef97fc2d64a292f98a14a6b270894aa54b",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 7,
+   "article": 2,
+   "article_title": "Kiss You ( One Direction song )",
+   "token_range": [
+    8704,
+    9216
+   ],
+   "segment": [
+    8192,
+    9869
+   ],
+   "token_sha256": "4dc44803048bd722d4d9540449da01489465b4d01852bdc02b5138facdce13e5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 8,
+   "article": 2,
+   "article_title": "Kiss You ( One Direction song )",
+   "token_range": [
+    9216,
+    9728
+   ],
+   "segment": [
+    8192,
+    9869
+   ],
+   "token_sha256": "c8626af07cabbc64bd740639d2757115443825dee846d6dd9c2dbec65aff9e1e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 9,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    9869,
+    10381
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "e4d639292f55d4c47a0ff1e7d6630c69a3491ee8f5d49cb8a3181b95ae592f92",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 10,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    10381,
+    10893
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "1c7cb2e469f59701591f02c8c831e578f4dbdfd3ad45967001045e33f1246687",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 11,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    10893,
+    11405
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "ce6e14f08d75206a216882303d0b688da7a3191b1a1f4f031a9e2b8b66f986d1",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 12,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    11405,
+    11917
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "98df17e16f4eab627610be5812c18d41389dd2417c512c751c74108e3de09461",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 13,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    11917,
+    12429
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "1be316318ab1a53a93417a386c74707ac76e7993c9cd311f911733108410c188",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 14,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    12429,
+    12941
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "ed76c9d9ec28ae8de8598b1ede2db00dd460db45ccb3f2ea78feb0542ffd6b64",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 15,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    12941,
+    13453
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "33c39e696fac9cc9aaba84ac94b9a602ed1126fc86729a24b1534bcce03f066d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 16,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    13453,
+    13965
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "42321e8966b1a1c9ea23c238d25e6df08f4fe53e4d1441f8e5c345697762dae8",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 17,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    13965,
+    14477
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "c854d4e2811ebaec5bd0d67685396ffc7ce32b435f7e9cf3873d67c101bc4a9b",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 18,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    14477,
+    14989
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "0d8116b9150c0cb8af8e37f8c01e9e61033cfabdfc00372ad7f9170bb26a9312",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 19,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    14989,
+    15501
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "ed77c415032a710ff2661474d37ba978c28d69c4021e3ac2631925eb36eb1d2e",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 20,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    15501,
+    16013
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "b057ada43e893e65dc09cdd4540441334eb52e86d2170482bd6ce37210bbadfd",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 21,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    16013,
+    16525
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "4d5dc0a20731a8eee3a3cb4f0b7313782697be2d0b7001d9a323324f9c7dedcf",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 22,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    16525,
+    17037
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "a87d62e806eb1bc33099b012288b02ad91db375798032a4845a9c8db986f4dff",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 23,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    17037,
+    17549
+   ],
+   "segment": [
+    9869,
+    17920
+   ],
+   "token_sha256": "bc2f83cf74960b4cb3a0425214fcc86a7725c01269806940915686562b675aba",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 24,
+   "article": 3,
+   "article_title": "Ise @-@ class battleship",
+   "token_range": [
+    18432,
+    18944
+   ],
+   "segment": [
+    18432,
+    18944
+   ],
+   "token_sha256": "b513080fe5223c2b87c13a76026eb2635cdf806adccd76a8bdb612bfe233002d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 25,
+   "article": 4,
+   "article_title": "Dick Rifenburg",
+   "token_range": [
+    19456,
+    19968
+   ],
+   "segment": [
+    19456,
+    20480
+   ],
+   "token_sha256": "bd890dc4b4e9a212973aec48bb41d68947a75b9acdf3ec63ee444f35e45786a9",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 26,
+   "article": 4,
+   "article_title": "Dick Rifenburg",
+   "token_range": [
+    19968,
+    20480
+   ],
+   "segment": [
+    19456,
+    20480
+   ],
+   "token_sha256": "785a4b248b6a39966c3e286fce1690ef97e68368a3676118887e4cd5365af704",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 27,
+   "article": 4,
+   "article_title": "Dick Rifenburg",
+   "token_range": [
+    20992,
+    21504
+   ],
+   "segment": [
+    20992,
+    21917
+   ],
+   "token_sha256": "79f811149420094d2005251b695ff189d3e031340d266490fc591da9b125b6d9",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 28,
+   "article": 5,
+   "article_title": "1933 Treasure Coast hurricane",
+   "token_range": [
+    22528,
+    23040
+   ],
+   "segment": [
+    22528,
+    23552
+   ],
+   "token_sha256": "4516cd155efd70f2640facd90eae1e8b7b3786e4ee45f7ab50eaa5c3c63c2915",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 29,
+   "article": 5,
+   "article_title": "1933 Treasure Coast hurricane",
+   "token_range": [
+    23040,
+    23552
+   ],
+   "segment": [
+    22528,
+    23552
+   ],
+   "token_sha256": "5406a09539cc7b0c5a426c2c323c3aea2d04e2093b2b6e6c5a973a55d1f36463",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 30,
+   "article": 5,
+   "article_title": "1933 Treasure Coast hurricane",
+   "token_range": [
+    24064,
+    24576
+   ],
+   "segment": [
+    24064,
+    24894
+   ],
+   "token_sha256": "df81ffd9317b1712bdc75493b2bb358686b35003744546b7fda53a6d431c6b55",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 31,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    24894,
+    25406
+   ],
+   "segment": [
+    24894,
+    26624
+   ],
+   "token_sha256": "758a2404230918e5a99a34b02d728026c5073c9d4b0d78927c7bea14c151e8d9",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 32,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    25406,
+    25918
+   ],
+   "segment": [
+    24894,
+    26624
+   ],
+   "token_sha256": "be5d470dffdf6fb443ff9f1dba13679645093e495a4dd22e6b47a456c6b37c56",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 33,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    25918,
+    26430
+   ],
+   "segment": [
+    24894,
+    26624
+   ],
+   "token_sha256": "8aa905e9155e1274db90424b888801fd717cf5ade49883da428d4ee4cf18ba07",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 34,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    27136,
+    27648
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "a9ea8ab4e395da1c02ea799a83775330ee760be2ac33414ec124c142454cd7c5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 35,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    27648,
+    28160
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "1502a01bd159f35cd3144575c0ac9fd56ee1853ac3d04b6537b0c5f348495864",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 36,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    28160,
+    28672
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "6c3d062a3c9de0a3639c46012b6b67234d6fa2e28b42187ac5c1b2545c353d97",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 37,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    28672,
+    29184
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "c50f2ecc47174c5167a598dbec27142635785dc23eabbdb85d64014bcf710b75",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 38,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    29184,
+    29696
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "78dd9b0f25fc3e48573fdd4c7dee6f46309801bfea3decdaa12b3df0980d25c1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 39,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    29696,
+    30208
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "5fa143ffb5d18a93e9a679a6d4b7c8a7b834490319494c9dd064029523b0d290",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 40,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    30208,
+    30720
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "78321b816fdf30ad5ee504b73c1132b906d3cb9dd7d21a3133aebb5e4a17604f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 41,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    30720,
+    31232
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "c903061a2103b85467ce09c4ce08696583a9c9fdd2c675ba1df666680ec90d83",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 42,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    31232,
+    31744
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "e85c20aab9f824e50cef38de200dc356b34086d4d5dfe1dea1cd185e21a4b702",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 43,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    31744,
+    32256
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "a04e8841aa0cf30489c70466ab75c8e7e979587095ce45035c520a1730376a74",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 44,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    32256,
+    32768
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "257edfea5cc9b431337b7725105a8cff340eb71f4378162478370151556be6b0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 45,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    32768,
+    33280
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "1ee925782de02d57a4984cd45567008632f68b1ec035e54541b2744192e6ce3d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 46,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    33280,
+    33792
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "a50f72803e32e9312b8c70f4f7b57da3ea0a555c41d771f9db637e47470a8642",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 47,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    33792,
+    34304
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "adf2cf894c0779183d2be722bce5b1e1f8e1701227172af1e0f66dc2d2f7d783",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 48,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    34304,
+    34816
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "22b9a4c7f3965d77677eec7bd9f8ef1eea3d61f4a881f69023b39699370d7fcd",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 49,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    34816,
+    35328
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "40a849873b8b3a9223195bb07b9e48d2d20619575f9421a06fec182bb31a4947",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 50,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    35328,
+    35840
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "62d8270f15a281c15c07c802b0760a6ffccf0da353be4ba91da32af8ff93f4d8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 51,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    35840,
+    36352
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "6e35f8860f66f44b2f591d4dca49d8a058e6eb9b283a0e8bc1316831d35b3a39",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 52,
+   "article": 6,
+   "article_title": "Second Battle of Naktong Bulge",
+   "token_range": [
+    36352,
+    36864
+   ],
+   "segment": [
+    27136,
+    37340
+   ],
+   "token_sha256": "bec4af4fec6678c77abf7f24ca4cbeb49682d98c72a9f58f3b2274025dfa4921",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 53,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    40960,
+    41472
+   ],
+   "segment": [
+    40960,
+    42496
+   ],
+   "token_sha256": "501f3fc3d89f1d88c11b54eafe12403d80e13b105eca7cb571fb0e00cf851c49",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 54,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    41472,
+    41984
+   ],
+   "segment": [
+    40960,
+    42496
+   ],
+   "token_sha256": "5c08aef48ae9297427a9b9b4b5dbbe4c74bda67486e5bcbabbcc8ace98a044b2",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 55,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    41984,
+    42496
+   ],
+   "segment": [
+    40960,
+    42496
+   ],
+   "token_sha256": "721af7341c56bfe06d46a27f17b9c89161ae73bf9deb4239c027d4a2033623a0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 56,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    43520,
+    44032
+   ],
+   "segment": [
+    43520,
+    44544
+   ],
+   "token_sha256": "55dd6a8a6e43d81f4aaf77ba2f0521f955db83cfe3bcae2660526591be0dced5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 57,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    44032,
+    44544
+   ],
+   "segment": [
+    43520,
+    44544
+   ],
+   "token_sha256": "31869e22700eb82c093e97113d7e5e32c21ad591952f4cf4b3a633821147d692",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 58,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    45568,
+    46080
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "afabfed36c47ef616df6ff83611bda3d8f5d3541175b996fed96dc75b18f91d1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 59,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    46080,
+    46592
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "7bec79c77352f62ce4114e303ecf152d70549b3a63842797c3a1a4c3ae6f80dc",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 60,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    46592,
+    47104
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "d3524b6ef20d120998024142f8e1676ab0ee350b83583e6de50988ea709ff4be",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 61,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    47104,
+    47616
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "39f224658a52bb16265690b46c2dcad751658395b771aa7efddb4364459b5c16",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 62,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    47616,
+    48128
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "659742e2bf68964b7087e84904eeed97f5725fc0a34f08707823c2f491af2064",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 63,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    48128,
+    48640
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "4b4af8d5e99278893f1caaccf1f2837e578b59c284d376c46e463da70e68719c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 64,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    48640,
+    49152
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "dc15c6192cfec62799e5b3000c6119fd3fc1257e507248ff8bd0072f7cc4f759",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 65,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    49152,
+    49664
+   ],
+   "segment": [
+    45568,
+    49664
+   ],
+   "token_sha256": "8e2cfcd2d2fdc4a65550d80a9a3f99856e80282cbb7a0af23a24ca14978790db",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 66,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    50688,
+    51200
+   ],
+   "segment": [
+    50688,
+    53248
+   ],
+   "token_sha256": "26004165c5a4300cebcc3ddbe44200825555450cfee867cf68c33245f1253d61",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 67,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    51200,
+    51712
+   ],
+   "segment": [
+    50688,
+    53248
+   ],
+   "token_sha256": "79a64b4bad079dc5d70d152351137d688165c10dbbf1cb0060014baa87670631",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 68,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    51712,
+    52224
+   ],
+   "segment": [
+    50688,
+    53248
+   ],
+   "token_sha256": "8296a3af82d461d68879b0ccef8e3ab96267c97031098535811428e762efd073",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 69,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    52224,
+    52736
+   ],
+   "segment": [
+    50688,
+    53248
+   ],
+   "token_sha256": "958997db2cfd1329c54fb587f36ff7c24ea9d590e32e755f6ff7f0736769ca52",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 70,
+   "article": 8,
+   "article_title": "Ironclad warship",
+   "token_range": [
+    52736,
+    53248
+   ],
+   "segment": [
+    50688,
+    53248
+   ],
+   "token_sha256": "5e9e33fb646c0c360a44bd906e62c42d7971b3e95e75c223ef78652fdddac1b0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 71,
+   "article": 9,
+   "article_title": "Little Gidding ( poem )",
+   "token_range": [
+    54272,
+    54784
+   ],
+   "segment": [
+    54272,
+    55696
+   ],
+   "token_sha256": "9105ec95eedd2f5b248f66a11b971045998f7c79ecf0e625277d6bbc1ce3a5e1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 72,
+   "article": 9,
+   "article_title": "Little Gidding ( poem )",
+   "token_range": [
+    54784,
+    55296
+   ],
+   "segment": [
+    54272,
+    55696
+   ],
+   "token_sha256": "940911318fb29a1391aad0dd73aafe7caf2ea300d0107f2793f5d91b92a66dff",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 73,
+   "article": 10,
+   "article_title": "The Portage to San Cristobal of A.H.",
+   "token_range": [
+    55696,
+    56208
+   ],
+   "segment": [
+    55696,
+    56832
+   ],
+   "token_sha256": "86f7d30363e587f69869d36a8dcab76eb4a944f93d921f69adeea58831ad6f92",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 74,
+   "article": 10,
+   "article_title": "The Portage to San Cristobal of A.H.",
+   "token_range": [
+    56208,
+    56720
+   ],
+   "segment": [
+    55696,
+    56832
+   ],
+   "token_sha256": "81bf18f26ca5543cdf415026262095a795a0d1eba2aaddb2a3533704d5151bde",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 75,
+   "article": 10,
+   "article_title": "The Portage to San Cristobal of A.H.",
+   "token_range": [
+    57344,
+    57856
+   ],
+   "segment": [
+    57344,
+    58368
+   ],
+   "token_sha256": "4d1caf1aa16743d6556927b8f5e8e2a48571079154c5f6db19c8d25da08e2f07",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 76,
+   "article": 10,
+   "article_title": "The Portage to San Cristobal of A.H.",
+   "token_range": [
+    57856,
+    58368
+   ],
+   "segment": [
+    57344,
+    58368
+   ],
+   "token_sha256": "507e7d8a1f700e13481a5929ba25f11daf5e587ec4d25121ae42b091d30f3ddb",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 77,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    59169,
+    59681
+   ],
+   "segment": [
+    59169,
+    59904
+   ],
+   "token_sha256": "d6a3a2036de63aabdf3d760bc3f0d57644d6ea3fe19d1087414bee91bef84037",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 78,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    60928,
+    61440
+   ],
+   "segment": [
+    60928,
+    61440
+   ],
+   "token_sha256": "771b5df355a2c4d311ca295dc34a387d81548dcb1f2e5fd1b8f06fd5ad5cac5e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 79,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    61952,
+    62464
+   ],
+   "segment": [
+    61952,
+    62464
+   ],
+   "token_sha256": "de595f02d9af9ff557d2d09a56fca595623b42d2c11a3452cb3ade1d8c974c3c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 80,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    62976,
+    63488
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "26eeecaf0d74cedcc341b864e2de915cecb06ed9d06918da52632e90d810e278",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 81,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    63488,
+    64000
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "af9995aab1efae5dd8708bbd51b3b10c230f246423bdf67483a84d5de984657e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 82,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    64000,
+    64512
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "bdb9abe41b6f118f0f1c8995d33db6efadff584ef08ef26a627a039cfd77bac3",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 83,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    64512,
+    65024
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "cc909a98eddce37b97a0c5fd8055d3a21b8c68553f5f86418fe07013ba062151",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 84,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    65024,
+    65536
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "b60f76917aeeee48adb5039aa00167572553f40444bde6523d652a0f2858c263",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 85,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    65536,
+    66048
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "c367e228ce94f3920fa91431d1268f111d0b7b2d91ca099360515e07cae79bd9",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 86,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    66048,
+    66560
+   ],
+   "segment": [
+    62976,
+    66560
+   ],
+   "token_sha256": "a96421cc32260823522b70b3010aef86dccddda7d2e323c939e3c7fa63288582",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 87,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    67072,
+    67584
+   ],
+   "segment": [
+    67072,
+    70144
+   ],
+   "token_sha256": "77f7749099e05c72d37a4cc4d49b3bbbafc2fa61945bcd0102af0e361dfa15ad",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 88,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    67584,
+    68096
+   ],
+   "segment": [
+    67072,
+    70144
+   ],
+   "token_sha256": "d1e3890b5efc03d679819c24c33d78a10583d1e950a608d189afbf5ba3a68032",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 89,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    68096,
+    68608
+   ],
+   "segment": [
+    67072,
+    70144
+   ],
+   "token_sha256": "272de421bf8a83612442e35ee3e5d24dd75a08a2058ed75938e5406b9ff8f28b",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 90,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    68608,
+    69120
+   ],
+   "segment": [
+    67072,
+    70144
+   ],
+   "token_sha256": "50325b1072d2efd573f8266cc24efd51f66025c9421dd947a8cf5d00e24098d6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 91,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    69120,
+    69632
+   ],
+   "segment": [
+    67072,
+    70144
+   ],
+   "token_sha256": "4ebd7a5a62f5f4067440d81f377e895a01a0a98d780d79a624edb563acc70e79",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 92,
+   "article": 11,
+   "article_title": "Temnospondyli",
+   "token_range": [
+    69632,
+    70144
+   ],
+   "segment": [
+    67072,
+    70144
+   ],
+   "token_sha256": "8d05ca4c33db6881917d3dd85c9e0fb7f5aba1fed3972f378062cfb8d8b12ca7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 93,
+   "article": 12,
+   "article_title": "Osbert de Bayeux",
+   "token_range": [
+    70656,
+    71168
+   ],
+   "segment": [
+    70656,
+    71357
+   ],
+   "token_sha256": "cf10ba59fbb595273f7557ac25d41f0c4f9707ef2b1b165fc47b7f2ff3afe763",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 94,
+   "article": 15,
+   "article_title": "Ben Amos",
+   "token_range": [
+    74726,
+    75238
+   ],
+   "segment": [
+    74726,
+    76288
+   ],
+   "token_sha256": "451d14aa6a082da6089c08d9e5694ad03b4bfbad5a4e0452c759867e19333c93",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 95,
+   "article": 15,
+   "article_title": "Ben Amos",
+   "token_range": [
+    75238,
+    75750
+   ],
+   "segment": [
+    74726,
+    76288
+   ],
+   "token_sha256": "10707fd7d734a593f8f67bac72e39dc3eb604666fa2cc1419a8cd03309e7e3d9",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 96,
+   "article": 15,
+   "article_title": "Ben Amos",
+   "token_range": [
+    75750,
+    76262
+   ],
+   "segment": [
+    74726,
+    76288
+   ],
+   "token_sha256": "f627299ca32089dd9493eee0403e6022d9be27bc1f5d1ade9966d6ca32b37ed0",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 97,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    76976,
+    77488
+   ],
+   "segment": [
+    76976,
+    78848
+   ],
+   "token_sha256": "dee7227364cd3a4ace9b5b294f64860765a7efc844f4ee05f0273e7bb202c84e",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 98,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    77488,
+    78000
+   ],
+   "segment": [
+    76976,
+    78848
+   ],
+   "token_sha256": "d21390696cf9be625cd650dbccd12a0b3935a26b34692a5d665aebeb67a234aa",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 99,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    78000,
+    78512
+   ],
+   "segment": [
+    76976,
+    78848
+   ],
+   "token_sha256": "bb3fdd3f497636627a14c4ffd120367823a731455667667bbd4528cfc25eaaa0",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 100,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    79360,
+    79872
+   ],
+   "segment": [
+    79360,
+    80384
+   ],
+   "token_sha256": "64845497fa2eac973feab15ae893c51f28464d7cf1fec4d77dff0db9f4e5899b",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 101,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    79872,
+    80384
+   ],
+   "segment": [
+    79360,
+    80384
+   ],
+   "token_sha256": "c8e545f0586b1a0c388c3e78574e953e5efd20d8ba54f74e07be8b3d73280ccd",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 102,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    80896,
+    81408
+   ],
+   "segment": [
+    80896,
+    83456
+   ],
+   "token_sha256": "94bef5fdeec04ffd31b6c0373c81d2d8f815746cd2ef8dfad4643307386341fc",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 103,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    81408,
+    81920
+   ],
+   "segment": [
+    80896,
+    83456
+   ],
+   "token_sha256": "141d8e4bcb2c9ba1a288709ca24217b2c1bf49ffbb1b511d57e7e8bfa3ff5c5b",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": true
+  },
+  {
+   "window": 104,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    81920,
+    82432
+   ],
+   "segment": [
+    80896,
+    83456
+   ],
+   "token_sha256": "a156cb03fc368e253acea803767b1e866792f92ec0b38a48ec5a87b9c4cfc780",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 105,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    82432,
+    82944
+   ],
+   "segment": [
+    80896,
+    83456
+   ],
+   "token_sha256": "4841d582a186c469af82233d664ddc9998039bac10cfaca4c3faa08a0c1fd3ca",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 106,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    82944,
+    83456
+   ],
+   "segment": [
+    80896,
+    83456
+   ],
+   "token_sha256": "09483226b43fd280dc444486ac2e026d545ba5716cbf5854f000040512eb81bb",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 107,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    83968,
+    84480
+   ],
+   "segment": [
+    83968,
+    84992
+   ],
+   "token_sha256": "1694d6b714db98d2ce515701112707fb339ec0d5660460e55d2997dacdbdba77",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 108,
+   "article": 16,
+   "article_title": "Clayton Kershaw",
+   "token_range": [
+    84480,
+    84992
+   ],
+   "segment": [
+    83968,
+    84992
+   ],
+   "token_sha256": "2d42d19ae6a8357e427910867b327f03375942dbb930d831731375d08d7750fa",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 109,
+   "article": 17,
+   "article_title": "Josepha Petrick Kemarre",
+   "token_range": [
+    86016,
+    86528
+   ],
+   "segment": [
+    86016,
+    86974
+   ],
+   "token_sha256": "adb8d24798456418af43def7f08115101225978d58198c5a210d3e2a77377e94",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 110,
+   "article": 19,
+   "article_title": "Imagism",
+   "token_range": [
+    91516,
+    92028
+   ],
+   "segment": [
+    91516,
+    92160
+   ],
+   "token_sha256": "e0aacf49468a1160cd28bc1fd992be7e82e28479a9f9c2188ba131b438d42982",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 111,
+   "article": 19,
+   "article_title": "Imagism",
+   "token_range": [
+    92672,
+    93184
+   ],
+   "segment": [
+    92672,
+    94208
+   ],
+   "token_sha256": "337e7a82792666bae12ec0dde026ebbe372325e7c47c60d7f6e6362a9410bd00",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 112,
+   "article": 19,
+   "article_title": "Imagism",
+   "token_range": [
+    93184,
+    93696
+   ],
+   "segment": [
+    92672,
+    94208
+   ],
+   "token_sha256": "4b820a6872327332de13c5651014e196a8131c34b7215b69dd7c3d00e12909a0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 113,
+   "article": 19,
+   "article_title": "Imagism",
+   "token_range": [
+    93696,
+    94208
+   ],
+   "segment": [
+    92672,
+    94208
+   ],
+   "token_sha256": "bf4b4d4e2bdaa87e53a57758e54b1f46169ed4e51dc781c0c44ea6ba428fc789",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 114,
+   "article": 19,
+   "article_title": "Imagism",
+   "token_range": [
+    94720,
+    95232
+   ],
+   "segment": [
+    94720,
+    95869
+   ],
+   "token_sha256": "d9a5dc468b92356c43a67cd67ffa345f9380c550dd1c124bf71ede57d0e26b90",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 115,
+   "article": 19,
+   "article_title": "Imagism",
+   "token_range": [
+    95232,
+    95744
+   ],
+   "segment": [
+    94720,
+    95869
+   ],
+   "token_sha256": "4854104cf751fbe2e787600a98e8327e8c74daf0fd1469f7d8b946e6ad7bc3f0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 116,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    96768,
+    97280
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "df7b107c8b9ddb3c96bf5ebb353f2100bb7f2f354325b5a62eeb26c09196d5ef",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 117,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    97280,
+    97792
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "f55217b5847cd64719d1bcf1860b767d46e4258cf88599ea33cfec25e78655c3",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 118,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    97792,
+    98304
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "a9d95ae8e8253d9a800f15dfee39e87d93ab6dc7de0bbe243b2820f5e51cec62",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 119,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    98304,
+    98816
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "92651896bdb2697ae3dfc5fa1c271936c4f092e0d1136bd770e96395b8471188",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 120,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    98816,
+    99328
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "60c87bc07c44586240bed88a9eff32370e645833d18428f7b8d98687f21af7f2",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 121,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    99328,
+    99840
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "48d4958fe3bae3c31af5b7ba784fa1e88031633f77aadb682e62791f5d7e9a23",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 122,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    99840,
+    100352
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "2854fae2587d8eb1aa3d83c53736702b8f03c6c27ee37fdf3f45ee4e3d9cb4b9",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 123,
+   "article": 20,
+   "article_title": "Operation Eastern Exit",
+   "token_range": [
+    100352,
+    100864
+   ],
+   "segment": [
+    96768,
+    101068
+   ],
+   "token_sha256": "bf834849eb921d2f924c3c969f6ac6ff878be9dbb0fb4e85d0d4de7820015d31",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 124,
+   "article": 21,
+   "article_title": "2010 Claxton Shield",
+   "token_range": [
+    101068,
+    101580
+   ],
+   "segment": [
+    101068,
+    101888
+   ],
+   "token_sha256": "f60df495f87afb6507984c22381e8bc41bebf67f8b0335884c44b67d30a88213",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 125,
+   "article": 22,
+   "article_title": "Independiente ( Ricardo Arjona album )",
+   "token_range": [
+    102691,
+    103203
+   ],
+   "segment": [
+    102691,
+    105472
+   ],
+   "token_sha256": "dddc9acde98d41bc04a734b7f9d2464287bd4ab201dabbe367ce9ebf94755773",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 126,
+   "article": 22,
+   "article_title": "Independiente ( Ricardo Arjona album )",
+   "token_range": [
+    103203,
+    103715
+   ],
+   "segment": [
+    102691,
+    105472
+   ],
+   "token_sha256": "a02da1bea9a4eb68e70a441b3378a0ff5fa6b327e90d3097cd4ce272f69880ad",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 127,
+   "article": 22,
+   "article_title": "Independiente ( Ricardo Arjona album )",
+   "token_range": [
+    103715,
+    104227
+   ],
+   "segment": [
+    102691,
+    105472
+   ],
+   "token_sha256": "03db7cacc35b38b0aae5c88e5df1c55124f801d31dec7a5e508cc4c9aa73683a",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 128,
+   "article": 22,
+   "article_title": "Independiente ( Ricardo Arjona album )",
+   "token_range": [
+    104227,
+    104739
+   ],
+   "segment": [
+    102691,
+    105472
+   ],
+   "token_sha256": "1774177365b65377b6338afb4147300ab047a5f7bcf5ad54ac2327effb9223f7",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 129,
+   "article": 22,
+   "article_title": "Independiente ( Ricardo Arjona album )",
+   "token_range": [
+    104739,
+    105251
+   ],
+   "segment": [
+    102691,
+    105472
+   ],
+   "token_sha256": "dc779d65433796496ecd7ea5cdb385e948e7d2aca899d1bbab6e9e75b3e7c1d2",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 130,
+   "article": 22,
+   "article_title": "Independiente ( Ricardo Arjona album )",
+   "token_range": [
+    105984,
+    106496
+   ],
+   "segment": [
+    105984,
+    106496
+   ],
+   "token_sha256": "66d40dfa139154d40ad107b86eb77b128f4dad62683eb677cb522a506851f029",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 131,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    107336,
+    107848
+   ],
+   "segment": [
+    107336,
+    108544
+   ],
+   "token_sha256": "2a0327820bcd3d2cb01fbd458b6028c314cbb86858dcac80295ef7e8d0a323cd",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 132,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    107848,
+    108360
+   ],
+   "segment": [
+    107336,
+    108544
+   ],
+   "token_sha256": "738e61cacf35091b699068f040a7b6f1d16776e59ed797a27ae3cf5e5d0517e0",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 133,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    109056,
+    109568
+   ],
+   "segment": [
+    109056,
+    111104
+   ],
+   "token_sha256": "d41bea1c7a73fb3c7b66324af6071d2b0c51acb0562d8df2be5ec222369d5276",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 134,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    109568,
+    110080
+   ],
+   "segment": [
+    109056,
+    111104
+   ],
+   "token_sha256": "dd9695d1632e677da3682c5061ea8e24b827773278419ee20d35f26645c7184c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 135,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    110080,
+    110592
+   ],
+   "segment": [
+    109056,
+    111104
+   ],
+   "token_sha256": "707cf62c3eee1c5cb5f9c78445ed9e067e3923b80f04d0d6579315105bcfba9e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 136,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    110592,
+    111104
+   ],
+   "segment": [
+    109056,
+    111104
+   ],
+   "token_sha256": "eaa21d92e44dfc1828c3a5e53e30bb68b1f5d787ed9daef7877688f0f6b68fd1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 137,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    112640,
+    113152
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "ce4832b7ee598590fe82aa242ee6a13ce20af306fe01b6977a49617c0e09e1b6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 138,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    113152,
+    113664
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "b04594ca32bf96fd4a819163286f3800fd3b5c1473876f653e79bbba1ee9bea3",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 139,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    113664,
+    114176
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "20174951457996769279343e209b694bd199a9f6fce0eb8a0d84a466341203df",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 140,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    114176,
+    114688
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "55d04f9f8d6e07a732fbe31b29a217264d9b4d37517504dd822e2010dc8ad08d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 141,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    114688,
+    115200
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "4508feed9b117663050b07a17a141e24075f836cf11b122e69560b2e7edd250c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 142,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    115200,
+    115712
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "62a04edd6616087be6855b43918a7bffbdf6107ab61bd10506418e136badbb16",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 143,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    115712,
+    116224
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "04b50c3a90d2b6a90bd57e6785a7a55d1ec6dc3645f93505bd719df9e45ffb11",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 144,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    116224,
+    116736
+   ],
+   "segment": [
+    112640,
+    116736
+   ],
+   "token_sha256": "d99f9cc63c616da8f7b9439d7ae0331ca1e98446ea3f0838cf607cc14292dce1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 145,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    117248,
+    117760
+   ],
+   "segment": [
+    117248,
+    118784
+   ],
+   "token_sha256": "975f22f8eff65fb425e518965eeb3f5b69f79ef37775c190b30d26b5666bde5e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 146,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    117760,
+    118272
+   ],
+   "segment": [
+    117248,
+    118784
+   ],
+   "token_sha256": "bf6aede0b95cc1e909e16b25fd62c5299404192e2c021ef36e255942a57c9d1e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 147,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    118272,
+    118784
+   ],
+   "segment": [
+    117248,
+    118784
+   ],
+   "token_sha256": "4d0a7ac5a83fb7ff690214e86ee0cb81b1595d23d80fccc8cecbc8bee8f5497c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 148,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    119296,
+    119808
+   ],
+   "segment": [
+    119296,
+    120832
+   ],
+   "token_sha256": "64416a3785421fc5eb4bb0f6d5a782f701da3b77873e6eaf5ba5bc82cae981e2",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 149,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    119808,
+    120320
+   ],
+   "segment": [
+    119296,
+    120832
+   ],
+   "token_sha256": "3a2507cdd5f44f4cfb081662b41947c654f31ee3f5016e461bd43f4780460bb7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 150,
+   "article": 23,
+   "article_title": "2003 Pacific typhoon season",
+   "token_range": [
+    120320,
+    120832
+   ],
+   "segment": [
+    119296,
+    120832
+   ],
+   "token_sha256": "48fde3138ef2fccaf8bd8b78649be538d7d09e316dcc035cd0afb1fca9ac32bb",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 151,
+   "article": 24,
+   "article_title": "Oxaziridine",
+   "token_range": [
+    122368,
+    122880
+   ],
+   "segment": [
+    122368,
+    123957
+   ],
+   "token_sha256": "1f031f0161ad0939e9199269bcae9a6fc893c70d7268915f39b4ad37d8773977",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 152,
+   "article": 24,
+   "article_title": "Oxaziridine",
+   "token_range": [
+    122880,
+    123392
+   ],
+   "segment": [
+    122368,
+    123957
+   ],
+   "token_sha256": "d8ca38d1086a69e4fdaa5a284dd917b40b584399f18f46bde1e8bba11bb58fb5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 153,
+   "article": 24,
+   "article_title": "Oxaziridine",
+   "token_range": [
+    123392,
+    123904
+   ],
+   "segment": [
+    122368,
+    123957
+   ],
+   "token_sha256": "fb9ba0333ec6fff3e7ea4c22bc5a279e557e9d7595d7c3a5a1b49b25c1b15674",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 154,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    123957,
+    124469
+   ],
+   "segment": [
+    123957,
+    124928
+   ],
+   "token_sha256": "e1188c56f27b9d101196c17acb47c8788192cfbaa27112f0cbb4dbb122ab9ff4",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 155,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    125440,
+    125952
+   ],
+   "segment": [
+    125440,
+    128000
+   ],
+   "token_sha256": "429d6e231c6b4375efe81301cd20a92603a7c5a47b94f23d2a048df52803d880",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 156,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    125952,
+    126464
+   ],
+   "segment": [
+    125440,
+    128000
+   ],
+   "token_sha256": "fcd21212ca01b53d8138ab96dd54fdd2dac7e534677031ba8ea3ee8fb0025637",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 157,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    126464,
+    126976
+   ],
+   "segment": [
+    125440,
+    128000
+   ],
+   "token_sha256": "444c39a9b8480260b289bb7f2b5554ee873bbf418b345ad18e698886ba5c24ed",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 158,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    126976,
+    127488
+   ],
+   "segment": [
+    125440,
+    128000
+   ],
+   "token_sha256": "295d46eebe63ee013aefdd616db7225d470ca724f12f93e31f0322f187ce2f69",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 159,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    127488,
+    128000
+   ],
+   "segment": [
+    125440,
+    128000
+   ],
+   "token_sha256": "25e895a4bced9d626698b62560ddbfeffcbb04e68a17cd3437318f50539efd35",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 160,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    128512,
+    129024
+   ],
+   "segment": [
+    128512,
+    129024
+   ],
+   "token_sha256": "fddaf1ef823cae1c576425ac8d4acd05aca51cdecdee8e8deb880a38959f8268",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 161,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    129536,
+    130048
+   ],
+   "segment": [
+    129536,
+    131072
+   ],
+   "token_sha256": "b3c0695eda65d50147f77539f54c220c2b318d5dc352542b04e9c02653a44260",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 162,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    130048,
+    130560
+   ],
+   "segment": [
+    129536,
+    131072
+   ],
+   "token_sha256": "7275fe8dcd246eea045eceb3be7f5632f01cb8fd47512bd860427e6ba0ee1525",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 163,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    130560,
+    131072
+   ],
+   "segment": [
+    129536,
+    131072
+   ],
+   "token_sha256": "055b1659acf9ba4b8bb7999fb096f821d9aea3eaad27ef5bb624a39c9819be38",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 164,
+   "article": 25,
+   "article_title": "Battle of D\u00fcrenstein",
+   "token_range": [
+    131584,
+    132096
+   ],
+   "segment": [
+    131584,
+    132323
+   ],
+   "token_sha256": "5b3c88f78ae7b4f834e0c196307c201bb265ba2914a6f79db0a73339d7b124b0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 165,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    132323,
+    132835
+   ],
+   "segment": [
+    132323,
+    133120
+   ],
+   "token_sha256": "ccd9b6f59111b4fc04951a3a50b8aa869c630290692dbd54110a9133d17f5b05",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 166,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    133632,
+    134144
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "193f79f02326d354ffbfb574e0104bfc5264d09f7261aee60ea1e7444687b730",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 167,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    134144,
+    134656
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "757962dcd5d576899c057681266ccc243edf1024dfe80ce69f597741551a5a60",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 168,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    134656,
+    135168
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "4c00da1ea4340e5c8c60b0cb55c955b5398178ad7fddfa9509523a44380c99a3",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 169,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    135168,
+    135680
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "1d05fb45d10a54947259c659e5a150a90bceaa10ec529b4b51f6d81ebc66d26f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 170,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    135680,
+    136192
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "44f662c0aa0391dc643434858d4b1607e9c36001cb13d14fb0c515ded66741df",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 171,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    136192,
+    136704
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "4541d8f09c3736bd40046dc3f16c2bac39e9201df3a05cf1da49f99184047fba",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 172,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    136704,
+    137216
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "61df9f2ce2419738762b375946f8a3d53e1b8dd0e1fe3c002e453adbcd013170",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 173,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    137216,
+    137728
+   ],
+   "segment": [
+    133632,
+    137728
+   ],
+   "token_sha256": "68d90124dc0b38bc3d1e4135dfc0d4312e5008e3e487079e51d056373856cd2e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 174,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    138240,
+    138752
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "9365b0c72bc4dfb999827dde97235a390c16de1a3c56a5a3e008234ff3d0bdd6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 175,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    138752,
+    139264
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "5de9ca1dfe672aa328091be92512d8ac9bea683107fda6d2da1625c1a0b0ff93",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 176,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    139264,
+    139776
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "b533e735e916406f4c741749c7b96347e9e1b4813ba98ea2241d1d35779a62a8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 177,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    139776,
+    140288
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "ec2549d25d49a54254740dce3d112c2e7b69606142c1cd190d423bdb69f2e345",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 178,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    140288,
+    140800
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "e8ef47f64248432fb85e8c0ef60f55f1d87c565de6b846d3125d5d37e4b15bb6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 179,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    140800,
+    141312
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "c8bb50579c8e8bc9062b9f1715610398b81d35693a5d85910159d5e6c463e6f7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 180,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    141312,
+    141824
+   ],
+   "segment": [
+    138240,
+    141824
+   ],
+   "token_sha256": "8a9c6d6bb253234f6f951ee4c8432c99ea121109a1c0807034e069ba169b10e5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 181,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    142336,
+    142848
+   ],
+   "segment": [
+    142336,
+    143872
+   ],
+   "token_sha256": "eacdbc032b2384883a5ef31c7241acca2586ef6f43971fa62dcd071356d6afff",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 182,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    142848,
+    143360
+   ],
+   "segment": [
+    142336,
+    143872
+   ],
+   "token_sha256": "252c4e1a025403839c77c019ac68f7935651768d73d791f70dff7b2763346da6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 183,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    143360,
+    143872
+   ],
+   "segment": [
+    142336,
+    143872
+   ],
+   "token_sha256": "95f3f640f1db971889653e4c3cee69d767ec91278674b74e7e7602532ab15a81",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 184,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    144384,
+    144896
+   ],
+   "segment": [
+    144384,
+    145547
+   ],
+   "token_sha256": "dd2a22a7b5d130ed556dec98491e705e7356598bafa98cc76168908a10e6f0f0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 185,
+   "article": 26,
+   "article_title": "Brock Lesnar",
+   "token_range": [
+    144896,
+    145408
+   ],
+   "segment": [
+    144384,
+    145547
+   ],
+   "token_sha256": "ecad9f8c1e3a77275ec1dd05dd2516f2af6481f8f00f37239c2b87258cc172ae",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 186,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    147357,
+    147869
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "72565992864071fae7ec3ac46b2b3c2c03b10788e770560cdd7552a7d3c150a5",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 187,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    147869,
+    148381
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "43e7fead37c58f1a10165450ea09f5e1585b0bf99dd96900c0db59a636d2a82c",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 188,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    148381,
+    148893
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "05c97d1e7d00de6b2088af54ed82f3eddc45d48b9f8039824be422190bdbbfd3",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 189,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    148893,
+    149405
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "631c0d138f8cc31f17f4678cee6062d549279a86f146cadad42344d842bf9456",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 190,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    149405,
+    149917
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "cbe6f33626254fe54927a1405d87c999959a76cee6378150cdc30eb113e4b408",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 191,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    149917,
+    150429
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "b02561b0784116d2665a4fe0b35ea67362dced4cfbb69e55fb2106fd50167fdf",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 192,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    150429,
+    150941
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "596d0fb9f59cfa89ecf1433d9fd1375c08e76fe5a2000d53fadb13d428f4b8ee",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 193,
+   "article": 28,
+   "article_title": "The Snowmen",
+   "token_range": [
+    150941,
+    151453
+   ],
+   "segment": [
+    147357,
+    151552
+   ],
+   "token_sha256": "09f6c98a7c962cdd97f9e7910d6ab7e51b0f7ef10871e8b7fcf9da1dd1dfaa72",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 194,
+   "article": 29,
+   "article_title": "No. 20 Squadron RAAF",
+   "token_range": [
+    152576,
+    153088
+   ],
+   "segment": [
+    152576,
+    154447
+   ],
+   "token_sha256": "e9fe8a72b66caf784ea512f3228a315aa8f34c1f023825e1e0aa9cd7ebd7194f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 195,
+   "article": 29,
+   "article_title": "No. 20 Squadron RAAF",
+   "token_range": [
+    153088,
+    153600
+   ],
+   "segment": [
+    152576,
+    154447
+   ],
+   "token_sha256": "128be39a8888ac6cbf13527cb16336afb5124beb045648cea59a7a1115f631bc",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 196,
+   "article": 29,
+   "article_title": "No. 20 Squadron RAAF",
+   "token_range": [
+    153600,
+    154112
+   ],
+   "segment": [
+    152576,
+    154447
+   ],
+   "token_sha256": "e5858c1ce57b3bf1328a49a37490a7a6f7e2109feab5c0d06106898cb695f5c6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 197,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    154447,
+    154959
+   ],
+   "segment": [
+    154447,
+    155648
+   ],
+   "token_sha256": "2f1abe3adaadc6ef45800c0ee6625fa3a8cdc1a4e78dc88f6af3f5083a402a9c",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 198,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    154959,
+    155471
+   ],
+   "segment": [
+    154447,
+    155648
+   ],
+   "token_sha256": "123dc2d8e29e488157d3d056ca3a9fcad4524b4c46bdbca85a7e0775fac7ce2f",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 199,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    156672,
+    157184
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "568988990db2162fbfac776c7ba9acd33cf485d6b4de2f60778b9827e8d27562",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 200,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    157184,
+    157696
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "e928681b33259b317a251e0c0c3d53bdcd1a9b6211e048202f5d1bbdf5ff2eec",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 201,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    157696,
+    158208
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "39034c0b416971fb4a00b3a2008625a9672300ce2ddc5c5eccc0f34cb9cd4070",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 202,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    158208,
+    158720
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "1bb5d46b2afeadc732e97ab50f0d326f6442253a72e5bb1f88341bf695685baf",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 203,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    158720,
+    159232
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "595b7e5321ad385be15429f488a6da496cdcf21b4d7189bdde09364d386b7416",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 204,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    159232,
+    159744
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "0fbc6c642be1bffb4f4da9a75de69c7349ebdc16133709ada39e572b8f1a6241",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 205,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    159744,
+    160256
+   ],
+   "segment": [
+    156672,
+    160256
+   ],
+   "token_sha256": "cd7c2763fe58211dd53c526b58a9d0077e5f6537cfbc6167754332591ba590b0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 206,
+   "article": 30,
+   "article_title": "Light Tank Mk VII Tetrarch",
+   "token_range": [
+    160768,
+    161280
+   ],
+   "segment": [
+    160768,
+    161728
+   ],
+   "token_sha256": "8051fcb8b331086e6126ed8e61f778cc6dc2bf64501cb8a904acc6a0aec363e7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 207,
+   "article": 31,
+   "article_title": "QuackShot",
+   "token_range": [
+    162304,
+    162816
+   ],
+   "segment": [
+    162304,
+    163670
+   ],
+   "token_sha256": "df9cb22b13079f9f37ae07b360db4622a9c5ebcabd228d52ade1503ec812b284",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 208,
+   "article": 31,
+   "article_title": "QuackShot",
+   "token_range": [
+    162816,
+    163328
+   ],
+   "segment": [
+    162304,
+    163670
+   ],
+   "token_sha256": "f2e48e473b95a97b07c8dc77d1dd980f368f6ebce8a99ab59c7f606dd2b16cc4",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 209,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    163670,
+    164182
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "a549a237a0f828e12051df6d3e40b77d8ffb1cb905edc4579ecf8121533fc4ca",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 210,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    164182,
+    164694
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "fd7cf4dab9bcc1d277e193c29fc8be18b94b12a1bb01e749f5fedb39c0217636",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 211,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    164694,
+    165206
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "59f193888c42c6918615b5a106472b93ea781b77478669960693a1bf319a83ee",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 212,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    165206,
+    165718
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "13273fd0d2435503bf803944a9c0ec43b085e4eff2609a725a7435681ae2ed54",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 213,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    165718,
+    166230
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "fa708438ec5b305c82702c87a5382e48a0ddc4b90122112404cc170f363ad81d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 214,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    166230,
+    166742
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "a24bebba27785ac10b37b2502a738455a48c4bb151b57810ee63457ff866dd54",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 215,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    166742,
+    167254
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "de9698a21fbff0f29eda96311364070c60a91b14033e1f1be50eee9304ba723c",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 216,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    167254,
+    167766
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "7edff4a5cab1191f061b45af7fcabaa3aed5bbb36e81562c62d8f55923c21d40",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 217,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    167766,
+    168278
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "43857f6fc5af242ed20ea0f671692ae5305ad9a1d6ba1c3d825b8479da0800ba",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 218,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    168278,
+    168790
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "09b30714980a8d20dae5395819a3de9d3216a7bf142874234a2502c8bb106894",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 219,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    168790,
+    169302
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "a993de1c24dca077000d4c947819e7e7b527fcbc8b34467485d741ceefc9233b",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 220,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    169302,
+    169814
+   ],
+   "segment": [
+    163670,
+    169984
+   ],
+   "token_sha256": "f47b3a698bbae607f29c570ba083d97e1193b1a679629a33ded79e3f1f43cf14",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 221,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    170496,
+    171008
+   ],
+   "segment": [
+    170496,
+    171520
+   ],
+   "token_sha256": "07ab92898524ce0101f16f186049d506268d5894e5b79dd6be97334cc9677233",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 222,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    171008,
+    171520
+   ],
+   "segment": [
+    170496,
+    171520
+   ],
+   "token_sha256": "70dc2f4d9de975a9bf2b63ce2b8e0d031b5510afb3b440bc917fd595196bcdc8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 223,
+   "article": 32,
+   "article_title": "Olmec colossal heads",
+   "token_range": [
+    172544,
+    173056
+   ],
+   "segment": [
+    172544,
+    173056
+   ],
+   "token_sha256": "8edf05da066f8557817ce3b0a12c99c5642743582e5212d5a22c5f20b51d7f8c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 224,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    174519,
+    175031
+   ],
+   "segment": [
+    174519,
+    175616
+   ],
+   "token_sha256": "bc535d07ede1ff966c449f72e2dd0d15262476d2c25994a75be2d3bc029c1ed8",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 225,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    175031,
+    175543
+   ],
+   "segment": [
+    174519,
+    175616
+   ],
+   "token_sha256": "c69a50f97216692352261201753db49a5d8e842d2fcfc1006334c57a68235598",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 226,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    176128,
+    176640
+   ],
+   "segment": [
+    176128,
+    177152
+   ],
+   "token_sha256": "5b05bd95bfa5535f035d6d608f282bef026fcd63a00b50c95f3fcab9153286f8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 227,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    176640,
+    177152
+   ],
+   "segment": [
+    176128,
+    177152
+   ],
+   "token_sha256": "128dbe213e70fa57d29136b0e4ab4fbea990b967f95624f585840e278ea39be1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 228,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    177664,
+    178176
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "6786d49488e68b27caf0678fb6837a9f75c6561d3c58b92c8c535c4b47701289",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 229,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    178176,
+    178688
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "3eca73498830f363fd192c17f8135ff48b96543d5b34713b62d870354ec517d1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 230,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    178688,
+    179200
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "3de84b9713861da3ca14aac1f1efb2c8fd5e9adbff5979cc061f6d5e24343f46",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 231,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    179200,
+    179712
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "13a39a366ea35dea79b5fa49d1f72fee22e432c152a699d6d8a7270157c58dae",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 232,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    179712,
+    180224
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "31aa4befc36b88c03cf51f6c592a5ce319ec94c2683d6c7494336111c9449244",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 233,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    180224,
+    180736
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "416dac7fbadd09729208f173052beee1345df09a3cf8f0767f2f10f3e3c85307",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 234,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    180736,
+    181248
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "e4403b7e9fb1f1d9253c0d449ffd7089fe6b5e5700ea5042fb2691fc5a434bd5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 235,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    181248,
+    181760
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "572532760962fdb88bafa3922f95bc7664c043da360e9ad51f221db58413405d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 236,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    181760,
+    182272
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "79eb01386c6b4f95adb5971fe492965549b6165faacba262812ee6ca99fd810c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 237,
+   "article": 33,
+   "article_title": "Brad Stevens",
+   "token_range": [
+    182272,
+    182784
+   ],
+   "segment": [
+    177664,
+    183181
+   ],
+   "token_sha256": "5b689f8390fb433c718152d4a800e3aa07743a4fd234fb52ee930fbbd022b835",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 238,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    185046,
+    185558
+   ],
+   "segment": [
+    185046,
+    186368
+   ],
+   "token_sha256": "d889510c6bd83588a1c1cd08bc030a57ddcc04552f1042f9620c4d74dd48812f",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 239,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    185558,
+    186070
+   ],
+   "segment": [
+    185046,
+    186368
+   ],
+   "token_sha256": "4b9813e65432a0f6ac940db3d4808be527e878a9621a38bb9ae8454ba1a085ea",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 240,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    188416,
+    188928
+   ],
+   "segment": [
+    188416,
+    190464
+   ],
+   "token_sha256": "dfbb855006c3498bfaa1dec3f9c6b5988b7960d5c13a265b06cc30db4c1b2ad6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 241,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    188928,
+    189440
+   ],
+   "segment": [
+    188416,
+    190464
+   ],
+   "token_sha256": "64a47e82b0c0b00ec789136120ba743b5a230e2ac6d4458ee613ac7d5aca0918",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 242,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    189440,
+    189952
+   ],
+   "segment": [
+    188416,
+    190464
+   ],
+   "token_sha256": "82833b478dc10e3a899be705369719fab9c92c462f6adc639a05f3630627830f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 243,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    189952,
+    190464
+   ],
+   "segment": [
+    188416,
+    190464
+   ],
+   "token_sha256": "f7deae59f124e56636fa00afa4489f9c8b33f0b0478929f9431c71c4fbe69058",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 244,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    190976,
+    191488
+   ],
+   "segment": [
+    190976,
+    193024
+   ],
+   "token_sha256": "7a2b9bc81c19e46a9a24ea2eb36944cf3c1d8be38c1e958f753a51a913677dd6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 245,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    191488,
+    192000
+   ],
+   "segment": [
+    190976,
+    193024
+   ],
+   "token_sha256": "2b16ba677ee2b4f119f08a18d1767848afee5fc6874f64c091855f8a47af36e8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 246,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    192000,
+    192512
+   ],
+   "segment": [
+    190976,
+    193024
+   ],
+   "token_sha256": "37823e1580216bb107feeff68932b3844c910e7485251dc654e8af0966a60596",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 247,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    192512,
+    193024
+   ],
+   "segment": [
+    190976,
+    193024
+   ],
+   "token_sha256": "39e3dad34f47f64b3bfff160ae2e03e2826c13aa7d171b65169f5d010dd4ccbe",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 248,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    193536,
+    194048
+   ],
+   "segment": [
+    193536,
+    195072
+   ],
+   "token_sha256": "92aa91d6540dfda80ce4bf5aad32bb6f7426e0458ebe6b21d20656c1b5e5b29d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 249,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    194048,
+    194560
+   ],
+   "segment": [
+    193536,
+    195072
+   ],
+   "token_sha256": "e7d7489fb3ce3f7a1e2fe2ce46f0ba4256b50e0cd6292dc51b25db8d2ce5ffa7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 250,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    194560,
+    195072
+   ],
+   "segment": [
+    193536,
+    195072
+   ],
+   "token_sha256": "cac413724ff557f1f1f7be9357deaa285de8f80e50bd2871d21d05e9a45fc0e9",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 251,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    196608,
+    197120
+   ],
+   "segment": [
+    196608,
+    199680
+   ],
+   "token_sha256": "ac452fd08cbb6590a0b1e0254b1b0b10337bd5eefabc71890428d3ad00e06b07",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 252,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    197120,
+    197632
+   ],
+   "segment": [
+    196608,
+    199680
+   ],
+   "token_sha256": "3e20b498725c7e88462bc9304a352bfd50fb3c9a6ef729ffbd82715d2649fde5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 253,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    197632,
+    198144
+   ],
+   "segment": [
+    196608,
+    199680
+   ],
+   "token_sha256": "b66305ff78f3ef1b0a8edadff91854b2cf42bfe36cf5566b1585703470a8e332",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 254,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    198144,
+    198656
+   ],
+   "segment": [
+    196608,
+    199680
+   ],
+   "token_sha256": "4817a63fdbea6d5e951b657a39d35952ce7f18cfa8ded38454e0f42f89e4e165",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 255,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    198656,
+    199168
+   ],
+   "segment": [
+    196608,
+    199680
+   ],
+   "token_sha256": "f4ee839e5a86efaf54cee52b5b5fb6301781154082a9cb394e50b2a0afb6fb0f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 256,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    199168,
+    199680
+   ],
+   "segment": [
+    196608,
+    199680
+   ],
+   "token_sha256": "643a1700120024dcd9f80dd43bc9e8c78ac3804bae0b9833b3934f436912b3cf",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 257,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    200192,
+    200704
+   ],
+   "segment": [
+    200192,
+    201400
+   ],
+   "token_sha256": "3e952b883a111e8b15c7653ab64341c2c0e48a48cfb93057271c6002765018ea",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 258,
+   "article": 35,
+   "article_title": "American Beauty ( 1999 film )",
+   "token_range": [
+    200704,
+    201216
+   ],
+   "segment": [
+    200192,
+    201400
+   ],
+   "token_sha256": "e32153053a283a111ea434fc8816deb9ebed1eaca3c8360a8c4643eaf88a2134",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 259,
+   "article": 36,
+   "article_title": "Christopher Gore",
+   "token_range": [
+    202752,
+    203264
+   ],
+   "segment": [
+    202752,
+    205312
+   ],
+   "token_sha256": "78c4d47fea7cba94b4b7232338abd9831b52f2263323787d357396c9f9c73d21",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 260,
+   "article": 36,
+   "article_title": "Christopher Gore",
+   "token_range": [
+    203264,
+    203776
+   ],
+   "segment": [
+    202752,
+    205312
+   ],
+   "token_sha256": "241f2ad49b02d971daa55fd984756eabee6eaebbfd2a88df81e1dc88059c0c35",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 261,
+   "article": 36,
+   "article_title": "Christopher Gore",
+   "token_range": [
+    203776,
+    204288
+   ],
+   "segment": [
+    202752,
+    205312
+   ],
+   "token_sha256": "e470f62f851741b01603fbe7d8418d863e13aa062324aaa2a25ed4774aa51392",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 262,
+   "article": 36,
+   "article_title": "Christopher Gore",
+   "token_range": [
+    204288,
+    204800
+   ],
+   "segment": [
+    202752,
+    205312
+   ],
+   "token_sha256": "a451b513bc2235885e0ae8b718a08a3412b2a955f688bb01b4f9741549b31ac0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 263,
+   "article": 36,
+   "article_title": "Christopher Gore",
+   "token_range": [
+    204800,
+    205312
+   ],
+   "segment": [
+    202752,
+    205312
+   ],
+   "token_sha256": "c235b1d93ee71f273232fc832f90cec922a4a58c852aee267e5c9b6fc1bc945b",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 264,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    206848,
+    207360
+   ],
+   "segment": [
+    206848,
+    207360
+   ],
+   "token_sha256": "022d2b6f90d08fe7b1ae59eb99461677cd80c6edd13c826ce2148c68c757eee4",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 265,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    207872,
+    208384
+   ],
+   "segment": [
+    207872,
+    209408
+   ],
+   "token_sha256": "6a59ee34eeab73c3c9b287e215da09518194b7cd1187780e04454cb9661bbe5e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 266,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    208384,
+    208896
+   ],
+   "segment": [
+    207872,
+    209408
+   ],
+   "token_sha256": "1ac2759161f841c14a8ca36c3f838811a94490f44fbd8a6348fb3f70daab8952",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 267,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    208896,
+    209408
+   ],
+   "segment": [
+    207872,
+    209408
+   ],
+   "token_sha256": "79b0da956f368a54ca79c675af38ff6676026e3df6253d2cb5b3aa35dcfe03dc",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 268,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    209920,
+    210432
+   ],
+   "segment": [
+    209920,
+    210432
+   ],
+   "token_sha256": "8e568cb732c5243bc2d6505259e66624be9647d3a0e014dc6f8628348aad3ee2",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 269,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    210944,
+    211456
+   ],
+   "segment": [
+    210944,
+    211456
+   ],
+   "token_sha256": "090ae62666ab8c548556a0957a89770dacfd9110b1bc3fd0198402b5e47de4c7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 270,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    211968,
+    212480
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "a8023b5648e81e8b52b4e541ef6f8c861fe61799bbc362af900752a36feae927",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 271,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    212480,
+    212992
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "308ff4a86a0909c1f2ff87d3461d8238d30601ec57536c2c9a0cd6d2aeed6377",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 272,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    212992,
+    213504
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "e3364b893398e5b7b8c7df3c245ae082ce6b869408170b9994b4e25599a89253",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 273,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    213504,
+    214016
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "b54a37c0009e2557c5f067e2ae09cbe1639be5f54c644cbb3c0691aa0ea60735",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 274,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    214016,
+    214528
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "1f0f4bd999b7d7a091498e2a1750102093d8390587b8a2bdef461785bf427a44",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 275,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    214528,
+    215040
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "f5ee6ccdc462a69a918b9c5f511d8cd534f4ac2632e99acc779dae06f42584f2",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 276,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    215040,
+    215552
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "d55a646f7fde60da50e32e568b571270408b6005f6b721ee297ec142c7d16d48",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 277,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    215552,
+    216064
+   ],
+   "segment": [
+    211968,
+    216064
+   ],
+   "token_sha256": "1427ae90ee7e7e1900ae90b3160a7ce59fad90728c4d01be5909b5ade7d7e340",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 278,
+   "article": 37,
+   "article_title": "Nero",
+   "token_range": [
+    216576,
+    217088
+   ],
+   "segment": [
+    216576,
+    217594
+   ],
+   "token_sha256": "98ae81ac11cfe234da5e7163398d4ae1d88a2f97b0013d7ea39d7222feaee976",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 279,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    217594,
+    218106
+   ],
+   "segment": [
+    217594,
+    220160
+   ],
+   "token_sha256": "4b2a910f8b9c40868dc3bd5a9f2ebca9c37c8dc6a58bf10ba36583f68e1d64ab",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 280,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    218106,
+    218618
+   ],
+   "segment": [
+    217594,
+    220160
+   ],
+   "token_sha256": "9173c41986243712aff2c3a964a28b3f9bd1b68b5065abf410cc62e1c53cef7d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 281,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    218618,
+    219130
+   ],
+   "segment": [
+    217594,
+    220160
+   ],
+   "token_sha256": "ce2ab7d7d0517be13d8d80787efd37b285c1285b28a5800ed3676836747609eb",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 282,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    219130,
+    219642
+   ],
+   "segment": [
+    217594,
+    220160
+   ],
+   "token_sha256": "95c40ad359356e1f2a6d27633a83b5b147ffadbe59ab23b4b59b8467cb579bdb",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 283,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    219642,
+    220154
+   ],
+   "segment": [
+    217594,
+    220160
+   ],
+   "token_sha256": "33d39048da13e944f716cc509e6b24cae4d80b3c92f80fe0817f3c5bb24f09a6",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 284,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    220672,
+    221184
+   ],
+   "segment": [
+    220672,
+    222208
+   ],
+   "token_sha256": "0ef64b197783ad3b86673e4ebe1276aa3742b4e3f12b756e4dcc0e164d7354d7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 285,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    221184,
+    221696
+   ],
+   "segment": [
+    220672,
+    222208
+   ],
+   "token_sha256": "c12c277d68f34d6e16a457e3e43afae45269ef321ce668431bcb84d49b54286f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 286,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    221696,
+    222208
+   ],
+   "segment": [
+    220672,
+    222208
+   ],
+   "token_sha256": "fce00d7289d102436a21b83b4c30756626c17989097f47112eaf3f2df7db5da7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 287,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    223232,
+    223744
+   ],
+   "segment": [
+    223232,
+    226304
+   ],
+   "token_sha256": "ba4d7e7895e261cf2c96adecd08419e28185aabf9f185602bd359df13fe940c1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 288,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    223744,
+    224256
+   ],
+   "segment": [
+    223232,
+    226304
+   ],
+   "token_sha256": "54bedf2a8d34c44e624d305de6e3db8088b3427eca1f96d0a55a5aa8b3dc63ad",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 289,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    224256,
+    224768
+   ],
+   "segment": [
+    223232,
+    226304
+   ],
+   "token_sha256": "41e9a4edf466a4f79fff5ff6227c2ee309e13956145c7a1a67a27c1966677211",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 290,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    224768,
+    225280
+   ],
+   "segment": [
+    223232,
+    226304
+   ],
+   "token_sha256": "956465804ff24b219a754cc9be3e30d1d682fc1250544f276120ace77f81246f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 291,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    225280,
+    225792
+   ],
+   "segment": [
+    223232,
+    226304
+   ],
+   "token_sha256": "061112fa221d6d29832b0ff5adb3f977a3f5e292423aa0e49afe48bf02eff35c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 292,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    225792,
+    226304
+   ],
+   "segment": [
+    223232,
+    226304
+   ],
+   "token_sha256": "a85a23bef401cf0210ec0d9ab4ab49c67d15210ce5a3653f578725abeb040dc6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 293,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    226816,
+    227328
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "29bfc4dcd85d911619dcf1acd66ac630625ecb008ce2e82db889cf56dc01c8bc",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 294,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    227328,
+    227840
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "deb9470eba216a6736edcaa7e335d87df67cd3c5f6eccad6358872318ac5798a",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 295,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    227840,
+    228352
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "c31e657db1f4381533452107af2be578bbffc38cc3e82751bd2b82cde3f47e45",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 296,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    228352,
+    228864
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "6decfa10ee68a0a3f348f0e19172edf9bc7253d778316d9acc42e3b67ad468ab",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 297,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    228864,
+    229376
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "30afe22dcc550bd1ab55d82b632946eedc7023c0bcb4580525dabc65108ae730",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 298,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    229376,
+    229888
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "d0eeef5e86b018d160ef1817de671c20005011b6ca66dc5d6c1649907a25a1a1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 299,
+   "article": 38,
+   "article_title": "Manila",
+   "token_range": [
+    229888,
+    230400
+   ],
+   "segment": [
+    226816,
+    230541
+   ],
+   "token_sha256": "c8cfacad0a84a775beabc719416f1f383adaa65fbebaccd81683a5ce6f1a0ccd",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 300,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    234790,
+    235302
+   ],
+   "segment": [
+    234790,
+    236032
+   ],
+   "token_sha256": "e9a60d9c6953bc95f2ac3584753d9da602d13c57f7e25a58a1bcd7fddfc0358a",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 301,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    235302,
+    235814
+   ],
+   "segment": [
+    234790,
+    236032
+   ],
+   "token_sha256": "42c8a0f6e7ccc9aabdf64310fd872f63eeb05dce43811afba4fad1fc25e7e95c",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 302,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    236544,
+    237056
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "0ca66c7edf4a32e63140a6ff0fedcc08af4936294d20ec5deeb42a54ddf86409",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 303,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    237056,
+    237568
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "a522ef7403619ea426e70cae50096962418d7733d4585dee636bc0b895434c8c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 304,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    237568,
+    238080
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "8ade894fe568ac2a2add075128bd017d331e9dfe9fc3cbfc17acaa2536fb1bfb",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 305,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    238080,
+    238592
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "0f991ad12eb3d7fc4a681cadcd2b452e62037226855f140ad6eb76fa5a767f19",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 306,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    238592,
+    239104
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "35aa2dddb4dfb7c77155707fc142f43f7feb5196b57d48b5ab3ad350e628948c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 307,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    239104,
+    239616
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "5c3bd20f0b458110dc40db18b52861f1a01f7748e6ca639b930bf1dfd0777a48",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 308,
+   "article": 41,
+   "article_title": "Free Derry",
+   "token_range": [
+    239616,
+    240128
+   ],
+   "segment": [
+    236544,
+    240128
+   ],
+   "token_sha256": "0e4fb18de4935434cbc98fe39dd5e5e20fabeda3c1a5143cd96aade0949671e1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 309,
+   "article": 42,
+   "article_title": "Come What ( ever ) May",
+   "token_range": [
+    241664,
+    242176
+   ],
+   "segment": [
+    241664,
+    243566
+   ],
+   "token_sha256": "bb038e1c3af81080764dff69846400e615ab1fc4e421d6864deef5e96f9ea266",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 310,
+   "article": 42,
+   "article_title": "Come What ( ever ) May",
+   "token_range": [
+    242176,
+    242688
+   ],
+   "segment": [
+    241664,
+    243566
+   ],
+   "token_sha256": "59a608a0d230bb40043f7d70adfd263196a2bf59cbf27777702c7147f4f66bae",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 311,
+   "article": 42,
+   "article_title": "Come What ( ever ) May",
+   "token_range": [
+    242688,
+    243200
+   ],
+   "segment": [
+    241664,
+    243566
+   ],
+   "token_sha256": "1307a1f947e7561f739252416bb5af24fc5ba8e0f045e36dacc9e3ce99fbfb9a",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 312,
+   "article": 43,
+   "article_title": "Chad at the 2008 Summer Olympics",
+   "token_range": [
+    244224,
+    244736
+   ],
+   "segment": [
+    244224,
+    244736
+   ],
+   "token_sha256": "616f1ff3c7d66d23af0c43d7832d0be367ee3a311084d122fa0ea2dd4f153959",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 313,
+   "article": 44,
+   "article_title": "View of the World from 9th Avenue",
+   "token_range": [
+    245248,
+    245760
+   ],
+   "segment": [
+    245248,
+    246272
+   ],
+   "token_sha256": "61e8cff95ed92730449c8d6fcfbff81aac02df8699f425f3db7c6795f414dd89",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 314,
+   "article": 44,
+   "article_title": "View of the World from 9th Avenue",
+   "token_range": [
+    245760,
+    246272
+   ],
+   "segment": [
+    245248,
+    246272
+   ],
+   "token_sha256": "5e7aecd0f7a4a2f721d91d7376e047c128593497993f09c4ed08ac0642e710bb",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 315,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    246784,
+    247296
+   ],
+   "segment": [
+    246784,
+    248320
+   ],
+   "token_sha256": "f93dc2de7f8c14caf48acc5494705ad6df61ecfd6f53519a876eb00f940d63d1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 316,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    247296,
+    247808
+   ],
+   "segment": [
+    246784,
+    248320
+   ],
+   "token_sha256": "83001fa8329be2082396324372d60147d53fd9e20e4cb54f317f00e4638100ff",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 317,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    247808,
+    248320
+   ],
+   "segment": [
+    246784,
+    248320
+   ],
+   "token_sha256": "e9ee8d4dd646d06309af1b2d3deb0ed1354f0287ea3a71b93eaee8cb60585e25",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 318,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    248832,
+    249344
+   ],
+   "segment": [
+    248832,
+    250880
+   ],
+   "token_sha256": "c9f570056dc130fcc2fe63e6f27ebb7acf7db1c8082cb1141c53eaad842d560c",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 319,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    249344,
+    249856
+   ],
+   "segment": [
+    248832,
+    250880
+   ],
+   "token_sha256": "8bf78648a42f472202c69e862b9e9af87cfe62cc218c901b727fa28f191a3dab",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 320,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    249856,
+    250368
+   ],
+   "segment": [
+    248832,
+    250880
+   ],
+   "token_sha256": "955c886e384474e52d6df8c2b491e019e5247c40baa090e356afb45977f0886d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 321,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    250368,
+    250880
+   ],
+   "segment": [
+    248832,
+    250880
+   ],
+   "token_sha256": "2731edb4ed2121af0eb1f70ee8ab97df6b0fda8e60a6d51741bda31ef49e145b",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 322,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    251392,
+    251904
+   ],
+   "segment": [
+    251392,
+    253952
+   ],
+   "token_sha256": "83df515dd4fd8d8ccb676a8723ea489060b847449832c5da21a1d073ef21bf10",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 323,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    251904,
+    252416
+   ],
+   "segment": [
+    251392,
+    253952
+   ],
+   "token_sha256": "458258a109d189ce4b6258496fa4b876579ebaba35d44bef1d3a329e129d46b2",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 324,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    252416,
+    252928
+   ],
+   "segment": [
+    251392,
+    253952
+   ],
+   "token_sha256": "12cadd1fbadba103855fa346fd646af9518b0d73a04af2efbf04340eb691125e",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 325,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    252928,
+    253440
+   ],
+   "segment": [
+    251392,
+    253952
+   ],
+   "token_sha256": "494765cf3ef4ec74203de7ab94b84d06f94599e1de726cde4b36c9f6fc100bc4",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 326,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    253440,
+    253952
+   ],
+   "segment": [
+    251392,
+    253952
+   ],
+   "token_sha256": "0ad5bf55f51d8ee84827843b3c8b323d418882302fe1c77c877000621db42776",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 327,
+   "article": 45,
+   "article_title": "Bintulu",
+   "token_range": [
+    254464,
+    254976
+   ],
+   "segment": [
+    254464,
+    255081
+   ],
+   "token_sha256": "cc5348cc09f311474dc1e230dc427aac70bb931c46373c2bf99cae5b7c1b32dd",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 328,
+   "article": 46,
+   "article_title": "Zrinski Battalion",
+   "token_range": [
+    255081,
+    255593
+   ],
+   "segment": [
+    255081,
+    256000
+   ],
+   "token_sha256": "a366e55f59ac457b39bfd9346980cff5092db418ffb0e19e846f79750a1002ad",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 329,
+   "article": 47,
+   "article_title": "Weevils Wobble But They Don 't Go Down",
+   "token_range": [
+    256792,
+    257304
+   ],
+   "segment": [
+    256792,
+    258048
+   ],
+   "token_sha256": "d01c4059f4ec05f056e9a5314e3073957f85f3498076b8b9a30b935c648b5020",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 330,
+   "article": 47,
+   "article_title": "Weevils Wobble But They Don 't Go Down",
+   "token_range": [
+    257304,
+    257816
+   ],
+   "segment": [
+    256792,
+    258048
+   ],
+   "token_sha256": "f6ed9be2e0f5de48143f67db232892f977583ded29267b7a9d4a97dddc98b0db",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 331,
+   "article": 48,
+   "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+   "token_range": [
+    258560,
+    259072
+   ],
+   "segment": [
+    258560,
+    260096
+   ],
+   "token_sha256": "3a6af2e899bae07a1bc8ac0da1e934d63cf181f3681281193e61c86105fc3a05",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 332,
+   "article": 48,
+   "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+   "token_range": [
+    259072,
+    259584
+   ],
+   "segment": [
+    258560,
+    260096
+   ],
+   "token_sha256": "b72fe514da647de6b5c312a2839a5bc580812add699d19b361f616d1d55dfaa0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 333,
+   "article": 48,
+   "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+   "token_range": [
+    259584,
+    260096
+   ],
+   "segment": [
+    258560,
+    260096
+   ],
+   "token_sha256": "0532ab5e368a281636b3a642f849db9307d20fcc83ea9f30b3414cf370bb6aa1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 334,
+   "article": 48,
+   "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+   "token_range": [
+    260608,
+    261120
+   ],
+   "segment": [
+    260608,
+    261632
+   ],
+   "token_sha256": "dcbd94cdfcb11d75b56ca561a7b580f4c57fc5e8ddde92791e8ef25e058a545d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 335,
+   "article": 48,
+   "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+   "token_range": [
+    261120,
+    261632
+   ],
+   "segment": [
+    260608,
+    261632
+   ],
+   "token_sha256": "de33adb24c6dcda1908f3ec528fea1c99c187930e822e936686f5e4591db6c9d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 336,
+   "article": 49,
+   "article_title": "New York State Route 93",
+   "token_range": [
+    262144,
+    262656
+   ],
+   "segment": [
+    262144,
+    264704
+   ],
+   "token_sha256": "5083cad8d08ded0e9aca4da0487dc6d168e79df92d90d9ca39fa43c3d443f6a3",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 337,
+   "article": 49,
+   "article_title": "New York State Route 93",
+   "token_range": [
+    262656,
+    263168
+   ],
+   "segment": [
+    262144,
+    264704
+   ],
+   "token_sha256": "4cbd186c115c48f6164dafa3b5293c9d49cf9f00def724658242fa2681cca1e5",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 338,
+   "article": 49,
+   "article_title": "New York State Route 93",
+   "token_range": [
+    263168,
+    263680
+   ],
+   "segment": [
+    262144,
+    264704
+   ],
+   "token_sha256": "be5ba86b1ad0a73a3fbbf34de550395686a1990b8b48245face980877384b197",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 339,
+   "article": 49,
+   "article_title": "New York State Route 93",
+   "token_range": [
+    263680,
+    264192
+   ],
+   "segment": [
+    262144,
+    264704
+   ],
+   "token_sha256": "8398bef90fb32a54432ab4241296841a71652c8bb09149345aab1b4aaa681592",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 340,
+   "article": 49,
+   "article_title": "New York State Route 93",
+   "token_range": [
+    264192,
+    264704
+   ],
+   "segment": [
+    262144,
+    264704
+   ],
+   "token_sha256": "ef16e912d5af0087e268ef72dbd01f8c95063b4b8cee82ad495b949082f02b8d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 341,
+   "article": 52,
+   "article_title": "Kirby 's Block Ball",
+   "token_range": [
+    267957,
+    268469
+   ],
+   "segment": [
+    267957,
+    268800
+   ],
+   "token_sha256": "98d3f77aade96e1b5a49872aa2ef5d78d12a8fcc21911131c9daafb36b0f6aeb",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 342,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    270336,
+    270848
+   ],
+   "segment": [
+    270336,
+    272896
+   ],
+   "token_sha256": "489ad99b994f9a759da4a68c3ced34e86d0a1088870e94741fabfeb4c3b83f66",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 343,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    270848,
+    271360
+   ],
+   "segment": [
+    270336,
+    272896
+   ],
+   "token_sha256": "45c41d75995104f6a19eb24629274385a011954b84c388d7665ec3ba50d8b35d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 344,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    271360,
+    271872
+   ],
+   "segment": [
+    270336,
+    272896
+   ],
+   "token_sha256": "89358d550c7c026d59ed6011808071e2b66218d0add52e585f31c7605f500c85",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 345,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    271872,
+    272384
+   ],
+   "segment": [
+    270336,
+    272896
+   ],
+   "token_sha256": "5bf0adfee038475695c57fe1862fd5f165855c37c69cd683674398f93fecf9ef",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 346,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    272384,
+    272896
+   ],
+   "segment": [
+    270336,
+    272896
+   ],
+   "token_sha256": "5b14328f214bf99d4b47c8aa1fdff491459922b4e47591ac2b974cdd86ba7c79",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 347,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    273408,
+    273920
+   ],
+   "segment": [
+    273408,
+    273920
+   ],
+   "token_sha256": "e37e4ed6fda4f6ea3087867e37b3500f0a01167bfc94bc7dfdc879308f2ae109",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 348,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    274432,
+    274944
+   ],
+   "segment": [
+    274432,
+    274944
+   ],
+   "token_sha256": "d61954afd11e8ffb0eeab13206e5a923ec7c1b51aad284ade37b404397b29b7d",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 349,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    275456,
+    275968
+   ],
+   "segment": [
+    275456,
+    278592
+   ],
+   "token_sha256": "f2decebe51518be91add29a9375636c4cef31ec5d5d46657117dcfcbd0a5dbc0",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 350,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    275968,
+    276480
+   ],
+   "segment": [
+    275456,
+    278592
+   ],
+   "token_sha256": "f0674e561c33d9156f3cd9c2e5f416f8ccee3702e76010fd3b0e8f8a2c6acc2f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 351,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    276480,
+    276992
+   ],
+   "segment": [
+    275456,
+    278592
+   ],
+   "token_sha256": "891eb4e7d0c73736c6c230aa321db5024753fb56a9b7a5cccb15fe2b173ab669",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 352,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    276992,
+    277504
+   ],
+   "segment": [
+    275456,
+    278592
+   ],
+   "token_sha256": "4933b42abbccc872d7386941da5d45170f7a98d06cedd384c4660a1e2bc051a7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 353,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    277504,
+    278016
+   ],
+   "segment": [
+    275456,
+    278592
+   ],
+   "token_sha256": "8d0a9e6a032fc0227dda94e06b27c405001e8b250929077707045edba24b17de",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 354,
+   "article": 54,
+   "article_title": "Commonwealth War Graves Commission",
+   "token_range": [
+    278016,
+    278528
+   ],
+   "segment": [
+    275456,
+    278592
+   ],
+   "token_sha256": "45eb2f2f39677c1675aae2054ae584359cf588fad5d6aafd4f362171ebb40ddb",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 355,
+   "article": 56,
+   "article_title": "German Type UB I submarine",
+   "token_range": [
+    279216,
+    279728
+   ],
+   "segment": [
+    279216,
+    280576
+   ],
+   "token_sha256": "3399645491b2537344fccd072c8133ed11b540da128ef3e4f80f98fe186b25b7",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 356,
+   "article": 56,
+   "article_title": "German Type UB I submarine",
+   "token_range": [
+    279728,
+    280240
+   ],
+   "segment": [
+    279216,
+    280576
+   ],
+   "token_sha256": "9ff3561adc6755c37967895a3068f26fa004295e5cabd91de4d2a8a787cb405e",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 357,
+   "article": 56,
+   "article_title": "German Type UB I submarine",
+   "token_range": [
+    281088,
+    281600
+   ],
+   "segment": [
+    281088,
+    282112
+   ],
+   "token_sha256": "d771273d93edbe747ed817bac57953022c4824763dd4b90c96d526e8f9b9d7e6",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 358,
+   "article": 56,
+   "article_title": "German Type UB I submarine",
+   "token_range": [
+    281600,
+    282112
+   ],
+   "segment": [
+    281088,
+    282112
+   ],
+   "token_sha256": "f2cc574e641b94ac3c96b66c372b1db7e259180d1cb7b2f91b70489bc6f5af33",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 359,
+   "article": 56,
+   "article_title": "German Type UB I submarine",
+   "token_range": [
+    282624,
+    283136
+   ],
+   "segment": [
+    282624,
+    283476
+   ],
+   "token_sha256": "64def3225720e962898a86578a18471a1e4916e5c5bbfabe54ff65c8be0620da",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 360,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    283476,
+    283988
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "2a20d6bd829776440fc4dfe0b9807f2e6cdaf0a701ad9d032687a703ba182905",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 361,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    283988,
+    284500
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "b7d24d6379489bfd740884b3dce78ad97986f60cc2dacf6514a24c0205d79a7b",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 362,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    284500,
+    285012
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "914dafcabf2ef5ae35ffc96473d3c5b34cd613b9e708b568946eb47bf0943dc6",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 363,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    285012,
+    285524
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "8af00d3c686880b7bed3d3554465ff5eebff785538149399524a78c67a4151e6",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 364,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    285524,
+    286036
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "47493941418ce468fb301b6c94a3c099f0517f411c468c966f25e37ccd6f19e7",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 365,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    286036,
+    286548
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "f778ff71f927690dc6452fbea84fc1e471ad6bf81af72cf32b176a6ca04c216d",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 366,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    286548,
+    287060
+   ],
+   "segment": [
+    283476,
+    287232
+   ],
+   "token_sha256": "d1ded27e331aca541cdae50f593419aac0d26e5d0ddbf51f2d62fbb1507e4776",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 367,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    287744,
+    288256
+   ],
+   "segment": [
+    287744,
+    288256
+   ],
+   "token_sha256": "89ce516adaf9b44396ae1f19e5bcfac60f643ea3c64e29819045074300b1f50a",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 368,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    288768,
+    289280
+   ],
+   "segment": [
+    288768,
+    290106
+   ],
+   "token_sha256": "5944cb37cdce24294a48ee0323a925c0165b8fe21ccf630b6adbb6124f3a46d7",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 369,
+   "article": 57,
+   "article_title": "Military history of Gibraltar during World War II",
+   "token_range": [
+    289280,
+    289792
+   ],
+   "segment": [
+    288768,
+    290106
+   ],
+   "token_sha256": "6def42e51f9167feb86a83e03b28a42cfc6d86ddc54ffaddb1436fe2d09dcf2f",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 370,
+   "article": 58,
+   "article_title": "Nerva",
+   "token_range": [
+    291328,
+    291840
+   ],
+   "segment": [
+    291328,
+    292352
+   ],
+   "token_sha256": "341c0a7c21c2194052ec2cb5911651934415d698da3795fe058e181c275c5007",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 371,
+   "article": 58,
+   "article_title": "Nerva",
+   "token_range": [
+    291840,
+    292352
+   ],
+   "segment": [
+    291328,
+    292352
+   ],
+   "token_sha256": "55700a0e6b95b22ee5b65d35405cc5a118ba468066e8a8bf297879e4b0f662e1",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 372,
+   "article": 58,
+   "article_title": "Nerva",
+   "token_range": [
+    292864,
+    293376
+   ],
+   "segment": [
+    292864,
+    294400
+   ],
+   "token_sha256": "57efe695cc4423f30b81778637b09c55fbef1ed0acb70d5b2beecca087cf3857",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 373,
+   "article": 58,
+   "article_title": "Nerva",
+   "token_range": [
+    293376,
+    293888
+   ],
+   "segment": [
+    292864,
+    294400
+   ],
+   "token_sha256": "efd7e204a88f44e7639208d219ddb9555b023f1741c1c16969eb6199eca93bab",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 374,
+   "article": 58,
+   "article_title": "Nerva",
+   "token_range": [
+    293888,
+    294400
+   ],
+   "segment": [
+    292864,
+    294400
+   ],
+   "token_sha256": "bb73286b59fd39a446af83588803d05b0120ea0669003b22fd5468d3e8c46aa8",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 375,
+   "article": 59,
+   "article_title": "The Hustler ( film )",
+   "token_range": [
+    295019,
+    295531
+   ],
+   "segment": [
+    295019,
+    297984
+   ],
+   "token_sha256": "102042145d3af56c7a305ea45da79476f44d5395090f9938c7c3872fab697b7b",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 376,
+   "article": 59,
+   "article_title": "The Hustler ( film )",
+   "token_range": [
+    295531,
+    296043
+   ],
+   "segment": [
+    295019,
+    297984
+   ],
+   "token_sha256": "821a55f8d5e43df148801660dad5f62e607a1f42676bd6dde25c61f4b13073f6",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 377,
+   "article": 59,
+   "article_title": "The Hustler ( film )",
+   "token_range": [
+    296043,
+    296555
+   ],
+   "segment": [
+    295019,
+    297984
+   ],
+   "token_sha256": "3fbbc8b68633fe0aef5831356d60984d8b5beedce40e33bbbcd9830c78d474a4",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 378,
+   "article": 59,
+   "article_title": "The Hustler ( film )",
+   "token_range": [
+    296555,
+    297067
+   ],
+   "segment": [
+    295019,
+    297984
+   ],
+   "token_sha256": "5a948bf97622be5fb7c45fc848ac11f8b2b54ad76ff8f72c0ce584d5443ef486",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 379,
+   "article": 59,
+   "article_title": "The Hustler ( film )",
+   "token_range": [
+    297067,
+    297579
+   ],
+   "segment": [
+    295019,
+    297984
+   ],
+   "token_sha256": "3d8d6cc84e06816fca695e706095b143c6a2c809249dde52d62049cd1c135a40",
+   "scored_targets": 511,
+   "on_historical_grid": false,
+   "early_dev_eval_tokens": false
+  },
+  {
+   "window": 380,
+   "article": 59,
+   "article_title": "The Hustler ( film )",
+   "token_range": [
+    298496,
+    299008
+   ],
+   "segment": [
+    298496,
+    299078
+   ],
+   "token_sha256": "763cc535bc3a14601eeb73839e4b60f05ef18f9eb0f6b2194094884d7cc1a3fd",
+   "scored_targets": 511,
+   "on_historical_grid": true,
+   "early_dev_eval_tokens": false
+  }
+ ]
+}

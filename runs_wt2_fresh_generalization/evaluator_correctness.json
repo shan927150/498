@@ -1,0 +1,1019 @@
+{
+ "dense_end": {
+  "bf16_original_bitwise": true,
+  "bf16_fresh_article_bitwise": true,
+  "targets_pristine": true,
+  "untouched_unchanged": true,
+  "peak_gpu_gb": 2.057849344,
+  "peak_cpu_gb": 8.383236,
+  "software": {
+   "python": "3.13.16",
+   "torch": "2.11.0+cu128",
+   "cuda": "12.8",
+   "transformers": "4.51.3",
+   "gpu": "NVIDIA A100-SXM4-80GB MIG 2g.20gb",
+   "numpy": "2.5.4"
+  },
+  "at": "2026-11-18 05:53:35",
+  "null_dense4": {
+   "fresh_article": true,
+   "fresh_window": true,
+   "installed_digest_equal": true
+  },
+  "null_dense3": {
+   "fresh_article": true,
+   "fresh_window": true,
+   "installed_digest_equal": true
+  }
+ },
+ "moe_end": {
+  "untouched_unchanged": true,
+  "n_untouched": 3964,
+  "targets_pristine": true,
+  "light_non_target_unchanged": true,
+  "bf16_original_bitwise": true,
+  "bf16_fresh_article_bitwise": true,
+  "peak_cpu_gb": 56.861772,
+  "peak_gpu_gb": 4.373235712,
+  "software": {
+   "python": "3.13.16",
+   "torch": "2.11.0+cu128",
+   "cuda": "12.8",
+   "transformers": "4.51.3",
+   "gpu": "NVIDIA A100-SXM4-80GB MIG 2g.20gb",
+   "numpy": "2.5.4"
+  },
+  "at": "2026-11-18 07:39:21"
+ },
+ "per_config": {
+  "dense/BF16": {
+   "valid": true,
+   "checks": {
+    "original_parity_bitwise": true,
+    "fresh_article_repeat_bitwise": true,
+    "fresh_window_repeat_bitwise": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "dense/dense3_G20261111": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "9129213a18353a711f600986bfd133cd4f1ce8707cdde3cdbf33aef5d3e9aaac",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true,
+    "original_parity_bitwise": true,
+    "fresh_article_repeat_bitwise": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "dense/dense3_G20261112": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "496092270220b9458a8b9a5defe637b574dcd6d4a671f08820215460f982b21d",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense3_G20261113": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "0c0b717015747de810793e3f08e2bdcf4e2bd55539e1d6abd5cd134f82846b10",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense3_G20261114": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "8ed12d2a7389570d7b252bc6a6082f6c0bdf42c57fa72376918f59a706136e70",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense3_G20261115": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "d698c9230811d05d31d0c98a607ccdcc3b1d19f883471e5e4820ae047ed1d931",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense3_ORIGINAL": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "d698c9230811d05d31d0c98a607ccdcc3b1d19f883471e5e4820ae047ed1d931",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense4_G20261111": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "3a4a82f056582575ff55a2c2d3e4a150102492922330166a5de4753065b3799f",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true,
+    "original_parity_bitwise": true,
+    "fresh_article_repeat_bitwise": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "dense/dense4_G20261112": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "3c0131b58129b55f63c8f75d65f8902b9b133a3ca6af15f1e8fa3c00468be3d3",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense4_G20261113": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "046a794ef0e1bbd1cdf4bcddd98f88b8b24d3d0370b027f92b193e6795156067",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense4_G20261114": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "ac238612ef350cc0a6706e7967a7160aca36a1a793dd4f4990565d0703bf7136",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense4_G20261115": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "380b9fcab1a7eb8789ceedbd2d07c382fa50893ad6a725c4a48d001d2e07e895",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "dense/dense4_ORIGINAL": {
+   "valid": true,
+   "checks": {
+    "installed_equals_given": true,
+    "n_target_tensors_12": true,
+    "all_targets_differ_from_bf16": true,
+    "finite": true,
+    "shapes_ok": true,
+    "untouched_unchanged": true,
+    "installed_digest": "380b9fcab1a7eb8789ceedbd2d07c382fa50893ad6a725c4a48d001d2e07e895",
+    "installed_digest_matches_history": true,
+    "installed_unchanged_during_eval": true,
+    "restored": true,
+    "weights_match_history": true,
+    "original_parity_bitwise": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "moe/BF16": {
+   "valid": true,
+   "checks": {
+    "original_parity_bitwise": true,
+    "fresh_article_repeat_bitwise": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "moe/FC_ORIGINAL": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s0_G20261111": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s0_G20261112": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s0_G20261113": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s0_G20261114": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s0_G20261115": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s1_G20261111": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s1_G20261112": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s1_G20261113": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s1_G20261114": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s1_G20261115": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s2_G20261111": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "original_parity_bitwise": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "moe/FC_s2_G20261112": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s2_G20261113": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s2_G20261114": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FC_s2_G20261115": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_ORIGINAL": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s0_G20261111": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "original_parity_bitwise": true,
+    "fresh_article_repeat_bitwise": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true,
+    "original_parity": true
+   }
+  },
+  "moe/FR_s0_G20261112": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s0_G20261113": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s0_G20261114": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s0_G20261115": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s1_G20261111": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s1_G20261112": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s1_G20261113": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s1_G20261114": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s1_G20261115": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s2_G20261111": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s2_G20261112": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s2_G20261113": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s2_G20261114": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  },
+  "moe/FR_s2_G20261115": {
+   "valid": true,
+   "checks": {
+    "file_sha256": true,
+    "keys": true,
+    "shapes": true,
+    "dtype_bf16": true,
+    "finite": true,
+    "layer_sha256": true,
+    "n_tensors_720": true,
+    "installed_digest": true,
+    "all_720_differ_from_bf16": true,
+    "installed_unchanged_during_eval": true,
+    "light_non_target_unchanged": true,
+    "restored_pristine": true
+   },
+   "token_accounting": {
+    "fresh_article": true,
+    "fresh_window": true
+   }
+  }
+ },
+ "all_valid": true,
+ "isolation": {
+  "token_overlap_A_with_historical": 0,
+  "token_overlap_B_with_historical": 0,
+  "token_overlap_A_with_B": 0,
+  "article_overlap_A_with_historical_any": [],
+  "article_overlap_A_with_historical_major": [],
+  "exact_duplicate_windows_A_or_B_vs_historical": 0
+ },
+ "parity_configs": [
+  "dense/BF16",
+  "dense/dense3_G20261111",
+  "dense/dense4_G20261111",
+  "dense/dense4_ORIGINAL",
+  "moe/BF16",
+  "moe/FC_s2_G20261111",
+  "moe/FR_s0_G20261111"
+ ],
+ "parity_all_bitwise": true
+}

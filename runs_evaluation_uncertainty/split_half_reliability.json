@@ -1,0 +1,7677 @@
+{
+ "sets": {
+  "moe": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 8,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      61,
+      67
+     ],
+     "pearson": {
+      "median": 0.6414194403598148,
+      "mean": 0.631275635349539,
+      "p05": 0.405289730564312,
+      "p95": 0.8227701664937509,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.84,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman_within_seed_ranks": {
+      "median": 0.6333333333333333,
+      "mean": 0.6108,
+      "p05": 0.3,
+      "p95": 0.8666666666666667,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.726,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.6822480801398618,
+       "mean": 0.6604615284576034,
+       "p05": 0.22969539081996643,
+       "p95": 0.950039162258129,
+       "frac_positive": 0.996,
+       "frac_gt_0p5": 0.79,
+       "frac_negative": 0.004,
+       "n": 1000
+      },
+      "s1": {
+       "median": 0.5575212748360545,
+       "mean": 0.5086545396953996,
+       "p05": -0.039985422882334316,
+       "p95": 0.9189347373611267,
+       "frac_positive": 0.929,
+       "frac_gt_0p5": 0.561,
+       "frac_negative": 0.071,
+       "n": 1000
+      },
+      "s2": {
+       "median": 0.8191762734637983,
+       "mean": 0.7847555046812463,
+       "p05": 0.46656788625083867,
+       "p95": 0.9754754915841547,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.937,
+       "frac_negative": 0.0,
+       "n": 1000
+      }
+     },
+     "kendall_tau_a": {
+      "median": 0.5333333333333333,
+      "mean": 0.5214666666666667,
+      "p05": 0.26666666666666666,
+      "p95": 0.7333333333333333,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.567,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7666666666666667,
+      "mean": 0.7607333333333334,
+      "p05": 0.6333333333333333,
+      "p95": 0.8666666666666667,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.8333333333333333,
+      "mean": 0.7993333333333332,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 0.994,
+      "frac_gt_0p5": 0.904,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.3333333333333333,
+      "mean": 0.39933333333333326,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.908,
+      "frac_gt_0p5": 0.284,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.6666666666666666,
+      "mean": 0.6448666666666666,
+      "p05": 0.4666666666666667,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.915,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.875,
+      "mean": 0.888,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.989,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.02826595167910866,
+       "mean": 0.001992795798449843,
+       "p05": -0.4039024393445913,
+       "p95": 0.374466209447762,
+       "frac_positive": 0.524,
+       "frac_gt_0p5": 0.018,
+       "frac_negative": 0.476,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.012906065880031783,
+       "mean": 0.011668752258540747,
+       "p05": -0.5211951760766016,
+       "p95": 0.5462269866502417,
+       "frac_positive": 0.51515,
+       "frac_gt_0p5": 0.06915,
+       "frac_negative": 0.48485,
+       "n": 20000
+      },
+      "observed_median": 0.6414194403598148,
+      "p_value": 0.0
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 8,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6171899700961543,
+      "mean": 0.6162599827678522,
+      "p05": 0.392635150382461,
+      "p95": 0.8179443624288446,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.823,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman_within_seed_ranks": {
+      "median": 0.6333333333333333,
+      "mean": 0.6137,
+      "p05": 0.3333333333333333,
+      "p95": 0.8666666666666667,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.738,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.7401964391750133,
+       "mean": 0.6987371698059105,
+       "p05": 0.30201262125028516,
+       "p95": 0.9575554618493987,
+       "frac_positive": 0.996,
+       "frac_gt_0p5": 0.832,
+       "frac_negative": 0.004,
+       "n": 1000
+      },
+      "s1": {
+       "median": 0.4392925929675923,
+       "mean": 0.4066635001713498,
+       "p05": -0.12211427624408087,
+       "p95": 0.8822020348686238,
+       "frac_positive": 0.879,
+       "frac_gt_0p5": 0.427,
+       "frac_negative": 0.121,
+       "n": 1000
+      },
+      "s2": {
+       "median": 0.8305694090350823,
+       "mean": 0.8057713871039833,
+       "p05": 0.5593536708853304,
+       "p95": 0.9746233286505561,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.97,
+       "frac_negative": 0.0,
+       "n": 1000
+      }
+     },
+     "kendall_tau_a": {
+      "median": 0.5333333333333333,
+      "mean": 0.5301333333333333,
+      "p05": 0.26666666666666666,
+      "p95": 0.7366666666666636,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.595,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7666666666666667,
+      "mean": 0.7650666666666667,
+      "p05": 0.6333333333333333,
+      "p95": 0.8683333333333318,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.6666666666666666,
+      "mean": 0.805,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.928,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.3333333333333333,
+      "mean": 0.404,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.91,
+      "frac_gt_0p5": 0.297,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.6666666666666666,
+      "mean": 0.6384666666666667,
+      "p05": 0.4666666666666667,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.887,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.875,
+      "mean": 0.864,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.977,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 8,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6140871703704249,
+      "mean": 0.6111994011506962,
+      "p05": 0.39774866803257924,
+      "p95": 0.7992681938264361,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.807,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman_within_seed_ranks": {
+      "median": 0.6,
+      "mean": 0.5864333333333331,
+      "p05": 0.3333333333333333,
+      "p95": 0.8333333333333334,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.673,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.6448653622335103,
+       "mean": 0.6332308545984138,
+       "p05": 0.23837458302409137,
+       "p95": 0.9388103898874409,
+       "frac_positive": 0.994,
+       "frac_gt_0p5": 0.738,
+       "frac_negative": 0.006,
+       "n": 1000
+      },
+      "s1": {
+       "median": 0.4738545468211126,
+       "mean": 0.4415825805968765,
+       "p05": -0.10661067420674221,
+       "p95": 0.8978324346214752,
+       "frac_positive": 0.9,
+       "frac_gt_0p5": 0.472,
+       "frac_negative": 0.1,
+       "n": 1000
+      },
+      "s2": {
+       "median": 0.838003697333227,
+       "mean": 0.8132409694748367,
+       "p05": 0.584857772320628,
+       "p95": 0.9721291263676438,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.975,
+       "frac_negative": 0.0,
+       "n": 1000
+      }
+     },
+     "kendall_tau_a": {
+      "median": 0.4666666666666667,
+      "mean": 0.499,
+      "p05": 0.26666666666666666,
+      "p95": 0.7333333333333333,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.483,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7333333333333333,
+      "mean": 0.7495,
+      "p05": 0.6333333333333333,
+      "p95": 0.8666666666666667,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.6666666666666666,
+      "mean": 0.7716666666666665,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.895,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.3333333333333333,
+      "mean": 0.4016666666666666,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.945,
+      "frac_gt_0p5": 0.255,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.6,
+      "mean": 0.6214666666666666,
+      "p05": 0.4666666666666667,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.868,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.875,
+      "mean": 0.847,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.973,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 8,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6840506073529452,
+      "mean": 0.668508620219034,
+      "p05": 0.4390286684603159,
+      "p95": 0.808164345672458,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.913,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman_within_seed_ranks": {
+      "median": 0.6666666666666666,
+      "mean": 0.6690333333333333,
+      "p05": 0.43333333333333335,
+      "p95": 0.8666666666666667,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.918,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.6513503562926433,
+       "mean": 0.670418392028986,
+       "p05": 0.4957078573957395,
+       "p95": 0.9479277557001434,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.942,
+       "frac_negative": 0.0,
+       "n": 1000
+      },
+      "s1": {
+       "median": 0.6058735999983762,
+       "mean": 0.5555503813564748,
+       "p05": 0.08275157050270039,
+       "p95": 0.9079329858201787,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.57,
+       "frac_negative": 0.0,
+       "n": 1000
+      },
+      "s2": {
+       "median": 0.8891717734183135,
+       "mean": 0.846367229037304,
+       "p05": 0.49827348709289154,
+       "p95": 0.9857579885076194,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.943,
+       "frac_negative": 0.0,
+       "n": 1000
+      }
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.5721333333333333,
+      "p05": 0.4,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.726,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.7860666666666668,
+      "p05": 0.7,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.8196666666666667,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.865,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.3333333333333333,
+      "mean": 0.35766666666666663,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.945,
+      "frac_gt_0p5": 0.128,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.6,
+      "mean": 0.6252666666666666,
+      "p05": 0.4,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.844,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.875,
+      "mean": 0.847625,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 8,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6317298212610477,
+      "mean": 0.6224918213516117,
+      "p05": 0.40934264710615936,
+      "p95": 0.8219925522540928,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.817,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman_within_seed_ranks": {
+      "median": 0.6333333333333333,
+      "mean": 0.6030333333333333,
+      "p05": 0.3,
+      "p95": 0.8333333333333334,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.718,
+      "frac_negative": 0.002,
+      "n": 1000
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.6721553370036759,
+       "mean": 0.637176500569874,
+       "p05": 0.22596630489883215,
+       "p95": 0.9432370887189321,
+       "frac_positive": 0.99,
+       "frac_gt_0p5": 0.743,
+       "frac_negative": 0.01,
+       "n": 1000
+      },
+      "s1": {
+       "median": 0.5291060803584691,
+       "mean": 0.4956381631463331,
+       "p05": -0.0174904642825839,
+       "p95": 0.894178744901228,
+       "frac_positive": 0.944,
+       "frac_gt_0p5": 0.536,
+       "frac_negative": 0.056,
+       "n": 1000
+      },
+      "s2": {
+       "median": 0.8093583780171997,
+       "mean": 0.7801180670107475,
+       "p05": 0.49837933630521497,
+       "p95": 0.9712990978729161,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.948,
+       "frac_negative": 0.0,
+       "n": 1000
+      }
+     },
+     "kendall_tau_a": {
+      "median": 0.5333333333333333,
+      "mean": 0.515,
+      "p05": 0.26666666666666666,
+      "p95": 0.7333333333333333,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.562,
+      "frac_negative": 0.002,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7666666666666667,
+      "mean": 0.7575,
+      "p05": 0.6333333333333333,
+      "p95": 0.8666666666666667,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.995,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.839,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.941,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.3333333333333333,
+      "mean": 0.368,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.882,
+      "frac_gt_0p5": 0.221,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.6666666666666666,
+      "mean": 0.6440666666666666,
+      "p05": 0.4666666666666667,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.91,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.875,
+      "mean": 0.867375,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.988,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 8,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6938299836423771,
+      "mean": 0.6938299836423771,
+      "p05": 0.6938299836423771,
+      "p95": 0.6938299836423771,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman_within_seed_ranks": {
+      "median": 0.6666666666666666,
+      "mean": 0.6666666666666666,
+      "p05": 0.6666666666666666,
+      "p95": 0.6666666666666666,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.7452372782850484,
+       "mean": 0.7452372782850484,
+       "p05": 0.7452372782850484,
+       "p95": 0.7452372782850484,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 1.0,
+       "frac_negative": 0.0,
+       "n": 1
+      },
+      "s1": {
+       "median": 0.25917199401909624,
+       "mean": 0.25917199401909624,
+       "p05": 0.25917199401909624,
+       "p95": 0.25917199401909624,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 0.0,
+       "frac_negative": 0.0,
+       "n": 1
+      },
+      "s2": {
+       "median": 0.9145026319637473,
+       "mean": 0.9145026319637473,
+       "p05": 0.9145026319637473,
+       "p95": 0.9145026319637473,
+       "frac_positive": 1.0,
+       "frac_gt_0p5": 1.0,
+       "frac_negative": 0.0,
+       "n": 1
+      }
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6,
+      "p05": 0.6,
+      "p95": 0.6,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8,
+      "p05": 0.8,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 0.6666666666666666,
+      "mean": 0.6666666666666666,
+      "p05": 0.6666666666666666,
+      "p95": 0.6666666666666666,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 0.6666666666666666,
+      "mean": 0.6666666666666666,
+      "p05": 0.6666666666666666,
+      "p95": 0.6666666666666666,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.6,
+      "mean": 0.6,
+      "p05": 0.6,
+      "p95": 0.6,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.14043574135552986,
+      "mean": 0.1461073786662663,
+      "p05": -0.1776884102446969,
+      "p95": 0.4896979066222541,
+      "frac_positive": 0.741,
+      "frac_gt_0p5": 0.043,
+      "frac_negative": 0.259,
+      "n": 1000
+     },
+     "spearman_within_seed_ranks": {
+      "median": -0.06666666666666667,
+      "mean": -0.05393333333333333,
+      "p05": -0.36666666666666664,
+      "p95": 0.26666666666666666,
+      "frac_positive": 0.348,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.59,
+      "n": 1000
+     },
+     "per_seed_pearson": {
+      "s0": {
+       "median": 0.6106183246164112,
+       "mean": 0.5805621552750643,
+       "p05": 0.10442774440484111,
+       "p95": 0.9321533726744895,
+       "frac_positive": 0.973,
+       "frac_gt_0p5": 0.653,
+       "frac_negative": 0.027,
+       "n": 1000
+      },
+      "s1": {
+       "median": -0.9119481197994985,
+       "mean": -0.8733438035869611,
+       "p05": -0.9778623731798298,
+       "p95": -0.6516514516626525,
+       "frac_positive": 0.004,
+       "frac_gt_0p5": 0.0,
+       "frac_negative": 0.996,
+       "n": 1000
+      },
+      "s2": {
+       "median": 0.036748294924654736,
+       "mean": 0.05495444064229804,
+       "p05": -0.5606740949238862,
+       "p95": 0.77688470732164,
+       "frac_positive": 0.528,
+       "frac_gt_0p5": 0.162,
+       "frac_negative": 0.472,
+       "n": 1000
+      }
+     },
+     "kendall_tau_a": {
+      "median": -0.06666666666666667,
+      "mean": -0.03893333333333333,
+      "p05": -0.3333333333333333,
+      "p95": 0.26666666666666666,
+      "frac_positive": 0.328,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.537,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.4666666666666667,
+      "mean": 0.48053333333333337,
+      "p05": 0.3333333333333333,
+      "p95": 0.6333333333333333,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.328,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.3333333333333333,
+      "mean": 0.338,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.842,
+      "frac_gt_0p5": 0.172,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.18133333333333332,
+      "p05": 0.0,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.469,
+      "frac_gt_0p5": 0.075,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.4,
+      "mean": 0.3836666666666667,
+      "p05": 0.2,
+      "p95": 0.6,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.146,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8626666666666666,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.946,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.016497671020613634,
+       "mean": -0.01636956695542418,
+       "p05": -0.42320740938878576,
+       "p95": 0.34999002949839336,
+       "frac_positive": 0.47,
+       "frac_gt_0p5": 0.01,
+       "frac_negative": 0.53,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.00965231258560258,
+       "mean": -0.005175377523732233,
+       "p05": -0.5000440571211301,
+       "p95": 0.5060125406587089,
+       "frac_positive": 0.48865,
+       "frac_gt_0p5": 0.0521,
+       "frac_negative": 0.51135,
+       "n": 20000
+      },
+      "observed_median": 0.14043574135552986,
+      "p_value": 0.262
+     }
+    }
+   }
+  },
+  "dense4": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      65,
+      63
+     ],
+     "pearson": {
+      "median": 0.7481851209260587,
+      "mean": 0.7165927608370336,
+      "p05": 0.3571517615179474,
+      "p95": 0.953982363081451,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.874,
+      "frac_negative": 0.001,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7452000000000001,
+      "p05": 0.3,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.753,
+      "frac_negative": 0.001,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6408,
+      "p05": 0.2,
+      "p95": 1.0,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.742,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8204000000000001,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.995,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.218,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.218,
+      "frac_gt_0p5": 0.218,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.96,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 0.96,
+      "frac_gt_0p5": 0.96,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.777,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.893,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9553333333333333,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.996,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.03730680639720482,
+       "mean": -0.01796343910430614,
+       "p05": -0.7559561424824449,
+       "p95": 0.6048344623003538,
+       "frac_positive": 0.53,
+       "frac_gt_0p5": 0.114,
+       "frac_negative": 0.47,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.008917156046743566,
+       "mean": 0.005106398505860157,
+       "p05": -0.834890483775362,
+       "p95": 0.8295088638673387,
+       "frac_positive": 0.5052,
+       "frac_gt_0p5": 0.2131,
+       "frac_negative": 0.4948,
+       "n": 20000
+      },
+      "observed_median": 0.7481851209260587,
+      "p_value": 0.006
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.7561243410168181,
+      "mean": 0.7310811973583469,
+      "p05": 0.39773729174926487,
+      "p95": 0.9592928399763783,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.877,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7596000000000002,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.766,
+      "frac_negative": 0.006,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6526,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.757,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8263,
+      "p05": 0.7,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.993,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.208,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.208,
+      "frac_gt_0p5": 0.208,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.952,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 0.952,
+      "frac_gt_0p5": 0.952,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.77675,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.901,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9613333333333333,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.998,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.720849462609571,
+      "mean": 0.6801323495668646,
+      "p05": 0.2799138052842134,
+      "p95": 0.9553543491306087,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.798,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7065,
+      "p05": 0.3,
+      "p95": 1.0,
+      "frac_positive": 0.987,
+      "frac_gt_0p5": 0.661,
+      "frac_negative": 0.011,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6032000000000001,
+      "p05": 0.2,
+      "p95": 1.0,
+      "frac_positive": 0.984,
+      "frac_gt_0p5": 0.661,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8016000000000001,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.984,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.194,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.194,
+      "frac_gt_0p5": 0.194,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.977,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 0.977,
+      "frac_gt_0p5": 0.977,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.7595,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.845,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.942,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.999,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.7871147052022792,
+      "mean": 0.7271742339657008,
+      "p05": 0.40241211471601857,
+      "p95": 0.9655436226233033,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.86,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.9,
+      "mean": 0.7880000000000001,
+      "p05": 0.3,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.86,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.8,
+      "mean": 0.6764000000000001,
+      "p05": 0.2,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.825,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.9,
+      "mean": 0.8382000000000002,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.198,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.198,
+      "frac_gt_0p5": 0.198,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.965,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 0.965,
+      "frac_gt_0p5": 0.965,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.7995,
+      "p05": 0.75,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.7780101558176966,
+      "mean": 0.7414127630979921,
+      "p05": 0.4013660518253459,
+      "p95": 0.9645616786997973,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.904,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7645,
+      "p05": 0.3,
+      "p95": 1.0,
+      "frac_positive": 0.991,
+      "frac_gt_0p5": 0.799,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.658,
+      "p05": 0.2,
+      "p95": 1.0,
+      "frac_positive": 0.987,
+      "frac_gt_0p5": 0.767,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8290000000000001,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.987,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.287,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.287,
+      "frac_gt_0p5": 0.287,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.893,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.893,
+      "frac_gt_0p5": 0.893,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.8005,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.925,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.967,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.99,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.84475087444782,
+      "mean": 0.84475087444782,
+      "p05": 0.84475087444782,
+      "p95": 0.84475087444782,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.9,
+      "mean": 0.9,
+      "p05": 0.9,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.8,
+      "mean": 0.8,
+      "p05": 0.8,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.9,
+      "mean": 0.9,
+      "p05": 0.9,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.75,
+      "p05": 0.75,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.43352577512165835,
+      "mean": -0.35327974778402915,
+      "p05": -0.7969643690220193,
+      "p95": 0.3821068510005278,
+      "frac_positive": 0.148,
+      "frac_gt_0p5": 0.034,
+      "frac_negative": 0.852,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.3,
+      "mean": -0.30169999999999997,
+      "p05": -0.8,
+      "p95": 0.6,
+      "frac_positive": 0.174,
+      "frac_gt_0p5": 0.06,
+      "frac_negative": 0.795,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": -0.2,
+      "mean": -0.2232,
+      "p05": -0.6,
+      "p95": 0.4,
+      "frac_positive": 0.156,
+      "frac_gt_0p5": 0.027,
+      "frac_negative": 0.681,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.4,
+      "mean": 0.38839999999999997,
+      "p05": 0.2,
+      "p95": 0.7,
+      "frac_positive": 0.992,
+      "frac_gt_0p5": 0.156,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.006,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.006,
+      "frac_gt_0p5": 0.006,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.032,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.032,
+      "frac_gt_0p5": 0.032,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.25,
+      "mean": 0.3745,
+      "p05": 0.0,
+      "p95": 0.75,
+      "frac_positive": 0.86,
+      "frac_gt_0p5": 0.14,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.005117782644941778,
+       "mean": -0.03531644121860488,
+       "p05": -0.7144639402226267,
+       "p95": 0.6183191397784037,
+       "frac_positive": 0.502,
+       "frac_gt_0p5": 0.088,
+       "frac_negative": 0.498,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.00283634220841289,
+       "mean": -0.0029837906749857097,
+       "p05": -0.8212139337122526,
+       "p95": 0.8130100830893834,
+       "frac_positive": 0.4984,
+       "frac_gt_0p5": 0.2017,
+       "frac_negative": 0.5016,
+       "n": 20000
+      },
+      "observed_median": -0.43352577512165835,
+      "p_value": 0.8
+     }
+    }
+   }
+  },
+  "dense3": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      63,
+      65
+     ],
+     "pearson": {
+      "median": 0.9026906188986565,
+      "mean": 0.879918224053148,
+      "p05": 0.6911928110388856,
+      "p95": 0.985558076592779,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.998,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7879,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.967,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6517999999999999,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.797,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8259000000000001,
+      "p05": 0.7,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.541,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.541,
+      "frac_gt_0p5": 0.541,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.602,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.602,
+      "frac_gt_0p5": 0.602,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 1.0,
+      "mean": 0.8765,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.904,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8765,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.904,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.02655765123666287,
+       "mean": -0.006308392000499812,
+       "p05": -0.7708937312505525,
+       "p95": 0.6786727396141615,
+       "frac_positive": 0.522,
+       "frac_gt_0p5": 0.132,
+       "frac_negative": 0.478,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.016084185104158086,
+       "mean": 0.010441819418160839,
+       "p05": -0.8435004068607638,
+       "p95": 0.8495989813977516,
+       "frac_positive": 0.50845,
+       "frac_gt_0p5": 0.2319,
+       "frac_negative": 0.49155,
+       "n": 20000
+      },
+      "observed_median": 0.9026906188986565,
+      "p_value": 0.0
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.8790427373478371,
+      "mean": 0.8554883628983353,
+      "p05": 0.6454380057067263,
+      "p95": 0.9809389838600231,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.993,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7667999999999999,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.964,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6227999999999999,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.73,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8114000000000001,
+      "p05": 0.7,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.999,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.499,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.499,
+      "frac_gt_0p5": 0.499,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.545,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.545,
+      "frac_gt_0p5": 0.545,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 1.0,
+      "mean": 0.857,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.883,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.857,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.883,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.8827890575803179,
+      "mean": 0.8579289199539258,
+      "p05": 0.6529192568381341,
+      "p95": 0.9790744269118811,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.995,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7676000000000001,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.962,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6207999999999999,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.748,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8104000000000001,
+      "p05": 0.7,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.999,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.472,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.472,
+      "frac_gt_0p5": 0.472,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.562,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.562,
+      "frac_gt_0p5": 0.562,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 1.0,
+      "mean": 0.866,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.902,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.866,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.902,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.8984003226415604,
+      "mean": 0.8775022749463235,
+      "p05": 0.6808624058853053,
+      "p95": 0.9811715617846347,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7687,
+      "p05": 0.5,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.937,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.6247999999999999,
+      "p05": 0.2,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.837,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.8124000000000001,
+      "p05": 0.6,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.623,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.623,
+      "frac_gt_0p5": 0.623,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.563,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.563,
+      "frac_gt_0p5": 0.563,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 1.0,
+      "mean": 0.851,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.841,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.851,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.841,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.8942180967925578,
+      "mean": 0.8717878914304972,
+      "p05": 0.6963109804403254,
+      "p95": 0.9829989080545604,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.995,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.8,
+      "mean": 0.7852,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.965,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6,
+      "mean": 0.644,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.783,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8,
+      "mean": 0.822,
+      "p05": 0.7,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.999,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.487,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.487,
+      "frac_gt_0p5": 0.487,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.61,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.61,
+      "frac_gt_0p5": 0.61,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 1.0,
+      "mean": 0.8775,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.9,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8775,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.9,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.9536086719141995,
+      "mean": 0.9536086719141995,
+      "p05": 0.9536086719141995,
+      "p95": 0.9536086719141995,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.9,
+      "mean": 0.9,
+      "p05": 0.9,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.8,
+      "mean": 0.8,
+      "p05": 0.8,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.9,
+      "mean": 0.9,
+      "p05": 0.9,
+      "p95": 0.9,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.6209074929277061,
+      "mean": -0.5331348877834907,
+      "p05": -0.8998772973011584,
+      "p95": 0.18363871714154245,
+      "frac_positive": 0.074,
+      "frac_gt_0p5": 0.018,
+      "frac_negative": 0.926,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.6,
+      "mean": -0.509,
+      "p05": -0.9,
+      "p95": 0.2,
+      "frac_positive": 0.088,
+      "frac_gt_0p5": 0.007,
+      "frac_negative": 0.885,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": -0.4,
+      "mean": -0.4118,
+      "p05": -0.8,
+      "p95": 0.2,
+      "frac_positive": 0.068,
+      "frac_gt_0p5": 0.006,
+      "frac_negative": 0.869,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.3,
+      "mean": 0.29410000000000003,
+      "p05": 0.1,
+      "p95": 0.6,
+      "frac_positive": 0.971,
+      "frac_gt_0p5": 0.068,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.005,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.005,
+      "frac_gt_0p5": 0.005,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.084,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.084,
+      "frac_gt_0p5": 0.084,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.25,
+      "mean": 0.2475,
+      "p05": 0.0,
+      "p95": 0.5,
+      "frac_positive": 0.736,
+      "frac_gt_0p5": 0.027,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.017468958237705716,
+       "mean": -0.04226141032681568,
+       "p05": -0.7278338320169752,
+       "p95": 0.5862878055074894,
+       "frac_positive": 0.486,
+       "frac_gt_0p5": 0.108,
+       "frac_negative": 0.514,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.015374369450928169,
+       "mean": -0.012169666048167015,
+       "p05": -0.8215616478352881,
+       "p95": 0.8101557056826616,
+       "frac_positive": 0.4896,
+       "frac_gt_0p5": 0.19845,
+       "frac_negative": 0.5104,
+       "n": 20000
+      },
+      "observed_median": -0.6209074929277061,
+      "p_value": 0.9
+     }
+    }
+   }
+  },
+  "dose_natural_k1": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      63,
+      65
+     ],
+     "pearson": {
+      "median": 0.3593942052823701,
+      "mean": 0.3455323117584918,
+      "p05": -0.07388358352158896,
+      "p95": 0.7421320437253812,
+      "frac_positive": 0.903,
+      "frac_gt_0p5": 0.278,
+      "frac_negative": 0.097,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.3333333333333333,
+      "mean": 0.32695238095238094,
+      "p05": -0.14285714285714285,
+      "p95": 0.7619047619047619,
+      "frac_positive": 0.89,
+      "frac_gt_0p5": 0.265,
+      "frac_negative": 0.101,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.25,
+      "mean": 0.2515,
+      "p05": -0.07142857142857142,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.85,
+      "frac_gt_0p5": 0.087,
+      "frac_negative": 0.079,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.625,
+      "mean": 0.62575,
+      "p05": 0.4642857142857143,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.85,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.715,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.715,
+      "frac_gt_0p5": 0.715,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.061,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.061,
+      "frac_gt_0p5": 0.061,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.52775,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.996,
+      "frac_gt_0p5": 0.426,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.8195,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.994,
+      "frac_gt_0p5": 0.836,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.0011729162539708478,
+       "mean": -0.018128019916598234,
+       "p05": -0.5435081637233323,
+       "p95": 0.49548097320362444,
+       "frac_positive": 0.5,
+       "frac_gt_0p5": 0.05,
+       "frac_negative": 0.5,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.00699053831102216,
+       "mean": -0.0011599172909492566,
+       "p05": -0.6539577312675617,
+       "p95": 0.6678943410366504,
+       "frac_positive": 0.49475,
+       "frac_gt_0p5": 0.12965,
+       "frac_negative": 0.50525,
+       "n": 20000
+      },
+      "observed_median": 0.3593942052823701,
+      "p_value": 0.124
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.40474271963010433,
+      "mean": 0.3916439705228198,
+      "p05": -0.0008570009984769176,
+      "p95": 0.7597673695532312,
+      "frac_positive": 0.948,
+      "frac_gt_0p5": 0.353,
+      "frac_negative": 0.052,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.38095238095238093,
+      "mean": 0.3821666666666667,
+      "p05": -0.07142857142857142,
+      "p95": 0.7869047619047608,
+      "frac_positive": 0.926,
+      "frac_gt_0p5": 0.32,
+      "frac_negative": 0.064,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.2857142857142857,
+      "mean": 0.2966428571428571,
+      "p05": 0.0,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.904,
+      "frac_gt_0p5": 0.127,
+      "frac_negative": 0.042,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6428571428571429,
+      "mean": 0.6483214285714286,
+      "p05": 0.5,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.904,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.737,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.737,
+      "frac_gt_0p5": 0.737,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.089,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.089,
+      "frac_gt_0p5": 0.089,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.557375,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.516,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.85675,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.885,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.38043035936785674,
+      "mean": 0.36820859674492273,
+      "p05": -0.020688483949573015,
+      "p95": 0.725882361672926,
+      "frac_positive": 0.932,
+      "frac_gt_0p5": 0.322,
+      "frac_negative": 0.068,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.35714285714285715,
+      "mean": 0.35828571428571426,
+      "p05": -0.047619047619047616,
+      "p95": 0.7619047619047619,
+      "frac_positive": 0.928,
+      "frac_gt_0p5": 0.285,
+      "frac_negative": 0.061,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.2857142857142857,
+      "mean": 0.27435714285714285,
+      "p05": 0.0,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.898,
+      "frac_gt_0p5": 0.079,
+      "frac_negative": 0.039,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6428571428571429,
+      "mean": 0.6371785714285715,
+      "p05": 0.5,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.898,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.72,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.72,
+      "frac_gt_0p5": 0.72,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.068,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.068,
+      "frac_gt_0p5": 0.068,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.513875,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.4,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8335,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.855,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.43545770665131234,
+      "mean": 0.45192934324173384,
+      "p05": 0.059421795280526275,
+      "p95": 0.8162346760811331,
+      "frac_positive": 0.97,
+      "frac_gt_0p5": 0.473,
+      "frac_negative": 0.03,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.42857142857142855,
+      "mean": 0.4398333333333333,
+      "p05": 0.047619047619047616,
+      "p95": 0.8571428571428571,
+      "frac_positive": 0.97,
+      "frac_gt_0p5": 0.43,
+      "frac_negative": 0.03,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.34478571428571425,
+      "p05": 0.0,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.894,
+      "frac_gt_0p5": 0.199,
+      "frac_negative": 0.03,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.6723928571428571,
+      "p05": 0.5,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.894,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.969,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 0.969,
+      "frac_gt_0p5": 0.969,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.065,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.065,
+      "frac_gt_0p5": 0.065,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.559125,
+      "p05": 0.375,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.466,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.8465,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.937,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.41493606110856796,
+      "mean": 0.40407334929017086,
+      "p05": 0.00989552162921051,
+      "p95": 0.781692297366557,
+      "frac_positive": 0.954,
+      "frac_gt_0p5": 0.362,
+      "frac_negative": 0.046,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.40476190476190477,
+      "mean": 0.3896428571428571,
+      "p05": -0.07142857142857142,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.911,
+      "frac_gt_0p5": 0.343,
+      "frac_negative": 0.073,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.2857142857142857,
+      "mean": 0.297,
+      "p05": -0.07142857142857142,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.897,
+      "frac_gt_0p5": 0.13,
+      "frac_negative": 0.059,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6428571428571429,
+      "mean": 0.6485,
+      "p05": 0.4642857142857143,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.897,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.642,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.642,
+      "frac_gt_0p5": 0.642,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.103,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.103,
+      "frac_gt_0p5": 0.103,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.556,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.996,
+      "frac_gt_0p5": 0.516,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.86525,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.896,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.23185941565062168,
+      "mean": 0.23185941565062168,
+      "p05": 0.23185941565062168,
+      "p95": 0.23185941565062168,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.21428571428571427,
+      "mean": 0.21428571428571427,
+      "p05": 0.21428571428571427,
+      "p95": 0.21428571428571427,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.21428571428571427,
+      "p05": 0.21428571428571427,
+      "p95": 0.21428571428571427,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6071428571428571,
+      "p05": 0.6071428571428571,
+      "p95": 0.6071428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.625,
+      "p05": 0.625,
+      "p95": 0.625,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.75,
+      "p05": 0.75,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.3151953797673367,
+      "mean": -0.2722079996056591,
+      "p05": -0.646735227935767,
+      "p95": 0.25825390494533135,
+      "frac_positive": 0.174,
+      "frac_gt_0p5": 0.015,
+      "frac_negative": 0.826,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.2619047619047619,
+      "mean": -0.2431904761904762,
+      "p05": -0.6916666666666665,
+      "p95": 0.3333333333333333,
+      "frac_positive": 0.196,
+      "frac_gt_0p5": 0.018,
+      "frac_negative": 0.773,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": -0.21428571428571427,
+      "mean": -0.1855,
+      "p05": -0.5714285714285714,
+      "p95": 0.21428571428571427,
+      "frac_positive": 0.159,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.746,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.39285714285714285,
+      "mean": 0.40725,
+      "p05": 0.21428571428571427,
+      "p95": 0.6071428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.159,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.032,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.032,
+      "frac_gt_0p5": 0.032,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.25,
+      "mean": 0.309625,
+      "p05": 0.0,
+      "p95": 0.625,
+      "frac_positive": 0.937,
+      "frac_gt_0p5": 0.061,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.023363695611378625,
+       "mean": -0.0070629776735056035,
+       "p05": -0.49111720755898136,
+       "p95": 0.43703730766680976,
+       "frac_positive": 0.528,
+       "frac_gt_0p5": 0.018,
+       "frac_negative": 0.472,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.014861061894987438,
+       "mean": 0.010913903992493954,
+       "p05": -0.6142910139906148,
+       "p95": 0.6306698551574527,
+       "frac_positive": 0.51395,
+       "frac_gt_0p5": 0.10915,
+       "frac_negative": 0.48605,
+       "n": 20000
+      },
+      "observed_median": -0.3151953797673367,
+      "p_value": 0.834
+     }
+    }
+   }
+  },
+  "dose_natural_k4": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      65,
+      63
+     ],
+     "pearson": {
+      "median": 0.6145367708145982,
+      "mean": 0.5988978849632741,
+      "p05": 0.2803207684568716,
+      "p95": 0.8516392523896109,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.724,
+      "frac_negative": 0.002,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.6428571428571429,
+      "mean": 0.6279761904761905,
+      "p05": 0.2619047619047619,
+      "p95": 0.9047619047619048,
+      "frac_positive": 0.994,
+      "frac_gt_0p5": 0.74,
+      "frac_negative": 0.006,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.5,
+      "mean": 0.49742857142857144,
+      "p05": 0.21428571428571427,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.433,
+      "frac_negative": 0.004,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.75,
+      "mean": 0.7487142857142858,
+      "p05": 0.6071428571428571,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.993,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.433,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.433,
+      "frac_gt_0p5": 0.433,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.009,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.009,
+      "frac_gt_0p5": 0.009,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.753875,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.924,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9556,
+      "p05": 0.8,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.015534314122531557,
+       "mean": -0.0215820818541387,
+       "p05": -0.5546958352349856,
+       "p95": 0.4624965707956373,
+       "frac_positive": 0.488,
+       "frac_gt_0p5": 0.04,
+       "frac_negative": 0.512,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.01025525200305754,
+       "mean": -0.006595508368743121,
+       "p05": -0.6661732165135578,
+       "p95": 0.66257953133889,
+       "frac_positive": 0.4915,
+       "frac_gt_0p5": 0.12435,
+       "frac_negative": 0.5085,
+       "n": 20000
+      },
+      "observed_median": 0.6145367708145982,
+      "p_value": 0.012
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6114510524529142,
+      "mean": 0.5930627378606436,
+      "p05": 0.2444395492326725,
+      "p95": 0.871808564753076,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.71,
+      "frac_negative": 0.002,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.6666666666666666,
+      "mean": 0.6317619047619049,
+      "p05": 0.2619047619047619,
+      "p95": 0.9047619047619048,
+      "frac_positive": 0.992,
+      "frac_gt_0p5": 0.737,
+      "frac_negative": 0.006,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.5,
+      "mean": 0.4992857142857143,
+      "p05": 0.21428571428571427,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.991,
+      "frac_gt_0p5": 0.442,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.75,
+      "mean": 0.749642857142857,
+      "p05": 0.6071428571428571,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.991,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.392,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.392,
+      "frac_gt_0p5": 0.392,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.01,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.01,
+      "frac_gt_0p5": 0.01,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.77275,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.947,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9656,
+      "p05": 0.8,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.997,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.6665657208812599,
+      "mean": 0.6479765965182102,
+      "p05": 0.3572446098968092,
+      "p95": 0.8883539285955037,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.808,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.7142857142857143,
+      "mean": 0.690952380952381,
+      "p05": 0.35714285714285715,
+      "p95": 0.9285714285714286,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.851,
+      "frac_negative": 0.001,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.5714285714285714,
+      "mean": 0.5545,
+      "p05": 0.2857142857142857,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.553,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7857142857142857,
+      "mean": 0.77725,
+      "p05": 0.6428571428571429,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.998,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.453,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.453,
+      "frac_gt_0p5": 0.453,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.01,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.01,
+      "frac_gt_0p5": 0.01,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.779125,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.958,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.97,
+      "p05": 0.8,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.605312419871655,
+      "mean": 0.6188457208392759,
+      "p05": 0.3262990824486905,
+      "p95": 0.8271167580018751,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.794,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.6904761904761905,
+      "mean": 0.679047619047619,
+      "p05": 0.4523809523809524,
+      "p95": 0.882142857142856,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.914,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.5,
+      "mean": 0.5257857142857142,
+      "p05": 0.2857142857142857,
+      "p95": 0.7178571428571396,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.438,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.75,
+      "mean": 0.7628928571428572,
+      "p05": 0.6428571428571429,
+      "p95": 0.8589285714285697,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.374,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.374,
+      "frac_gt_0p5": 0.374,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.025,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.025,
+      "frac_gt_0p5": 0.025,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.783875,
+      "p05": 0.625,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9652000000000001,
+      "p05": 0.8,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5770700573871281,
+      "mean": 0.5616868162240628,
+      "p05": 0.22796032396696436,
+      "p95": 0.8380654414348521,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.652,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.6190476190476191,
+      "mean": 0.5837142857142857,
+      "p05": 0.19047619047619047,
+      "p95": 0.882142857142856,
+      "frac_positive": 0.99,
+      "frac_gt_0p5": 0.665,
+      "frac_negative": 0.009,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.5,
+      "mean": 0.46171428571428574,
+      "p05": 0.14285714285714285,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.987,
+      "frac_gt_0p5": 0.359,
+      "frac_negative": 0.003,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.75,
+      "mean": 0.7308571428571429,
+      "p05": 0.5714285714285714,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.987,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.408,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.408,
+      "frac_gt_0p5": 0.408,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.012,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.012,
+      "frac_gt_0p5": 0.012,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.735,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.887,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9252000000000001,
+      "p05": 0.6,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.997,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5738030198870219,
+      "mean": 0.5738030198870219,
+      "p05": 0.5738030198870219,
+      "p95": 0.5738030198870219,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.6428571428571429,
+      "mean": 0.6428571428571429,
+      "p05": 0.6428571428571429,
+      "p95": 0.6428571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.42857142857142855,
+      "p05": 0.42857142857142855,
+      "p95": 0.42857142857142855,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.7142857142857143,
+      "p05": 0.7142857142857143,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.875,
+      "mean": 0.875,
+      "p05": 0.875,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 2,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.06990024840740067,
+      "mean": 0.08001051071133196,
+      "p05": -0.3527599234955027,
+      "p95": 0.5844567942134239,
+      "frac_positive": 0.587,
+      "frac_gt_0p5": 0.087,
+      "frac_negative": 0.413,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.047619047619047616,
+      "mean": 0.05800000000000001,
+      "p05": -0.42857142857142855,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.549,
+      "frac_gt_0p5": 0.079,
+      "frac_negative": 0.412,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.07142857142857142,
+      "mean": 0.05821428571428571,
+      "p05": -0.35714285714285715,
+      "p95": 0.42857142857142855,
+      "frac_positive": 0.529,
+      "frac_gt_0p5": 0.022,
+      "frac_negative": 0.357,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5357142857142857,
+      "mean": 0.5291071428571429,
+      "p05": 0.32142857142857145,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.529,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.318,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.318,
+      "frac_gt_0p5": 0.318,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.09,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.09,
+      "frac_gt_0p5": 0.09,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.4945,
+      "p05": 0.125,
+      "p95": 0.7562499999999943,
+      "frac_positive": 0.984,
+      "frac_gt_0p5": 0.379,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8225,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.966,
+      "frac_gt_0p5": 0.679,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.019029009724409046,
+       "mean": -0.012926363557812546,
+       "p05": -0.5483863970221513,
+       "p95": 0.43439830037954014,
+       "frac_positive": 0.514,
+       "frac_gt_0p5": 0.022,
+       "frac_negative": 0.486,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.011645804850715938,
+       "mean": 0.0037019193722929453,
+       "p05": -0.6546685661089943,
+       "p95": 0.6431144962284945,
+       "frac_positive": 0.5095,
+       "frac_gt_0p5": 0.1161,
+       "frac_negative": 0.4905,
+       "n": 20000
+      },
+      "observed_median": 0.06990024840740067,
+      "p_value": 0.436
+     }
+    }
+   }
+  },
+  "dose_natural_k16": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 6,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      66,
+      62
+     ],
+     "pearson": {
+      "median": 0.5889407987074996,
+      "mean": 0.5684504587595106,
+      "p05": 0.20811378079833043,
+      "p95": 0.8496602524980722,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.679,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5952380952380952,
+      "mean": 0.5525238095238096,
+      "p05": 0.16666666666666666,
+      "p95": 0.8095238095238095,
+      "frac_positive": 0.983,
+      "frac_gt_0p5": 0.619,
+      "frac_negative": 0.013,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.39992857142857147,
+      "p05": 0.07142857142857142,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.972,
+      "frac_gt_0p5": 0.243,
+      "frac_negative": 0.013,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.6999642857142858,
+      "p05": 0.5357142857142857,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.972,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.622,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.622,
+      "frac_gt_0p5": 0.622,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.80975,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.981,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9683333333333335,
+      "p05": 0.8333333333333334,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.999,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.013628329609749145,
+       "mean": 0.0006558106464596509,
+       "p05": -0.5183840116233334,
+       "p95": 0.5346105553440078,
+       "frac_positive": 0.508,
+       "frac_gt_0p5": 0.058,
+       "frac_negative": 0.492,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.010176028937930709,
+       "mean": 0.009441828031205956,
+       "p05": -0.6637464360441133,
+       "p95": 0.693526258385825,
+       "frac_positive": 0.5069,
+       "frac_gt_0p5": 0.1439,
+       "frac_negative": 0.4931,
+       "n": 20000
+      },
+      "observed_median": 0.5889407987074996,
+      "p_value": 0.038
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 6,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5407130300955657,
+      "mean": 0.5314131289682315,
+      "p05": 0.1829805031134972,
+      "p95": 0.8333525939040838,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.576,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5714285714285714,
+      "mean": 0.5307857142857143,
+      "p05": 0.14285714285714285,
+      "p95": 0.8095238095238095,
+      "frac_positive": 0.983,
+      "frac_gt_0p5": 0.59,
+      "frac_negative": 0.014,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.38371428571428573,
+      "p05": 0.07142857142857142,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.969,
+      "frac_gt_0p5": 0.208,
+      "frac_negative": 0.007,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.6918571428571427,
+      "p05": 0.5357142857142857,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.969,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.579,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.579,
+      "frac_gt_0p5": 0.579,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.875,
+      "mean": 0.80375,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.969,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9543333333333334,
+      "p05": 0.8333333333333334,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.998,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 6,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5011986193140496,
+      "mean": 0.49364413848370925,
+      "p05": 0.14124217987877444,
+      "p95": 0.8114894255282052,
+      "frac_positive": 0.986,
+      "frac_gt_0p5": 0.502,
+      "frac_negative": 0.014,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5238095238095238,
+      "mean": 0.48890476190476195,
+      "p05": 0.07142857142857142,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.969,
+      "frac_gt_0p5": 0.516,
+      "frac_negative": 0.021,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.34907142857142853,
+      "p05": 0.0,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.948,
+      "frac_gt_0p5": 0.171,
+      "frac_negative": 0.021,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.6745357142857142,
+      "p05": 0.5,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.948,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.497,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.497,
+      "frac_gt_0p5": 0.497,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.77975,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.962,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.939,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 6,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5081662766130863,
+      "mean": 0.5115577639138329,
+      "p05": 0.20547185472746637,
+      "p95": 0.8332001978045047,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.505,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5952380952380952,
+      "mean": 0.5183333333333334,
+      "p05": 0.16666666666666666,
+      "p95": 0.8333333333333334,
+      "frac_positive": 0.967,
+      "frac_gt_0p5": 0.561,
+      "frac_negative": 0.033,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.36792857142857144,
+      "p05": 0.0,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.933,
+      "frac_gt_0p5": 0.276,
+      "frac_negative": 0.033,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.6839642857142857,
+      "p05": 0.5,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.933,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.387,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.387,
+      "frac_gt_0p5": 0.387,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.793375,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9518333333333335,
+      "p05": 0.8333333333333334,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 6,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5668709957982245,
+      "mean": 0.5485033934733712,
+      "p05": 0.19381336675627986,
+      "p95": 0.8329655147937984,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.621,
+      "frac_negative": 0.003,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5714285714285714,
+      "mean": 0.5388809523809525,
+      "p05": 0.16666666666666666,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.984,
+      "frac_gt_0p5": 0.589,
+      "frac_negative": 0.011,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.38707142857142857,
+      "p05": 0.07142857142857142,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.969,
+      "frac_gt_0p5": 0.203,
+      "frac_negative": 0.008,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.6935357142857143,
+      "p05": 0.5357142857142857,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.969,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.544,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.544,
+      "frac_gt_0p5": 0.544,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.001,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.001,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.79825,
+      "p05": 0.625,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.978,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9496666666666668,
+      "p05": 0.8333333333333334,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.997,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 6,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.48712502367814053,
+      "mean": 0.48712502367814053,
+      "p05": 0.48712502367814053,
+      "p95": 0.48712502367814053,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.30952380952380953,
+      "mean": 0.30952380952380953,
+      "p05": 0.30952380952380953,
+      "p95": 0.30952380952380953,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.21428571428571427,
+      "p05": 0.21428571428571427,
+      "p95": 0.21428571428571427,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6071428571428571,
+      "p05": 0.6071428571428571,
+      "p95": 0.6071428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.875,
+      "mean": 0.875,
+      "p05": 0.875,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 1,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.01103686369581194,
+      "mean": 0.017731521755750723,
+      "p05": -0.4099453693225813,
+      "p95": 0.5385944467641781,
+      "frac_positive": 0.489,
+      "frac_gt_0p5": 0.055,
+      "frac_negative": 0.511,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.047619047619047616,
+      "mean": -0.05473809523809523,
+      "p05": -0.47619047619047616,
+      "p95": 0.30952380952380953,
+      "frac_positive": 0.403,
+      "frac_gt_0p5": 0.002,
+      "frac_negative": 0.544,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": -0.14285714285714285,
+      "mean": -0.12199999999999998,
+      "p05": -0.42857142857142855,
+      "p95": 0.14285714285714285,
+      "frac_positive": 0.196,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.673,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.42857142857142855,
+      "mean": 0.43899999999999995,
+      "p05": 0.2857142857142857,
+      "p95": 0.5714285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.196,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.021,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.021,
+      "frac_gt_0p5": 0.021,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.46725,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.965,
+      "frac_gt_0p5": 0.343,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.723,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.723,
+      "frac_gt_0p5": 0.723,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.018874564414438987,
+       "mean": -0.00914390546916579,
+       "p05": -0.5335016373127779,
+       "p95": 0.4444426818179296,
+       "frac_positive": 0.524,
+       "frac_gt_0p5": 0.026,
+       "frac_negative": 0.476,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.01412393350529248,
+       "mean": 0.008842179801514126,
+       "p05": -0.6279204292692651,
+       "p95": 0.6393330606512848,
+       "frac_positive": 0.51195,
+       "frac_gt_0p5": 0.11325,
+       "frac_negative": 0.48805,
+       "n": 20000
+      },
+      "observed_median": -0.01103686369581194,
+      "p_value": 0.54
+     }
+    }
+   }
+  },
+  "dose_natural_k64": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      65,
+      63
+     ],
+     "pearson": {
+      "median": 0.31214240535351134,
+      "mean": 0.3140892635190979,
+      "p05": -0.11304411966293341,
+      "p95": 0.7283274465253082,
+      "frac_positive": 0.868,
+      "frac_gt_0p5": 0.256,
+      "frac_negative": 0.132,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.2619047619047619,
+      "mean": 0.26376190476190475,
+      "p05": -0.21428571428571427,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.802,
+      "frac_gt_0p5": 0.21,
+      "frac_negative": 0.175,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.20414285714285713,
+      "p05": -0.14285714285714285,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.766,
+      "frac_gt_0p5": 0.066,
+      "frac_negative": 0.135,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6020714285714286,
+      "p05": 0.42857142857142855,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.766,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.019,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.019,
+      "frac_gt_0p5": 0.019,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.543,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.543,
+      "frac_gt_0p5": 0.543,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.61975,
+      "p05": 0.25,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.703,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.8,
+      "mean": 0.8362,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.92,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.011528422497120768,
+       "mean": 0.0012902225609974782,
+       "p05": -0.5511268383545752,
+       "p95": 0.5053155393886025,
+       "frac_positive": 0.516,
+       "frac_gt_0p5": 0.054,
+       "frac_negative": 0.484,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.013068764361863987,
+       "mean": 0.014020906338550026,
+       "p05": -0.656598819669683,
+       "p95": 0.6802376840998199,
+       "frac_positive": 0.5104,
+       "frac_gt_0p5": 0.1362,
+       "frac_negative": 0.4896,
+       "n": 20000
+      },
+      "observed_median": 0.31214240535351134,
+      "p_value": 0.196
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.3058315754625097,
+      "mean": 0.3051667624003793,
+      "p05": -0.10124884181952147,
+      "p95": 0.7204643190655781,
+      "frac_positive": 0.866,
+      "frac_gt_0p5": 0.24,
+      "frac_negative": 0.134,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.2619047619047619,
+      "mean": 0.2504047619047619,
+      "p05": -0.19047619047619047,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.783,
+      "frac_gt_0p5": 0.184,
+      "frac_negative": 0.187,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.19628571428571429,
+      "p05": -0.14285714285714285,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.769,
+      "frac_gt_0p5": 0.056,
+      "frac_negative": 0.145,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.5981428571428571,
+      "p05": 0.42857142857142855,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.769,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.02,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.02,
+      "frac_gt_0p5": 0.02,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.506,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.506,
+      "frac_gt_0p5": 0.506,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.6185,
+      "p05": 0.375,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.678,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.8,
+      "mean": 0.8266,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.936,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.37379398385947654,
+      "mean": 0.36805036885123543,
+      "p05": 0.016998525428154186,
+      "p95": 0.7086303503538262,
+      "frac_positive": 0.956,
+      "frac_gt_0p5": 0.266,
+      "frac_negative": 0.044,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.30952380952380953,
+      "mean": 0.31021428571428566,
+      "p05": -0.09523809523809523,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.889,
+      "frac_gt_0p5": 0.203,
+      "frac_negative": 0.088,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.23607142857142857,
+      "p05": -0.07142857142857142,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.866,
+      "frac_gt_0p5": 0.057,
+      "frac_negative": 0.065,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6180357142857142,
+      "p05": 0.4642857142857143,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.866,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.024,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.024,
+      "frac_gt_0p5": 0.024,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.575,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.575,
+      "frac_gt_0p5": 0.575,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.614,
+      "p05": 0.25,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.659,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.8,
+      "mean": 0.8268000000000001,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.917,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.2099784983247315,
+      "mean": 0.24529351075377115,
+      "p05": 0.017089760208086596,
+      "p95": 0.6129724955995814,
+      "frac_positive": 0.967,
+      "frac_gt_0p5": 0.114,
+      "frac_negative": 0.033,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.19047619047619047,
+      "mean": 0.19621428571428573,
+      "p05": -0.14285714285714285,
+      "p95": 0.5952380952380952,
+      "frac_positive": 0.79,
+      "frac_gt_0p5": 0.052,
+      "frac_negative": 0.21,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.14285714285714285,
+      "mean": 0.14471428571428568,
+      "p05": -0.07142857142857142,
+      "p95": 0.42857142857142855,
+      "frac_positive": 0.714,
+      "frac_gt_0p5": 0.032,
+      "frac_negative": 0.178,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5714285714285714,
+      "mean": 0.5723571428571428,
+      "p05": 0.4642857142857143,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.714,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.513,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.513,
+      "frac_gt_0p5": 0.513,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.60275,
+      "p05": 0.375,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.573,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.8,
+      "mean": 0.811,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.939,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.3204744405110962,
+      "mean": 0.31149609810615586,
+      "p05": -0.10729702019162946,
+      "p95": 0.7367447559068355,
+      "frac_positive": 0.884,
+      "frac_gt_0p5": 0.242,
+      "frac_negative": 0.116,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.2619047619047619,
+      "mean": 0.27754761904761904,
+      "p05": -0.16666666666666666,
+      "p95": 0.7380952380952381,
+      "frac_positive": 0.824,
+      "frac_gt_0p5": 0.206,
+      "frac_negative": 0.147,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.21278571428571427,
+      "p05": -0.14285714285714285,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.794,
+      "frac_gt_0p5": 0.073,
+      "frac_negative": 0.115,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6063928571428571,
+      "p05": 0.42857142857142855,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.794,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.022,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.022,
+      "frac_gt_0p5": 0.022,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.548,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.548,
+      "frac_gt_0p5": 0.548,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.61075,
+      "p05": 0.375,
+      "p95": 0.875,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.663,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.8,
+      "mean": 0.8256000000000001,
+      "p05": 0.4,
+      "p95": 1.0,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.934,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 5,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.08149340370758254,
+      "mean": 0.08149340370758254,
+      "p05": 0.08149340370758254,
+      "p95": 0.08149340370758254,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": -0.047619047619047616,
+      "mean": -0.047619047619047616,
+      "p05": -0.047619047619047616,
+      "p95": -0.047619047619047616,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 1.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": -0.07142857142857142,
+      "mean": -0.07142857142857142,
+      "p05": -0.07142857142857142,
+      "p95": -0.07142857142857142,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 1.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.4642857142857143,
+      "mean": 0.4642857142857143,
+      "p05": 0.4642857142857143,
+      "p95": 0.4642857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.625,
+      "p05": 0.625,
+      "p95": 0.625,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.8,
+      "mean": 0.8,
+      "p05": 0.8,
+      "p95": 0.8,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.2583145423242289,
+      "mean": -0.21948602254361252,
+      "p05": -0.5906063465466238,
+      "p95": 0.32386541132028623,
+      "frac_positive": 0.204,
+      "frac_gt_0p5": 0.014,
+      "frac_negative": 0.796,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.2857142857142857,
+      "mean": -0.25771428571428573,
+      "p05": -0.6666666666666666,
+      "p95": 0.19047619047619047,
+      "frac_positive": 0.152,
+      "frac_gt_0p5": 0.006,
+      "frac_negative": 0.824,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": -0.21428571428571427,
+      "mean": -0.2007857142857143,
+      "p05": -0.5,
+      "p95": 0.14285714285714285,
+      "frac_positive": 0.135,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.785,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.39285714285714285,
+      "mean": 0.3996071428571429,
+      "p05": 0.25,
+      "p95": 0.5714285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.135,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.002,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.002,
+      "frac_gt_0p5": 0.002,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.288,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.288,
+      "frac_gt_0p5": 0.288,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.40475,
+      "p05": 0.0,
+      "p95": 0.75,
+      "frac_positive": 0.942,
+      "frac_gt_0p5": 0.226,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.04042769418164123,
+       "mean": -0.037071360868289674,
+       "p05": -0.48763058348135707,
+       "p95": 0.44552483336692816,
+       "frac_positive": 0.46,
+       "frac_gt_0p5": 0.024,
+       "frac_negative": 0.54,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.03017314456895443,
+       "mean": -0.018910634383188567,
+       "p05": -0.6234765189143606,
+       "p95": 0.6216140103008923,
+       "frac_positive": 0.47205,
+       "frac_gt_0p5": 0.1018,
+       "frac_negative": 0.52795,
+       "n": 20000
+      },
+      "observed_median": -0.2583145423242289,
+      "p_value": 0.758
+     }
+    }
+   }
+  },
+  "dose_fixed_k1": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.015815757472444916,
+      "mean": 0.04086808375433845,
+      "p05": -0.39484145766597234,
+      "p95": 0.550425018791373,
+      "frac_positive": 0.534,
+      "frac_gt_0p5": 0.071,
+      "frac_negative": 0.466,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.09523809523809523,
+      "mean": 0.11397619047619048,
+      "p05": -0.40476190476190477,
+      "p95": 0.6904761904761905,
+      "frac_positive": 0.605,
+      "frac_gt_0p5": 0.139,
+      "frac_negative": 0.358,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.07142857142857142,
+      "mean": 0.07985714285714286,
+      "p05": -0.2857142857142857,
+      "p95": 0.5,
+      "frac_positive": 0.563,
+      "frac_gt_0p5": 0.027,
+      "frac_negative": 0.327,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5357142857142857,
+      "mean": 0.5399285714285714,
+      "p05": 0.35714285714285715,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.563,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.005,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.005,
+      "frac_gt_0p5": 0.005,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.052,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.052,
+      "frac_gt_0p5": 0.052,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.389125,
+      "p05": 0.0,
+      "p95": 0.75,
+      "frac_positive": 0.938,
+      "frac_gt_0p5": 0.212,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.009255240476481,
+       "mean": -0.014606996240618344,
+       "p05": -0.535983353672356,
+       "p95": 0.495275119969902,
+       "frac_positive": 0.496,
+       "frac_gt_0p5": 0.046,
+       "frac_negative": 0.504,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.001847366035854081,
+       "mean": 0.002229775460492863,
+       "p05": -0.6657155872361106,
+       "p95": 0.6643724865177107,
+       "frac_positive": 0.4981,
+       "frac_gt_0p5": 0.1245,
+       "frac_negative": 0.5019,
+       "n": 20000
+      },
+      "observed_median": 0.015815757472444916,
+      "p_value": 0.48
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.020642878038630658,
+      "mean": 0.01300993950303314,
+      "p05": -0.41094536412155797,
+      "p95": 0.5270014445248163,
+      "frac_positive": 0.478,
+      "frac_gt_0p5": 0.066,
+      "frac_negative": 0.522,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.047619047619047616,
+      "mean": 0.06814285714285714,
+      "p05": -0.4523809523809524,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.545,
+      "frac_gt_0p5": 0.107,
+      "frac_negative": 0.434,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.07142857142857142,
+      "mean": 0.04921428571428571,
+      "p05": -0.2857142857142857,
+      "p95": 0.42857142857142855,
+      "frac_positive": 0.513,
+      "frac_gt_0p5": 0.021,
+      "frac_negative": 0.382,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5357142857142857,
+      "mean": 0.5246071428571429,
+      "p05": 0.35714285714285715,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.513,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.002,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.002,
+      "frac_gt_0p5": 0.002,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.046,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.046,
+      "frac_gt_0p5": 0.046,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.422375,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.982,
+      "frac_gt_0p5": 0.251,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.09336995420944622,
+      "mean": -0.036810544055368564,
+      "p05": -0.4392045376438899,
+      "p95": 0.502417283952177,
+      "frac_positive": 0.388,
+      "frac_gt_0p5": 0.051,
+      "frac_negative": 0.612,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.0,
+      "mean": 0.022476190476190476,
+      "p05": -0.4297619047619047,
+      "p95": 0.5952380952380952,
+      "frac_positive": 0.493,
+      "frac_gt_0p5": 0.08,
+      "frac_negative": 0.484,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.0,
+      "mean": 0.017285714285714286,
+      "p05": -0.35714285714285715,
+      "p95": 0.42857142857142855,
+      "frac_positive": 0.459,
+      "frac_gt_0p5": 0.024,
+      "frac_negative": 0.421,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5,
+      "mean": 0.5086428571428572,
+      "p05": 0.32142857142857145,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.459,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.001,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.001,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.024,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.024,
+      "frac_gt_0p5": 0.024,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.418625,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.97,
+      "frac_gt_0p5": 0.232,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.12438095607576208,
+      "mean": -0.0563791456880775,
+      "p05": -0.36686659118331155,
+      "p95": 0.45102340655870576,
+      "frac_positive": 0.365,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.635,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.047619047619047616,
+      "mean": -0.04847619047619047,
+      "p05": -0.5476190476190477,
+      "p95": 0.40476190476190477,
+      "frac_positive": 0.383,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.595,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.0,
+      "mean": -0.03642857142857142,
+      "p05": -0.35714285714285715,
+      "p95": 0.2857142857142857,
+      "frac_positive": 0.333,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.49,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5,
+      "mean": 0.4817857142857142,
+      "p05": 0.32142857142857145,
+      "p95": 0.6428571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.333,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.029,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.029,
+      "frac_gt_0p5": 0.029,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.42525,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.175,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.01232203256853551,
+      "mean": 0.028204231567806225,
+      "p05": -0.40105387431139633,
+      "p95": 0.5407300177653385,
+      "frac_positive": 0.52,
+      "frac_gt_0p5": 0.071,
+      "frac_negative": 0.48,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.09523809523809523,
+      "mean": 0.08607142857142859,
+      "p05": -0.4059523809523809,
+      "p95": 0.6666666666666666,
+      "frac_positive": 0.572,
+      "frac_gt_0p5": 0.103,
+      "frac_negative": 0.397,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.07142857142857142,
+      "mean": 0.05899999999999999,
+      "p05": -0.2857142857142857,
+      "p95": 0.42857142857142855,
+      "frac_positive": 0.525,
+      "frac_gt_0p5": 0.028,
+      "frac_negative": 0.336,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5357142857142857,
+      "mean": 0.5295,
+      "p05": 0.35714285714285715,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.525,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.007,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.007,
+      "frac_gt_0p5": 0.007,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.032,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.032,
+      "frac_gt_0p5": 0.032,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.44825,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.972,
+      "frac_gt_0p5": 0.279,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.36686659118335435,
+      "mean": -0.36686659118335435,
+      "p05": -0.36686659118335435,
+      "p95": -0.36686659118335435,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 1.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": -0.30952380952380953,
+      "mean": -0.30952380952380953,
+      "p05": -0.30952380952380953,
+      "p95": -0.30952380952380953,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 1.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": -0.2857142857142857,
+      "mean": -0.2857142857142857,
+      "p05": -0.2857142857142857,
+      "p95": -0.2857142857142857,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 1.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.35714285714285715,
+      "mean": 0.35714285714285715,
+      "p05": 0.35714285714285715,
+      "p95": 0.35714285714285715,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.5,
+      "p05": 0.5,
+      "p95": 0.5,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 2,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.07297174105105442,
+      "mean": 0.09468694046375677,
+      "p05": -0.32376604331664344,
+      "p95": 0.6220226633385594,
+      "frac_positive": 0.596,
+      "frac_gt_0p5": 0.093,
+      "frac_negative": 0.404,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.11904761904761904,
+      "mean": 0.13973809523809524,
+      "p05": -0.38095238095238093,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.631,
+      "frac_gt_0p5": 0.151,
+      "frac_negative": 0.339,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.07142857142857142,
+      "mean": 0.10628571428571428,
+      "p05": -0.2857142857142857,
+      "p95": 0.5,
+      "frac_positive": 0.59,
+      "frac_gt_0p5": 0.049,
+      "frac_negative": 0.296,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5357142857142857,
+      "mean": 0.5531428571428572,
+      "p05": 0.35714285714285715,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.59,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.016,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.016,
+      "frac_gt_0p5": 0.016,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.081,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.081,
+      "frac_gt_0p5": 0.081,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.420125,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.968,
+      "frac_gt_0p5": 0.22,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.7765,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.915,
+      "frac_gt_0p5": 0.638,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.01907825946234525,
+       "mean": -0.024752876933875484,
+       "p05": -0.5548101676243874,
+       "p95": 0.41720031305190425,
+       "frac_positive": 0.482,
+       "frac_gt_0p5": 0.022,
+       "frac_negative": 0.518,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.006576829840289859,
+       "mean": -0.0061977715966095555,
+       "p05": -0.638527703520846,
+       "p95": 0.6296689253360226,
+       "frac_positive": 0.4939,
+       "frac_gt_0p5": 0.10775,
+       "frac_negative": 0.5061,
+       "n": 20000
+      },
+      "observed_median": 0.07297174105105442,
+      "p_value": 0.38
+     }
+    }
+   }
+  },
+  "dose_fixed_k4": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      63,
+      65
+     ],
+     "pearson": {
+      "median": 0.5624614032553394,
+      "mean": 0.5421148966278979,
+      "p05": 0.18612541496280893,
+      "p95": 0.8549327566547295,
+      "frac_positive": 0.994,
+      "frac_gt_0p5": 0.606,
+      "frac_negative": 0.006,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5714285714285714,
+      "mean": 0.5621190476190476,
+      "p05": 0.14285714285714285,
+      "p95": 0.9047619047619048,
+      "frac_positive": 0.992,
+      "frac_gt_0p5": 0.609,
+      "frac_negative": 0.007,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.46242857142857147,
+      "p05": 0.14285714285714285,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.99,
+      "frac_gt_0p5": 0.378,
+      "frac_negative": 0.003,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.7312142857142858,
+      "p05": 0.5714285714285714,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.99,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.406,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.406,
+      "frac_gt_0p5": 0.406,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.225,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.225,
+      "frac_gt_0p5": 0.225,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.588875,
+      "p05": 0.25,
+      "p95": 0.7562499999999943,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.622,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9306666666666668,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.968,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.018767735363914885,
+       "mean": -0.023367993411561025,
+       "p05": -0.543764032866393,
+       "p95": 0.47792731315640813,
+       "frac_positive": 0.486,
+       "frac_gt_0p5": 0.046,
+       "frac_negative": 0.514,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.00868452079447005,
+       "mean": -0.005506373781052993,
+       "p05": -0.6685790474480374,
+       "p95": 0.6700958866063516,
+       "frac_positive": 0.49315,
+       "frac_gt_0p5": 0.12815,
+       "frac_negative": 0.50685,
+       "n": 20000
+      },
+      "observed_median": 0.5624614032553394,
+      "p_value": 0.028
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5491260943888461,
+      "mean": 0.5426712406659436,
+      "p05": 0.2204416674546886,
+      "p95": 0.845237216171235,
+      "frac_positive": 0.999,
+      "frac_gt_0p5": 0.597,
+      "frac_negative": 0.001,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5714285714285714,
+      "mean": 0.5504285714285715,
+      "p05": 0.14285714285714285,
+      "p95": 0.8809523809523809,
+      "frac_positive": 0.985,
+      "frac_gt_0p5": 0.594,
+      "frac_negative": 0.013,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.447,
+      "p05": 0.14285714285714285,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.984,
+      "frac_gt_0p5": 0.34,
+      "frac_negative": 0.006,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.7235,
+      "p05": 0.5714285714285714,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.984,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.474,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.474,
+      "frac_gt_0p5": 0.474,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.187,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.187,
+      "frac_gt_0p5": 0.187,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.578,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.595,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.913,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.96,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5056454196828453,
+      "mean": 0.5038182918019917,
+      "p05": 0.1438758384749415,
+      "p95": 0.8273440789900472,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.51,
+      "frac_negative": 0.007,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5238095238095238,
+      "mean": 0.5051904761904762,
+      "p05": 0.047619047619047616,
+      "p95": 0.9047619047619048,
+      "frac_positive": 0.963,
+      "frac_gt_0p5": 0.514,
+      "frac_negative": 0.029,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.41421428571428565,
+      "p05": 0.07142857142857142,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.958,
+      "frac_gt_0p5": 0.297,
+      "frac_negative": 0.011,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.7071071428571429,
+      "p05": 0.5357142857142857,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.958,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.472,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.472,
+      "frac_gt_0p5": 0.472,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.155,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.155,
+      "frac_gt_0p5": 0.155,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.551875,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.537,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9083333333333332,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 0.998,
+      "frac_gt_0p5": 0.964,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.7249157422854612,
+      "mean": 0.7065498213785971,
+      "p05": 0.47249676010257524,
+      "p95": 0.8981702143796892,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.9,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.7857142857142857,
+      "mean": 0.7637857142857143,
+      "p05": 0.42857142857142855,
+      "p95": 0.9285714285714286,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.947,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.6428571428571429,
+      "mean": 0.6343571428571428,
+      "p05": 0.42857142857142855,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.78,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.8214285714285714,
+      "mean": 0.8171785714285714,
+      "p05": 0.7142857142857143,
+      "p95": 0.9285714285714286,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 0.614,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.614,
+      "frac_gt_0p5": 0.614,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.343,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.343,
+      "frac_gt_0p5": 0.343,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.64675,
+      "p05": 0.375,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.729,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.9543333333333333,
+      "p05": 0.6666666666666666,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.5098508844431207,
+      "mean": 0.499882913465838,
+      "p05": 0.1660875573934005,
+      "p95": 0.8130350558286231,
+      "frac_positive": 0.99,
+      "frac_gt_0p5": 0.517,
+      "frac_negative": 0.01,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5238095238095238,
+      "mean": 0.5076666666666666,
+      "p05": 0.07142857142857142,
+      "p95": 0.8809523809523809,
+      "frac_positive": 0.969,
+      "frac_gt_0p5": 0.526,
+      "frac_negative": 0.021,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.4136428571428571,
+      "p05": 0.07142857142857142,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.967,
+      "frac_gt_0p5": 0.294,
+      "frac_negative": 0.014,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.7068214285714287,
+      "p05": 0.5357142857142857,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.967,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.439,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.439,
+      "frac_gt_0p5": 0.439,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.17,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.17,
+      "frac_gt_0p5": 0.17,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.576625,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.585,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8873333333333333,
+      "p05": 0.3333333333333333,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.94,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 3,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.7175384114514745,
+      "mean": 0.7175384114514745,
+      "p05": 0.7175384114514745,
+      "p95": 0.7175384114514745,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.7619047619047619,
+      "mean": 0.7619047619047619,
+      "p05": 0.7619047619047619,
+      "p95": 0.7619047619047619,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.7142857142857143,
+      "mean": 0.7142857142857143,
+      "p05": 0.7142857142857143,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.8571428571428571,
+      "mean": 0.8571428571428571,
+      "p05": 0.8571428571428571,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.75,
+      "p05": 0.75,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.6372262274244509,
+      "mean": -0.5787355723083168,
+      "p05": -0.8251876523095227,
+      "p95": -0.1497831420823866,
+      "frac_positive": 0.025,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.975,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.5714285714285714,
+      "mean": -0.5245952380952381,
+      "p05": -0.8571428571428571,
+      "p95": -0.023809523809523808,
+      "frac_positive": 0.042,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.954,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": -0.42857142857142855,
+      "mean": -0.38735714285714284,
+      "p05": -0.7142857142857143,
+      "p95": 0.0,
+      "frac_positive": 0.045,
+      "frac_gt_0p5": 0.001,
+      "frac_negative": 0.93,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.2857142857142857,
+      "mean": 0.3063214285714286,
+      "p05": 0.14285714285714285,
+      "p95": 0.5,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.045,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.004,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.004,
+      "frac_gt_0p5": 0.004,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.005,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.005,
+      "frac_gt_0p5": 0.005,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.25,
+      "mean": 0.21325,
+      "p05": 0.0,
+      "p95": 0.5,
+      "frac_positive": 0.837,
+      "frac_gt_0p5": 0.012,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.015167847040665082,
+       "mean": -0.01154774513863467,
+       "p05": -0.5322795659358908,
+       "p95": 0.4455262921836283,
+       "frac_positive": 0.524,
+       "frac_gt_0p5": 0.032,
+       "frac_negative": 0.476,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.009074423232750244,
+       "mean": 0.005587210782424169,
+       "p05": -0.6362842829143176,
+       "p95": 0.6363741370640349,
+       "frac_positive": 0.5074,
+       "frac_gt_0p5": 0.11155,
+       "frac_negative": 0.4926,
+       "n": 20000
+      },
+      "observed_median": -0.6372262274244509,
+      "p_value": 0.974
+     }
+    }
+   }
+  },
+  "dose_fixed_k16": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.4178828418674402,
+      "mean": 0.41066782895479464,
+      "p05": 0.012181719082991123,
+      "p95": 0.7788348383901471,
+      "frac_positive": 0.955,
+      "frac_gt_0p5": 0.38,
+      "frac_negative": 0.045,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.2857142857142857,
+      "mean": 0.30088095238095236,
+      "p05": -0.11904761904761904,
+      "p95": 0.7619047619047619,
+      "frac_positive": 0.875,
+      "frac_gt_0p5": 0.218,
+      "frac_negative": 0.105,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.2386428571428571,
+      "p05": -0.07499999999999979,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.829,
+      "frac_gt_0p5": 0.096,
+      "frac_negative": 0.088,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6193214285714286,
+      "p05": 0.46250000000000013,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.829,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.04,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.04,
+      "frac_gt_0p5": 0.04,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.828,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.828,
+      "frac_gt_0p5": 0.828,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.503875,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.992,
+      "frac_gt_0p5": 0.387,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.77425,
+      "p05": 0.25,
+      "p95": 1.0,
+      "frac_positive": 0.988,
+      "frac_gt_0p5": 0.767,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.014007247239793791,
+       "mean": -0.03570023326602806,
+       "p05": -0.5446441248618802,
+       "p95": 0.49240112242278133,
+       "frac_positive": 0.478,
+       "frac_gt_0p5": 0.048,
+       "frac_negative": 0.522,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.021802080953291288,
+       "mean": -0.015855184501997365,
+       "p05": -0.6681036836365345,
+       "p95": 0.657846427420228,
+       "frac_positive": 0.483,
+       "frac_gt_0p5": 0.1161,
+       "frac_negative": 0.517,
+       "n": 20000
+      },
+      "observed_median": 0.4178828418674402,
+      "p_value": 0.07
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.4444530296146817,
+      "mean": 0.42953179387355883,
+      "p05": 0.03544288470014235,
+      "p95": 0.786429308288069,
+      "frac_positive": 0.961,
+      "frac_gt_0p5": 0.407,
+      "frac_negative": 0.039,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.30952380952380953,
+      "mean": 0.3158333333333333,
+      "p05": -0.09523809523809523,
+      "p95": 0.7619047619047619,
+      "frac_positive": 0.877,
+      "frac_gt_0p5": 0.221,
+      "frac_negative": 0.103,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.25049999999999994,
+      "p05": -0.07142857142857142,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.84,
+      "frac_gt_0p5": 0.1,
+      "frac_negative": 0.08,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.62525,
+      "p05": 0.4642857142857143,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.84,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.044,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.044,
+      "frac_gt_0p5": 0.044,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.849,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.849,
+      "frac_gt_0p5": 0.849,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.498125,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.99,
+      "frac_gt_0p5": 0.383,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.76475,
+      "p05": 0.25,
+      "p95": 1.0,
+      "frac_positive": 0.987,
+      "frac_gt_0p5": 0.752,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.48796399918297917,
+      "mean": 0.471458735044095,
+      "p05": 0.07728948422291602,
+      "p95": 0.8313383227816505,
+      "frac_positive": 0.978,
+      "frac_gt_0p5": 0.476,
+      "frac_negative": 0.022,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.35714285714285715,
+      "mean": 0.3699047619047619,
+      "p05": -0.0011904761904761227,
+      "p95": 0.7857142857142857,
+      "frac_positive": 0.942,
+      "frac_gt_0p5": 0.264,
+      "frac_negative": 0.05,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.2857142857142857,
+      "mean": 0.29178571428571426,
+      "p05": 0.0,
+      "p95": 0.6428571428571429,
+      "frac_positive": 0.92,
+      "frac_gt_0p5": 0.121,
+      "frac_negative": 0.043,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6428571428571429,
+      "mean": 0.6458928571428572,
+      "p05": 0.5,
+      "p95": 0.8214285714285714,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.92,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.041,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.041,
+      "frac_gt_0p5": 0.041,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.907,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.907,
+      "frac_gt_0p5": 0.907,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.47675,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.986,
+      "frac_gt_0p5": 0.357,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.73375,
+      "p05": 0.25,
+      "p95": 1.0,
+      "frac_positive": 0.983,
+      "frac_gt_0p5": 0.71,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.47775564285651445,
+      "mean": 0.4880489311917905,
+      "p05": 0.17090750834949064,
+      "p95": 0.7201820782628724,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.462,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.4523809523809524,
+      "mean": 0.38933333333333336,
+      "p05": 0.047619047619047616,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.339,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.3033571428571428,
+      "p05": 0.07142857142857142,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.974,
+      "frac_gt_0p5": 0.111,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.6516785714285714,
+      "p05": 0.5357142857142857,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.974,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.032,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.032,
+      "frac_gt_0p5": 0.032,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.945,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.945,
+      "frac_gt_0p5": 0.945,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.534375,
+      "p05": 0.25,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.493,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.7915,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.854,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.44242571308389256,
+      "mean": 0.4320945807315586,
+      "p05": 0.0554155021544558,
+      "p95": 0.7840905329250142,
+      "frac_positive": 0.968,
+      "frac_gt_0p5": 0.407,
+      "frac_negative": 0.032,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.30952380952380953,
+      "mean": 0.3142142857142857,
+      "p05": -0.07142857142857142,
+      "p95": 0.7619047619047619,
+      "frac_positive": 0.886,
+      "frac_gt_0p5": 0.232,
+      "frac_negative": 0.091,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.21428571428571427,
+      "mean": 0.24842857142857142,
+      "p05": -0.07142857142857142,
+      "p95": 0.5714285714285714,
+      "frac_positive": 0.862,
+      "frac_gt_0p5": 0.078,
+      "frac_negative": 0.068,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6071428571428571,
+      "mean": 0.6242142857142858,
+      "p05": 0.4642857142857143,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.862,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.04,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.04,
+      "frac_gt_0p5": 0.04,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.817,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.817,
+      "frac_gt_0p5": 0.817,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.52925,
+      "p05": 0.25,
+      "p95": 0.75,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.442,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.79575,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.805,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.7446977003209986,
+      "mean": 0.7446977003209986,
+      "p05": 0.7446977003209986,
+      "p95": 0.7446977003209986,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.6666666666666666,
+      "mean": 0.6666666666666666,
+      "p05": 0.6666666666666666,
+      "p95": 0.6666666666666666,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.5,
+      "mean": 0.5,
+      "p05": 0.5,
+      "p95": 0.5,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.75,
+      "mean": 0.75,
+      "p05": 0.75,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.0,
+      "frac_gt_0p5": 0.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.875,
+      "mean": 0.875,
+      "p05": 0.875,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 0,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.011834458582481193,
+      "mean": 0.039210494637525316,
+      "p05": -0.41858127972983344,
+      "p95": 0.5674133789671989,
+      "frac_positive": 0.514,
+      "frac_gt_0p5": 0.073,
+      "frac_negative": 0.486,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.047619047619047616,
+      "mean": 0.054904761904761915,
+      "p05": -0.47619047619047616,
+      "p95": 0.5476190476190477,
+      "frac_positive": 0.557,
+      "frac_gt_0p5": 0.088,
+      "frac_negative": 0.407,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.0,
+      "mean": -0.002357142857142857,
+      "p05": -0.35714285714285715,
+      "p95": 0.35714285714285715,
+      "frac_positive": 0.424,
+      "frac_gt_0p5": 0.003,
+      "frac_negative": 0.444,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5,
+      "mean": 0.4988214285714286,
+      "p05": 0.32142857142857145,
+      "p95": 0.6785714285714286,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.424,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.015,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.015,
+      "frac_gt_0p5": 0.015,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.003,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.003,
+      "frac_gt_0p5": 0.003,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.375,
+      "mean": 0.427375,
+      "p05": 0.0,
+      "p95": 0.75,
+      "frac_positive": 0.944,
+      "frac_gt_0p5": 0.274,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.029468750192660733,
+       "mean": -0.04572911945758513,
+       "p05": -0.5466733130352739,
+       "p95": 0.4143878380552948,
+       "frac_positive": 0.456,
+       "frac_gt_0p5": 0.026,
+       "frac_negative": 0.544,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.03531373571903626,
+       "mean": -0.025636346319118,
+       "p05": -0.6421043836861747,
+       "p95": 0.6172723708565293,
+       "frac_positive": 0.467,
+       "frac_gt_0p5": 0.09955,
+       "frac_negative": 0.533,
+       "n": 20000
+      },
+      "observed_median": 0.011834458582481193,
+      "p_value": 0.442
+     }
+    }
+   }
+  },
+  "dose_fixed_k64": {
+   "WT2": {
+    "article": {
+     "scheme": "article",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      65,
+      63
+     ],
+     "pearson": {
+      "median": 0.5084676852370766,
+      "mean": 0.5015207921648955,
+      "p05": 0.17192559079278974,
+      "p95": 0.8094687156888785,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.517,
+      "frac_negative": 0.007,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5238095238095238,
+      "mean": 0.5226666666666667,
+      "p05": 0.14166666666666672,
+      "p95": 0.8345238095238084,
+      "frac_positive": 0.989,
+      "frac_gt_0p5": 0.533,
+      "frac_negative": 0.01,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.394,
+      "p05": 0.07142857142857142,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.978,
+      "frac_gt_0p5": 0.245,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.697,
+      "p05": 0.5357142857142857,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.978,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.043,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.043,
+      "frac_gt_0p5": 0.043,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 0.502,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.502,
+      "frac_gt_0p5": 0.502,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.645875,
+      "p05": 0.375,
+      "p95": 0.875,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.713,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.83425,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.853,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": -0.014485722194355576,
+       "mean": -0.026336627845512058,
+       "p05": -0.5955987461212106,
+       "p95": 0.4547437583347025,
+       "frac_positive": 0.486,
+       "frac_gt_0p5": 0.034,
+       "frac_negative": 0.514,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": -0.008411415864990893,
+       "mean": -0.007388027532727467,
+       "p05": -0.6643264294518896,
+       "p95": 0.6512366746454807,
+       "frac_positive": 0.4932,
+       "frac_gt_0p5": 0.11755,
+       "frac_negative": 0.5068,
+       "n": 20000
+      },
+      "observed_median": 0.5084676852370766,
+      "p_value": 0.032
+     }
+    },
+    "block4": {
+     "scheme": "block4",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.519237204910302,
+      "mean": 0.5070824920518987,
+      "p05": 0.1668459635814898,
+      "p95": 0.8185403762152834,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.53,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5714285714285714,
+      "mean": 0.5339285714285713,
+      "p05": 0.14285714285714285,
+      "p95": 0.8571428571428571,
+      "frac_positive": 0.987,
+      "frac_gt_0p5": 0.574,
+      "frac_negative": 0.009,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.42857142857142855,
+      "mean": 0.4040714285714286,
+      "p05": 0.07142857142857142,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.981,
+      "frac_gt_0p5": 0.247,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.7142857142857143,
+      "mean": 0.7020357142857142,
+      "p05": 0.5357142857142857,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.981,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.041,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.041,
+      "frac_gt_0p5": 0.041,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.428,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.428,
+      "frac_gt_0p5": 0.428,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.624125,
+      "p05": 0.25,
+      "p95": 0.875,
+      "frac_positive": 0.993,
+      "frac_gt_0p5": 0.671,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.81325,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.992,
+      "frac_gt_0p5": 0.824,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block8": {
+     "scheme": "block8",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.4555647868449455,
+      "mean": 0.461634384244766,
+      "p05": 0.1603803745110004,
+      "p95": 0.7821885919104333,
+      "frac_positive": 0.995,
+      "frac_gt_0p5": 0.426,
+      "frac_negative": 0.005,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5238095238095238,
+      "mean": 0.5045714285714286,
+      "p05": 0.11904761904761904,
+      "p95": 0.8333333333333334,
+      "frac_positive": 0.985,
+      "frac_gt_0p5": 0.505,
+      "frac_negative": 0.012,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.3764285714285714,
+      "p05": 0.07142857142857142,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.978,
+      "frac_gt_0p5": 0.205,
+      "frac_negative": 0.009,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.6882142857142858,
+      "p05": 0.5357142857142857,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.978,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.035,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.035,
+      "frac_gt_0p5": 0.035,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.429,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.429,
+      "frac_gt_0p5": 0.429,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.59375,
+      "p05": 0.25,
+      "p95": 0.875,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.598,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 0.75,
+      "mean": 0.817,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 0.997,
+      "frac_gt_0p5": 0.838,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "block16": {
+     "scheme": "block16",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.45321620016894537,
+      "mean": 0.4646018507906099,
+      "p05": 0.07651720844926753,
+      "p95": 0.8186175609599959,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.456,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5,
+      "mean": 0.5409047619047619,
+      "p05": 0.14285714285714285,
+      "p95": 0.8571428571428571,
+      "frac_positive": 0.968,
+      "frac_gt_0p5": 0.492,
+      "frac_negative": 0.032,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.3975714285714286,
+      "p05": 0.07142857142857142,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.968,
+      "frac_gt_0p5": 0.279,
+      "frac_negative": 0.032,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.6987857142857143,
+      "p05": 0.5357142857142857,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.968,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.057,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.057,
+      "frac_gt_0p5": 0.057,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.334,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.334,
+      "frac_gt_0p5": 0.334,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.625,
+      "p05": 0.375,
+      "p95": 0.875,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.657,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.844,
+      "p05": 0.5,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.868,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.4991871269685846,
+      "mean": 0.4974077918069178,
+      "p05": 0.14481453344460105,
+      "p95": 0.8200764696799943,
+      "frac_positive": 0.991,
+      "frac_gt_0p5": 0.499,
+      "frac_negative": 0.009,
+      "n": 1000
+     },
+     "spearman": {
+      "median": 0.5238095238095238,
+      "mean": 0.5197142857142858,
+      "p05": 0.14166666666666672,
+      "p95": 0.8571428571428571,
+      "frac_positive": 0.978,
+      "frac_gt_0p5": 0.538,
+      "frac_negative": 0.013,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.35714285714285715,
+      "mean": 0.39157142857142857,
+      "p05": 0.07142857142857142,
+      "p95": 0.7142857142857143,
+      "frac_positive": 0.972,
+      "frac_gt_0p5": 0.238,
+      "frac_negative": 0.009,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.6785714285714286,
+      "mean": 0.6957857142857143,
+      "p05": 0.5357142857142857,
+      "p95": 0.8571428571428571,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.972,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.038,
+      "p05": 0.0,
+      "p95": 0.0,
+      "frac_positive": 0.038,
+      "frac_gt_0p5": 0.038,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.47,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.47,
+      "frac_gt_0p5": 0.47,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.625,
+      "mean": 0.62625,
+      "p05": 0.25,
+      "p95": 0.875,
+      "frac_positive": 0.992,
+      "frac_gt_0p5": 0.69,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.8115,
+      "p05": 0.25,
+      "p95": 1.0,
+      "frac_positive": 0.989,
+      "frac_gt_0p5": 0.816,
+      "frac_negative": 0.0,
+      "n": 1000
+     }
+    },
+    "chronological": {
+     "scheme": "chronological",
+     "n_partitions": 1,
+     "n_threshold_contrasts": 4,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": 0.8818292997013712,
+      "mean": 0.8818292997013712,
+      "p05": 0.8818292997013712,
+      "p95": 0.8818292997013712,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "spearman": {
+      "median": 0.9047619047619048,
+      "mean": 0.9047619047619048,
+      "p05": 0.9047619047619048,
+      "p95": 0.9047619047619048,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "kendall_tau_a": {
+      "median": 0.7857142857142857,
+      "mean": 0.7857142857142857,
+      "p05": 0.7857142857142857,
+      "p95": 0.7857142857142857,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "pair_order_agreement": {
+      "median": 0.8928571428571429,
+      "mean": 0.8928571428571429,
+      "p05": 0.8928571428571429,
+      "p95": 0.8928571428571429,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "top_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "bottom_agreement": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_all": {
+      "median": 0.75,
+      "mean": 0.75,
+      "p05": 0.75,
+      "p95": 0.75,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 1.0,
+      "frac_negative": 0.0,
+      "n": 1
+     }
+    }
+   },
+   "C4HO": {
+    "window": {
+     "scheme": "window",
+     "n_partitions": 1000,
+     "n_threshold_contrasts": 2,
+     "threshold_rule": "|full-data contrast| > its primary-scheme bootstrap SE",
+     "half_sizes": [
+      64,
+      64
+     ],
+     "pearson": {
+      "median": -0.07339703636380383,
+      "mean": -0.0356668682218733,
+      "p05": -0.4351533048975615,
+      "p95": 0.4619320974643678,
+      "frac_positive": 0.411,
+      "frac_gt_0p5": 0.036,
+      "frac_negative": 0.589,
+      "n": 1000
+     },
+     "spearman": {
+      "median": -0.023809523809523808,
+      "mean": -0.015166666666666665,
+      "p05": -0.47619047619047616,
+      "p95": 0.5011904761904751,
+      "frac_positive": 0.464,
+      "frac_gt_0p5": 0.05,
+      "frac_negative": 0.515,
+      "n": 1000
+     },
+     "kendall_tau_a": {
+      "median": 0.0,
+      "mean": 0.009999999999999998,
+      "p05": -0.35714285714285715,
+      "p95": 0.42857142857142855,
+      "frac_positive": 0.446,
+      "frac_gt_0p5": 0.015,
+      "frac_negative": 0.431,
+      "n": 1000
+     },
+     "pair_order_agreement": {
+      "median": 0.5,
+      "mean": 0.505,
+      "p05": 0.32142857142857145,
+      "p95": 0.7142857142857143,
+      "frac_positive": 1.0,
+      "frac_gt_0p5": 0.446,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "top_agreement": {
+      "median": 0.0,
+      "mean": 0.056,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.056,
+      "frac_gt_0p5": 0.056,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "bottom_agreement": {
+      "median": 0.0,
+      "mean": 0.169,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.169,
+      "frac_gt_0p5": 0.169,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_all": {
+      "median": 0.5,
+      "mean": 0.475375,
+      "p05": 0.125,
+      "p95": 0.75,
+      "frac_positive": 0.974,
+      "frac_gt_0p5": 0.345,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "sign_agreement_thresholded": {
+      "median": 1.0,
+      "mean": 0.778,
+      "p05": 0.0,
+      "p95": 1.0,
+      "frac_positive": 0.944,
+      "frac_gt_0p5": 0.612,
+      "frac_negative": 0.0,
+      "n": 1000
+     },
+     "null": {
+      "R": 500,
+      "K": 40,
+      "null_median_pearson": {
+       "median": 0.010599490184532281,
+       "mean": -0.007607010672133597,
+       "p05": -0.48597737502282323,
+       "p95": 0.4056933852002215,
+       "frac_positive": 0.514,
+       "frac_gt_0p5": 0.012,
+       "frac_negative": 0.486,
+       "n": 500
+      },
+      "null_pooled_pearson": {
+       "median": 0.011147732106339167,
+       "mean": 0.010243544113049705,
+       "p05": -0.6020292473500354,
+       "p95": 0.6234249881883066,
+       "frac_positive": 0.51005,
+       "frac_gt_0p5": 0.10615,
+       "frac_negative": 0.48995,
+       "n": 20000
+      },
+      "observed_median": -0.07339703636380383,
+      "p_value": 0.616
+     }
+    }
+   }
+  }
+ },
+ "note": "median, mean, 5th/95th percentiles, frac > 0, frac > 0.5, frac < 0 over partitions; partitions reuse the same windows and are NOT independent replicates"
+}

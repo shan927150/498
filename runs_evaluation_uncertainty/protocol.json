@@ -1,0 +1,115 @@
+{
+ "title": "Decomposing GPTQ execution variability and evaluation-sampling uncertainty",
+ "created": "2026-11-18 05:03:37",
+ "cpu_only": true,
+ "data": {
+  "source": "runs_heldout_bitwidth_validation/results (per-window NLL sums / 511 targets)",
+  "datasets": {
+   "WT2": "runs_partial_ppl/windows.pt, 128 x 512 WikiText-2 test windows",
+   "C4HO": "runs_heldout_bitwidth_validation/heldout_windows.pt, 128 x 512, one per C4-val document"
+  },
+  "inventory_sha256": "d004161fb069d4bffc173577dcdf0585ee76860e1b4ce3fd65c012fe7e3acd6c",
+  "window_structure_sha256": "5503dcb7f8b14279ce712f80a4e44d644705fb0c14fb288708442ac98e8f0991"
+ },
+ "analysis_sets": {
+  "primary": {
+   "moe": "15 paired columns D = L_FC - L_FR (per-window mean NLL), 3 seeds x 5 groupings; within-seed block centering P_within = diag(P5,P5,P5), df = 12",
+   "dense4": "5 grouping columns L_g (G20261111..15); P5, df = 4; ORIGINAL = reference for contrasts only"
+  },
+  "secondary": {
+   "dense3": "as dense4 at 3 bits",
+   "dose_natural": "k = 1/4/16/64 analysed separately; 8 replicate columns; P8, df = 7; contrasts vs k = 0"
+  },
+  "exploratory": {
+   "dose_fixed": "fixed act-order dose arrays, same treatment",
+   "disattenuated_cross_correlation": "only if both datasets' corrected-variance CI lower bound > 0"
+  }
+ },
+ "estimand": "between-variant variance of dataset-average mean NLL (finite set of executed variants), corrected for evaluation-text sampling: V_corr = V_obs - tr(P Sigma)/df, Sigma = joint bootstrap covariance of the variant mean-NLL vector with identical resampled indices for all variants",
+ "resampling": {
+  "C4HO": "window = document (verified one window per distinct document); iid bootstrap of 128 units",
+  "WT2_primary": "article cluster bootstrap (window -> majority WikiText-2 test article)",
+  "WT2_sensitivity": [
+   "block4 (32 units)",
+   "block8 (16)",
+   "block16 (8, unstable)",
+   "window (naive iid, for comparison only)"
+  ],
+  "cluster_estimator": "ratio estimator: sum of resampled unit sums / resampled window count"
+ },
+ "bootstrap": {
+  "B_cov": 2000,
+  "nested_outer": 2000,
+  "nested_inner": 400,
+  "cross_dataset": 2000,
+  "variance_ci": "nested bootstrap: Sigma re-estimated in every outer draw; pivot interval for V_corr: [V_corr - q975(V_corr* - V_obs), V_corr - q025(V_corr* - V_obs)] (V_obs = bootstrap-world true finite-set variance); V_obs and V_samp reported with percentile intervals",
+  "null_test": "common-effect null: remove the centred variant effects from every unit sum (keeps the window-level joint covariance), rerun the nested bootstrap; p = P(V_corr*_null >= V_corr)",
+  "sampling_fraction": "V_samp / V_obs; interval = 1 - (V_corr pivot interval) / V_obs"
+ },
+ "split_half": {
+  "K": 1000,
+  "C4HO": "random 64/64 documents",
+  "WT2_primary": "balanced random article split (shuffle articles, assign to the half with fewer windows)",
+  "WT2_sensitivity": [
+   "block4",
+   "block8",
+   "block16",
+   "chronological first 64 vs last 64 (single deterministic split, confounded by topic/position)"
+  ],
+  "statistics": [
+   "Pearson of centred effects (MoE: within-seed centred, 15-dim) [primary]",
+   "Spearman (MoE: within-seed ranks)",
+   "Kendall tau-a (MoE: within-seed pairs only)",
+   "pairwise order agreement",
+   "top / bottom agreement (MoE: per seed, averaged)",
+   "sign agreement of prespecified non-null contrasts",
+   "sign agreement restricted to contrasts with |full-data estimate| > 1 x its own primary-scheme bootstrap SE (rule fixed before results; unthresholded = primary)"
+  ],
+  "contrasts": {
+   "moe": "raw FC - FR paired effect (15)",
+   "dense": "g - ORIGINAL, 4 non-null groupings (G20261115 = ORIGINAL excluded)",
+   "dose": "replicate - k0 (8)"
+  },
+  "summary": "median, mean, 5th/95th percentiles, frac > 0, frac > 0.5, frac < 0 over partitions; partitions reuse the same windows and are NOT independent replicates"
+ },
+ "split_half_null": {
+  "R": 500,
+  "K_per_dataset": 40,
+  "construction": "common-effect world (variant effects removed from unit sums); draw a bootstrap dataset of units (same scheme), split its DRAWS with the same balanced rule (each draw is a unit, so the halves are independent iid samples from the effect-free population, as complementary halves of an iid sample are), compute reliability; statistic compared = median Pearson over partitions; p = P(null median >= observed median)"
+ },
+ "cross_dataset": {
+  "statistics": [
+   "Pearson / Spearman of full-data centred effects",
+   "sign agreement of contrasts",
+   "pairwise order agreement"
+  ],
+  "ci": "independent primary-scheme bootstraps of the two datasets, percentile",
+  "comparability": "split-half medians are stepped up to full length with Spearman-Brown 2r/(1+r) before comparison with the full-vs-full cross correlation; expected cross correlation under identical true effects = sqrt(lam_WT2 lam_C4), lam = V_corr / V_obs (only if both > 0)"
+ },
+ "moe_ci": {
+  "statistic": "per pair mean of D (nats/token) with percentile CI under every scheme; PPL difference exp(l_FC) - exp(l_FR) reported separately with its own percentile CI",
+  "level": 0.95
+ },
+ "decision_rules": {
+  "resolved_variance": "V_corr pivot 95% CI lower bound > 0 AND common-effect null p < 0.05 (primary scheme)",
+  "reliable_within": "median split-half Pearson (primary scheme) >= 0.5 AND exceeds the null median distribution at p < 0.05",
+  "setting_verdict": {
+   "A": "both datasets resolved AND reliable, AND cross-dataset Pearson upper 95% bound < sqrt(lam_WT2 lam_C4)",
+   "B": "neither dataset resolved AND neither reliable",
+   "C": "exactly one dataset resolved-and-reliable, the other neither (or settings within a family differ)",
+   "D": "any other pattern (e.g. resolved but unreliable, both reliable but cross-dataset agreement not distinguishable from the attenuated expectation)"
+  },
+  "note": "dose levels are reported per k with the same rules; a family-level dose summary is descriptive"
+ },
+ "seeds": {
+  "master": 20261118,
+  "derivation": "np.random.default_rng([SEED, stage_code, set_index, dataset_index, scheme_index])"
+ },
+ "code_sha256": "c8ee83a83c6eef3be3a8a24227c3b48038d68adfc4e66b2d36f6e31d74800761",
+ "constraints": [
+  "no model forward / GPU / GPTQ",
+  "no new data",
+  "historical artifacts read-only",
+  "negative V_corr reported raw; zero only as a separately labelled constrained estimate"
+ ]
+}

@@ -1,0 +1,1621 @@
+{
+ "C4HO": {
+  "n_windows": 128,
+  "distinct_rows": 128,
+  "distinct_urls": 128,
+  "distinct_text_sha": 128,
+  "one_window_per_document": true,
+  "window_order": "ascending C4 validation shard row",
+  "resampling_unit": "document (= window)",
+  "lag1_autocorr_bf16_moe_window_nll": 0.0827733680720968
+ },
+ "WT2": {
+  "construction": "non-overlapping 512-token windows i*512..(i+1)*512; 584 complete windows; 128 sampled by random.Random(20261108).sample, sorted; tail discarded",
+  "n_windows": 128,
+  "n_articles_covered": 49,
+  "n_articles_in_test": 62,
+  "windows_per_article": {
+   "min": 1,
+   "median": 2.0,
+   "max": 10,
+   "hist": {
+    "1": 18,
+    "2": 13,
+    "3": 5,
+    "4": 6,
+    "5": 3,
+    "6": 2,
+    "8": 1,
+    "10": 1
+   }
+  },
+  "windows_spanning_two_articles": 14,
+  "windows_contiguous_with_previous": 31,
+  "contiguous_run_lengths": {
+   "max": 5,
+   "n_runs": 97,
+   "hist": {
+    "1": 76,
+    "2": 14,
+    "3": 5,
+    "4": 1,
+    "5": 1
+   }
+  },
+  "articles_monotone_in_window_order": true,
+  "rule": "article = WikiText-2 test article (top-level ' = Title = ' header) holding the majority of the window's 511 scored targets; tokens before the first header are assigned to article 0",
+  "rows": [
+   {
+    "window": 0,
+    "stream_window_index": 0,
+    "token_offset": 0,
+    "article": 0,
+    "article_title": "Robert Boulter",
+    "articles_spanned": [
+     0
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 1,
+    "stream_window_index": 3,
+    "token_offset": 1536,
+    "article": 1,
+    "article_title": "Du Fu",
+    "articles_spanned": [
+     1
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 2,
+    "stream_window_index": 4,
+    "token_offset": 2048,
+    "article": 1,
+    "article_title": "Du Fu",
+    "articles_spanned": [
+     1
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 3,
+    "stream_window_index": 9,
+    "token_offset": 4608,
+    "article": 1,
+    "article_title": "Du Fu",
+    "articles_spanned": [
+     1
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 4,
+    "stream_window_index": 11,
+    "token_offset": 5632,
+    "article": 1,
+    "article_title": "Du Fu",
+    "articles_spanned": [
+     1
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 5,
+    "stream_window_index": 12,
+    "token_offset": 6144,
+    "article": 1,
+    "article_title": "Du Fu",
+    "articles_spanned": [
+     1
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 6,
+    "stream_window_index": 13,
+    "token_offset": 6656,
+    "article": 2,
+    "article_title": "Kiss You ( One Direction song )",
+    "articles_spanned": [
+     1,
+     2
+    ],
+    "frac_targets_in_major": 0.6164383561643836,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 7,
+    "stream_window_index": 14,
+    "token_offset": 7168,
+    "article": 2,
+    "article_title": "Kiss You ( One Direction song )",
+    "articles_spanned": [
+     2
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 8,
+    "stream_window_index": 15,
+    "token_offset": 7680,
+    "article": 2,
+    "article_title": "Kiss You ( One Direction song )",
+    "articles_spanned": [
+     2
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 9,
+    "stream_window_index": 35,
+    "token_offset": 17920,
+    "article": 3,
+    "article_title": "Ise @-@ class battleship",
+    "articles_spanned": [
+     3
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 10,
+    "stream_window_index": 37,
+    "token_offset": 18944,
+    "article": 3,
+    "article_title": "Ise @-@ class battleship",
+    "articles_spanned": [
+     3,
+     4
+    ],
+    "frac_targets_in_major": 0.7984344422700587,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 11,
+    "stream_window_index": 40,
+    "token_offset": 20480,
+    "article": 4,
+    "article_title": "Dick Rifenburg",
+    "articles_spanned": [
+     4
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 12,
+    "stream_window_index": 43,
+    "token_offset": 22016,
+    "article": 5,
+    "article_title": "1933 Treasure Coast hurricane",
+    "articles_spanned": [
+     5
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 13,
+    "stream_window_index": 46,
+    "token_offset": 23552,
+    "article": 5,
+    "article_title": "1933 Treasure Coast hurricane",
+    "articles_spanned": [
+     5
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 14,
+    "stream_window_index": 52,
+    "token_offset": 26624,
+    "article": 6,
+    "article_title": "Second Battle of Naktong Bulge",
+    "articles_spanned": [
+     6
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 15,
+    "stream_window_index": 79,
+    "token_offset": 40448,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 16,
+    "stream_window_index": 83,
+    "token_offset": 42496,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 17,
+    "stream_window_index": 84,
+    "token_offset": 43008,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 18,
+    "stream_window_index": 87,
+    "token_offset": 44544,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 19,
+    "stream_window_index": 88,
+    "token_offset": 45056,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 20,
+    "stream_window_index": 97,
+    "token_offset": 49664,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 21,
+    "stream_window_index": 98,
+    "token_offset": 50176,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 22,
+    "stream_window_index": 104,
+    "token_offset": 53248,
+    "article": 8,
+    "article_title": "Ironclad warship",
+    "articles_spanned": [
+     8,
+     9
+    ],
+    "frac_targets_in_major": 0.8962818003913894,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 23,
+    "stream_window_index": 105,
+    "token_offset": 53760,
+    "article": 9,
+    "article_title": "Little Gidding ( poem )",
+    "articles_spanned": [
+     9
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 24,
+    "stream_window_index": 111,
+    "token_offset": 56832,
+    "article": 10,
+    "article_title": "The Portage to San Cristobal of A.H.",
+    "articles_spanned": [
+     10
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 25,
+    "stream_window_index": 114,
+    "token_offset": 58368,
+    "article": 10,
+    "article_title": "The Portage to San Cristobal of A.H.",
+    "articles_spanned": [
+     10
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 26,
+    "stream_window_index": 117,
+    "token_offset": 59904,
+    "article": 11,
+    "article_title": "Temnospondyli",
+    "articles_spanned": [
+     11
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 27,
+    "stream_window_index": 118,
+    "token_offset": 60416,
+    "article": 11,
+    "article_title": "Temnospondyli",
+    "articles_spanned": [
+     11
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 28,
+    "stream_window_index": 120,
+    "token_offset": 61440,
+    "article": 11,
+    "article_title": "Temnospondyli",
+    "articles_spanned": [
+     11
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 29,
+    "stream_window_index": 122,
+    "token_offset": 62464,
+    "article": 11,
+    "article_title": "Temnospondyli",
+    "articles_spanned": [
+     11
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 30,
+    "stream_window_index": 130,
+    "token_offset": 66560,
+    "article": 11,
+    "article_title": "Temnospondyli",
+    "articles_spanned": [
+     11
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 31,
+    "stream_window_index": 137,
+    "token_offset": 70144,
+    "article": 12,
+    "article_title": "Osbert de Bayeux",
+    "articles_spanned": [
+     11,
+     12
+    ],
+    "frac_targets_in_major": 0.9902152641878669,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 32,
+    "stream_window_index": 149,
+    "token_offset": 76288,
+    "article": 15,
+    "article_title": "Ben Amos",
+    "articles_spanned": [
+     15
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 33,
+    "stream_window_index": 154,
+    "token_offset": 78848,
+    "article": 16,
+    "article_title": "Clayton Kershaw",
+    "articles_spanned": [
+     16
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 34,
+    "stream_window_index": 157,
+    "token_offset": 80384,
+    "article": 16,
+    "article_title": "Clayton Kershaw",
+    "articles_spanned": [
+     16
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 35,
+    "stream_window_index": 163,
+    "token_offset": 83456,
+    "article": 16,
+    "article_title": "Clayton Kershaw",
+    "articles_spanned": [
+     16
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 36,
+    "stream_window_index": 166,
+    "token_offset": 84992,
+    "article": 16,
+    "article_title": "Clayton Kershaw",
+    "articles_spanned": [
+     16
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 37,
+    "stream_window_index": 167,
+    "token_offset": 85504,
+    "article": 17,
+    "article_title": "Josepha Petrick Kemarre",
+    "articles_spanned": [
+     16,
+     17
+    ],
+    "frac_targets_in_major": 0.6908023483365949,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 38,
+    "stream_window_index": 180,
+    "token_offset": 92160,
+    "article": 19,
+    "article_title": "Imagism",
+    "articles_spanned": [
+     19
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 39,
+    "stream_window_index": 184,
+    "token_offset": 94208,
+    "article": 19,
+    "article_title": "Imagism",
+    "articles_spanned": [
+     19
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 40,
+    "stream_window_index": 188,
+    "token_offset": 96256,
+    "article": 20,
+    "article_title": "Operation Eastern Exit",
+    "articles_spanned": [
+     20
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 41,
+    "stream_window_index": 199,
+    "token_offset": 101888,
+    "article": 21,
+    "article_title": "2010 Claxton Shield",
+    "articles_spanned": [
+     21
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 42,
+    "stream_window_index": 206,
+    "token_offset": 105472,
+    "article": 22,
+    "article_title": "Independiente ( Ricardo Arjona album )",
+    "articles_spanned": [
+     22
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 43,
+    "stream_window_index": 208,
+    "token_offset": 106496,
+    "article": 22,
+    "article_title": "Independiente ( Ricardo Arjona album )",
+    "articles_spanned": [
+     22
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 44,
+    "stream_window_index": 212,
+    "token_offset": 108544,
+    "article": 23,
+    "article_title": "2003 Pacific typhoon season",
+    "articles_spanned": [
+     23
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 45,
+    "stream_window_index": 217,
+    "token_offset": 111104,
+    "article": 23,
+    "article_title": "2003 Pacific typhoon season",
+    "articles_spanned": [
+     23
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 46,
+    "stream_window_index": 218,
+    "token_offset": 111616,
+    "article": 23,
+    "article_title": "2003 Pacific typhoon season",
+    "articles_spanned": [
+     23
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 47,
+    "stream_window_index": 219,
+    "token_offset": 112128,
+    "article": 23,
+    "article_title": "2003 Pacific typhoon season",
+    "articles_spanned": [
+     23
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 48,
+    "stream_window_index": 228,
+    "token_offset": 116736,
+    "article": 23,
+    "article_title": "2003 Pacific typhoon season",
+    "articles_spanned": [
+     23
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 49,
+    "stream_window_index": 232,
+    "token_offset": 118784,
+    "article": 23,
+    "article_title": "2003 Pacific typhoon season",
+    "articles_spanned": [
+     23
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 50,
+    "stream_window_index": 236,
+    "token_offset": 120832,
+    "article": 24,
+    "article_title": "Oxaziridine",
+    "articles_spanned": [
+     23,
+     24
+    ],
+    "frac_targets_in_major": 0.6360078277886497,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 51,
+    "stream_window_index": 237,
+    "token_offset": 121344,
+    "article": 24,
+    "article_title": "Oxaziridine",
+    "articles_spanned": [
+     24
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 52,
+    "stream_window_index": 238,
+    "token_offset": 121856,
+    "article": 24,
+    "article_title": "Oxaziridine",
+    "articles_spanned": [
+     24
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 53,
+    "stream_window_index": 244,
+    "token_offset": 124928,
+    "article": 25,
+    "article_title": "Battle of D\u00fcrenstein",
+    "articles_spanned": [
+     25
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 54,
+    "stream_window_index": 250,
+    "token_offset": 128000,
+    "article": 25,
+    "article_title": "Battle of D\u00fcrenstein",
+    "articles_spanned": [
+     25
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 55,
+    "stream_window_index": 252,
+    "token_offset": 129024,
+    "article": 25,
+    "article_title": "Battle of D\u00fcrenstein",
+    "articles_spanned": [
+     25
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 56,
+    "stream_window_index": 256,
+    "token_offset": 131072,
+    "article": 25,
+    "article_title": "Battle of D\u00fcrenstein",
+    "articles_spanned": [
+     25
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 57,
+    "stream_window_index": 260,
+    "token_offset": 133120,
+    "article": 26,
+    "article_title": "Brock Lesnar",
+    "articles_spanned": [
+     26
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 58,
+    "stream_window_index": 269,
+    "token_offset": 137728,
+    "article": 26,
+    "article_title": "Brock Lesnar",
+    "articles_spanned": [
+     26
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 59,
+    "stream_window_index": 277,
+    "token_offset": 141824,
+    "article": 26,
+    "article_title": "Brock Lesnar",
+    "articles_spanned": [
+     26
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 60,
+    "stream_window_index": 281,
+    "token_offset": 143872,
+    "article": 26,
+    "article_title": "Brock Lesnar",
+    "articles_spanned": [
+     26
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 61,
+    "stream_window_index": 296,
+    "token_offset": 151552,
+    "article": 30,
+    "article_title": "The Snowmen",
+    "articles_spanned": [
+     30
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 62,
+    "stream_window_index": 297,
+    "token_offset": 152064,
+    "article": 30,
+    "article_title": "The Snowmen",
+    "articles_spanned": [
+     30,
+     31
+    ],
+    "frac_targets_in_major": 0.9001956947162426,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 63,
+    "stream_window_index": 304,
+    "token_offset": 155648,
+    "article": 32,
+    "article_title": "Light Tank Mk VII Tetrarch",
+    "articles_spanned": [
+     32
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 64,
+    "stream_window_index": 305,
+    "token_offset": 156160,
+    "article": 32,
+    "article_title": "Light Tank Mk VII Tetrarch",
+    "articles_spanned": [
+     32
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 65,
+    "stream_window_index": 313,
+    "token_offset": 160256,
+    "article": 32,
+    "article_title": "Light Tank Mk VII Tetrarch",
+    "articles_spanned": [
+     32
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 66,
+    "stream_window_index": 316,
+    "token_offset": 161792,
+    "article": 33,
+    "article_title": "QuackShot",
+    "articles_spanned": [
+     33
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 67,
+    "stream_window_index": 332,
+    "token_offset": 169984,
+    "article": 34,
+    "article_title": "Olmec colossal heads",
+    "articles_spanned": [
+     34
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 68,
+    "stream_window_index": 335,
+    "token_offset": 171520,
+    "article": 34,
+    "article_title": "Olmec colossal heads",
+    "articles_spanned": [
+     34
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 69,
+    "stream_window_index": 336,
+    "token_offset": 172032,
+    "article": 34,
+    "article_title": "Olmec colossal heads",
+    "articles_spanned": [
+     34
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 70,
+    "stream_window_index": 338,
+    "token_offset": 173056,
+    "article": 34,
+    "article_title": "Olmec colossal heads",
+    "articles_spanned": [
+     34
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 71,
+    "stream_window_index": 339,
+    "token_offset": 173568,
+    "article": 34,
+    "article_title": "Olmec colossal heads",
+    "articles_spanned": [
+     34
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 72,
+    "stream_window_index": 343,
+    "token_offset": 175616,
+    "article": 35,
+    "article_title": "Brad Stevens",
+    "articles_spanned": [
+     35
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 73,
+    "stream_window_index": 346,
+    "token_offset": 177152,
+    "article": 35,
+    "article_title": "Brad Stevens",
+    "articles_spanned": [
+     35
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 74,
+    "stream_window_index": 364,
+    "token_offset": 186368,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 75,
+    "stream_window_index": 365,
+    "token_offset": 186880,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 76,
+    "stream_window_index": 366,
+    "token_offset": 187392,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 77,
+    "stream_window_index": 367,
+    "token_offset": 187904,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 78,
+    "stream_window_index": 372,
+    "token_offset": 190464,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 79,
+    "stream_window_index": 377,
+    "token_offset": 193024,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 80,
+    "stream_window_index": 381,
+    "token_offset": 195072,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 81,
+    "stream_window_index": 382,
+    "token_offset": 195584,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 82,
+    "stream_window_index": 383,
+    "token_offset": 196096,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 83,
+    "stream_window_index": 390,
+    "token_offset": 199680,
+    "article": 37,
+    "article_title": "American Beauty ( 1999 film )",
+    "articles_spanned": [
+     37
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 84,
+    "stream_window_index": 394,
+    "token_offset": 201728,
+    "article": 38,
+    "article_title": "Christopher Gore",
+    "articles_spanned": [
+     38
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 85,
+    "stream_window_index": 395,
+    "token_offset": 202240,
+    "article": 38,
+    "article_title": "Christopher Gore",
+    "articles_spanned": [
+     38
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 86,
+    "stream_window_index": 401,
+    "token_offset": 205312,
+    "article": 38,
+    "article_title": "Christopher Gore",
+    "articles_spanned": [
+     38
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 87,
+    "stream_window_index": 403,
+    "token_offset": 206336,
+    "article": 39,
+    "article_title": "Nero",
+    "articles_spanned": [
+     39
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 88,
+    "stream_window_index": 405,
+    "token_offset": 207360,
+    "article": 39,
+    "article_title": "Nero",
+    "articles_spanned": [
+     39
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 89,
+    "stream_window_index": 409,
+    "token_offset": 209408,
+    "article": 39,
+    "article_title": "Nero",
+    "articles_spanned": [
+     39
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 90,
+    "stream_window_index": 411,
+    "token_offset": 210432,
+    "article": 39,
+    "article_title": "Nero",
+    "articles_spanned": [
+     39
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 91,
+    "stream_window_index": 413,
+    "token_offset": 211456,
+    "article": 39,
+    "article_title": "Nero",
+    "articles_spanned": [
+     39
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 92,
+    "stream_window_index": 422,
+    "token_offset": 216064,
+    "article": 39,
+    "article_title": "Nero",
+    "articles_spanned": [
+     39
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 93,
+    "stream_window_index": 430,
+    "token_offset": 220160,
+    "article": 40,
+    "article_title": "Manila",
+    "articles_spanned": [
+     40
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 94,
+    "stream_window_index": 434,
+    "token_offset": 222208,
+    "article": 40,
+    "article_title": "Manila",
+    "articles_spanned": [
+     40
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 95,
+    "stream_window_index": 435,
+    "token_offset": 222720,
+    "article": 40,
+    "article_title": "Manila",
+    "articles_spanned": [
+     40
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 96,
+    "stream_window_index": 442,
+    "token_offset": 226304,
+    "article": 40,
+    "article_title": "Manila",
+    "articles_spanned": [
+     40
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 97,
+    "stream_window_index": 457,
+    "token_offset": 233984,
+    "article": 42,
+    "article_title": "The Heart of Ezra Greer",
+    "articles_spanned": [
+     42
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 98,
+    "stream_window_index": 461,
+    "token_offset": 236032,
+    "article": 43,
+    "article_title": "Free Derry",
+    "articles_spanned": [
+     43
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 99,
+    "stream_window_index": 469,
+    "token_offset": 240128,
+    "article": 43,
+    "article_title": "Free Derry",
+    "articles_spanned": [
+     43
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 100,
+    "stream_window_index": 470,
+    "token_offset": 240640,
+    "article": 44,
+    "article_title": "Come What ( ever ) May",
+    "articles_spanned": [
+     43,
+     44
+    ],
+    "frac_targets_in_major": 0.6516634050880626,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 101,
+    "stream_window_index": 471,
+    "token_offset": 241152,
+    "article": 44,
+    "article_title": "Come What ( ever ) May",
+    "articles_spanned": [
+     44
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 102,
+    "stream_window_index": 476,
+    "token_offset": 243712,
+    "article": 45,
+    "article_title": "Chad at the 2008 Summer Olympics",
+    "articles_spanned": [
+     45
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 103,
+    "stream_window_index": 478,
+    "token_offset": 244736,
+    "article": 46,
+    "article_title": "View of the World from 9th Avenue",
+    "articles_spanned": [
+     45,
+     46
+    ],
+    "frac_targets_in_major": 0.6223091976516634,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 104,
+    "stream_window_index": 481,
+    "token_offset": 246272,
+    "article": 47,
+    "article_title": "Bintulu",
+    "articles_spanned": [
+     46,
+     47
+    ],
+    "frac_targets_in_major": 0.6457925636007827,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 105,
+    "stream_window_index": 485,
+    "token_offset": 248320,
+    "article": 47,
+    "article_title": "Bintulu",
+    "articles_spanned": [
+     47
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 106,
+    "stream_window_index": 490,
+    "token_offset": 250880,
+    "article": 47,
+    "article_title": "Bintulu",
+    "articles_spanned": [
+     47
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 107,
+    "stream_window_index": 496,
+    "token_offset": 253952,
+    "article": 47,
+    "article_title": "Bintulu",
+    "articles_spanned": [
+     47
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 108,
+    "stream_window_index": 500,
+    "token_offset": 256000,
+    "article": 48,
+    "article_title": "Zrinski Battalion",
+    "articles_spanned": [
+     48
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 109,
+    "stream_window_index": 504,
+    "token_offset": 258048,
+    "article": 49,
+    "article_title": "Weevils Wobble But They Don 't Go Down",
+    "articles_spanned": [
+     49,
+     50
+    ],
+    "frac_targets_in_major": 0.9921722113502935,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 110,
+    "stream_window_index": 508,
+    "token_offset": 260096,
+    "article": 50,
+    "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+    "articles_spanned": [
+     50
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 111,
+    "stream_window_index": 511,
+    "token_offset": 261632,
+    "article": 50,
+    "article_title": "Temple Beth Israel ( Eugene , Oregon )",
+    "articles_spanned": [
+     50,
+     51
+    ],
+    "frac_targets_in_major": 0.6810176125244618,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 112,
+    "stream_window_index": 517,
+    "token_offset": 264704,
+    "article": 51,
+    "article_title": "New York State Route 93",
+    "articles_spanned": [
+     51
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 113,
+    "stream_window_index": 525,
+    "token_offset": 268800,
+    "article": 54,
+    "article_title": "Kirby 's Block Ball",
+    "articles_spanned": [
+     54,
+     55
+    ],
+    "frac_targets_in_major": 0.6771037181996086,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 114,
+    "stream_window_index": 526,
+    "token_offset": 269312,
+    "article": 55,
+    "article_title": "Hannah Dodd",
+    "articles_spanned": [
+     55
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 115,
+    "stream_window_index": 527,
+    "token_offset": 269824,
+    "article": 55,
+    "article_title": "Hannah Dodd",
+    "articles_spanned": [
+     55,
+     56
+    ],
+    "frac_targets_in_major": 0.9647749510763209,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 116,
+    "stream_window_index": 533,
+    "token_offset": 272896,
+    "article": 56,
+    "article_title": "Commonwealth War Graves Commission",
+    "articles_spanned": [
+     56
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 117,
+    "stream_window_index": 535,
+    "token_offset": 273920,
+    "article": 56,
+    "article_title": "Commonwealth War Graves Commission",
+    "articles_spanned": [
+     56
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 118,
+    "stream_window_index": 537,
+    "token_offset": 274944,
+    "article": 56,
+    "article_title": "Commonwealth War Graves Commission",
+    "articles_spanned": [
+     56
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 119,
+    "stream_window_index": 548,
+    "token_offset": 280576,
+    "article": 58,
+    "article_title": "German Type UB I submarine",
+    "articles_spanned": [
+     58
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 120,
+    "stream_window_index": 551,
+    "token_offset": 282112,
+    "article": 58,
+    "article_title": "German Type UB I submarine",
+    "articles_spanned": [
+     58
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 121,
+    "stream_window_index": 561,
+    "token_offset": 287232,
+    "article": 59,
+    "article_title": "Military history of Gibraltar during World War II",
+    "articles_spanned": [
+     59
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 122,
+    "stream_window_index": 563,
+    "token_offset": 288256,
+    "article": 59,
+    "article_title": "Military history of Gibraltar during World War II",
+    "articles_spanned": [
+     59
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 123,
+    "stream_window_index": 567,
+    "token_offset": 290304,
+    "article": 60,
+    "article_title": "Nerva",
+    "articles_spanned": [
+     60
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 124,
+    "stream_window_index": 568,
+    "token_offset": 290816,
+    "article": 60,
+    "article_title": "Nerva",
+    "articles_spanned": [
+     60
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": true
+   },
+   {
+    "window": 125,
+    "stream_window_index": 571,
+    "token_offset": 292352,
+    "article": 60,
+    "article_title": "Nerva",
+    "articles_spanned": [
+     60
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 126,
+    "stream_window_index": 575,
+    "token_offset": 294400,
+    "article": 60,
+    "article_title": "Nerva",
+    "articles_spanned": [
+     60
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   },
+   {
+    "window": 127,
+    "stream_window_index": 582,
+    "token_offset": 297984,
+    "article": 61,
+    "article_title": "The Hustler ( film )",
+    "articles_spanned": [
+     61
+    ],
+    "frac_targets_in_major": 1.0,
+    "contiguous_with_previous": false
+   }
+  ],
+  "resampling_unit_primary": "article (cluster of windows)",
+  "block_sensitivity": {
+   "block4": {
+    "block_len": 4,
+    "n_blocks": 32,
+    "complete": true
+   },
+   "block8": {
+    "block_len": 8,
+    "n_blocks": 16,
+    "complete": true
+   },
+   "block16": {
+    "block_len": 16,
+    "n_blocks": 8,
+    "complete": true
+   }
+  },
+  "blocks_note": "blocks are non-overlapping runs of b consecutive windows in the sorted stream order; 128 is divisible by 4/8/16, so no window is dropped and there is no incomplete block; b = 16 leaves only 8 resampling units (unstable)",
+  "lag1_autocorr_bf16_moe_window_nll": 0.36922321276498543,
+  "lag1_autocorr_moe_paired_effect_s0_G20261111": -0.03996391994362216
+ }
+}

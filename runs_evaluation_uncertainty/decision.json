@@ -1,0 +1,428 @@
+{
+ "rules": {
+  "resolved_variance": "V_corr pivot 95% CI lower bound > 0 AND common-effect null p < 0.05 (primary scheme)",
+  "reliable_within": "median split-half Pearson (primary scheme) >= 0.5 AND exceeds the null median distribution at p < 0.05",
+  "setting_verdict": {
+   "A": "both datasets resolved AND reliable, AND cross-dataset Pearson upper 95% bound < sqrt(lam_WT2 lam_C4)",
+   "B": "neither dataset resolved AND neither reliable",
+   "C": "exactly one dataset resolved-and-reliable, the other neither (or settings within a family differ)",
+   "D": "any other pattern (e.g. resolved but unreliable, both reliable but cross-dataset agreement not distinguishable from the attenuated expectation)"
+  },
+  "note": "dose levels are reported per k with the same rules; a family-level dose summary is descriptive"
+ },
+ "settings": {
+  "moe": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 4.123709273983321e-07,
+     "V_corr_ci": [
+      -7.068688703054125e-08,
+      7.453992426778408e-07
+     ],
+     "null_p_variance": 0.0005,
+     "median_split_half_r": 0.6414194403598148,
+     "split_half_null_p": 0.0,
+     "reliable_within": true,
+     "sampling_fraction": 0.24933240233090428
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": 1.7048167622124542e-08,
+     "V_corr_ci": [
+      -1.1245730783596032e-07,
+      1.0535913476611762e-07
+     ],
+     "null_p_variance": 0.2565,
+     "median_split_half_r": 0.14043574135552986,
+     "split_half_null_p": 0.262,
+     "reliable_within": false,
+     "sampling_fraction": 0.8045288355237609
+    }
+   },
+   "verdict": "D-INCONCLUSIVE",
+   "cross_r": -0.21370780172454318,
+   "cross_r_ci": [
+    -0.5620909213095939,
+    0.27411754721265663
+   ]
+  },
+  "dense4": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 1.2538268499715558e-07,
+     "V_corr_ci": [
+      -3.458781567846723e-08,
+      2.498156931563537e-07
+     ],
+     "null_p_variance": 0.002,
+     "median_split_half_r": 0.7481851209260587,
+     "split_half_null_p": 0.006,
+     "reliable_within": true,
+     "sampling_fraction": 0.21112137497188746
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -1.3923391451231922e-08,
+     "V_corr_ci": [
+      -6.601967360992853e-08,
+      1.3382009988374129e-08
+     ],
+     "null_p_variance": 0.8185,
+     "median_split_half_r": -0.43352577512165835,
+     "split_half_null_p": 0.8,
+     "reliable_within": false,
+     "sampling_fraction": 2.5830255142928538
+    }
+   },
+   "verdict": "D-INCONCLUSIVE",
+   "cross_r": -0.3178985946909938,
+   "cross_r_ci": [
+    -0.8784007277341199,
+    0.7621465441926057
+   ]
+  },
+  "dense3": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": true,
+     "V_corr": 6.634296780877498e-07,
+     "V_corr_ci": [
+      8.770792847893761e-08,
+      1.0381950209434827e-06
+     ],
+     "null_p_variance": 0.0,
+     "median_split_half_r": 0.9026906188986565,
+     "split_half_null_p": 0.0,
+     "reliable_within": true,
+     "sampling_fraction": 0.0875466135791309
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -3.222717120512365e-08,
+     "V_corr_ci": [
+      -1.3448784099135742e-07,
+      1.2948597726063215e-08
+     ],
+     "null_p_variance": 0.921,
+     "median_split_half_r": -0.6209074929277061,
+     "split_half_null_p": 0.9,
+     "reliable_within": false,
+     "sampling_fraction": 4.121325781325678
+    }
+   },
+   "verdict": "C-MIXED",
+   "cross_r": -0.8389085415737405,
+   "cross_r_ci": [
+    -0.9380634184568708,
+    0.642730431065212
+   ]
+  },
+  "dose_natural_k1": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 3.080334918550911e-08,
+     "V_corr_ci": [
+      -6.689292133776005e-08,
+      9.845779419466235e-08
+     ],
+     "null_p_variance": 0.094,
+     "median_split_half_r": 0.3593942052823701,
+     "split_half_null_p": 0.124,
+     "reliable_within": false,
+     "sampling_fraction": 0.5420112606649372
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -1.1143916477772656e-08,
+     "V_corr_ci": [
+      -5.4618539888242354e-08,
+      1.4282969933087944e-08
+     ],
+     "null_p_variance": 0.825,
+     "median_split_half_r": -0.3151953797673367,
+     "split_half_null_p": 0.834,
+     "reliable_within": false,
+     "sampling_fraction": 1.9648962188371508
+    }
+   },
+   "verdict": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "cross_r": -0.042193728154130625,
+   "cross_r_ci": [
+    -0.6848914779243481,
+    0.6480986290590578
+   ]
+  },
+  "dose_natural_k4": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 9.494676606740406e-08,
+     "V_corr_ci": [
+      -5.7584904673074686e-08,
+      2.0175349309169236e-07
+     ],
+     "null_p_variance": 0.004,
+     "median_split_half_r": 0.6145367708145982,
+     "split_half_null_p": 0.012,
+     "reliable_within": true,
+     "sampling_fraction": 0.2882573350146332
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": 4.4336717790898434e-10,
+     "V_corr_ci": [
+      -6.543449817449225e-08,
+      4.0944532333104465e-08
+     ],
+     "null_p_variance": 0.4135,
+     "median_split_half_r": 0.06990024840740067,
+     "split_half_null_p": 0.436,
+     "reliable_within": false,
+     "sampling_fraction": 0.9836042810236639
+    }
+   },
+   "verdict": "D-INCONCLUSIVE",
+   "cross_r": -0.17155031123205952,
+   "cross_r_ci": [
+    -0.6467323031479654,
+    0.5086155800725066
+   ]
+  },
+  "dose_natural_k16": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 9.8620878532226e-08,
+     "V_corr_ci": [
+      -8.539194050967764e-08,
+      2.163297797794639e-07
+     ],
+     "null_p_variance": 0.016,
+     "median_split_half_r": 0.5889407987074996,
+     "split_half_null_p": 0.038,
+     "reliable_within": true,
+     "sampling_fraction": 0.3196382199017526
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -4.182519878599348e-09,
+     "V_corr_ci": [
+      -7.010907989189211e-08,
+      4.0160333765277354e-08
+     ],
+     "null_p_variance": 0.514,
+     "median_split_half_r": -0.01103686369581194,
+     "split_half_null_p": 0.54,
+     "reliable_within": false,
+     "sampling_fraction": 1.147239545283898
+    }
+   },
+   "verdict": "D-INCONCLUSIVE",
+   "cross_r": -0.11747812296873801,
+   "cross_r_ci": [
+    -0.6222884246952312,
+    0.5887094290850441
+   ]
+  },
+  "dose_natural_k64": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 3.956012158607973e-08,
+     "V_corr_ci": [
+      -1.1812966561701569e-07,
+      1.48893047032761e-07
+     ],
+     "null_p_variance": 0.1415,
+     "median_split_half_r": 0.31214240535351134,
+     "split_half_null_p": 0.196,
+     "reliable_within": false,
+     "sampling_fraction": 0.6242768754361752
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -1.7725592444813226e-08,
+     "V_corr_ci": [
+      -8.505695266147421e-08,
+      2.4125737851440903e-08
+     ],
+     "null_p_variance": 0.8105,
+     "median_split_half_r": -0.2583145423242289,
+     "split_half_null_p": 0.758,
+     "reliable_within": false,
+     "sampling_fraction": 1.8825294792717795
+    }
+   },
+   "verdict": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "cross_r": -0.11351010066181896,
+   "cross_r_ci": [
+    -0.6366605507830823,
+    0.5631867133190811
+   ]
+  },
+  "dose_fixed_k1": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": -1.0696572631271112e-09,
+     "V_corr_ci": [
+      -5.720286978225176e-08,
+      3.390745166951564e-08
+     ],
+     "null_p_variance": 0.4545,
+     "median_split_half_r": 0.015815757472444916,
+     "split_half_null_p": 0.48,
+     "reliable_within": false,
+     "sampling_fraction": 1.0458966115050516
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": 4.843065136297326e-10,
+     "V_corr_ci": [
+      -4.066815331078901e-08,
+      2.673650508910313e-08
+     ],
+     "null_p_variance": 0.4055,
+     "median_split_half_r": 0.07297174105105442,
+     "split_half_null_p": 0.38,
+     "reliable_within": false,
+     "sampling_fraction": 0.9751007954246131
+    }
+   },
+   "verdict": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "cross_r": 0.561643645640926,
+   "cross_r_ci": [
+    -0.39582340102694197,
+    0.8094364994980571
+   ]
+  },
+  "dose_fixed_k4": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 4.544560979449671e-08,
+     "V_corr_ci": [
+      -2.9531997956322404e-08,
+      1.0486265198150362e-07
+     ],
+     "null_p_variance": 0.012,
+     "median_split_half_r": 0.5624614032553394,
+     "split_half_null_p": 0.028,
+     "reliable_within": true,
+     "sampling_fraction": 0.35125756065889807
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -1.4747964565789884e-08,
+     "V_corr_ci": [
+      -4.5566576792974614e-08,
+      3.315758728043056e-09
+     ],
+     "null_p_variance": 0.973,
+     "median_split_half_r": -0.6372262274244509,
+     "split_half_null_p": 0.974,
+     "reliable_within": false,
+     "sampling_fraction": 4.173193192976583
+    }
+   },
+   "verdict": "D-INCONCLUSIVE",
+   "cross_r": -0.2652638774839185,
+   "cross_r_ci": [
+    -0.6950363582962318,
+    0.5935925625568493
+   ]
+  },
+  "dose_fixed_k16": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 3.4403708813926977e-08,
+     "V_corr_ci": [
+      -5.6947232138394445e-08,
+      9.810670367921738e-08
+     ],
+     "null_p_variance": 0.041,
+     "median_split_half_r": 0.4178828418674402,
+     "split_half_null_p": 0.07,
+     "reliable_within": false,
+     "sampling_fraction": 0.4634262155606026
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -1.4584493270822984e-09,
+     "V_corr_ci": [
+      -4.530826661985609e-08,
+      2.5652214537462905e-08
+     ],
+     "null_p_variance": 0.483,
+     "median_split_half_r": 0.011834458582481193,
+     "split_half_null_p": 0.442,
+     "reliable_within": false,
+     "sampling_fraction": 1.0767361531401554
+    }
+   },
+   "verdict": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "cross_r": 0.3553182958524926,
+   "cross_r_ci": [
+    -0.40979507533498494,
+    0.768762190793186
+   ]
+  },
+  "dose_fixed_k64": {
+   "per_dataset": {
+    "WT2": {
+     "resolved_variance": false,
+     "V_corr": 4.8583909331375536e-08,
+     "V_corr_ci": [
+      -4.100187903893495e-08,
+      1.064436645790996e-07
+     ],
+     "null_p_variance": 0.015,
+     "median_split_half_r": 0.5084676852370766,
+     "split_half_null_p": 0.032,
+     "reliable_within": true,
+     "sampling_fraction": 0.37187140714831374
+    },
+    "C4HO": {
+     "resolved_variance": false,
+     "V_corr": -4.19497475946157e-09,
+     "V_corr_ci": [
+      -4.997773312362701e-08,
+      2.5607511393239565e-08
+     ],
+     "null_p_variance": 0.5745,
+     "median_split_half_r": -0.07339703636380383,
+     "split_half_null_p": 0.616,
+     "reliable_within": false,
+     "sampling_fraction": 1.220852379162638
+    }
+   },
+   "verdict": "D-INCONCLUSIVE",
+   "cross_r": 0.24125955676187028,
+   "cross_r_ci": [
+    -0.5352335142001728,
+    0.7369467564087677
+   ]
+  }
+ },
+ "verdicts": {
+  "moe": "D-INCONCLUSIVE",
+  "dense4": "D-INCONCLUSIVE",
+  "dense3": "C-MIXED",
+  "dose_natural": {
+   "k1": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "k4": "D-INCONCLUSIVE",
+   "k16": "D-INCONCLUSIVE",
+   "k64": "B-SAMPLING-UNCERTAINTY-DOMINATES"
+  },
+  "dose_fixed_exploratory": {
+   "k1": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "k4": "D-INCONCLUSIVE",
+   "k16": "B-SAMPLING-UNCERTAINTY-DOMINATES",
+   "k64": "D-INCONCLUSIVE"
+  }
+ }
+}

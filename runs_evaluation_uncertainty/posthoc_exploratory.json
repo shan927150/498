@@ -1,0 +1,209 @@
+{
+ "label": "POST-HOC EXPLORATORY: not prespecified; does not change any primary verdict",
+ "difference": {
+  "moe": {
+   "V_corr_WT2": 4.123709273983321e-07,
+   "V_corr_C4HO": 1.7048167622124542e-08,
+   "difference": 3.9532275977620757e-07,
+   "pivot_ci": [
+    -1.0128655040612372e-07,
+    7.516021972356615e-07
+   ],
+   "excludes_zero": false,
+   "ratio_V_obs_WT2_over_C4HO": 6.298619345417443,
+   "ratio_V_samp_WT2_over_C4HO": 1.9520119396820017
+  },
+  "dense4": {
+   "V_corr_WT2": 1.2538268499715558e-07,
+   "V_corr_C4HO": -1.3923391451231922e-08,
+   "difference": 1.393060764483875e-07,
+   "pivot_ci": [
+    -2.5003850477508063e-08,
+    2.7197612584414986e-07
+   ],
+   "excludes_zero": false,
+   "ratio_V_obs_WT2_over_C4HO": 18.070503695134025,
+   "ratio_V_samp_WT2_over_C4HO": 1.4769771206056812
+  },
+  "dense3": {
+   "V_corr_WT2": 6.634296780877498e-07,
+   "V_corr_C4HO": -3.222717120512365e-08,
+   "difference": 6.956568492928734e-07,
+   "pivot_ci": [
+    1.2483500533652226e-07,
+    1.0823701745065613e-06
+   ],
+   "excludes_zero": true,
+   "ratio_V_obs_WT2_over_C4HO": 70.42082707584676,
+   "ratio_V_samp_WT2_over_C4HO": 1.495903324087345
+  },
+  "dose_natural_k4": {
+   "V_corr_WT2": 9.494676606740406e-08,
+   "V_corr_C4HO": 4.4336717790898434e-10,
+   "difference": 9.450339888949508e-08,
+   "pivot_ci": [
+    -6.56396953088708e-08,
+    2.1944577591451005e-07
+   ],
+   "excludes_zero": false,
+   "ratio_V_obs_WT2_over_C4HO": 4.9331475261903615,
+   "ratio_V_samp_WT2_over_C4HO": 1.4457195709373416
+  },
+  "dose_natural_k16": {
+   "V_corr_WT2": 9.8620878532226e-08,
+   "V_corr_C4HO": -4.182519878599348e-09,
+   "difference": 1.0280339841082535e-07,
+   "pivot_ci": [
+    -9.183982517509769e-08,
+    2.390216170362283e-07
+   ],
+   "excludes_zero": false,
+   "ratio_V_obs_WT2_over_C4HO": 5.102880663925239,
+   "ratio_V_samp_WT2_over_C4HO": 1.4217394252954452
+  }
+ },
+ "leave_one_article_out": {
+  "moe": {
+   "V_corr_full": 4.123709273983321e-07,
+   "V_corr_min": 3.184765866061029e-07,
+   "V_corr_max": 5.089559891897989e-07,
+   "sampling_fraction_max": 0.3275519505188001,
+   "split_half_r_min": 0.5427856613110165,
+   "split_half_r_median": 0.6370009981490521,
+   "most_influential": {
+    "article": 37,
+    "n_windows": 10,
+    "V_corr": 3.184765866061029e-07,
+    "sampling_fraction": 0.3275519505188001,
+    "split_half_median_r": 0.5427856613110165
+   },
+   "n_articles": 49
+  },
+  "dense4": {
+   "V_corr_full": 1.2538268499715558e-07,
+   "V_corr_min": 1.0807945950219929e-07,
+   "V_corr_max": 1.4604802240663155e-07,
+   "sampling_fraction_max": 0.23862015117384483,
+   "split_half_r_min": 0.6948102889043888,
+   "split_half_r_median": 0.748756703614257,
+   "most_influential": {
+    "article": 34,
+    "n_windows": 5,
+    "V_corr": 1.0807945950219929e-07,
+    "sampling_fraction": 0.23862015117384483,
+    "split_half_median_r": 0.7220214766672064
+   },
+   "n_articles": 49
+  },
+  "dense3": {
+   "V_corr_full": 6.634296780877498e-07,
+   "V_corr_min": 5.458478937474432e-07,
+   "V_corr_max": 7.233793753599259e-07,
+   "sampling_fraction_max": 0.09906924196127331,
+   "split_half_r_min": 0.873180414447258,
+   "split_half_r_median": 0.8983115542799538,
+   "most_influential": {
+    "article": 19,
+    "n_windows": 2,
+    "V_corr": 5.458478937474432e-07,
+    "sampling_fraction": 0.09164837654134457,
+    "split_half_median_r": 0.8860838650819394
+   },
+   "n_articles": 49
+  },
+  "dose_natural_k4": {
+   "V_corr_full": 9.494676606740406e-08,
+   "V_corr_min": 8.267526453726672e-08,
+   "V_corr_max": 1.4509878439712322e-07,
+   "sampling_fraction_max": 0.3326926826828997,
+   "split_half_r_min": 0.5559806768646586,
+   "split_half_r_median": 0.6107604070408639,
+   "most_influential": {
+    "article": 11,
+    "n_windows": 5,
+    "V_corr": 8.267526453726672e-08,
+    "sampling_fraction": 0.32630038350816676,
+    "split_half_median_r": 0.5645664287302381
+   },
+   "n_articles": 49
+  },
+  "dose_natural_k16": {
+   "V_corr_full": 9.8620878532226e-08,
+   "V_corr_min": 6.703638730575573e-08,
+   "V_corr_max": 1.2393310861784158e-07,
+   "sampling_fraction_max": 0.41481019917652695,
+   "split_half_r_min": 0.5062861263441756,
+   "split_half_r_median": 0.5893815524683188,
+   "most_influential": {
+    "article": 24,
+    "n_windows": 3,
+    "V_corr": 6.703638730575573e-08,
+    "sampling_fraction": 0.41481019917652695,
+    "split_half_median_r": 0.5102018723208037
+   },
+   "n_articles": 49
+  }
+ },
+ "concentration": {
+  "moe": {
+   "WT2": {
+    "top5_window_share": 0.17528510385123483,
+    "top10_window_share": 0.31076233279964305,
+    "frac_windows_positive": 0.71875
+   },
+   "C4HO": {
+    "top5_window_share": 0.3418791490080924,
+    "top10_window_share": 0.5846334473769316,
+    "frac_windows_positive": 0.640625
+   }
+  },
+  "dense4": {
+   "WT2": {
+    "top5_window_share": 0.2578260458245917,
+    "top10_window_share": 0.4536052887182042,
+    "frac_windows_positive": 0.6328125
+   },
+   "C4HO": {
+    "top5_window_share": 0.8308112801435543,
+    "top10_window_share": 1.4381124963344354,
+    "frac_windows_positive": 0.5390625
+   }
+  },
+  "dense3": {
+   "WT2": {
+    "top5_window_share": 0.2219021397497153,
+    "top10_window_share": 0.3818703402012675,
+    "frac_windows_positive": 0.7109375
+   },
+   "C4HO": {
+    "top5_window_share": 1.0814011787209545,
+    "top10_window_share": 1.8084841637592732,
+    "frac_windows_positive": 0.546875
+   }
+  },
+  "dose_natural_k4": {
+   "WT2": {
+    "top5_window_share": 0.26450896057598083,
+    "top10_window_share": 0.4607254628864334,
+    "frac_windows_positive": 0.640625
+   },
+   "C4HO": {
+    "top5_window_share": 0.4446147267046609,
+    "top10_window_share": 0.8008379022800886,
+    "frac_windows_positive": 0.59375
+   }
+  },
+  "dose_natural_k16": {
+   "WT2": {
+    "top5_window_share": 0.26177030131846385,
+    "top10_window_share": 0.4677558929489992,
+    "frac_windows_positive": 0.6328125
+   },
+   "C4HO": {
+    "top5_window_share": 0.3812993621103897,
+    "top10_window_share": 0.7019142500756668,
+    "frac_windows_positive": 0.59375
+   }
+  }
+ }
+}

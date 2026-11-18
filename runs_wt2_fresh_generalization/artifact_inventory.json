@@ -1,0 +1,150 @@
+{
+ "moe_weight_manifest": "/home/kaixuan6/498/runs_heldout_bitwidth_validation/logs/moe_weight_manifest.json",
+ "configs": {
+  "dense/BF16": {
+   "installed_weights_sha256": null
+  },
+  "dense/dense3_G20261111": {
+   "installed_weights_sha256": "9129213a18353a711f600986bfd133cd4f1ce8707cdde3cdbf33aef5d3e9aaac"
+  },
+  "dense/dense3_G20261112": {
+   "installed_weights_sha256": "496092270220b9458a8b9a5defe637b574dcd6d4a671f08820215460f982b21d"
+  },
+  "dense/dense3_G20261113": {
+   "installed_weights_sha256": "0c0b717015747de810793e3f08e2bdcf4e2bd55539e1d6abd5cd134f82846b10"
+  },
+  "dense/dense3_G20261114": {
+   "installed_weights_sha256": "8ed12d2a7389570d7b252bc6a6082f6c0bdf42c57fa72376918f59a706136e70"
+  },
+  "dense/dense3_G20261115": {
+   "installed_weights_sha256": "d698c9230811d05d31d0c98a607ccdcc3b1d19f883471e5e4820ae047ed1d931"
+  },
+  "dense/dense3_ORIGINAL": {
+   "installed_weights_sha256": "d698c9230811d05d31d0c98a607ccdcc3b1d19f883471e5e4820ae047ed1d931"
+  },
+  "dense/dense4_G20261111": {
+   "installed_weights_sha256": "3a4a82f056582575ff55a2c2d3e4a150102492922330166a5de4753065b3799f"
+  },
+  "dense/dense4_G20261112": {
+   "installed_weights_sha256": "3c0131b58129b55f63c8f75d65f8902b9b133a3ca6af15f1e8fa3c00468be3d3"
+  },
+  "dense/dense4_G20261113": {
+   "installed_weights_sha256": "046a794ef0e1bbd1cdf4bcddd98f88b8b24d3d0370b027f92b193e6795156067"
+  },
+  "dense/dense4_G20261114": {
+   "installed_weights_sha256": "ac238612ef350cc0a6706e7967a7160aca36a1a793dd4f4990565d0703bf7136"
+  },
+  "dense/dense4_G20261115": {
+   "installed_weights_sha256": "380b9fcab1a7eb8789ceedbd2d07c382fa50893ad6a725c4a48d001d2e07e895"
+  },
+  "dense/dense4_ORIGINAL": {
+   "installed_weights_sha256": "380b9fcab1a7eb8789ceedbd2d07c382fa50893ad6a725c4a48d001d2e07e895"
+  },
+  "moe/BF16": {
+   "installed_weights_sha256": null
+  },
+  "moe/FC_ORIGINAL": {
+   "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4"
+  },
+  "moe/FC_s0_G20261111": {
+   "installed_weights_sha256": "79f620d4aa7adc6b95e579d139aaffb34acf01fa83d64ee632a618b630b91533"
+  },
+  "moe/FC_s0_G20261112": {
+   "installed_weights_sha256": "4e87e8dca96e1592836eb4782b9552878edd7c1b006c778e3d898055fa88b5b5"
+  },
+  "moe/FC_s0_G20261113": {
+   "installed_weights_sha256": "3dc2769398a781ed1b27ed89280c10c215fbb7c964f518698a69a028b7b4f3b2"
+  },
+  "moe/FC_s0_G20261114": {
+   "installed_weights_sha256": "d65e02a28903f1ca8debeeddcb3e86494731dcf8bd4d0ada87258492b457e432"
+  },
+  "moe/FC_s0_G20261115": {
+   "installed_weights_sha256": "7e8c041c01d0b5b1e6f2b580dd1fd611466105972194eb3b0ddf4845a4a032e5"
+  },
+  "moe/FC_s1_G20261111": {
+   "installed_weights_sha256": "c328630408885dc0ef821f3ef0fe6e4afc1f6df4cc7a52cfe15957c9a5baa79c"
+  },
+  "moe/FC_s1_G20261112": {
+   "installed_weights_sha256": "bc3e00f2dbbe2e6787e4c93be45caa7d9e9cf6c3bbb2a5c03be982479cf7ac46"
+  },
+  "moe/FC_s1_G20261113": {
+   "installed_weights_sha256": "ecf0a820a9c79f77a7d6a4542317d5bf558c7379af41e253c6ce806d82f0f6ea"
+  },
+  "moe/FC_s1_G20261114": {
+   "installed_weights_sha256": "e01b9484453c12077732d501f4a250211927b4cb073ae70772b922fb673ae173"
+  },
+  "moe/FC_s1_G20261115": {
+   "installed_weights_sha256": "5ae0f24bbc3af8650e8c3844db83e350b3785dfcc84c5c7cecb5f2b9df91be0d"
+  },
+  "moe/FC_s2_G20261111": {
+   "installed_weights_sha256": "aed85c939b34128dea70755f256e6576aba206a372728d46a20e181781074c9c"
+  },
+  "moe/FC_s2_G20261112": {
+   "installed_weights_sha256": "cb45870038b0cd2e4e40c406f3ede9c7cc7ab5e9b3823fb9a1c0bcaa19841bf5"
+  },
+  "moe/FC_s2_G20261113": {
+   "installed_weights_sha256": "e24f3995ae6ef1d6c877c4e6176244b657a812a2f0e55a71450cbe2396bc5dd9"
+  },
+  "moe/FC_s2_G20261114": {
+   "installed_weights_sha256": "264a47efbaba859421c9a2c773ff70c38de723a403ac8fabe8b2d477902fccef"
+  },
+  "moe/FC_s2_G20261115": {
+   "installed_weights_sha256": "af6dde139adad5ccb16bb756c6f79c762a2dee4493d38ae45d0682b17d92dbf3"
+  },
+  "moe/FR_ORIGINAL": {
+   "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066"
+  },
+  "moe/FR_s0_G20261111": {
+   "installed_weights_sha256": "cfb345d546b2da2389fcfc671b94c4d91ace21daf78e9aaeb3e5e059df0e8bc4"
+  },
+  "moe/FR_s0_G20261112": {
+   "installed_weights_sha256": "5ff5ca36817886aa5eb10b3c9b8f0b9d3447423bd3297f79cec303ac4a3c0a43"
+  },
+  "moe/FR_s0_G20261113": {
+   "installed_weights_sha256": "63723820c2282a78b2bbeea4a3b573a618f223a37d47208dac50ff8681a3f9f0"
+  },
+  "moe/FR_s0_G20261114": {
+   "installed_weights_sha256": "0fc4fe0a4c48b3d73faa39b6d60b2084731762885fb8b11ca0f12d1019c7362f"
+  },
+  "moe/FR_s0_G20261115": {
+   "installed_weights_sha256": "5ef00c3cacc586cc091a842761ba9984b378a4d605beca00499bb4eb1dea6e86"
+  },
+  "moe/FR_s1_G20261111": {
+   "installed_weights_sha256": "676523a7049274e3f90af11b9101734adcab052ef5b31f00d412441f2c7f5fdf"
+  },
+  "moe/FR_s1_G20261112": {
+   "installed_weights_sha256": "0c9a8c9a8ee6ec814edef03898511246b1f75bcbdb88b1960f5607d2ed343954"
+  },
+  "moe/FR_s1_G20261113": {
+   "installed_weights_sha256": "b0ce9cc052d919c8aaffe248b6a91122e19402e4fefd54a4938548be5e9be014"
+  },
+  "moe/FR_s1_G20261114": {
+   "installed_weights_sha256": "a7013e56c59bb0b8ba3e338fc5849a22fff1a8d243cab24f575bc338ee7f6069"
+  },
+  "moe/FR_s1_G20261115": {
+   "installed_weights_sha256": "85be556f51a3a49f8276cadf70c291ad220798c9c8412a023be39485ff866e17"
+  },
+  "moe/FR_s2_G20261111": {
+   "installed_weights_sha256": "1ca602c79bf38945905d0bd10275b8c1578a21be8e2b6a399ced6e5c664711e6"
+  },
+  "moe/FR_s2_G20261112": {
+   "installed_weights_sha256": "861f6ed614b7b6588435995bc815faee88dc35ab7252bd3ac1e5700ddd496b15"
+  },
+  "moe/FR_s2_G20261113": {
+   "installed_weights_sha256": "389fafa1a5253bc4383db779db03347da187d6b0bb6630c3f609bc0defa87b5e"
+  },
+  "moe/FR_s2_G20261114": {
+   "installed_weights_sha256": "420de48ab6b028f6ab9de560afe5fd3b9f38718be28ef243e3951ff422bf7e44"
+  },
+  "moe/FR_s2_G20261115": {
+   "installed_weights_sha256": "5efe3d8fae85b6cff725d9594f532bf997327feddaf3a36542286b3f8e1796a6"
+  }
+ },
+ "dense3_weights": "~/moe_cache_heldout_bitwidth/dense3/<config>/L<l>.pt (tensor sha256 verified vs heldout run)",
+ "dense4_weights": "~/moe_cache_dense_grouping_scope/weights/<config>/L<l>.pt (installed digest verified)",
+ "missing": [],
+ "not_used": [
+  "seed-1/2 ORIGINAL MoE weights (never saved)",
+  "optional 5x5 reference matrix (not run)"
+ ]
+}
