@@ -1,0 +1,2449 @@
+{
+ "configs": {
+  "ORIGINAL": {
+   "all_parity": true,
+   "first_failure": null,
+   "n_tensors": 60,
+   "parity": {
+    "L1|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4539.0
+    },
+    "L1|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4719.0
+    },
+    "L1|e37": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3800.0
+    },
+    "L1|e8": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4340.0
+    },
+    "L1|e28": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5075.0
+    },
+    "L8|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4659.0
+    },
+    "L8|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3968.0
+    },
+    "L8|e21": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3347.0
+    },
+    "L8|e32": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4423.0
+    },
+    "L8|e52": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5093.0
+    },
+    "L16|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4909.0
+    },
+    "L16|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5439.0
+    },
+    "L16|e1": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3264.0
+    },
+    "L16|e47": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4244.0
+    },
+    "L16|e9": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5564.0
+    },
+    "L23|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4570.0
+    },
+    "L23|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4013.0
+    },
+    "L23|e26": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3027.0
+    },
+    "L23|e12": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4196.0
+    },
+    "L23|e56": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 6430.0
+    }
+   }
+  },
+  "G20261111": {
+   "all_parity": true,
+   "first_failure": null,
+   "n_tensors": 60,
+   "parity": {
+    "L1|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4539.0
+    },
+    "L1|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4718.0
+    },
+    "L1|e37": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3799.0
+    },
+    "L1|e8": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4334.0
+    },
+    "L1|e28": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5074.0
+    },
+    "L8|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4666.0
+    },
+    "L8|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3978.0
+    },
+    "L8|e21": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3362.0
+    },
+    "L8|e32": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4426.0
+    },
+    "L8|e52": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5090.0
+    },
+    "L16|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4912.0
+    },
+    "L16|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5440.0
+    },
+    "L16|e1": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3267.0
+    },
+    "L16|e47": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4247.0
+    },
+    "L16|e9": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5563.0
+    },
+    "L23|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4553.0
+    },
+    "L23|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4019.0
+    },
+    "L23|e26": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3014.0
+    },
+    "L23|e12": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4219.0
+    },
+    "L23|e56": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 6416.0
+    }
+   }
+  },
+  "G20261112": {
+   "all_parity": true,
+   "first_failure": null,
+   "n_tensors": 60,
+   "parity": {
+    "L1|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4536.0
+    },
+    "L1|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4719.0
+    },
+    "L1|e37": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3804.0
+    },
+    "L1|e8": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4331.0
+    },
+    "L1|e28": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5075.0
+    },
+    "L8|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4673.0
+    },
+    "L8|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3982.0
+    },
+    "L8|e21": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3359.0
+    },
+    "L8|e32": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4429.0
+    },
+    "L8|e52": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5087.0
+    },
+    "L16|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4907.0
+    },
+    "L16|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5436.0
+    },
+    "L16|e1": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3275.0
+    },
+    "L16|e47": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4244.0
+    },
+    "L16|e9": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5555.0
+    },
+    "L23|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4588.0
+    },
+    "L23|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4019.0
+    },
+    "L23|e26": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3011.0
+    },
+    "L23|e12": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4241.0
+    },
+    "L23|e56": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 6420.0
+    }
+   }
+  },
+  "G20261113": {
+   "all_parity": true,
+   "first_failure": null,
+   "n_tensors": 60,
+   "parity": {
+    "L1|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4537.0
+    },
+    "L1|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4720.0
+    },
+    "L1|e37": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3795.0
+    },
+    "L1|e8": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4335.0
+    },
+    "L1|e28": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5074.0
+    },
+    "L8|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4668.0
+    },
+    "L8|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3988.0
+    },
+    "L8|e21": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3370.0
+    },
+    "L8|e32": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4417.0
+    },
+    "L8|e52": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5085.0
+    },
+    "L16|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4912.0
+    },
+    "L16|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5440.0
+    },
+    "L16|e1": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3265.0
+    },
+    "L16|e47": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4244.0
+    },
+    "L16|e9": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5567.0
+    },
+    "L23|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4568.0
+    },
+    "L23|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4027.0
+    },
+    "L23|e26": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3020.0
+    },
+    "L23|e12": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4213.0
+    },
+    "L23|e56": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 6425.0
+    }
+   }
+  },
+  "G20261114": {
+   "all_parity": true,
+   "first_failure": null,
+   "n_tensors": 60,
+   "parity": {
+    "L1|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4541.0
+    },
+    "L1|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4719.0
+    },
+    "L1|e37": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3801.0
+    },
+    "L1|e8": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4336.0
+    },
+    "L1|e28": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5073.0
+    },
+    "L8|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4667.0
+    },
+    "L8|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3989.0
+    },
+    "L8|e21": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3343.0
+    },
+    "L8|e32": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4416.0
+    },
+    "L8|e52": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5082.0
+    },
+    "L16|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4909.0
+    },
+    "L16|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5435.0
+    },
+    "L16|e1": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3259.0
+    },
+    "L16|e47": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4252.0
+    },
+    "L16|e9": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5561.0
+    },
+    "L23|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4573.0
+    },
+    "L23|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4026.0
+    },
+    "L23|e26": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3019.0
+    },
+    "L23|e12": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4222.0
+    },
+    "L23|e56": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 6416.0
+    }
+   }
+  },
+  "G20261115": {
+   "all_parity": true,
+   "first_failure": null,
+   "n_tensors": 60,
+   "parity": {
+    "L1|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4542.0
+    },
+    "L1|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4718.0
+    },
+    "L1|e37": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3799.0
+    },
+    "L1|e8": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4337.0
+    },
+    "L1|e28": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5070.0
+    },
+    "L8|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4663.0
+    },
+    "L8|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3968.0
+    },
+    "L8|e21": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3357.0
+    },
+    "L8|e32": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4420.0
+    },
+    "L8|e52": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5096.0
+    },
+    "L16|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4908.0
+    },
+    "L16|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5440.0
+    },
+    "L16|e1": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3269.0
+    },
+    "L16|e47": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4251.0
+    },
+    "L16|e9": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 5563.0
+    },
+    "L23|e0": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4576.0
+    },
+    "L23|e30": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4026.0
+    },
+    "L23|e26": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 3021.0
+    },
+    "L23|e12": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 4215.0
+    },
+    "L23|e56": {
+     "parity": {
+      "gate_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "up_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      },
+      "down_proj": {
+       "bf16_equals_historical": true,
+       "codes_exact": true,
+       "dequant_equals_solver_fp32": true
+      }
+     },
+     "tokens": 6423.0
+    }
+   }
+  }
+ },
+ "all_parity": true,
+ "blocked": false,
+ "requirement": "replayed W_q.to(bf16) == historical saved BF16 weights bitwise for every sampled tensor"
+}

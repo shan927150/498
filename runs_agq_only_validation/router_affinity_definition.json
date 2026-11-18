@@ -1,0 +1,32 @@
+{
+ "model": "Qwen/Qwen1.5-MoE-A2.7B",
+ "revision": "Qwen/Qwen1.5-MoE-A2.7B @ 1a758c50ecb6350748b9ce0a99d2352fd9fc11c9, all parameters checked against the full-depth pilot pristine digests",
+ "transformers": "4.51.3",
+ "forward_source_sha256": "07aa75523c2840be46f5a177d93c3088e9171183a861fae4f834ebbc72e576b0",
+ "checks": {
+  "softmax_fp32_over_all_experts": true,
+  "topk_after_softmax": true,
+  "renorm_only_if_norm_topk_prob": true,
+  "norm_topk_prob": false,
+  "cast_to_hidden_dtype_before_multiply": true,
+  "dispatch_slot_major": true,
+  "expert_output_times_coefficient": true,
+  "shared_expert_sigmoid_gate": true,
+  "swiglu_down_input": true,
+  "hidden_act": "silu",
+  "num_experts": 60,
+  "top_k": 4
+ },
+ "verified": true,
+ "definition": "c_{i,e} = softmax(router_logits_i, fp32)[e] for e in top4(i); NOT renormalized (norm_topk_prob=False); the model multiplies E_e(x_i) by bf16(c_{i,e})",
+ "used_in_hessian": "c_{i,e} in fp32 (pre-cast), as recorded by the official code (save_gate_res_qwen); max relative difference to the bf16 multiplier is 2^-9",
+ "projections": "gate_proj and up_proj: H_gu from the expert input rows; down_proj: H_down from act(gate x) * up x rows; all three inherit the same c_{i,e}",
+ "not_used": [
+  "router logits",
+  "expert-internal gate_proj activations",
+  "c^2",
+  "renormalized top-k weights"
+ ],
+ "shared_expert": "not quantized in this study (historical scope); the official sigmoid-gate shared-expert weighting is therefore not applicable",
+ "row_order": "slot-major dispatch (one_hot(sel).permute(2,1,0); where) - reproduced exactly by moe_calib.agq.dispatch_rows / Profiler._record_rows"
+}

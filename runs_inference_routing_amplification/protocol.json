@@ -1,0 +1,214 @@
+{
+ "study": "Inference-time routing amplification MVP (mechanism identification)",
+ "model": {
+  "name": "Qwen/Qwen1.5-MoE-A2.7B",
+  "snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+  "transformers": "4.51.3",
+  "torch": "2.11.0+cu128",
+  "moe_block": "Qwen2MoeSparseMoeBlock: softmax(fp32) -> topk(4) -> norm_topk_prob=False -> cast BF16 -> expert loop 0..59 with index_add_ -> + sigmoid(shared_gate) * shared_expert",
+  "n_moe_layers": 24,
+  "n_experts": 60,
+  "top_k": 4
+ },
+ "quantized": {
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "experts_per_layer": 60,
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "act_order": true
+  },
+  "fake_quant": "BF16 effective weights; everything else BF16 and unchanged"
+ },
+ "weight_manifest_sha256": "6bdc7cceb8d8011939b4339c06c2739cb048307feebca87dbc39172d21948a47",
+ "weight_sets": {
+  "FR_O20261121": {
+   "kind": "primary",
+   "strategy": "FR",
+   "order": 20261121,
+   "installed_weights_sha256": "3f3fa62f331253ee96d5df90df3da591fb3deaf6038bb5a238f3c2b6a7295fcb"
+  },
+  "FC_O20261121": {
+   "kind": "primary",
+   "strategy": "FC",
+   "order": 20261121,
+   "installed_weights_sha256": "32ab8b26889adc5d3c1df0fe230df8dac9d01793ebdb692bc6ba84efd91dd61e"
+  },
+  "FR_O20261122": {
+   "kind": "primary",
+   "strategy": "FR",
+   "order": 20261122,
+   "installed_weights_sha256": "160b97688a460b0ecf4168fbf4bf4cb67f4435952e764b031473a1bebf4101f4"
+  },
+  "FC_O20261122": {
+   "kind": "primary",
+   "strategy": "FC",
+   "order": 20261122,
+   "installed_weights_sha256": "e46231003133e4bfb677e23fe7c1e6cc30ce1943a96af9757b0a63ee1eef0135"
+  },
+  "FR_O20261123": {
+   "kind": "primary",
+   "strategy": "FR",
+   "order": 20261123,
+   "installed_weights_sha256": "e288dcf03eb883d0b5f4a68e3f3424386fe3f32dfb29d2a746c00d9622afc084"
+  },
+  "FC_O20261123": {
+   "kind": "primary",
+   "strategy": "FC",
+   "order": 20261123,
+   "installed_weights_sha256": "fd9755d0837b90bb1ecf71cfede1627085c4b8f858ed64a010ea62f6f0d30d05"
+  },
+  "FR_O20261124": {
+   "kind": "primary",
+   "strategy": "FR",
+   "order": 20261124,
+   "installed_weights_sha256": "c924cb3242704710ad151e2f3a1f679808788310705a3fc79d3e94de4a473e55"
+  },
+  "FC_O20261124": {
+   "kind": "primary",
+   "strategy": "FC",
+   "order": 20261124,
+   "installed_weights_sha256": "e24651d1703085124814ff35a1526d55ecdb6ea65fd1e46527c2b684a1bf5e6d"
+  },
+  "FR_O20261125": {
+   "kind": "primary",
+   "strategy": "FR",
+   "order": 20261125,
+   "installed_weights_sha256": "64ee1c245421068e66348ccafc75aeaf83c7564fa3ee72211e1131d3cd2c6540"
+  },
+  "FC_O20261125": {
+   "kind": "primary",
+   "strategy": "FC",
+   "order": 20261125,
+   "installed_weights_sha256": "ae52419984f0bf1387a93a69b3247c8b4132c69e5926daa054e744e46d0c2974"
+  },
+  "FR_ORIGINAL": {
+   "kind": "reference_original",
+   "strategy": "FR",
+   "order": null,
+   "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066"
+  },
+  "FR_FP64": {
+   "kind": "reference_fp64",
+   "strategy": "FR",
+   "order": null,
+   "installed_weights_sha256": "a4c2eb171567fe9c1a21e9a00c2d52808800e1f7e6249fb3b75e11ceb1389106"
+  },
+  "FC_ORIGINAL": {
+   "kind": "reference_original",
+   "strategy": "FC",
+   "order": null,
+   "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4"
+  },
+  "FC_FP64": {
+   "kind": "reference_fp64",
+   "strategy": "FC",
+   "order": null,
+   "installed_weights_sha256": "dd17255cc2e882808804e3070d07b5ab7f29fcc546e31485daca1ed365e9e06a"
+  }
+ },
+ "primary_configs": [
+  "FR_O20261121",
+  "FC_O20261121",
+  "FR_O20261122",
+  "FC_O20261122",
+  "FR_O20261123",
+  "FC_O20261123",
+  "FR_O20261124",
+  "FC_O20261124",
+  "FR_O20261125",
+  "FC_O20261125"
+ ],
+ "primary_orders": [
+  20261121,
+  20261122,
+  20261123,
+  20261124,
+  20261125
+ ],
+ "reference_configs": [
+  "FR_ORIGINAL",
+  "FC_ORIGINAL",
+  "FR_FP64",
+  "FC_FP64"
+ ],
+ "references_excluded_from_primary_sd": true,
+ "evaluation": {
+  "windows": "runs_partial_ppl/windows.pt",
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "n_windows": 128,
+  "seqlen": 512,
+  "scored_targets": 65408,
+  "batch": 8,
+  "forward": "historical sequential 24-layer layer-wise offload forward (EP.layerwise_nll call order)",
+  "loss": "EP.nll_from_logits semantics; PPL = exp(sum NLL / 65408)"
+ },
+ "routing_recording": {
+  "layers": "all 24 MoE layers",
+  "stored": "ordered top-4 indices (int16, original slot order), top-4 probabilities, 5th probability (margin p4 - p5)",
+  "mechanism": "forward hook on mlp.gate recomputing softmax+topk on the router logits; block forward unmodified",
+  "position_map": "batch bi row r -> window bi*8 + r//512, position r%512"
+ },
+ "intervention": {
+  "name": "BF16-frozen top-k support",
+  "rule": "selected_experts <- BF16 reference ordered indices (same window/position/layer) in every one of the 24 MoE layers; routing weights = CURRENT softmax probs gathered at the forced indices; no renormalisation (norm_topk_prob=False); logits not modified",
+  "implementation": "moe_calib.frozen_routing.make_forced_forward (verbatim class forward with only selected_experts substituted), installed by moe_calib.inference_routing_override",
+  "not_frozen": [
+   "router logits",
+   "router probabilities",
+   "hidden states",
+   "attention",
+   "expert outputs"
+  ]
+ },
+ "parity_tests": {
+  "A_record_only": "BF16 and PARITY_CONFIG: recorder-attached forward vs historical EP.layerwise_nll: identical per-window NLL (bitwise), PPL; recorder vs no-recorder per-layer hidden-state hashes",
+  "B_bf16_self_routing": "BF16 forced with its own recorded indices vs natural BF16: bitwise per-layer hidden states, final hidden states, per-window and per-token NLL",
+  "C_quant_self_routing": "PARITY_CONFIG forced with its own natural indices vs its natural run: same recorded router selections/probs, bitwise per-layer and final hidden states, per-token NLL, PPL",
+  "parity_config": "FR_O20261121",
+  "tolerance": "exact (bitwise); no loosening after results",
+  "failure": "ROUTING-INTERVENTION-BLOCKED; stop"
+ },
+ "primary_metric": {
+  "definition": "R_SD = SD_g(Delta_frozen_g) / SD_g(Delta_natural_g), sample SD (ddof=1) over the 5 orders, Delta_g = PPL(FC_O_g) - PPL(FR_O_g) (negative = FC lower PPL)",
+  "natural_values": "from the new natural evaluator runs (required to reproduce the historical per-window NLL bitwise); historical SD 0.00287 is not hardcoded"
+ },
+ "decision_rules": {
+  "ROUTING-INTERVENTION-BLOCKED": "any mandatory parity / correctness check fails",
+  "ROUTING-NO-FLIPS": "zero top-4 SET disagreements vs BF16 across all 10 primary configs and all 24 layers (natural routing) -> stop before frozen evaluation",
+  "ROUTING-AMPLIFICATION-SUPPORTED": "R_SD <= 0.5",
+  "ROUTING-PARTIAL-CONTRIBUTION": "0.5 < R_SD < 0.9",
+  "ROUTING-NO-SUBSTANTIAL-REDUCTION": "0.9 <= R_SD <= 1.1",
+  "ROUTING-VARIABILITY-INCREASED": "R_SD > 1.1",
+  "note": "practical screening criteria on 5 deterministic orders of one seed, not hypothesis tests"
+ },
+ "secondary": [
+  "SD of FR and FC PPL under both regimes",
+  "mean / range / sign stability of Delta",
+  "delta_g = Delta_natural_g - Delta_frozen_g",
+  "fraction of windows improved/worsened by freezing",
+  "per-layer set and order-only disagreement, first divergence layer, per-window distribution",
+  "p4-p5 margin distributions (BF16 and quantized) for changed vs stable sets",
+  "token-level NLL concentration vs ORIGINAL (Analysis A), local and causal-prefix routing association (B, C), expert counts and forced-probability distributions"
+ ],
+ "token_alignment": "token NLL j (0..510) is the loss of predicting token j+1 from the logit at position j; the 'local' routing event of target j is at input position j (all 24 layers); its causal prefix is positions 0..j-1",
+ "early_stop": "if all primary configs show zero top-4 set disagreement vs BF16 in all layers, stop (ROUTING-NO-FLIPS)",
+ "out_of_scope": "no requantisation, no new orders/seeds, no router/shared-expert changes, no threshold tuning",
+ "code_sha256_at_freeze": {
+  "moe_calib/inference_routing_override.py": "13cacd0e191def1dad6c0ce40b28bd025b9569c8e2e65862dab7836e7c389ff5",
+  "moe_calib/frozen_routing.py": "01fe9b0f6b34fcab83c14189a9458aea312cfc12ff37e03ff373cd6b24859d3d",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "diagnostics/inference_routing_amplification.py": "c6cfaaf9d20a4f20aeb8e0e8b6f1b24e94a950a9354521d0409034c9a1608ec8",
+  "tests/test_inference_routing_override.py": "68178901218e29d548a345f08ca708eb944405b68aa449ce9a83f2355a20df4c"
+ },
+ "protocol_sha256": "79849e02531c1cb5c30163b8d9cf7b9c087a80f125abf575c7f8e4b4757e3329",
+ "created": "2026-11-14 03:13:53"
+}

@@ -1,0 +1,560 @@
+{
+ "confirm": {
+  "GU_AGQ_vs_FULL_AGQ": {
+   "0": {
+    "rel_4L": -0.0006719694414618966,
+    "boot_ci95": [
+     -0.0010745411595614355,
+     -0.0002755145534163728
+    ],
+    "boot_frac_a_better": 0.999,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.14453125,
+      "mean_window_ratio_diff": 5.941616309548574e-06,
+      "rel_diff": 0.019277379885465313
+     },
+     "8": {
+      "frac_windows_improved": 0.84765625,
+      "mean_window_ratio_diff": -2.1944071060765093e-05,
+      "rel_diff": -0.003190517705307539
+     },
+     "16": {
+      "frac_windows_improved": 0.32421875,
+      "mean_window_ratio_diff": 5.5248500158213135e-06,
+      "rel_diff": 0.0008725494188757449
+     },
+     "23": {
+      "frac_windows_improved": 0.3359375,
+      "mean_window_ratio_diff": 1.0252233488973068e-06,
+      "rel_diff": 0.004214493265543886
+     }
+    }
+   },
+   "1": {
+    "rel_4L": -0.0009246119526957551,
+    "boot_ci95": [
+     -0.0012820787801030632,
+     -0.0005865827532604995
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.328125,
+      "mean_window_ratio_diff": 2.8490368403331643e-06,
+      "rel_diff": 0.008422813250893958
+     },
+     "8": {
+      "frac_windows_improved": 0.88671875,
+      "mean_window_ratio_diff": -2.3728132727374895e-05,
+      "rel_diff": -0.0033857076917935534
+     },
+     "16": {
+      "frac_windows_improved": 0.2890625,
+      "mean_window_ratio_diff": 7.119318499840219e-06,
+      "rel_diff": 0.0010400621344127058
+     },
+     "23": {
+      "frac_windows_improved": 0.41796875,
+      "mean_window_ratio_diff": 8.145270233110556e-07,
+      "rel_diff": 0.003445909279068642
+     }
+    }
+   },
+   "2": {
+    "rel_4L": -0.0012776527749516315,
+    "boot_ci95": [
+     -0.0015939571518289136,
+     -0.0009604529522696498
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.32421875,
+      "mean_window_ratio_diff": 3.0076214054637533e-06,
+      "rel_diff": 0.008412531688011208
+     },
+     "8": {
+      "frac_windows_improved": 0.89453125,
+      "mean_window_ratio_diff": -2.673526559359469e-05,
+      "rel_diff": -0.0038299709056797806
+     },
+     "16": {
+      "frac_windows_improved": 0.375,
+      "mean_window_ratio_diff": 5.589715312910054e-06,
+      "rel_diff": 0.0007825054686339646
+     },
+     "23": {
+      "frac_windows_improved": 0.42578125,
+      "mean_window_ratio_diff": 6.307043381376532e-07,
+      "rel_diff": 0.0028556834817494775
+     }
+    }
+   }
+  },
+  "GU_AGQ_vs_GPTQ": {
+   "0": {
+    "rel_4L": -0.01588149174119271,
+    "boot_ci95": [
+     -0.016481437134087815,
+     -0.015276775925313952
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.5390625,
+      "mean_window_ratio_diff": -2.4125652403278912e-06,
+      "rel_diff": -0.007161152337289516
+     },
+     "8": {
+      "frac_windows_improved": 0.63671875,
+      "mean_window_ratio_diff": -1.494590487457262e-05,
+      "rel_diff": -0.002301315892645901
+     },
+     "16": {
+      "frac_windows_improved": 1.0,
+      "mean_window_ratio_diff": -0.00021443287887638911,
+      "rel_diff": -0.03028643808252426
+     },
+     "23": {
+      "frac_windows_improved": 0.80078125,
+      "mean_window_ratio_diff": -2.519050254440802e-06,
+      "rel_diff": -0.008312248550783767
+     }
+    }
+   },
+   "1": {
+    "rel_4L": -0.012271267098542099,
+    "boot_ci95": [
+     -0.012756182767781685,
+     -0.01176570632613458
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.5625,
+      "mean_window_ratio_diff": -5.545375451127752e-06,
+      "rel_diff": -0.01760669245200784
+     },
+     "8": {
+      "frac_windows_improved": 0.67578125,
+      "mean_window_ratio_diff": -1.6883929047635373e-05,
+      "rel_diff": -0.0024823183842793716
+     },
+     "16": {
+      "frac_windows_improved": 1.0,
+      "mean_window_ratio_diff": -0.0001569181305564086,
+      "rel_diff": -0.022216567055585158
+     },
+     "23": {
+      "frac_windows_improved": 0.82421875,
+      "mean_window_ratio_diff": -2.016231421348624e-06,
+      "rel_diff": -0.0064242761071337
+     }
+    }
+   },
+   "2": {
+    "rel_4L": -0.013623759310924992,
+    "boot_ci95": [
+     -0.014305797225319454,
+     -0.012920146021364739
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.640625,
+      "mean_window_ratio_diff": -1.1091582842188039e-05,
+      "rel_diff": -0.03519477948376149
+     },
+     "8": {
+      "frac_windows_improved": 0.6875,
+      "mean_window_ratio_diff": -1.8161207883774808e-05,
+      "rel_diff": -0.0026475428977141705
+     },
+     "16": {
+      "frac_windows_improved": 0.9921875,
+      "mean_window_ratio_diff": -0.00016987567895755974,
+      "rel_diff": -0.024035016888014654
+     },
+     "23": {
+      "frac_windows_improved": 0.8203125,
+      "mean_window_ratio_diff": -2.5271666785660083e-06,
+      "rel_diff": -0.008070435898395583
+     }
+    }
+   }
+  },
+  "FULL_AGQ_vs_GPTQ": {
+   "0": {
+    "rel_4L": -0.015219749506305755,
+    "boot_ci95": [
+     -0.016023296968677186,
+     -0.014451194977876121
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.6171875,
+      "mean_window_ratio_diff": -8.354181549876464e-06,
+      "rel_diff": -0.025938505792923304
+     },
+     "8": {
+      "frac_windows_improved": 0.41796875,
+      "mean_window_ratio_diff": 6.998166186192472e-06,
+      "rel_diff": 0.0008920479073038735
+     },
+     "16": {
+      "frac_windows_improved": 1.0,
+      "mean_window_ratio_diff": -0.00021995772889221043,
+      "rel_diff": -0.031131823446942833
+     },
+     "23": {
+      "frac_windows_improved": 0.84375,
+      "mean_window_ratio_diff": -3.544273603338109e-06,
+      "rel_diff": -0.01247416951292219
+     }
+    }
+   },
+   "1": {
+    "rel_4L": -0.011357156108132553,
+    "boot_ci95": [
+     -0.011983007376550465,
+     -0.010711760199991028
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.62890625,
+      "mean_window_ratio_diff": -8.394412291460918e-06,
+      "rel_diff": -0.02581209524503855
+     },
+     "8": {
+      "frac_windows_improved": 0.42578125,
+      "mean_window_ratio_diff": 6.844203679739523e-06,
+      "rel_diff": 0.0009064583103879526
+     },
+     "16": {
+      "frac_windows_improved": 1.0,
+      "mean_window_ratio_diff": -0.0001640374490562488,
+      "rel_diff": -0.02323246598184112
+     },
+     "23": {
+      "frac_windows_improved": 0.79296875,
+      "mean_window_ratio_diff": -2.83075844465968e-06,
+      "rel_diff": -0.009836290421766362
+     }
+    }
+   },
+   "2": {
+    "rel_4L": -0.012361900752773818,
+    "boot_ci95": [
+     -0.013173691558671121,
+     -0.011495149920251087
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.6796875,
+      "mean_window_ratio_diff": -1.4099204247651791e-05,
+      "rel_diff": -0.04324352365869269
+     },
+     "8": {
+      "frac_windows_improved": 0.3984375,
+      "mean_window_ratio_diff": 8.57405770981988e-06,
+      "rel_diff": 0.0011869740841737913
+     },
+     "16": {
+      "frac_windows_improved": 0.99609375,
+      "mean_window_ratio_diff": -0.00017546539427046982,
+      "rel_diff": -0.02479811769394128
+     },
+     "23": {
+      "frac_windows_improved": 0.765625,
+      "mean_window_ratio_diff": -3.157871016703662e-06,
+      "rel_diff": -0.01089500668950828
+     }
+    }
+   }
+  },
+  "note": "descriptive window bootstrap within each seed (2000 reps, seed 20261113); seeds are the replication unit, windows are not"
+ },
+ "oldtest": {
+  "GU_AGQ_vs_FULL_AGQ": {
+   "0": {
+    "rel_4L": -0.000866828678891516,
+    "boot_ci95": [
+     -0.0013573006861205524,
+     -0.00038273133317274236
+    ],
+    "boot_frac_a_better": 0.9995,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.1640625,
+      "mean_window_ratio_diff": 5.7907489512175804e-06,
+      "rel_diff": 0.020401632335034524
+     },
+     "8": {
+      "frac_windows_improved": 0.828125,
+      "mean_window_ratio_diff": -2.2187547998179508e-05,
+      "rel_diff": -0.003198170828052536
+     },
+     "16": {
+      "frac_windows_improved": 0.34375,
+      "mean_window_ratio_diff": 3.2983175653787846e-06,
+      "rel_diff": 0.000481243438112173
+     },
+     "23": {
+      "frac_windows_improved": 0.3125,
+      "mean_window_ratio_diff": 8.805306877917138e-07,
+      "rel_diff": 0.0030635173936156487
+     }
+    }
+   },
+   "1": {
+    "rel_4L": -0.0016170009232755757,
+    "boot_ci95": [
+     -0.002142547999360195,
+     -0.0010864166440675625
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.3046875,
+      "mean_window_ratio_diff": 3.1828087188909337e-06,
+      "rel_diff": 0.011902693340642256
+     },
+     "8": {
+      "frac_windows_improved": 0.90625,
+      "mean_window_ratio_diff": -2.827486632039262e-05,
+      "rel_diff": -0.00399456147704089
+     },
+     "16": {
+      "frac_windows_improved": 0.359375,
+      "mean_window_ratio_diff": 7.816767000713444e-07,
+      "rel_diff": 0.00015334152090257407
+     },
+     "23": {
+      "frac_windows_improved": 0.4375,
+      "mean_window_ratio_diff": 3.569518520826108e-07,
+      "rel_diff": 0.001255426736659991
+     }
+    }
+   },
+   "2": {
+    "rel_4L": -0.0013836740676125738,
+    "boot_ci95": [
+     -0.0019040106184903052,
+     -0.0008734409751904172
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.28125,
+      "mean_window_ratio_diff": 3.703919460724304e-06,
+      "rel_diff": 0.012390359960100295
+     },
+     "8": {
+      "frac_windows_improved": 0.890625,
+      "mean_window_ratio_diff": -2.7386330506075407e-05,
+      "rel_diff": -0.0039008558928557706
+     },
+     "16": {
+      "frac_windows_improved": 0.3671875,
+      "mean_window_ratio_diff": 2.6427270350354628e-06,
+      "rel_diff": 0.0004901202810468763
+     },
+     "23": {
+      "frac_windows_improved": 0.4296875,
+      "mean_window_ratio_diff": 5.894398835504287e-07,
+      "rel_diff": 0.002498212310865855
+     }
+    }
+   }
+  },
+  "GU_AGQ_vs_GPTQ": {
+   "0": {
+    "rel_4L": -0.015903465824261345,
+    "boot_ci95": [
+     -0.0167151584000264,
+     -0.015154050276083108
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.515625,
+      "mean_window_ratio_diff": 7.133767039660622e-07,
+      "rel_diff": 0.0017193584404469316
+     },
+     "8": {
+      "frac_windows_improved": 0.71875,
+      "mean_window_ratio_diff": -1.6703590973440414e-05,
+      "rel_diff": -0.0025423959052250345
+     },
+     "16": {
+      "frac_windows_improved": 1.0,
+      "mean_window_ratio_diff": -0.00021679854683369696,
+      "rel_diff": -0.03046069116386665
+     },
+     "23": {
+      "frac_windows_improved": 0.828125,
+      "mean_window_ratio_diff": -3.177680967413191e-06,
+      "rel_diff": -0.009062614278626752
+     }
+    }
+   },
+   "1": {
+    "rel_4L": -0.011917467380599614,
+    "boot_ci95": [
+     -0.012721604521653058,
+     -0.011135205936382628
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.578125,
+      "mean_window_ratio_diff": -3.624988920290695e-06,
+      "rel_diff": -0.009449129766879378
+     },
+     "8": {
+      "frac_windows_improved": 0.5859375,
+      "mean_window_ratio_diff": -1.1804126800802569e-05,
+      "rel_diff": -0.0017359114707228365
+     },
+     "16": {
+      "frac_windows_improved": 1.0,
+      "mean_window_ratio_diff": -0.00016033732061895644,
+      "rel_diff": -0.022538522040731014
+     },
+     "23": {
+      "frac_windows_improved": 0.796875,
+      "mean_window_ratio_diff": -2.2315764954326643e-06,
+      "rel_diff": -0.0073788539203011785
+     }
+    }
+   },
+   "2": {
+    "rel_4L": -0.012958402750946327,
+    "boot_ci95": [
+     -0.014012315548862023,
+     -0.011811457630658525
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.6640625,
+      "mean_window_ratio_diff": -9.940267917696559e-06,
+      "rel_diff": -0.03258871017561208
+     },
+     "8": {
+      "frac_windows_improved": 0.6484375,
+      "mean_window_ratio_diff": -1.2088414168667398e-05,
+      "rel_diff": -0.0017392888769109354
+     },
+     "16": {
+      "frac_windows_improved": 0.984375,
+      "mean_window_ratio_diff": -0.00016872023518060608,
+      "rel_diff": -0.023686648365486448
+     },
+     "23": {
+      "frac_windows_improved": 0.828125,
+      "mean_window_ratio_diff": -3.113426714122048e-06,
+      "rel_diff": -0.008835513936229552
+     }
+    }
+   }
+  },
+  "FULL_AGQ_vs_GPTQ": {
+   "0": {
+    "rel_4L": -0.015049682641892036,
+    "boot_ci95": [
+     -0.016107552864522378,
+     -0.01405585747873484
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.6640625,
+      "mean_window_ratio_diff": -5.077372247251517e-06,
+      "rel_diff": -0.018308745598373886
+     },
+     "8": {
+      "frac_windows_improved": 0.4140625,
+      "mean_window_ratio_diff": 5.483957024739096e-06,
+      "rel_diff": 0.0006578789320363303
+     },
+     "16": {
+      "frac_windows_improved": 0.9921875,
+      "mean_window_ratio_diff": -0.00022009686439907573,
+      "rel_diff": -0.03092705116154717
+     },
+     "23": {
+      "frac_windows_improved": 0.828125,
+      "mean_window_ratio_diff": -4.058211655204905e-06,
+      "rel_diff": -0.012089096514796224
+     }
+    }
+   },
+   "1": {
+    "rel_4L": -0.010317149297263285,
+    "boot_ci95": [
+     -0.011303497970116214,
+     -0.00929268947746942
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.6484375,
+      "mean_window_ratio_diff": -6.807797639181631e-06,
+      "rel_diff": -0.02110066832318812
+     },
+     "8": {
+      "frac_windows_improved": 0.296875,
+      "mean_window_ratio_diff": 1.6470739519590052e-05,
+      "rel_diff": 0.002267708507362723
+     },
+     "16": {
+      "frac_windows_improved": 0.9921875,
+      "mean_window_ratio_diff": -0.0001611189973190278,
+      "rel_diff": -0.02268838449024903
+     },
+     "23": {
+      "frac_windows_improved": 0.765625,
+      "mean_window_ratio_diff": -2.588528347515275e-06,
+      "rel_diff": -0.008623454541567314
+     }
+    }
+   },
+   "2": {
+    "rel_4L": -0.011590766526400086,
+    "boot_ci95": [
+     -0.012883295161462142,
+     -0.010198872213574408
+    ],
+    "boot_frac_a_better": 1.0,
+    "layers": {
+     "1": {
+      "frac_windows_improved": 0.6796875,
+      "mean_window_ratio_diff": -1.3644187378420861e-05,
+      "rel_diff": -0.0444285839875886
+     },
+     "8": {
+      "frac_windows_improved": 0.3671875,
+      "mean_window_ratio_diff": 1.529791633740801e-05,
+      "rel_diff": 0.0021700319980521225
+     },
+     "16": {
+      "frac_windows_improved": 0.984375,
+      "mean_window_ratio_diff": -0.00017136296221564155,
+      "rel_diff": -0.024164924926736754
+     },
+     "23": {
+      "frac_windows_improved": 0.8671875,
+      "mean_window_ratio_diff": -3.702866597672477e-06,
+      "rel_diff": -0.01130548275090681
+     }
+    }
+   }
+  },
+  "note": "descriptive window bootstrap within each seed (2000 reps, seed 20261113); seeds are the replication unit, windows are not"
+ }
+}

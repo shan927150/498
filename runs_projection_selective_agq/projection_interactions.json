@@ -1,0 +1,353 @@
+{
+ "definition": "I = E_D - E_B - E_C + E_A; gains positive = improvement; I > 0 antagonistic, I < 0 synergistic (for this lower-is-better squared-error metric)",
+ "splits": {
+  "tune": {
+   "8": {
+    "E": {
+     "GPTQ": 0.007115236692270128,
+     "GU_AGQ": 0.007095938756486313,
+     "DOWN_AGQ": 0.0071379027150895655,
+     "FULL_AGQ": 0.007116386972828147
+    },
+    "G_GU_given_down_gptq": 1.9297935783814738e-05,
+    "G_D_given_gu_gptq": -2.266602281943749e-05,
+    "G_GU_given_down_agq": 2.1515742261418724e-05,
+    "G_D_given_gu_agq": -2.0448216341833504e-05,
+    "interaction_I": -2.217806477603987e-06,
+    "full_agq_gain": -1.1502805580187667e-06,
+    "rel": {
+     "G_GU_given_down_gptq": 0.0027121987108003993,
+     "G_D_given_gu_gptq": -0.003185561324201832,
+     "G_GU_given_down_agq": 0.0030238969119316945,
+     "G_D_given_gu_agq": -0.0028738631230705363,
+     "interaction_I": -0.00031169820113129533,
+     "full_agq_gain": -0.00016166441227013738
+    },
+    "shapley_share_of_full_gain": {
+     "GU": -17.74074931577153,
+     "DOWN": 18.74074931577153
+    },
+    "interaction_over_full_gain": 1.9280569963069858,
+    "interaction_sign": "synergistic",
+    "diagonal_D_interactions": {
+     "E": {
+      "GPTQ": 0.007116272114278994,
+      "GU_AGQ": 0.007097083347851881,
+      "DOWN_AGQ": 0.007138780934584121,
+      "FULL_AGQ": 0.007118755454762693
+     },
+     "G_GU_given_down_gptq": 1.918876642711346e-05,
+     "G_D_given_gu_gptq": -2.2508820305126853e-05,
+     "G_GU_given_down_agq": 2.0025479821428153e-05,
+     "G_D_given_gu_agq": -2.167210691081216e-05,
+     "interaction_I": -8.367133943146948e-07,
+     "full_agq_gain": -2.4833404836986997e-06,
+     "rel": {
+      "G_GU_given_down_gptq": 0.002696463277255893,
+      "G_D_given_gu_gptq": -0.003163007252064222,
+      "G_GU_given_down_agq": 0.002814040764580444,
+      "G_D_given_gu_agq": -0.003045429764739671,
+      "interaction_I": -0.00011757748732455109,
+      "full_agq_gain": -0.0003489664874837781
+     },
+     "shapley_share_of_full_gain": {
+      "GU": -7.895463088117445,
+      "DOWN": 8.895463088117445
+     },
+     "interaction_over_full_gain": 0.3369305980420734,
+     "interaction_sign": "synergistic"
+    },
+    "cross_C_interaction_abs": -1.3810928491722268e-06
+   },
+   "16": {
+    "E": {
+     "GPTQ": 0.007145263332788199,
+     "GU_AGQ": 0.006930765850814545,
+     "DOWN_AGQ": 0.007121990003773428,
+     "FULL_AGQ": 0.006926336838070509
+    },
+    "G_GU_given_down_gptq": 0.00021449748197365382,
+    "G_D_given_gu_gptq": 2.3273329014771027e-05,
+    "G_GU_given_down_agq": 0.0001956531657029189,
+    "G_D_given_gu_agq": 4.4290127440361e-06,
+    "interaction_I": 1.8844316270734927e-05,
+    "full_agq_gain": 0.00021892649471768992,
+    "rel": {
+     "G_GU_given_down_gptq": 0.030019534897946638,
+     "G_D_given_gu_gptq": 0.0032571688307097553,
+     "G_GU_given_down_agq": 0.027382219043643255,
+     "G_D_given_gu_agq": 0.000619852976406375,
+     "interaction_I": 0.0026373158543033805,
+     "full_agq_gain": 0.03063938787435301
+    },
+    "shapley_share_of_full_gain": {
+     "GU": 0.9367314088810268,
+     "DOWN": 0.06326859111897318
+    },
+    "interaction_over_full_gain": 0.0860759968547208,
+    "interaction_sign": "antagonistic",
+    "diagonal_D_interactions": {
+     "E": {
+      "GPTQ": 0.00714568750546129,
+      "GU_AGQ": 0.006931515873146956,
+      "DOWN_AGQ": 0.00712341486183512,
+      "FULL_AGQ": 0.006927813999748157
+     },
+     "G_GU_given_down_gptq": 0.00021417163231433455,
+     "G_D_given_gu_gptq": 2.2272643626169986e-05,
+     "G_GU_given_down_agq": 0.00019560086208696321,
+     "G_D_given_gu_agq": 3.7018733987986482e-06,
+     "interaction_I": 1.8570770227371337e-05,
+     "full_agq_gain": 0.0002178735057131332,
+     "rel": {
+      "G_GU_given_down_gptq": 0.029972152035846505,
+      "G_D_given_gu_gptq": 0.0031169350197790624,
+      "G_GU_given_down_agq": 0.02737327401141875,
+      "G_D_given_gu_agq": 0.0005180569953513064,
+      "interaction_I": 0.002598878024427756,
+      "full_agq_gain": 0.030490209031197812
+     },
+     "shapley_share_of_full_gain": {
+      "GU": 0.9403908315057627,
+      "DOWN": 0.05960916849423724
+     },
+     "interaction_over_full_gain": 0.0852364777745067,
+     "interaction_sign": "antagonistic"
+    },
+    "cross_C_interaction_abs": 2.7354594107835897e-07
+   }
+  },
+  "confirm": {
+   "8": {
+    "E": {
+     "GPTQ": 0.007096579799022389,
+     "GU_AGQ": 0.007080248327147468,
+     "DOWN_AGQ": 0.007120845708558513,
+     "FULL_AGQ": 0.007102910288181121
+    },
+    "G_GU_given_down_gptq": 1.633147187492072e-05,
+    "G_D_given_gu_gptq": -2.4265909536124244e-05,
+    "G_GU_given_down_agq": 1.7935420377391924e-05,
+    "G_D_given_gu_agq": -2.266196103365304e-05,
+    "interaction_I": -1.6039485024712044e-06,
+    "full_agq_gain": -6.330489158732321e-06,
+    "rel": {
+     "G_GU_given_down_gptq": 0.0023013158926459914,
+     "G_D_given_gu_gptq": -0.0034193809163488966,
+     "G_GU_given_down_agq": 0.0025273330090451,
+     "G_D_given_gu_agq": -0.003193363799949788,
+     "interaction_I": -0.00022601711639910838,
+     "full_agq_gain": -0.0008920479073037967
+    },
+    "shapley_share_of_full_gain": {
+     "GU": -2.706496401233438,
+     "DOWN": 3.706496401233438
+    },
+    "interaction_over_full_gain": 0.2533688096217188,
+    "interaction_sign": "synergistic",
+    "diagonal_D_interactions": {
+     "E": {
+      "GPTQ": 0.0070969116820564,
+      "GU_AGQ": 0.007078994806200162,
+      "DOWN_AGQ": 0.007120698160900361,
+      "FULL_AGQ": 0.00710192724907738
+     },
+     "G_GU_given_down_gptq": 1.7916875856237996e-05,
+     "G_D_given_gu_gptq": -2.378647884396061e-05,
+     "G_GU_given_down_agq": 1.8770911822980386e-05,
+     "G_D_given_gu_agq": -2.293244287721822e-05,
+     "interaction_I": -8.540359667423905e-07,
+     "full_agq_gain": -5.015567020980223e-06,
+     "rel": {
+      "G_GU_given_down_gptq": 0.002524601778762224,
+      "G_D_given_gu_gptq": -0.0033516661767260775,
+      "G_GU_given_down_agq": 0.002644940879064361,
+      "G_D_given_gu_agq": -0.003231327076423941,
+      "interaction_I": -0.00012033910030213666,
+      "full_agq_gain": -0.0007067252976617166
+     },
+     "shapley_share_of_full_gain": {
+      "GU": -3.657391828855301,
+      "DOWN": 4.6573918288553005
+     },
+     "interaction_over_full_gain": 0.17027705206010407,
+     "interaction_sign": "synergistic"
+    },
+    "cross_C_interaction_abs": -7.499126524517406e-07
+   },
+   "16": {
+    "E": {
+     "GPTQ": 0.007029577300910511,
+     "GU_AGQ": 0.006816676443240167,
+     "DOWN_AGQ": 0.007004825068284552,
+     "FULL_AGQ": 0.006810733741471928
+    },
+    "G_GU_given_down_gptq": 0.0002129008576703447,
+    "G_D_given_gu_gptq": 2.4752232625959575e-05,
+    "G_GU_given_down_agq": 0.00019409132681262337,
+    "G_D_given_gu_agq": 5.9427017682382385e-06,
+    "interaction_I": 1.8809530857721336e-05,
+    "full_agq_gain": 0.00021884355943858295,
+    "rel": {
+     "G_GU_given_down_gptq": 0.03028643808252433,
+     "G_D_given_gu_gptq": 0.003521155194175548,
+     "G_GU_given_down_agq": 0.02761066825276728,
+     "G_D_given_gu_agq": 0.0008453853644184987,
+     "interaction_I": 0.0026757698297570492,
+     "full_agq_gain": 0.03113182344694283
+    },
+    "shapley_share_of_full_gain": {
+     "GU": 0.9298701445156942,
+     "DOWN": 0.0701298554843058
+    },
+    "interaction_over_full_gain": 0.08594966608098929,
+    "interaction_sign": "antagonistic",
+    "diagonal_D_interactions": {
+     "E": {
+      "GPTQ": 0.007030028420429639,
+      "GU_AGQ": 0.006816103452326375,
+      "DOWN_AGQ": 0.007005104756058275,
+      "FULL_AGQ": 0.006810314622347597
+     },
+     "G_GU_given_down_gptq": 0.0002139249681032641,
+     "G_D_given_gu_gptq": 2.492366437136396e-05,
+     "G_GU_given_down_agq": 0.0001947901337106782,
+     "G_D_given_gu_agq": 5.78882997877804e-06,
+     "interaction_I": 1.913483439258592e-05,
+     "full_agq_gain": 0.00021971379808204215,
+     "rel": {
+      "G_GU_given_down_gptq": 0.030430171161411907,
+      "G_D_given_gu_gptq": 0.0035453148807954257,
+      "G_GU_given_down_agq": 0.027708299605817756,
+      "G_D_given_gu_agq": 0.0008234433252012738,
+      "interaction_I": 0.0027218715555941517,
+      "full_agq_gain": 0.03125361448661318
+     },
+     "shapley_share_of_full_gain": {
+      "GU": 0.9301079526678752,
+      "DOWN": 0.0698920473321248
+     },
+     "interaction_over_full_gain": 0.0870898166597661,
+     "interaction_sign": "antagonistic"
+    },
+    "cross_C_interaction_abs": -3.25304272266876e-07
+   }
+  },
+  "oldtest": {
+   "8": {
+    "E": {
+     "GPTQ": 0.007173198373874861,
+     "GU_AGQ": 0.0071549612637017545,
+     "DOWN_AGQ": 0.007198186300852856,
+     "FULL_AGQ": 0.00717791746996035
+    },
+    "G_GU_given_down_gptq": 1.823711017310669e-05,
+    "G_D_given_gu_gptq": -2.4987926977994984e-05,
+    "G_GU_given_down_agq": 2.026883089250621e-05,
+    "G_D_given_gu_agq": -2.2956206258595464e-05,
+    "interaction_I": -2.03172071939952e-06,
+    "full_agq_gain": -4.719096085488775e-06,
+    "rel": {
+     "G_GU_given_down_gptq": 0.0025423959052250857,
+     "G_D_given_gu_gptq": -0.0034835126084066257,
+     "G_GU_given_down_agq": 0.0028256336763704012,
+     "G_D_given_gu_agq": -0.00320027483726131,
+     "interaction_I": -0.0002832377711453159,
+     "full_agq_gain": -0.0006578789320362243
+    },
+    "shapley_share_of_full_gain": {
+     "GU": -4.079800492303887,
+     "DOWN": 5.079800492303887
+    },
+    "interaction_over_full_gain": 0.43053175493651485,
+    "interaction_sign": "synergistic",
+    "diagonal_D_interactions": {
+     "E": {
+      "GPTQ": 0.0071730637031591805,
+      "GU_AGQ": 0.007154560699141148,
+      "DOWN_AGQ": 0.0071993785126553845,
+      "FULL_AGQ": 0.007179350310456263
+     },
+     "G_GU_given_down_gptq": 1.8503004018032877e-05,
+     "G_D_given_gu_gptq": -2.6314809496203947e-05,
+     "G_GU_given_down_agq": 2.002820219912122e-05,
+     "G_D_given_gu_agq": -2.4789611315115603e-05,
+     "interaction_I": -1.5251981810883442e-06,
+     "full_agq_gain": -6.286607297082726e-06,
+     "rel": {
+      "G_GU_given_down_gptq": 0.0025795120165855675,
+      "G_D_given_gu_gptq": -0.003668559291424431,
+      "G_GU_given_down_agq": 0.002792140573113877,
+      "G_D_given_gu_agq": -0.0034559307348961217,
+      "interaction_I": -0.0002126285565283091,
+      "full_agq_gain": -0.0008764187183105542
+     },
+     "shapley_share_of_full_gain": {
+      "GU": -3.0645469325747725,
+      "DOWN": 4.064546932574772
+     },
+     "interaction_over_full_gain": 0.24261069747367647,
+     "interaction_sign": "synergistic"
+    },
+    "cross_C_interaction_abs": -5.06522798634972e-07
+   },
+   "16": {
+    "E": {
+     "GPTQ": 0.007090592442089353,
+     "GU_AGQ": 0.006874608095542022,
+     "DOWN_AGQ": 0.007067421452089542,
+     "FULL_AGQ": 0.0068713013268671755
+    },
+    "G_GU_given_down_gptq": 0.00021598434654733056,
+    "G_D_given_gu_gptq": 2.3170989999810737e-05,
+    "G_GU_given_down_agq": 0.00019612012522236648,
+    "G_D_given_gu_agq": 3.3067686748466593e-06,
+    "interaction_I": 1.9864221324964078e-05,
+    "full_agq_gain": 0.00021929111522217722,
+    "rel": {
+     "G_GU_given_down_gptq": 0.030460691163866616,
+     "G_D_given_gu_gptq": 0.003267849645717763,
+     "G_GU_given_down_agq": 0.027659201515829422,
+     "G_D_given_gu_agq": 0.0004663599976805702,
+     "interaction_I": 0.0028014896480371924,
+     "full_agq_gain": 0.030927051161547186
+    },
+    "shapley_share_of_full_gain": {
+     "GU": 0.9396287472754399,
+     "DOWN": 0.06037125272456014
+    },
+    "interaction_over_full_gain": 0.09058379453649283,
+    "interaction_sign": "antagonistic",
+    "diagonal_D_interactions": {
+     "E": {
+      "GPTQ": 0.007090751720105192,
+      "GU_AGQ": 0.00687451368479979,
+      "DOWN_AGQ": 0.007067083198351018,
+      "FULL_AGQ": 0.006870753913679884
+     },
+     "G_GU_given_down_gptq": 0.0002162380353054015,
+     "G_D_given_gu_gptq": 2.3668521754173846e-05,
+     "G_GU_given_down_agq": 0.00019632928467113418,
+     "G_D_given_gu_agq": 3.7597711199065242e-06,
+     "interaction_I": 1.9908750634267322e-05,
+     "full_agq_gain": 0.00021999780642530803,
+     "rel": {
+      "G_GU_given_down_gptq": 0.03049578434572429,
+      "G_D_given_gu_gptq": 0.003337942532533451,
+      "G_GU_given_down_agq": 0.02768807771317956,
+      "G_D_given_gu_agq": 0.0005302358999887177,
+      "interaction_I": 0.0028077066325447333,
+      "full_agq_gain": 0.03102602024571301
+     },
+     "shapley_share_of_full_gain": {
+      "GU": 0.9376623491848484,
+      "DOWN": 0.062337650815151684
+     },
+     "interaction_over_full_gain": 0.09049522337408664,
+     "interaction_sign": "antagonistic"
+    },
+    "cross_C_interaction_abs": -4.453023728055224e-08
+   }
+  }
+ }
+}

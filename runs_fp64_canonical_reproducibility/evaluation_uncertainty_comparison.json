@@ -1,0 +1,190 @@
+{
+ "fixed_model_window_intervals": {
+  "s0_G20261111": {
+   "point": -0.00043866608386222694,
+   "ci95": [
+    -0.0012920665132801767,
+    0.00047274570450970264
+   ],
+   "delta_ppl": -0.0040691312519403056,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s0_G20261112": {
+   "point": 0.0008198341561138633,
+   "ci95": [
+    -1.5049619700901992e-05,
+    0.0016608604809993375
+   ],
+   "delta_ppl": 0.007601468743024142,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s0_G20261113": {
+   "point": -0.0006353720263931883,
+   "ci95": [
+    -0.0015163508606910626,
+    0.00024170424430901502
+   ],
+   "delta_ppl": -0.005888685361876256,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s0_G20261114": {
+   "point": -0.0009051494916620939,
+   "ci95": [
+    -0.0017381455950482017,
+    -3.810999814051199e-05
+   ],
+   "delta_ppl": -0.008394269300051604,
+   "excludes_zero": true,
+   "favours": "FC"
+  },
+  "s0_G20261115": {
+   "point": 0.00011768414793644766,
+   "ci95": [
+    -0.0008344604279018397,
+    0.001100667976548908
+   ],
+   "delta_ppl": 0.001091315979735441,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s1_G20261111": {
+   "point": -5.684066254429965e-05,
+   "ci95": [
+    -0.0009860695936833917,
+    0.0008810480719248501
+   ],
+   "delta_ppl": -0.0005266762392182045,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s1_G20261112": {
+   "point": -0.0003968777807838997,
+   "ci95": [
+    -0.001310093197127471,
+    0.0005133251556794662
+   ],
+   "delta_ppl": -0.003677348635330091,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s1_G20261113": {
+   "point": 0.00031949798840624766,
+   "ci95": [
+    -0.0005880545515314029,
+    0.001246198067425852
+   ],
+   "delta_ppl": 0.0029607233652608755,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s1_G20261114": {
+   "point": 0.000917361823197016,
+   "ci95": [
+    2.9367395199420005e-05,
+    0.0018316509240743127
+   ],
+   "delta_ppl": 0.008505116411969382,
+   "excludes_zero": true,
+   "favours": "FR"
+  },
+  "s1_G20261115": {
+   "point": -0.00041264816490960143,
+   "ci95": [
+    -0.0013911397499165256,
+    0.0005695805388321257
+   ],
+   "delta_ppl": -0.003825823680646323,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s2_G20261111": {
+   "point": 0.0010719301759247735,
+   "ci95": [
+    0.00012639719547393735,
+    0.0020330116558957665
+   ],
+   "delta_ppl": 0.009934220514541181,
+   "excludes_zero": true,
+   "favours": "FR"
+  },
+  "s2_G20261112": {
+   "point": 7.511997930542691e-05,
+   "ci95": [
+    -0.0009301951509753325,
+    0.0010877498745395671
+   ],
+   "delta_ppl": 0.0006963034583176153,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s2_G20261113": {
+   "point": -0.001460694767482007,
+   "ci95": [
+    -0.0025420831577020906,
+    -0.00040186352609107454
+   ],
+   "delta_ppl": -0.013548852228240094,
+   "excludes_zero": true,
+   "favours": "FC"
+  },
+  "s2_G20261114": {
+   "point": -0.0005438299224866938,
+   "ci95": [
+    -0.0016069345967851256,
+    0.0005440643311658915
+   ],
+   "delta_ppl": -0.005040725132783308,
+   "excludes_zero": false,
+   "favours": null
+  },
+  "s2_G20261115": {
+   "point": -0.0004887803690167836,
+   "ci95": [
+    -0.0015966290919665505,
+    0.0006183595900573709
+   ],
+   "delta_ppl": -0.004531279076493533,
+   "excludes_zero": false,
+   "favours": null
+  }
+ },
+ "n_excluding_zero": {
+  "favour_FR": 2,
+  "favour_FC": 2
+ },
+ "original_s0_window_ci_mean_nll": {
+  "point": 0.001084549887765185,
+  "ci95": [
+   0.00020197562408030834,
+   0.0020038672419037335
+  ]
+ },
+ "canonical_window_ci_mean_nll": {
+  "point": 0.0007686648129965334,
+  "ci95": [
+   -0.00012927158009340411,
+   0.0016800362949391239
+  ],
+  "n_boot": 5000,
+  "seed": 20261109
+ },
+ "execution_level": {
+  "hierarchical_interval_ppl": [
+   -0.004777081840922672,
+   0.0021549580959289542
+  ],
+  "hierarchical_interval_mean_nll": [
+   -0.0005151127986423128,
+   0.00023247108727963658
+  ],
+  "pooled_within_seed_sd_ppl": 0.006871891170852839
+ },
+ "conditioning": {
+  "window": "conditional on ONE fixed pair of quantized models; resamples evaluation windows",
+  "execution": "resamples allocation seeds and, within them, execution groupings; windows fixed"
+ },
+ "conclusion": "fixed-model window intervals exclude zero in BOTH directions for different valid groupings of the same selections, so they do not measure execution-induced variability"
+}

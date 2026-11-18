@@ -1,0 +1,32 @@
+{
+ "incremental_mvp": {
+  "new_quantization_s": 0.0,
+  "note": "historical candidates reused (bitwise verified); no GPTQ/AGQ solves",
+  "weight_loading_s": 20.873217821121216,
+  "regression_s": 119.20414423942566,
+  "validation_s": 200.2837746143341,
+  "selection_s": 36.01028299331665,
+  "confirmation_s": 352.14877700805664,
+  "oldtest_s": 93.17577528953552,
+  "peak_gpu_gb": 9.962038784,
+  "peak_cpu_gb": 8.682708,
+  "temporary_storage_bytes": 8000326,
+  "timings_include": "lean fp32 evaluation + LayerEvalAccumulator cross-check + native BF16 forward"
+ },
+ "estimated_fresh_deployment_2_layers": {
+  "method": "historical 4-layer (Hessian + GPTQ) seconds / 2; validation = measured lean tuning pass (includes the accumulator cross-check, an upper bound)",
+  "uniform_GPTQ_s": 144.0853774547577,
+  "uniform_AGQ_s": 144.0447874069214,
+  "layerwise_uniform_s": 318.9707260131836,
+  "projection_selective_s": 438.18577218055725,
+  "projection_vs_single_run": 3.041153654319614
+ },
+ "storage": {
+  "final": "one 4-bit candidate tensor per projection; identical format and size to uniform",
+  "offline": "both candidate sets held until selection (2x)"
+ },
+ "inference": {
+  "expected_change": "none; no routing parameters or runtime selection added",
+  "measured": false
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "primary": {
+  "verdict": "C2-NO-GAIN",
+  "surrogate_criterion": false,
+  "any_layer_improved": false,
+  "no_layer_regression": true,
+  "cost_ok": true,
+  "worst_layer_rel": 0.0010243064561029419,
+  "pooled_c2_rel": 0.008306469622362044
+ },
+ "correctness_ok": true,
+ "unstable": false,
+ "effect_sizes": {
+  "pooled_E2_q2_vs_q1": 0.008306469622362044,
+  "pooled_E0_q2_vs_q1": 0.018023616207866234,
+  "layer_output_q2_vs_q1": {
+   "8": 0.0010243064561029419,
+   "16": 0.0007182381363472212
+  },
+  "layer_output_q1_vs_q0": {
+   "8": -3.9303607809292154e-05,
+   "16": -9.874857654014283e-05
+  },
+  "layer_output_q2_vs_q0": {
+   "8": 0.0009849625893544225,
+   "16": 0.0006194186348134973
+  }
+ },
+ "rules": {
+  "surrogate_gain_rel": 0.01,
+  "max_layer_regression_rel": 0.005,
+  "cost": {
+   "max_time_increase_vs_q0": 0.25,
+   "max_peak_gpu_increase_vs_q0": 0.1,
+   "measured_as": "Profiler Hessian pass + 36 GPTQ solves per layer"
+  },
+  "C2_PILOT_PROMISING": "pooled E2(q2) <= -1 % vs q1 AND layer output (C vs B) improves in >= 1 of L8/L16 AND no layer regresses by > 0.5 % vs q1 AND correctness AND cost modest",
+  "C2_REGRESSION": "any layer output (C vs B) > +0.5 %, or unstable quantization (non-finite / dead-column change)",
+  "C2_SURROGATE_ONLY": "pooled E2 criterion met but layer-output criteria not",
+  "C2_NO_GAIN": "otherwise",
+  "C2_BLOCKED": "correctness / stability / missing baseline",
+  "note": "screening rules, not significance tests; frozen before any q = 2 quality result"
+ }
+}

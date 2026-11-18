@@ -1,0 +1,667 @@
+{
+ "confirm": {
+  "seeds": {
+   "0": {
+    "1": {
+     "E": {
+      "GPTQ": 0.00030662121166850984,
+      "GU_AGQ": 0.00030442545046190735,
+      "DOWN_AGQ": 0.0003009460123896229,
+      "FULL_AGQ": 0.00029866791559341306
+     },
+     "phi_GU_rel": 0.007295415047229478,
+     "phi_D_rel": 0.01864309074569375,
+     "full_gain_rel": 0.025938505792923228,
+     "interaction_rel": -0.00026852541987987526,
+     "identity_residual": 0.0,
+     "share_GU": 0.28125810736638024,
+     "share_D": 0.7187418926336198,
+     "G_GU_given_down_gptq_rel": 0.00716115233728954,
+     "G_D_given_gu_gptq_rel": 0.018508828035753815,
+     "G_GU_given_down_agq_rel": 0.007429677757169415,
+     "G_D_given_gu_agq_rel": 0.018777353455633687,
+     "interaction_sign": "synergistic"
+    },
+    "8": {
+     "E": {
+      "GPTQ": 0.007096579799022389,
+      "GU_AGQ": 0.007080248327147468,
+      "DOWN_AGQ": 0.007120845708558513,
+      "FULL_AGQ": 0.007102910288181121
+     },
+     "phi_GU_rel": 0.0024143244508455456,
+     "phi_D_rel": -0.0033063723581493423,
+     "full_gain_rel": -0.0008920479073037967,
+     "interaction_rel": -0.00022601711639910838,
+     "identity_residual": 0.0,
+     "share_GU": null,
+     "share_D": null,
+     "G_GU_given_down_gptq_rel": 0.0023013158926459914,
+     "G_D_given_gu_gptq_rel": -0.0034193809163488966,
+     "G_GU_given_down_agq_rel": 0.0025273330090451,
+     "G_D_given_gu_agq_rel": -0.003193363799949788,
+     "interaction_sign": "synergistic"
+    },
+    "16": {
+     "E": {
+      "GPTQ": 0.007029577300910511,
+      "GU_AGQ": 0.006816676443240167,
+      "DOWN_AGQ": 0.007004825068284552,
+      "FULL_AGQ": 0.006810733741471928
+     },
+     "phi_GU_rel": 0.028948553167645805,
+     "phi_D_rel": 0.002183270279297023,
+     "full_gain_rel": 0.03113182344694283,
+     "interaction_rel": 0.0026757698297570492,
+     "identity_residual": 0.0,
+     "share_GU": 0.9298701445156942,
+     "share_D": 0.0701298554843058,
+     "G_GU_given_down_gptq_rel": 0.03028643808252433,
+     "G_D_given_gu_gptq_rel": 0.003521155194175548,
+     "G_GU_given_down_agq_rel": 0.02761066825276728,
+     "G_D_given_gu_agq_rel": 0.0008453853644184987,
+     "interaction_sign": "antagonistic"
+    },
+    "23": {
+     "E": {
+      "GPTQ": 0.00029250496225445506,
+      "GU_AGQ": 0.0002900735883058584,
+      "DOWN_AGQ": 0.00029138344567299144,
+      "FULL_AGQ": 0.00028885620577192206
+     },
+     "phi_GU_rel": 0.008476119193753113,
+     "phi_D_rel": 0.003998050319169161,
+     "full_gain_rel": 0.012474169512922274,
+     "interaction_rel": -0.0003277412859387408,
+     "identity_residual": 0.0,
+     "share_GU": 0.6794936676924672,
+     "share_D": 0.3205063323075328,
+     "G_GU_given_down_gptq_rel": 0.008312248550783743,
+     "G_D_given_gu_gptq_rel": 0.0038341796761997907,
+     "G_GU_given_down_agq_rel": 0.008639989836722484,
+     "G_D_given_gu_agq_rel": 0.0041619209621385315,
+     "interaction_sign": "synergistic"
+    }
+   },
+   "1": {
+    "1": {
+     "E": {
+      "GPTQ": 0.000307712906080889,
+      "GU_AGQ": 0.00030229509958000923,
+      "DOWN_AGQ": 0.00030490764451315686,
+      "FULL_AGQ": 0.0002997701912410015
+     },
+     "phi_GU_rel": 0.01715114895158228,
+     "phi_D_rel": 0.008660946293456304,
+     "full_gain_rel": 0.025812095245038583,
+     "interaction_rel": 0.0009110870008510277,
+     "identity_residual": 0.0,
+     "share_GU": 0.6644617102472126,
+     "share_D": 0.3355382897527875,
+     "G_GU_given_down_gptq_rel": 0.017606692452007792,
+     "G_D_given_gu_gptq_rel": 0.009116489793881818,
+     "G_GU_given_down_agq_rel": 0.016695605451156764,
+     "G_D_given_gu_agq_rel": 0.008205402793030791,
+     "interaction_sign": "antagonistic"
+    },
+    "8": {
+     "E": {
+      "GPTQ": 0.007116718725566844,
+      "GU_AGQ": 0.007099052763838624,
+      "DOWN_AGQ": 0.007142046563841102,
+      "FULL_AGQ": 0.007123169734398328
+     },
+     "phi_GU_rel": 0.002567390435125227,
+     "phi_D_rel": -0.0034738487455132825,
+     "full_gain_rel": -0.0009064583103880552,
+     "interaction_rel": -0.00017014410169175688,
+     "identity_residual": 0.0,
+     "share_GU": null,
+     "share_D": null,
+     "G_GU_given_down_gptq_rel": 0.0024823183842793486,
+     "G_D_given_gu_gptq_rel": -0.0035589207963591606,
+     "G_GU_given_down_agq_rel": 0.0026524624859711053,
+     "G_D_given_gu_agq_rel": -0.003388776694667404,
+     "interaction_sign": "synergistic"
+    },
+    "16": {
+     "E": {
+      "GPTQ": 0.0070124981819754476,
+      "GU_AGQ": 0.006856704545888421,
+      "DOWN_AGQ": 0.0069932970827284125,
+      "FULL_AGQ": 0.00684958055651498
+     },
+     "phi_GU_rel": 0.02135545382887256,
+     "phi_D_rel": 0.0018770121529685956,
+     "full_gain_rel": 0.023232465981841158,
+     "interaction_rel": 0.001722226453425141,
+     "identity_residual": 0.0,
+     "share_GU": 0.9192073646234672,
+     "share_D": 0.08079263537653283,
+     "G_GU_given_down_gptq_rel": 0.022216567055585133,
+     "G_D_given_gu_gptq_rel": 0.002738125379681166,
+     "G_GU_given_down_agq_rel": 0.020494340602159992,
+     "G_D_given_gu_agq_rel": 0.0010158989262560251,
+     "interaction_sign": "antagonistic"
+    },
+    "23": {
+     "E": {
+      "GPTQ": 0.00029382335166515486,
+      "GU_AGQ": 0.00029193574932733445,
+      "DOWN_AGQ": 0.0002927511081587759,
+      "FULL_AGQ": 0.0002909332198454796
+     },
+     "phi_GU_rel": 0.006305643561202584,
+     "phi_D_rel": 0.003530646860563803,
+     "full_gain_rel": 0.009836290421766387,
+     "interaction_rel": 0.0002372650918623393,
+     "identity_residual": 0.0,
+     "share_GU": 0.6410591077352742,
+     "share_D": 0.3589408922647258,
+     "G_GU_given_down_gptq_rel": 0.006424276107133754,
+     "G_D_given_gu_gptq_rel": 0.0036492794064949727,
+     "G_GU_given_down_agq_rel": 0.006187011015271414,
+     "G_D_given_gu_agq_rel": 0.0034120143146326334,
+     "interaction_sign": "antagonistic"
+    }
+   },
+   "2": {
+    "1": {
+     "E": {
+      "GPTQ": 0.0003138111945468696,
+      "GU_AGQ": 0.00030276667875525675,
+      "DOWN_AGQ": 0.0003108112025663505,
+      "FULL_AGQ": 0.0003002408927311194
+     },
+     "phi_GU_rel": 0.034439220146456,
+     "phi_D_rel": 0.008804303512236789,
+     "full_gain_rel": 0.043243523658692794,
+     "interaction_rel": 0.0015111186746109989,
+     "identity_residual": 0.0,
+     "share_GU": 0.7964018015338824,
+     "share_D": 0.20359819846611762,
+     "G_GU_given_down_gptq_rel": 0.0351947794837615,
+     "G_D_given_gu_gptq_rel": 0.009559862849542288,
+     "G_GU_given_down_agq_rel": 0.0336836608091505,
+     "G_D_given_gu_agq_rel": 0.008048744174931288,
+     "interaction_sign": "antagonistic"
+    },
+    "8": {
+     "E": {
+      "GPTQ": 0.007111962336088253,
+      "GU_AGQ": 0.007093133110716532,
+      "DOWN_AGQ": 0.007137991608428067,
+      "FULL_AGQ": 0.00712040405106881
+     },
+     "phi_GU_rel": 0.0025602485650260253,
+     "phi_D_rel": -0.003747222649199845,
+     "full_gain_rel": -0.00118697408417382,
+     "interaction_rel": 0.00017458866537625444,
+     "identity_residual": 0.0,
+     "share_GU": null,
+     "share_D": null,
+     "G_GU_given_down_gptq_rel": 0.0026475428977141523,
+     "G_D_given_gu_gptq_rel": -0.003659928316511718,
+     "G_GU_given_down_agq_rel": 0.002472954232337898,
+     "G_D_given_gu_agq_rel": -0.0038345169818879725,
+     "interaction_sign": "antagonistic"
+    },
+    "16": {
+     "E": {
+      "GPTQ": 0.0070034482030429486,
+      "GU_AGQ": 0.006835120207208475,
+      "DOWN_AGQ": 0.006977246679224224,
+      "FULL_AGQ": 0.006829775870240468
+     },
+     "phi_GU_rel": 0.022545951341584637,
+     "phi_D_rel": 0.002252166352356642,
+     "full_gain_rel": 0.02479811769394128,
+     "interaction_rel": 0.002978131092860069,
+     "identity_residual": 0.0,
+     "share_GU": 0.9091799474398455,
+     "share_D": 0.09082005256015441,
+     "G_GU_given_down_gptq_rel": 0.02403501688801467,
+     "G_D_given_gu_gptq_rel": 0.003741231898786677,
+     "G_GU_given_down_agq_rel": 0.021056885795154603,
+     "G_D_given_gu_agq_rel": 0.0007631008059266075,
+     "interaction_sign": "antagonistic"
+    },
+    "23": {
+     "E": {
+      "GPTQ": 0.00029198606559663505,
+      "GU_AGQ": 0.00028962961077101267,
+      "DOWN_AGQ": 0.00029116216891657623,
+      "FULL_AGQ": 0.0002888048754587165
+     },
+     "phi_GU_rel": 0.008071871981031315,
+     "phi_D_rel": 0.0028231347084769387,
+     "full_gain_rel": 0.010895006689508253,
+     "interaction_rel": -2.8721652713699333e-06,
+     "identity_residual": 0.0,
+     "share_GU": 0.740878111511801,
+     "share_D": 0.2591218884881989,
+     "G_GU_given_down_gptq_rel": 0.00807043589839563,
+     "G_D_given_gu_gptq_rel": 0.002821698625841254,
+     "G_GU_given_down_agq_rel": 0.008073308063667,
+     "G_D_given_gu_agq_rel": 0.002824570791112624,
+     "interaction_sign": "synergistic"
+    }
+   }
+  },
+  "seed_averaged": {
+   "1": {
+    "E": {
+     "GPTQ": 0.0003093817707654228,
+     "GU_AGQ": 0.0003031624095990578,
+     "DOWN_AGQ": 0.0003055549531563767,
+     "FULL_AGQ": 0.00029955966652184463
+    },
+    "phi_GU_rel": 0.019740412905837303,
+    "phi_D_rel": 0.012007108026885692,
+    "full_gain_rel": 0.031747520932723,
+    "interaction_rel": 0.000724265464246785,
+    "identity_residual": 0.0,
+    "share_GU": 0.6217938385699384,
+    "share_D": 0.3782061614300616,
+    "G_GU_given_down_gptq_rel": 0.020102545637960698,
+    "G_D_given_gu_gptq_rel": 0.012369240759009085,
+    "G_GU_given_down_agq_rel": 0.019378280173713913,
+    "G_D_given_gu_agq_rel": 0.0116449752947623,
+    "interaction_sign": "antagonistic"
+   },
+   "8": {
+    "E": {
+     "GPTQ": 0.007108420286892496,
+     "GU_AGQ": 0.007090811400567541,
+     "DOWN_AGQ": 0.007133627960275894,
+     "FULL_AGQ": 0.007115494691216087
+    },
+    "phi_GU_rel": 0.0025140716180407077,
+    "phi_D_rel": -0.003509286312455446,
+    "full_gain_rel": -0.0009952146944147385,
+    "interaction_rel": -7.376923615777653e-05,
+    "identity_residual": 0.0,
+    "share_GU": null,
+    "share_D": null,
+    "G_GU_given_down_gptq_rel": 0.0024771869999618192,
+    "G_D_given_gu_gptq_rel": -0.0035461709305343344,
+    "G_GU_given_down_agq_rel": 0.0025509562361195957,
+    "G_D_given_gu_agq_rel": -0.003472401694376558,
+    "interaction_sign": "synergistic"
+   },
+   "16": {
+    "E": {
+     "GPTQ": 0.007015174561976302,
+     "GU_AGQ": 0.006836167065445688,
+     "DOWN_AGQ": 0.006991789610079063,
+     "FULL_AGQ": 0.006830030056075793
+    },
+    "phi_GU_rel": 0.02428785253476884,
+    "phi_D_rel": 0.0021041501538072178,
+    "full_gain_rel": 0.026392002688576055,
+    "interaction_rel": 0.0024586619156752565,
+    "identity_residual": 0.0,
+    "share_GU": 0.9202731911391472,
+    "share_D": 0.07972680886085286,
+    "G_GU_given_down_gptq_rel": 0.025517183492606465,
+    "G_D_given_gu_gptq_rel": 0.003333481111644846,
+    "G_GU_given_down_agq_rel": 0.02305852157693121,
+    "G_D_given_gu_agq_rel": 0.0008748191959695896,
+    "interaction_sign": "antagonistic"
+   },
+   "23": {
+    "E": {
+     "GPTQ": 0.00029277145983874834,
+     "GU_AGQ": 0.0002905463161347352,
+     "DOWN_AGQ": 0.0002917655742494479,
+     "FULL_AGQ": 0.00028953143369203936
+    },
+    "phi_GU_rel": 0.007615640308447019,
+    "phi_D_rel": 0.003451101471962579,
+    "full_gain_rel": 0.011066741780409598,
+    "interaction_rel": -3.07299536652964e-05,
+    "identity_residual": 0.0,
+    "share_GU": 0.6881555980576202,
+    "share_D": 0.31184440194237983,
+    "G_GU_given_down_gptq_rel": 0.007600275331614371,
+    "G_D_given_gu_gptq_rel": 0.003435736495129931,
+    "G_GU_given_down_agq_rel": 0.007631005285279667,
+    "G_D_given_gu_agq_rel": 0.003466466448795227,
+    "interaction_sign": "synergistic"
+   }
+  }
+ },
+ "oldtest": {
+  "seeds": {
+   "0": {
+    "1": {
+     "E": {
+      "GPTQ": 0.0003019003819479191,
+      "GU_AGQ": 0.00030241945691779543,
+      "DOWN_AGQ": 0.0002960532452971264,
+      "FULL_AGQ": 0.0002963729646587828
+     },
+     "phi_GU_rel": -0.0013891905769059288,
+     "phi_D_rel": 0.01969793617527966,
+     "full_gain_rel": 0.018308745598373734,
+     "interaction_rel": -0.0006603357270821011,
+     "identity_residual": 0.0,
+     "share_GU": -0.07587579222409006,
+     "share_D": 1.07587579222409,
+     "G_GU_given_down_gptq_rel": -0.0017193584404469795,
+     "G_D_given_gu_gptq_rel": 0.01936776831173861,
+     "G_GU_given_down_agq_rel": -0.0010590227133648784,
+     "G_D_given_gu_agq_rel": 0.020028104038820712,
+     "interaction_sign": "synergistic"
+    },
+    "8": {
+     "E": {
+      "GPTQ": 0.007173198373874861,
+      "GU_AGQ": 0.0071549612637017545,
+      "DOWN_AGQ": 0.007198186300852856,
+      "FULL_AGQ": 0.00717791746996035
+     },
+     "phi_GU_rel": 0.0026840147907977435,
+     "phi_D_rel": -0.003341893722833968,
+     "full_gain_rel": -0.0006578789320362243,
+     "interaction_rel": -0.0002832377711453159,
+     "identity_residual": 0.0,
+     "share_GU": null,
+     "share_D": null,
+     "G_GU_given_down_gptq_rel": 0.0025423959052250857,
+     "G_D_given_gu_gptq_rel": -0.0034835126084066257,
+     "G_GU_given_down_agq_rel": 0.0028256336763704012,
+     "G_D_given_gu_agq_rel": -0.00320027483726131,
+     "interaction_sign": "synergistic"
+    },
+    "16": {
+     "E": {
+      "GPTQ": 0.007090592442089353,
+      "GU_AGQ": 0.006874608095542022,
+      "DOWN_AGQ": 0.007067421452089542,
+      "FULL_AGQ": 0.0068713013268671755
+     },
+     "phi_GU_rel": 0.02905994633984802,
+     "phi_D_rel": 0.0018671048216991665,
+     "full_gain_rel": 0.030927051161547186,
+     "interaction_rel": 0.0028014896480371924,
+     "identity_residual": 0.0,
+     "share_GU": 0.9396287472754399,
+     "share_D": 0.06037125272456014,
+     "G_GU_given_down_gptq_rel": 0.030460691163866616,
+     "G_D_given_gu_gptq_rel": 0.003267849645717763,
+     "G_GU_given_down_agq_rel": 0.027659201515829422,
+     "G_D_given_gu_agq_rel": 0.0004663599976805702,
+     "interaction_sign": "antagonistic"
+    },
+    "23": {
+     "E": {
+      "GPTQ": 0.0003007534316592194,
+      "GU_AGQ": 0.00029802781931511854,
+      "DOWN_AGQ": 0.00029970265170724367,
+      "FULL_AGQ": 0.0002971175943967349
+     },
+     "phi_GU_rel": 0.008828942741087451,
+     "phi_D_rel": 0.003260153773708806,
+     "full_gain_rel": 0.012089096514796257,
+     "interaction_rel": 0.00046734307507870795,
+     "identity_residual": 0.0,
+     "share_GU": 0.7303227937903719,
+     "share_D": 0.26967720620962804,
+     "G_GU_given_down_gptq_rel": 0.009062614278626804,
+     "G_D_given_gu_gptq_rel": 0.0034938253112481595,
+     "G_GU_given_down_agq_rel": 0.008595271203548097,
+     "G_D_given_gu_agq_rel": 0.0030264822361694517,
+     "interaction_sign": "antagonistic"
+    }
+   },
+   "1": {
+    "1": {
+     "E": {
+      "GPTQ": 0.0003016569371481163,
+      "GU_AGQ": 0.0002988065416039244,
+      "DOWN_AGQ": 0.00029823129409950347,
+      "FULL_AGQ": 0.0002952917741699651
+     },
+     "phi_GU_rel": 0.009596854507090889,
+     "phi_D_rel": 0.011503813816097191,
+     "full_gain_rel": 0.02110066832318808,
+     "interaction_rel": -0.0002954494804232167,
+     "identity_residual": 0.0,
+     "share_GU": 0.454812822044345,
+     "share_D": 0.545187177955655,
+     "G_GU_given_down_gptq_rel": 0.00944912976687928,
+     "G_D_given_gu_gptq_rel": 0.011356089075885584,
+     "G_GU_given_down_agq_rel": 0.009744579247302496,
+     "G_D_given_gu_agq_rel": 0.0116515385563088,
+     "interaction_sign": "synergistic"
+    },
+    "8": {
+     "E": {
+      "GPTQ": 0.007173821583308683,
+      "GU_AGQ": 0.007161368464133298,
+      "DOWN_AGQ": 0.007202066411440106,
+      "FULL_AGQ": 0.0071900897195434545
+     },
+     "phi_GU_rel": 0.0017027055097715985,
+     "phi_D_rel": -0.003970414017134342,
+     "full_gain_rel": -0.002267708507362743,
+     "interaction_rel": 6.641192190252582e-05,
+     "identity_residual": 0.0,
+     "share_GU": null,
+     "share_D": null,
+     "G_GU_given_down_gptq_rel": 0.0017359114707228614,
+     "G_D_given_gu_gptq_rel": -0.003937208056183079,
+     "G_GU_given_down_agq_rel": 0.0016694995488203356,
+     "G_D_given_gu_agq_rel": -0.004003619978085605,
+     "interaction_sign": "antagonistic"
+    },
+    "16": {
+     "E": {
+      "GPTQ": 0.007076087841991756,
+      "GU_AGQ": 0.006916603280202876,
+      "DOWN_AGQ": 0.0070598970205264415,
+      "FULL_AGQ": 0.00691554284034587
+     },
+     "phi_GU_rel": 0.02146940150787666,
+     "phi_D_rel": 0.0012189829823723683,
+     "full_gain_rel": 0.022688384490249028,
+     "interaction_rel": 0.002138241065708678,
+     "identity_residual": 0.0,
+     "share_GU": 0.946272817137057,
+     "share_D": 0.05372718286294295,
+     "G_GU_given_down_gptq_rel": 0.022538522040731,
+     "G_D_given_gu_gptq_rel": 0.0022881035152267073,
+     "G_GU_given_down_agq_rel": 0.02040028097502232,
+     "G_D_given_gu_agq_rel": 0.00014986244951802917,
+     "interaction_sign": "antagonistic"
+    },
+    "23": {
+     "E": {
+      "GPTQ": 0.0003019113787353514,
+      "GU_AGQ": 0.00029968361877478653,
+      "DOWN_AGQ": 0.00030119990812349853,
+      "FULL_AGQ": 0.0002993078596852452
+     },
+     "phi_GU_rel": 0.0068228769913794875,
+     "phi_D_rel": 0.0018005775501876919,
+     "full_gain_rel": 0.00862345454156718,
+     "interaction_rel": 0.0011119538578431478,
+     "identity_residual": 0.0,
+     "share_GU": 0.7911999719476153,
+     "share_D": 0.20880002805238476,
+     "G_GU_given_down_gptq_rel": 0.007378853920301061,
+     "G_D_given_gu_gptq_rel": 0.002356554479109266,
+     "G_GU_given_down_agq_rel": 0.0062669000624579144,
+     "G_D_given_gu_agq_rel": 0.001244600621266118,
+     "interaction_sign": "antagonistic"
+    }
+   },
+   "2": {
+    "1": {
+     "E": {
+      "GPTQ": 0.00030722066546298607,
+      "GU_AGQ": 0.00029720874023625416,
+      "DOWN_AGQ": 0.0003027892141611101,
+      "FULL_AGQ": 0.00029357128632474095
+     },
+     "phi_GU_rel": 0.03129648364331447,
+     "phi_D_rel": 0.013132100344274079,
+     "full_gain_rel": 0.04442858398758855,
+     "interaction_rel": 0.0025844530645950828,
+     "identity_residual": 0.0,
+     "share_GU": 0.7044222622998152,
+     "share_D": 0.2955777377001848,
+     "G_GU_given_down_gptq_rel": 0.03258871017561202,
+     "G_D_given_gu_gptq_rel": 0.01442432687657162,
+     "G_GU_given_down_agq_rel": 0.03000425711101693,
+     "G_D_given_gu_agq_rel": 0.011839873811976537,
+     "interaction_sign": "antagonistic"
+    },
+    "8": {
+     "E": {
+      "GPTQ": 0.007177544709026318,
+      "GU_AGQ": 0.007165060885350378,
+      "DOWN_AGQ": 0.007204948005023549,
+      "FULL_AGQ": 0.007193120210712355
+     },
+     "phi_GU_rel": 0.0016935887530286483,
+     "phi_D_rel": -0.0038636207510807643,
+     "full_gain_rel": -0.002170031998052116,
+     "interaction_rel": 9.140024776438152e-05,
+     "identity_residual": 0.0,
+     "share_GU": null,
+     "share_D": null,
+     "G_GU_given_down_gptq_rel": 0.001739288876910839,
+     "G_D_given_gu_gptq_rel": -0.0038179206271985737,
+     "G_GU_given_down_agq_rel": 0.0016478886291464575,
+     "G_D_given_gu_agq_rel": -0.003909320874962955,
+     "interaction_sign": "antagonistic"
+    },
+    "16": {
+     "E": {
+      "GPTQ": 0.007059407358873111,
+      "GU_AGQ": 0.006892193659094757,
+      "DOWN_AGQ": 0.007036963587001601,
+      "FULL_AGQ": 0.00688881731001869
+     },
+     "phi_GU_rel": 0.02233615094933455,
+     "phi_D_rel": 0.0018287739774021513,
+     "full_gain_rel": 0.024164924926736702,
+     "interaction_rel": 0.0027009948323036977,
+     "identity_residual": 0.0,
+     "share_GU": 0.9243211397119323,
+     "share_D": 0.07567886028806768,
+     "G_GU_given_down_gptq_rel": 0.0236866483654864,
+     "G_D_given_gu_gptq_rel": 0.003179271393554,
+     "G_GU_given_down_agq_rel": 0.020985653533182703,
+     "G_D_given_gu_agq_rel": 0.00047827656125030234,
+     "interaction_sign": "antagonistic"
+    },
+    "23": {
+     "E": {
+      "GPTQ": 0.0003008086753049809,
+      "GU_AGQ": 0.000298150876062185,
+      "DOWN_AGQ": 0.0003000072821637487,
+      "FULL_AGQ": 0.00029740788801499733
+     },
+     "phi_GU_rel": 0.008738433800516525,
+     "phi_D_rel": 0.00256704895039019,
+     "full_gain_rel": 0.011305482750906714,
+     "interaction_rel": 0.00019416027142599553,
+     "identity_residual": 0.0,
+     "share_GU": 0.7729376969608565,
+     "share_D": 0.2270623030391435,
+     "G_GU_given_down_gptq_rel": 0.008835513936229522,
+     "G_D_given_gu_gptq_rel": 0.002664129086103188,
+     "G_GU_given_down_agq_rel": 0.008641353664803526,
+     "G_D_given_gu_agq_rel": 0.002469968814677192,
+     "interaction_sign": "antagonistic"
+    }
+   }
+  },
+  "seed_averaged": {
+   "1": {
+    "E": {
+     "GPTQ": 0.0003035926615196738,
+     "GU_AGQ": 0.000299478246252658,
+     "DOWN_AGQ": 0.00029902458451924665,
+     "FULL_AGQ": 0.00029507867505116297
+    },
+    "phi_GU_rel": 0.01327490047808213,
+    "phi_D_rel": 0.014769211082101693,
+    "full_gain_rel": 0.028044111560183823,
+    "interaction_rel": 0.000555039104333595,
+    "identity_residual": 0.0,
+    "share_GU": 0.47335785444989564,
+    "share_D": 0.5266421455501044,
+    "G_GU_given_down_gptq_rel": 0.013552420030248927,
+    "G_D_given_gu_gptq_rel": 0.01504673063426849,
+    "G_GU_given_down_agq_rel": 0.012997380925915332,
+    "G_D_given_gu_agq_rel": 0.014491691529934896,
+    "interaction_sign": "antagonistic"
+   },
+   "8": {
+    "E": {
+     "GPTQ": 0.00717485488873662,
+     "GU_AGQ": 0.007160463537728476,
+     "DOWN_AGQ": 0.007201733572438838,
+     "FULL_AGQ": 0.007187042466738719
+    },
+    "phi_GU_rel": 0.002026693024406512,
+    "phi_D_rel": -0.0037253445220460403,
+    "full_gain_rel": -0.001698651497639528,
+    "interaction_rel": -4.177850237011643e-05,
+    "identity_residual": 0.0,
+    "share_GU": null,
+    "share_D": null,
+    "G_GU_given_down_gptq_rel": 0.002005803773221454,
+    "G_D_given_gu_gptq_rel": -0.0037462337732310984,
+    "G_GU_given_down_agq_rel": 0.0020475822755915704,
+    "G_D_given_gu_agq_rel": -0.003704455270860982,
+    "interaction_sign": "synergistic"
+   },
+   "16": {
+    "E": {
+     "GPTQ": 0.007075362547651406,
+     "GU_AGQ": 0.006894468344946551,
+     "DOWN_AGQ": 0.007054760686539195,
+     "FULL_AGQ": 0.006891887159077245
+    },
+    "phi_GU_rel": 0.024293294361355012,
+    "phi_D_rel": 0.0016382939266634056,
+    "full_gain_rel": 0.025931588288018417,
+    "interaction_rel": 0.0025469613919482386,
+    "identity_residual": 0.0,
+    "share_GU": 0.9368224611440259,
+    "share_D": 0.06317753885597407,
+    "G_GU_given_down_gptq_rel": 0.02556677505732913,
+    "G_D_given_gu_gptq_rel": 0.002911774622637525,
+    "G_GU_given_down_agq_rel": 0.023019813665380893,
+    "G_D_given_gu_agq_rel": 0.0003648132306892863,
+    "interaction_sign": "antagonistic"
+   },
+   "23": {
+    "E": {
+     "GPTQ": 0.00030115782856651724,
+     "GU_AGQ": 0.00029862077138403004,
+     "DOWN_AGQ": 0.0003003032806648303,
+     "FULL_AGQ": 0.0002979444473656592
+    },
+    "phi_GU_rel": 0.008128446311627222,
+    "phi_D_rel": 0.0025416439070247215,
+    "full_gain_rel": 0.010670090218651944,
+    "interaction_rel": 0.0005917956181460966,
+    "identity_residual": 0.0,
+    "share_GU": 0.7617973367664896,
+    "share_D": 0.23820266323351033,
+    "G_GU_given_down_gptq_rel": 0.008424344120700271,
+    "G_D_given_gu_gptq_rel": 0.00283754171609777,
+    "G_GU_given_down_agq_rel": 0.007832548502554174,
+    "G_D_given_gu_agq_rel": 0.002245746097951673,
+    "interaction_sign": "antagonistic"
+   }
+  }
+ },
+ "definition": "phi_GU = 0.5[(E_A - E_B) + (E_C - E_D)], phi_D = 0.5[(E_A - E_C) + (E_B - E_D)], phi_GU + phi_D = E_A - E_D; values reported relative to E_A (positive = improvement). Share of the full gain is reported only when |E_A - E_D| / E_A >= tau (0.5 %); otherwise null."
+}

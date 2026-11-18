@@ -1,0 +1,14 @@
+{
+ "file": "/home/kaixuan6/moe_cache_loss_alignment/c4_router_stats.npz",
+ "sha256": "cacd69c12179f4901c01a1ec544ac8eded0551a096dbefe8b76fec6b6c7b5cb2",
+ "profile_check": {
+  "per_seq_counts_equal_profile": true,
+  "max_abs_per_seq_diff": 0.0,
+  "total_counts_equal": true
+ },
+ "seconds": 392.0067472457886,
+ "batch": 1,
+ "weight_definition": "BF16-cast top-k softmax probability (norm_topk_prob=False), as applied",
+ "peak_gpu_gb": 1.827907584,
+ "peak_cpu_gb": 10.262468
+}

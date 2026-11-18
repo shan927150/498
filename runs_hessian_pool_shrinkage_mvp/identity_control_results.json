@@ -1,0 +1,30 @@
+{
+ "16": {
+  "alpha": 0.5,
+  "identity_mean_J": 0.017060679955658378,
+  "pool_mean_J": 0.017169309017091405,
+  "std_mean_J": 0.017277921107802182,
+  "pool_vs_identity_rel": -0.006367217585428131,
+  "ci95": [
+   -0.008948641933296864,
+   -0.003616553432190389
+  ],
+  "identity_vs_std_rel": 0.012573338585607052,
+  "equivalent_percdamp": 3.0,
+  "note": "identity shrinkage at alpha with percdamp 1.0 equals raw H with percdamp (1+a)/(1-a) up to a global scale and fp rounding (gate/up only)"
+ },
+ "32": {
+  "alpha": 0.3,
+  "identity_mean_J": 0.016374809095859144,
+  "pool_mean_J": 0.01638623609265837,
+  "std_mean_J": 0.0164688831555839,
+  "pool_vs_identity_rel": -0.0006978400012074282,
+  "ci95": [
+   -0.002620451719916916,
+   0.0013989962936303993
+  ],
+  "identity_vs_std_rel": 0.005712230685956388,
+  "equivalent_percdamp": 1.8571428571428574,
+  "note": "identity shrinkage at alpha with percdamp 1.0 equals raw H with percdamp (1+a)/(1-a) up to a global scale and fp rounding (gate/up only)"
+ }
+}

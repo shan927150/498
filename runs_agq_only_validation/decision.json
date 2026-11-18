@@ -1,0 +1,64 @@
+{
+ "primary": {
+  "verdict": "AGQ-LAYER-QUALITY-GAIN",
+  "mean_layer_rel": -0.01504968264189204,
+  "layers_improved": 3,
+  "n_layers": 4,
+  "seeds_all_improve": true,
+  "n_seeds": 3,
+  "weighted_rel": 0.0009179621944475601
+ },
+ "secondary": {
+  "FR_s0": {
+   "standard_reconstruction": "regression",
+   "weighted_reconstruction": "no gain",
+   "ppl": "inconclusive",
+   "systems_overhead_rel_total": 0.0016156129154021315
+  },
+  "FR_s1": {
+   "standard_reconstruction": "regression",
+   "weighted_reconstruction": "no gain",
+   "ppl": "gain",
+   "systems_overhead_rel_total": 2.444982451678548
+  },
+  "FR_s2": {
+   "standard_reconstruction": "regression",
+   "weighted_reconstruction": "no gain",
+   "ppl": "inconclusive",
+   "systems_overhead_rel_total": 0.9595587592125807
+  }
+ },
+ "gates": {
+  "source_review": true,
+  "routing_definition": true,
+  "capture_alignment": true,
+  "hessian_oracle": true,
+  "unit_regression": true,
+  "diagnostics_recompute_equals_installed": true,
+  "AGQ_FR_s0_valid": true,
+  "AGQ_FR_s1_valid": true,
+  "AGQ_FR_s2_valid": true
+ },
+ "seeds_measured": [
+  "FR_s0",
+  "FR_s1",
+  "FR_s2"
+ ],
+ "thresholds": {
+  "primary_metric": "moe_layer_output (mean of 4 layers), relative difference (AGQ-GPTQ)/GPTQ",
+  "tau_rel": 0.005,
+  "min_layers_improved": 3,
+  "AGQ_LAYER_QUALITY_GAIN": "mean rel diff <= -tau AND >= 3/4 layers improved AND every measured seed improves",
+  "AGQ_QUALITY_REGRESSION": "mean rel diff >= +tau",
+  "AGQ_SURROGATE_ONLY_GAIN": "not the above AND weighted expert recon rel diff <= -tau",
+  "AGQ_NO_MEASURABLE_GAIN": "otherwise",
+  "AGQ_RUN_BLOCKED": "any correctness gate fails (alignment, oracle, unit regression, validity)",
+  "robustness": "a gain is called robust only if every measured seed agrees; one seed is never robust",
+  "secondary": {
+   "tau_rel": 0.005,
+   "ppl_noise": 0.014,
+   "ppl_noise_source": "largest calibration-grouping |dPPL| in update_batch_sensitivity.md / |dPPL| scale in update_ebss_official_validation.md"
+  }
+ },
+ "robust": true
+}

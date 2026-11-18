@@ -1,0 +1,158 @@
+{
+ "pooled_within_sd_natural": 0.006871891170852839,
+ "pooled_within_sd_frozen": 0.006285792382627708,
+ "R_SD": 0.9147106999145924,
+ "pct_reduction": 8.528930008540758,
+ "historical_pooled_within_sd": 0.006871891170852839,
+ "per_seed_sd": {
+  "natural": {
+   "0": 0.006364178643728711,
+   "1": 0.0051763618636375954,
+   "2": 0.008623872264796209
+  },
+  "frozen": {
+   "0": 0.006728217614129868,
+   "1": 0.0061580557493317745,
+   "2": 0.005944997456478515
+  }
+ },
+ "per_seed_R": {
+  "0": 1.0572012494903618,
+  "1": 1.1896493930593004,
+  "2": 0.6893652032332139
+ },
+ "flat_sd_15": {
+  "natural": 0.006522221756703349,
+  "frozen": 0.0059855577914737276,
+  "R_flat": 0.9177176144496998,
+  "note": "descriptive only (nested design)"
+ },
+ "pooled_ppl_sd": {
+  "FR_natural": 0.005198221444771882,
+  "FR_frozen": 0.004213598443446018,
+  "FC_natural": 0.003811771415524038,
+  "FC_frozen": 0.0037535400105492525
+ },
+ "mean_delta": {
+  "natural": -0.0012475761622487388,
+  "frozen": 0.0003194884516072232
+ },
+ "seed_means": {
+  "natural": {
+   "0": -0.0019318602382217165,
+   "1": 0.0006871982444071279,
+   "2": -0.0024980664929316275
+  },
+  "frozen": {
+   "0": -0.0003858087018876688,
+   "1": 0.0022119931242460924,
+   "2": -0.000867719067536754
+  }
+ },
+ "change_in_mean_delta": 0.001567064613855962,
+ "range_delta": {
+  "natural": [
+   -0.013548852228240094,
+   0.009934220514541181
+  ],
+  "frozen": [
+   -0.008970439309701206,
+   0.009561085735709796
+  ]
+ },
+ "n_FR_better": {
+  "natural": 6,
+  "frozen": 7
+ },
+ "n_FC_better": {
+  "natural": 9,
+  "frozen": 8
+ },
+ "historical_decision_rule": {
+  "natural": {
+   "category": "GROUPING-VARIATION-DOMINATES",
+   "details": {
+    "confident_positive_seeds": [],
+    "confident_negative_seeds": [],
+    "scale_disagreement": false,
+    "frac_opposite_sign_to_overall": 0.4,
+    "abs_M_over_W": 0.18154771826718377,
+    "ambiguous": false
+   }
+  },
+  "frozen": {
+   "category": "GROUPING-VARIATION-DOMINATES",
+   "details": {
+    "confident_positive_seeds": [],
+    "confident_negative_seeds": [],
+    "scale_disagreement": false,
+    "frac_opposite_sign_to_overall": 0.5333333333333333,
+    "abs_M_over_W": 0.050827076708770395,
+    "ambiguous": false
+   }
+  }
+ },
+ "hierarchical_bootstrap": {
+  "natural": {
+   "point": -0.0012475761622487388,
+   "ci95": [
+    -0.004777081840922672,
+    0.0021549580959289542
+   ],
+   "frac_boot_positive": 0.24345,
+   "n_boot": 20000,
+   "seed": 20261120,
+   "n_seeds": 3,
+   "k": 5,
+   "n_distinct_seed_resamples": 10,
+   "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+  },
+  "frozen": {
+   "point": 0.0003194884516072232,
+   "ci95": [
+    -0.0028346779889329337,
+    0.003609037296486712
+   ],
+   "frac_boot_positive": 0.5708,
+   "n_boot": 20000,
+   "seed": 20261120,
+   "n_seeds": 3,
+   "k": 5,
+   "n_distinct_seed_resamples": 10,
+   "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+  }
+ },
+ "sd_between_seed_means": {
+  "natural": 0.0016993120326196942,
+  "frozen": 0.0016565747348369086
+ },
+ "delta_g": {
+  "values": {
+   "s0_G20261111": -0.004789722999948509,
+   "s0_G20261112": -0.0019596169926856533,
+   "s0_G20261113": 0.00029453165431903017,
+   "s0_G20261114": -0.0012885310489956225,
+   "s0_G20261115": 1.3081705640516361e-05,
+   "s1_G20261111": 0.0011350488132340075,
+   "s1_G20261112": -0.0054243880978344095,
+   "s1_G20261113": -0.005008924141028714,
+   "s1_G20261114": -0.00014956651742181748,
+   "s1_G20261115": 0.0018238555438561121,
+   "s2_G20261111": 0.0021549941620335744,
+   "s2_G20261112": 0.001045206896096218,
+   "s2_G20261113": -0.004578412918538888,
+   "s2_G20261114": -0.0038802753943549817,
+   "s2_G20261115": -0.0028932498722102906
+  },
+  "mean": -0.001567064613855962,
+  "sd": 0.0026855382713128024
+ },
+ "seed0_only": {
+  "sd_natural": 0.006364178643728711,
+  "sd_frozen": 0.006728217614129868,
+  "R": 1.0572012494903618,
+  "note": "single seed x 5 variants: same structure as Family A"
+ },
+ "natural_reproduces_historical_pooled": true,
+ "note": "descriptive; groupings nested in 3 seeds; no additive decomposition; frozen is off-policy"
+}

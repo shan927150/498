@@ -1,0 +1,50 @@
+{
+ "configs": {
+  "FR_s0": {
+   "ppl": 9.269003962169808,
+   "recon": 0.0046094692935882,
+   "rtn_fallbacks": 0,
+   "n_quantized_experts": 240,
+   "n_projections": 720,
+   "installed_weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0",
+   "valid": true,
+   "quantize_total_s": 350.5218553543091,
+   "hessian_s": 29.178961753845215,
+   "gptq_s": 258.99179315567017,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.060312
+  },
+  "FR_s1": {
+   "ppl": 9.27256733105897,
+   "recon": 0.004625934030334249,
+   "rtn_fallbacks": 0,
+   "n_quantized_experts": 240,
+   "n_projections": 720,
+   "installed_weights_sha256": "277117a9fcac690166350c1c902910e4437474ed536edbdd16a60bb2592ea6af",
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1",
+   "valid": true,
+   "quantize_total_s": 349.10831451416016,
+   "hessian_s": 28.75242304801941,
+   "gptq_s": 257.73248171806335,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.183056
+  },
+  "FR_s2": {
+   "ppl": 9.274692816567088,
+   "recon": 0.004610399983864865,
+   "rtn_fallbacks": 0,
+   "n_quantized_experts": 240,
+   "n_projections": 720,
+   "installed_weights_sha256": "8f18b500e156ce6cbd26bd6dd08ce1874b5280caed58515d2b567c86e4b691e3",
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2",
+   "valid": true,
+   "quantize_total_s": 364.01220202445984,
+   "hessian_s": 28.893189668655396,
+   "gptq_s": 265.5238342285156,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.466196
+  }
+ },
+ "note": "C4R128_GPTQ = historical CANONICAL-B1 FR results (unit_regression reproduced FR_s0 bitwise with the modified code)"
+}

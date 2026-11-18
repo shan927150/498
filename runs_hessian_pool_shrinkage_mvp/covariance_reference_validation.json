@@ -1,0 +1,94 @@
+{
+ "reference": {
+  "split": "tune",
+  "cache": "/home/kaixuan6/moe_cache",
+  "rows": [
+   2000,
+   2128
+  ],
+  "per_layer": {
+   "8": {
+    "tokens": {
+     "3": 4180.0,
+     "42": 3878.0,
+     "37": 4476.0,
+     "47": 4100.0,
+     "58": 4612.0,
+     "55": 4264.0
+    },
+    "pooled_tokens": 65536.0,
+    "alignment_checks": 7674,
+    "seconds": 8.542996883392334
+   },
+   "16": {
+    "tokens": {
+     "1": 3242.0,
+     "32": 3808.0,
+     "15": 3597.0,
+     "57": 4303.0,
+     "39": 4594.0,
+     "9": 5400.0
+    },
+    "pooled_tokens": 65536.0,
+    "alignment_checks": 7676,
+    "seconds": 8.176594018936157
+   }
+  },
+  "role": "independent finite-sample proxy (not population truth); disjoint from calibration rows",
+  "calibration_disjoint": true,
+  "used_for_prior": false
+ },
+ "split_disjoint": true,
+ "reference_tokens_vs_b128": {
+  "8.3": {
+   "n_ref": 4180.0,
+   "n_b128": 3593.0
+  },
+  "8.42": {
+   "n_ref": 3878.0,
+   "n_b128": 3614.0
+  },
+  "8.37": {
+   "n_ref": 4476.0,
+   "n_b128": 4418.0
+  },
+  "8.47": {
+   "n_ref": 4100.0,
+   "n_b128": 4584.0
+  },
+  "8.58": {
+   "n_ref": 4612.0,
+   "n_b128": 4854.0
+  },
+  "8.55": {
+   "n_ref": 4264.0,
+   "n_b128": 4921.0
+  },
+  "16.1": {
+   "n_ref": 3242.0,
+   "n_b128": 3262.0
+  },
+  "16.32": {
+   "n_ref": 3808.0,
+   "n_b128": 3900.0
+  },
+  "16.15": {
+   "n_ref": 3597.0,
+   "n_b128": 3839.0
+  },
+  "16.57": {
+   "n_ref": 4303.0,
+   "n_b128": 4085.0
+  },
+  "16.39": {
+   "n_ref": 4594.0,
+   "n_b128": 5030.0
+  },
+  "16.9": {
+   "n_ref": 5400.0,
+   "n_b128": 5557.0
+  }
+ },
+ "self_check_D_F_of_reference": 0.0,
+ "note": "reference = tune-split routed gu second moment of each selected expert (128 x 512 tokens), a finite-sample proxy with sampling noise of its own"
+}

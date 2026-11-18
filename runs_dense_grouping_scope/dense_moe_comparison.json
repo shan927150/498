@@ -1,0 +1,138 @@
+{
+ "rows": {
+  "model": [
+   "Qwen2.5-1.5B (dense, 28 layers)",
+   "Qwen1.5-MoE-A2.7B (24 layers, 60 routed experts, top-4)"
+  ],
+  "quantized": [
+   "4 MLP layers [1, 9, 19, 27], 12 matrices",
+   "4 routed-expert layers [1, 8, 16, 23], 720 matrices"
+  ],
+  "quantized_params": [
+   165150720,
+   2076180480
+  ],
+  "frac_of_model_params": [
+   0.10698269723359381,
+   0.14502736644774367
+  ],
+  "matrix_dims_gu_down_in": [
+   [
+    1536,
+    8960
+   ],
+   [
+    2048,
+    1408
+   ]
+  ],
+  "calibration": [
+   "FR s0 128 x 512, identical token ids",
+   "FR s0 128 x 512"
+  ],
+  "tokens_per_matrix": [
+   65536,
+   "median 4312 (p10 3871, p90 4913)"
+  ],
+  "tokens_per_input_dim_gu": [
+   42.666666666666664,
+   2.10546875
+  ],
+  "tokens_per_input_dim_down": [
+   7.314285714285714,
+   3.0625
+  ],
+  "groupings": [
+   "5 (seed 0)",
+   "5 (seed 0)"
+  ],
+  "bf16_ppl": [
+   12.523450907020594,
+   9.237089824789335
+  ],
+  "mean_quantized_ppl": [
+   12.61883920692329,
+   9.273638854176879
+  ],
+  "within_seed_sd_ppl": [
+   0.005030426186581264,
+   0.00442203265555388
+  ],
+  "sd_log_ppl": [
+   0.00039867012146568343,
+   0.0004768391586753176
+  ],
+  "cv_ppl": [
+   0.00039864413073916773,
+   0.0004768389976241291
+  ],
+  "sd_over_quant_penalty": [
+   0.052736301954356066,
+   0.12098905852369726
+  ],
+  "max_pairwise_ppl_diff": [
+   0.012530313648774438,
+   0.01002325226196632
+  ],
+  "bf16_elements_changed_10pairs": [
+   0.07656260778033544,
+   0.5399301225007183
+  ],
+  "rel_frobenius_10pairs": [
+   0.027601082811306344,
+   0.08885294559097637
+  ],
+  "ge8ulp_share_of_changed": [
+   0.12509490819618715,
+   0.3732856473343066
+  ],
+  "bf16_elements_changed_vs_original": [
+   0.055445176381913444,
+   0.5405686582700171
+  ],
+  "hessian_rel_fro_tn_G1111_vs_ORIGINAL_median": [
+   6.993812998161173e-05,
+   "AO 0.0039 / AA 0.0141"
+  ],
+  "hessian_rel_fro_tn_10pairs_median": [
+   6.994311205480577e-05,
+   "not measured"
+  ],
+  "actorder_positions_changed_vs_original": [
+   0.13281249962747096,
+   "AO 0.694 / AA 0.854"
+  ],
+  "columns_group_changed_vs_original": [
+   0.0015057664015330375,
+   "AO 0.0238 / AA 0.0731"
+  ]
+ },
+ "columns": [
+  "dense control",
+  "MoE Family D (FR s0)"
+ ],
+ "moe_between_seed_note": {
+  "FR": 0.005198221444771882,
+  "FC": 0.003811771415524038,
+  "paired": 0.006871891170852839,
+  "note": "pooled within-seed (3 seeds) from runs_grouping_routing_amplification; NOT a single-seed estimate"
+ },
+ "R_PPL": 0.8360683350193144,
+ "R_PPL_ci95": [
+  0.26977625360993335,
+  2.5910740899851783
+ ],
+ "R_W": 0.1418009564380872,
+ "R_relfrob": 0.31063779177748974,
+ "R_CV": 0.8360141111054871,
+ "outcome": "E-INTERMEDIATE",
+ "rule": {
+  "A-SUBSTANTIAL-DENSE-SENSITIVITY": "R_W >= 0.5 and R_PPL >= 0.5",
+  "B-SMALL-DENSE-SENSITIVITY": "R_W < 0.1 and R_PPL < 0.1",
+  "C-WEIGHT-SENSITIVE-PPL-STABLE": "R_W >= 0.5 and R_PPL < 0.5",
+  "D-WEIGHT-STABLE-PPL-SENSITIVE": "R_W < 0.1 and R_PPL >= 0.5",
+  "E-INTERMEDIATE": "otherwise",
+  "BLOCKED": "any mandatory check A-F fails"
+ },
+ "caveats": "screening ratios, not tests; 5 groupings, 1 seed; F(4,4) 95% factor on an SD ratio is ~3.1x; architecture, size, matrix geometry, calibration statistics and baseline PPL are not matched"
+}

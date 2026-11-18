@@ -1,0 +1,65 @@
+{
+ "checks": {
+  "01_matching_seed_candidates": true,
+  "02_all_240_experts": true,
+  "03_gate_up_from_agq": true,
+  "04_down_from_gptq": true,
+  "05_no_cross_seed_weights": true,
+  "06_no_bf16_fallback": true,
+  "07_router_unchanged": true,
+  "08_top4_unchanged": true,
+  "09_shared_expert_unchanged": true,
+  "10_weights_restored": true,
+  "11_uniform_baselines_reproduce": true,
+  "12_gu_config_deterministic": true,
+  "13_installed_hashes_match_sources": true,
+  "14_same_windows": true,
+  "15_same_bf16_reference": true,
+  "16_native_agrees": false,
+  "17_D_plus_C": true,
+  "18_historical_files_unchanged": true,
+  "19_regression_tests": true,
+  "20_full_suite": true
+ },
+ "passed": false,
+ "tests": {
+  "fixed_gu": "23 passed in 0.68s",
+  "fixed_gu_passed": true,
+  "all": "598 passed, 1 warning in 267.76s (0:04:27)",
+  "all_passed": true
+ },
+ "accumulator_agrees": true,
+ "native_disagreements": [
+  {
+   "split": "oldtest",
+   "seed": 0,
+   "layer": 1,
+   "pair": [
+    "GPTQ",
+    "GU_AGQ"
+   ],
+   "fp32_rel_gap": -0.0017164073210323176,
+   "native_rel_gap": 0.005807826019283732,
+   "native_over_fp32_error": 0.054323315268453465
+  },
+  {
+   "split": "oldtest",
+   "seed": 0,
+   "layer": 1,
+   "pair": [
+    "DOWN_AGQ",
+    "FULL_AGQ"
+   ],
+   "fp32_rel_gap": -0.0010787737067194188,
+   "native_rel_gap": 0.004837363473500692,
+   "native_over_fp32_error": 0.05451516643035159
+  }
+ ],
+ "native_primary_pair_agrees_all_cells": true,
+ "native_ranking_agrees_all_cells": false,
+ "confirm_gptq_matches_legacy": true,
+ "notes": {
+  "07/08": "native BF16 forward asserts torch.equal on router logits for every window/config",
+  "16": "native values equal historical exactly for GPTQ/FULL_AGQ on old-test; native ranking of the four configs reported per cell"
+ }
+}

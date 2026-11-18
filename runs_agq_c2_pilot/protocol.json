@@ -1,0 +1,65 @@
+{
+ "experiment": "EXPLORATORY c^2-weighted Hessian pilot (novel modification of AGQ, not MoEQuant)",
+ "hessian": "H_q = sum_i c_i^q x_i x_i^T, q in {0,1,2}; implemented as rows scaled by c^(q/2) (q=0: standard path)",
+ "c": "fp32 softmax(router logits)[selected top-4], no renormalization (runs_agq_only_validation)",
+ "objective_note": "c^2 is only the diagonal of the aggregated MoE output-error objective; cross-expert terms ignored",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B @ 1a758c50",
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "calibration": "FR_s0 (CANONICAL-B1 cache, 128 x 512)",
+ "layers": [
+  8,
+  16
+ ],
+ "layer_selection": "outcome-informed (AGQ L8 slightly worse, L16 -3.1 %); exploratory, NOT confirmatory",
+ "experts": "selected_experts.json (12 experts, 36 projections per q)",
+ "baselines": {
+  "q0": "must reproduce historical FR_s0 GPTQ weights bitwise for the 12 experts",
+  "q1": "must reproduce the AGQ_FR_s0 weights (runs_agq_only_validation) bitwise"
+ },
+ "evaluation": {
+  "heldout": "~/moe_cache rows 2128-2255, all routed tokens, frozen BF16 routing, fp32 math",
+  "expert_metrics": "E0/E1/E2 = sum c^j ||DeltaE||^2 / sum c^j ||E||^2 on the full routed expert MLP output; reported pooled over tokens of the 12 experts and as mean of per-expert ratios",
+  "projection_metrics": "sum c^j ||(W - W_q) x_p||^2 / sum c^j ||W x_p||^2 per projection, j in {0,1,2}",
+  "subset_layer_output": "A: all 60 experts historical q=0; B: 6 selected -> q=1; C: 6 selected -> q=2; error = sum ||y_BF16 - y||^2 / sum ||y_BF16||^2 (shared expert BF16 weights in y)",
+  "decomposition": "||Delta y||^2 = D + C, D = sum_k c_k^2 ||DeltaE_k||^2, C = 2 sum_{a<b} c_a c_b <DeltaE_a, DeltaE_b>"
+ },
+ "decision_rule": {
+  "surrogate_gain_rel": 0.01,
+  "max_layer_regression_rel": 0.005,
+  "cost": {
+   "max_time_increase_vs_q0": 0.25,
+   "max_peak_gpu_increase_vs_q0": 0.1,
+   "measured_as": "Profiler Hessian pass + 36 GPTQ solves per layer"
+  },
+  "C2_PILOT_PROMISING": "pooled E2(q2) <= -1 % vs q1 AND layer output (C vs B) improves in >= 1 of L8/L16 AND no layer regresses by > 0.5 % vs q1 AND correctness AND cost modest",
+  "C2_REGRESSION": "any layer output (C vs B) > +0.5 %, or unstable quantization (non-finite / dead-column change)",
+  "C2_SURROGATE_ONLY": "pooled E2 criterion met but layer-output criteria not",
+  "C2_NO_GAIN": "otherwise",
+  "C2_BLOCKED": "correctness / stability / missing baseline",
+  "note": "screening rules, not significance tests; frozen before any q = 2 quality result"
+ },
+ "limits": [
+  "one seed",
+  "two layers",
+  "12 experts",
+  "q in {0,1,2} only",
+  "no PPL",
+  "no damping change",
+  "no extrapolation from subset to full layer"
+ ],
+ "code_sha256": {
+  "moe_calib/agq.py": "d058f5d5a630c9a7779a1b1c9781b15bcfb04d1e8af926bb79553693b39549d9",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "diagnostics/agq_c2_pilot.py": "25b99cfc91411a11f81b988f78528ae17a105320fa4a5bb5d11dfa44c1cff1cc",
+  "diagnostics/agq_only_validation.py": "968ae9d2a04637ef016ad814cee3585adffbe62acd84b7d5ab040d7a998af0ae",
+  "tests/test_agq_c2.py": "45c2833c1ddec19a6a8420889c5015c6702de7559932d00aca8aeaae09fdcdad"
+ },
+ "created": "2026-11-11 05:45:47"
+}

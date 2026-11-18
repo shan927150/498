@@ -1,0 +1,43 @@
+{
+ "kind": "MEASURED (median of 3 interleaved repetitions, 4 layers x 128 sequences, cuda-synchronized)",
+ "model_forward_s": 9.060502767562866,
+ "hook_overhead_s": 7.221801042556763,
+ "accumulation_s": 8.037269592285156,
+ "accumulation_split_cuda_events": {
+  "conversion_s": 1.6527243519765324,
+  "gemm_s": 5.328933344591409,
+  "update_s": 5.398615429978818,
+  "note": "GPU time from CUDA events in a separate instrumented full run"
+ },
+ "total_hessian_replay_s": 24.319573402404785,
+ "replay_range_s": {
+  "forward": [
+   8.941803455352783,
+   9.351056814193726
+  ],
+  "noacc": [
+   16.123037576675415,
+   16.608263969421387
+  ],
+  "full": [
+   23.99063491821289,
+   24.367935180664062
+  ],
+  "stop50": [
+   22.121373653411865,
+   22.33371663093567
+  ],
+  "stop75": [
+   21.045150756835938,
+   21.24445605278015
+  ]
+ },
+ "gptq_solve_s": 184.4208583831787,
+ "end_to_end_replay_plus_solve_s": 208.52298736572266,
+ "accumulation_fraction_of_replay": 0.33048563226402683,
+ "accumulation_fraction_of_end_to_end": 0.03854380609936694,
+ "context": {
+  "canonical_b1_capture_for_128_rows_s": 60.377877207042424,
+  "note": "activation capture (24-layer forward per calibration row) is upstream and unaffected by stopping; the historical quantize_total (~347 s) additionally includes E3 scoring"
+ }
+}

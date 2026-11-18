@@ -1,0 +1,164 @@
+{
+ "layer": 16,
+ "expert": 40,
+ "post_hoc": true,
+ "note": "identified in earlier studies; mechanism tracking only",
+ "seeds": {
+  "0": {
+   "calibration": {
+    "tokens": 4086,
+    "affinity_mean": 0.15225968397588516,
+    "affinity_cv": 1.0869529742364599,
+    "natural_p": 0.015698974609375,
+    "natural_decile": 2,
+    "cv_rank_in_layer": 1
+   },
+   "splits": {
+    "confirm": {
+     "D_e": {
+      "GPTQ": 4344.395832333021,
+      "GU_AGQ": 2245.150434817845,
+      "DOWN_AGQ": 4081.4080657603376,
+      "FULL_AGQ": 2202.4336477967663
+     },
+     "rel_vs_gptq": {
+      "GPTQ": 0.0,
+      "GU_AGQ": -0.48320767225942257,
+      "DOWN_AGQ": -0.060534945875650975,
+      "FULL_AGQ": -0.49304029080287126
+     },
+     "gu_vs_full": 0.01939526626094323,
+     "share_of_layer_net_gain": {
+      "GU_AGQ": 0.8431929119663302,
+      "FULL_AGQ": 0.8376829597186095
+     },
+     "share_GU_of_full": 0.928639133827671
+    },
+    "oldtest": {
+     "D_e": {
+      "GPTQ": 2134.142457965555,
+      "GU_AGQ": 1088.6572377004654,
+      "DOWN_AGQ": 2005.9551641496337,
+      "FULL_AGQ": 1069.3408724472383
+     },
+     "rel_vs_gptq": {
+      "GPTQ": 0.0,
+      "GU_AGQ": -0.4898853946524893,
+      "DOWN_AGQ": -0.06006501268810343,
+      "FULL_AGQ": -0.49893650798427747
+     },
+     "gu_vs_full": 0.01806380523828727,
+     "share_of_layer_net_gain": {
+      "GU_AGQ": 0.8417876604831175,
+      "FULL_AGQ": 0.8426885301661982
+     },
+     "share_GU_of_full": 0.9307365517316789
+    }
+   }
+  },
+  "1": {
+   "calibration": {
+    "tokens": 4010,
+    "affinity_mean": 0.1521096518184256,
+    "affinity_cv": 1.06881415488765,
+    "natural_p": 0.015698974609375,
+    "natural_decile": 2,
+    "cv_rank_in_layer": 1
+   },
+   "splits": {
+    "confirm": {
+     "D_e": {
+      "GPTQ": 3872.3094171017674,
+      "GU_AGQ": 2451.686032026467,
+      "DOWN_AGQ": 3681.4453256701267,
+      "FULL_AGQ": 2393.425563056569
+     },
+     "rel_vs_gptq": {
+      "GPTQ": 0.0,
+      "GU_AGQ": -0.3668672185133819,
+      "DOWN_AGQ": -0.04928947325043385,
+      "FULL_AGQ": -0.38191262493483025
+     },
+     "gu_vs_full": 0.024341876291943336,
+     "share_of_layer_net_gain": {
+      "GU_AGQ": 0.7868377804118057,
+      "FULL_AGQ": 0.7785079289878948
+     },
+     "share_GU_of_full": 0.9157727769763302
+    },
+    "oldtest": {
+     "D_e": {
+      "GPTQ": 1886.5963880742552,
+      "GU_AGQ": 1182.5626736352453,
+      "DOWN_AGQ": 1788.942499070361,
+      "FULL_AGQ": 1153.1401095552487
+     },
+     "rel_vs_gptq": {
+      "GPTQ": 0.0,
+      "GU_AGQ": -0.37317664705043396,
+      "DOWN_AGQ": -0.05176193997889207,
+      "FULL_AGQ": -0.3887722266168879
+     },
+     "gu_vs_full": 0.02551516839644449,
+     "share_of_layer_net_gain": {
+      "GU_AGQ": 0.7780641355159674,
+      "FULL_AGQ": 0.8080352700990738
+     },
+     "share_GU_of_full": 0.9133714872954095
+    }
+   }
+  },
+  "2": {
+   "calibration": {
+    "tokens": 4054,
+    "affinity_mean": 0.15333009405281223,
+    "affinity_cv": 1.0830413449113991,
+    "natural_p": 0.015698974609375,
+    "natural_decile": 2,
+    "cv_rank_in_layer": 1
+   },
+   "splits": {
+    "confirm": {
+     "D_e": {
+      "GPTQ": 4024.5934255504235,
+      "GU_AGQ": 2383.6439418327836,
+      "DOWN_AGQ": 3752.326391959808,
+      "FULL_AGQ": 2338.6975666467
+     },
+     "rel_vs_gptq": {
+      "GPTQ": 0.0,
+      "GU_AGQ": -0.4077304985144469,
+      "DOWN_AGQ": -0.06765081706442903,
+      "FULL_AGQ": -0.41889842790098775
+     },
+     "gu_vs_full": 0.019218549600891352,
+     "share_of_layer_net_gain": {
+      "GU_AGQ": 0.8384433538145779,
+      "FULL_AGQ": 0.8296391873286963
+     },
+     "share_GU_of_full": 0.9059214105363035
+    },
+    "oldtest": {
+     "D_e": {
+      "GPTQ": 1970.0493760401848,
+      "GU_AGQ": 1163.5845976347857,
+      "DOWN_AGQ": 1833.967748980936,
+      "FULL_AGQ": 1135.6737989317485
+     },
+     "rel_vs_gptq": {
+      "GPTQ": 0.0,
+      "GU_AGQ": -0.4093627237030982,
+      "DOWN_AGQ": -0.06907523675004228,
+      "FULL_AGQ": -0.42353028673095394
+     },
+     "gu_vs_full": 0.024576422146298564,
+     "share_of_layer_net_gain": {
+      "GU_AGQ": 0.8454378268545653,
+      "FULL_AGQ": 0.8463838016673255
+     },
+     "share_GU_of_full": 0.9017274532827239
+    }
+   }
+  }
+ }
+}

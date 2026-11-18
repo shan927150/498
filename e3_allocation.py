@@ -516,7 +516,7 @@ def oracle_delta(label_paths, layers, E):
 
 def quantize_and_score(model, cache_dir, layers, chosen, weights, eval_ids, K,
                        bits, group_size, p=None, write_back=False, percdamp=0.01,
-                       eval_cache_dir=None):
+                       eval_cache_dir=None, hessian_weighting="none"):
     """Quantize EVERY routed expert of every profiled layer from this
     strategy's calibration set (fixed RTN fallback for zero-token experts;
     all written back when write_back). Reconstruction is scored on the
@@ -524,7 +524,9 @@ def quantize_and_score(model, cache_dir, layers, chosen, weights, eval_ids, K,
     built from the fixed test split alone, before any calibration data is
     used, so it is identical for every strategy. `eval_cache_dir` (default:
     cache_dir) holds the evaluation activations, with `eval_ids` indexing ITS
-    rows (the locked confirmation split); calibration always reads cache_dir."""
+    rows (the locked confirmation split); calibration always reads cache_dir.
+    hessian_weighting (default "none" = standard GPTQ): forwarded to the calibration Profiler only (AGQ:
+    "router_affinity"); the held-out scoring path is unchanged."""
     E = MU.num_experts(model)
     results, orig, universe = [], {}, []
     n_fallback = n_quantized = 0
@@ -535,7 +537,8 @@ def quantize_and_score(model, cache_dir, layers, chosen, weights, eval_ids, K,
         HO = Profiler(model, L, collect_hessian=False, collect_holdout=True) \
             .run(ecache, eval_ids).holdout
         universe += [(L, e) for e in range(E) if HO.get((L, e, "gu"))]
-        fin = Profiler(model, L, K=K).run(
+        fin = (Profiler(model, L, K=K) if hessian_weighting == "none" else
+               Profiler(model, L, K=K, hessian_weighting=hessian_weighting)).run(
             cache, chosen, weights=[weights.get(s, 1.0) for s in chosen])
         t_h += fin.seconds
         tq = time.time()

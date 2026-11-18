@@ -1,0 +1,214 @@
+{
+ "study": "Family D (calibration batch grouping) frozen-routing causal intervention",
+ "model": {
+  "name": "Qwen/Qwen1.5-MoE-A2.7B",
+  "snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9",
+  "quantized_layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "act_order": true
+  },
+  "fake_quant": "BF16 effective weights"
+ },
+ "design": {
+  "comparisons": {
+   "s0_G20261111": {
+    "FR": "FR_s0_G20261111",
+    "FC": "FC_s0_G20261111",
+    "allocation_seed": 0,
+    "grouping": "G20261111"
+   },
+   "s0_G20261112": {
+    "FR": "FR_s0_G20261112",
+    "FC": "FC_s0_G20261112",
+    "allocation_seed": 0,
+    "grouping": "G20261112"
+   },
+   "s0_G20261113": {
+    "FR": "FR_s0_G20261113",
+    "FC": "FC_s0_G20261113",
+    "allocation_seed": 0,
+    "grouping": "G20261113"
+   },
+   "s0_G20261114": {
+    "FR": "FR_s0_G20261114",
+    "FC": "FC_s0_G20261114",
+    "allocation_seed": 0,
+    "grouping": "G20261114"
+   },
+   "s0_G20261115": {
+    "FR": "FR_s0_G20261115",
+    "FC": "FC_s0_G20261115",
+    "allocation_seed": 0,
+    "grouping": "G20261115"
+   },
+   "s1_G20261111": {
+    "FR": "FR_s1_G20261111",
+    "FC": "FC_s1_G20261111",
+    "allocation_seed": 1,
+    "grouping": "G20261111"
+   },
+   "s1_G20261112": {
+    "FR": "FR_s1_G20261112",
+    "FC": "FC_s1_G20261112",
+    "allocation_seed": 1,
+    "grouping": "G20261112"
+   },
+   "s1_G20261113": {
+    "FR": "FR_s1_G20261113",
+    "FC": "FC_s1_G20261113",
+    "allocation_seed": 1,
+    "grouping": "G20261113"
+   },
+   "s1_G20261114": {
+    "FR": "FR_s1_G20261114",
+    "FC": "FC_s1_G20261114",
+    "allocation_seed": 1,
+    "grouping": "G20261114"
+   },
+   "s1_G20261115": {
+    "FR": "FR_s1_G20261115",
+    "FC": "FC_s1_G20261115",
+    "allocation_seed": 1,
+    "grouping": "G20261115"
+   },
+   "s2_G20261111": {
+    "FR": "FR_s2_G20261111",
+    "FC": "FC_s2_G20261111",
+    "allocation_seed": 2,
+    "grouping": "G20261111"
+   },
+   "s2_G20261112": {
+    "FR": "FR_s2_G20261112",
+    "FC": "FC_s2_G20261112",
+    "allocation_seed": 2,
+    "grouping": "G20261112"
+   },
+   "s2_G20261113": {
+    "FR": "FR_s2_G20261113",
+    "FC": "FC_s2_G20261113",
+    "allocation_seed": 2,
+    "grouping": "G20261113"
+   },
+   "s2_G20261114": {
+    "FR": "FR_s2_G20261114",
+    "FC": "FC_s2_G20261114",
+    "allocation_seed": 2,
+    "grouping": "G20261114"
+   },
+   "s2_G20261115": {
+    "FR": "FR_s2_G20261115",
+    "FC": "FC_s2_G20261115",
+    "allocation_seed": 2,
+    "grouping": "G20261115"
+   }
+  },
+  "structure": "3 allocation seeds x 5 groupings; FR/FC paired by (seed, grouping); groupings nested in seeds (not 15 independent samples)",
+  "references": {
+   "s0_ORIGINAL": "Family A FR/FC_ORIGINAL natural + frozen runs (reused, not re-run)",
+   "s1_s2_ORIGINAL": "historical natural PPL only (weights not stored): frozen not evaluable"
+  },
+  "excluded": [
+   "FR_s0_G20261111_CTRL_repeat (determinism control, identical weights)"
+  ]
+ },
+ "weight_manifest_sha256": "4c0ff11de5687e2fecb01088670ce79ac89926f95a4fd19cab2a99176dd7ac63",
+ "weight_sets": {
+  "FR_s0_G20261111": "cfb345d546b2da2389fcfc671b94c4d91ace21daf78e9aaeb3e5e059df0e8bc4",
+  "FC_s0_G20261111": "79f620d4aa7adc6b95e579d139aaffb34acf01fa83d64ee632a618b630b91533",
+  "FR_s0_G20261112": "5ff5ca36817886aa5eb10b3c9b8f0b9d3447423bd3297f79cec303ac4a3c0a43",
+  "FC_s0_G20261112": "4e87e8dca96e1592836eb4782b9552878edd7c1b006c778e3d898055fa88b5b5",
+  "FR_s0_G20261113": "63723820c2282a78b2bbeea4a3b573a618f223a37d47208dac50ff8681a3f9f0",
+  "FC_s0_G20261113": "3dc2769398a781ed1b27ed89280c10c215fbb7c964f518698a69a028b7b4f3b2",
+  "FR_s0_G20261114": "0fc4fe0a4c48b3d73faa39b6d60b2084731762885fb8b11ca0f12d1019c7362f",
+  "FC_s0_G20261114": "d65e02a28903f1ca8debeeddcb3e86494731dcf8bd4d0ada87258492b457e432",
+  "FR_s0_G20261115": "5ef00c3cacc586cc091a842761ba9984b378a4d605beca00499bb4eb1dea6e86",
+  "FC_s0_G20261115": "7e8c041c01d0b5b1e6f2b580dd1fd611466105972194eb3b0ddf4845a4a032e5",
+  "FR_s1_G20261111": "676523a7049274e3f90af11b9101734adcab052ef5b31f00d412441f2c7f5fdf",
+  "FC_s1_G20261111": "c328630408885dc0ef821f3ef0fe6e4afc1f6df4cc7a52cfe15957c9a5baa79c",
+  "FR_s1_G20261112": "0c9a8c9a8ee6ec814edef03898511246b1f75bcbdb88b1960f5607d2ed343954",
+  "FC_s1_G20261112": "bc3e00f2dbbe2e6787e4c93be45caa7d9e9cf6c3bbb2a5c03be982479cf7ac46",
+  "FR_s1_G20261113": "b0ce9cc052d919c8aaffe248b6a91122e19402e4fefd54a4938548be5e9be014",
+  "FC_s1_G20261113": "ecf0a820a9c79f77a7d6a4542317d5bf558c7379af41e253c6ce806d82f0f6ea",
+  "FR_s1_G20261114": "a7013e56c59bb0b8ba3e338fc5849a22fff1a8d243cab24f575bc338ee7f6069",
+  "FC_s1_G20261114": "e01b9484453c12077732d501f4a250211927b4cb073ae70772b922fb673ae173",
+  "FR_s1_G20261115": "85be556f51a3a49f8276cadf70c291ad220798c9c8412a023be39485ff866e17",
+  "FC_s1_G20261115": "5ae0f24bbc3af8650e8c3844db83e350b3785dfcc84c5c7cecb5f2b9df91be0d",
+  "FR_s2_G20261111": "1ca602c79bf38945905d0bd10275b8c1578a21be8e2b6a399ced6e5c664711e6",
+  "FC_s2_G20261111": "aed85c939b34128dea70755f256e6576aba206a372728d46a20e181781074c9c",
+  "FR_s2_G20261112": "861f6ed614b7b6588435995bc815faee88dc35ab7252bd3ac1e5700ddd496b15",
+  "FC_s2_G20261112": "cb45870038b0cd2e4e40c406f3ede9c7cc7ab5e9b3823fb9a1c0bcaa19841bf5",
+  "FR_s2_G20261113": "389fafa1a5253bc4383db779db03347da187d6b0bb6630c3f609bc0defa87b5e",
+  "FC_s2_G20261113": "e24f3995ae6ef1d6c877c4e6176244b657a812a2f0e55a71450cbe2396bc5dd9",
+  "FR_s2_G20261114": "420de48ab6b028f6ab9de560afe5fd3b9f38718be28ef243e3951ff422bf7e44",
+  "FC_s2_G20261114": "264a47efbaba859421c9a2c773ff70c38de723a403ac8fabe8b2d477902fccef",
+  "FR_s2_G20261115": "5efe3d8fae85b6cff725d9594f532bf997327feddaf3a36542286b3f8e1796a6",
+  "FC_s2_G20261115": "af6dde139adad5ccb16bb756c6f79c762a2dee4493d38ae45d0682b17d92dbf3"
+ },
+ "reference_routing": {
+  "file": "/home/kaixuan6/moe_cache_inference_routing/bf16_reference_routing.pt",
+  "file_sha256": "24aab7baebd27014c0172f0291849b86122fc67779014316a1ef0ae033c9b4f9",
+  "idx_sha256": "d91a9c4bd538d14668780553cc50994ac034c7368a666370bbb8dc46d55a9994",
+  "source": "Family A bf16_routing_manifest.json (reused exactly; not regenerated)"
+ },
+ "evaluation": {
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "n_windows": 128,
+  "seqlen": 512,
+  "scored_targets": 65408,
+  "batch": 8,
+  "forward": "historical sequential 24-layer layer-wise evaluator"
+ },
+ "intervention": "identical to Family A protocol: selected_experts <- BF16 reference indices in all 24 MoE layers; current router softmax probabilities gathered at forced indices; norm_topk_prob=False; FRT.make_forced_forward via moe_calib.inference_routing_override",
+ "parity": {
+  "A_natural": "every natural evaluation reproduces historical per-window NLL bitwise",
+  "B_record_only": "('FR_s0_G20261111', 'FC_s2_G20261111'): recorder vs historical evaluator per-window bitwise; per-layer and final hidden-state hashes equal to the hook-free evaluator",
+  "C_self_forcing": "('FR_s0_G20261111', 'FC_s2_G20261111'): forced with own natural indices -> bitwise identical",
+  "D_bf16_self_forcing": "BF16 forced with reference -> bitwise identical (per-window, per-token, layer hashes)",
+  "E_frozen_dispatch": "every frozen run: dispatch counts == BF16 reference; probabilities finite and model-dependent",
+  "F_restoration": "after each config: installed digest unchanged during eval, router weights unchanged, targets restored to pristine, no hooks/overrides; full non-target digest at start/end",
+  "tolerance": "exact; no loosening"
+ },
+ "metrics": {
+  "delta": "Delta[s,g] = PPL(FC,s,g) - PPL(FR,s,g) (positive = FR better); delta_g = Delta_nat - Delta_fro",
+  "primary": "R_SD = pooled within-seed SD(Delta_fro) / pooled within-seed SD(Delta_nat); pooled = sqrt(mean_s SD_s^2), SD_s ddof=1 over the 5 groupings (historical moe_calib.cross_seed_grouping.variance_summary definition)",
+  "secondary": [
+   "per-seed SD ratios",
+   "flat SD over 15 (descriptive only)",
+   "FR/FC PPL pooled within-seed SDs",
+   "means, ranges, FR-vs-FC counts",
+   "historical decision rule CS.decide under both regimes",
+   "hierarchical bootstrap CS.hierarchical_bootstrap (historical n/seed)"
+  ],
+  "reversal_R1": "historical decision-rule definition: fraction of the 15 Delta with sign opposite to sign(M), M = mean of seed means, computed within each regime",
+  "reversal_R2": "fp64 mechanism-table definition: Delta[s,g] sign vs the same seed's ORIGINAL-extraction Delta sign; frozen: seed 0 vs frozen ORIGINAL; seeds 1/2 frozen ORIGINAL unavailable -> reported as vs natural ORIGINAL sign, labelled mixed-regime",
+  "window_ci": "full_depth_pilot.paired_bootstrap(FC, FR, tokens), n_boot 5000, seed 20261109, mean-NLL difference; same windows/resampling for both regimes; across-window != across-grouping",
+  "routing": "set disagreement vs BF16; within-seed pairwise between groupings (10 pairs per seed x strategy); seed-0 vs ORIGINAL (Family A-compatible); margins p4-p5 as Family A",
+  "weights": "pairwise within-seed groupings and seed-0 vs ORIGINAL: changed-element fraction, mean/median abs diff, rel Frobenius, per-layer/per-expert distribution, BF16 ULP distance; Family A order vs ORIGINAL with the same function for calibration"
+ },
+ "decision_rules": {
+  "BLOCKED": "any mandatory parity (A-F) fails",
+  "STRONG-COLLAPSE (A)": "R_SD <= 0.5 AND frozen R1 reversal count <= half the natural R1 count",
+  "WEAK-COLLAPSE (B)": "R_SD >= 0.9 AND frozen R1 count > half the natural R1 count",
+  "PARTIAL-COLLAPSE (C)": "otherwise",
+  "note": "R_SD <= 0.5 is a descriptive screening threshold (as Family A), not a significance test; no additive variance decomposition"
+ },
+ "code_sha256_at_freeze": {
+  "moe_calib/inference_routing_override.py": "13cacd0e191def1dad6c0ce40b28bd025b9569c8e2e65862dab7836e7c389ff5",
+  "moe_calib/frozen_routing.py": "01fe9b0f6b34fcab83c14189a9458aea312cfc12ff37e03ff373cd6b24859d3d",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "diagnostics/inference_routing_amplification.py": "c6cfaaf9d20a4f20aeb8e0e8b6f1b24e94a950a9354521d0409034c9a1608ec8",
+  "diagnostics/grouping_routing_amplification.py": "7856af273880cc95c70a107a17b1b91244b371108965f6f0fe8bde94021cf012"
+ },
+ "protocol_sha256": "ca444093eb0bf1a728e3ba5f36395b9420b33644e7a7ce1aff32a2cad8afca97",
+ "created": "2026-11-14 05:47:28"
+}

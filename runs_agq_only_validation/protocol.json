@@ -1,0 +1,93 @@
+{
+ "experiment": "AGQ-only: standard GPTQ vs AGQ-GPTQ on identical C4 Random B=128 windows",
+ "question": "Does router-affinity-weighted Hessian accumulation improve MoE quantization quality over standard GPTQ under a strong matched natural-text calibration baseline?",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B @ 1a758c50ecb6350748b9ce0a99d2352fd9fc11c9 (BF16)",
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "n_experts": 240,
+ "n_projections": 720,
+ "rtn_fallback": "none expected (all experts have tokens at B=128); any fallback is recorded and invalidates nothing but is reported",
+ "calibration": {
+  "source": "C4 Random (FR), CANONICAL-B1 cache",
+  "primary": "FR_s0",
+  "extension": [
+   "FR_s1",
+   "FR_s2"
+  ],
+  "extension_rule": "run s1 and s2 if FR_s0 AGQ is valid (correctness + resources), regardless of the direction of the s0 result"
+ },
+ "conditions": {
+  "C4R128_GPTQ": "historical CANONICAL-B1 GPTQ result (weights sha256 in calibration_manifest); admissible only if the unit_regression stage reproduces it bitwise with the modified code (hessian_weighting='none')",
+  "C4R128_AGQ": "identical pipeline with hessian_weighting='router_affinity'"
+ },
+ "agq": {
+  "hessian": "H_e = sum_i c_{i,e} x_i x_i^T via (sqrt(c) x); c not c^2",
+  "affinity": "see router_affinity_definition.json",
+  "normalization": "none added: production GPTQ uses the raw sum and percdamp * mean(diag H) damping, both invariant to a global positive scale",
+  "applied_to": "all routed gate_proj/up_proj/down_proj of layers 1/8/16/23; shared expert and router untouched"
+ },
+ "evaluation": {
+  "reconstruction_rows": [
+   2128,
+   2256
+  ],
+  "reconstruction_cache": "/home/kaixuan6/moe_cache",
+  "standard_expert_recon": "E3 per-expert held-out relative reconstruction (unchanged); config = mean of 240",
+  "weighted_expert_recon": "sum_i c_i ||E(x_i)-\u00ca(x_i)||^2 / sum_i c_i ||E(x_i)||^2 over ALL routed held-out tokens with held-out routing coefficients; config = mean of 240",
+  "moe_layer_output": "PRIMARY: per layer sum_x ||y_BF16 - y_quant||^2 / sum_x ||y_BF16||^2 over all 65,536 held-out tokens, fp32 math, frozen BF16 routing (identical inputs, router and c), shared expert included in y; config = mean of the 4 layer values",
+  "moe_layer_output_native": "secondary: same ratio from the actual BF16 Qwen2MoeSparseMoeBlock forward with installed weights",
+  "ppl_windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "ppl": "EP.layerwise_nll, frozen 128 x 512 WikiText-2 windows",
+  "exposure_deciles": "deciles of natural routing frequency p (runs_low_budget/routing_profile_v2.npz)"
+ },
+ "decision_rule": {
+  "primary_metric": "moe_layer_output (mean of 4 layers), relative difference (AGQ-GPTQ)/GPTQ",
+  "tau_rel": 0.005,
+  "min_layers_improved": 3,
+  "AGQ_LAYER_QUALITY_GAIN": "mean rel diff <= -tau AND >= 3/4 layers improved AND every measured seed improves",
+  "AGQ_QUALITY_REGRESSION": "mean rel diff >= +tau",
+  "AGQ_SURROGATE_ONLY_GAIN": "not the above AND weighted expert recon rel diff <= -tau",
+  "AGQ_NO_MEASURABLE_GAIN": "otherwise",
+  "AGQ_RUN_BLOCKED": "any correctness gate fails (alignment, oracle, unit regression, validity)",
+  "robustness": "a gain is called robust only if every measured seed agrees; one seed is never robust",
+  "secondary": {
+   "tau_rel": 0.005,
+   "ppl_noise": 0.014,
+   "ppl_noise_source": "largest calibration-grouping |dPPL| in update_batch_sensitivity.md / |dPPL| scale in update_ebss_official_validation.md"
+  }
+ },
+ "hard_constraints": [
+  "no new calibration data",
+  "no EBSS",
+  "no Hadamard",
+  "solver/damping/act-order/group size/bits unchanged",
+  "no extra layers",
+  "no affinity powers or transforms",
+  "historical artifacts not overwritten"
+ ],
+ "code_sha256": {
+  "moe_calib/agq.py": "2d71a284454c405c15770093a0ede33e5932efef1b2344534ac5f583ab753c00",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/profiler.py": "90ed5b92fc4022239cc85f3522772852e873151bffdc2840d7e58029546674a8",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5",
+  "diagnostics/agq_only_validation.py": "768211346f172968706e42a45f2ad792f534c4240ef6c1f5a98d3d9b95a653c6",
+  "diagnostics/official_ebss_validation.py": "f0d34732d4c547e077756e6fe1ea79b5fbd1723dbaf0124e75832c98e253e448",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "tests/test_agq.py": "fa11208b6dba6f17e9ac14eb20416d88b45c078d008ae98a7b8fa4766b1a1dea"
+ },
+ "frozen_before_any_quality_result": true,
+ "created": "2026-11-11 03:56:58"
+}

@@ -1,0 +1,41 @@
+{
+ "checks": {
+  "01_A_all_gptq": true,
+  "02_D_all_agq": true,
+  "03_B_agq_gu_gptq_down": true,
+  "04_C_gptq_gu_agq_down": true,
+  "05_60_experts_per_layer": true,
+  "06_three_projections_per_expert": true,
+  "07_candidates_unchanged": true,
+  "08_router_and_top4_unchanged": true,
+  "09_shared_expert_unchanged": true,
+  "10_nontarget_params_unchanged": true,
+  "11_gptq_reproduces": true,
+  "12_full_agq_reproduces": true,
+  "13_complete_mixed_expert_outputs": true,
+  "14_no_test_data_in_selection": true,
+  "15_selection_manifest_deterministic_and_frozen": true,
+  "16_reinstall_identical": true,
+  "17_native_agrees_with_evaluator": true,
+  "18_D_plus_C_reproduces_numerator": true,
+  "19_original_weights_restored": true,
+  "20_full_test_suite": true
+ },
+ "passed": true,
+ "tests": {
+  "projection": "14 passed in 0.55s",
+  "projection_passed": true,
+  "all": "589 passed, 1 warning in 235.56s (0:03:55)",
+  "all_passed": true
+ },
+ "native_ranking_agrees_per_split": {
+  "tune": true,
+  "confirm": true,
+  "oldtest": true
+ },
+ "notes": {
+  "08": "native BF16 forward asserts torch.equal on router logits for every window and config",
+  "13": "LayerEvalAccumulator (independent per-expert loop) agrees for all four mixed configs on tune and confirm (per-window equal, total abs diff <= 1e-12)",
+  "17": "native ranking agreement reported separately; equality to evaluator is checked on A/D historical native values"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "B32_gu_trace": {
+  "spearman_vs_degradation": 0.025113283216722508
+ },
+ "B32_gu_frob": {
+  "spearman_vs_degradation": 0.06925641070157466
+ },
+ "B32_down_trace": {
+  "spearman_vs_degradation": -0.04223424017778086
+ },
+ "B32_down_frob": {
+  "spearman_vs_degradation": 0.16547509505373353
+ },
+ "B32_exposure": {
+  "spearman_vs_degradation": -0.2987985902533029
+ },
+ "B32_trace_q50_confusion": {
+  "n_flagged_stable": 43,
+  "false_safe_rate": 1.0,
+  "unnecessarily_continued_rate": 0.0,
+  "base_safe_rate": 0.0,
+  "safe_rate_if_flagged": 0.0
+ },
+ "B32_frob_q50_confusion": {
+  "n_flagged_stable": 15,
+  "false_safe_rate": 1.0,
+  "unnecessarily_continued_rate": 0.0,
+  "base_safe_rate": 0.0,
+  "safe_rate_if_flagged": 0.0
+ },
+ "B32_frob_exposure_q50_confusion": {
+  "n_flagged_stable": 7,
+  "false_safe_rate": 1.0,
+  "unnecessarily_continued_rate": 0.0,
+  "base_safe_rate": 0.0,
+  "safe_rate_if_flagged": 0.0
+ },
+ "B64_gu_trace": {
+  "spearman_vs_degradation": -0.10068664386534486
+ },
+ "B64_gu_frob": {
+  "spearman_vs_degradation": 0.33032083890345315
+ },
+ "B64_down_trace": {
+  "spearman_vs_degradation": 0.0025113283216722506
+ },
+ "B64_down_frob": {
+  "spearman_vs_degradation": 0.26685098699630194
+ },
+ "B64_exposure": {
+  "spearman_vs_degradation": -0.31658535738467675
+ },
+ "B64_trace_q50_confusion": {
+  "n_flagged_stable": 40,
+  "false_safe_rate": 1.0,
+  "unnecessarily_continued_rate": 0.005,
+  "base_safe_rate": 0.004166666666666667,
+  "safe_rate_if_flagged": 0.0
+ },
+ "B64_frob_q50_confusion": {
+  "n_flagged_stable": 19,
+  "false_safe_rate": 0.9473684210526315,
+  "unnecessarily_continued_rate": 0.0,
+  "base_safe_rate": 0.004166666666666667,
+  "safe_rate_if_flagged": 0.05263157894736842
+ },
+ "B64_frob_exposure_q50_confusion": {
+  "n_flagged_stable": 6,
+  "false_safe_rate": 1.0,
+  "unnecessarily_continued_rate": 0.004273504273504274,
+  "base_safe_rate": 0.004166666666666667,
+  "safe_rate_if_flagged": 0.0
+ }
+}

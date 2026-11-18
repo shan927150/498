@@ -1,0 +1,33 @@
+{
+ "checks": {
+  "per_expert_test_bitwise": true,
+  "installed_sha256_equal": true,
+  "untouched_unchanged": true,
+  "rtn_fallbacks": 0,
+  "n_quantized": 240,
+  "nonfinite": 0
+ },
+ "ok": true,
+ "installed_sha256": "5d8623db0af2438539af39b756176005b1606bf47248cc555fb4c58f2c8849b0",
+ "files": {
+  "L1": "79e06b7973a070243b2e7536a2a2416cac4c9840ef9bcf70d7e4567ed4f18f6a",
+  "L8": "d6977a3e1745617bfb94bb78308565488f4989dd9efc50d7c4a4ca0b7132f1f1",
+  "L16": "0ed6a176c641d1f26f3f980cfcc4564469bf86a54b620e46abd80946afa5ccaa",
+  "L23": "88d0c128fbd6b4a9e1133ad3918cb3611fae6ac68d8621c4357660b4a6afb875"
+ },
+ "quantize_s": 514.1683111190796,
+ "hessian_s": 45.256373167037964,
+ "gptq_s": 406.0098853111267,
+ "peak_gpu_gb": 7.793952768,
+ "peak_cpu_gb": 17.07096,
+ "env": {
+  "python": "3.13.16",
+  "torch": "2.11.0+cu128",
+  "transformers": "4.51.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A100-SXM4-80GB MIG 2g.20gb",
+  "host": "jupyter-kaixuan6",
+  "omp_threads": "8",
+  "tf32_matmul": false
+ }
+}

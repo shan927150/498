@@ -1,0 +1,134 @@
+{
+ "experiment": "Expert-wise GPTQ/AGQ hybrid: small-scale feasibility MVP",
+ "nature": "retrospective exploratory pilot; one calibration seed; outcome-informed layer choice",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (BF16)",
+ "layers": [
+  8,
+  16
+ ],
+ "layer_choice_caveat": "L8 (AGQ slightly worse) and L16 (AGQ best) were chosen WITH knowledge of earlier AGQ results; not an independent confirmatory sample",
+ "calibration": {
+  "config": "FR_s0",
+  "manifest": "runs_agq_only_validation/calibration_manifest.json",
+  "manifest_sha256": "eb44ba348b0f5196e7eca7e3a4e090dbd92aa1083078fe1235cf34cd784930b2",
+  "policy": "CANONICAL-B1",
+  "n": 128,
+  "seqlen": 512,
+  "new_data": false
+ },
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true,
+  "solver": "unchanged moe_calib.gptq",
+  "capture": "non-sequential BF16"
+ },
+ "candidates": {
+  "GPTQ": {
+   "q": 0,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0",
+   "file_sha256": {
+    "8": "0e2f6f0eff1c40e6fbffa48a9156f69961c89442f07cf157c7dfb21764c09e46",
+    "16": "b7344106c2cffdc5f4235f6de1142e1e7d932c72cff568a62365b93e936f0519"
+   }
+  },
+  "AGQ": {
+   "q": 1,
+   "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0",
+   "file_sha256": {
+    "8": "e2881ac657b5bfa2d55b3a9d692c09edbc1e552ecea8b530a4e4bc3bdcbf45c5",
+    "16": "ad61cda0d357392aa411f6fe0d383c626c6f62e6fc98ecafacc299a4134b173b"
+   }
+  }
+ },
+ "splits": {
+  "tune": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2000,
+    2128
+   ],
+   "role": "SELECTION-VALIDATION",
+   "note": "historical tuning split; disjoint from the C4 pool rows 0-1999 the FR s0 calibration set was drawn from; the ONLY split used for expert selection and the layer-wise baseline choice"
+  },
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY EVALUATION",
+   "note": "document-disjoint confirmation split; identical windows to runs_legacy_metric_reeval; inspected in earlier studies -> not pristine"
+  },
+  "oldtest": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY EVALUATION",
+   "note": "historical test rows 2128-2255; inspected in many prior studies"
+  }
+ },
+ "selection": {
+  "score": "J_e^(q) = sum_{i: e in top4(i)} c_{i,e}^2 ||E_e^FP(x_i) - E_e^(q)(x_i)||_2^2 on the tuning split; full expert MLP output in fp32 from BF16 weights; c = fp32 softmax top-4 router value of the BF16 model (no renormalization); frozen BF16 layer inputs (non-sequential)",
+  "rule": "z_e = 1 (AGQ) iff J_e^(1) < J_e^(0); otherwise (incl. ties) 0 (GPTQ); all three projections of one candidate per expert",
+  "no_threshold": true,
+  "no_test_data": true
+ },
+ "baselines": {
+  "GPTQ": "all 60 experts q=0",
+  "AGQ": "all 60 experts q=1",
+  "LAYERWISE": "per layer, all-AGQ iff its actual aggregated layer-output error on the TUNING split is strictly lower than all-GPTQ; else all-GPTQ",
+  "HYBRID": "per-expert z_e from selection_manifest.json"
+ },
+ "evaluation": {
+  "primary_split": "confirm",
+  "secondary_split": "oldtest",
+  "metric": "E_layer = sum_x ||y_BF16 - y_q||^2 / (sum_x ||y_BF16||^2 + 1e-30), fp32 expert math, float64 sums, shared expert included, frozen BF16 router/top-4/coefficients (LayerEvalAccumulator definition)",
+  "aggregate": "mean of the two per-layer ratios (2-layer scope; not comparable to 4-layer historical means)",
+  "native_check": "actual BF16 Qwen2MoeSparseMoeBlock forward with installed weights (secondary)",
+  "decomposition": "||dy||^2 = D + C, D = sum_k ||c_k dE_k||^2, C = 2 sum_{a<b} <c_a dE_a, c_b dE_b>",
+  "paired": "per-window ratio differences, fraction of windows improved, window bootstrap of the 2-layer mean relative difference (2000 reps, windows resampled jointly across layers)"
+ },
+ "decision_rule": {
+  "rules": {
+   "tau_rel": 0.005,
+   "min_sign_agreement": 0.65,
+   "min_spearman": 0.5
+  },
+  "HYBRID_PROMISING": "all of: (1) 2-layer mean hybrid error < uniform GPTQ and < uniform AGQ; (2) < layer-wise uniform; (3) rel diff vs strongest of GPTQ/AGQ/LAYERWISE <= -tau; (4) per layer, hybrid rel diff vs the better uniform method of that layer <= +tau; (5) transfer: pooled per-expert val->test sign agreement >= 0.65 AND Spearman of per-expert relative improvement >= 0.5 (primary split); (6) correctness passes",
+  "HYBRID_SELECTION_FAIL": "not promising, transfer criterion (5) fails, and hybrid does not improve on either uniform method by >= tau",
+  "HYBRID_LOCAL_ONLY": "not the above; hybrid improves on BOTH uniform methods by >= tau but not on the strongest non-hybrid baseline (layer-wise) by >= tau",
+  "HYBRID_NO_GAIN": "otherwise",
+  "HYBRID_BLOCKED": "candidate weights not reproducible or any correctness check fails",
+  "recommendation": {
+   "A": "HYBRID-PROMISING only",
+   "B": "hybrid not better than layer-wise by >= tau AND layer-wise beats both uniform methods (2-layer mean)",
+   "C": "otherwise"
+  },
+  "decision_split": "confirm (primary); oldtest reported, never decisive",
+  "implementation": "moe_calib.hybrid.classify / recommend"
+ },
+ "hard_constraints": [
+  "no new quantization",
+  "no solver / Hessian change",
+  "no new calibration data",
+  "no threshold tuning",
+  "no test data in selection",
+  "no greedy / learned selection",
+  "historical artifacts read-only"
+ ],
+ "code_sha256": {
+  "diagnostics/expertwise_agq_hybrid.py": "5c4232e2879fdc634bb718702bc671786f56afe5e527c0ffcd497b5925481a31",
+  "moe_calib/hybrid.py": "2bc12d3386800c2981473d624f65dfb1589cc5820a083306d5812dd4b4eb2a17",
+  "moe_calib/agq.py": "d058f5d5a630c9a7779a1b1c9781b15bcfb04d1e8af926bb79553693b39549d9",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "tests/test_expertwise_hybrid.py": "03cc0dd338c4f9cc25c6e83913d96090408d6db4cd59b0d100d42c1a732e0cfc"
+ },
+ "frozen_before_any_selection_or_hybrid_result": true,
+ "created": "2026-11-13 02:05:46"
+}

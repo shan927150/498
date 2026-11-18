@@ -1,0 +1,209 @@
+{
+ "verdict": "AGQ-LAYER-QUALITY-GAIN",
+ "decision": {
+  "primary": {
+   "verdict": "AGQ-LAYER-QUALITY-GAIN",
+   "mean_layer_rel": -0.01504968264189204,
+   "layers_improved": 3,
+   "n_layers": 4,
+   "seeds_all_improve": true,
+   "n_seeds": 3,
+   "weighted_rel": 0.0009179621944475601
+  },
+  "secondary": {
+   "FR_s0": {
+    "standard_reconstruction": "regression",
+    "weighted_reconstruction": "no gain",
+    "ppl": "inconclusive",
+    "systems_overhead_rel_total": 0.0016156129154021315
+   },
+   "FR_s1": {
+    "standard_reconstruction": "regression",
+    "weighted_reconstruction": "no gain",
+    "ppl": "gain",
+    "systems_overhead_rel_total": 2.444982451678548
+   },
+   "FR_s2": {
+    "standard_reconstruction": "regression",
+    "weighted_reconstruction": "no gain",
+    "ppl": "inconclusive",
+    "systems_overhead_rel_total": 0.9595587592125807
+   }
+  },
+  "gates": {
+   "source_review": true,
+   "routing_definition": true,
+   "capture_alignment": true,
+   "hessian_oracle": true,
+   "unit_regression": true,
+   "diagnostics_recompute_equals_installed": true,
+   "AGQ_FR_s0_valid": true,
+   "AGQ_FR_s1_valid": true,
+   "AGQ_FR_s2_valid": true
+  },
+  "seeds_measured": [
+   "FR_s0",
+   "FR_s1",
+   "FR_s2"
+  ],
+  "thresholds": {
+   "primary_metric": "moe_layer_output (mean of 4 layers), relative difference (AGQ-GPTQ)/GPTQ",
+   "tau_rel": 0.005,
+   "min_layers_improved": 3,
+   "AGQ_LAYER_QUALITY_GAIN": "mean rel diff <= -tau AND >= 3/4 layers improved AND every measured seed improves",
+   "AGQ_QUALITY_REGRESSION": "mean rel diff >= +tau",
+   "AGQ_SURROGATE_ONLY_GAIN": "not the above AND weighted expert recon rel diff <= -tau",
+   "AGQ_NO_MEASURABLE_GAIN": "otherwise",
+   "AGQ_RUN_BLOCKED": "any correctness gate fails (alignment, oracle, unit regression, validity)",
+   "robustness": "a gain is called robust only if every measured seed agrees; one seed is never robust",
+   "secondary": {
+    "tau_rel": 0.005,
+    "ppl_noise": 0.014,
+    "ppl_noise_source": "largest calibration-grouping |dPPL| in update_batch_sensitivity.md / |dPPL| scale in update_ebss_official_validation.md"
+   }
+  },
+  "robust": true
+ },
+ "table": {
+  "FR_s0": {
+   "Standard expert reconstruction": [
+    0.0046094692935882,
+    0.004682939944812207,
+    0.015939069455610667
+   ],
+   "Weighted expert reconstruction": [
+    0.014750314414386505,
+    0.014763854645375126,
+    0.0009179621944475601
+   ],
+   "MoE layer output reconstruction": [
+    0.0037166111573928374,
+    0.00366067733897076,
+    -0.01504968264189204
+   ],
+   "MoE layer output (native BF16 block)": [
+    0.0037340103395176122,
+    0.003677303926339935,
+    -0.015186463887778856
+   ],
+   "Partial-model WikiText-2 PPL": [
+    9.269003962169808,
+    9.275563433730778,
+    0.0007076781483469792
+   ],
+   "Quantization wall time (s)": [
+    346.8168659210205,
+    347.37718772888184,
+    0.0016156129154022412
+   ],
+   "Peak GPU memory (GB)": [
+    8.417724416,
+    8.417806848,
+    9.792670313910642e-06
+   ]
+  },
+  "FR_s1": {
+   "Standard expert reconstruction": [
+    0.004625934030334249,
+    0.004702987057006975,
+    0.016656750002800775
+   ],
+   "Weighted expert reconstruction": [
+    0.014783499370261426,
+    0.014820157072191115,
+    0.0024796363169216577
+   ],
+   "MoE layer output reconstruction": [
+    0.003713369435295978,
+    0.003675058048436134,
+    -0.010317149297263515
+   ],
+   "MoE layer output (native BF16 block)": [
+    0.0037307654069663014,
+    0.0036919424909416182,
+    -0.010406153105255769
+   ],
+   "Partial-model WikiText-2 PPL": [
+    9.27256733105897,
+    9.257613690315763,
+    -0.0016126753475402902
+   ],
+   "Quantization wall time (s)": [
+    346.8168659210205,
+    1194.7780170440674,
+    2.444982451678548
+   ],
+   "Peak GPU memory (GB)": [
+    8.417724416,
+    8.417806336,
+    9.731846274725263e-06
+   ]
+  },
+  "FR_s2": {
+   "Standard expert reconstruction": [
+    0.004610399983864865,
+    0.00468796123375574,
+    0.016823106490178267
+   ],
+   "Weighted expert reconstruction": [
+    0.014749838364926505,
+    0.014779950911062377,
+    0.002041550923532543
+   ],
+   "MoE layer output reconstruction": [
+    0.00371124535216685,
+    0.0036682291737676967,
+    -0.011590766526400082
+   ],
+   "MoE layer output (native BF16 block)": [
+    0.0037285672989046032,
+    0.003685396340916818,
+    -0.011578430675092913
+   ],
+   "Partial-model WikiText-2 PPL": [
+    9.274692816567088,
+    9.269169296983371,
+    -0.0005955474421589658
+   ],
+   "Quantization wall time (s)": [
+    346.8168659210205,
+    679.6080274581909,
+    0.9595587592125807
+   ],
+   "Peak GPU memory (GB)": [
+    8.417724416,
+    8.417806336,
+    9.731846274725263e-06
+   ]
+  }
+ },
+ "exploratory_c2_probe": {
+  "note": "POST HOC, not part of the frozen decision: MoE output error vs the c^2-weighted expert error",
+  "per_layer": {
+   "1": {
+    "total_rel": -0.018308745598373248,
+    "c2_weighted_rel": -0.02203705143440178,
+    "c1_pooled_rel": -0.008302850227069334,
+    "gptq_diag_fraction": 1.2750558332714739
+   },
+   "8": {
+    "total_rel": 0.0006578789320363305,
+    "c2_weighted_rel": 0.0008764186991406648,
+    "c1_pooled_rel": 0.004197549724728448,
+    "gptq_diag_fraction": 0.9999812258624342
+   },
+   "16": {
+    "total_rel": -0.03092705116154718,
+    "c2_weighted_rel": -0.031026020209583036,
+    "c1_pooled_rel": -0.005887433682994616,
+    "gptq_diag_fraction": 1.0000224632490755
+   },
+   "23": {
+    "total_rel": -0.012089096514796099,
+    "c2_weighted_rel": -0.011821825703166358,
+    "c1_pooled_rel": -0.0018728834336522223,
+    "gptq_diag_fraction": 1.0000242333217284
+   }
+  }
+ }
+}

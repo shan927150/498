@@ -1,0 +1,208 @@
+{
+ "layer": 16,
+ "expert": 40,
+ "post_hoc": true,
+ "note": "identified from earlier (expert-wise hybrid) results; post-hoc mechanism exploration only; never used for selection or decision",
+ "calibration": {
+  "calib_tokens": 4086,
+  "calib_affinity_mean": 0.15225968397588516,
+  "calib_affinity_cv": 1.0869529742364599,
+  "natural_p": 0.015698974609375,
+  "natural_decile": 2
+ },
+ "splits": {
+  "tune": {
+   "J": {
+    "GPTQ": 2191.0973340276387,
+    "GU_AGQ": 1144.883818690716,
+    "DOWN_AGQ": 2054.7341162716575,
+    "FULL_AGQ": 1120.2759241380923
+   },
+   "J_rel": {
+    "GPTQ": 0.013015960019780837,
+    "GU_AGQ": 0.006801049766228413,
+    "DOWN_AGQ": 0.01220591011331779,
+    "FULL_AGQ": 0.006654869417827746
+   },
+   "rel_vs_gptq": {
+    "GPTQ": 0.0,
+    "GU_AGQ": -0.4774838155700689,
+    "DOWN_AGQ": -0.062235125586739944,
+    "FULL_AGQ": -0.4887146697044172
+   },
+   "rel_vs_full_agq": {
+    "GPTQ": 0.9558550592912236,
+    "GU_AGQ": 0.02196592287882679,
+    "DOWN_AGQ": 0.8341321740467735,
+    "FULL_AGQ": 0.0
+   },
+   "interactions": {
+    "E": {
+     "GPTQ": 2191.0973340276387,
+     "GU_AGQ": 1144.883818690716,
+     "DOWN_AGQ": 2054.7341162716575,
+     "FULL_AGQ": 1120.2759241380923
+    },
+    "G_GU_given_down_gptq": 1046.2135153369227,
+    "G_D_given_gu_gptq": 136.36321775598117,
+    "G_GU_given_down_agq": 934.4581921335653,
+    "G_D_given_gu_agq": 24.607894552623748,
+    "interaction_I": 111.75532320335742,
+    "full_agq_gain": 1070.8214098895464,
+    "rel": {
+     "G_GU_given_down_gptq": 0.4774838155700689,
+     "G_D_given_gu_gptq": 0.062235125586739944,
+     "G_GU_given_down_agq": 0.4264795441176772,
+     "G_D_given_gu_agq": 0.011230854134348257,
+     "interaction_I": 0.051004271452391683,
+     "full_agq_gain": 0.4887146697044172
+    },
+    "shapley_share_of_full_gain": {
+     "GU": 0.9248375542261483,
+     "DOWN": 0.0751624457738517
+    },
+    "interaction_over_full_gain": 0.10436410980509328,
+    "interaction_sign": "antagonistic"
+   },
+   "share_of_layer_J": {
+    "GPTQ": 0.05306734667443157,
+    "GU_AGQ": 0.028585310782193212,
+    "DOWN_AGQ": 0.04992029199582849,
+    "FULL_AGQ": 0.027985850297746105
+   },
+   "share_of_layer_full_agq_gain": 0.8505940637675904,
+   "tokens": 4223,
+   "affinity_mean": 0.15140642857665548,
+   "affinity_cv": 1.0705717943428015
+  },
+  "confirm": {
+   "J": {
+    "GPTQ": 4344.395832333021,
+    "GU_AGQ": 2245.150434817845,
+    "DOWN_AGQ": 4081.4080657603376,
+    "FULL_AGQ": 2202.4336477967663
+   },
+   "J_rel": {
+    "GPTQ": 0.012818224537809475,
+    "GU_AGQ": 0.006624360096395945,
+    "DOWN_AGQ": 0.012042274009191237,
+    "FULL_AGQ": 0.006498323384111391
+   },
+   "rel_vs_gptq": {
+    "GPTQ": 0.0,
+    "GU_AGQ": -0.48320767225942257,
+    "DOWN_AGQ": -0.060534945875650975,
+    "FULL_AGQ": -0.49304029080287126
+   },
+   "rel_vs_full_agq": {
+    "GPTQ": 0.9725433438955107,
+    "GU_AGQ": 0.01939526626094323,
+    "DOWN_AGQ": 0.8531355393354203,
+    "FULL_AGQ": 0.0
+   },
+   "interactions": {
+    "E": {
+     "GPTQ": 4344.395832333021,
+     "GU_AGQ": 2245.150434817845,
+     "DOWN_AGQ": 4081.4080657603376,
+     "FULL_AGQ": 2202.4336477967663
+    },
+    "G_GU_given_down_gptq": 2099.2453975151757,
+    "G_D_given_gu_gptq": 262.9877665726831,
+    "G_GU_given_down_agq": 1878.9744179635713,
+    "G_D_given_gu_agq": 42.716787021078744,
+    "interaction_I": 220.2709795516039,
+    "full_agq_gain": 2141.9621845362544,
+    "rel": {
+     "G_GU_given_down_gptq": 0.48320767225942257,
+     "G_D_given_gu_gptq": 0.060534945875650975,
+     "G_GU_given_down_agq": 0.43250534492722026,
+     "G_D_given_gu_agq": 0.009832618543448662,
+     "interaction_I": 0.05070232733220221,
+     "full_agq_gain": 0.49304029080287126
+    },
+    "shapley_share_of_full_gain": {
+     "GU": 0.928639133827671,
+     "DOWN": 0.0713608661723289
+    },
+    "interaction_over_full_gain": 0.10283607299037992,
+    "interaction_sign": "antagonistic"
+   },
+   "share_of_layer_J": {
+    "GPTQ": 0.053100366798525055,
+    "GU_AGQ": 0.028303131291411036,
+    "DOWN_AGQ": 0.050063429591061484,
+    "FULL_AGQ": 0.027788229110424657
+   },
+   "share_of_layer_full_agq_gain": 0.8376829597186064,
+   "tokens": 8168,
+   "affinity_mean": 0.15415192693339644,
+   "affinity_cv": 1.0684892299693967
+  },
+  "oldtest": {
+   "J": {
+    "GPTQ": 2134.142457965555,
+    "GU_AGQ": 1088.6572377004654,
+    "DOWN_AGQ": 2005.9551641496337,
+    "FULL_AGQ": 1069.3408724472383
+   },
+   "J_rel": {
+    "GPTQ": 0.013058171582374963,
+    "GU_AGQ": 0.0066611640433032835,
+    "DOWN_AGQ": 0.01227383234059618,
+    "FULL_AGQ": 0.0065429730524052725
+   },
+   "rel_vs_gptq": {
+    "GPTQ": 0.0,
+    "GU_AGQ": -0.4898853946524893,
+    "DOWN_AGQ": -0.06006501268810343,
+    "FULL_AGQ": -0.49893650798427747
+   },
+   "rel_vs_full_agq": {
+    "GPTQ": 0.995755060854886,
+    "GU_AGQ": 0.01806380523828727,
+    "DOWN_AGQ": 0.8758800078022906,
+    "FULL_AGQ": 0.0
+   },
+   "interactions": {
+    "E": {
+     "GPTQ": 2134.142457965555,
+     "GU_AGQ": 1088.6572377004654,
+     "DOWN_AGQ": 2005.9551641496337,
+     "FULL_AGQ": 1069.3408724472383
+    },
+    "G_GU_given_down_gptq": 1045.4852202650895,
+    "G_D_given_gu_gptq": 128.1872938159213,
+    "G_GU_given_down_agq": 936.6142917023953,
+    "G_D_given_gu_agq": 19.316365253227104,
+    "interaction_I": 108.87092856269419,
+    "full_agq_gain": 1064.8015855183166,
+    "rel": {
+     "G_GU_given_down_gptq": 0.4898853946524893,
+     "G_D_given_gu_gptq": 0.06006501268810343,
+     "G_GU_given_down_agq": 0.43887149529617403,
+     "G_D_given_gu_agq": 0.00905111333178812,
+     "interaction_I": 0.051013899356315305,
+     "full_agq_gain": 0.49893650798427747
+    },
+    "shapley_share_of_full_gain": {
+     "GU": 0.9307365517316789,
+     "DOWN": 0.06926344826832109
+    },
+    "interaction_over_full_gain": 0.10224527277511403,
+    "interaction_sign": "antagonistic"
+   },
+   "share_of_layer_J": {
+    "GPTQ": 0.05240200095388481,
+    "GU_AGQ": 0.027571851264849512,
+    "DOWN_AGQ": 0.049419433327986796,
+    "FULL_AGQ": 0.02709745579777478
+   },
+   "share_of_layer_full_agq_gain": 0.8426885301661964,
+   "tokens": 4238,
+   "affinity_mean": 0.14910989334945685,
+   "affinity_cv": 1.0807385862969083
+  }
+ },
+ "attribution_confirm": "GU"
+}

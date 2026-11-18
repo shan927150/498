@@ -1,0 +1,82 @@
+{
+ "created": "2026-11-13 05:55:15",
+ "expert_hessian_snapshots": {
+  "stored": false,
+  "note": "runs_hessian_early_stop_mvp kept only derived statistics (trace / Frobenius drift, token counts) and B32/B64/B128 E3 errors, not the matrices -> Hessians are re-accumulated from the same frozen rows with the same Profiler path and checked against those statistics bitwise"
+ },
+ "chronological_checkpoints": "runs_hessian_early_stop_mvp/checkpoint_manifest.json (S16/S32/S64/S128)",
+ "calibration_cache": {
+  "path": "/home/kaixuan6/moe_cache_ebss_official_validation",
+  "files": {
+   "8": true,
+   "16": true
+  }
+ },
+ "gptq_baseline_weights": {
+  "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0",
+  "files": {
+   "8": "0e2f6f0eff1c40e6fbffa48a9156f69961c89442f07cf157c7dfb21764c09e46",
+   "16": "b7344106c2cffdc5f4235f6de1142e1e7d932c72cff568a62365b93e936f0519"
+  }
+ },
+ "heldout_caches": {
+  "tune": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2000,
+    2128
+   ],
+   "role": "SELECTION-VALIDATION",
+   "note": "historical tuning split; disjoint from the C4 pool rows 0-1999 the FR s0 calibration set was drawn from; the ONLY split used for expert selection and the layer-wise baseline choice",
+   "files": {
+    "8": true,
+    "16": true
+   }
+  },
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY EVALUATION",
+   "note": "document-disjoint confirmation split; identical windows to runs_legacy_metric_reeval; inspected in earlier studies -> not pristine",
+   "files": {
+    "8": true,
+    "16": true
+   }
+  },
+  "oldtest": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY EVALUATION",
+   "note": "historical test rows 2128-2255; inspected in many prior studies",
+   "files": {
+    "8": true,
+    "16": true
+   }
+  }
+ },
+ "evaluators": {
+  "complete_expert": "new (this driver): c^2-weighted complete expert MLP output error with frozen BF16 routing, same ops as moe_calib.agq.expert_fp32 / routing_coefficients / dispatch_rows",
+  "e3": "moe_calib.quant_eval.per_seq_rel_errors (historical E3, oldtest regression)",
+  "covariance": "diagnostics/covariance_mismatch.py conventions (rel. Frobenius, rel. diag, top-16 alignment) re-implemented in moe_calib/hessian_shrinkage.py"
+ },
+ "historical_inputs_sha256": {
+  "runs_hessian_early_stop_mvp/logs/checkpoints_L8.json": "30a48f73fb7a7653de3a321ecb0859937bb0f4fb5ec9ee537fcb265362e1a73c",
+  "runs_hessian_early_stop_mvp/logs/checkpoints_L16.json": "ea4bd1d428cd00bf3e33a0c2584b3fd7759359f7feb0bd03325f019cb6147711",
+  "runs_hessian_early_stop_mvp/checkpoint_manifest.json": "f0feeecd89df0efe8ff6accf401b31c4cb95a8d449596f44b40e971b1d9b29da",
+  "runs_agq_only_validation/calibration_manifest.json": "eb44ba348b0f5196e7eca7e3a4e090dbd92aa1083078fe1235cf34cd784930b2",
+  "runs_ebss_official_validation/logs/capture_routing_nll.npz": "1f535d1f092f358613cc7cbe62e37c13547f0d5a8789790402c7a191255d1847",
+  "runs_diag/damping_threshold_report.md": "a6b0107863be5669f62ffead2b5f4c7cbea9c2fcbc5d664411cf33d290c137fd",
+  "runs_diag/adaptive_damping.md": "0b29eb895bc4405d1bd662ab99e45e120b7a29969b88ad4afe7dfd23a83ffdad",
+  "runs_repr_constrained/covariance/cov_summary.md": "839087c04266c98dcfcee2a5c50b012d2ed0c6397f74694d9caf2f839852831c",
+  "runs_ebss_official_validation/results/FR_s0.json": "fdc9a174fc6f5f4bbd4b33888ac83dc25db012e15dda8110a11d4e712d82f88a"
+ },
+ "calibration_original_ids_max": 1978,
+ "calibration_disjoint_from_tune": true,
+ "manifest_compatible": true
+}

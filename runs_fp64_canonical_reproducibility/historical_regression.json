@@ -1,0 +1,43 @@
+{
+ "loaded_pathway_FR": {
+  "weights_equal_OO": true,
+  "recon_equal_OO": true,
+  "valid": true,
+  "passed": true
+ },
+ "fp32_path_equals_stored_preflight": {
+  "FR": true,
+  "FC": true
+ },
+ "fp64_reproduces_historical_control": {
+  "FR": true,
+  "FC": true
+ },
+ "order_null_ppl_exact": {
+  "FR": {
+   "OO": 9.267851290916612,
+   "O20261121": 9.26779117414566,
+   "O20261122": 9.267245471458848,
+   "O20261123": 9.270494646766538,
+   "O20261124": 9.27144383165981,
+   "O20261125": 9.269601427608782
+  },
+  "FC": {
+   "OO": 9.277908190612935,
+   "O20261121": 9.275570572922728,
+   "O20261122": 9.279571497761173,
+   "O20261123": 9.277078024877852,
+   "O20261124": 9.276058299035872,
+   "O20261125": 9.27845032330451
+  }
+ },
+ "oo_ppl_equals_protocol": {
+  "FR": true,
+  "FC": true
+ },
+ "order_null_equals_protocol": {
+  "FR": true,
+  "FC": true
+ },
+ "passed": true
+}

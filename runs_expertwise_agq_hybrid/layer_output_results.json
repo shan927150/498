@@ -1,0 +1,360 @@
+{
+ "tune": {
+  "layers": {
+   "8": {
+    "GPTQ": {
+     "E_layer": 0.007115236692270128,
+     "native": 0.0071358244350524565,
+     "n_agq": 0,
+     "config_hash": null,
+     "rel_vs_AGQ": -0.000161638281112421
+    },
+    "AGQ": {
+     "E_layer": 0.007116386972828147,
+     "native": 0.007137288293454159,
+     "n_agq": 60,
+     "config_hash": null,
+     "rel_vs_GPTQ": 0.00016166441227013738
+    }
+   },
+   "16": {
+    "GPTQ": {
+     "E_layer": 0.007145263332788199,
+     "native": 0.007172260448121453,
+     "n_agq": 0,
+     "config_hash": null,
+     "rel_vs_AGQ": 0.031607832514636544
+    },
+    "AGQ": {
+     "E_layer": 0.006926336838070509,
+     "native": 0.006953191021673552,
+     "n_agq": 60,
+     "config_hash": null,
+     "rel_vs_GPTQ": -0.03063938787435301
+    }
+   }
+  },
+  "mean": {
+   "GPTQ": 0.007130250012529163,
+   "AGQ": 0.007021361905449328
+  },
+  "pooled": {
+   "GPTQ": 0.0071430329699599315,
+   "AGQ": 0.006940453660623982
+  },
+  "native_mean": {
+   "GPTQ": 0.007154042441586955,
+   "AGQ": 0.007045239657563856
+  },
+  "mean_rel": {
+   "GPTQ_vs_AGQ": 0.0155081177335876,
+   "AGQ_vs_GPTQ": -0.015271288789102581
+  },
+  "native_mean_rel": {
+   "GPTQ_vs_AGQ": 0.015443446825302373,
+   "AGQ_vs_GPTQ": -0.015208574021118554
+  },
+  "ranking_fp32": [
+   "AGQ",
+   "GPTQ"
+  ],
+  "ranking_native": [
+   "AGQ",
+   "GPTQ"
+  ],
+  "native_ranking_agrees": true,
+  "per_layer_ranking_agrees_native": {
+   "8": true,
+   "16": true
+  },
+  "scope": "2-layer (L8, L16) mean; NOT comparable to the historical 4-layer means"
+ },
+ "confirm": {
+  "layers": {
+   "8": {
+    "GPTQ": {
+     "E_layer": 0.007096579799022389,
+     "native": 0.007117459606100395,
+     "n_agq": 0,
+     "config_hash": "dee823c60b974f0a8798540a76ccfb0e884d8c406e37675407b7373e880116af",
+     "rel_vs_AGQ": -0.0008912528670488673,
+     "rel_vs_LAYERWISE": 0.0,
+     "rel_vs_HYBRID": 4.846037728797755e-05
+    },
+    "AGQ": {
+     "E_layer": 0.007102910288181121,
+     "native": 0.007123776716413742,
+     "n_agq": 60,
+     "config_hash": "e4409b3db8a9203dcccfe465a90468aeaa7582bba8cfbbb67977c6efc48e2961",
+     "rel_vs_GPTQ": 0.0008920479073037967,
+     "rel_vs_LAYERWISE": 0.0008920479073037967,
+     "rel_vs_HYBRID": 0.0009405515135699213
+    },
+    "LAYERWISE": {
+     "E_layer": 0.007096579799022389,
+     "native": 0.007117459606100395,
+     "n_agq": 0,
+     "config_hash": "dee823c60b974f0a8798540a76ccfb0e884d8c406e37675407b7373e880116af",
+     "rel_vs_GPTQ": 0.0,
+     "rel_vs_AGQ": -0.0008912528670488673,
+     "rel_vs_HYBRID": 4.846037728797755e-05
+    },
+    "HYBRID": {
+     "E_layer": 0.007096235912752732,
+     "native": 0.007117116206291033,
+     "n_agq": 30,
+     "config_hash": "9a9efa8fd2b4ad417f0a6b9e9922b93adacd497c78b130786e66f77c83a20ce8",
+     "rel_vs_GPTQ": -4.845802899360989e-05,
+     "rel_vs_AGQ": -0.0009396677076852052,
+     "rel_vs_LAYERWISE": -4.845802899360989e-05
+    }
+   },
+   "16": {
+    "GPTQ": {
+     "E_layer": 0.007029577300910511,
+     "native": 0.007057298840728887,
+     "n_agq": 0,
+     "config_hash": "ff6b9c8124ebcf267c3d0a9b8966b8ad1b822a0a47c37df7e7c539c0976f8fc3",
+     "rel_vs_AGQ": 0.0321321560562558,
+     "rel_vs_LAYERWISE": 0.0321321560562558,
+     "rel_vs_HYBRID": 0.03176467361615424
+    },
+    "AGQ": {
+     "E_layer": 0.006810733741471928,
+     "native": 0.006837840418907891,
+     "n_agq": 60,
+     "config_hash": "dd7bca3048b73421a14cd8cdccfc12365f194d6a9742b7c8207f284bfabd7c7a",
+     "rel_vs_GPTQ": -0.03113182344694283,
+     "rel_vs_LAYERWISE": 0.0,
+     "rel_vs_HYBRID": -0.0003560420416564671
+    },
+    "LAYERWISE": {
+     "E_layer": 0.006810733741471928,
+     "native": 0.006837840418907891,
+     "n_agq": 60,
+     "config_hash": "dd7bca3048b73421a14cd8cdccfc12365f194d6a9742b7c8207f284bfabd7c7a",
+     "rel_vs_GPTQ": -0.03113182344694283,
+     "rel_vs_AGQ": 0.0,
+     "rel_vs_HYBRID": -0.0003560420416564671
+    },
+    "HYBRID": {
+     "E_layer": 0.0068131595126949595,
+     "native": 0.00684026361081837,
+     "n_agq": 46,
+     "config_hash": "f513b07a1a2fcfece2ccdcead63ed0d08cc1071698ec941e55a4e1c120817154",
+     "rel_vs_GPTQ": -0.03078674278004172,
+     "rel_vs_AGQ": 0.0003561688527419718,
+     "rel_vs_LAYERWISE": 0.0003561688527419718
+    }
+   }
+  },
+  "mean": {
+   "GPTQ": 0.0070630785499664495,
+   "AGQ": 0.006956822014826525,
+   "LAYERWISE": 0.0069536567702471585,
+   "HYBRID": 0.006954697712723846
+  },
+  "pooled": {
+   "GPTQ": 0.007034563072013213,
+   "AGQ": 0.006832475100742405,
+   "LAYERWISE": 0.006832004038158129,
+   "HYBRID": 0.006834223714404397
+  },
+  "native_mean": {
+   "GPTQ": 0.0070873792234146405,
+   "AGQ": 0.006980808567660817,
+   "LAYERWISE": 0.006977650012504144,
+   "HYBRID": 0.006978689908554702
+  },
+  "mean_rel": {
+   "GPTQ_vs_AGQ": 0.015273717641973345,
+   "GPTQ_vs_LAYERWISE": 0.015735861480462715,
+   "GPTQ_vs_HYBRID": 0.015583831493397194,
+   "AGQ_vs_GPTQ": -0.015043940738904735,
+   "AGQ_vs_LAYERWISE": 0.0004551913739702872,
+   "AGQ_vs_HYBRID": 0.00030544851702071535,
+   "LAYERWISE_vs_GPTQ": -0.015492080251579646,
+   "LAYERWISE_vs_AGQ": -0.00045498426905572087,
+   "LAYERWISE_vs_HYBRID": -0.00014967472630525634,
+   "HYBRID_vs_GPTQ": -0.015344702239382306,
+   "HYBRID_vs_AGQ": -0.00030535524671344226,
+   "HYBRID_vs_LAYERWISE": 0.00014969713218254444
+  },
+  "native_mean_rel": {
+   "GPTQ_vs_AGQ": 0.015266233806714232,
+   "GPTQ_vs_LAYERWISE": 0.015725811801087612,
+   "GPTQ_vs_HYBRID": 0.015574458284312644,
+   "AGQ_vs_GPTQ": -0.015036680329132869,
+   "AGQ_vs_LAYERWISE": 0.00045266746698568295,
+   "AGQ_vs_HYBRID": 0.00030358980465915105,
+   "LAYERWISE_vs_GPTQ": -0.015482339444739089,
+   "LAYERWISE_vs_AGQ": -0.0004524626518631584,
+   "LAYERWISE_vs_HYBRID": -0.00014901021025210206,
+   "HYBRID_vs_GPTQ": -0.015335614397612721,
+   "HYBRID_vs_AGQ": -0.00030349766586205745,
+   "HYBRID_vs_LAYERWISE": 0.00014903241760398363
+  },
+  "ranking_fp32": [
+   "LAYERWISE",
+   "HYBRID",
+   "AGQ",
+   "GPTQ"
+  ],
+  "ranking_native": [
+   "LAYERWISE",
+   "HYBRID",
+   "AGQ",
+   "GPTQ"
+  ],
+  "native_ranking_agrees": true,
+  "per_layer_ranking_agrees_native": {
+   "8": true,
+   "16": true
+  },
+  "scope": "2-layer (L8, L16) mean; NOT comparable to the historical 4-layer means"
+ },
+ "oldtest": {
+  "layers": {
+   "8": {
+    "GPTQ": {
+     "E_layer": 0.007173198373874861,
+     "native": 0.007193882220529877,
+     "n_agq": 0,
+     "config_hash": "dee823c60b974f0a8798540a76ccfb0e884d8c406e37675407b7373e880116af",
+     "rel_vs_AGQ": -0.0006574464118928972,
+     "rel_vs_LAYERWISE": 0.0,
+     "rel_vs_HYBRID": 0.0001271383210046572
+    },
+    "AGQ": {
+     "E_layer": 0.00717791746996035,
+     "native": 0.007198314540181958,
+     "n_agq": 60,
+     "config_hash": "e4409b3db8a9203dcccfe465a90468aeaa7582bba8cfbbb67977c6efc48e2961",
+     "rel_vs_GPTQ": 0.0006578789320362243,
+     "rel_vs_LAYERWISE": 0.0006578789320362243,
+     "rel_vs_HYBRID": 0.000785100894663725
+    },
+    "LAYERWISE": {
+     "E_layer": 0.007173198373874861,
+     "native": 0.007193882220529877,
+     "n_agq": 0,
+     "config_hash": "dee823c60b974f0a8798540a76ccfb0e884d8c406e37675407b7373e880116af",
+     "rel_vs_GPTQ": 0.0,
+     "rel_vs_AGQ": -0.0006574464118928972,
+     "rel_vs_HYBRID": 0.0001271383210046572
+    },
+    "HYBRID": {
+     "E_layer": 0.007172286501411307,
+     "native": 0.007192703056468519,
+     "n_agq": 30,
+     "config_hash": "9a9efa8fd2b4ad417f0a6b9e9922b93adacd497c78b130786e66f77c83a20ce8",
+     "rel_vs_GPTQ": -0.00012712215890681131,
+     "rel_vs_AGQ": -0.0007844849947924631,
+     "rel_vs_LAYERWISE": -0.00012712215890681131
+    }
+   },
+   "16": {
+    "GPTQ": {
+     "E_layer": 0.007090592442089353,
+     "native": 0.0071182441958924725,
+     "n_agq": 0,
+     "config_hash": "ff6b9c8124ebcf267c3d0a9b8966b8ad1b822a0a47c37df7e7c539c0976f8fc3",
+     "rel_vs_AGQ": 0.03191405889372608,
+     "rel_vs_LAYERWISE": 0.03191405889372608,
+     "rel_vs_HYBRID": 0.031832242863320946
+    },
+    "AGQ": {
+     "E_layer": 0.0068713013268671755,
+     "native": 0.006898216154827908,
+     "n_agq": 60,
+     "config_hash": "dd7bca3048b73421a14cd8cdccfc12365f194d6a9742b7c8207f284bfabd7c7a",
+     "rel_vs_GPTQ": -0.030927051161547186,
+     "rel_vs_LAYERWISE": 0.0,
+     "rel_vs_HYBRID": -7.92857018469596e-05
+    },
+    "LAYERWISE": {
+     "E_layer": 0.0068713013268671755,
+     "native": 0.006898216154827908,
+     "n_agq": 60,
+     "config_hash": "dd7bca3048b73421a14cd8cdccfc12365f194d6a9742b7c8207f284bfabd7c7a",
+     "rel_vs_GPTQ": -0.030927051161547186,
+     "rel_vs_AGQ": 0.0,
+     "rel_vs_HYBRID": -7.92857018469596e-05
+    },
+    "HYBRID": {
+     "E_layer": 0.006871846166013432,
+     "native": 0.006898869873573701,
+     "n_agq": 46,
+     "config_hash": "f513b07a1a2fcfece2ccdcead63ed0d08cc1071698ec941e55a4e1c120817154",
+     "rel_vs_GPTQ": -0.030850211440366402,
+     "rel_vs_AGQ": 7.929198856792405e-05,
+     "rel_vs_LAYERWISE": 7.929198856792405e-05
+    }
+   }
+  },
+  "mean": {
+   "GPTQ": 0.007131895407982107,
+   "AGQ": 0.007024609398413763,
+   "LAYERWISE": 0.007022249850371018,
+   "HYBRID": 0.00702206633371237
+  },
+  "pooled": {
+   "GPTQ": 0.007096756538775315,
+   "AGQ": 0.006894181179568439,
+   "LAYERWISE": 0.006893829038215967,
+   "HYBRID": 0.006894265176800261
+  },
+  "native_mean": {
+   "GPTQ": 0.007156063208211175,
+   "AGQ": 0.0070482653475049326,
+   "LAYERWISE": 0.007046049187678892,
+   "HYBRID": 0.00704578646502111
+  },
+  "mean_rel": {
+   "GPTQ_vs_AGQ": 0.015272879029056139,
+   "GPTQ_vs_LAYERWISE": 0.01561402113957771,
+   "GPTQ_vs_HYBRID": 0.015640563482355204,
+   "AGQ_vs_GPTQ": -0.015043127167606576,
+   "AGQ_vs_LAYERWISE": 0.00033601026637076846,
+   "AGQ_vs_HYBRID": 0.0003621533293105361,
+   "LAYERWISE_vs_GPTQ": -0.015373971621677567,
+   "LAYERWISE_vs_AGQ": -0.00033589740139545234,
+   "LAYERWISE_vs_HYBRID": 2.6134281552861633e-05,
+   "HYBRID_vs_GPTQ": -0.015399703443044819,
+   "HYBRID_vs_AGQ": -0.0003620222217576422,
+   "HYBRID_vs_LAYERWISE": -2.6133598570038612e-05
+  },
+  "native_mean_rel": {
+   "GPTQ_vs_AGQ": 0.015294239843623695,
+   "GPTQ_vs_LAYERWISE": 0.015613575438085121,
+   "GPTQ_vs_HYBRID": 0.01565144554657378,
+   "AGQ_vs_GPTQ": -0.015063849713142589,
+   "AGQ_vs_LAYERWISE": 0.0003145251710584023,
+   "AGQ_vs_HYBRID": 0.0003518248099241685,
+   "LAYERWISE_vs_GPTQ": -0.015373539519053988,
+   "LAYERWISE_vs_AGQ": -0.00031442627608013296,
+   "LAYERWISE_vs_HYBRID": 3.7287910879218485e-05,
+   "HYBRID_vs_GPTQ": -0.015410252813799659,
+   "HYBRID_vs_AGQ": -0.0003517010727610942,
+   "HYBRID_vs_LAYERWISE": -3.728652054276349e-05
+  },
+  "ranking_fp32": [
+   "HYBRID",
+   "LAYERWISE",
+   "AGQ",
+   "GPTQ"
+  ],
+  "ranking_native": [
+   "HYBRID",
+   "LAYERWISE",
+   "AGQ",
+   "GPTQ"
+  ],
+  "native_ranking_agrees": true,
+  "per_layer_ranking_agrees_native": {
+   "8": true,
+   "16": true
+  },
+  "scope": "2-layer (L8, L16) mean; NOT comparable to the historical 4-layer means"
+ }
+}

@@ -1,0 +1,463 @@
+{
+ "gates": {
+  "confirm": {
+   "1": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.00030662121166851,
+      "lean": 0.00030662121166850984,
+      "equal": false,
+      "abs_diff": 1.6263032587282567e-19
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 2.8932893610358915e-16,
+    "decomposition_vs_fp32_err_max_rel": 4.338948318350135e-09,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   },
+   "8": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.00709657979902239,
+      "lean": 0.007096579799022389,
+      "equal": false,
+      "abs_diff": 1.734723475976807e-18
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 1.372438173500098e-16,
+    "decomposition_vs_fp32_err_max_rel": 2.331506144318719e-11,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   },
+   "16": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.0070295773009105165,
+      "lean": 0.007029577300910511,
+      "equal": false,
+      "abs_diff": 5.204170427930421e-18
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 3.073468914325459e-16,
+    "decomposition_vs_fp32_err_max_rel": 5.4220012981682566e-11,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   },
+   "23": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.00029250496225445506,
+      "lean": 0.00029250496225445506,
+      "equal": true,
+      "abs_diff": 0.0
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 2.2130963849026302e-16,
+    "decomposition_vs_fp32_err_max_rel": 4.975643336656061e-11,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   }
+  },
+  "oldtest": {
+   "1": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.00030190038194791895,
+      "lean": 0.0003019003819479191,
+      "equal": false,
+      "abs_diff": 1.6263032587282567e-19
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 3.159545008876165e-16,
+    "decomposition_vs_fp32_err_max_rel": 2.8016407439701496e-09,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   },
+   "8": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.00717319837387486,
+      "lean": 0.007173198373874861,
+      "equal": false,
+      "abs_diff": 8.673617379884035e-19
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 2.742426263299545e-16,
+    "decomposition_vs_fp32_err_max_rel": 6.770672327578554e-11,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   },
+   "16": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.007090592442089351,
+      "lean": 0.007090592442089353,
+      "equal": false,
+      "abs_diff": 1.734723475976807e-18
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 3.1091418354455774e-16,
+    "decomposition_vs_fp32_err_max_rel": 7.59443490076606e-11,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   },
+   "23": {
+    "accumulator_check": [
+     {
+      "accumulator": 0.00030075343165921934,
+      "lean": 0.0003007534316592194,
+      "equal": false,
+      "abs_diff": 5.421010862427522e-20
+     }
+    ],
+    "e3_fast_equals_production": true,
+    "decomposition_identity_max_rel": 4.2341340480948456e-16,
+    "decomposition_vs_fp32_err_max_rel": 5.2127467834996704e-11,
+    "pristine_restored": true,
+    "same_universe": true,
+    "weights_all_differ_from_bf16": true
+   }
+  }
+ },
+ "weight_files_match_records": {
+  "FR_s0": true,
+  "FR_s1": true,
+  "FR_s2": true,
+  "TR_s0": true,
+  "TR_s1": true,
+  "TR_s2": true,
+  "FC_s0": true,
+  "FC_s1": true,
+  "FC_s2": true,
+  "TC_s0": null,
+  "TC_s1": null,
+  "TC_s2": null,
+  "EBSS": true,
+  "C4R16_s0": true,
+  "C4R16_s1": true,
+  "C4R16_s2": true,
+  "RS_PO16": true,
+  "RS_EBSS16": true,
+  "PX_PO16": true,
+  "PX_EBSS16": true
+ },
+ "all_methods_standard_q0_gptq": {
+  "FR_s0": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "FR_s1": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "FR_s2": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "TR_s0": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "TR_s1": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "TR_s2": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "FC_s0": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "FC_s1": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "FC_s2": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "TC_s0": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "TC_s1": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "TC_s2": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "EBSS": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "C4R16_s0": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "C4R16_s1": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "C4R16_s2": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "RS_PO16": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "RS_EBSS16": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "PX_PO16": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  },
+  "PX_EBSS16": {
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "rtn_fallbacks": 0,
+   "n_quantized": 240,
+   "policy": "CANONICAL-B1",
+   "hessian_weighting": "none",
+   "routers_unchanged": true,
+   "untouched_params_unchanged": true,
+   "valid": true
+  }
+ },
+ "router_frozen": "asserted per sequence: native block router logits under installed weights == BF16 logits",
+ "shared_expert": "never modified (only routed gate/up/down are installed; untouched digests checked by quant_config)",
+ "passed": true
+}

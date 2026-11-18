@@ -1,0 +1,148 @@
+{
+ "configs": {
+  "FR": {
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "projections_unchanged_from_bf16": 0,
+   "nonfinite_weights": 0,
+   "untouched_params_unchanged": true,
+   "router_weights_unchanged": true,
+   "token_counts_equal_R_O": true,
+   "routing_equal_R_O_all_tokens": true,
+   "perm_equal_original": "240/240",
+   "hessians_served_equal_canonical": "480/480",
+   "integrity_pass": true,
+   "I1_all_installed_equal_cast": true,
+   "I2_all_module_equal_reference": true,
+   "I3_all_cast_correctly_rounded": true,
+   "I4_all_finite": true,
+   "frozen_old_check_all_pass": true,
+   "natural_actorder": {
+    "n": 480,
+    "n_identical": 384,
+    "mean_frac_positions_changed": 0.00023119377437978982,
+    "mean_frac_columns_changed_group": 2.0345052083333333e-06
+   },
+   "installed_weights_sha256": "a4c2eb171567fe9c1a21e9a00c2d52808800e1f7e6249fb3b75e11ceb1389106",
+   "weights_equal_OO": false,
+   "valid": true,
+   "quantize_s": 419.96481704711914,
+   "hessian_s": 21.580146551132202,
+   "gptq_s": 369.27236557006836,
+   "peak_gpu_gb": 2.483177472,
+   "peak_cpu_gb": 46.748688,
+   "weight_files": {
+    "1": {
+     "sha256": "8b6366b938dc381b7d8ec034b770b38d8f1c282d833fd3b1128a078bc834902d",
+     "layer_sha256": "d475b9079c5a0d9c08097f73ff691ba7a865defec565d0bad62726a1c81d2ba2"
+    },
+    "8": {
+     "sha256": "f89b73d10a62bdbc928cf8d8ec5e661b05131f95e33e06b21318585709900816",
+     "layer_sha256": "8544ff8777ea54d5f44c14310a828465e37568247aec85a48c8c44b6c9de3c14"
+    },
+    "16": {
+     "sha256": "c5f0c073947df8e61306fd4eb6375dff263eadb7a8c7a1dfafb3edca52363bab",
+     "layer_sha256": "398ce0d6499db6210c92be0b5c4c27e5760f7c818b2a48937f1a58dd9a7926ae"
+    },
+    "23": {
+     "sha256": "ed59fc7cba644fae4ee95171a689ecfd1e6567fe9096742919506870120a53db",
+     "layer_sha256": "15fbf9858919edcbe371466dadd32fbb0c0bd99b0efc14872c4a51d216024294"
+    }
+   }
+  },
+  "FC": {
+   "n_quantized_experts": 240,
+   "n_projection_tensors": 720,
+   "rtn_fallbacks": 0,
+   "projections_unchanged_from_bf16": 0,
+   "nonfinite_weights": 0,
+   "untouched_params_unchanged": true,
+   "router_weights_unchanged": true,
+   "token_counts_equal_R_O": true,
+   "routing_equal_R_O_all_tokens": true,
+   "perm_equal_original": "240/240",
+   "hessians_served_equal_canonical": "480/480",
+   "integrity_pass": true,
+   "I1_all_installed_equal_cast": true,
+   "I2_all_module_equal_reference": true,
+   "I3_all_cast_correctly_rounded": true,
+   "I4_all_finite": true,
+   "frozen_old_check_all_pass": true,
+   "natural_actorder": {
+    "n": 480,
+    "n_identical": 390,
+    "mean_frac_positions_changed": 0.00023877693068546552,
+    "mean_frac_columns_changed_group": 0.0
+   },
+   "installed_weights_sha256": "dd17255cc2e882808804e3070d07b5ab7f29fcc546e31485daca1ed365e9e06a",
+   "weights_equal_OO": false,
+   "valid": true,
+   "quantize_s": 430.4427399635315,
+   "hessian_s": 29.68294048309326,
+   "gptq_s": 366.79009675979614,
+   "peak_gpu_gb": 2.483177472,
+   "peak_cpu_gb": 46.762788,
+   "weight_files": {
+    "1": {
+     "sha256": "01afbd598e69f91fa1369d8dc9c570b0714933262aeb31abe74f8bfb839ad924",
+     "layer_sha256": "06060bf9e27128af0021ac2b3541366f8ce7df2e016e52484ced79a6b8d64e69"
+    },
+    "8": {
+     "sha256": "299886055be00e8a19919026725ebbc349397c2cb23a052dc096f393a798f167",
+     "layer_sha256": "2299aeada1b684c416261242190ab626e70f47a845f1b5a632f1f4310b855d92"
+    },
+    "16": {
+     "sha256": "a69ab8e35dd8d24c59765b4ee574ab417be47fa6ee4d86e5c94d760e2e066ba8",
+     "layer_sha256": "2d5a921de226127fb4621432299c1bc64a38455b64e8796568b39fa8467b866f"
+    },
+    "23": {
+     "sha256": "e940aa2b47e39eea9ba539fe33a92b526728629478eb0c2df60e7997f87c1248",
+     "layer_sha256": "759b09d96350e1eff4f320649f57aee28fc3c474bb36373d37349e1b6e2c1a89"
+    }
+   }
+  }
+ },
+ "repeat_FR": {
+  "n_quantized_experts": 240,
+  "n_projection_tensors": 720,
+  "rtn_fallbacks": 0,
+  "projections_unchanged_from_bf16": 0,
+  "nonfinite_weights": 0,
+  "untouched_params_unchanged": true,
+  "router_weights_unchanged": true,
+  "token_counts_equal_R_O": true,
+  "routing_equal_R_O_all_tokens": true,
+  "perm_equal_original": "240/240",
+  "hessians_served_equal_canonical": "480/480",
+  "integrity_pass": true,
+  "I1_all_installed_equal_cast": true,
+  "I2_all_module_equal_reference": true,
+  "I3_all_cast_correctly_rounded": true,
+  "I4_all_finite": true,
+  "frozen_old_check_all_pass": true,
+  "natural_actorder": {
+   "n": 480,
+   "n_identical": 384,
+   "mean_frac_positions_changed": 0.00023119377437978982,
+   "mean_frac_columns_changed_group": 2.0345052083333333e-06
+  },
+  "installed_weights_sha256": "a4c2eb171567fe9c1a21e9a00c2d52808800e1f7e6249fb3b75e11ceb1389106",
+  "weights_equal_OO": false,
+  "valid": true,
+  "quantize_s": 415.7312455177307,
+  "hessian_s": 29.74426531791687,
+  "gptq_s": 359.0987010002136,
+  "peak_gpu_gb": 2.483177472,
+  "peak_cpu_gb": 46.966376
+ },
+ "determinism_FR": {
+  "weights_sha_equal": true,
+  "weight_files_equal": true,
+  "recon_equal": true,
+  "per_expert_equal": true,
+  "ppl_equal": true,
+  "per_window_equal": true
+ },
+ "reproducible": true
+}

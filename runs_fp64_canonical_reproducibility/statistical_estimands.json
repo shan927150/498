@@ -1,0 +1,29 @@
+{
+ "canonical": {
+  "definition": "Delta_FP64 = PPL(FC, S, G0) - PPL(FR, S, G0), one deterministic configuration G0 (no interval)",
+  "value_ppl": 0.007129355135376159,
+  "value_mean_nll": 0.0007686648129965334
+ },
+ "order_null": {
+  "definition": "five FP32 accumulation orders (reference distribution of the same pathway; not pooled with other mechanisms)",
+  "mean_ppl": 0.00803043325249959,
+  "sd_ppl": 0.002870009154129667
+ },
+ "execution_marginal": {
+  "definition": "E_{S,G}[PPL(FC,S,G) - PPL(FR,S,G)] over 3 allocation seeds x 5 groupings (existing cross-seed grouping study, ORIGINAL excluded); also the paired mean-NLL version",
+  "ppl": -0.0012475761622487388,
+  "ppl_interval": [
+   -0.004777081840922672,
+   0.0021549580959289542
+  ],
+  "mean_nll": -0.0001344953998838013,
+  "mean_nll_interval": [
+   -0.0005151127986423128,
+   0.00023247108727963658
+  ]
+ },
+ "window_conditional": {
+  "definition": "paired per-window bootstrap for fixed weights (existing results), conditional on G"
+ },
+ "nonlinearity": "E_G[PPL] != exp(E_G[NLL]); the PPL estimand averages paired PPL differences, the NLL estimand averages paired mean-NLL differences; both reported, both nested over (seed, grouping)"
+}

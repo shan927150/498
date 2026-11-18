@@ -1,0 +1,133 @@
+{
+ "study": "Dense-model control for GPTQ calibration-grouping reproducibility",
+ "model": {
+  "id": "Qwen/Qwen2.5-1.5B",
+  "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "checkpoint_sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+  "config": {
+   "depth": 28,
+   "hidden": 1536,
+   "intermediate": 8960,
+   "tie_word_embeddings": true
+  },
+  "dtype": "bfloat16",
+  "attn_implementation": "eager",
+  "offload": "model_utils layer-wise (one decoder layer on GPU)"
+ },
+ "quantization": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true,
+  "solver": "moe_calib.gptq.quantize_expert (unchanged)",
+  "blocksize": 128,
+  "percdamp_semantics": "damping = 1.0 x mean(diag H)",
+  "effective_weights": "BF16 fake-quantized",
+  "targets": "mlp.gate_proj/up_proj/down_proj of the mapped layers; everything else BF16",
+  "layer_mapping": {
+   "1": 1,
+   "8": 9,
+   "16": 19,
+   "23": 27
+  },
+  "n_quantized_tensors": 12,
+  "n_quantized_params": 165150720,
+  "frac_quantized": 0.10698269723359381
+ },
+ "calibration": {
+  "manifest_sha256": "34559e4008d48ae46348ec9c295ff1acc99f0604698c5b6aafc8d6b5ec3df645",
+  "n": 128,
+  "seqlen": 512,
+  "tokens": 65536,
+  "strategy": "FR s0 (random, B=128), the historical single-strategy comparison"
+ },
+ "groupings": {
+  "G20261111": {
+   "sha256": "628eeeb4b168f32b7b66fc4c1d24f426e2f85566d15916000f3e2c2175c5a0a1",
+   "n_batches": 28
+  },
+  "G20261112": {
+   "sha256": "b45a96be90eb91f3136fe63ce2008f75b9863637a1b8185b3a0ecaf5c796a0d1",
+   "n_batches": 28
+  },
+  "G20261113": {
+   "sha256": "682e8493cbc543b992a9e5290bbe604c8ed1ae55b666369121cf026f7001f5cc",
+   "n_batches": 28
+  },
+  "G20261114": {
+   "sha256": "bce120fcd49a96dd42209e8ead5c52642a0a5dc856525b5c7a2eaac3ab38c82e",
+   "n_batches": 28
+  },
+  "G20261115": {
+   "sha256": "3677afc649850a5f0200df385527df0cfef2d6a9686870f86162aca4168f284b",
+   "n_batches": 28
+  },
+  "ORIGINAL": {
+   "sha256": "76ef5710ff5671388352f8898c9fed54376d9370d9b438d4cdd38ef26eb82770",
+   "n_batches": 160
+  }
+ },
+ "reference_grouping": "G20261111",
+ "evaluation": {
+  "windows": "runs_partial_ppl/windows.pt",
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "n_windows": 128,
+  "seqlen": 512,
+  "batch": 8,
+  "evaluator": "diagnostics/eval_partial_ppl.layerwise_nll (unchanged)",
+  "loss": "FP32 logits -> FP64 token-summed NLL",
+  "repeats": 2
+ },
+ "metrics": {
+  "primary": "over the 5 groupings (ddof=1): SD(PPL), SD(log PPL), CV(PPL) = SD/mean",
+  "secondary": [
+   "mean, min, max, max pairwise PPL difference",
+   "PPL - PPL(G20261111)",
+   "per-window paired NLL differences (10 pairs)",
+   "weights: GRA.weight_diff (identical definition to Family D) vs G20261111, 10 pairs, vs ORIGINAL",
+   "integer-code disagreement (solver info capture), separately from BF16 ULP",
+   "Hessians: frozen_routing.hessian_metrics (rel_fro_trace_normalized = historical Family D metric), act-order positions / group membership, diag-rank changes, damped-H conditioning"
+  ]
+ },
+ "comparison": {
+  "moe_reference": "historical Qwen1.5-MoE FR s0 over the same 5 groupings (runs_multigroup_robustness; weights: runs_grouping_routing_amplification/logs/weight_differences_raw.json FR_s0 pairs)",
+  "ratios": "R_PPL = SD_dense(log PPL) / SD_moe(log PPL); R_W = mean pairwise frac BF16 elements changed (dense / moe FR s0)",
+  "rule": {
+   "A-SUBSTANTIAL-DENSE-SENSITIVITY": "R_W >= 0.5 and R_PPL >= 0.5",
+   "B-SMALL-DENSE-SENSITIVITY": "R_W < 0.1 and R_PPL < 0.1",
+   "C-WEIGHT-SENSITIVE-PPL-STABLE": "R_W >= 0.5 and R_PPL < 0.5",
+   "D-WEIGHT-STABLE-PPL-SENSITIVE": "R_W < 0.1 and R_PPL >= 0.5",
+   "E-INTERMEDIATE": "otherwise",
+   "BLOCKED": "any mandatory check A-F fails"
+  },
+  "caveats": "screening ratios, not tests; 5 groupings, 1 seed; F(4,4) 95% factor on an SD ratio is ~3.1x; architecture, size, matrix geometry, calibration statistics and baseline PPL are not matched"
+ },
+ "checks": {
+  "A": "BF16 dense checkpoint evaluated (PPL + per-window NLL); all parameters equal the checkpoint file",
+  "B": "every evaluation repeated in-process: per-window NLL bitwise identical; grouping G20261111 re-quantized in a fresh process from its cache: installed weights bitwise identical",
+  "C": "every grouping: identical union multiset, FR token sha, 128 x 512 tokens per projection Hessian, same layers; reversed batch execution order reproduces each cache bitwise",
+  "D": "every config: 12 target tensors expected shape, finite, all differ from BF16 original, non-targets unchanged, installed == bf16(solver output)",
+  "E": "each config starts from pristine targets (digest == checkpoint) - never from another grouping's weights",
+  "F": "after each config targets restored bitwise; non-targets unchanged; BF16 re-evaluation bitwise at end",
+  "tolerance": "exact"
+ },
+ "storage": {
+  "cache_dir": "/home/kaixuan6/moe_cache_dense_grouping_scope",
+  "weights": "weights/<config>/L<l>.pt",
+  "codes": "codes/<config>/L<l>.pt",
+  "hessians": "hessians/<config>/L<l>.pt"
+ },
+ "code_sha256": {
+  "moe_calib/dense_gptq.py": "f030e490a5b5972903063246491bf8adb78501173baa34aaba2c1023169b2f4c",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "moe_calib/multigroup_robustness.py": "12fab4bc5db630cd4874937f8016bea21348ca27b79e7b6894e4ef330d6577b2",
+  "moe_calib/batch_sensitivity.py": "97af44acab2e3b8c37dab2e974afa30d2f30f07267634988884a76d7c2754690",
+  "diagnostics/batch_sensitivity.py": "85029a49a9fb9c2de10e64c979de913c5328a1fc5fa10653f045afdb0eae1ac5",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "diagnostics/dense_grouping_scope.py": "23a4292468df8dd2b49e7f39d4c127c0677f304dd70c73f833e0b9a8fb4a5356"
+ },
+ "protocol_sha256": "03886a9d67711004b285ccec90337fbbccc7b5d595acc1aa1a7869894b4a2f2b",
+ "created": "2026-11-14 19:44:36"
+}

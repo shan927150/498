@@ -1,0 +1,96 @@
+{
+ "gptq_rerun_FR_s0": {
+  "quantize_total_s": 346.8168659210205,
+  "hessian_s": 36.904542684555054,
+  "gptq_s": 247.0320384502411,
+  "other_s": 62.880284786224365,
+  "peak_gpu_gb": 8.417724416,
+  "peak_cpu_gb": 42.401764
+ },
+ "agq_FR_s0": {
+  "quantize_total_s": 347.37718772888184,
+  "hessian_s": 37.989094972610474,
+  "gptq_s": 250.1004798412323,
+  "other_s": 59.28761291503906,
+  "peak_gpu_gb": 8.417806848,
+  "peak_cpu_gb": 42.415752
+ },
+ "gptq_historical_FR_s0": {
+  "quantize_total_s": 350.5218553543091,
+  "hessian_s": 29.178961753845215,
+  "gptq_s": 258.99179315567017,
+  "other_s": 62.3511004447937,
+  "peak_gpu_gb": 8.417724416,
+  "peak_cpu_gb": 43.060312
+ },
+ "agq_FR_s1": {
+  "quantize_total_s": 1194.7780170440674,
+  "hessian_s": 88.81265807151794,
+  "gptq_s": 642.9693827629089,
+  "other_s": 462.9959762096405,
+  "peak_gpu_gb": 8.417806336,
+  "peak_cpu_gb": 43.30062
+ },
+ "gptq_historical_FR_s1": {
+  "quantize_total_s": 349.10831451416016,
+  "hessian_s": 28.75242304801941,
+  "gptq_s": 257.73248171806335,
+  "other_s": 62.62340974807739,
+  "peak_gpu_gb": 8.417724416,
+  "peak_cpu_gb": 43.183056
+ },
+ "agq_FR_s2": {
+  "quantize_total_s": 679.6080274581909,
+  "hessian_s": 89.42320036888123,
+  "gptq_s": 353.27376675605774,
+  "other_s": 236.91106033325195,
+  "peak_gpu_gb": 8.417806336,
+  "peak_cpu_gb": 43.223948
+ },
+ "gptq_historical_FR_s2": {
+  "quantize_total_s": 364.01220202445984,
+  "hessian_s": 28.893189668655396,
+  "gptq_s": 265.5238342285156,
+  "other_s": 69.59517812728882,
+  "peak_gpu_gb": 8.417724416,
+  "peak_cpu_gb": 42.466196
+ },
+ "incremental_FR_s0": {
+  "quantize_total_s": 0.5603218078613281,
+  "hessian_s": 1.08455228805542,
+  "gptq_s": 3.068441390991211,
+  "other_s": -3.5926718711853027,
+  "peak_gpu_gb": 8.2431999999244e-05,
+  "peak_cpu_gb": 0.013987999999997669
+ },
+ "incremental_FR_s0_rel_total": 0.0016156129154022412,
+ "isolated_profiler_and_solver_s": {
+  "profiler_std": 61.17087268829346,
+  "profiler_agq": 69.43246603012085,
+  "gptq_std": 435.250057220459,
+  "gptq_agq": 425.88323307037354
+ },
+ "affinity_metadata": {
+  "FR_s0": {
+   "sparse_bytes": 9437184,
+   "dense_alternative_bytes": 62914560,
+   "router_replay_s": 25.68772006034851
+  },
+  "FR_s1": {
+   "sparse_bytes": 9437184,
+   "dense_alternative_bytes": 62914560,
+   "router_replay_s": 21.130682706832886
+  },
+  "FR_s2": {
+   "sparse_bytes": 9437184,
+   "dense_alternative_bytes": 62914560,
+   "router_replay_s": 20.30448889732361
+  }
+ },
+ "shared_activation_capture_s": {
+  "seconds_total": 491.96670150756836,
+  "rows": 874,
+  "note": "CANONICAL-B1 capture of all calibration rows; shared by both methods; affinities are computed in the same Profiler replay"
+ },
+ "no_new_generation": true
+}

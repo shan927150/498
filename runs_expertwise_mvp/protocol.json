@@ -1,0 +1,128 @@
+{
+ "experiment": "Expert-wise activation calibration MVP (diagnostic; not a replacement for fixed-budget E3)",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (partial load: layer 16 only, BF16)",
+ "settings": {
+  "layer": 16,
+  "n_experts": 8,
+  "B": 128,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "seq_len": 512,
+  "sketch_dim": 64,
+  "projection_seed": 20261116,
+  "greedy_sample_frac": 0.1,
+  "swap_max_passes": 5,
+  "swap_rel_tol": 1e-09,
+  "eps": 1e-12,
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "actorder": true
+  },
+  "holdout_tokens_per_seq": 128
+ },
+ "experts": [
+  1,
+  26,
+  52,
+  23,
+  29,
+  2,
+  7,
+  30
+ ],
+ "expert_rule": "L16 candidate-pool routed-token counts (rows 0-1999, runs_allocation_minimal/routing_profile_v2.npz, Profiler routing, model top-k); ascending sort (ties -> lower id); ranks round(i*59/7), i=0..7",
+ "expert_ranks": {
+  "1": 0,
+  "26": 8,
+  "52": 17,
+  "23": 25,
+  "29": 34,
+  "2": 42,
+  "7": 51,
+  "30": 59
+ },
+ "expert_pool_tokens": {
+  "1": 51392,
+  "26": 63026,
+  "52": 63975,
+  "23": 64888,
+  "29": 67866,
+  "2": 71747,
+  "7": 76315,
+  "30": 84253
+ },
+ "layer_pool_tokens": {
+  "min": 51392,
+  "median": 67040.5,
+  "max": 84253
+ },
+ "candidate_pool": {
+  "cache": "/home/kaixuan6/moe_cache",
+  "rows": [
+   0,
+   2000
+  ]
+ },
+ "tune_rows_unused": [
+  2000,
+  2128
+ ],
+ "evaluation": {
+  "test": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "PRIMARY",
+   "note": "historical E3 test rows (never used for selection or references)"
+  },
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "SECONDARY",
+   "note": "document-disjoint confirmation split"
+  }
+ },
+ "conditions": {
+  "SR": "one uniform random set of 128 sequences shared by all experts",
+  "SC": "one set minimizing mean_e D_e(S) (seeded stochastic greedy + best-improvement swaps)",
+  "EC": "per expert, S_e minimizing D_e(S_e) (same optimizer)",
+  "ER": "per expert, an independent uniform random set of 128"
+ },
+ "objective": "D_e(S) = 1/2 sum_{p in gu,down} ||H_ep(S) - H_ep^pool||_F / (||H_ep^pool||_F + eps), 64-d Gaussian sketches z = R_p^T x (N(0,1/64), fixed seed), H token-normalized; empty-token -> H(S) := 0",
+ "optimizer": "stochastic greedy (each step: argmin over a seeded uniform 10% sample of remaining candidates), then swap passes visiting slots in seeded order, best out-of-set replacement scored in closed form, accepted only if the exact objective decreases (rel tol 1e-9); <= 5 passes",
+ "rng_streams": "SeedSequence([seed, cond]) for SR/SC, ([seed, cond, e]) for EC/ER, ([seed, 7919, cond, e]) for token matching",
+ "token_matching": "k_e = min over SR/SC/EC/ER of routed-token count; per condition choose exactly k_e of the (seq, dispatch-row) pairs uniformly without replacement; the same row indices address the gate/up input and the down input (alignment checked bitwise every sequence)",
+ "gptq": "moe_calib.gptq.quantize_expert unchanged: 4-bit, g128, act-order, percdamp 1.0; H = sum x x^T fp32",
+ "metric": "moe_calib.quant_eval.per_seq_rel_errors (E3 definition, gate+up+down), mean over held-out sequences, 128 routed tokens/seq cap (Profiler default); summary = mean over the 8 experts",
+ "decision_rule": {
+  "paired_improvement": "r_e(X over Y) = (err_Y - err_X) / err_Y per expert; seed-level = mean over 8 experts",
+  "consistent": "seed-level r > 0 in all 3 seeds AND seed-averaged r_e > 0 for >= 6/8 experts",
+  "material": "consistent AND 3-seed mean r >= 0.5 %",
+  "primary": "EC vs SC (constraint relaxation under the covariance surrogate)",
+  "secondary": [
+   "EC vs ER (surrogate, expert-wise)",
+   "SC vs SR (surrogate, shared)",
+   "ER vs SR (constraint relaxation with random selection: independence / noise reference)"
+  ]
+ },
+ "secondary_analysis": "UNMATCHED: the same four selections quantized with ALL routed tokens (token quantity not controlled); reported separately, never mixed with the primary matched result",
+ "frozen_code_sha256": {
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5"
+ },
+ "created": "2026-11-16 06:21:21"
+}

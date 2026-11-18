@@ -1,0 +1,17 @@
+{
+ "verdict": "WEAK-COLLAPSE (B)",
+ "R_SD": 0.9147106999145924,
+ "R1_natural": 6,
+ "R1_frozen": 8,
+ "R2_natural": 9,
+ "R2_frozen": 8,
+ "parity_ok": true,
+ "rules": {
+  "BLOCKED": "any mandatory parity (A-F) fails",
+  "STRONG-COLLAPSE (A)": "R_SD <= 0.5 AND frozen R1 reversal count <= half the natural R1 count",
+  "WEAK-COLLAPSE (B)": "R_SD >= 0.9 AND frozen R1 count > half the natural R1 count",
+  "PARTIAL-COLLAPSE (C)": "otherwise",
+  "note": "R_SD <= 0.5 is a descriptive screening threshold (as Family A), not a significance test; no additive variance decomposition"
+ },
+ "protocol_sha256": "ca444093eb0bf1a728e3ba5f36395b9420b33644e7a7ce1aff32a2cad8afca97"
+}

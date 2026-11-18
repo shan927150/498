@@ -1,0 +1,144 @@
+{
+ "experiment": "Fixed GU-AGQ (AGQ gate/up + GPTQ down) across 4 MoE layers and 3 matched C4 Random seeds",
+ "nature": "retrospective robustness / mechanism study; GU-AGQ was motivated by L8/L16 seed-0 results and both evaluation splits were inspected before; previously inspected cells: [(0, 8), (0, 16)]",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (BF16)",
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true,
+  "capture": "CANONICAL-B1 non-sequential BF16",
+  "new_solves": 0
+ },
+ "methods": {
+  "primary": {
+   "GPTQ": {
+    "gate_proj": 0,
+    "up_proj": 0,
+    "down_proj": 0
+   },
+   "FULL_AGQ": {
+    "gate_proj": 1,
+    "up_proj": 1,
+    "down_proj": 1
+   },
+   "GU_AGQ": {
+    "gate_proj": 1,
+    "up_proj": 1,
+    "down_proj": 0
+   }
+  },
+  "diagnostic": {
+   "DOWN_AGQ": {
+    "gate_proj": 0,
+    "up_proj": 0,
+    "down_proj": 1
+   }
+  },
+  "fixed_rule": "GU_AGQ for every expert, layer and seed; no selection of any kind",
+  "source": "the two candidate sets of the SAME seed only"
+ },
+ "candidate_sha256": {
+  "0": {
+   "GPTQ": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+   "AGQ": "5b12f96a5249c9fab2fe37ccd4c5ace80c08acc72895630f82e80c474d7ab209"
+  },
+  "1": {
+   "GPTQ": "277117a9fcac690166350c1c902910e4437474ed536edbdd16a60bb2592ea6af",
+   "AGQ": "829cc56c14e2a68fd0c3c524a778f6791d1b21ae2e2f1ac80f2b36a3af2f2e1c"
+  },
+  "2": {
+   "GPTQ": "8f18b500e156ce6cbd26bd6dd08ce1874b5280caed58515d2b567c86e4b691e3",
+   "AGQ": "78f17cfca9c7f8d5f8cdcb4dc89c6954c64048e394962670255f2690f3ca9030"
+  }
+ },
+ "configuration_manifest_sha256": "1ca40e31b90c0af22b0a6f7d2ee122a9373a3b9b2d0d5a08ec76c242ac09fea6",
+ "splits": {
+  "primary": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY EVALUATION",
+   "note": "document-disjoint confirmation split; identical windows to runs_legacy_metric_reeval; inspected in earlier studies -> not pristine"
+  },
+  "secondary": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY EVALUATION",
+   "note": "historical test rows 2128-2255; inspected in many prior studies"
+  }
+ },
+ "metric": "E_L = sum ||y_BF16 - y_q||^2 / (sum ||y_BF16||^2 + 1e-30) (AGQ-only validation definition: fp32 complete expert outputs, float64 sums, frozen BF16 routing fp32 softmax top-4 c without renorm, shared expert included)",
+ "aggregate": "E_4L = mean of the four per-layer ratios (pooled ratio reported as secondary diagnostic only)",
+ "comparisons": {
+  "primary": "Delta_s = (E4L_GU - E4L_FULL_AGQ) / E4L_FULL_AGQ per seed; mean over seeds",
+  "secondary": "(E4L_GU - E4L_GPTQ) / E4L_GPTQ",
+  "replication_unit": "calibration seed"
+ },
+ "decision_rule": {
+  "rules": {
+   "tau_rel": 0.005,
+   "max_layer_regression_rel": 0.005,
+   "cost_ratio_max": 1.1
+  },
+  "BLOCKED": "any artifact / regression / correctness check fails",
+  "PROMISING": "all: (1) mean_s Delta_s <= -tau (confirm); (2) Delta_s < 0 for all 3 seeds; (3) for each layer, seed-averaged E_L(GU) vs seed-averaged E_L(FULL_AGQ) <= +0.5 %; (4) old-test mean_s Delta_s < 0; (5) correctness; (6) estimated fresh-deployment cost of a direct GU-AGQ pass <= 1.10x Full AGQ",
+  "UNSTABLE": "not promising and either (per-seed Delta_s signs differ and max_s Delta_s - min_s Delta_s >= tau) or (old-test mean Delta has the opposite sign to confirm mean Delta and |old-test mean Delta| >= tau)",
+  "SMALL_GAIN": "not above; Delta_s < 0 for all seeds, old-test mean Delta < 0, mean Delta > -tau",
+  "LAYER_SPECIFIC": "not above; some layer's seed-averaged GU vs FULL_AGQ <= -tau and another's >= +tau",
+  "NO_GAIN": "otherwise (GU-AGQ equal to or worse than Full AGQ, or no consistent improvement)",
+  "recommendation": {
+   "A": "PROMISING",
+   "C": "SMALL_GAIN",
+   "B": "all other verdicts"
+  },
+  "implementation": "diagnostics/fixed_gu_agq_validation.classify (unit-tested)"
+ },
+ "diagnostics": [
+  "DOWN_AGQ for exact 2-group Shapley attribution (not a candidate)",
+  "per-expert diagonal gain concentration",
+  "L16 expert 40 across seeds (post hoc)",
+  "D + C decomposition",
+  "native BF16 ranking"
+ ],
+ "conditional": "direct single-pass GU-AGQ path implemented and timed ONLY if PROMISING",
+ "regression": {
+  "split": "oldtest",
+  "configs": [
+   "GPTQ",
+   "FULL_AGQ"
+  ],
+  "all_seeds_layers": true,
+  "reference": "runs_agq_only_validation/results/eval_FR_s{s}.json per-window values",
+  "also": "confirm GPTQ vs runs_legacy_metric_reeval/results/confirm (FR_s{s})"
+ },
+ "code_sha256": {
+  "diagnostics/fixed_gu_agq_validation.py": "0cf1f77bc8f1de377720cb75d8e308fd28773801a89114734598296587afa794",
+  "diagnostics/projection_selective_agq.py": "f99001a058814a3a1671a8ce0851ac8e786811eb402480026eb5fb470e875264",
+  "moe_calib/projection_select.py": "2c21f75e23808a28c4d8bf52f33555caf514198926ebfe4c4c7d6fd9b18fc3bb",
+  "moe_calib/agq.py": "d058f5d5a630c9a7779a1b1c9781b15bcfb04d1e8af926bb79553693b39549d9",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "tests/test_fixed_gu_agq.py": "072f3090bc2131e7b13120dccd9a4734259df59c57c232c35ed7d1364d67ba75"
+ },
+ "frozen_before_any_new_result": true,
+ "created": "2026-11-13 03:30:38"
+}

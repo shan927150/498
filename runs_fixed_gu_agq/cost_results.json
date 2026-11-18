@@ -1,0 +1,39 @@
+{
+ "incremental": {
+  "new_gptq_solves": 0,
+  "artifact_loading_s": 42.445984840393066,
+  "regression_s": 681.5020246505737,
+  "regression_note": "from per-cell metadata (cost log was rewritten by a resumed run)",
+  "confirm_s": 2071.46355342865,
+  "oldtest_s": 338.9924623966217,
+  "peak_gpu_gb": 9.961451008,
+  "peak_cpu_gb": 11.474908,
+  "temporary_storage_bytes": 34434425,
+  "timings_include": "4 configs + LayerEvalAccumulator cross-check + native BF16 forward (confirm)"
+ },
+ "fresh_deployment_4_layers": {
+  "source": "runs_agq_only_validation/cost_results.json, matched FR s0 runs (s1/s2 AGQ runs were slowed by concurrent host load and are not used)",
+  "standard_gptq": {
+   "hessian_s": 29.178961753845215,
+   "gptq_s": 258.99179315567017,
+   "total": 288.1707549095154
+  },
+  "full_agq": {
+   "hessian_s": 37.989094972610474,
+   "gptq_s": 250.1004798412323,
+   "total": 288.0895748138428
+  },
+  "fixed_gu_agq_estimated": {
+   "total": 288.0895748138428,
+   "measured": false,
+   "basis": "same number of GPTQ solves (one per projection) as Full AGQ; the replay needs router coefficients for the gu Hessian only, so its cost is <= the Full AGQ replay"
+  },
+  "cost_ratio_vs_full_agq": 1.0,
+  "profiler_support": "moe_calib.profiler.Profiler applies hessian_weighting to BOTH the gu and down Hessians; a direct GU-only weighting would need one new opt-in option (not implemented: quality gate not passed)",
+  "mixed_artifact_assembly_note": "this study assembled GU-AGQ from two full solutions; that is NOT the deployment cost"
+ },
+ "inference": {
+  "change": "none expected (same format, one tensor per projection)",
+  "measured": false
+ }
+}

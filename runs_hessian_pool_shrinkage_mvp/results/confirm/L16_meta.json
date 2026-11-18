@@ -1,0 +1,27 @@
+{
+ "layer": 16,
+ "split": "confirm",
+ "candidates": [
+  "B16_std",
+  "B32_std",
+  "B64_std",
+  "B128_std",
+  "B16_pool",
+  "B16_identity",
+  "B16_tuned",
+  "B32_pool",
+  "B32_identity",
+  "B32_tuned"
+ ],
+ "experts": [
+  1,
+  32,
+  15,
+  57,
+  39,
+  9
+ ],
+ "seconds": 17.75561022758484,
+ "peak_gpu_gb": 4.327837184,
+ "peak_rss_gb": 5.562108
+}

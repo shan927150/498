@@ -1,0 +1,210 @@
+{
+ "experiment": "Layer-pooled Hessian shrinkage for low-budget MoE GPTQ (feasibility MVP)",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (partial load: layers 8, 16; BF16)",
+ "calibration": {
+  "config": "FR_s0",
+  "cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+  "ids_hash": "ec355fb8d866e4ff",
+  "seq_len": 512,
+  "capture": "CANONICAL-B1",
+  "prefixes": "chronological S16 c S32 c S64 c S128 of the frozen order"
+ },
+ "layers": [
+  8,
+  16
+ ],
+ "layers_note": "exploratory, outcome-informed choice from earlier AGQ studies; not sampled",
+ "budgets": {
+  "primary": [
+   16,
+   32
+  ],
+  "reference": [
+   64,
+   128
+  ]
+ },
+ "experts": {
+  "rule": "per layer: ascending sort of B32 routed-token count (ties -> lower expert id); low = ranks {0,1}, median = ranks {29,30}, high = ranks {58,59}. Exposure only: no covariance, AGQ or reconstruction information was inspected.",
+  "ids": {
+   "8": {
+    "low": [
+     3,
+     42
+    ],
+    "median": [
+     37,
+     47
+    ],
+    "high": [
+     58,
+     55
+    ]
+   },
+   "16": {
+    "low": [
+     1,
+     32
+    ],
+    "median": [
+     15,
+     57
+    ],
+    "high": [
+     39,
+     9
+    ]
+   }
+  }
+ },
+ "estimators": {
+  "pooled": "H = n_e[(1-a) Hbar_e + a P_e], P_e = Hbar_L tr(Hbar_e)/tr(Hbar_L) (trace-matched)",
+  "identity": "H = n_e[(1-a) Hbar_e + a tr(Hbar_e)/d I] (trace-matched control)",
+  "untraced": "H = n_e[(1-a) Hbar_e + a Hbar_L] (covariance diagnostic only, never quantized)",
+  "pure_prior": "alpha = 1 pooled prior (covariance diagnostic only, never quantized)",
+  "alpha0": "raw H_e passed unchanged (no normalization round trip)",
+  "pooled_hessian": "H_L = sum over every MoE-input token of the prefix (forward_pre_hook on the router gate = gate/up input), each token once",
+  "down": "down_proj always uses its raw routed Hessian at the same budget"
+ },
+ "alpha_grid": [
+  0.0,
+  0.1,
+  0.3,
+  0.5
+ ],
+ "alpha_grid_frozen": true,
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "tuned_damping": {
+  "values": {
+   "16": 3.0,
+   "32": 2.0
+  },
+  "source": "runs_diag/damping_threshold_report.md (best percdamp per prefix, tuning split, seeds 0/1); applied to all three projections; not re-searched"
+ },
+ "splits": {
+  "tune": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2000,
+    2128
+   ],
+   "role": "SELECTION-VALIDATION",
+   "note": "historical tuning split; disjoint from the C4 pool rows 0-1999 the FR s0 calibration set was drawn from; the ONLY split used for expert selection and the layer-wise baseline choice"
+  },
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY EVALUATION",
+   "note": "document-disjoint confirmation split; identical windows to runs_legacy_metric_reeval; inspected in earlier studies -> not pristine"
+  },
+  "oldtest": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY EVALUATION",
+   "note": "historical test rows 2128-2255; inspected in many prior studies"
+  }
+ },
+ "stage1": {
+  "reference": "tune split ~/moe_cache rows 2000-2127: routed gu second moment Hbar_ref = H_ref/n_ref (finite-sample proxy, not population truth); never used to build the prior",
+  "metrics": {
+   "primary": "D_F = ||H - Hbar_ref||_F / (||Hbar_ref||_F + eps), H token-normalized",
+   "secondary": [
+    "D_diag relative diagonal mismatch",
+    "top-16 eigenspace alignment"
+   ]
+  },
+  "budgets_screened": [
+   16,
+   32
+  ],
+  "rule": {
+   "rules": {
+    "s1_min_rel_improvement": 0.03,
+    "s1_min_experts": 8,
+    "s1_layer_max_regression": 0.01,
+    "s2_min_rel_improvement": 0.01,
+    "s2_tuned_tolerance": 0.005,
+    "s2_min_experts": 8,
+    "s2_max_expert_regression": 0.05,
+    "s2_cost_max_overhead": 0.05
+   },
+   "c1": "mean D_F(pooled, a) <= (1 - 0.03) mean D_F(raw)",
+   "c2": ">= 8 / 12 experts with D_F(pooled, a) < D_F(raw)",
+   "c3": "mean D_F(pooled, a) < mean D_F(identity, a)",
+   "c4": "no layer whose mean D_F(pooled, a) exceeds its mean D_F(raw) by > 1 %",
+   "c5": "all numerical checks pass",
+   "selection": "per budget, among passing nonzero alphas, the lowest mean tuning D_F; a budget with no passing alpha is NOT carried into Stage 2",
+   "fail": "no passing alpha at B16 and B32 -> POOL-PRIOR-NO-GAIN, stop before Stage 2"
+  }
+ },
+ "stage2": {
+  "methods": {
+   "A": "standard GPTQ, raw H, percdamp 1.0",
+   "B": "pooled shrinkage at alpha*(B), percdamp 1.0",
+   "C": "identity shrinkage at alpha*(B), percdamp 1.0",
+   "D": "raw H, tuned percdamp (B16 3.0, B32 2.0) on all projections",
+   "E": "standard GPTQ at B64 / B128 (quality references, different calibration cost)"
+  },
+  "primary_metric": "J_e = sum_i c_ie^2 ||E_fp(x_i) - E_q(x_i)||^2 / (sum_i c_ie^2 ||E_fp(x_i)||^2 + eps) on the confirmation split (~/moe_cache_confirmation rows 0-255), complete expert MLP, frozen BF16 routing, fp32 math, BF16-rounded quantized weights (as installed); summary = mean over the 12 experts",
+  "secondary": [
+   "unweighted complete-expert output error",
+   "gate / up projection output error",
+   "E3-form projection reconstruction (gate+up+down, ratio of token sums) on confirm",
+   "fraction improved, p90 / worst expert change",
+   "Spearman(delta mismatch, delta J)"
+  ],
+  "criteria": {
+   "c1": ">= 1 % lower mean J than standard GPTQ at B16 or B32",
+   "c2": "mean J_pool < mean J_identity (same budget)",
+   "c3": "mean J_pool <= 1.005 x mean J_tuned (same budget)",
+   "c4": ">= 8 / 12 experts improved vs standard",
+   "c5": "no expert worse than +5 % vs standard",
+   "c6": "layer-mean J improves on both L8 and L16",
+   "c7": "optional six-expert subset replacement does not contradict (pooled <= standard)",
+   "c8": "correctness checks pass",
+   "c9": "measured pooled-accumulation time <= 5 % of (replay + 60-expert GPTQ) per layer",
+   "note": "c1-c6 must hold at the same budget"
+  },
+  "verdict_precedence": "BLOCKED > POOL-PRIOR-NO-GAIN (Stage 1) > PROMISING > REGULARIZATION-ONLY > MISMATCH-ONLY > NO-GAIN (moe_calib.hessian_shrinkage.classify)",
+  "recommendation": {
+   "PROMISING": "A",
+   "REGULARIZATION-ONLY": "B",
+   "MISMATCH-ONLY": "C",
+   "NO-GAIN": "B",
+   "BLOCKED": "B",
+   "POOL-PRIOR-NO-GAIN": "B"
+  },
+  "gap_recovery": "R = (E_B^std - E_B^pool)/(E_B^std - E_2B^std), reported only when the gap > 1 % of E_B^std",
+  "subset": "optional: only if Stage 2 improves J; L8/L16 all 60 experts standard GPTQ at the budget vs the same with the 6 selected experts' gate/up replaced by pooled weights; exact MoE output on confirm"
+ },
+ "hard_constraints": [
+  "no new calibration data",
+  "GPTQ solver unchanged",
+  "no extra alphas / per-expert alpha",
+  "no damping search",
+  "no AGQ / c^2 Hessians",
+  "historical artifacts untouched",
+  "recommendation A never executed automatically"
+ ],
+ "precision": "BF16 model forward; Hessian accumulation fp32; mixing fp64 cast to fp32; evaluation fp32",
+ "code_sha256": {
+  "moe_calib/hessian_shrinkage.py": "9265207c4909d8ab3ee5a73ce12e44490fb646ce3e1b75fe1fe66dfd9ac44c8d",
+  "diagnostics/hessian_pool_shrinkage_mvp.py": "5cd4ba30652b745c813c556e38f20283189acfb93878c50f27ae00cd3fabd586",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2"
+ },
+ "created": "2026-11-13 05:55:17"
+}

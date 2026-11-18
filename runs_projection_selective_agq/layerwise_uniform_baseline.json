@@ -1,0 +1,25 @@
+{
+ "layers": {
+  "8": {
+   "choice": "GPTQ",
+   "validation_E_layer": {
+    "GPTQ": 0.007115236692270128,
+    "FULL_AGQ": 0.007116386972828147
+   },
+   "rel_agq_vs_gptq": 0.00016166441227013738,
+   "config_manifest_sha256": "b516076e6fcb4d88b723b566f720d6dc50a406db625371ca3ff6f336b947ebb5"
+  },
+  "16": {
+   "choice": "FULL_AGQ",
+   "validation_E_layer": {
+    "GPTQ": 0.007145263332788199,
+    "FULL_AGQ": 0.006926336838070509
+   },
+   "rel_agq_vs_gptq": -0.03063938787435301,
+   "config_manifest_sha256": "f788d6fa74dac0e43e2573e357bf845789c3e166b5ca495529f99c8977e2b713"
+  }
+ },
+ "rule": "per layer FULL_AGQ iff tuning E_layer lower than GPTQ (ties GPTQ)",
+ "split": "tune",
+ "frozen_at": "2026-11-13 02:58:21"
+}

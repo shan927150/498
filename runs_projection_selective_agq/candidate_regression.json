@@ -1,0 +1,130 @@
+{
+ "layers": {
+  "8": {
+   "GPTQ": {
+    "value": 0.007173198373874861,
+    "historical": 0.00717319837387486,
+    "reference_rounded": 0.007173198,
+    "rel_diff": 2.220446049250313e-16,
+    "per_window_exact": true,
+    "native": 0.007193882220529877,
+    "native_historical": 0.007193882220529877,
+    "native_exact": true
+   },
+   "FULL_AGQ": {
+    "value": 0.00717791746996035,
+    "historical": 0.00717791746996035,
+    "reference_rounded": 0.007177917,
+    "rel_diff": 0.0,
+    "per_window_exact": true,
+    "native": 0.007198314540181958,
+    "native_historical": 0.007198314540181958,
+    "native_exact": true
+   },
+   "meta": {
+    "split": "regression_oldtest",
+    "layer": 8,
+    "n_seqs": 128,
+    "lean_s": 41.63935613632202,
+    "native_s": 7.178495645523071,
+    "pristine_restored": true,
+    "install_matches_config": true,
+    "nontarget_unchanged_during_install": true,
+    "reinstall_bitwise_identical": true,
+    "accumulator_check": {
+     "GPTQ": {
+      "accumulator": 0.00717319837387486,
+      "lean": 0.007173198373874861,
+      "abs_diff": 8.673617379884035e-19,
+      "per_seq_equal": true
+     },
+     "FULL_AGQ": {
+      "accumulator": 0.00717791746996035,
+      "lean": 0.00717791746996035,
+      "abs_diff": 0.0,
+      "per_seq_equal": true
+     }
+    },
+    "decomposition_identity_max_rel": 1.3678866878499386e-16,
+    "decomposition_vs_err_max_rel": 1.936039131003234e-11,
+    "candidate_load_s": 2.540102243423462,
+    "total_s": 60.219529151916504
+   },
+   "passed": true
+  },
+  "16": {
+   "GPTQ": {
+    "value": 0.007090592442089353,
+    "historical": 0.007090592442089351,
+    "reference_rounded": 0.007090592,
+    "rel_diff": 2.220446049250313e-16,
+    "per_window_exact": true,
+    "native": 0.0071182441958924725,
+    "native_historical": 0.0071182441958924725,
+    "native_exact": true
+   },
+   "FULL_AGQ": {
+    "value": 0.0068713013268671755,
+    "historical": 0.006871301326867174,
+    "reference_rounded": 0.006871301,
+    "rel_diff": 2.220446049250313e-16,
+    "per_window_exact": true,
+    "native": 0.006898216154827908,
+    "native_historical": 0.006898216154827908,
+    "native_exact": true
+   },
+   "meta": {
+    "split": "regression_oldtest",
+    "layer": 16,
+    "n_seqs": 128,
+    "lean_s": 43.19276833534241,
+    "native_s": 7.434893846511841,
+    "pristine_restored": true,
+    "install_matches_config": true,
+    "nontarget_unchanged_during_install": true,
+    "reinstall_bitwise_identical": true,
+    "accumulator_check": {
+     "GPTQ": {
+      "accumulator": 0.007090592442089351,
+      "lean": 0.007090592442089353,
+      "abs_diff": 1.734723475976807e-18,
+      "per_seq_equal": true
+     },
+     "FULL_AGQ": {
+      "accumulator": 0.006871301326867174,
+      "lean": 0.0068713013268671755,
+      "abs_diff": 1.734723475976807e-18,
+      "per_seq_equal": true
+     }
+    },
+    "decomposition_identity_max_rel": 1.8436051390421312e-16,
+    "decomposition_vs_err_max_rel": 4.600267236758944e-11,
+    "candidate_load_s": 2.3794174194335938,
+    "total_s": 58.89970636367798
+   },
+   "passed": true
+  }
+ },
+ "note": "old-test split, configurations A and D only (B/C are not evaluated before this gate)",
+ "inputs_routing_precision_aggregation_match": "same cache (~/moe_cache rows 2128-2255), same BF16 layer forward for inputs/router, fp32 expert math, float64 sums, sum-over-windows ratio, shared expert included: identical to runs_agq_only_validation stage_evaluate",
+ "cost": {
+  "model_load_s": 8.899566173553467,
+  "layers": {
+   "8": {
+    "seconds": 60.2813777923584,
+    "candidate_load_s": 2.540102243423462,
+    "lean_s": 41.63935613632202,
+    "native_s": 7.178495645523071
+   },
+   "16": {
+    "seconds": 58.92276644706726,
+    "candidate_load_s": 2.3794174194335938,
+    "lean_s": 43.19276833534241,
+    "native_s": 7.434893846511841
+   }
+  },
+  "peak_gpu_gb": 9.374698496,
+  "peak_cpu_gb": 8.664944
+ },
+ "passed": true
+}

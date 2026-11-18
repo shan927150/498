@@ -1,0 +1,30 @@
+{
+ "checks": {
+  "A_bf16_checkpoint_equal": true,
+  "A_bf16_evaluated": true,
+  "B_bf16_repeat_bitwise": true,
+  "B_all_config_repeat_bitwise": true,
+  "B_fresh_process_requantization_bitwise": true,
+  "C_union_multiset_identical": true,
+  "C_tokens_identical": true,
+  "C_reversed_execution_order_bitwise": true,
+  "C_tokens_per_projection_65536": true,
+  "C_same_layers": true,
+  "D_shapes": true,
+  "D_finite": true,
+  "D_all_targets_quantized": true,
+  "D_installed_equals_solver": true,
+  "D_non_targets_unchanged": true,
+  "D_integer_codes_exact": true,
+  "D_info_capture_bitwise_default": true,
+  "E_pristine_start": true,
+  "F_restoration": true,
+  "F_end_bf16_bitwise": true,
+  "F_end_pristine": true,
+  "F_end_untouched": true,
+  "all_configs_valid": true,
+  "targeted_tests": true
+ },
+ "blocked": false,
+ "n_untouched": 328
+}

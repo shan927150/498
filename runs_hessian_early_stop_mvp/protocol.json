@@ -1,0 +1,91 @@
+{
+ "experiment": "Per-expert Hessian early-stopping feasibility MVP",
+ "fixed": {
+  "model": "Qwen/Qwen1.5-MoE-A2.7B @ 1a758c50",
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "act_order": true
+  },
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "calibration": "FR_s0, 128 x 512, CANONICAL-B1 cache, frozen order",
+  "checkpoints": [
+   16,
+   32,
+   64,
+   128
+  ],
+  "heldout": "~/moe_cache rows 2128-2255, E3 per-expert relative reconstruction (unchanged)"
+ },
+ "experiment1": {
+  "conditions": {
+   "full": "all experts accumulate all 128 sequences",
+   "stop50": "expert IDs with e % 2 == 0 (30/60 per layer) skip Hessian accumulation for sequence positions >= 64; forward unchanged",
+   "stop75": "expert IDs with e % 4 != 3 (45/60 per layer), same"
+  },
+  "mask_rule": "fixed by expert ID, independent of quality and exposure; same for gu and down",
+  "timing": "per layer, sequences pre-materialized in RAM; 1 warm-up replay, then REPS=3 interleaved repetitions per condition with cuda synchronize; median + range; forward-only and hooks-without-accumulation conditions isolate forward and hook overhead; a separate CUDA-event run splits accumulation into fp32 conversion / GEMM X^T X / update+storage; end-to-end = replay + 720 GPTQ solves per condition",
+  "validity": "layer outputs bitwise identical across conditions (sha256 of all 128 outputs per layer)",
+  "systems_gate": {
+   "min_hessian_replay_reduction": 0.15,
+   "min_end_to_end_reduction": 0.03,
+   "evaluated_on": "stop50 (measured)"
+  }
+ },
+ "experiment2": {
+  "statistics": "token-normalized trace drift and Frobenius drift of H_B vs H_{B/2}, separately for gu and down; routed-token count n_B; relSE not used (only 1-4 contiguous blocks available, would need extra forwards)",
+  "decision_points": [
+   32,
+   64
+  ],
+  "warmup": 16,
+  "rules": {
+   "trace": "both gu and down trace drift < tau_trace",
+   "frob": "both Frobenius drift < tau_frob",
+   "frob_exposure": "frob AND n_B >= n_min",
+   "exposure_baseline": "n_B >= n_min (optional baseline)"
+  },
+  "thresholds": {
+   "primary": "tau = MEDIAN of the pooled calibration-only statistic over (expert, gu/down) at that checkpoint; n_min = median n_B over experts at that checkpoint",
+   "grid": "quantiles {0.25, 0.5, 0.75} of the same calibration-only distributions (exploratory)",
+   "tuning": "no separate tuning split is used; thresholds are distribution quantiles fixed a priori and never chosen from held-out results"
+  },
+  "fixed_baselines": [
+   32,
+   64,
+   128
+  ],
+  "false_safe": "among stopped experts, E_stop > 1.01 E_128 (also reported at 2 %)",
+  "scientific_gate": {
+   "min_work_skipped": 0.25,
+   "max_mean_degradation": 0.005,
+   "max_p90_degradation": 0.01,
+   "max_false_safe_rate": 0.1,
+   "applies_to": "the three PRIMARY (median-threshold) rules"
+  },
+  "advantage": "a passing rule's mean degradation is below the fixed-budget frontier (linear interpolation of fixed B32/B64/B128 in (work skipped, mean degradation)) at its own skipped work"
+ },
+ "verdict_precedence": "BLOCKED > SIGNAL-FAIL > NO-ADVANTAGE > SYSTEMS-FAIL > PROMISING (moe_calib.early_stop.classify)",
+ "hard_constraints": [
+  "no GPTQ change",
+  "no routing / data / order change",
+  "no AGQ",
+  "forward never skipped",
+  "held-out quality never used for stopping decisions",
+  "historical artifacts untouched"
+ ],
+ "code_sha256": {
+  "moe_calib/early_stop.py": "b74c9143083ec7b2049ff6e0e79e86212d84f276c26645d2ff4b2fd38e6a1731",
+  "diagnostics/hessian_early_stop_mvp.py": "a7ba6bbae972a58b948356ca6831a9eb6e72107450f315e1a4ed1642d094a9ea",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d"
+ },
+ "created": "2026-11-11 06:10:49"
+}

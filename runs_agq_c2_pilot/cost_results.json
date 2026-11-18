@@ -1,0 +1,79 @@
+{
+ "q0": {
+  "profiler_s": 18.5755295753479,
+  "gptq_s": 13.178563833236694,
+  "total_s": 31.75409507751465,
+  "peak_gpu_gb": 7.757514752
+ },
+ "q1": {
+  "profiler_s": 20.02522301673889,
+  "gptq_s": 12.916170597076416,
+  "total_s": 32.941394329071045,
+  "peak_gpu_gb": 7.965657088
+ },
+ "q2": {
+  "profiler_s": 18.33212447166443,
+  "gptq_s": 13.37079906463623,
+  "total_s": 31.702924251556396,
+  "peak_gpu_gb": 8.173275136
+ },
+ "q1_vs_q0": {
+  "profiler_s": 0.07804318232277585,
+  "gptq_s": -0.019910609341096445,
+  "total_s": 0.037390429444079276,
+  "peak_gpu_gb": 0.02683105899944807
+ },
+ "q2_vs_q0": {
+  "profiler_s": -0.013103535094175799,
+  "gptq_s": 0.014586963635196248,
+  "total_s": -0.001611471712021372,
+  "peak_gpu_gb": 0.05359453346741135
+ },
+ "peak_rss_gb_process": 10.604644,
+ "per_layer": {
+  "L8_q0": {
+   "profiler_s": 10.123450994491577,
+   "gptq_s": 6.5640740394592285,
+   "total_s": 16.687525987625122,
+   "peak_gpu_gb": 7.756466176,
+   "peak_rss_gb": 7.04486
+  },
+  "L8_q1": {
+   "profiler_s": 10.496395826339722,
+   "gptq_s": 6.529582738876343,
+   "total_s": 17.025978803634644,
+   "peak_gpu_gb": 7.964690944,
+   "peak_rss_gb": 8.206792
+  },
+  "L8_q2": {
+   "profiler_s": 9.283470630645752,
+   "gptq_s": 6.704838752746582,
+   "total_s": 15.988309860229492,
+   "peak_gpu_gb": 8.173275136,
+   "peak_rss_gb": 8.38036
+  },
+  "L16_q0": {
+   "profiler_s": 8.452078580856323,
+   "gptq_s": 6.614489793777466,
+   "total_s": 15.066569089889526,
+   "peak_gpu_gb": 7.757514752,
+   "peak_rss_gb": 10.604644
+  },
+  "L16_q1": {
+   "profiler_s": 9.52882719039917,
+   "gptq_s": 6.386587858200073,
+   "total_s": 15.915415525436401,
+   "peak_gpu_gb": 7.965657088,
+   "peak_rss_gb": 10.604644
+  },
+  "L16_q2": {
+   "profiler_s": 9.048653841018677,
+   "gptq_s": 6.665960311889648,
+   "total_s": 15.714614391326904,
+   "peak_gpu_gb": 8.17178368,
+   "peak_rss_gb": 10.604644
+  }
+ },
+ "notes": "q = 2 adds one elementwise c.pow(2) per (expert, sequence) on the AGQ path; no extra forward pass; timing protocol: per layer q = 0, 1, 2 run sequentially in one process (same Profiler replay + 36 solves); model load, cache I/O and evaluation excluded",
+ "modest": true
+}

@@ -1,0 +1,29 @@
+{
+ "checks": {
+  "01_selection_hashes": true,
+  "02_no_calibration_test_leakage": true,
+  "03_original_activation_hashes": true,
+  "04_contributions_unchanged": true,
+  "05_block_membership_unchanged": true,
+  "06_fp64_protocol": true,
+  "07_fp64_order_invariance": true,
+  "08_cast_once_and_served": true,
+  "09_finite_symmetric": true,
+  "10_original_actorder": true,
+  "11_gptq_params": true,
+  "12_solver_unchanged": true,
+  "13_no_rtn_fallback": true,
+  "14_240_experts": true,
+  "15_720_tensors": true,
+  "16_bf16_installation": true,
+  "17_routers_shared_unchanged": true,
+  "18_nontarget_unchanged": true,
+  "19_windows_and_targets": true,
+  "20_repeat_eval_identical": true,
+  "21_repeat_quantization_identical": true,
+  "22_historical_fp32_controls": true,
+  "23_no_artifact_overwritten": true,
+  "24_tests_pass": true
+ },
+ "passed": true
+}

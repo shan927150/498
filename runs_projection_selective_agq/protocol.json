@@ -1,0 +1,155 @@
+{
+ "experiment": "Projection-selective AGQ: small-scale feasibility MVP (2x2 GU x down ablation)",
+ "nature": "retrospective exploratory pilot; one calibration seed (FR s0); layers 8/16 chosen with knowledge of earlier AGQ outcomes; both test splits previously inspected",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (BF16)",
+ "layers": [
+  8,
+  16
+ ],
+ "candidates": {
+  "GPTQ": {
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0",
+   "file_sha256": {
+    "8": "0e2f6f0eff1c40e6fbffa48a9156f69961c89442f07cf157c7dfb21764c09e46",
+    "16": "b7344106c2cffdc5f4235f6de1142e1e7d932c72cff568a62365b93e936f0519"
+   }
+  },
+  "AGQ": {
+   "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0",
+   "file_sha256": {
+    "8": "e2881ac657b5bfa2d55b3a9d692c09edbc1e552ecea8b530a4e4bc3bdcbf45c5",
+    "16": "ad61cda0d357392aa411f6fe0d383c626c6f62e6fc98ecafacc299a4134b173b"
+   }
+  }
+ },
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true,
+  "new_solves": false
+ },
+ "configurations": {
+  "GPTQ": {
+   "gate_proj": 0,
+   "up_proj": 0,
+   "down_proj": 0
+  },
+  "GU_AGQ": {
+   "gate_proj": 1,
+   "up_proj": 1,
+   "down_proj": 0
+  },
+  "DOWN_AGQ": {
+   "gate_proj": 0,
+   "up_proj": 0,
+   "down_proj": 1
+  },
+  "FULL_AGQ": {
+   "gate_proj": 1,
+   "up_proj": 1,
+   "down_proj": 1
+  }
+ },
+ "gate_up_paired": true,
+ "configuration_manifest_sha256": "4b4d24723397aad723643382482a0c914c55ee1bded6447c27f16a893bfa0e6a",
+ "splits": {
+  "tune": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2000,
+    2128
+   ],
+   "role": "SELECTION-VALIDATION",
+   "note": "historical tuning split; disjoint from the C4 pool rows 0-1999 the FR s0 calibration set was drawn from; the ONLY split used for expert selection and the layer-wise baseline choice"
+  },
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY EVALUATION",
+   "note": "document-disjoint confirmation split; identical windows to runs_legacy_metric_reeval; inspected in earlier studies -> not pristine"
+  },
+  "oldtest": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY EVALUATION",
+   "note": "historical test rows 2128-2255; inspected in many prior studies"
+  }
+ },
+ "metric": "E_layer = sum ||y_BF16 - y_q||^2 / (sum ||y_BF16||^2 + 1e-30); complete expert outputs with the actual mixed weights in fp32; frozen BF16 inputs, fp32 softmax top-4 c (no renorm), shared expert included; LayerEvalAccumulator definition",
+ "aggregate": "mean of the L8 and L16 ratios (2-layer scope, not comparable to 4-layer historical means)",
+ "selection": {
+  "rule": "per layer z* = argmin over {GPTQ, GU_AGQ, DOWN_AGQ, FULL_AGQ} of tuning-split E_layer; exact ties -> GPTQ > FULL_AGQ > GU_AGQ > DOWN_AGQ",
+  "split": "tune",
+  "layerwise_uniform_baseline": "per layer GPTQ vs FULL_AGQ on tuning E_layer; ties -> GPTQ"
+ },
+ "regression": {
+  "split": "oldtest",
+  "configs": [
+   "GPTQ",
+   "FULL_AGQ"
+  ],
+  "reference": {
+   "8": {
+    "GPTQ": 0.007173198,
+    "FULL_AGQ": 0.007177917
+   },
+   "16": {
+    "GPTQ": 0.007090592,
+    "FULL_AGQ": 0.006871301
+   }
+  },
+  "reference_full_precision": "runs_agq_only_validation/results/eval_FR_s0.json (per window)",
+  "gate": "A and D must reproduce historical per-window values and totals (rel <= 1e-9) before B/C are evaluated anywhere"
+ },
+ "decision_rule": {
+  "rules": {
+   "tau_rel": 0.005,
+   "interaction_frac": 0.25,
+   "expert_mixed_frac": 0.1,
+   "expert_rel": 0.01
+  },
+  "PROMISING": "all: (1) a mixed config selected on validation for some layer beats both uniform configs there on validation AND on confirmation; (2) 2-layer mean selected vs validation-selected layer-wise uniform <= -tau (confirm); (3) per layer selected vs best uniform (confirm) <= +tau; (4) old-test selected vs layer-wise 2-layer mean < 0; (5) correctness; (6) cost: 2-layer mean selected vs uniform FULL_AGQ (1x preparation cost) <= -tau",
+  "SELECTION_FAIL": "not promising; a mixed config was selected because it beat both uniform configs on validation, but on confirmation it does not beat the better uniform config of that layer",
+  "LOCAL_GAIN": "not the above; on confirmation some mixed config beats the best uniform config of some layer by >= tau",
+  "INTERACTION_ONLY": "not the above; on a layer where |FULL_AGQ vs GPTQ| >= tau, |I| / |E_A - E_D| >= 0.25 on confirmation, OR in some layer >= 10 % of experts have a mixed config whose confirmation c^2-weighted expert error is lower than both uniform configs by >= 1 % relative",
+  "NO_GAIN": "otherwise",
+  "BLOCKED": "candidate invalid or any correctness check fails",
+  "recommendation": {
+   "PROJECTION-AGQ-PROMISING": "A",
+   "PROJECTION-AGQ-NO-GAIN": "B",
+   "PROJECTION-AGQ-SELECTION-FAIL": "B",
+   "PROJECTION-AGQ-BLOCKED": "B",
+   "PROJECTION-AGQ-LOCAL-GAIN": "C",
+   "PROJECTION-AGQ-INTERACTION-ONLY": "C"
+  },
+  "decision_split": "confirm (primary)",
+  "implementation": "moe_calib.projection_select"
+ },
+ "post_hoc": "L16 expert 40 attribution is post-hoc mechanism exploration (identified from earlier results); never used for selection or decision",
+ "hard_constraints": [
+  "no new quantization / Hessians",
+  "no new data or windows",
+  "no interpolation",
+  "no gate-only / up-only configs",
+  "no expert-wise selection",
+  "historical artifacts read-only"
+ ],
+ "code_sha256": {
+  "diagnostics/projection_selective_agq.py": "f99001a058814a3a1671a8ce0851ac8e786811eb402480026eb5fb470e875264",
+  "moe_calib/projection_select.py": "2c21f75e23808a28c4d8bf52f33555caf514198926ebfe4c4c7d6fd9b18fc3bb",
+  "moe_calib/agq.py": "d058f5d5a630c9a7779a1b1c9781b15bcfb04d1e8af926bb79553693b39549d9",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "diagnostics/expertwise_agq_hybrid.py": "5c4232e2879fdc634bb718702bc671786f56afe5e527c0ffcd497b5925481a31",
+  "tests/test_projection_selective_agq.py": "de291eee903b2e7fbc9832a8dea22fb1be988b89b422f34b0697a3ef606383f5"
+ },
+ "frozen_before_any_BC_result": true,
+ "created": "2026-11-13 02:51:35"
+}

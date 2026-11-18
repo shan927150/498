@@ -1,0 +1,33 @@
+{
+ "verdict": "EARLY-STOP-SIGNAL-FAIL",
+ "science": {
+  "any_rule_passes": false,
+  "passing_rules": [],
+  "any_passing_rule_beats_frontier": false
+ },
+ "systems": {
+  "passed": false,
+  "gate": {
+   "min_hessian_replay_reduction": 0.15,
+   "min_end_to_end_reduction": 0.03,
+   "evaluated_on": "stop50 (measured)"
+  },
+  "stop50_replay_reduction": 0.08378585620495826,
+  "stop50_e2e_reduction": 0.021655358372794753,
+  "stop75_replay_reduction": 0.12674689278869578,
+  "stop75_e2e_reduction": 0.017019562346045403,
+  "ceiling_e2e": 0.03854380609936694
+ },
+ "correctness": {
+  "checkpoints": true,
+  "outputs_identical": true,
+  "full_equals_historical": true
+ },
+ "gates": {
+  "min_work_skipped": 0.25,
+  "max_mean_degradation": 0.005,
+  "max_p90_degradation": 0.01,
+  "max_false_safe_rate": 0.1,
+  "applies_to": "the three PRIMARY (median-threshold) rules"
+ }
+}

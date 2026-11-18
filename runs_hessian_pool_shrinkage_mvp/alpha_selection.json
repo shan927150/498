@@ -1,0 +1,9 @@
+{
+ "rule": "per budget, lowest mean tuning D_F among nonzero alphas passing all Stage 1 criteria",
+ "selected": {
+  "16": 0.5,
+  "32": 0.3
+ },
+ "uses_only": "calibration prefixes + tune-split reference; no confirmation / test data",
+ "frozen_at": "2026-11-13 06:01:11"
+}

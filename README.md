@@ -31,6 +31,22 @@ real whole-sequence selection.
 - The adaptive picks are atypical sequences. Their per-expert token counts
   change by only ≈5 %. See [`update_11.06.md`](update_11.06.md).
 
+> **Per-expert Hessian early-stopping feasibility MVP (FR s0, chronological prefixes B16/32/64/128, fixed-mask timing + offline stopping rules):** [`update_hessian_early_stop_mvp.md`](update_hessian_early_stop_mvp.md)
+> (EARLY-STOP-SIGNAL-FAIL; systems gate also fails — accumulation is 8.0 s of 208.5 s replay+solve (GPTQ solve 184 s); stop-50 % mask skips 25 % of rows, saves 8.4 % replay / ~2 % end-to-end (noise level), ceiling 3.9 %;
+> stopping at B64 hurts 239/240 experts by > 1 % (median +4.5 %, uniform across exposure), so every drift/exposure rule has ~100 % false-safe stops; B128 reproduces historical weights bitwise.
+> Recommendation C: stop systems development and finalize.)
+>
+> **c²-weighted Hessian pilot (EXPLORATORY; q ∈ {0,1,2}, FR s0, L8/L16, 12 experts, subset replacement):** [`update_agq_c2_pilot.md`](update_agq_c2_pilot.md)
+> (C2-NO-GAIN — q=0 / q=1 reproduce historical GPTQ / AGQ bitwise; q=2 vs q=1: pooled held-out E2 +0.83 % (1/12 experts better), E0 +1.8 %;
+> subset layer output +0.10 % (L8) / +0.07 % (L16); cross terms < 1e-4 of total; N_eff/N 0.79 → 0.45 (min 0.23); no cost difference.
+> Recommendation B: retain original AGQ c¹.)
+>
+> **MoEQuant AGQ-only validation (standard GPTQ vs affinity-weighted Hessian GPTQ, matched C4 Random B=128 FR s0/s1/s2, CANONICAL-B1, four layers):** [`update_agq_only_validation.md`](update_agq_only_validation.md)
+> (AGQ-LAYER-QUALITY-GAIN — aggregated MoE-layer output error −1.51 / −1.03 / −1.16 % in 3/3 seeds, 3/4 layers (L8 +0.1–0.2 %);
+> standard expert reconstruction +1.6 % (≤ 3/240 experts improved), c-weighted surrogate no gain (+0.1–0.25 %), PPL inconclusive (ΔPPL +0.007 / −0.015 / −0.006);
+> cost ≈ 0 (+0.16 % wall time, same peak memory); unit-affinity path reproduces standard GPTQ bitwise; post-hoc probe: layer output tracks the c²-weighted expert error.
+> Recommendation C: finalize.)
+>
 > **EBSS C4-prefix diversity rescue (64 C4R_s0 prefix tokens + 448 generated, PX_PO vs PX_EBSS = ALG1_RATE, B=16 GPTQ on four layers):** [`update_ebss_prefix_rescue.md`](update_ebss_prefix_rescue.md)
 > (PREFIX-RESCUE-PARTIAL; diversity NO-DIVERSITY-IMPROVEMENT
 > — prefixes are reproduced exactly and generation default-path is bitwise unchanged (35/35 CPU, 15/15 smoke); loops persist (16/16 PO, 13/16 EBSS), continuation distinct-2 falls to 0.20 / 0.28 (random start 0.36 / 0.42; C4 0.86);

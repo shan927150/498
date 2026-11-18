@@ -1,0 +1,684 @@
+{
+ "D_bf16_self_forcing": {
+  "plain_vs_historical": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "forced_vs_plain": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "forced_vs_nohook_token_bitwise": true,
+  "layer_hashes_equal": true,
+  "final_hidden_equal": true,
+  "natural_choice_equals_reference": true,
+  "forced_probs_equal_reference_topk": true,
+  "dispatch_equal_reference": true,
+  "forced_calls_per_layer": [
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16
+  ],
+  "no_hooks_after": true,
+  "passed": true
+ },
+ "B_record_only": {
+  "FR_s0_G20261111": {
+   "record_vs_plain": {
+    "bitwise": true,
+    "max_abs_diff": 0.0
+   },
+   "plain_vs_historical": {
+    "bitwise": true,
+    "max_abs_diff": 0.0
+   },
+   "layer_hashes_equal": true,
+   "final_hidden_equal": true,
+   "passed": true
+  },
+  "FC_s2_G20261111": {
+   "record_vs_plain": {
+    "bitwise": true,
+    "max_abs_diff": 0.0
+   },
+   "plain_vs_historical": {
+    "bitwise": true,
+    "max_abs_diff": 0.0
+   },
+   "layer_hashes_equal": true,
+   "final_hidden_equal": true,
+   "passed": true
+  }
+ },
+ "C_self_forcing": {
+  "FR_s0_G20261111": {
+   "per_window": {
+    "bitwise": true,
+    "max_abs_diff": 0.0
+   },
+   "token_nll_bitwise": true,
+   "layer_hashes_equal": true,
+   "final_hidden_equal": true,
+   "selections_equal": true,
+   "router_probs_equal": true,
+   "forced_probs_equal_natural_topk": true,
+   "dispatch_equal": true,
+   "ppl_equal": true,
+   "forced_calls_all_16": true,
+   "passed": true
+  },
+  "FC_s2_G20261111": {
+   "per_window": {
+    "bitwise": true,
+    "max_abs_diff": 0.0
+   },
+   "token_nll_bitwise": true,
+   "layer_hashes_equal": true,
+   "final_hidden_equal": true,
+   "selections_equal": true,
+   "router_probs_equal": true,
+   "forced_probs_equal_natural_topk": true,
+   "dispatch_equal": true,
+   "ppl_equal": true,
+   "forced_calls_all_16": true,
+   "passed": true
+  }
+ },
+ "E_frozen_dispatch": {
+  "FR_s0_G20261111": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166634678840637
+  },
+  "FC_s0_G20261111": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.916665256023407
+  },
+  "FR_s0_G20261112": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166648983955383
+  },
+  "FC_s0_G20261112": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166633486747742
+  },
+  "FR_s0_G20261113": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166639447212219
+  },
+  "FC_s0_G20261113": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166658520698547
+  },
+  "FR_s0_G20261114": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166634678840637
+  },
+  "FC_s0_G20261114": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166638255119324
+  },
+  "FR_s0_G20261115": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166633486747742
+  },
+  "FC_s0_G20261115": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166648983955383
+  },
+  "FR_s1_G20261111": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166643023490906
+  },
+  "FC_s1_G20261111": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166648983955383
+  },
+  "FR_s1_G20261112": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166647791862488
+  },
+  "FC_s1_G20261112": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166631698608398
+  },
+  "FR_s1_G20261113": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166650772094727
+  },
+  "FC_s1_G20261113": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166657328605652
+  },
+  "FR_s1_G20261114": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166653752326965
+  },
+  "FC_s1_G20261114": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166653752326965
+  },
+  "FR_s1_G20261115": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166643023490906
+  },
+  "FC_s1_G20261115": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166647791862488
+  },
+  "FR_s2_G20261111": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166646003723145
+  },
+  "FC_s2_G20261111": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166662096977234
+  },
+  "FR_s2_G20261112": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166643023490906
+  },
+  "FC_s2_G20261112": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.916663646697998
+  },
+  "FR_s2_G20261113": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.916665256023407
+  },
+  "FC_s2_G20261113": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166648983955383
+  },
+  "FR_s2_G20261114": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166643023490906
+  },
+  "FC_s2_G20261114": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166657328605652
+  },
+  "FR_s2_G20261115": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166653752326965
+  },
+  "FC_s2_G20261115": {
+   "dispatch_equals_bf16": true,
+   "forced_calls_all_16": true,
+   "p_forced_finite": true,
+   "pk_finite": true,
+   "token_nll_finite": true,
+   "p_forced_model_dependent": true,
+   "frac_forced_probs_differ_from_bf16": 0.9166646003723145
+  }
+ },
+ "F_restoration": {
+  "FR_s0_G20261111": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s0_G20261111": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s0_G20261112": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s0_G20261112": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s0_G20261113": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s0_G20261113": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s0_G20261114": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s0_G20261114": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s0_G20261115": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s0_G20261115": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s1_G20261111": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s1_G20261111": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s1_G20261112": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s1_G20261112": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s1_G20261113": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s1_G20261113": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s1_G20261114": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s1_G20261114": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s1_G20261115": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s1_G20261115": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s2_G20261111": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s2_G20261111": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s2_G20261112": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s2_G20261112": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s2_G20261113": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s2_G20261113": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s2_G20261114": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s2_G20261114": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FR_s2_G20261115": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  },
+  "FC_s2_G20261115": {
+   "installed_unchanged_after_eval": true,
+   "router_weights_unchanged": true,
+   "no_hooks_or_overrides": true,
+   "targets_restored_pristine": true
+  }
+ },
+ "A_natural_parity": {
+  "FR_s0_G20261111": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s0_G20261111": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s0_G20261112": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s0_G20261112": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s0_G20261113": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s0_G20261113": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s0_G20261114": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s0_G20261114": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s0_G20261115": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s0_G20261115": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s1_G20261111": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s1_G20261111": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s1_G20261112": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s1_G20261112": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s1_G20261113": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s1_G20261113": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s1_G20261114": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s1_G20261114": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s1_G20261115": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s1_G20261115": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s2_G20261111": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s2_G20261111": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s2_G20261112": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s2_G20261112": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s2_G20261113": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s2_G20261113": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s2_G20261114": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s2_G20261114": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FR_s2_G20261115": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "FC_s2_G20261115": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  }
+ }
+}

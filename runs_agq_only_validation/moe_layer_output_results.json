@@ -1,0 +1,161 @@
+{
+ "metric": "PRIMARY: per layer sum_x ||y_BF16 - y_quant||^2 / sum_x ||y_BF16||^2 over all 65,536 held-out tokens, fp32 math, frozen BF16 routing (identical inputs, router and c), shared expert included in y; config = mean of the 4 layer values",
+ "configs": {
+  "FR_s0": {
+   "per_layer": {
+    "1": {
+     "gptq": 0.00030190038194791895,
+     "agq": 0.0002963729646587828,
+     "rel_diff": -0.018308745598373206,
+     "native_gptq": 0.0003183006115761424,
+     "native_agq": 0.0003106897181426097,
+     "native_rel_diff": -0.023911023594474296,
+     "frac_heldout_seqs_improved": 0.6640625,
+     "per_seq_rel_diff_median": -0.01966144331519107
+    },
+    "8": {
+     "gptq": 0.00717319837387486,
+     "agq": 0.00717791746996035,
+     "rel_diff": 0.0006578789320363453,
+     "native_gptq": 0.007193882220529877,
+     "native_agq": 0.007198314540181958,
+     "native_rel_diff": 0.0006161234666078215,
+     "frac_heldout_seqs_improved": 0.4140625,
+     "per_seq_rel_diff_median": 0.00104581010775184
+    },
+    "16": {
+     "gptq": 0.007090592442089351,
+     "agq": 0.006871301326867174,
+     "rel_diff": -0.030927051161547193,
+     "native_gptq": 0.0071182441958924725,
+     "native_agq": 0.006898216154827908,
+     "native_rel_diff": -0.030910437322665907,
+     "frac_heldout_seqs_improved": 0.9921875,
+     "per_seq_rel_diff_median": -0.03560581932604948
+    },
+    "23": {
+     "gptq": 0.00030075343165921934,
+     "agq": 0.0002971175943967349,
+     "rel_diff": -0.012089096514796078,
+     "native_gptq": 0.00030561433007195756,
+     "native_agq": 0.0003019952922072645,
+     "native_rel_diff": -0.011841846106630341,
+     "frac_heldout_seqs_improved": 0.828125,
+     "per_seq_rel_diff_median": -0.01075033405369042
+    }
+   },
+   "mean_gptq": 0.0037166111573928374,
+   "mean_agq": 0.00366067733897076,
+   "rel_diff_mean": -0.01504968264189204,
+   "mean_of_layer_rel_diffs": -0.015166753585670031,
+   "layers_improved": 3,
+   "native_mean_gptq": 0.0037340103395176122,
+   "native_mean_agq": 0.003677303926339935,
+   "native_rel_diff_mean": -0.015186463887778856
+  },
+  "FR_s1": {
+   "per_layer": {
+    "1": {
+     "gptq": 0.0003016569371481162,
+     "agq": 0.00029529177416996483,
+     "rel_diff": -0.021100668323188628,
+     "native_gptq": 0.00031840478809225595,
+     "native_agq": 0.0003094209763519192,
+     "native_rel_diff": -0.028215064836693754,
+     "frac_heldout_seqs_improved": 0.6484375,
+     "per_seq_rel_diff_median": -0.0232204721618242
+    },
+    "8": {
+     "gptq": 0.007173821583308684,
+     "agq": 0.007190089719543459,
+     "rel_diff": 0.0022677085073632267,
+     "native_gptq": 0.007194538905437694,
+     "native_agq": 0.0072113100577119085,
+     "native_rel_diff": 0.0023310948060255516,
+     "frac_heldout_seqs_improved": 0.296875,
+     "per_seq_rel_diff_median": 0.0032775360566036473
+    },
+    "16": {
+     "gptq": 0.0070760878419917584,
+     "agq": 0.006915542840345868,
+     "rel_diff": -0.022688384490249756,
+     "native_gptq": 0.007103384283930352,
+     "native_agq": 0.006942883254458359,
+     "native_rel_diff": -0.022595008668626695,
+     "frac_heldout_seqs_improved": 0.9921875,
+     "per_seq_rel_diff_median": -0.0257940930892319
+    },
+    "23": {
+     "gptq": 0.0003019113787353515,
+     "agq": 0.00029930785968524526,
+     "rel_diff": -0.008623454541567356,
+     "native_gptq": 0.0003067336504049041,
+     "native_agq": 0.0003041556752442871,
+     "native_rel_diff": -0.008404604963341769,
+     "frac_heldout_seqs_improved": 0.765625,
+     "per_seq_rel_diff_median": -0.00917379746731356
+    }
+   },
+   "mean_gptq": 0.003713369435295978,
+   "mean_agq": 0.003675058048436134,
+   "rel_diff_mean": -0.010317149297263515,
+   "mean_of_layer_rel_diffs": -0.012536199711910627,
+   "layers_improved": 3,
+   "native_mean_gptq": 0.0037307654069663014,
+   "native_mean_agq": 0.0036919424909416182,
+   "native_rel_diff_mean": -0.010406153105255769
+  },
+  "FR_s2": {
+   "per_layer": {
+    "1": {
+     "gptq": 0.00030722066546298564,
+     "agq": 0.0002935712863247407,
+     "rel_diff": -0.04442858398758809,
+     "native_gptq": 0.000322739750247992,
+     "native_agq": 0.0003093801537055024,
+     "native_rel_diff": -0.041394332530232496,
+     "frac_heldout_seqs_improved": 0.6796875,
+     "per_seq_rel_diff_median": -0.04446995647281162
+    },
+    "8": {
+     "gptq": 0.007177544709026324,
+     "agq": 0.00719312021071236,
+     "rel_diff": 0.0021700319980519933,
+     "native_gptq": 0.007198148003217143,
+     "native_agq": 0.0072137523512567844,
+     "native_rel_diff": 0.002167828173672861,
+     "frac_heldout_seqs_improved": 0.3671875,
+     "per_seq_rel_diff_median": 0.0017960222309305134
+    },
+    "16": {
+     "gptq": 0.007059407358873112,
+     "agq": 0.006888817310018688,
+     "rel_diff": -0.02416492492673707,
+     "native_gptq": 0.007087716215251326,
+     "native_agq": 0.006916241290626319,
+     "native_rel_diff": -0.02419325483941188,
+     "frac_heldout_seqs_improved": 0.984375,
+     "per_seq_rel_diff_median": -0.028667629359318103
+    },
+    "23": {
+     "gptq": 0.0003008086753049808,
+     "agq": 0.00029740788801499733,
+     "rel_diff": -0.011305482750906358,
+     "native_gptq": 0.0003056652269019504,
+     "native_agq": 0.0003022115680786653,
+     "native_rel_diff": -0.011298827996528826,
+     "frac_heldout_seqs_improved": 0.8671875,
+     "per_seq_rel_diff_median": -0.010563374168157249
+    }
+   },
+   "mean_gptq": 0.00371124535216685,
+   "mean_agq": 0.0036682291737676967,
+   "rel_diff_mean": -0.011590766526400082,
+   "mean_of_layer_rel_diffs": -0.01943223991679488,
+   "layers_improved": 3,
+   "native_mean_gptq": 0.0037285672989046032,
+   "native_mean_agq": 0.003685396340916818,
+   "native_rel_diff_mean": -0.011578430675092913
+  }
+ }
+}

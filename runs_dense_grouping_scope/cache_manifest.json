@@ -1,0 +1,332 @@
+{
+ "G20261111": {
+  "files": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "d9d57c73821cefba141a24b15fc46adc6829447563509f95065798a58641d925",
+    "tensor_sha256": "17f6102c4239030522bfcb1aace128295bc21e2000a68b8a9321cb1361390f9d",
+    "finite": true
+   },
+   "9": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "a4f909b3e4fd633dab59e9e5556b8fd763bb28451079126dcaae64cc25d0f34b",
+    "tensor_sha256": "bc05b798399c89e8a63f891c9b07873ff3345735670b0c5619ddb5cac410786f",
+    "finite": true
+   },
+   "19": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "5f732c62277115a2ae5b741d3eec36970f22015ad5798d53b1033f3edee12756",
+    "tensor_sha256": "54195dcb64ee2a2070e1efe21961910adc778045c75046f26d9c218eac3b9582",
+    "finite": true
+   },
+   "27": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "23e781433731f6a065e4729015694c25cdda724e45a819c048406a321e48c4b2",
+    "tensor_sha256": "ced19e389dd4a0d5da52913b7270905fb1340690a9db1807d6f9fee0305a2452",
+    "finite": true
+   }
+  },
+  "token_sha256": "b5901d4d3e2f5100236d5ddf4e1bc901e8267f33420c942c36a57518394d0bd6",
+  "token_sha_equals_union": true,
+  "reversed_order_bitwise": {
+   "1": true,
+   "9": true,
+   "19": true,
+   "27": true
+  },
+  "reversed_ok": true,
+  "build_s": 36.27281999588013,
+  "complete": true
+ },
+ "G20261112": {
+  "files": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "34b1890498407dc7f98e754c6d73b16240dd44c47e6bd38e7fb89751c6d90a70",
+    "tensor_sha256": "39bbfa60ceff891ccd88ca2e024d48b7e447f9765cde624827f1f7717f2cc6da",
+    "finite": true
+   },
+   "9": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "992567701d76661ce5db9c6e41c6419f03287ebd20c10da18b860ae05578bd6f",
+    "tensor_sha256": "60ab324bba3bae30af19b76edbe0655a4efee21f3ef4c630e29a590cf874893b",
+    "finite": true
+   },
+   "19": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "e0e528452645f330c5527dfcefeced20a806078ab5ef113f88c6b56765634a78",
+    "tensor_sha256": "708de4db4e12fffd4a0bf9472c92035d69ba8bb0c0e286cc5deaf80df8593ccc",
+    "finite": true
+   },
+   "27": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "b441d309fa7cbd4b74bbd1ac10a659014ce9a7a3f6f25e34e6e0d29ef238baff",
+    "tensor_sha256": "731c000b0defe7e052694b4c38c0bd30035c45ffaa7de7676aa82e66f6c30106",
+    "finite": true
+   }
+  },
+  "token_sha256": "b5901d4d3e2f5100236d5ddf4e1bc901e8267f33420c942c36a57518394d0bd6",
+  "token_sha_equals_union": true,
+  "reversed_order_bitwise": {
+   "1": true,
+   "9": true,
+   "19": true,
+   "27": true
+  },
+  "reversed_ok": true,
+  "build_s": 36.767656087875366,
+  "complete": true
+ },
+ "G20261113": {
+  "files": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "14f059a236f94d79985a203b321c6d9f17bb2102d0f3bffa7069b67615ca6b0f",
+    "tensor_sha256": "2320a8b064a92454342add3c73f15b35a109b1a90e94ebe005e898d4f056fd1e",
+    "finite": true
+   },
+   "9": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "a7fcf277cf257be8d4169835015a75e9e80f25f8006f7591cb0995cac335d4aa",
+    "tensor_sha256": "68b5cbd7c0fc757a3ab04caca2cb76281349c55f658759afcd258c19b9fa2afa",
+    "finite": true
+   },
+   "19": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "30c8a6fb241f3de6c5ac71bc209acaafd0bfba6f1811333d6b931af0a4222e8b",
+    "tensor_sha256": "c7814df6951d36b8319a22a608d292d3a14854b8f7f1496310a814eac3233dd8",
+    "finite": true
+   },
+   "27": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "99d3b2428dbbdf88c92b5cf0be329f164c1391192ac16cc4474779f783d3cc4a",
+    "tensor_sha256": "9f7bf2c82dabffc20ed1e3c1c9061b7abaacc0dfd34a53fed24e4379907e36f6",
+    "finite": true
+   }
+  },
+  "token_sha256": "b5901d4d3e2f5100236d5ddf4e1bc901e8267f33420c942c36a57518394d0bd6",
+  "token_sha_equals_union": true,
+  "reversed_order_bitwise": {
+   "1": true,
+   "9": true,
+   "19": true,
+   "27": true
+  },
+  "reversed_ok": true,
+  "build_s": 42.13133525848389,
+  "complete": true
+ },
+ "G20261114": {
+  "files": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "1d07f77dc32a5222e863d3709000b0ae1754fdd6d277058bb0a719f989a73eda",
+    "tensor_sha256": "4d61b63215d13fb9911fa7a68104cb7d8567c24b71e6c388699d7945b40c3585",
+    "finite": true
+   },
+   "9": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "e7b477e6cd7c7266499e60fcafe744dab12a4e1e25849910e272c7ab1379e6b9",
+    "tensor_sha256": "e408eddfec4e5451a94a0db804e6495f634633caf4a0392969ac09a67d5e91a2",
+    "finite": true
+   },
+   "19": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "8ba18be90bd46e7c1f1a57fb88dbaf506541ea0ff6bf93c076575c870e642b28",
+    "tensor_sha256": "1383c5c431eccdd5ce36ecdd525d195b99699ebb02983ff86fe3f72d4f9af069",
+    "finite": true
+   },
+   "27": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "677324535a1cb1f56cd05a7240cfab3279e6e28e5a059be0932be078283fca7d",
+    "tensor_sha256": "af5a252fb887be3780159df66cfc800c4ccd97aaf941a3792f3d8a990ca3cdec",
+    "finite": true
+   }
+  },
+  "token_sha256": "b5901d4d3e2f5100236d5ddf4e1bc901e8267f33420c942c36a57518394d0bd6",
+  "token_sha_equals_union": true,
+  "reversed_order_bitwise": {
+   "1": true,
+   "9": true,
+   "19": true,
+   "27": true
+  },
+  "reversed_ok": true,
+  "build_s": 32.34888505935669,
+  "complete": true
+ },
+ "G20261115": {
+  "files": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "3305854b3eae92f6524086111e524e16055753672362629da55cc59a816e6a0a",
+    "tensor_sha256": "3a5329496611b4ca1e4fc038594fd1e67427c142431e27c2480eb8c363b86874",
+    "finite": true
+   },
+   "9": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "6d20c4e275151c1da42c864d8a9f1adbf0d2ae7e43ed26a09958cf9a0141e50a",
+    "tensor_sha256": "fe79dffefd8c4c015344282a8a22b7f62081d07b74a54ff46fe7e3fcc5ea981a",
+    "finite": true
+   },
+   "19": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "ef67b8dbc3fd03bac6469095f66195d648c4f3c00bc52f5934927d596daf5d40",
+    "tensor_sha256": "1bf3fb2ed1f7b07b81efd29cd12844977af8c7f375c7c6b38c93ca3e6ea197bc",
+    "finite": true
+   },
+   "27": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "bf5824a133d08254e9c758f65dad4150487d74b0af9325554513334d30567918",
+    "tensor_sha256": "ff820e7a18627a20dbd7b0d328bb8cc41810086a92cf784f51dad8b6705dd58a",
+    "finite": true
+   }
+  },
+  "token_sha256": "b5901d4d3e2f5100236d5ddf4e1bc901e8267f33420c942c36a57518394d0bd6",
+  "token_sha_equals_union": true,
+  "reversed_order_bitwise": {
+   "1": true,
+   "9": true,
+   "19": true,
+   "27": true
+  },
+  "reversed_ok": true,
+  "build_s": 29.63556480407715,
+  "complete": true
+ },
+ "ORIGINAL": {
+  "files": {
+   "1": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "623a3ce84a9cb9e71908f7ac3ffd63bcf66e51d88c1a6653c077357ff198763f",
+    "tensor_sha256": "3628eb9acae489de87dc5c69e5dce14604b85780e47927317dd72c496193a8fe",
+    "finite": true
+   },
+   "9": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "698ccfc0a454f193bfbad27991cfb9f01a7cb1f2be0524fe45ac49ad41a0b7ec",
+    "tensor_sha256": "6e3802c0829504204cd82bfadedfa0a4fe3a445eabe00c22c8257082c9e587bb",
+    "finite": true
+   },
+   "19": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "c0d4991f773fcc211e82780cca87a7c3ce628b57b5997c0e6951db0e116c27e8",
+    "tensor_sha256": "5b56fa15669d556f0d944854abb20235fcd758f65687118d577677b307e1191d",
+    "finite": true
+   },
+   "27": {
+    "shape": [
+     217,
+     512,
+     1536
+    ],
+    "sha256": "73431f05f8467b714a04862fad5ce8628f15e5da96edf72111c999db983999fa",
+    "tensor_sha256": "eb6b4d9d8097ee99dc9b0a068c408f5844eb0452507d08e39cf6e4e3ec38642e",
+    "finite": true
+   }
+  },
+  "token_sha256": "b5901d4d3e2f5100236d5ddf4e1bc901e8267f33420c942c36a57518394d0bd6",
+  "token_sha_equals_union": true,
+  "reversed_order_bitwise": {
+   "1": true,
+   "9": true,
+   "19": true,
+   "27": true
+  },
+  "reversed_ok": true,
+  "build_s": 81.50504398345947,
+  "complete": true
+ }
+}

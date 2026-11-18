@@ -1,0 +1,62 @@
+{
+ "experiment_code_sha256": {
+  "moe_calib/expertwise_calibration.py": "696157fe8f2b5c606c5824db50d5b42d1c4e4d1ba8ec680c4814140ba984d186",
+  "diagnostics/expertwise_calibration_mvp.py": "24243edf57fb37d8f74cc3c0b029aa1632caaf2e115d0ace8518a46a28330768"
+ },
+ "frozen_code_sha256": {
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5"
+ },
+ "settings": {
+  "layer": 16,
+  "n_experts": 8,
+  "B": 128,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "seq_len": 512,
+  "sketch_dim": 64,
+  "projection_seed": 20261116,
+  "greedy_sample_frac": 0.1,
+  "swap_max_passes": 5,
+  "swap_rel_tol": 1e-09,
+  "eps": 1e-12,
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "actorder": true
+  },
+  "holdout_tokens_per_seq": 128
+ },
+ "smoke_checks": {
+  "exactly_8_experts": true,
+  "sets_of_128_distinct": true,
+  "matched_counts_identical_across_conditions": true,
+  "unmatched_counts_equal_selection": true,
+  "natural_routing_and_gu_down_alignment": true,
+  "n_alignment_checks": 10792,
+  "replay_counts_equal_sketch": true,
+  "rows_in_range": true,
+  "per_seq_sketch_max_rel_diff": 0.0,
+  "per_seq_sketch_reproduced": true,
+  "pre_matching_sketch_equals_selection_time": true,
+  "matching_plan_deterministic": true,
+  "selection_deterministic": true,
+  "objective_monotone": true,
+  "selection_uses_pool_only": true,
+  "eval_rows_disjoint_from_pool": true,
+  "weights_unchanged": true,
+  "same_eval_activations_all_conditions": true,
+  "frozen_code_unchanged": true,
+  "passed": true
+ },
+ "note": "settings frozen after a passing seed-0 smoke run; final runs must reproduce smoke seed 0 exactly",
+ "created": "2026-11-16 06:40:51"
+}

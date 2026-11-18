@@ -1,0 +1,125 @@
+{
+ "experiment": "C4 vs WikiText-2-train calibration: 2x2 domain-matching ablation (source x {FR, SC})",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B",
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "quantized": "routed-expert gate/up/down of layers 1/8/16/23 only",
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "calibration": "non-sequential GPTQ on cached BF16 layer inputs (E3 solver, K=4)",
+ "budget": 128,
+ "pool_size": 2000,
+ "seqlen": 512,
+ "selection_seed": 0,
+ "sources": {
+  "C4": {
+   "pool": "~/moe_cache rows 0-1999 (existing)",
+   "FR": "runs_partial_ppl FR s0 (matched warm start)",
+   "SC": "runs_shared_covariance_e3/selections/seed0.json (frozen)"
+  },
+  "WT": {
+   "pool": "WikiText-2 train, dataset_manifest.json (pool sha 70819f9c598aeec4)",
+   "warm_start": "same convention as C4: typical_half (1000 lowest routing-L1 d(s) on the WT pool routing) & random_half (random.Random(20261106).sample(ids, 1000)); W = random.Random(0).sample(sorted(T & H), 32)",
+   "FR": "W + random.Random(0).sample([WT pool ids not in W], 96) (e3_allocation random + fixed warm start)",
+   "SC": "shared_covariance_selection.select_shared(seed 0) from W with SETTINGS of the C4 SC study; sketches, routing and pool references recomputed from the WT pool ONLY"
+  }
+ },
+ "sc_settings": {
+  "B": 128,
+  "warm_size": 32,
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "n_experts": 240,
+  "sketch_dim": 64,
+  "projection_seed": 20261116,
+  "greedy_sample_frac": 0.1,
+  "swap_max_passes": 5,
+  "swap_rel_tol": 1e-09,
+  "eps": 1e-12,
+  "rng_stream": "SeedSequence([seed, 1])",
+  "term_weight": "1/480 per (layer, expert, proj) = 1/240 per expert x 1/2 per proj; 1/4 per layer",
+  "storage": "sketch fp32 (svech, k(k+1)/2 = 2080), every exact objective accumulated in fp64",
+  "K": 4,
+  "gptq": {
+   "bits": 4,
+   "group_size": 128,
+   "percdamp": 1.0,
+   "act_order": true
+  },
+  "threshold": 0.005,
+  "grouping_seeds": [
+   20261111,
+   20261112,
+   20261113,
+   20261114,
+   20261115
+  ],
+  "grouping_batch": 8
+ },
+ "extraction": {
+  "ORIGINAL": "pool cache built with consecutive batches of 8 pool rows (cache_inputs.py convention); reported separately, never averaged with grouping replicates",
+  "groupings": {
+   "seeds": [
+    20261111,
+    20261112,
+    20261113
+   ],
+   "rule": "sorted(union of the source's selections) -> numpy default_rng(g).permutation -> consecutive batches of 8 (multigroup_robustness.grouping_batches)",
+   "C4": "reuse SC E3 Stage B seed-0 caches (union FR u TR u TC u SC); configs re-run for B2 and required to reproduce the stored results bitwise",
+   "WT": "union WT-FR u WT-SC"
+  }
+ },
+ "evaluation": {
+  "primary": "token-weighted mean NLL on the frozen 128 x 512 WikiText-2 test windows (sha e646cf7ce463f3de), sequential partial-model forward (eval_partial_ppl.layerwise_nll)",
+  "secondary": [
+   "PPL = exp(mean NLL)",
+   "P_seq and B2 (pooled, layer-equal, per layer) on the loss-alignment 32-window BF16 capture, FP32 expert compute (loss_alignment.layer_output_errors)",
+   "C4 held-out test reconstruction (E3 test rows 2128-2255 of ~/moe_cache), out-of-domain for WT"
+  ]
+ },
+ "analysis": {
+  "per_grouping": "dSC_C4 = NLL(C4,SC)-NLL(C4,FR); dSC_WT = NLL(WT,SC)-NLL(WT,FR); dDomain_FR = NLL(WT,FR)-NLL(C4,FR); dDomain_SC; interaction = dSC_WT - dSC_C4 (negative favours SC under WT)",
+  "summary": "mean, SD, min, max, sign counts over the 3 groupings; exploratory, no significance claims",
+  "reference_sd": {
+   "value": 0.0005263979831218996,
+   "per_seed": {
+    "0": 0.0005158689122403271,
+    "1": 0.0004071920552125102,
+    "2": 0.0006319481034548683
+   },
+   "definition": "root-mean-square over allocation seeds 0-2 of the within-seed SD (ddof 1) of the C4 SC-FR paired dNLL over the 5 SC E3 Stage B groupings"
+  },
+  "label_rule": "CONSISTENT-{NEGATIVE,POSITIVE} iff the same sign in 3/3 groupings AND |mean| > reference_sd; otherwise NOT-DISTINGUISHABLE (applied to dSC_C4, dSC_WT, dDomain_FR, dDomain_SC, interaction)"
+ },
+ "frozen_code_sha256": {
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "moe_calib/shared_covariance_selection.py": "58fb2f469a9df60d0d30a131109b26afc23f4d2381b7d7a349f65a3abef91a82",
+  "moe_calib/expertwise_calibration.py": "696157fe8f2b5c606c5824db50d5b42d1c4e4d1ba8ec680c4814140ba984d186",
+  "diagnostics/shared_covariance_e3.py": "8b19607651f69c813194b382e8a712d1cb4183f3eeb493ad39c4dbcf3ab64dab",
+  "moe_calib/multigroup_robustness.py": "12fab4bc5db630cd4874937f8016bea21348ca27b79e7b6894e4ef330d6577b2",
+  "diagnostics/batch_sensitivity.py": "85029a49a9fb9c2de10e64c979de913c5328a1fc5fa10653f045afdb0eae1ac5",
+  "moe_calib/loss_alignment.py": "75392cfc2d6839b2c8e920682db06a9c6c62d952173e9e9c860a68f63b7d09a0",
+  "configs/frozen_b4.json": "52f729148b5acf93e39e90ce980f3e563a02d87488252a5561a73bd8504e8a50"
+ },
+ "protocol_sha256": "9c817814f5456d9a54185008dbe599b81f726e845f6e68ae0a02ca68712a1b27",
+ "created": "2026-11-17 05:05:52"
+}

@@ -1,0 +1,209 @@
+{
+ "created": "2026-11-13 06:46:27",
+ "environment": {
+  "python": "3.13.16",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91900,
+  "transformers": "4.51.3",
+  "gpu": "NVIDIA A100-SXM4-80GB MIG 2g.20gb",
+  "tf32_matmul": false,
+  "host": "jupyter-kaixuan6",
+  "git_head": "740296581a4a165def994adb7835723f02a32d64"
+ },
+ "selections": {
+  "FR": {
+   "ids_hash": "ec355fb8d866e4ff",
+   "expected": "ec355fb8d866e4ff",
+   "match": true,
+   "selection_sha256": "ec355fb8d866e4ff5ae3386b4c165460442988dc307cac2fced7fca3b0fa620c",
+   "matches_order_null_manifest": true,
+   "K": 4
+  },
+  "FC": {
+   "ids_hash": "0353229b6d3090db",
+   "expected": "0353229b6d3090db",
+   "match": true,
+   "selection_sha256": "0353229b6d3090db8e16664425b8869e09b777c5fa5fd702a25d64fce22a862c",
+   "matches_order_null_manifest": true,
+   "K": 4
+  }
+ },
+ "original_cache": {
+  "dir": "/home/kaixuan6/moe_cache",
+  "files": {
+   "1": {
+    "sha256": "e3a32ff74da11f1c01f45b5aee2cd8fb175c89861082353df4707b224ea3e5a7",
+    "expected": "e3a32ff74da11f1c01f45b5aee2cd8fb175c89861082353df4707b224ea3e5a7"
+   },
+   "8": {
+    "sha256": "193fb667d0d2404b8e87455be116881a79c68f50bb4be2a1eade90ae2585de13",
+    "expected": "193fb667d0d2404b8e87455be116881a79c68f50bb4be2a1eade90ae2585de13"
+   },
+   "16": {
+    "sha256": "8e7b4550deba31d988f858afce709ed48e625ad9dc04c9dc9ac3a2698a00cbec",
+    "expected": "8e7b4550deba31d988f858afce709ed48e625ad9dc04c9dc9ac3a2698a00cbec"
+   },
+   "23": {
+    "sha256": "602e778071f5a8dc7b50ff3aa5e75aa2b4f0d5f2f60a54702e6a9e1030dec81b",
+    "expected": "602e778071f5a8dc7b50ff3aa5e75aa2b4f0d5f2f60a54702e6a9e1030dec81b"
+   }
+  }
+ },
+ "routing_original": {
+  "file": "/home/kaixuan6/498/runs_frozen_routing/routing_original.pt",
+  "file_sha256": "629fa75f57a2e66e0e4289c5eb7a5ea868d32cf79c37efede6429a2263c9a1bb",
+  "n_layers": 4,
+  "sha_now": "629fa75f57a2e66e0e4289c5eb7a5ea868d32cf79c37efede6429a2263c9a1bb"
+ },
+ "original_actorder": {
+  "file": "/home/kaixuan6/498/runs_actorder_ablation/original_actorder.pt",
+  "file_sha256": "ddb60df585d3c10fb2730cab5544849597264e550503af01cc08d1b17cfa4741",
+  "n_permutations": {
+   "FR": 720,
+   "FC": 720
+  },
+  "sha_now": "ddb60df585d3c10fb2730cab5544849597264e550503af01cc08d1b17cfa4741"
+ },
+ "order_null_hessian_files": {
+  "FR_O0": {
+   "path": "/home/kaixuan6/moe_cache_hessian_order_null/hessians/FR_O0.pt",
+   "sha256": "edc8ddb1429844707067ecd3b5c17cf78dd88e82d6f6b21935a7c3bdb179370d"
+  },
+  "FR_O20261121": {
+   "path": "/home/kaixuan6/moe_cache_hessian_order_null/hessians/FR_O20261121.pt",
+   "sha256": "d796c1c3b5298b12b194c13477fdb7c9e9bf995a99cbe2c714840da218a71b9b"
+  },
+  "FR_O20261122": {
+   "path": "/home/kaixuan6/moe_cache_hessian_order_null/hessians/FR_O20261122.pt",
+   "sha256": "a6a2e2ff7e77980d36f798b5ab1e25539b04530f19ebff438c6b34a49ea89c2f"
+  },
+  "FC_O0": {
+   "path": "/home/kaixuan6/moe_cache_hessian_order_null/hessians/FC_O0.pt",
+   "sha256": "4feac78b58ddd346bef1f114bed6f7efd10184f1f0cccb1371bdad13e6310748"
+  },
+  "FC_O20261121": {
+   "path": "/home/kaixuan6/moe_cache_hessian_order_null/hessians/FC_O20261121.pt",
+   "sha256": "8e9784478297ba9e38bc64b5536d66d8697160cb267fd26c5326323d4e0b9f41"
+  },
+  "FC_O20261122": {
+   "path": "/home/kaixuan6/moe_cache_hessian_order_null/hessians/FC_O20261122.pt",
+   "sha256": "d15e2db5de30e7c99a67c6fc4e02464e4efc19a86cddb169cb22d565c1813043"
+  }
+ },
+ "fp64_control": {
+  "files": {
+   "FR": "/home/kaixuan6/498/runs_hessian_order_null/fp64_control/FR.json",
+   "FC": "/home/kaixuan6/498/runs_hessian_order_null/fp64_control/FC.json"
+  },
+  "stored_fp64_hessians": false,
+  "note": "the control stored comparisons only (no FP64 matrices) -> canonical Hessians are reconstructed with the same Fp64Accumulator and orders, and must reproduce the control's recorded FP32-vs-FP64 rel-Frobenius values exactly"
+ },
+ "oo_references": {
+  "FR": {
+   "result": "runs_multigroup_robustness/results/CTRL_FR_ORIGINAL.json",
+   "result_sha256": "578cd1aa870c02e9312b529b8a94ddeb6b572bc36f9c5202e719fc3ff425909b",
+   "ppl": 9.267851290916612,
+   "recon": 0.004609548874536215,
+   "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL",
+   "weight_files": {
+    "1": "5e36ed92af6dc3bb333160462049a8122f3a46d5d5c048725a0cb088b90c0055",
+    "8": "84e8dd20dadb1cae9d41dbf44efe3cf5ae285bc549cb3c50c16226389f40c9ae",
+    "16": "da41b4356e2684062967c140df9e7b3efa0c8cdc0ea8c85c61dedf4cd3984f85",
+    "23": "39fa9c14c74b3f4699db9d93dc5dc4b20475bfeeef5d4aaa2eb3d08c958f3392"
+   },
+   "hessian_file": "/home/kaixuan6/moe_cache_frozen_routing/hessians/FR_OO.pt",
+   "hessian_file_sha256": "6978de14840c62fad57417643cf8227031527fbc66eeda60278706d03f267f24",
+   "weight_files_sha_now": {
+    "1": "5e36ed92af6dc3bb333160462049a8122f3a46d5d5c048725a0cb088b90c0055",
+    "8": "84e8dd20dadb1cae9d41dbf44efe3cf5ae285bc549cb3c50c16226389f40c9ae",
+    "16": "da41b4356e2684062967c140df9e7b3efa0c8cdc0ea8c85c61dedf4cd3984f85",
+    "23": "39fa9c14c74b3f4699db9d93dc5dc4b20475bfeeef5d4aaa2eb3d08c958f3392"
+   }
+  },
+  "FC": {
+   "result": "runs_multigroup_robustness/results/CTRL_FC_ORIGINAL.json",
+   "result_sha256": "94b37aa055ba32fd5be61cbe0b566567bb68ad66d73f7335d49684a34242ee17",
+   "ppl": 9.277908190612935,
+   "recon": 0.004727047496005081,
+   "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4",
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FC_ORIGINAL",
+   "weight_files": {
+    "1": "6e20f4c5f1600be33f6b19af934dab3f9bf61737e98715ae5218e328fd3f04c3",
+    "8": "9bf5503ffb8745cef32a0ae08eb5b720d6b9a2ca96985e8292ad7fcfc025421c",
+    "16": "5688b6e454757eac54e9392e3273f0d10ed70cebb550c0cefe26026a35438cbd",
+    "23": "931e1a35b5a355b226de6b502b59059167dead95649e3b53e25ed394b2a53986"
+   },
+   "hessian_file": "/home/kaixuan6/moe_cache_frozen_routing/hessians/FC_OO.pt",
+   "hessian_file_sha256": "8673b51898356d5cc0dcd5bc3834685716395bd08ce6c5d6fff85f262d6184f2",
+   "weight_files_sha_now": {
+    "1": "6e20f4c5f1600be33f6b19af934dab3f9bf61737e98715ae5218e328fd3f04c3",
+    "8": "9bf5503ffb8745cef32a0ae08eb5b720d6b9a2ca96985e8292ad7fcfc025421c",
+    "16": "5688b6e454757eac54e9392e3273f0d10ed70cebb550c0cefe26026a35438cbd",
+    "23": "931e1a35b5a355b226de6b502b59059167dead95649e3b53e25ed394b2a53986"
+   }
+  }
+ },
+ "order_null_results": {
+  "FR_O20261121": true,
+  "FR_O20261122": true,
+  "FR_O20261123": true,
+  "FR_O20261124": true,
+  "FR_O20261125": true,
+  "FC_O20261121": true,
+  "FC_O20261122": true,
+  "FC_O20261123": true,
+  "FC_O20261124": true,
+  "FC_O20261125": true
+ },
+ "windows": {
+  "sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "batch": 8,
+  "bf16_ppl": 9.237089824789335
+ },
+ "historical_sha256": {
+  "runs_hessian_order_null/input_manifest.json": "deb4fb1fe5ae08469607bb81fa52e731b52a5de068676cb19ebe1a891d10a9a0",
+  "runs_hessian_order_null/protocol.json": "75d9552a3f307e691d2e77d6aa03edf8990fa56df79ab0770d1afe5720b848f3",
+  "runs_hessian_order_null/ppl_results.json": "74cad214f152cb24ba7d49c851a0834ea661899acf2652ae56a2ba67171c7fad",
+  "runs_hessian_order_null/paired_differences.json": "f1c00c8c8a10bbbcf6c3587b63e52015441640a02102b0abb5a9fe91540910f5",
+  "runs_hessian_order_null/weight_differences.json": "4d9226edcad69854af72f5abb011c3bdfefe2b5f11366a6d800e40767c50b6e1",
+  "runs_hessian_order_null/fp64_control/FR.json": "8b7a4c8cc57829554759a84277e229f1d923ec34d13f7326663e324c008cca08",
+  "runs_hessian_order_null/fp64_control/FC.json": "268574432319e1d157c8bae33f852d4943a9bccb42ae1ff42ad62432f8ad004e",
+  "runs_hessian_order_null/baseline_regression/FR.json": "10614dcecd9860b3e7e370572ccd4d26f43c063288da78b59a54d9c77c1dd6e6",
+  "runs_hessian_order_null/baseline_regression/FC.json": "ee330d7def5408a966845dd69258da7f7c3768d03742f37905fdc5d117ceef90",
+  "runs_actorder_ablation/ppl_sensitivity.json": "2ed1db3bc10a4bdf012ea27209cb80d1eb9261490caa54284eeb363270fcdfce",
+  "runs_actorder_ablation/weight_sensitivity.json": "ab0c29fd08aa518b668a775e366d7684e6826597779796ea3328f3c1c2f73aab",
+  "runs_cross_seed_grouping/paired_differences.json": "fe87a20d29d3852fc3ec099f3e959f6ea3a3ccea40bda09afb05a15d9729930e",
+  "runs_cross_seed_grouping/variance_analysis.json": "109a73af1c5fca5012fc4e4114adb298aa7501cbb5d6de77533c0a3fdb55ebf4",
+  "runs_cross_seed_grouping/ppl_results.json": "994105b9314ae5c3f2e55ed6e09b196441fd6b6a5c77ee318d0648e266b82cf7",
+  "runs_cross_seed_grouping/reconstruction_results.json": "70534e9f581c3d0791650442a1b4ed061c3f895f26ec559e373149451d0e9d39",
+  "runs_multigroup_robustness/ppl_results.json": "1b6d420e07a31a5d548c52f723350bd73ed35797691c5f0ddf3ff4667f1ab8ac",
+  "runs_partial_ppl/windows.pt": "4b7d17bec2af5a48d277e72f2fc0b5fed9a0c17e2efd9060e253fc8c3c1eb080",
+  "runs_partial_ppl/evaluation_protocol.json": "72596da13c1d6cd78a24d649666b3a44117b0e51870903ecb9fa6c7b5a1ad96b"
+ },
+ "calibration_test_disjoint": {
+  "cfg_split": {
+   "pool": [
+    0,
+    2000
+   ],
+   "tune": [
+    2000,
+    2128
+   ],
+   "test": [
+    2128,
+    2256
+   ],
+   "data_seed": 0,
+   "seqlen": 512
+  },
+  "max_calibration_row": {
+   "FR": 1978,
+   "FC": 1989
+  },
+  "ok": true
+ },
+ "extraction_policy": "ORIGINAL CANONICAL activation cache (~/moe_cache rows from the C4 pool; built once, before and independently of the FR/FC selections, used by both strategies); no regrouped cache is used"
+}

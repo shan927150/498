@@ -1,0 +1,177 @@
+{
+ "A_accumulation_order": {
+  "seeds": 1,
+  "variants": 5,
+  "paired": true,
+  "perturbation": "FP32 summation order of identical per-sequence contributions",
+  "fixed": "sequences, activations, routing, contributions, act-order, groups, windows",
+  "hessian_metric": {
+   "kind": "rel. Frobenius vs OO, median",
+   "value": "8.4e-8 to 9.3e-8 (report table)"
+  },
+  "weights": {
+   "frac_differ": {
+    "FR": [
+     6.74681230024858e-05,
+     7.20606909857856e-05
+    ],
+    "FC": [
+     7.230777933139993e-05,
+     7.617208692762587e-05
+    ]
+   },
+   "rel_l2": {
+    "FR": [
+     0.000800627903143721,
+     0.0008181973632979
+    ],
+    "FC": [
+     0.0008253498384377788,
+     0.0008584206227216174
+    ]
+   }
+  },
+  "recon_variation": "mean relative change <= 1.3e-6",
+  "ppl": {
+   "FR_sd": 0.0017755650255737018,
+   "FC_sd": 0.0016624150852699087,
+   "delta_sd": 0.002870009154129667,
+   "delta_range": [
+    0.004614467376063303,
+    0.012326026302325488
+   ],
+   "sign_changes_vs_OO": 0
+  },
+  "limitation": "one seed, 5 deterministic orders, one hardware/software stack"
+ },
+ "B_AOF": {
+  "seeds": 1,
+  "variants": 5,
+  "paired": true,
+  "perturbation": "BF16 calibration activations from alternative batch groupings; routing R_O and act-order P_O frozen",
+  "hessian_metric": {
+   "kind": "trace-normalized rel. diff vs OO, median per grouping",
+   "FR": [
+    0.003820863663418464,
+    0.003905724999099813
+   ],
+   "FC": [
+    0.0049044036621909495,
+    0.004960808186451506
+   ],
+   "note": "AOF Hessians are bitwise the AO Hessians"
+  },
+  "weights": {
+   "frac_differ": {
+    "FR": 0.16912983354896008,
+    "FC": 0.17886669910315312
+   },
+   "rel_l2": {
+    "FR": 0.04050684102569289,
+    "FC": 0.041945642162288896
+   }
+  },
+  "ppl": {
+   "FR_sd": 0.002397083312987156,
+   "FC_sd": 0.002403986783495522,
+   "delta_sd": 0.0016584286808266394,
+   "delta_range": [
+    0.005449063579179736,
+    0.009098581564151331
+   ],
+   "sign_changes_vs_OO": 0
+  },
+  "limitation": "act-order and group membership fixed jointly; one seed"
+ },
+ "C_AO": {
+  "seeds": 1,
+  "variants": 5,
+  "paired": true,
+  "perturbation": "as B, act-order and groups follow each Hessian",
+  "hessian_metric": {
+   "kind": "trace-normalized rel. diff vs OO, median per grouping",
+   "FR": [
+    0.003820863663418464,
+    0.003905724999099813
+   ],
+   "FC": [
+    0.0049044036621909495,
+    0.004960808186451506
+   ]
+  },
+  "weights": {
+   "frac_differ": {
+    "FR": 0.39159070978261,
+    "FC": 0.4024183807951031
+   },
+   "rel_l2": {
+    "FR": 0.06935757911018045,
+    "FC": 0.0711187449570381
+   }
+  },
+  "ppl": {
+   "FR_sd": 0.004020076907592,
+   "FC_sd": 0.0017489485142761548,
+   "delta_sd": 0.005612044321138917,
+   "delta_range": [
+    -0.0027305776696664452,
+    0.01201968812486065
+   ],
+   "sign_changes_vs_OO": 1
+  },
+  "limitation": "one seed"
+ },
+ "D_natural_grouping_seed0": {
+  "seeds": 1,
+  "variants": 5,
+  "paired": true,
+  "perturbation": "batch grouping: activations, routing, Hessians, act-order, weights",
+  "hessian_metric": {
+   "kind": "trace-normalized rel. diff vs OO, median per grouping",
+   "FR": [
+    0.013744516716487094,
+    0.014698884210206126
+   ],
+   "FC": [
+    0.01429289722480264,
+    0.015815092468227664
+   ]
+  },
+  "weights": {
+   "frac_differ": {
+    "FR": 0.5405686582700171,
+    "FC": 0.5515607115234991
+   },
+   "rel_l2": {
+    "FR": 0.08888774695960341,
+    "FC": 0.09046728796601766
+   }
+  },
+  "ppl": {
+   "FR_sd": 0.00442203265555388,
+   "FC_sd": 0.004291666505205487,
+   "delta_sd": 0.006364178643728711,
+   "delta_range": [
+    -0.008394269300051604,
+    0.007601468743024142
+   ],
+   "sign_changes_vs_OO": 3
+  },
+  "limitation": "one seed; ORIGINAL extraction is a different policy and is not one of the 5 draws"
+ },
+ "D3_natural_grouping_3seeds": {
+  "seeds": 3,
+  "variants": "5 per seed (nested)",
+  "paired": true,
+  "perturbation": "as D",
+  "ppl": {
+   "pooled_within_seed_delta_sd": 0.006871891170852839
+  },
+  "limitation": "3 allocation seeds; groupings nested, not crossed"
+ },
+ "statistic_types": "FR_sd / FC_sd = SD (ddof 1) of one strategy's PPL over the variants; delta_sd = SD of the paired FC-FR difference. Different interventions; SDs are NOT additive and are not decomposed.",
+ "canonical_reference": {
+  "delta_fp64": 0.007129355135376159,
+  "delta_OO": 0.010056899696323285
+ }
+}

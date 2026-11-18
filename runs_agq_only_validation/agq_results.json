@@ -1,0 +1,49 @@
+{
+ "configs": {
+  "FR_s0": {
+   "ppl": 9.275563433730778,
+   "recon": 0.004682939944812207,
+   "rtn_fallbacks": 0,
+   "n_quantized_experts": 240,
+   "n_projections": 720,
+   "installed_weights_sha256": "5b12f96a5249c9fab2fe37ccd4c5ace80c08acc72895630f82e80c474d7ab209",
+   "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0",
+   "valid": true,
+   "quantize_total_s": 347.37718772888184,
+   "hessian_s": 37.989094972610474,
+   "gptq_s": 250.1004798412323,
+   "peak_gpu_gb": 8.417806848,
+   "peak_cpu_gb": 42.415752
+  },
+  "FR_s1": {
+   "ppl": 9.257613690315763,
+   "recon": 0.004702987057006975,
+   "rtn_fallbacks": 0,
+   "n_quantized_experts": 240,
+   "n_projections": 720,
+   "installed_weights_sha256": "829cc56c14e2a68fd0c3c524a778f6791d1b21ae2e2f1ac80f2b36a3af2f2e1c",
+   "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s1",
+   "valid": true,
+   "quantize_total_s": 1194.7780170440674,
+   "hessian_s": 88.81265807151794,
+   "gptq_s": 642.9693827629089,
+   "peak_gpu_gb": 8.417806336,
+   "peak_cpu_gb": 43.30062
+  },
+  "FR_s2": {
+   "ppl": 9.269169296983371,
+   "recon": 0.00468796123375574,
+   "rtn_fallbacks": 0,
+   "n_quantized_experts": 240,
+   "n_projections": 720,
+   "installed_weights_sha256": "78f17cfca9c7f8d5f8cdcb4dc89c6954c64048e394962670255f2690f3ca9030",
+   "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s2",
+   "valid": true,
+   "quantize_total_s": 679.6080274581909,
+   "hessian_s": 89.42320036888123,
+   "gptq_s": 353.27376675605774,
+   "peak_gpu_gb": 8.417806336,
+   "peak_cpu_gb": 43.223948
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "verdict": "ROUTING-AMPLIFICATION-SUPPORTED",
+ "conclusion": "A",
+ "R_SD": 0.35940834395171106,
+ "sd_delta_natural": 0.002870009154129667,
+ "sd_delta_frozen": 0.0010315052372119947,
+ "rules": {
+  "ROUTING-INTERVENTION-BLOCKED": "any mandatory parity / correctness check fails",
+  "ROUTING-NO-FLIPS": "zero top-4 SET disagreements vs BF16 across all 10 primary configs and all 24 layers (natural routing) -> stop before frozen evaluation",
+  "ROUTING-AMPLIFICATION-SUPPORTED": "R_SD <= 0.5",
+  "ROUTING-PARTIAL-CONTRIBUTION": "0.5 < R_SD < 0.9",
+  "ROUTING-NO-SUBSTANTIAL-REDUCTION": "0.9 <= R_SD <= 1.1",
+  "ROUTING-VARIABILITY-INCREASED": "R_SD > 1.1",
+  "note": "practical screening criteria on 5 deterministic orders of one seed, not hypothesis tests"
+ },
+ "protocol_sha256": "79849e02531c1cb5c30163b8d9cf7b9c087a80f125abf575c7f8e4b4757e3329",
+ "parity_ok": true,
+ "all_correctness_pass": true
+}

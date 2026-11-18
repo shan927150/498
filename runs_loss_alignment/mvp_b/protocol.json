@@ -1,0 +1,97 @@
+{
+ "purpose": "diagnostic only: fixed-input / fixed-routing local sensitivity of the effective GPTQ expert weights; no allocator, no tuning, nothing selected on these windows",
+ "windows": {
+  "source": "runs_partial_ppl/windows.pt (frozen PPL evaluation windows)",
+  "all_windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "selected_protocol_positions": [
+   0,
+   1,
+   24,
+   27,
+   31,
+   32,
+   41,
+   43,
+   45,
+   46,
+   51,
+   53,
+   55,
+   64,
+   66,
+   71,
+   72,
+   73,
+   80,
+   81,
+   82,
+   88,
+   97,
+   99,
+   108,
+   109,
+   114,
+   116,
+   119,
+   121,
+   122,
+   126
+  ],
+  "selection_rule": "sorted(random.Random(20261116).sample(range(128), 32))",
+  "selected_windows_sha256": "e81f315389f25a1532da5313e748f0de6074a8463ae1be2408d124c63c546b13",
+  "tokens_per_window": 512,
+  "tokens_per_layer": 16384
+ },
+ "model": {
+  "name": "Qwen/Qwen1.5-MoE-A2.7B",
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "n_experts": 60,
+  "top_k": 4,
+  "norm_topk_prob": false,
+  "reference": "original BF16 weights"
+ },
+ "strategies": {
+  "FR": {
+   "allocation_seed": 0,
+   "weights_dir": "/home/kaixuan6/moe_cache_batch_sensitivity/weights/FR_ORIGINAL",
+   "expected_installed_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+   "provenance": "saved by diagnostics/batch_sensitivity.py (FR_ORIGINAL), verified there against runs_partial_ppl"
+  },
+  "FC": {
+   "allocation_seed": 0,
+   "weights_dir": "/home/kaixuan6/moe_cache_batch_sensitivity/weights/FC_ORIGINAL",
+   "expected_installed_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4",
+   "provenance": "saved by diagnostics/batch_sensitivity.py (FC_ORIGINAL), verified there against runs_partial_ppl"
+  },
+  "SC": {
+   "allocation_seed": 0,
+   "weights_dir": "/home/kaixuan6/moe_cache_loss_alignment/weights/SC_s0",
+   "expected_installed_sha256": "5d8623db0af2438539af39b756176005b1606bf47248cc555fb4c58f2c8849b0",
+   "provenance": "regenerated here (stage scweights) with the unchanged E3 solver from the frozen SC s0 selection"
+  }
+ },
+ "sc_selection": {
+  "file": "runs_shared_covariance_e3/selections/seed0.json",
+  "ids_hash": "f9aa555b0e341562"
+ },
+ "capture": "BF16 full model, sequential forward of all 128 protocol windows in the PPL evaluator's batches of 8 (identical activations to the PPL run); forward hooks on the 4 Qwen2MoeSparseMoeBlocks; data kept for the selected windows only",
+ "precision": {
+  "primary": "expert MLPs recomputed in FP32 from BF16 inputs and BF16-stored weights (original / effective GPTQ); router weights = the BF16-cast values the model multiplies by; all squared-error sums accumulated in FP64",
+  "secondary": "the same metrics with BF16-native expert compute (BF16 matmuls, as the module runs)"
+ },
+ "metrics": {
+  "B0": "per expert: sum_t ||f_Q(x_t) - f_BF16(x_t)||^2 / sum_t ||f_BF16(x_t)||^2 over its routed eval tokens; reported as the equal-expert mean over 240 experts (and pooled)",
+  "B1": "sum_{L,t} sum_{e in top4} w^2 ||delta_e||^2 / sum_{L,t} ||m_BF16||^2  (uncancelled router-weighted energy)",
+  "B2": "sum_{L,t} ||sum_e w delta_e||^2 / sum_{L,t} ||m_BF16||^2, m_BF16 = sum_e w f_BF16_e  (PRIMARY; routed experts only, shared expert excluded)",
+  "B3": "cancellation ratio = sum ||sum_e w delta_e||^2 / sum sum_e w^2 ||delta_e||^2  (= B2 / B1)",
+  "P_seq": "E3 projection objective on the SAME WikiText tokens: per expert, mean over windows of the relative gate/up/down projection error (down input = reference h); equal-expert mean (bridges R0 and B0)"
+ },
+ "analysis": "relative within-metric change vs FR; paired window bootstrap (10,000) of B2 / B1 / pooled B0 differences (descriptive: 32 windows, one allocation seed)",
+ "min_tokens_flag": 32,
+ "created": "2026-11-16 22:10:08"
+}

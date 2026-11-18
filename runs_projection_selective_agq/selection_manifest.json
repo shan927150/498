@@ -1,0 +1,67 @@
+{
+ "layers": {
+  "8": {
+   "layer": 8,
+   "validation_E_layer": {
+    "GPTQ": 0.007115236692270128,
+    "GU_AGQ": 0.007095938756486313,
+    "DOWN_AGQ": 0.0071379027150895655,
+    "FULL_AGQ": 0.007116386972828147
+   },
+   "selected": "GU_AGQ",
+   "rel_margin_vs_best_uniform": -0.0027121987108003993,
+   "rel_margin_runner_up": 0.0027195747378984526,
+   "selected_config_manifest_sha256": "b32b43fd5bed2839b4cdd7c40567d7395b8a32bfbf990c41cda9cccb2f117b40",
+   "source_map": {
+    "gate_proj": 1,
+    "up_proj": 1,
+    "down_proj": 0
+   }
+  },
+  "16": {
+   "layer": 16,
+   "validation_E_layer": {
+    "GPTQ": 0.007145263332788199,
+    "GU_AGQ": 0.006930765850814545,
+    "DOWN_AGQ": 0.007121990003773428,
+    "FULL_AGQ": 0.006926336838070509
+   },
+   "selected": "FULL_AGQ",
+   "rel_margin_vs_best_uniform": 0.0,
+   "rel_margin_runner_up": 0.0006394451854683267,
+   "selected_config_manifest_sha256": "f788d6fa74dac0e43e2573e357bf845789c3e166b5ca495529f99c8977e2b713",
+   "source_map": {
+    "gate_proj": 1,
+    "up_proj": 1,
+    "down_proj": 1
+   }
+  }
+ },
+ "rule": "per layer z* = argmin over {GPTQ, GU_AGQ, DOWN_AGQ, FULL_AGQ} of tuning-split E_layer; exact ties -> GPTQ > FULL_AGQ > GU_AGQ > DOWN_AGQ",
+ "tie_order": [
+  "GPTQ",
+  "FULL_AGQ",
+  "GU_AGQ",
+  "DOWN_AGQ"
+ ],
+ "split": "tune",
+ "validation_results_sha256": "d36fed9cd6c9ed20968bbad06adf965090e7bee3f361aff902f332c7c6a64bff",
+ "validation_cache_files_sha256": {
+  "8": "193fb667d0d2404b8e87455be116881a79c68f50bb4be2a1eade90ae2585de13",
+  "16": "8e7b4550deba31d988f858afce709ed48e625ad9dc04c9dc9ac3a2698a00cbec"
+ },
+ "candidate_file_sha256": {
+  "GPTQ": {
+   "8": "0e2f6f0eff1c40e6fbffa48a9156f69961c89442f07cf157c7dfb21764c09e46",
+   "16": "b7344106c2cffdc5f4235f6de1142e1e7d932c72cff568a62365b93e936f0519"
+  },
+  "AGQ": {
+   "8": "e2881ac657b5bfa2d55b3a9d692c09edbc1e552ecea8b530a4e4bc3bdcbf45c5",
+   "16": "ad61cda0d357392aa411f6fe0d383c626c6f62e6fc98ecafacc299a4134b173b"
+  }
+ },
+ "configuration_manifest_sha256": "4b4d24723397aad723643382482a0c914c55ee1bded6447c27f16a893bfa0e6a",
+ "protocol_sha256": "79a7a2fce9836f703e89cf369c19ee92dbbb965cfb71e0da2bcdaa5d5fc1be54",
+ "frozen_at": "2026-11-13 02:58:21",
+ "test_results_exist_at_freeze": false
+}

@@ -1,0 +1,361 @@
+{
+ "dense": {
+  "G20261111": {
+   "files_match_inventory": {
+    "1": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "9": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "19": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "27": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    }
+   },
+   "all_ok": true,
+   "formats": {
+    "weights": "{proj: bf16 [out, in]}",
+    "codes": "{proj: {q uint8 [out,in] original col order, group int32 [in], perm int32 [in], scale/zero fp32 [n_groups, out]}}",
+    "hessians": "{gu fp32 [1536,1536], down fp32 [8960,8960], tokens}"
+   },
+   "note": "no FP32 dequantized weights saved; scale*(q-zero) was verified bitwise against the solver output at run time (runs_dense_grouping_scope results per_layer codes_reproduce_solver_bitwise)"
+  },
+  "G20261112": {
+   "files_match_inventory": {
+    "1": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "9": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "19": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "27": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    }
+   },
+   "all_ok": true,
+   "formats": {
+    "weights": "{proj: bf16 [out, in]}",
+    "codes": "{proj: {q uint8 [out,in] original col order, group int32 [in], perm int32 [in], scale/zero fp32 [n_groups, out]}}",
+    "hessians": "{gu fp32 [1536,1536], down fp32 [8960,8960], tokens}"
+   },
+   "note": "no FP32 dequantized weights saved; scale*(q-zero) was verified bitwise against the solver output at run time (runs_dense_grouping_scope results per_layer codes_reproduce_solver_bitwise)"
+  },
+  "G20261113": {
+   "files_match_inventory": {
+    "1": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "9": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "19": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "27": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    }
+   },
+   "all_ok": true,
+   "formats": {
+    "weights": "{proj: bf16 [out, in]}",
+    "codes": "{proj: {q uint8 [out,in] original col order, group int32 [in], perm int32 [in], scale/zero fp32 [n_groups, out]}}",
+    "hessians": "{gu fp32 [1536,1536], down fp32 [8960,8960], tokens}"
+   },
+   "note": "no FP32 dequantized weights saved; scale*(q-zero) was verified bitwise against the solver output at run time (runs_dense_grouping_scope results per_layer codes_reproduce_solver_bitwise)"
+  },
+  "G20261114": {
+   "files_match_inventory": {
+    "1": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "9": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "19": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "27": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    }
+   },
+   "all_ok": true,
+   "formats": {
+    "weights": "{proj: bf16 [out, in]}",
+    "codes": "{proj: {q uint8 [out,in] original col order, group int32 [in], perm int32 [in], scale/zero fp32 [n_groups, out]}}",
+    "hessians": "{gu fp32 [1536,1536], down fp32 [8960,8960], tokens}"
+   },
+   "note": "no FP32 dequantized weights saved; scale*(q-zero) was verified bitwise against the solver output at run time (runs_dense_grouping_scope results per_layer codes_reproduce_solver_bitwise)"
+  },
+  "G20261115": {
+   "files_match_inventory": {
+    "1": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "9": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "19": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "27": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    }
+   },
+   "all_ok": true,
+   "formats": {
+    "weights": "{proj: bf16 [out, in]}",
+    "codes": "{proj: {q uint8 [out,in] original col order, group int32 [in], perm int32 [in], scale/zero fp32 [n_groups, out]}}",
+    "hessians": "{gu fp32 [1536,1536], down fp32 [8960,8960], tokens}"
+   },
+   "note": "no FP32 dequantized weights saved; scale*(q-zero) was verified bitwise against the solver output at run time (runs_dense_grouping_scope results per_layer codes_reproduce_solver_bitwise)"
+  },
+  "ORIGINAL": {
+   "files_match_inventory": {
+    "1": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "9": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "19": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    },
+    "27": {
+     "weights": true,
+     "codes": true,
+     "hessians": true
+    }
+   },
+   "all_ok": true,
+   "formats": {
+    "weights": "{proj: bf16 [out, in]}",
+    "codes": "{proj: {q uint8 [out,in] original col order, group int32 [in], perm int32 [in], scale/zero fp32 [n_groups, out]}}",
+    "hessians": "{gu fp32 [1536,1536], down fp32 [8960,8960], tokens}"
+   },
+   "note": "no FP32 dequantized weights saved; scale*(q-zero) was verified bitwise against the solver output at run time (runs_dense_grouping_scope results per_layer codes_reproduce_solver_bitwise)"
+  }
+ },
+ "moe": {
+  "G20261111": {
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261111",
+   "weight_files_match_results": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "calibration_cache": "/home/kaixuan6/moe_cache_multigroup_robustness/G20261111",
+   "cache_files_match_manifest": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "installed_weights_sha256": "cfb345d546b2da2389fcfc671b94c4d91ace21daf78e9aaeb3e5e059df0e8bc4",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "valid": true,
+   "rtn_fallbacks": 0
+  },
+  "G20261112": {
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261112",
+   "weight_files_match_results": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "calibration_cache": "/home/kaixuan6/moe_cache_multigroup_robustness/G20261112",
+   "cache_files_match_manifest": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "installed_weights_sha256": "5ff5ca36817886aa5eb10b3c9b8f0b9d3447423bd3297f79cec303ac4a3c0a43",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "valid": true,
+   "rtn_fallbacks": 0
+  },
+  "G20261113": {
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261113",
+   "weight_files_match_results": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "calibration_cache": "/home/kaixuan6/moe_cache_multigroup_robustness/G20261113",
+   "cache_files_match_manifest": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "installed_weights_sha256": "63723820c2282a78b2bbeea4a3b573a618f223a37d47208dac50ff8681a3f9f0",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "valid": true,
+   "rtn_fallbacks": 0
+  },
+  "G20261114": {
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261114",
+   "weight_files_match_results": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "calibration_cache": "/home/kaixuan6/moe_cache_multigroup_robustness/G20261114",
+   "cache_files_match_manifest": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "installed_weights_sha256": "0fc4fe0a4c48b3d73faa39b6d60b2084731762885fb8b11ca0f12d1019c7362f",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "valid": true,
+   "rtn_fallbacks": 0
+  },
+  "G20261115": {
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261115",
+   "weight_files_match_results": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "calibration_cache": "/home/kaixuan6/moe_cache_multigroup_robustness/G20261115",
+   "cache_files_match_manifest": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "installed_weights_sha256": "5ef00c3cacc586cc091a842761ba9984b378a4d605beca00499bb4eb1dea6e86",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "valid": true,
+   "rtn_fallbacks": 0
+  },
+  "ORIGINAL": {
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL",
+   "weight_files_match_results": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "calibration_cache": "/home/kaixuan6/moe_cache",
+   "cache_files_match_manifest": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   },
+   "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "valid": true,
+   "rtn_fallbacks": 0
+  }
+ },
+ "dense_null_G20261115_equals_ORIGINAL": {
+  "1": true,
+  "9": true,
+  "19": true,
+  "27": true
+ },
+ "moe_saved": {
+  "bf16_weights": true,
+  "integer_codes": false,
+  "scales_zeros": false,
+  "act_order": false,
+  "hessians": false,
+  "note": "only BF16 installed weights were saved historically; codes/grids/perms/Hessians must be replayed from the preserved calibration caches with the unchanged solver"
+ },
+ "moe_selection": {
+  "FR_ids_hash": "ec355fb8d866e4ff",
+  "K": 4,
+  "n": 128
+ }
+}

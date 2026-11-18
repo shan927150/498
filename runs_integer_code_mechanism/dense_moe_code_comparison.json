@@ -1,0 +1,97 @@
+{
+ "rows": {
+  "model": [
+   "Qwen2.5-1.5B (12 MLP tensors, all elements)",
+   "Qwen1.5-MoE-A2.7B (20 / 240 routed experts, 60 tensors)"
+  ],
+  "comparisons": [
+   "4 single-row perturbations vs ORIGINAL",
+   "5 groupings vs ORIGINAL"
+  ],
+  "bf16_changed": [
+   0.0693064704773918,
+   0.5283336281053947
+  ],
+  "integer_code_changed": [
+   0.011805917346288287,
+   0.210839211435029
+  ],
+  "zero_relative_level_changed": [
+   0.006231769682869079,
+   0.0917912246241714
+  ],
+  "same_code_given_bf16_changed": [
+   0.8679667597805996,
+   0.6563578478012081
+  ],
+  "same_bf16_given_code_changed": [
+   0.22490073436121422,
+   0.13888074326685776
+  ],
+  "code_changed_on_identical_grid": [
+   6.280626569475446e-06,
+   0.0002699927127722538
+  ],
+  "scale_changed_elements": [
+   0.9265519172426254,
+   0.9308571023652048
+  ],
+  "zero_changed_elements": [
+   0.007232015095059834,
+   0.18332800662878787
+  ],
+  "group_assignment_changed_elements": [
+   0.0015260726686507937,
+   0.08424064867424243
+  ],
+  "actorder_position_changed_columns": [
+   0.13281792541965842,
+   0.8676408625642459
+  ],
+  "bf16_diff_explained_by_grid_a_on_b": [
+   0.8679667597805996,
+   0.6563578478012081
+  ],
+  "rel_frobenius_sampled": [
+   null,
+   0.08787293779960696
+  ],
+  "ge8ulp_share_sampled": [
+   null,
+   0.37404320828198223
+  ],
+  "historical_whole_model_bf16_changed": [
+   0.055445176381913444,
+   0.5405686582700171
+  ],
+  "historical_hessian_rel_fro_tn": [
+   4.658968009827908e-05,
+   "AO 0.0039 / AA 0.0141 (16 diagnostic Hessians)"
+  ],
+  "historical_sd_ppl_5_groupings": [
+   0.005030426186581264,
+   0.00442203265555388
+  ]
+ },
+ "columns": [
+  "dense",
+  "MoE Family D (sampled experts)"
+ ],
+ "R_q": 17.858774142723917,
+ "R_q_by_projection": {
+  "gate_proj": 51.95692552921276,
+  "up_proj": 51.57032675355337,
+  "down_proj": 5.0643529255366975
+ },
+ "R_bf16": 7.623150110893909,
+ "outcome": "B-MUCH-LARGER-MOE-CODE-DISAGREEMENT",
+ "rule": {
+  "metric": "R_q = MoE element-weighted code-flip rate / dense element-weighted code-flip rate, matched 'grouping vs ORIGINAL' comparisons (dense 4 non-null, MoE 5), overall and per projection",
+  "rule": {
+   "A-SIMILAR-CODE-DISAGREEMENT": "R_q <= 3 overall and in every projection",
+   "B-MUCH-LARGER-MOE-CODE-DISAGREEMENT": "R_q > 3 overall and in every projection",
+   "C-PROJECTION-DEPENDENT": "otherwise"
+  },
+  "caveat": "sampled 20/240 MoE experts; Hessian perturbation magnitudes and tokens per dimension differ"
+ }
+}

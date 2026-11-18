@@ -1,0 +1,59 @@
+{
+ "incremental_mvp": {
+  "candidate_generation_s": 0.0,
+  "candidate_generation_note": "historical q=0 / q=1 weights reused (bitwise verified); no quantization run",
+  "regression_s": 138.74407148361206,
+  "validation_scoring_s": 64.96565985679626,
+  "validation_scoring_lean_s": 30.840561151504517,
+  "validation_native_check_s": 11.470735788345337,
+  "expert_selection_s": 0.11037278175354004,
+  "test_evaluation_s": {
+   "confirm": 255.54993891716003,
+   "oldtest": 82.93703532218933
+  },
+  "peak_gpu_gb": 9.932228096,
+  "peak_cpu_gb": 8.78056
+ },
+ "historical_quantization_4_layers": {
+  "GPTQ_FR_s0": {
+   "quantize_total_s": 350.5218553543091,
+   "hessian_s": 29.178961753845215,
+   "gptq_s": 258.99179315567017,
+   "other_s": 62.3511004447937,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 43.060312
+  },
+  "AGQ_FR_s0": {
+   "quantize_total_s": 347.37718772888184,
+   "hessian_s": 37.989094972610474,
+   "gptq_s": 250.1004798412323,
+   "other_s": 59.28761291503906,
+   "peak_gpu_gb": 8.417806848,
+   "peak_cpu_gb": 42.415752
+  },
+  "source": "runs_agq_only_validation/cost_results.json"
+ },
+ "estimated_fresh_deployment_2_layers": {
+  "method": "historical 4-layer Hessian + GPTQ seconds / 2 (L8, L16 only; layers have equal shapes); the 'other' term (E3 scoring / weight IO / PPL checks) is excluded",
+  "uniform_GPTQ_s": 144.0853774547577,
+  "uniform_AGQ_s": 144.0447874069214,
+  "layerwise_selection_s": 318.9707260131836,
+  "expert_wise_hybrid_s": 318.9707260131836,
+  "hybrid_vs_single_run_ratio": 2.2137619489759763,
+  "note": "the layer-wise baseline needs the same two candidates and the same tuning-split layer evaluation as the hybrid (its per-expert scores come for free from that pass), so both cost ~2x one GPTQ run + validation; a joint profiler pass could share the Hessian forward but not the GPTQ solves"
+ },
+ "storage": {
+  "final_weights_bytes_per_layer_bf16_fake_quant": {
+   "8": 1038131491,
+   "16": 1038136797
+  },
+  "final_storage_vs_uniform": "identical: one 4-bit candidate per expert, same format/group size",
+  "offline_peak_storage": "both candidates (2x) must be held until selection",
+  "selection_manifest_bytes": 50189
+ },
+ "inference": {
+  "expected_change": "none (one existing weight set per expert; same kernels/format)",
+  "measured": false,
+  "note": "no inference speed or memory measurement was made"
+ }
+}

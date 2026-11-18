@@ -1,0 +1,26 @@
+{
+ "16": {
+  "percdamp": 3.0,
+  "tuned_mean_J": 0.016447705781963504,
+  "pool_mean_J": 0.017169309017091405,
+  "pool_vs_tuned_rel": -0.04387257680151402,
+  "ci95": [
+   -0.04690015651923347,
+   -0.04054302054622914
+  ],
+  "tuned_vs_std_rel": 0.04805064918740587,
+  "source": "runs_diag/damping_threshold_report.md (best percdamp per prefix, tuning split, seeds 0/1); applied to all three projections; not re-searched"
+ },
+ "32": {
+  "percdamp": 2.0,
+  "tuned_mean_J": 0.016019269682275756,
+  "pool_mean_J": 0.01638623609265837,
+  "pool_vs_tuned_rel": -0.02290781150832588,
+  "ci95": [
+   -0.025188767589475726,
+   -0.02041929171017923
+  ],
+  "tuned_vs_std_rel": 0.027300787130528636,
+  "source": "runs_diag/damping_threshold_report.md (best percdamp per prefix, tuning split, seeds 0/1); applied to all three projections; not re-searched"
+ }
+}

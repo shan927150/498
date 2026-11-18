@@ -1,0 +1,130 @@
+{
+ "protocol_sha256": "d3aa8a467296887fa0b1697d49409805e5580136d0a18bcf967c36f21106d9bb",
+ "files": {
+  "L1": {
+   "path": "/home/kaixuan6/moe_cache_loss_alignment/capture_L1.pt",
+   "sha256": "b80897d4743d9ed19824a176754f432be5f2638f69e692c06d3ea19c371c5f16",
+   "tensors": {
+    "X": "a75c22c7e9f9de0bbe074c620ef3f577d5a62280f710a303ccbfd9908a09ee7b",
+    "idx": "2911cf0b71df23d01fc72c47684ec434a0843571cf726cf589be5809468d8878",
+    "w32": "ac572ed7644cf6f8eebe63d2f8831018a9afb5e82d33c46753c6499033a67726",
+    "wa": "f8b271f4d6c563ffb51eed573b412d0fa8b8712538e5be711eabaa4743c26079",
+    "routed": "87a1503f4a149671ee3920da8d9ac84992ee3c231aca122ba5bf9ad2e4517d63",
+    "window_positions": "a56ed37a570a3d5d4cb46b80c91261532173ea954e5749d549a722fba2f025a0",
+    "seq_id": "a9346126e6a2e1213f780e7110160810c46bd9acb661aba12e84d8cf104ef283"
+   }
+  },
+  "L8": {
+   "path": "/home/kaixuan6/moe_cache_loss_alignment/capture_L8.pt",
+   "sha256": "016e65dadc72a6af63bb9fc2fce0623817af953154cb7bddc960a42969d39b60",
+   "tensors": {
+    "X": "7f04a8662d65b46755710d626fabae6430502f8bf7f7d0a9ff325cbeeb64ff8c",
+    "idx": "e6ce9849c3cfd5d1e35c51c89948aa7a66e4b724882265d3e364c9c6f984f124",
+    "w32": "1012b291037d2d34b92572433cb53af357bed8fb7475b4929ce2e719e397bfa7",
+    "wa": "8af3f398d99d49bcc952ad3eb8a4f06160b9698f5b9771134ac54e7e0a10e604",
+    "routed": "73149cf4e8a9592431b3d68f0cd7f3d996d61055617618a69dd5a113016730fe",
+    "window_positions": "a56ed37a570a3d5d4cb46b80c91261532173ea954e5749d549a722fba2f025a0",
+    "seq_id": "a9346126e6a2e1213f780e7110160810c46bd9acb661aba12e84d8cf104ef283"
+   }
+  },
+  "L16": {
+   "path": "/home/kaixuan6/moe_cache_loss_alignment/capture_L16.pt",
+   "sha256": "45357f76b5145a49dd72e602362a59586d3c08dcc5c630132b57585d48fa7fa9",
+   "tensors": {
+    "X": "53b67cec0f25325ca0835447beee490a785f53533374bcb7abd44d6ebcdc4fd3",
+    "idx": "60240851fa26df53ad47d3a3be8506d7bebd724cc276a0483e0fde1766333958",
+    "w32": "4fda1dc38e155d775c5d8ba845a84a5e094bedad917fc8f02ca0846979db4496",
+    "wa": "cd01bc3131d33dd25085bd3f6557399c7e6c06a02bd77de628b30d3b5ceb2539",
+    "routed": "899ef9f29a8d17bf1506404deb5f279026e1b8cb34eef0e9f7c4b9ab005b448f",
+    "window_positions": "a56ed37a570a3d5d4cb46b80c91261532173ea954e5749d549a722fba2f025a0",
+    "seq_id": "a9346126e6a2e1213f780e7110160810c46bd9acb661aba12e84d8cf104ef283"
+   }
+  },
+  "L23": {
+   "path": "/home/kaixuan6/moe_cache_loss_alignment/capture_L23.pt",
+   "sha256": "1f67ff3031ef1ff62b74a81e5f341e55197a8c4b613630765f75300e50e8e686",
+   "tensors": {
+    "X": "8e2640bbc736fb30a4294eb1d399600a4de6c7607db3701ad6e50bf8f9edea95",
+    "idx": "3d8bf5fbe63e2cce3ce6796043e7e4d6d7a235a2666d43dfc29ba7665c3e036f",
+    "w32": "701cd704047875bb45bd77547ea2c03b336ff6baa9d06cfa71edba81b4ab0b7f",
+    "wa": "c75e075147941fefbf9eb1e0a0e4535b2c4f968236b61b8d70e13cb8f8758f90",
+    "routed": "1edbb09d9698ed038d6bda3788c7ef69a8758e6381ef4e44b990ee646b5a52ec",
+    "window_positions": "a56ed37a570a3d5d4cb46b80c91261532173ea954e5749d549a722fba2f025a0",
+    "seq_id": "a9346126e6a2e1213f780e7110160810c46bd9acb661aba12e84d8cf104ef283"
+   }
+  }
+ },
+ "checks": {
+  "L1": {
+   "router_logits_bitwise": true,
+   "module_output_bitwise": true,
+   "batches_checked": 13,
+   "idx_equal_stored_reference": true,
+   "w32_equal_stored_reference": true,
+   "fp32_vs_bf16_expert_rel_max": 0.003966226059766408,
+   "weights_sum_le_1": true,
+   "slot_desc": true,
+   "ids_in_range": true,
+   "no_repeat_ids": true,
+   "finite": true,
+   "tokens": 16384
+  },
+  "L8": {
+   "router_logits_bitwise": true,
+   "module_output_bitwise": true,
+   "batches_checked": 13,
+   "idx_equal_stored_reference": true,
+   "w32_equal_stored_reference": true,
+   "fp32_vs_bf16_expert_rel_max": 0.003786341919118135,
+   "weights_sum_le_1": true,
+   "slot_desc": true,
+   "ids_in_range": true,
+   "no_repeat_ids": true,
+   "finite": true,
+   "tokens": 16384
+  },
+  "L16": {
+   "router_logits_bitwise": true,
+   "module_output_bitwise": true,
+   "batches_checked": 13,
+   "idx_equal_stored_reference": true,
+   "w32_equal_stored_reference": true,
+   "fp32_vs_bf16_expert_rel_max": 0.0037108923677218004,
+   "weights_sum_le_1": true,
+   "slot_desc": true,
+   "ids_in_range": true,
+   "no_repeat_ids": true,
+   "finite": true,
+   "tokens": 16384
+  },
+  "L23": {
+   "router_logits_bitwise": true,
+   "module_output_bitwise": true,
+   "batches_checked": 13,
+   "idx_equal_stored_reference": true,
+   "w32_equal_stored_reference": true,
+   "fp32_vs_bf16_expert_rel_max": 0.003547968531787033,
+   "weights_sum_le_1": true,
+   "slot_desc": true,
+   "ids_in_range": true,
+   "no_repeat_ids": true,
+   "finite": true,
+   "tokens": 16384
+  }
+ },
+ "capture_s": 70.17711472511292,
+ "model_load_s": 16.83306884765625,
+ "peak_gpu_gb": 3.069331456,
+ "peak_cpu_gb": 32.122016,
+ "env": {
+  "python": "3.13.16",
+  "torch": "2.11.0+cu128",
+  "transformers": "4.51.3",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A100-SXM4-80GB MIG 2g.20gb",
+  "host": "jupyter-kaixuan6",
+  "omp_threads": "8",
+  "tf32_matmul": false
+ },
+ "ok": true
+}

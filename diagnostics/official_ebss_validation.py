@@ -534,7 +534,7 @@ def forward_b1(model, tokens, order, store_layers, route_layers, want_nll):
 
 
 # ================================================================ stage: baseline_regression
-def quant_config(model, name, cdir, chosen, ecache, K, tag=""):
+def quant_config(model, name, cdir, chosen, ecache, K, tag="", hessian_weighting="none", weights_root=None):
     """One configuration: quantize + install the 240 experts, integrity checks, reconstruction (E3), PPL x2."""
     from moe_calib import model_utils as MU
     from moe_calib import partial_model_quant as PQ
@@ -553,7 +553,8 @@ def quant_config(model, name, cdir, chosen, ecache, K, tag=""):
     t1 = time.time()
     g = cfg["gptq"]
     q = PQ.quantize_install(model, cdir, LAYERS, chosen, test_ids, K, g["bits"], g["group_size"], g["percdamp"],
-                            capture=EP.CHECK_EXPERTS, eval_cache_dir=ecache)
+                            capture=EP.CHECK_EXPERTS, eval_cache_dir=ecache,
+                            **({} if hessian_weighting == "none" else dict(hessian_weighting=hessian_weighting)))
     t_q = time.time() - t1
     checks = []
     for L, e in EP.CHECK_EXPERTS:
@@ -570,7 +571,7 @@ def quant_config(model, name, cdir, chosen, ecache, K, tag=""):
     untouched_ok = u1 == u0
     routers_ok = all(u1[n] == u0[n] for n in router_names)
     dig = PQ.installed_digest(model, LAYERS)
-    wd = os.path.join(ECACHE, "weights", name + tag)
+    wd = os.path.join(weights_root or os.path.join(ECACHE, "weights"), name + tag)
     os.makedirs(wd, exist_ok=True)
     files = {}
     for L in LAYERS:

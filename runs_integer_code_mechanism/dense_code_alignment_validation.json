@@ -1,0 +1,590 @@
+{
+ "per_tensor": {
+  "G20261111|L1|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L1|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L1|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L9|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L9|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L9|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L19|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L19|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L19|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L27|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L27|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261111|L27|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L1|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L1|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L1|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L9|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L9|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L9|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L19|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L19|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L19|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L27|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L27|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261112|L27|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L1|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L1|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L1|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L9|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L9|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L9|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L19|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L19|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L19|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L27|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L27|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261113|L27|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L1|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L1|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L1|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L9|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L9|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L9|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L19|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L19|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L19|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L27|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L27|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261114|L27|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L1|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L1|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L1|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L9|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L9|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L9|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L19|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L19|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L19|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L27|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L27|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "G20261115|L27|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L1|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L1|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L1|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L9|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L9|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L9|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L19|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L19|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L19|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L27|gate_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L27|up_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  },
+  "ORIGINAL|L27|down_proj": {
+   "perm_is_permutation": true,
+   "group_equals_position_div_gs": true,
+   "n_groups_matches": true,
+   "codes_in_range": true,
+   "bf16_reconstruction_bitwise": true,
+   "fp32_finite": true
+  }
+ },
+ "all_pass": true,
+ "fp32_solver_parity_at_run_time": {
+  "G20261111": true,
+  "G20261112": true,
+  "G20261113": true,
+  "G20261114": true,
+  "G20261115": true,
+  "ORIGINAL": true
+ },
+ "note": "FP32 parity: scale*(q-zero) == solver W_q bitwise was verified when the codes were produced (FP32 W_q not saved); here: valid permutation, group == position//128, codes in [0,15], and bitwise BF16 reconstruction"
+}

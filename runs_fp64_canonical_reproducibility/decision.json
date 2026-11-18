@@ -1,0 +1,11 @@
+{
+ "canonical_verdict": "CANONICAL-VALIDATED",
+ "execution_verdict": "EXECUTION-VARIABILITY-MATERIAL",
+ "execution_inputs": {
+  "sign_changes_within_seed": true,
+  "order_null_range_over_abs_delta_OO": 0.7667928645128542,
+  "n_seeds_with_sign_change": 3
+ },
+ "fp64_not_used_for_execution_verdict": true,
+ "created": "2026-11-13 08:08:04"
+}

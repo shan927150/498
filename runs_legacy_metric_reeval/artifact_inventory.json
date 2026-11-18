@@ -1,0 +1,770 @@
+{
+ "created": "2026-11-12 04:12:49",
+ "methods": {
+  "FR_s0": {
+   "group": "B128",
+   "strategy": "FR",
+   "seed": 0,
+   "result": "runs_ebss_official_validation/results/FR_s0.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "f67effb8673a950b235383ab6a83f46b3313cb6e685c09d9bd4b5985680c0dcd",
+    "8": "0e2f6f0eff1c40e6fbffa48a9156f69961c89442f07cf157c7dfb21764c09e46",
+    "16": "b7344106c2cffdc5f4235f6de1142e1e7d932c72cff568a62365b93e936f0519",
+    "23": "8847521e9a7e97434f4c0418fda53b8d3b48c272432f080aa5588ad6a3d42f42"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.0046094692935882,
+   "historical_ppl": 9.269003962169808,
+   "valid": true,
+   "cache_rows_sha": "6884517b6063a9bf",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_random_B128_b4_d1_s0_warm-71f4c159.json",
+   "calibration_ids_hash": "ec355fb8d866e4ff",
+   "K": 4
+  },
+  "FR_s1": {
+   "group": "B128",
+   "strategy": "FR",
+   "seed": 1,
+   "result": "runs_ebss_official_validation/results/FR_s1.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "f4fdf8fc583d1502619fbf08ed7e8355ee35fb54b3503288bacabef59508090d",
+    "8": "2f2fd1a0e91e34f8ecef1601f44e97b0320fe1b347c4a6e2ccc135c827c4c516",
+    "16": "18e114a1d5a6c6b3671ef5544f043e9eca2ab540e3cc335e5bb3563aabad8abb",
+    "23": "0e45c54555def34f39ec0ed32b83088ecbe3d6677b8439767ea738b2ceeebc08"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "277117a9fcac690166350c1c902910e4437474ed536edbdd16a60bb2592ea6af",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.004625934030334249,
+   "historical_ppl": 9.27256733105897,
+   "valid": true,
+   "cache_rows_sha": "a8010f087f9cbd14",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_random_B128_b4_d1_s1_warm-1d2b3965.json",
+   "calibration_ids_hash": "e36d91e6b151320b",
+   "K": 4
+  },
+  "FR_s2": {
+   "group": "B128",
+   "strategy": "FR",
+   "seed": 2,
+   "result": "runs_ebss_official_validation/results/FR_s2.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "28e93aa2b7ad49dbf603216381b3bd02cc5d14eb3c5bb9942821c23401914978",
+    "8": "4cfc6bd2699c31069d0a736ae3d50e8ec9c8676fc8a3e788aa72137744bec0ce",
+    "16": "93417c533569e7fd597b2b3f382e46418a66d5ef6dee5ca98224fc604bf24e08",
+    "23": "368974294f0c0e426675d12dcf8a78d9d3a5bbba2c01949e2331f04efb486fbc"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "8f18b500e156ce6cbd26bd6dd08ce1874b5280caed58515d2b567c86e4b691e3",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.004610399983864865,
+   "historical_ppl": 9.274692816567088,
+   "valid": true,
+   "cache_rows_sha": "c3571c0ed14bf18f",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_random_B128_b4_d1_s2_warm-ba99ad01.json",
+   "calibration_ids_hash": "cf1f867af56f29d1",
+   "K": 4
+  },
+  "TR_s0": {
+   "group": "B128",
+   "strategy": "TR",
+   "seed": 0,
+   "result": "runs_ebss_official_validation/results/TR_s0.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/TR_s0",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "c0c3e560e65cdb6e37b3fd64f478010f6f7205fc9c2631ae4d45fab82d07cb9b",
+    "8": "e26d0ac035d19361343fbc6ac750d8d32d5b83a7815c72e9c93363801bcdbc4b",
+    "16": "9959083cf4e4673c266b53189e44c733956cb7b643b19cc680b3a0647f570623",
+    "23": "d98c8e1dafefe61bbcb85480096858ac82e449923b290bc67f22902ffa3a3800"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "e87860e95b7fcb4622173253f0547605ccfb8ff2f1f8900fdebedb7eef14c199",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.004611982636422466,
+   "historical_ppl": 9.271136563522067,
+   "valid": true,
+   "cache_rows_sha": "54a58ac15b9389b3",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_random_B128_b4_d1_s0_pool-typical_half_warm-71f4c159.json",
+   "calibration_ids_hash": "cc3f2c76225a8a3a",
+   "K": 4
+  },
+  "TR_s1": {
+   "group": "B128",
+   "strategy": "TR",
+   "seed": 1,
+   "result": "runs_ebss_official_validation/results/TR_s1.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/TR_s1",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "743be3c5b6ddada188ecd8458860b2ed2e41495eda1f2770ba1f09c0ac8d3245",
+    "8": "28cc027067b7835525084dd62f8a1bca40105f175c606f4bae03e72e383d1026",
+    "16": "ada704e09cf31700b2217932ae854c452666992a6e8e8e0a55f519169385b44b",
+    "23": "0761a74eea45d0091d9a7eb70a5907c8155f98b1aa3dee97e036bf8e28728b47"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "64a5ecff98fd65c200a21c68a09ddfaae61750f31a5f321b8f4bef67cb3b9a84",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.004600008608227841,
+   "historical_ppl": 9.267561035067018,
+   "valid": true,
+   "cache_rows_sha": "318f7e5ff5c7fa3c",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_random_B128_b4_d1_s1_pool-typical_half_warm-1d2b3965.json",
+   "calibration_ids_hash": "adf3bf99c91d7adc",
+   "K": 4
+  },
+  "TR_s2": {
+   "group": "B128",
+   "strategy": "TR",
+   "seed": 2,
+   "result": "runs_ebss_official_validation/results/TR_s2.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/TR_s2",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "ebddfe969b3858885006a13d6e08293f922ef8bed6ca02eb4c8ab4383b3f47aa",
+    "8": "3c814fd2c60bc743b020562d62fe6e5ce77f7a3a6d270da19289a39e62fe7a47",
+    "16": "13b5a7f1ac96c05739cca33bcb75fe4831b0a742115bdee4ca283f26412710f3",
+    "23": "13e7451bdd27deb5500cccbb90c6d21b4c5cdfa00ab631a5190d781246e9d534"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "7e7781fbdac9bc782d461489b90186a9ff9d040a437c35dec5c034f7dbfdd25f",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.004605122155966141,
+   "historical_ppl": 9.25924265863279,
+   "valid": true,
+   "cache_rows_sha": "fff15dbecee85bce",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_random_B128_b4_d1_s2_pool-typical_half_warm-ba99ad01.json",
+   "calibration_ids_hash": "f04aaf80fedf8619",
+   "K": 4
+  },
+  "FC_s0": {
+   "group": "B128",
+   "strategy": "FC",
+   "seed": 0,
+   "result": "runs_ebss_official_validation/results/FC_s0.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FC_s0",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "7eb1282a9a7de2699ef6fb2887ff706d41a8854cd1749160c25d2e7a9d6153dc",
+    "8": "93491ada19532e7da6abb00af351f635d1c1a7a667a98d61ed3974309f4682cc",
+    "16": "ac18a1d7b507122943ca1db6ad54214dfc9088c7bfc67122f54be3ff26c1f8ea",
+    "23": "70233c68742b2a434f8acc881d1c1edbe5d4351045e05f44342809358379ce36"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "14c54a787aef7fc0f2701d3f8eb1180066d3f3d865f810ae8461fac12fb9dd8e",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.0047269603364303685,
+   "historical_ppl": 9.270335447506513,
+   "valid": true,
+   "cache_rows_sha": "49c49c37de087927",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s0_warm-71f4c159.json",
+   "calibration_ids_hash": "0353229b6d3090db",
+   "K": 4
+  },
+  "FC_s1": {
+   "group": "B128",
+   "strategy": "FC",
+   "seed": 1,
+   "result": "runs_ebss_official_validation/results/FC_s1.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FC_s1",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "a85be50f37c8727754d29970f3a88ab2b173725982e1c4e6e9abdcc68d9a1498",
+    "8": "105038a0310a15fc202b83dae05adb9ab8251732e9344faac0d059360ebfe998",
+    "16": "6b38c4ab77101ee48991c492bbe20f5506fbf0c1cb02634449fe4bbb8f954cab",
+    "23": "62ab0ccfcee9b62e2ccb33a0ef218e2236937484b49b4941da8a3110675e5d7c"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "2733327a5a2b1b9a1d2e688dde2d748a88aef924b60d70b4050ceba759bd06f6",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.0047277182467330104,
+   "historical_ppl": 9.267460655486977,
+   "valid": true,
+   "cache_rows_sha": "988b75f0ff2038a3",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s1_warm-1d2b3965.json",
+   "calibration_ids_hash": "325e8efc5aa125e7",
+   "K": 4
+  },
+  "FC_s2": {
+   "group": "B128",
+   "strategy": "FC",
+   "seed": 2,
+   "result": "runs_ebss_official_validation/results/FC_s2.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FC_s2",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "43f6733c7c11943d2d1f718333d55c69a15b4be2588c298981f1a0c760673a45",
+    "8": "fe49467489a5e8e580b6d424cf4e8eec2e7abd4184b0ad0a7a12c8326a41f513",
+    "16": "883d1d20105f7f5c972f285309ec4d6fd0866f66bb2ea091ca911cbcf2ca7e67",
+    "23": "e6ffc4c664f04a60edf219ab6015a4ef116590166efe0834bfc515882604f808"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "8ba4760dc95fd2cc57ab9171ad37b1a539e6fd18a4f6b9d5349d4754617ed804",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.004735151293752469,
+   "historical_ppl": 9.274605181538881,
+   "valid": true,
+   "cache_rows_sha": "0c9ac857472a5188",
+   "must_quantize": false,
+   "calibration_manifest": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s2_warm-ba99ad01.json",
+   "calibration_ids_hash": "f63a4a6122b79aab",
+   "K": 4
+  },
+  "TC_s0": {
+   "group": "B128",
+   "strategy": "TC",
+   "seed": 0,
+   "result": "runs_legacy_metric_reeval/results/TC_s0.json",
+   "status": "requires quantization (no CANONICAL-B1 weights exist)",
+   "result_exists": false,
+   "calibration_manifest": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s0_pool-typical_half_warm-71f4c159.json",
+   "calibration_ids_hash": "98136bed400c7b0f",
+   "K": 4,
+   "historical_protocol_weights": "runs_partial_ppl used the batch-8 historical cache (ORIGINAL extraction); NOT CANONICAL-B1 -> not comparable",
+   "must_quantize": true
+  },
+  "TC_s1": {
+   "group": "B128",
+   "strategy": "TC",
+   "seed": 1,
+   "result": "runs_legacy_metric_reeval/results/TC_s1.json",
+   "status": "requires quantization (no CANONICAL-B1 weights exist)",
+   "result_exists": false,
+   "calibration_manifest": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s1_pool-typical_half_warm-1d2b3965.json",
+   "calibration_ids_hash": "516df64fac74a71d",
+   "K": 4,
+   "historical_protocol_weights": "runs_partial_ppl used the batch-8 historical cache (ORIGINAL extraction); NOT CANONICAL-B1 -> not comparable",
+   "must_quantize": true
+  },
+  "TC_s2": {
+   "group": "B128",
+   "strategy": "TC",
+   "seed": 2,
+   "result": "runs_legacy_metric_reeval/results/TC_s2.json",
+   "status": "requires quantization (no CANONICAL-B1 weights exist)",
+   "result_exists": false,
+   "calibration_manifest": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s2_pool-typical_half_warm-ba99ad01.json",
+   "calibration_ids_hash": "8f2fd731358713a7",
+   "K": 4,
+   "historical_protocol_weights": "runs_partial_ppl used the batch-8 historical cache (ORIGINAL extraction); NOT CANONICAL-B1 -> not comparable",
+   "must_quantize": true
+  },
+  "EBSS": {
+   "group": "B128_EBSS",
+   "strategy": "EBSS",
+   "seed": null,
+   "result": "runs_ebss_official_validation/results/EBSS.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/EBSS",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "c87182e28c906044fa2aa2c3cbd774d0d9178fea4756ebd65e4bfd8ac34ce9db",
+    "8": "7627bff2ceb46269f4f06df2b4fd4404d39a7b86c4b848c7eed14e24ed41f7c5",
+    "16": "bbf4be9d1c91a1334ceba63c31f109f16a8307ecb57841182445d5360a7ea094",
+    "23": "0e08888de36f68d7a07e92149221f724589e49ac4c871be27fa8284b99378f3e"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "09664bff11698ac60303b9b1b07a332e5af954b2a6c367f74a50bb25ed461094",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_official_validation",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.005970665149213848,
+   "historical_ppl": 9.273236809562045,
+   "valid": true,
+   "cache_rows_sha": "e01d9c62dab91734",
+   "must_quantize": false
+  },
+  "C4R16_s0": {
+   "group": "B16",
+   "strategy": "C4R16",
+   "seed": 0,
+   "result": "runs_ebss_generation_pilot/results/C4R_s0.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_generation_pilot/weights/C4R_s0",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "6dfcf2686cbef0d23d830243c0d5036c823060f14225cc8648d7a5d56083bd37",
+    "8": "853ac1216e57fcfe622a0eb7c6225bd7f5160786414ed5435a27b44da2b14357",
+    "16": "98b6fcd4faa0198897c8ff2bfdb528484fd716490b271f5691f039c947e373bc",
+    "23": "7ad23b4e0a8f7416f97fd7f374d786c502daced3a5bff3c7e43ae70ed3728a1d"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "453b4161a851414a14e37ac580e92cd0f624a656f53bb2344e42b0d3d64b611e",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_generation_pilot",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.0053817881215029425,
+   "historical_ppl": 9.267487480465205,
+   "valid": true,
+   "cache_rows_sha": "75248e3f49d8c51f",
+   "must_quantize": false
+  },
+  "C4R16_s1": {
+   "group": "B16",
+   "strategy": "C4R16",
+   "seed": 1,
+   "result": "runs_ebss_generation_pilot/results/C4R_s1.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_generation_pilot/weights/C4R_s1",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "fa7f0d924bfcf894259a18eeaf20d07c78c105f6316e09ce31d5227b39cfc420",
+    "8": "79cc5caedd40bef4540fae4e998aea26f31a8195cfcfb62437f64e478090023e",
+    "16": "6cb16c90e5bbae08e2180b72d7cd2bd804eeb5a28ccc815d729fb037ac6a363b",
+    "23": "1e7c374c7965cb2b599528954241fef5b82fa4348d7fe347abeb57cc6d1c6ad0"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "53e0a34bd959c1f5bdf6d29d992b2f6f453b01b4206854be1162c133108fa1cd",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_generation_pilot",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.005394993762483961,
+   "historical_ppl": 9.268870781320336,
+   "valid": true,
+   "cache_rows_sha": "177c021d0719cf86",
+   "must_quantize": false
+  },
+  "C4R16_s2": {
+   "group": "B16",
+   "strategy": "C4R16",
+   "seed": 2,
+   "result": "runs_ebss_generation_pilot/results/C4R_s2.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_generation_pilot/weights/C4R_s2",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "ac8396cfa68f5d3f52c6c2ad66d4aca60f81cdb84a9653aac216aee27ae57ef6",
+    "8": "f97c88c87f988eb85240889591ff064a0c2ae720e5868cb5554111e63b2dd91d",
+    "16": "c91dc49033c3fc5e1f579c4ac88d418818889cf9420f49e35640f2cdd3641ca8",
+    "23": "ae7e0ef982b818faca44a7cc34653d1d8aafd803427c551d64aac96bd605b76c"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "01e5ad3d9525028bbfc16b74cb1c4bcce34a5311a753a8b8eb78d41ee81f7d28",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_generation_pilot",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.005381452384591753,
+   "historical_ppl": 9.275386326931468,
+   "valid": true,
+   "cache_rows_sha": "5cc6589aed040845",
+   "must_quantize": false
+  },
+  "RS_PO16": {
+   "group": "B16",
+   "strategy": "RS_PO16",
+   "seed": null,
+   "result": "runs_ebss_generation_pilot/results/PO.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_generation_pilot/weights/PO",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "add432ca7d745dea7c6988939670615e24787f52fca5365db5bb7567c5def0d3",
+    "8": "11f0fe4c1b3e57b81d1d71064ffd8e7186fb51c4204d75cd699d74e36214c220",
+    "16": "d3659e2604e409bab5a9d6e6cda08a879c7f8f64a8cae0396b46059b5be3926a",
+    "23": "98467e459346a45a1d37be86d1e4b73ba51687514f4a8606e86dd8ea40951c9d"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "95cb1e7f9a2fed47dbdf65bf13b449bfcdb016bc58cc6ffa1508db0861e85829",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_generation_pilot",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.006102680778179296,
+   "historical_ppl": 9.26831113261005,
+   "valid": true,
+   "cache_rows_sha": "4b40fe019136c119",
+   "must_quantize": false
+  },
+  "RS_EBSS16": {
+   "group": "B16",
+   "strategy": "RS_EBSS16",
+   "seed": null,
+   "result": "runs_ebss_balance_fidelity/results/ALG1_RATE.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_balance_fidelity/weights/ALG1_RATE",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "03eb215c182a826049b415efc2a2e7bb8fa2d12efe19d463fa2f843ceb1536b6",
+    "8": "e471b2e7310403be077c2f9032ac3d34d000a4c6afe2f7e2b87e0489e7e91c78",
+    "16": "8e83c91c8829123795c4c9f6e26701818f7c7394131f30a76781a0e24df8a6b8",
+    "23": "701dcd256a98012681a8a3cee7d7bbcab41cd51ccc49c92bff6371ec604a9c95"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "a37b6a6f0249cf98bdc2770575fd9c87c5906fb51418a4f060b641f4572eaa19",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_balance_fidelity",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.006107183149112938,
+   "historical_ppl": 9.274363038925387,
+   "valid": true,
+   "cache_rows_sha": "be704243427a0ecb",
+   "must_quantize": false
+  },
+  "PX_PO16": {
+   "group": "B16",
+   "strategy": "PX_PO16",
+   "seed": null,
+   "result": "runs_ebss_prefix_rescue/results/PX_PO.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_prefix_rescue/weights/PX_PO",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "bf1d46c2064bf85446f1378c3384363b0a149d5ff9f719fff1cfc8a528bd2029",
+    "8": "fc514d84376b7cf6dbfda9b688c61791b23a2f2d29baaf66f4ecd11e50904ed0",
+    "16": "6ad8ed5efc1792c02401a785b80cc71da81b457a70d6c1ea1a1485fb32f095f0",
+    "23": "502f9bb1724efff68ed2199398c0f75693f8bc59e606a40e402db7e10c201912"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "06b4b45e42f6ce2477e6d2e47be2f0ee5be0f5031aabfd6cdeba599c87022177",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_prefix_rescue",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.005717505125656861,
+   "historical_ppl": 9.27226870270831,
+   "valid": true,
+   "cache_rows_sha": "d9e8e6b40ac3d31f",
+   "must_quantize": false
+  },
+  "PX_EBSS16": {
+   "group": "B16",
+   "strategy": "PX_EBSS16",
+   "seed": null,
+   "result": "runs_ebss_prefix_rescue/results/PX_EBSS.json",
+   "result_exists": true,
+   "weights_dir": "/home/kaixuan6/moe_cache_ebss_prefix_rescue/weights/PX_EBSS",
+   "weights_exist": true,
+   "weight_file_sha256": {
+    "1": "aee661f29875ebe060cbd7b3d68b4516f2c724748007b059d79d7c891049d2e8",
+    "8": "8fbf612f7b0520a7f8e15d8d0c2aec84fb1a5f5e8d31937c941165a0c07e10f2",
+    "16": "1430a9519ea19991aa6ef611fca9a95c70d0d6d87f77cbbff84a97ae5b05f70c",
+    "23": "f23617b51d2825263c2b69ecfff1e2bc25ebc1affa02bdb82f94eea198b74bac"
+   },
+   "weight_files_match_record": true,
+   "installed_weights_sha256": "3b454ddad6d506a60e38e87e617df397dbe560f93d01ec6ae8644784fdeb724c",
+   "policy": "CANONICAL-B1",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "layers": [
+    1,
+    8,
+    16,
+    23
+   ],
+   "n_quantized_experts": 240,
+   "rtn_fallbacks": 0,
+   "calibration_cache": "/home/kaixuan6/moe_cache_ebss_prefix_rescue",
+   "reconstruction_cache": "/home/kaixuan6/moe_cache",
+   "historical_recon_oldtest": 0.0056954130578128785,
+   "historical_ppl": 9.266020822566118,
+   "valid": true,
+   "cache_rows_sha": "be704243427a0ecb",
+   "must_quantize": false
+  }
+ },
+ "not_evaluated": {
+  "Coverage-LP-Repr (RC)": "only E3 score JSONs exist (runs_repr_constrained/e3_coverage_lp_repr_*); no saved quantized weights and its rows are not in any CANONICAL-B1 cache -> would need new capture + 3 quantizations; optional comparison skipped (not low cost)",
+  "TC historical batch-8 weights": "runs_partial_ppl TC weights used the ORIGINAL batch-8 extraction; not mixed with CANONICAL-B1 weights"
+ },
+ "evaluation_splits": {
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY",
+   "note": "locked document-disjoint confirmation split (runs_aggregate_constraint); never used for selection; previously used once to score expert reconstruction of FR/TR/TC/FC built from the batch-8 historical cache, never for MoE-output error",
+   "files": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   }
+  },
+  "oldtest": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY / regression",
+   "note": "historical E3 test rows 2128-2255; inspected in many prior studies; exploratory",
+   "files": {
+    "1": true,
+    "8": true,
+    "16": true,
+    "23": true
+   }
+  }
+ }
+}

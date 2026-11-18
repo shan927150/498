@@ -1,0 +1,17 @@
+{
+ "pytest_rc": 0,
+ "pytest": "60 passed, 1 warning in 3.90s",
+ "real_data_oracle_passed": true,
+ "prior_agq_gates": {
+  "source_review": true,
+  "routing_definition": true,
+  "capture_alignment": true,
+  "hessian_oracle": true,
+  "unit_regression": true,
+  "diagnostics_recompute_equals_installed": true,
+  "AGQ_FR_s0_valid": true,
+  "AGQ_FR_s1_valid": true,
+  "AGQ_FR_s2_valid": true
+ },
+ "passed": true
+}

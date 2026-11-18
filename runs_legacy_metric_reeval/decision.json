@@ -1,0 +1,459 @@
+{
+ "primary_split": "confirm",
+ "gates_passed": true,
+ "confirm": {
+  "main_FC_vs_FR": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.027972192636879892,
+   "mean_d_layer": 0.019744784528260454,
+   "d_expert": [
+    0.030844224358800427,
+    0.023859508584206136,
+    0.029212844967633114
+   ],
+   "d_layer": [
+    0.022031412915391412,
+    0.01726981232996539,
+    0.019933128339424563
+   ],
+   "magnitude_ratio_layer_over_expert": 0.7058718915809258,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "secondary_TC_vs_TR": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 3,
+   "mean_d_expert": 0.0005093860055119245,
+   "mean_d_layer": -0.0010059762086662317,
+   "d_expert": [
+    -0.0014940841075827558,
+    0.0008072012991730021,
+    0.002215040824945527
+   ],
+   "d_layer": [
+    -0.004752644252912515,
+    -0.0001797986296784853,
+    0.0019145142565923058
+   ],
+   "magnitude_ratio_layer_over_expert": -1.9748799491561262,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "additional_TR_vs_FR": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 3,
+   "mean_d_expert": -0.004476054328170513,
+   "mean_d_layer": -0.0032912864304069597,
+   "d_expert": [
+    -0.001333281124430401,
+    -0.006761683472693979,
+    -0.005333198387387159
+   ],
+   "d_layer": [
+    -0.001584880380848419,
+    -0.003028274019771417,
+    -0.005260704890601044
+   ],
+   "magnitude_ratio_layer_over_expert": 0.7353097592432931,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "extra_TC_vs_FR": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 3,
+   "mean_d_expert": -0.0039717614085587214,
+   "mean_d_layer": -0.004297927586526572,
+   "d_expert": [
+    -0.0028253731978742052,
+    -0.005959940213204731,
+    -0.0031299708145972284
+   ],
+   "d_layer": [
+    -0.006329992261127341,
+    -0.0032075281699308566,
+    -0.003356262328521519
+   ],
+   "magnitude_ratio_layer_over_expert": 1.0821212918945728,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "ebss_EBSS_vs_FR": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.30262708142457245,
+   "mean_d_layer": 0.22304606474908537,
+   "d_expert": [
+    0.3047263809059715,
+    0.2991094864923571,
+    0.30404537687538874
+   ],
+   "d_layer": [
+    0.22308458411155443,
+    0.22263042268391045,
+    0.22342318745179116
+   ],
+   "magnitude_ratio_layer_over_expert": 0.7370327324941602,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "ebss_EBSS_vs_TR": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.3084863745179724,
+   "mean_d_layer": 0.22708784193727402,
+   "d_expert": [
+    0.30646827039055047,
+    0.30795345374358807,
+    0.31103739941977854
+   ],
+   "d_layer": [
+    0.22502610394973155,
+    0.22634412874829812,
+    0.2298932931137923
+   ],
+   "magnitude_ratio_layer_over_expert": 0.736135728173122,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_RS_EBSS_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.13488426404085227,
+   "mean_d_layer": 0.08453564479517268,
+   "d_expert": [
+    0.1346607959652354,
+    0.13059168815832145,
+    0.1394003079989999
+   ],
+   "d_layer": [
+    0.0862102405154061,
+    0.08327784693114253,
+    0.08411884693896941
+   ],
+   "magnitude_ratio_layer_over_expert": 0.6267272568545835,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_RS_PO_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.13402126864584052,
+   "mean_d_layer": 0.08308976547115027,
+   "d_expert": [
+    0.13379797050113762,
+    0.1297319569492155,
+    0.1385338784871685
+   ],
+   "d_layer": [
+    0.08476212865680577,
+    0.08183364447586494,
+    0.08267352328078009
+   ],
+   "magnitude_ratio_layer_over_expert": 0.6199744735346455,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_PX_EBSS_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.060566657990390016,
+   "mean_d_layer": 0.034865571973658284,
+   "d_expert": [
+    0.06035782366460543,
+    0.056555180342708074,
+    0.06478696996385655
+   ],
+   "d_layer": [
+    0.03646347377260865,
+    0.03366537932694022,
+    0.034467862821426
+   ],
+   "magnitude_ratio_layer_over_expert": 0.5756561965032037,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_PX_PO_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.06287245808757987,
+   "mean_d_layer": 0.035561720406500935,
+   "d_expert": [
+    0.06266316973073079,
+    0.058852259002654714,
+    0.0671019455293541
+   ],
+   "d_layer": [
+    0.03716069710528689,
+    0.03436072039672746,
+    0.03516374371748846
+   ],
+   "magnitude_ratio_layer_over_expert": 0.5656168295021055,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_PX_EBSS_vs_PX_PO": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 1,
+   "mean_d_expert": -0.002169404315301065,
+   "mean_d_layer": -0.0006722423387467268,
+   "d_expert": [
+    -0.002169404315301065
+   ],
+   "d_layer": [
+    -0.0006722423387467268
+   ],
+   "magnitude_ratio_layer_over_expert": 0.30987415946641306,
+   "layer_specific_reversals": [
+    1
+   ],
+   "note": "one calibration set compared with several references; NOT replications"
+  }
+ },
+ "oldtest": {
+  "main_FC_vs_FR": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.024840385816963406,
+   "mean_d_layer": 0.015670556524142665,
+   "d_expert": [
+    0.025480338480093224,
+    0.021994722496992854,
+    0.027046096473804137
+   ],
+   "d_layer": [
+    0.015006687350772584,
+    0.015451848480972455,
+    0.01655313374068296
+   ],
+   "magnitude_ratio_layer_over_expert": 0.6308499650372299,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "secondary_TC_vs_TR": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 3,
+   "mean_d_expert": 0.0015853306747453215,
+   "mean_d_layer": -0.0008765204233406187,
+   "d_expert": [
+    0.0007622303480482571,
+    0.002035316459167412,
+    0.0019584452170202955
+   ],
+   "d_layer": [
+    -0.0037884575003184155,
+    0.0003291546155290407,
+    0.0008297416147675185
+   ],
+   "magnitude_ratio_layer_over_expert": -0.5528943817865816,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "additional_TR_vs_FR": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 3,
+   "mean_d_expert": -0.002071719924592102,
+   "mean_d_layer": -0.0005112275916300275,
+   "d_expert": [
+    0.0005432646525467525,
+    -0.005605712554830095,
+    -0.0011527118714929644
+   ],
+   "d_layer": [
+    0.00039105248590066516,
+    -0.0018561138943081362,
+    -6.86213664826115e-05
+   ],
+   "magnitude_ratio_layer_over_expert": 0.24676481871973224,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "extra_TC_vs_FR": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 3,
+   "mean_d_expert": -0.0004908068596048949,
+   "mean_d_layer": -0.0013884644723646197,
+   "d_expert": [
+    0.0013059090934002026,
+    -0.0035818054946908902,
+    0.0008034758224760032
+   ],
+   "d_layer": [
+    -0.003398886500140979,
+    -0.0015275702272343546,
+    0.0007610633102814742
+   ],
+   "magnitude_ratio_layer_over_expert": 2.8289426791678287,
+   "layer_specific_reversals": [],
+   "note": ""
+  },
+  "ebss_EBSS_vs_FR": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.29356655114475244,
+   "mean_d_layer": 0.21698794030126392,
+   "d_expert": [
+    0.29519186811492304,
+    0.29058224651086595,
+    0.2949255388084684
+   ],
+   "d_layer": [
+    0.21604801218330547,
+    0.21710960591391285,
+    0.21780620280657348
+   ],
+   "magnitude_ratio_layer_over_expert": 0.7391439503415055,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "ebss_EBSS_vs_TR": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.29625540639197717,
+   "mean_d_layer": 0.21761177881262328,
+   "d_expert": [
+    0.29448861820552785,
+    0.2978576635095841,
+    0.2964199374608197
+   ],
+   "d_layer": [
+    0.21557265947302567,
+    0.21937290089761174,
+    0.2178897760672324
+   ],
+   "magnitude_ratio_layer_over_expert": 0.734541122684863,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_RS_EBSS_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.13383513184275395,
+   "mean_d_layer": 0.08383564010723439,
+   "d_expert": [
+    0.13473381305714563,
+    0.13195757741477826,
+    0.13481400505633795
+   ],
+   "d_layer": [
+    0.08642621372552713,
+    0.08465625395046868,
+    0.08042445264570737
+   ],
+   "magnitude_ratio_layer_over_expert": 0.6264098144703505,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_RS_PO_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.13300184352381375,
+   "mean_d_layer": 0.08326632948450494,
+   "d_expert": [
+    0.13389986427131975,
+    0.13112566896503516,
+    0.13397999733508634
+   ],
+   "d_layer": [
+    0.08585554234197262,
+    0.08408651228066823,
+    0.07985693383087397
+   ],
+   "magnitude_ratio_layer_over_expert": 0.6260539499183426,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_PX_EBSS_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.057413669978274774,
+   "mean_d_layer": 0.03142581126499906,
+   "d_expert": [
+    0.058251779306838274,
+    0.055662664331586925,
+    0.058326566296399124
+   ],
+   "d_layer": [
+    0.03389111540984608,
+    0.03220674360166726,
+    0.028179574783483843
+   ],
+   "magnitude_ratio_layer_over_expert": 0.5473576463042779,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_PX_PO_vs_C4R16": {
+   "verdict": "LEGACY-NEGATIVE-CONFIRMED",
+   "legacy_direction": "penalty",
+   "n_pairs": 3,
+   "mean_d_expert": 0.061516644824669155,
+   "mean_d_layer": 0.0346302791943689,
+   "d_expert": [
+    0.06235800618372106,
+    0.05975884492864613,
+    0.062433083361640274
+   ],
+   "d_layer": [
+    0.0371032426279229,
+    0.03541363775752914,
+    0.03137395719765468
+   ],
+   "magnitude_ratio_layer_over_expert": 0.5629416118689492,
+   "layer_specific_reversals": [],
+   "note": "one calibration set compared with several references; NOT replications"
+  },
+  "b16_PX_EBSS_vs_PX_PO": {
+   "verdict": "NO-ROBUST-DIFFERENCE",
+   "legacy_direction": "tie",
+   "n_pairs": 1,
+   "mean_d_expert": -0.0038652006696249875,
+   "mean_d_layer": -0.0030972106595073354,
+   "d_expert": [
+    -0.0038652006696249875
+   ],
+   "d_layer": [
+    -0.0030972106595073354
+   ],
+   "magnitude_ratio_layer_over_expert": 0.8013065618680635,
+   "layer_specific_reversals": [
+    1
+   ],
+   "note": "one calibration set compared with several references; NOT replications"
+  }
+ },
+ "primary_verdict": "LEGACY-NEGATIVE-CONFIRMED",
+ "recommendation": "B",
+ "split_agreement": {
+  "main_FC_vs_FR": true,
+  "secondary_TC_vs_TR": true,
+  "additional_TR_vs_FR": true,
+  "extra_TC_vs_FR": true,
+  "ebss_EBSS_vs_FR": true,
+  "ebss_EBSS_vs_TR": true,
+  "b16_RS_EBSS_vs_C4R16": true,
+  "b16_RS_PO_vs_C4R16": true,
+  "b16_PX_EBSS_vs_C4R16": true,
+  "b16_PX_PO_vs_C4R16": true,
+  "b16_PX_EBSS_vs_PX_PO": true
+ }
+}

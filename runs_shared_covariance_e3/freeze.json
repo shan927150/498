@@ -1,0 +1,32 @@
+{
+ "experiment_code_sha256": {
+  "moe_calib/shared_covariance_selection.py": "58fb2f469a9df60d0d30a131109b26afc23f4d2381b7d7a349f65a3abef91a82",
+  "moe_calib/expertwise_calibration.py": "696157fe8f2b5c606c5824db50d5b42d1c4e4d1ba8ec680c4814140ba984d186",
+  "diagnostics/shared_covariance_e3.py": "8b19607651f69c813194b382e8a712d1cb4183f3eeb493ad39c4dbcf3ab64dab"
+ },
+ "frozen_code_sha256": {
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "moe_calib/multigroup_robustness.py": "12fab4bc5db630cd4874937f8016bea21348ca27b79e7b6894e4ef330d6577b2",
+  "diagnostics/batch_sensitivity.py": "85029a49a9fb9c2de10e64c979de913c5328a1fc5fa10653f045afdb0eae1ac5",
+  "configs/frozen_b4.json": "52f729148b5acf93e39e90ce980f3e563a02d87488252a5561a73bd8504e8a50"
+ },
+ "sc_selection_hashes": {
+  "0": "f9aa555b0e341562",
+  "1": "6dec3141533c63ee",
+  "2": "4cc734dd89773e76"
+ },
+ "selection_files_sha256": {
+  "0": "d2579d88db9020fd68fee02203394bd966b3c1143a85d40499dcb3eb80657f1e",
+  "1": "058b66ad1bb76fc4fddd0765774f19162abccf0c1a5ecc5908687f44c60b6411",
+  "2": "f6156fb6d5fdaec0bdf20cde8bd04bdeec1ee443c45466e284c9374f2a8cfb27"
+ },
+ "note": "frozen after sketch validation and SC selection, BEFORE any SC reconstruction / PPL",
+ "created": "2026-11-16 09:12:57"
+}

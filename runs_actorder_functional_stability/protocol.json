@@ -1,0 +1,273 @@
+{
+ "title": "Functional impact of GPTQ code disagreement and dense act-order stabilization",
+ "experiments_order": "Experiment 1 (functional, no solves) completes before any Experiment 2 PPL evaluation",
+ "dense": {
+  "model": "Qwen/Qwen2.5-1.5B",
+  "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "layers": [
+   1,
+   9,
+   19,
+   27
+  ],
+  "projections": [
+   "gate_proj",
+   "up_proj",
+   "down_proj"
+  ],
+  "configs": [
+   "G20261111",
+   "G20261112",
+   "G20261113",
+   "G20261114",
+   "G20261115",
+   "ORIGINAL"
+  ],
+  "historical_run": "runs_dense_grouping_scope",
+  "historical_protocol_sha256": "03886a9d67711004b285ccec90337fbbccc7b5d595acc1aa1a7869894b4a2f2b",
+  "weights_dir": "/home/kaixuan6/moe_cache_dense_grouping_scope/weights",
+  "hessians_dir": "/home/kaixuan6/moe_cache_dense_grouping_scope/hessians",
+  "hessian_sha256": {
+   "G20261111": {
+    "1": "0b4eda18e3215b5942915d24b38c3b32a5ed8f4a22ecb5f03bf68df480267c4b",
+    "9": "61eaafa06e03fd80e22450740829fcc7a6ca3802f32b3e7a5a6dfc88a96f6641",
+    "19": "f80ef67699da450418c4010dff53afbc3f79f7377d7bec1afcdf6d6c36158f7d",
+    "27": "eddd2dba482bae980006460d18f7bdd2431d67a8e11c1c84d426e6bb39f957fb"
+   },
+   "G20261112": {
+    "1": "19aa55ce28e80a4950185b4777bacd861efe83706966f66daf74e6d8277dd7dd",
+    "9": "3559e2a6025be5b3fdfa4c207609e16da6b1326fd14b865bbbd816e0052b629c",
+    "19": "4171aecec895c84cc3902271eee541a03939ecffa67aae260ee4e55efa3a2120",
+    "27": "32396a197d2f8911db2e81af1058f9030b741b255d4800b1e21410d6bf250a39"
+   },
+   "G20261113": {
+    "1": "c58a64c498d5f75fa05114e87a9e6fc6e0d055c8531467c11bd5b7a96c9b2d69",
+    "9": "f5527b031339e4d1295e87f79db859acc1e27e1074d8297a9f8a336c885811cf",
+    "19": "d6d237c25afc828bc44d65217056627801077ed5444158aac94f70fe56e83660",
+    "27": "a7ee45dd8da8b2a6a9c30f7732c0a9d754a5dfc77f92ccaec57497a9d554aa38"
+   },
+   "G20261114": {
+    "1": "7e40c26134cd4429611ed8f10460b4871f76e79b226bdc4be4a7f598494e7c95",
+    "9": "28154db8fcab7c52ad2f41f4b1a4adc56351332b6dafcb35dea8978ce05ad14b",
+    "19": "306eabd81e6e306a4fea05450119367c0643902f7283aeff4ff60b450f658249",
+    "27": "84ceae9fb5eb46e222afeab15a5b6ee2833b56f8884f65867ed65aa166b1e0f4"
+   },
+   "G20261115": {
+    "1": "34cbb51cb2c29ff43749ae875a9aea14e0f4d9cd9989d56b712385f5e06d4098",
+    "9": "e6a19c138667d8d83cbb5f0f5e3105c48510dcb4560bf210592b30c69f1816ec",
+    "19": "affd4122e3238fd7f05b8bb430d529e37c5f240f7654feb68829b13146f770e3",
+    "27": "3921f67c441c94ef58d4bc76cc17c02f5f4fbefaac4a97322e70c24944c1b2b2"
+   },
+   "ORIGINAL": {
+    "1": "34cbb51cb2c29ff43749ae875a9aea14e0f4d9cd9989d56b712385f5e06d4098",
+    "9": "e6a19c138667d8d83cbb5f0f5e3105c48510dcb4560bf210592b30c69f1816ec",
+    "19": "affd4122e3238fd7f05b8bb430d529e37c5f240f7654feb68829b13146f770e3",
+    "27": "3921f67c441c94ef58d4bc76cc17c02f5f4fbefaac4a97322e70c24944c1b2b2"
+   }
+  }
+ },
+ "moe": {
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "experts": "all 60 routed experts per layer (240)",
+  "configs": [
+   "G20261111",
+   "G20261112",
+   "G20261113",
+   "G20261114",
+   "G20261115",
+   "ORIGINAL"
+  ],
+  "weights": {
+   "G20261111": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261111",
+   "G20261112": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261112",
+   "G20261113": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261113",
+   "G20261114": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261114",
+   "G20261115": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/FR_G20261115",
+   "ORIGINAL": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL"
+  },
+  "sampled_code_subset": "runs_integer_code_mechanism/moe_expert_manifest.json (20/240; codes, Hessians, act-order)"
+ },
+ "quantization": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "percdamp_semantics": "damping = 1.0 x mean(diag H)",
+  "blocksize": 128,
+  "solver": "moe_calib.gptq.gptq_quantize (unchanged)",
+  "install": "fp32 W_q -> .to(bfloat16) (model_utils.set_expert_weights cast)",
+  "groups": "consecutive group_size columns of the EXECUTION order (solver semantics; no static groups)"
+ },
+ "calibration": {
+  "manifest_sha256": "34559e4008d48ae46348ec9c295ff1acc99f0604698c5b6aafc8d6b5ec3df645",
+  "n_sequences": 128,
+  "seqlen": 512,
+  "total_tokens": 65536,
+  "fr_token_sha256": "fc8436f048fa495b1e2e6158b28023f36ff19147b6bed16c9a022d23ec872d09",
+  "equivalence": "Experiment 2 re-solves from the SAVED historical Hessians (same 128 C4 sequences, same order, same K=4 blocks); Hessian sha256 verified before every solve"
+ },
+ "groupings": {
+  "G20261111": {
+   "sha256": "628eeeb4b168f32b7b66fc4c1d24f426e2f85566d15916000f3e2c2175c5a0a1"
+  },
+  "G20261112": {
+   "sha256": "b45a96be90eb91f3136fe63ce2008f75b9863637a1b8185b3a0ecaf5c796a0d1"
+  },
+  "G20261113": {
+   "sha256": "682e8493cbc543b992a9e5290bbe604c8ed1ae55b666369121cf026f7001f5cc"
+  },
+  "G20261114": {
+   "sha256": "bce120fcd49a96dd42209e8ead5c52642a0a5dc856525b5c7a2eaac3ab38c82e"
+  },
+  "G20261115": {
+   "sha256": "3677afc649850a5f0200df385527df0cfef2d6a9686870f86162aca4168f284b"
+  },
+  "ORIGINAL": {
+   "sha256": "76ef5710ff5671388352f8898c9fed54376d9370d9b438d4cdd38ef26eb82770"
+  }
+ },
+ "evaluation": {
+  "windows": "runs_partial_ppl/windows.pt",
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "n_windows": 128,
+  "seqlen": 512,
+  "evaluator": "diagnostics/eval_partial_ppl.layerwise_nll (unchanged), batch 8"
+ },
+ "experiment1": {
+  "reference_model": "BF16 original checkpoint (both models); activations captured once and shared by every variant",
+  "activations": {
+   "gate_up": "input of mlp.gate_proj (dense) / experts[e].gate_proj (MoE) = post-attention-norm hidden state (MoE: tokens routed to e under BF16 routing)",
+   "down": "actual input of down_proj in the BF16 forward (silu(gate x) * up x, BF16)",
+   "routing": "BF16 router: softmax(fp32) -> top-4 -> cast to bf16 (norm_topk_prob=False), as the HF block"
+  },
+  "capture_validation": "per-window NLL of the capture forward == historical BF16 baseline bitwise; MoE gate inputs == X[routed tokens] bitwise",
+  "arithmetic": "FP32 (TF32 off) on installed BF16 weights and captured BF16 activations; float64 accumulation",
+  "E_func": "||(W_a - W_b) X||_F / ||W_BF16 X||_F over all (routed) tokens; reference = BF16 original weights",
+  "E_mlp_dense": "||MLP_a(X) - MLP_b(X)||_F / ||MLP_BF16(X)||_F, X = captured MLP input, FP32 SiLU-GLU",
+  "E_moe_expert": "per expert: same as E_mlp on the expert's routed tokens (unweighted expert-level)",
+  "E_moe_agg": "||sum_e w_te (E_a,e(x_t) - E_b,e(x_t))||_F / ||MoE_block_BF16(x)||_F (captured full block output incl. shared expert) over all 65,536 tokens; shared reference routing (selected experts + BF16 probabilities); secondary denominator: routed-only BF16 output",
+  "secondary": [
+   "rmse",
+   "relative to variant b",
+   "per-token diff p95/p99",
+   "global and per-token cosine",
+   "rel Frobenius weight diff",
+   "BF16 element disagreement",
+   "integer-code disagreement (dense all; MoE sampled 20 experts only)",
+   "act-order position disagreement",
+   "Hessian perturbation ||dH||_F/||H||_F"
+  ],
+  "pairs": {
+   "primary_dense": [
+    "G20261111__ORIGINAL",
+    "G20261112__ORIGINAL",
+    "G20261113__ORIGINAL",
+    "G20261114__ORIGINAL"
+   ],
+   "null_dense": "G20261115__ORIGINAL",
+   "primary_moe": [
+    "G20261111__ORIGINAL",
+    "G20261112__ORIGINAL",
+    "G20261113__ORIGINAL",
+    "G20261114__ORIGINAL",
+    "G20261115__ORIGINAL"
+   ],
+   "secondary": "all 10 grouping pairs; each config vs BF16"
+  },
+  "ratios": "R_X = MoE / dense for code, BF16, functional (per projection and MLP/MoE-block) and SD(log PPL); primary pair sets as above (exploratory cross-model comparison, not a causal decomposition)",
+  "classification": {
+   "quantity": "R_MLP = mean E_moe_agg over the 5 MoE primary pairs / mean E_mlp_dense over the 4 dense primary pairs (both pooled over the 4 layers by squared norms); R_code = 17.86 (runs_integer_code_mechanism, per projection gate 51.96 / up 51.57 / down 5.06); R_func_p per projection analogous to R_MLP",
+   "F1": "R_MLP <= 3 AND no projection with R_func_p >= 0.5 x R_code_p",
+   "F2": "R_MLP >= 0.5 x R_code (>= 8.93)",
+   "F3": "otherwise, or projection-level ratios conflict (some R_func_p <= 0.25 R_code_p while another >= 0.5 R_code_p)",
+   "note": "the dense/MoE code ratio is on the 20 sampled MoE experts; functional ratios use all 240 experts"
+  },
+  "curvature": {
+   "tensors": "dense: all 12, 4 primary pairs; MoE: 20 sampled experts x 3 projections, 5 primary pairs",
+   "bins": "10 bins by (i) reference (ORIGINAL) execution position, (ii) calibration diag(H_ORIGINAL) quantile, (iii) held-out diag(X^T X) quantile; (i) and (ii) coincide up to reversal by construction of act-order",
+   "energy": "diag approximation sum_j ||dW_:j||^2 Hheld_jj vs within-bin full quadratic form and the full tr(dW Hheld dW^T) (non-additivity reported)",
+   "split": "quadratic-form split of ||dW X||^2 into code-flip elements, same-code (grid-only) elements, cross"
+  }
+ },
+ "experiment2": {
+  "model": "dense only",
+  "configs": [
+   "G20261111",
+   "G20261112",
+   "G20261113",
+   "G20261114",
+   "G20261115",
+   "ORIGINAL"
+  ],
+  "primary_policies": [
+   "natural",
+   "fixed",
+   "bucketed8",
+   "disabled"
+  ],
+  "exploratory_policies": [
+   "bucketed6",
+   "bucketed10"
+  ],
+  "policies": {
+   "natural": "argsort(diag H, descending) inside the solver (historical); reused after bitwise re-solve parity",
+   "fixed": "actorder_override = the ORIGINAL configuration's natural permutation for that projection (computed from the ORIGINAL Hessian); grouping Hessians, scales, zero-points, error feedback stay live. Cost: requires the reference calibration execution (one extra Hessian pass + argsort) and storage of 12 permutations; NOT reference-free",
+   "bucketed": "actorder_override = moe_calib.actorder_policy.bucketed_perm(own H, bits): float64 frexp mantissa truncated to bits significant bits (floor), descending key, ties by ascending column index (numpy stable argsort, CPU); primary bits = 8 (frozen after inspecting diag(H) only: logs/audit.json diag_inspection), exploratory [6, 10]; fixed power-of-two boundaries independent of observed min/max; reference-free",
+   "disabled": "gptq_quantize(actorder=False): original column order, groups = consecutive original columns"
+  },
+  "validation": {
+   "A": "natural re-solve from saved Hessians == historical BF16 weights bitwise (72 tensors) and natural PPL per-window == historical bitwise",
+   "B": "fixed path with each config's own natural permutation == natural output bitwise (72 tensors)",
+   "C": "bucketed permutation identical across 2 repeated computations and a clone of H; full bucketed solve repeated bitwise for one config",
+   "D": "disabled: info perm == arange, group == column // 128",
+   "E": "Hessian files sha256 == historical inventory; tokens == 65,536 per projection",
+   "F": "G20261115 == ORIGINAL bitwise within each policy",
+   "G": "only the 12 target tensors change; all other parameters digest-identical; restore to pristine",
+   "H": "repeat evaluation per-window NLL bitwise identical",
+   "stop_rule": "any failure -> interpretation BLOCKED"
+  },
+  "primary_metrics": [
+   "SD(PPL), SD(log PPL), CV over the 5 groupings per policy (ddof=1)",
+   "R_SD,m = SD_m(log PPL) / SD_natural(log PPL)",
+   "mean PPL, penalty vs BF16, mean change vs natural, best / worst, max pairwise diff",
+   "window-level paired mean NLL difference vs natural per grouping"
+  ],
+  "secondary_metrics": [
+   "code / level / BF16 / rel-Frobenius / act-order position / group / scale / zero disagreement vs the policy's ORIGINAL",
+   "E_mlp vs the policy's ORIGINAL on Experiment 1 activations"
+  ],
+  "descriptors": {
+   "code_stabilized": "mean code disagreement (4 primary pairs) <= 0.5 x natural",
+   "functional_stabilized": "mean E_mlp (4 primary pairs) <= 0.5 x natural",
+   "ppl_stabilized": "R_SD <= 0.5 (descriptive only: 4 singleton perturbations + 1 exact null)",
+   "ppl_unchanged": "R_SD >= 0.75",
+   "quality_acceptable": "mean PPL - mean natural PPL <= 0.10 x (mean natural PPL - BF16 PPL)",
+   "hypothesis_C": "code_stabilized AND functional_stabilized AND ppl_stabilized AND quality_acceptable",
+   "hypothesis_D": "code_stabilized AND (ppl_unchanged OR NOT quality_acceptable)",
+   "otherwise": "intermediate"
+  },
+  "statistical_limitation": "5 groupings = 4 singleton-row perturbations + 1 exact null; SDs are descriptive"
+ },
+ "artifacts": {
+  "cache": "/home/kaixuan6/moe_cache_actorder_functional_stability",
+  "activations": "/home/kaixuan6/moe_cache_actorder_functional_stability/act",
+  "ao_weights": "/home/kaixuan6/moe_cache_actorder_functional_stability/ao/<policy>/<config>/L<l>.pt"
+ },
+ "code_sha256_at_freeze": {
+  "moe_calib/functional_diff.py": "217f0a5233f69249a91fad55402ec91ed9e407b54cb1896a359a4e659a614791",
+  "moe_calib/actorder_policy.py": "c9aebb5d65e677b52d6e635131dd564d7930b59d30812fa86c06fbda4f997f2a",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/dense_gptq.py": "f030e490a5b5972903063246491bf8adb78501173baa34aaba2c1023169b2f4c",
+  "moe_calib/code_spatial.py": "ebc0b587527575c022171c8879c8d875e91b75303d03ef477ab41e50b3a9b5b1",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "diagnostics/actorder_functional_stability.py": "da51766953a0be1a5e3ea1d1505eb6ab01dc0c2917cb2359b177ab4c45348b2e"
+ },
+ "protocol_sha256": "d6202dc2b91f5cd3ef90cabd94d18fd5d1e0b0e2f07805ef501d39067ca38df2",
+ "created": "2026-11-15 04:42:26"
+}

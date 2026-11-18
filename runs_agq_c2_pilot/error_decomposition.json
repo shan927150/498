@@ -1,0 +1,87 @@
+{
+ "note": "normalized by the same q=0 total; deltas are fractions of condition-A total error",
+ "layers": {
+  "8": {
+   "A_q0": {
+    "total": 3322.2662586116157,
+    "diag": 3322.203885944635,
+    "cross": 0.062372666979590013,
+    "cross_sign": "+",
+    "cross_fraction": 1.8774132512080993e-05,
+    "diag_rel": 0.00717306370315918,
+    "cross_rel": 1.3467057680396328e-07,
+    "reconstruction_rel_residual": 2.84877038516729e-16,
+    "delta_diag_vs_A": 0.0,
+    "delta_cross_vs_A": 0.0,
+    "delta_total_vs_A": 0.0
+   },
+   "B_q1_subset": {
+    "total": 3322.135681561549,
+    "diag": 3322.190259101729,
+    "cross": -0.054577540181335586,
+    "cross_sign": "-",
+    "cross_fraction": -1.642845007332204e-05,
+    "diag_rel": 0.007173034281059997,
+    "cross_rel": -1.1783989963371386e-07,
+    "reconstruction_rel_residual": 3.532529739226352e-16,
+    "delta_diag_vs_A": -4.101670921364671e-06,
+    "delta_cross_vs_A": -3.520193688804444e-05,
+    "delta_total_vs_A": -3.930360780934074e-05
+   },
+   "C_q2_subset": {
+    "total": 3325.5385665882227,
+    "diag": 3325.384222470836,
+    "cross": 0.15434411738732187,
+    "cross_sign": "+",
+    "cross_fraction": 4.641176588298252e-05,
+    "diag_rel": 0.007179930457062045,
+    "cross_rel": 3.332487180907441e-07,
+    "reconstruction_rel_residual": 1.871466108624173e-16,
+    "delta_diag_vs_A": 0.0009572792421309006,
+    "delta_cross_vs_A": 2.7683347224002144e-05,
+    "delta_total_vs_A": 0.0009849625893544305
+   }
+  },
+  "16": {
+   "A_q0": {
+    "total": 40725.439493211394,
+    "diag": 40726.35432233662,
+    "cross": -0.9148291252177837,
+    "cross_sign": "-",
+    "cross_fraction": -2.246333340049721e-05,
+    "diag_rel": 0.007090751720105197,
+    "cross_rel": -1.5927834202637166e-07,
+    "reconstruction_rel_residual": 2.4343404678659976e-16,
+    "delta_diag_vs_A": 0.0,
+    "delta_cross_vs_A": 0.0,
+    "delta_total_vs_A": 0.0
+   },
+   "B_q1_subset": {
+    "total": 40721.41791403247,
+    "diag": 40722.50295192868,
+    "cross": -1.0850378962015195,
+    "cross_sign": "-",
+    "cross_fraction": -2.6645385936515215e-05,
+    "diag_rel": 0.007090081168768127,
+    "cross_rel": -1.8891291540550615e-07,
+    "reconstruction_rel_residual": 2.8634686561380614e-16,
+    "delta_diag_vs_A": -9.456915519793925e-05,
+    "delta_cross_vs_A": -4.179421342085411e-06,
+    "delta_total_vs_A": -9.874857654006756e-05
+   },
+   "C_q2_subset": {
+    "total": 40750.66558934446,
+    "diag": 40752.73847687039,
+    "cross": -2.0728875259268222,
+    "cross_sign": "-",
+    "cross_fraction": -5.086757469965947e-05,
+    "diag_rel": 0.007095345391506844,
+    "cross_rel": -3.6090465337794377e-07,
+    "reconstruction_rel_residual": 8.111170556630871e-17,
+    "delta_diag_vs_A": 0.0006478543844362674,
+    "delta_cross_vs_A": -2.8435749622839e-05,
+    "delta_total_vs_A": 0.0006194186348135907
+   }
+  }
+ }
+}

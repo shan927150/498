@@ -1,0 +1,156 @@
+{
+ "layers": {
+  "8": {
+   "GPTQ": {
+    "lean": 0.007173198373874861,
+    "historical": 0.00717319837387486,
+    "exact": false,
+    "rel_diff": 2.220446049250313e-16,
+    "native": 0.007193882220529877,
+    "native_historical": 0.007193882220529877,
+    "native_rel_diff": 0.0,
+    "per_seq_exact": true
+   },
+   "AGQ": {
+    "lean": 0.00717791746996035,
+    "historical": 0.00717791746996035,
+    "exact": true,
+    "rel_diff": 0.0,
+    "native": 0.007198314540181958,
+    "native_historical": 0.007198314540181958,
+    "native_rel_diff": 0.0,
+    "per_seq_exact": true
+   },
+   "expert_unweighted_full_output_mean60": {
+    "GPTQ": 0.0179523109985363,
+    "AGQ": 0.018101594008661404,
+    "GPTQ_hist": 0.0179523109985363,
+    "AGQ_hist": 0.018101594008661404,
+    "max_rel_diff": 0.0
+   },
+   "weights": {
+    "gptq_file_sha_match": true,
+    "agq_file_sha_match": true,
+    "expert_hashes_match_audit": true,
+    "n_experts": [
+     60,
+     60
+    ],
+    "candidates_differ_every_expert": true,
+    "candidates_differ_from_bf16": true,
+    "shapes_match_model": true
+   },
+   "meta": {
+    "split": "oldtest",
+    "layer": 8,
+    "n_seqs": 128,
+    "tokens": 65536,
+    "lean_s": 44.93860077857971,
+    "native_s": 8.771012783050537,
+    "pristine_restored": true,
+    "install_all_three_from_same_candidate_and_shared_untouched": true,
+    "accumulator_check": {
+     "GPTQ": {
+      "accumulator": 0.00717319837387486,
+      "lean": 0.007173198373874861,
+      "equal": false,
+      "abs_diff": 8.673617379884035e-19
+     },
+     "AGQ": {
+      "accumulator": 0.00717791746996035,
+      "lean": 0.00717791746996035,
+      "equal": true,
+      "abs_diff": 0.0
+     }
+    },
+    "decomposition_identity_max_rel": 1.3678866878499386e-16,
+    "decomposition_vs_err_max_rel": 1.936039131003234e-11
+   },
+   "passed": true
+  },
+  "16": {
+   "GPTQ": {
+    "lean": 0.007090592442089353,
+    "historical": 0.007090592442089351,
+    "exact": false,
+    "rel_diff": 2.220446049250313e-16,
+    "native": 0.0071182441958924725,
+    "native_historical": 0.0071182441958924725,
+    "native_rel_diff": 0.0,
+    "per_seq_exact": true
+   },
+   "AGQ": {
+    "lean": 0.0068713013268671755,
+    "historical": 0.006871301326867174,
+    "exact": false,
+    "rel_diff": 2.220446049250313e-16,
+    "native": 0.006898216154827908,
+    "native_historical": 0.006898216154827908,
+    "native_rel_diff": 0.0,
+    "per_seq_exact": true
+   },
+   "expert_unweighted_full_output_mean60": {
+    "GPTQ": 0.016264776536176535,
+    "AGQ": 0.016381148424805436,
+    "GPTQ_hist": 0.016264776536176535,
+    "AGQ_hist": 0.016381148424805436,
+    "max_rel_diff": 0.0
+   },
+   "weights": {
+    "gptq_file_sha_match": true,
+    "agq_file_sha_match": true,
+    "expert_hashes_match_audit": true,
+    "n_experts": [
+     60,
+     60
+    ],
+    "candidates_differ_every_expert": true,
+    "candidates_differ_from_bf16": true,
+    "shapes_match_model": true
+   },
+   "meta": {
+    "split": "oldtest",
+    "layer": 16,
+    "n_seqs": 128,
+    "tokens": 65536,
+    "lean_s": 43.23947501182556,
+    "native_s": 5.500815391540527,
+    "pristine_restored": true,
+    "install_all_three_from_same_candidate_and_shared_untouched": true,
+    "accumulator_check": {
+     "GPTQ": {
+      "accumulator": 0.007090592442089351,
+      "lean": 0.007090592442089353,
+      "equal": false,
+      "abs_diff": 1.734723475976807e-18
+     },
+     "AGQ": {
+      "accumulator": 0.006871301326867174,
+      "lean": 0.0068713013268671755,
+      "equal": false,
+      "abs_diff": 1.734723475976807e-18
+     }
+    },
+    "decomposition_identity_max_rel": 1.8436051390421312e-16,
+    "decomposition_vs_err_max_rel": 4.600267236758944e-11
+   },
+   "passed": true
+  }
+ },
+ "model_load_s": 25.38143801689148,
+ "seconds": 138.74407148361206,
+ "peak_gpu_gb": 9.387183104,
+ "peak_cpu_gb": 8.100612,
+ "historical_E3_reference": {
+  "GPTQ": {
+   "8": 0.00467908906486692,
+   "16": 0.005141184185083874
+  },
+  "AGQ": {
+   "8": 0.004730042464470948,
+   "16": 0.005210342681997735
+  }
+ },
+ "note_E3": "the historical E3 standard reconstruction (projection-level, first 128 dispatch rows/seq) is reproduced via the frozen weight-file hashes (identical weights => identical E3); the full-expert unweighted output error is recomputed here and must equal the historical eval",
+ "passed": true
+}

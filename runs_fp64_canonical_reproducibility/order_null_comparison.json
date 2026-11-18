@@ -1,0 +1,85 @@
+{
+ "table": [
+  {
+   "policy": "Original FP32",
+   "FR": 9.267851290916612,
+   "FC": 9.277908190612935,
+   "delta": 0.010056899696323285
+  },
+  {
+   "policy": "FP32 order 20261121",
+   "FR": 9.26779117414566,
+   "FC": 9.275570572922728,
+   "delta": 0.00777939877706757
+  },
+  {
+   "policy": "FP32 order 20261122",
+   "FR": 9.267245471458848,
+   "FC": 9.279571497761173,
+   "delta": 0.012326026302325488
+  },
+  {
+   "policy": "FP32 order 20261123",
+   "FR": 9.270494646766538,
+   "FC": 9.277078024877852,
+   "delta": 0.00658337811131382
+  },
+  {
+   "policy": "FP32 order 20261124",
+   "FR": 9.27144383165981,
+   "FC": 9.276058299035872,
+   "delta": 0.004614467376063303
+  },
+  {
+   "policy": "FP32 order 20261125",
+   "FR": 9.269601427608782,
+   "FC": 9.27845032330451,
+   "delta": 0.008848895695727776
+  },
+  {
+   "policy": "FP64 canonical",
+   "FR": 9.271421461854468,
+   "FC": 9.278550816989844,
+   "delta": 0.007129355135376159
+  }
+ ],
+ "q1_delta_inside_order_range": true,
+ "q1_delta_inside_range_incl_OO": true,
+ "q1_FR_inside_range": true,
+ "q1_FC_inside_range": true,
+ "order_range_delta": [
+  0.004614467376063303,
+  0.012326026302325488
+ ],
+ "order_range_FR": [
+  9.267245471458848,
+  9.27144383165981
+ ],
+ "order_range_FC": [
+  9.275570572922728,
+  9.279571497761173
+ ],
+ "q2_ranking_preserved": true,
+ "q3_vs_original": {
+  "FR": 0.003570170937855721,
+  "FC": 0.0006426263769085949,
+  "delta": -0.0029275445609471262
+ },
+ "q4_vs_order_mean": {
+  "FR": 0.0021061515265401454,
+  "FC": 0.001205073409416002,
+  "delta": -0.0009010781171234321
+ },
+ "order_sd": {
+  "FR": 0.0017755650255737018,
+  "FC": 0.0016624150852699087,
+  "delta": 0.002870009154129667
+ },
+ "q4_in_order_sd_units": {
+  "FR": 1.1861866483091081,
+  "FC": 0.7248932111442835,
+  "delta": -0.3139634993243375
+ },
+ "q5": "FP64 accumulation removes the accumulation-ORDER variability by construction (bitwise identical Hessians for the tested orders), so repeated canonical runs give one value; it does not reduce, and cannot measure, variability from any other execution choice",
+ "interpretation": "the canonical point is one deterministic configuration; its distance from the order mean is not an estimation error"
+}

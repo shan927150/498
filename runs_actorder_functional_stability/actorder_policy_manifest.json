@@ -1,0 +1,53 @@
+{
+ "policies": {
+  "natural": {
+   "spec": [
+    "natural",
+    null
+   ],
+   "exploratory": false
+  },
+  "fixed": {
+   "spec": [
+    "fixed",
+    null
+   ],
+   "exploratory": false
+  },
+  "bucketed8": {
+   "spec": [
+    "bucketed",
+    8
+   ],
+   "exploratory": false
+  },
+  "disabled": {
+   "spec": [
+    "disabled",
+    null
+   ],
+   "exploratory": false
+  },
+  "bucketed6": {
+   "spec": [
+    "bucketed",
+    6
+   ],
+   "exploratory": true
+  },
+  "bucketed10": {
+   "spec": [
+    "bucketed",
+    10
+   ],
+   "exploratory": true
+  }
+ },
+ "definitions": {
+  "natural": "argsort(diag H, descending) inside the solver (historical); reused after bitwise re-solve parity",
+  "fixed": "actorder_override = the ORIGINAL configuration's natural permutation for that projection (computed from the ORIGINAL Hessian); grouping Hessians, scales, zero-points, error feedback stay live. Cost: requires the reference calibration execution (one extra Hessian pass + argsort) and storage of 12 permutations; NOT reference-free",
+  "bucketed": "actorder_override = moe_calib.actorder_policy.bucketed_perm(own H, bits): float64 frexp mantissa truncated to bits significant bits (floor), descending key, ties by ascending column index (numpy stable argsort, CPU); primary bits = 8 (frozen after inspecting diag(H) only: logs/audit.json diag_inspection), exploratory [6, 10]; fixed power-of-two boundaries independent of observed min/max; reference-free",
+  "disabled": "gptq_quantize(actorder=False): original column order, groups = consecutive original columns"
+ },
+ "weights": "/home/kaixuan6/moe_cache_actorder_functional_stability/ao/<policy>/<config>/L<l>.pt"
+}

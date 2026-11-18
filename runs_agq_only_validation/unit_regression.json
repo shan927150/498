@@ -1,0 +1,51 @@
+{
+ "GPTQ_rerun": {
+  "mode": "none",
+  "weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "ppl": 9.269003962169808,
+  "recon": 0.0046094692935882,
+  "weights_exact": true,
+  "ppl_exact": true,
+  "recon_exact": true,
+  "per_window_nll_exact": true,
+  "per_expert_exact": true,
+  "valid": true,
+  "cost": {
+   "quantize_total_s": 346.8168659210205,
+   "hessian_s": 36.904542684555054,
+   "gptq_s": 247.0320384502411,
+   "other_s": 62.880284786224365,
+   "peak_gpu_gb": 8.417724416,
+   "peak_cpu_gb": 42.401764
+  },
+  "passed": true
+ },
+ "UNIT_affinity": {
+  "mode": "unit_affinity",
+  "weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "ppl": 9.269003962169808,
+  "recon": 0.0046094692935882,
+  "weights_exact": true,
+  "ppl_exact": true,
+  "recon_exact": true,
+  "per_window_nll_exact": true,
+  "per_expert_exact": true,
+  "valid": true,
+  "cost": {
+   "quantize_total_s": 367.7283282279968,
+   "hessian_s": 40.736236810684204,
+   "gptq_s": 264.5290105342865,
+   "other_s": 62.46308088302612,
+   "peak_gpu_gb": 8.417806848,
+   "peak_cpu_gb": 42.539692
+  },
+  "passed": true
+ },
+ "reference": {
+  "config": "FR_s0",
+  "weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "ppl": 9.269003962169808,
+  "recon": 0.0046094692935882
+ },
+ "passed": true
+}

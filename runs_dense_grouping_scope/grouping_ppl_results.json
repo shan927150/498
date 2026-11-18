@@ -1,0 +1,51 @@
+{
+ "bf16": {
+  "ppl": 12.523450907020594
+ },
+ "configs": {
+  "G20261111": {
+   "ppl": 12.6186464497797,
+   "mean_nll": 2.535175596985287,
+   "ppl_minus_ref": 0.0,
+   "ppl_minus_bf16": 0.09519554275910558,
+   "installed_weights_sha256": "3a4a82f056582575ff55a2c2d3e4a150102492922330166a5de4753065b3799f"
+  },
+  "G20261112": {
+   "ppl": 12.611615181836342,
+   "mean_nll": 2.5346182291523216,
+   "ppl_minus_ref": -0.007031267943357733,
+   "ppl_minus_bf16": 0.08816427481574785,
+   "installed_weights_sha256": "3c0131b58129b55f63c8f75d65f8902b9b133a3ca6af15f1e8fa3c00468be3d3"
+  },
+  "G20261113": {
+   "ppl": 12.6229451312756,
+   "mean_nll": 2.535516200035111,
+   "ppl_minus_ref": 0.00429868149590007,
+   "ppl_minus_bf16": 0.09949422425500565,
+   "installed_weights_sha256": "046a794ef0e1bbd1cdf4bcddd98f88b8b24d3d0370b027f92b193e6795156067"
+  },
+  "G20261114": {
+   "ppl": 12.61684377623969,
+   "mean_nll": 2.535032728863691,
+   "ppl_minus_ref": -0.001802673540009181,
+   "ppl_minus_bf16": 0.0933928692190964,
+   "installed_weights_sha256": "ac238612ef350cc0a6706e7967a7160aca36a1a793dd4f4990565d0703bf7136"
+  },
+  "G20261115": {
+   "ppl": 12.624145495485116,
+   "mean_nll": 2.535611289344859,
+   "ppl_minus_ref": 0.005499045705416705,
+   "ppl_minus_bf16": 0.10069458846452228,
+   "installed_weights_sha256": "380b9fcab1a7eb8789ceedbd2d07c382fa50893ad6a725c4a48d001d2e07e895"
+  },
+  "ORIGINAL": {
+   "ppl": 12.624145495485116,
+   "mean_nll": 2.535611289344859,
+   "ppl_minus_ref": 0.005499045705416705,
+   "ppl_minus_bf16": 0.10069458846452228,
+   "installed_weights_sha256": "380b9fcab1a7eb8789ceedbd2d07c382fa50893ad6a725c4a48d001d2e07e895"
+  }
+ },
+ "reference_grouping": "G20261111",
+ "note": "ORIGINAL is the cache_inputs.py batching reference (descriptive; not one of the 5 groupings)"
+}

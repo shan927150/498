@@ -1,0 +1,25 @@
+{
+ "checks": {
+  "audit_all_valid": true,
+  "no_duplicates": true,
+  "no_missing_runs": true,
+  "A_natural_parity_all_bitwise": true,
+  "B_record_only": true,
+  "C_self_forcing": true,
+  "D_bf16_self_forcing": true,
+  "E_frozen_dispatch": true,
+  "F_restoration": true,
+  "end_untouched_params_unchanged": true,
+  "end_targets_pristine": true,
+  "end_gates_unchanged": true,
+  "end_no_hooks": true,
+  "end_bf16_bitwise": true,
+  "reference_routing_sha_verified": true,
+  "gptq_solves": 0,
+  "token_nll_sums_reproduce_window_nll": true,
+  "targeted_tests_pass": true,
+  "family_A_artifacts_unchanged": true
+ },
+ "all_pass": true,
+ "missing": []
+}

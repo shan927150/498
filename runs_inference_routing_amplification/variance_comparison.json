@@ -1,0 +1,87 @@
+{
+ "sd_delta_natural": 0.002870009154129667,
+ "sd_delta_frozen": 0.0010315052372119947,
+ "R_SD": 0.35940834395171106,
+ "sd_FR_natural": 0.0017755650255737018,
+ "sd_FR_frozen": 0.0007461688925583452,
+ "sd_FC_natural": 0.0016624150852699087,
+ "sd_FC_frozen": 0.0007719825524606229,
+ "mean_delta_natural": 0.00803043325249959,
+ "mean_delta_frozen": 0.008222371324019661,
+ "change_in_mean_delta": 0.00019193807152007025,
+ "range_delta_natural": [
+  0.004614467376063303,
+  0.012326026302325488
+ ],
+ "range_delta_frozen": [
+  0.007072521430080414,
+  0.009849679486185536
+ ],
+ "n_positive_delta_natural": 5,
+ "n_positive_delta_frozen": 5,
+ "sign_stable_natural": true,
+ "sign_stable_frozen": true,
+ "sd_delta_g": 0.0034840202447288353,
+ "mean_delta_g": -0.00019193807152007025,
+ "historical_sd_delta_natural": 0.002870009154129667,
+ "natural_sd_equals_historical": true,
+ "mean_FR_natural_minus_frozen": -0.00010041739213662026,
+ "mean_FC_natural_minus_frozen": -0.0002923554636566905,
+ "note": "sample SD (ddof=1) over 5 deterministic orders of one seed; screening statistic, not a test; the SD difference is not an additive variance contribution",
+ "disagreement_vs_natural_minus_frozen": {
+  "rows": [
+   {
+    "config": "FR_O20261121",
+    "frac_set_changed": 0.08947372436523438,
+    "natural_minus_frozen": -0.0006191286946020114
+   },
+   {
+    "config": "FC_O20261121",
+    "frac_set_changed": 0.08777046203613281,
+    "natural_minus_frozen": -0.002689409403719978
+   },
+   {
+    "config": "FR_O20261122",
+    "frac_set_changed": 0.08936246484518051,
+    "natural_minus_frozen": -0.002025745139510704
+   },
+   {
+    "config": "FC_O20261122",
+    "frac_set_changed": 0.08767000585794449,
+    "natural_minus_frozen": 0.00322775973273437
+   },
+   {
+    "config": "FR_O20261123",
+    "frac_set_changed": 0.08935991674661636,
+    "natural_minus_frozen": 0.00017648153458083016
+   },
+   {
+    "config": "FC_O20261123",
+    "frac_set_changed": 0.08780479431152344,
+    "natural_minus_frozen": -0.0010499559661880653
+   },
+   {
+    "config": "FR_O20261124",
+    "frac_set_changed": 0.08950106054544449,
+    "natural_minus_frozen": 0.002322856903781201
+   },
+   {
+    "config": "FC_O20261124",
+    "frac_set_changed": 0.08782132714986801,
+    "natural_minus_frozen": -0.0014907314395244953
+   },
+   {
+    "config": "FR_O20261125",
+    "frac_set_changed": 0.08949343115091324,
+    "natural_minus_frozen": -0.0003565515649324169
+   },
+   {
+    "config": "FC_O20261125",
+    "frac_set_changed": 0.08772913366556168,
+    "natural_minus_frozen": 0.0005405597584147159
+   }
+  ],
+  "spearman_abs": -0.29696969696969694,
+  "note": "descriptive, n = 10"
+ }
+}

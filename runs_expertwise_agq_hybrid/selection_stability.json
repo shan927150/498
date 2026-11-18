@@ -1,0 +1,47 @@
+{
+ "layers": {
+  "8": {
+   "n_seq_half": [
+    64,
+    64
+   ],
+   "agreement_halves": 0.48333333333333334,
+   "agreement_half_a_vs_full": 0.7333333333333333,
+   "agreement_half_b_vs_full": 0.75,
+   "n_agq_half_a": 30,
+   "n_agq_half_b": 27,
+   "n_agq_full": 30,
+   "pearson_rel_improvement_halves": 0.1963522955170149,
+   "spearman_rel_improvement_halves": 0.10669630452903586
+  },
+  "16": {
+   "n_seq_half": [
+    64,
+    64
+   ],
+   "agreement_halves": 0.7833333333333333,
+   "agreement_half_a_vs_full": 0.9333333333333333,
+   "agreement_half_b_vs_full": 0.85,
+   "n_agq_half_a": 46,
+   "n_agq_half_b": 49,
+   "n_agq_full": 46,
+   "pearson_rel_improvement_halves": 0.9908179784738913,
+   "spearman_rel_improvement_halves": 0.5265351486524036
+  }
+ },
+ "pooled": {
+  "n_seq_half": [
+   64,
+   64
+  ],
+  "agreement_halves": 0.6333333333333333,
+  "agreement_half_a_vs_full": 0.8333333333333334,
+  "agreement_half_b_vs_full": 0.8,
+  "n_agq_half_a": 76,
+  "n_agq_half_b": 76,
+  "n_agq_full": 76,
+  "pearson_rel_improvement_halves": 0.9842415672136384,
+  "spearman_rel_improvement_halves": 0.44145426765747614
+ },
+ "note": "diagnostic only; the frozen primary rule uses the full tuning split and is NOT modified"
+}

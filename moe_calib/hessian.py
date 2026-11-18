@@ -67,13 +67,27 @@ class BlockHessianAccumulator:
                     self.raw_n[k] = torch.zeros(K, dtype=torch.float64)
 
     @torch.no_grad()
-    def add(self, key: Key, X: torch.Tensor, block: int, weight: float = 1.0):
-        """X: [t, d] activations routed to this expert (any float dtype)."""
+    def add(self, key: Key, X: torch.Tensor, block: int, weight: float = 1.0,
+            row_weight: torch.Tensor | None = None):
+        """X: [t, d] activations routed to this expert (any float dtype).
+
+        row_weight (default None = unchanged standard GPTQ path): optional [t] non-negative per-row weights
+        c_i (AGQ router affinity, MoEQuant Eq. 18/19). The contribution becomes sum_i c_i x_i x_i^T, formed as
+        (sqrt(c) * X)^T (sqrt(c) * X) exactly like the official code (inp * sqrt(s)), i.e. weight c, NOT c^2.
+        Token counts (n, raw_n) are unchanged: GPTQ here uses the raw sum and relative damping, which are
+        invariant to a global positive scale, so no extra normalization is introduced."""
         if X.numel() == 0:
             return
         # compute X^T X on whatever GPU this layer lives on (multi-GPU safe),
         # then move the d x d result to the storage device
         Xf = X.to(torch.float32) if X.is_cuda else X.to(self.device, torch.float32)
+        if row_weight is not None:
+            c = row_weight.to(Xf.device, torch.float32).reshape(-1)
+            if c.shape[0] != Xf.shape[0]:
+                raise ValueError(f"row_weight has {c.shape[0]} entries for {Xf.shape[0]} activation rows")
+            if not bool(torch.isfinite(c).all()) or bool((c < 0).any()):
+                raise ValueError("row_weight must be finite and non-negative")
+            Xf = Xf * c.sqrt().unsqueeze(1)
         outer = Xf.T @ Xf                       # [d, d]
         if weight != 1.0:
             outer *= weight

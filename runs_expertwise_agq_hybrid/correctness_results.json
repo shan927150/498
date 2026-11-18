@@ -1,0 +1,119 @@
+{
+ "checks": {
+  "01_gptq_candidates_match_historical_q0": true,
+  "02_agq_candidates_match_historical_q1": true,
+  "03_same_frozen_calibration_manifest": true,
+  "04_router_coefficients_identical_across_methods": true,
+  "05_top4_routing_unchanged": true,
+  "06_only_routed_expert_weights_replaced": true,
+  "07_shared_expert_untouched": true,
+  "08_each_expert_all_three_projections_same_candidate": true,
+  "09_no_mixed_candidate_tensors": true,
+  "10_pristine_weights_restored": true,
+  "11_manifest_fully_determines_hybrid": true,
+  "12_no_test_data_used_for_selection": true,
+  "13_layer_evaluator_matches_validated_accumulator": true,
+  "14_D_plus_C_reproduces_total": true,
+  "15_historical_uniform_errors_reproduced": true
+ },
+ "evidence": {
+  "router_note": "the native BF16 forward asserts torch.equal on router logits for every window and configuration; all configurations share the same routing/c tensors within one pass (checks 04/05)",
+  "confirm_gptq_vs_legacy": {
+   "8": {
+    "now": 0.007096579799022389,
+    "legacy": 0.007096579799022389
+   },
+   "16": {
+    "now": 0.007029577300910511,
+    "legacy": 0.007029577300910511
+   }
+  },
+  "oldtest_regression": {
+   "8": {
+    "GPTQ": {
+     "lean": 0.007173198373874861,
+     "historical": 0.00717319837387486,
+     "exact": false,
+     "rel_diff": 2.220446049250313e-16,
+     "native": 0.007193882220529877,
+     "native_historical": 0.007193882220529877,
+     "native_rel_diff": 0.0,
+     "per_seq_exact": true
+    },
+    "AGQ": {
+     "lean": 0.00717791746996035,
+     "historical": 0.00717791746996035,
+     "exact": true,
+     "rel_diff": 0.0,
+     "native": 0.007198314540181958,
+     "native_historical": 0.007198314540181958,
+     "native_rel_diff": 0.0,
+     "per_seq_exact": true
+    }
+   },
+   "16": {
+    "GPTQ": {
+     "lean": 0.007090592442089353,
+     "historical": 0.007090592442089351,
+     "exact": false,
+     "rel_diff": 2.220446049250313e-16,
+     "native": 0.0071182441958924725,
+     "native_historical": 0.0071182441958924725,
+     "native_rel_diff": 0.0,
+     "per_seq_exact": true
+    },
+    "AGQ": {
+     "lean": 0.0068713013268671755,
+     "historical": 0.006871301326867174,
+     "exact": false,
+     "rel_diff": 2.220446049250313e-16,
+     "native": 0.006898216154827908,
+     "native_historical": 0.006898216154827908,
+     "native_rel_diff": 0.0,
+     "per_seq_exact": true
+    }
+   }
+  },
+  "accumulator_check_confirm": {
+   "8": {
+    "GPTQ": {
+     "accumulator": 0.00709657979902239,
+     "lean": 0.007096579799022389,
+     "equal": false,
+     "abs_diff": 1.734723475976807e-18
+    },
+    "AGQ": {
+     "accumulator": 0.007102910288181127,
+     "lean": 0.007102910288181121,
+     "equal": false,
+     "abs_diff": 6.071532165918825e-18
+    }
+   },
+   "16": {
+    "GPTQ": {
+     "accumulator": 0.0070295773009105165,
+     "lean": 0.007029577300910511,
+     "equal": false,
+     "abs_diff": 5.204170427930421e-18
+    },
+    "AGQ": {
+     "accumulator": 0.0068107337414719344,
+     "lean": 0.006810733741471928,
+     "equal": false,
+     "abs_diff": 6.071532165918825e-18
+    }
+   }
+  },
+  "manifest_frozen_before_tests": {
+   "manifest_mtime": "Fri Nov 13 02:10:26 2026",
+   "first_test_result": "Fri Nov 13 02:12:59 2026"
+  },
+  "tests": {
+   "hybrid": "13 passed in 0.78s",
+   "hybrid_passed": true,
+   "all": "575 passed, 1 warning in 306.25s (0:05:06)",
+   "all_passed": true
+  }
+ },
+ "passed": true
+}

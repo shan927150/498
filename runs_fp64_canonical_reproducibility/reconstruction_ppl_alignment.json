@@ -1,0 +1,143 @@
+{
+ "grouping_configs": {
+  "s0_G20261111": {
+   "seed": 0,
+   "grouping": 20261111,
+   "recon_penalty_rel": 0.02544510184051876,
+   "delta_ppl": -0.0040691312519403056,
+   "layer_output_penalty": null
+  },
+  "s0_G20261112": {
+   "seed": 0,
+   "grouping": 20261112,
+   "recon_penalty_rel": 0.025586795517294293,
+   "delta_ppl": 0.007601468743024142,
+   "layer_output_penalty": null
+  },
+  "s0_G20261113": {
+   "seed": 0,
+   "grouping": 20261113,
+   "recon_penalty_rel": 0.02551508762816834,
+   "delta_ppl": -0.005888685361876256,
+   "layer_output_penalty": null
+  },
+  "s0_G20261114": {
+   "seed": 0,
+   "grouping": 20261114,
+   "recon_penalty_rel": 0.02555866715677279,
+   "delta_ppl": -0.008394269300051604,
+   "layer_output_penalty": null
+  },
+  "s0_G20261115": {
+   "seed": 0,
+   "grouping": 20261115,
+   "recon_penalty_rel": 0.02554181039169793,
+   "delta_ppl": 0.001091315979735441,
+   "layer_output_penalty": null
+  },
+  "s1_G20261111": {
+   "seed": 1,
+   "grouping": 20261111,
+   "recon_penalty_rel": 0.02195855973841933,
+   "delta_ppl": -0.0005266762392182045,
+   "layer_output_penalty": null
+  },
+  "s1_G20261112": {
+   "seed": 1,
+   "grouping": 20261112,
+   "recon_penalty_rel": 0.022020382049667057,
+   "delta_ppl": -0.003677348635330091,
+   "layer_output_penalty": null
+  },
+  "s1_G20261113": {
+   "seed": 1,
+   "grouping": 20261113,
+   "recon_penalty_rel": 0.021877532188712204,
+   "delta_ppl": 0.0029607233652608755,
+   "layer_output_penalty": null
+  },
+  "s1_G20261114": {
+   "seed": 1,
+   "grouping": 20261114,
+   "recon_penalty_rel": 0.0219146561586484,
+   "delta_ppl": 0.008505116411969382,
+   "layer_output_penalty": null
+  },
+  "s1_G20261115": {
+   "seed": 1,
+   "grouping": 20261115,
+   "recon_penalty_rel": 0.021944167015076885,
+   "delta_ppl": -0.003825823680646323,
+   "layer_output_penalty": null
+  },
+  "s2_G20261111": {
+   "seed": 2,
+   "grouping": 20261111,
+   "recon_penalty_rel": 0.027084521943886438,
+   "delta_ppl": 0.009934220514541181,
+   "layer_output_penalty": null
+  },
+  "s2_G20261112": {
+   "seed": 2,
+   "grouping": 20261112,
+   "recon_penalty_rel": 0.026986690022511254,
+   "delta_ppl": 0.0006963034583176153,
+   "layer_output_penalty": null
+  },
+  "s2_G20261113": {
+   "seed": 2,
+   "grouping": 20261113,
+   "recon_penalty_rel": 0.027113401510851634,
+   "delta_ppl": -0.013548852228240094,
+   "layer_output_penalty": null
+  },
+  "s2_G20261114": {
+   "seed": 2,
+   "grouping": 20261114,
+   "recon_penalty_rel": 0.027090128011597752,
+   "delta_ppl": -0.005040725132783308,
+   "layer_output_penalty": null
+  },
+  "s2_G20261115": {
+   "seed": 2,
+   "grouping": 20261115,
+   "recon_penalty_rel": 0.02698573381433029,
+   "delta_ppl": -0.004531279076493533,
+   "layer_output_penalty": null
+  }
+ },
+ "recon_penalty_range": [
+  0.021877532188712204,
+  0.027113401510851634
+ ],
+ "n_fc_recon_worse": 15,
+ "delta_ppl_range": [
+  -0.013548852228240094,
+  0.009934220514541181
+ ],
+ "n_fc_ppl_worse": 6,
+ "canonical": {
+  "recon_penalty": 0.025490913516681424,
+  "delta_ppl": 0.007129355135376159
+ },
+ "OO": {
+  "recon_penalty": 0.025490264810499097,
+  "delta_ppl": 0.010056899696323285
+ },
+ "layer_output_grouping_configs": "unavailable (never evaluated for the grouping weight sets; not imputed)",
+ "layer_output_canonical_b1_separate_protocol": {
+  "FC_over_FR_confirm": {
+   "0": 0.022031412915391346,
+   "1": 0.017269812329965495,
+   "2": 0.01993312833942462
+  },
+  "source": "runs_legacy_metric_reeval (CANONICAL-B1 extraction, different weights; no matched PPL exists; shown separately, never mixed)"
+ },
+ "hypotheses": [
+  "local objectives (expert / layer reconstruction) average over many tokens, PPL is driven by a small set of high-loss predictions",
+  "nonlinear downstream propagation through 20 BF16 layers",
+  "BF16 effective-weight and scale-bit sensitivity",
+  "different local vs model-level objectives"
+ ],
+ "note": "hypotheses only; no causal attribution to experts or tokens is measured"
+}

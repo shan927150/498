@@ -1,0 +1,142 @@
+{
+ "per_layer": {
+  "8": {
+   "layer": 8,
+   "n_alignment_checks": 7676,
+   "pooled_input_equals_router_input": true,
+   "outputs_identical_with_hooks": true,
+   "output_digest": "04909c800abc8413b6bb5d7a1d8d609738693f11dabf3ce3d6df4361cf541063",
+   "router_logits_digest": "eb8fa7543e557f080486529ac104a5e83d8a33c356e7ecd4271df86838791080",
+   "layer_weights_unchanged": true,
+   "pooled_tokens": {
+    "16": 8192.0,
+    "32": 16384.0,
+    "64": 32768.0,
+    "128": 65536.0
+   },
+   "pooled_tokens_ok": true,
+   "pooled_split_rel": 3.7474407577064994e-08,
+   "routed_sum_equals_topk_times_tokens": true,
+   "expert_counts_match_routing_profile": true,
+   "d_pooled": [
+    2048,
+    2048
+   ],
+   "pooled": {
+    "16": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.0001383937880193558,
+     "psd_ok": true,
+     "trace_per_token": 1196.7085835635662
+    },
+    "32": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.0002091865033992001,
+     "psd_ok": true,
+     "trace_per_token": 1203.646586060524
+    },
+    "64": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.00027673886235774083,
+     "psd_ok": true,
+     "trace_per_token": 1214.2077023386955
+    },
+    "128": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.00030106487885781663,
+     "psd_ok": true,
+     "trace_per_token": 1209.8064935803413
+    }
+   },
+   "expert_split_rel_max": 4.6386411156618124e-08,
+   "drift_stats_equal_early_stop_bitwise": true,
+   "B128_weights_equal_historical": true,
+   "e3_oldtest_equal_early_stop": true,
+   "replay_s": 9.098980188369751,
+   "peak_gpu_gb": 7.829948928,
+   "peak_rss_gb": 13.255152,
+   "store_sha256": "d6ef62b1fdd7f7b8de637005f59d6293bb428b367676219d151d64f434e5d15d"
+  },
+  "16": {
+   "layer": 16,
+   "n_alignment_checks": 7679,
+   "pooled_input_equals_router_input": true,
+   "outputs_identical_with_hooks": true,
+   "output_digest": "2724afcb40b36204d8390716fdb486c0f7120452334c209359f3264ce1d57be9",
+   "router_logits_digest": "7a7376b2ab56f8e2f1bba84aafdaefa42c347e603ae72ff5d6fe7fb61752f32f",
+   "layer_weights_unchanged": true,
+   "pooled_tokens": {
+    "16": 8192.0,
+    "32": 16384.0,
+    "64": 32768.0,
+    "128": 65536.0
+   },
+   "pooled_tokens_ok": true,
+   "pooled_split_rel": 3.6833373684430626e-08,
+   "routed_sum_equals_topk_times_tokens": true,
+   "expert_counts_match_routing_profile": true,
+   "d_pooled": [
+    2048,
+    2048
+   ],
+   "pooled": {
+    "16": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.0001084092555813243,
+     "psd_ok": true,
+     "trace_per_token": 2412.9939298033714
+    },
+    "32": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.0001543233438492911,
+     "psd_ok": true,
+     "trace_per_token": 2427.1779160499573
+    },
+    "64": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.00018944409691205196,
+     "psd_ok": true,
+     "trace_per_token": 2433.5445828437805
+    },
+    "128": {
+     "finite": true,
+     "sym_rel": 0.0,
+     "min_eig_rel": 0.0002101779593523703,
+     "psd_ok": true,
+     "trace_per_token": 2420.78138923645
+    }
+   },
+   "expert_split_rel_max": 5.04620274455192e-08,
+   "drift_stats_equal_early_stop_bitwise": true,
+   "B128_weights_equal_historical": true,
+   "e3_oldtest_equal_early_stop": true,
+   "replay_s": 8.333427429199219,
+   "peak_gpu_gb": 7.866123776,
+   "peak_rss_gb": 15.65134,
+   "store_sha256": "29efa37c31ffde0fdd73311fa9bceb55539f15892ace6973ab75a7ca16b9c310"
+  }
+ },
+ "passed": true,
+ "checks": [
+  "pooled_input_equals_router_input",
+  "outputs_identical_with_hooks",
+  "layer_weights_unchanged",
+  "pooled_tokens_ok",
+  "routed_sum_equals_topk_times_tokens",
+  "expert_counts_match_routing_profile",
+  "drift_stats_equal_early_stop_bitwise",
+  "B128_weights_equal_historical",
+  "e3_oldtest_equal_early_stop",
+  "pooled_split_rel < 1e-5",
+  "expert_split_rel_max < 1e-5",
+  "alignment checks > 0",
+  "pooled finite / symmetric / PSD"
+ ]
+}

@@ -1,0 +1,323 @@
+{
+ "rows": [
+  {
+   "comparison": "s0_G20261111",
+   "delta_natural": -0.0040691312519403056,
+   "delta_frozen": 0.0007205917480082036,
+   "sign_natural": -1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": true,
+   "R1_natural": false,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": true,
+   "R2_frozen": false,
+   "R2_frozen_reference": "frozen s0 ORIGINAL",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s0_G20261112",
+   "delta_natural": 0.007601468743024142,
+   "delta_frozen": 0.009561085735709796,
+   "sign_natural": 1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": true,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": false,
+   "R2_frozen": false,
+   "R2_frozen_reference": "frozen s0 ORIGINAL",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": "FR"
+  },
+  {
+   "comparison": "s0_G20261113",
+   "delta_natural": -0.005888685361876256,
+   "delta_frozen": -0.006183217016195286,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "frozen s0 ORIGINAL",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s0_G20261114",
+   "delta_natural": -0.008394269300051604,
+   "delta_frozen": -0.007105738251055982,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "frozen s0 ORIGINAL",
+   "ci_natural_favours": "FC",
+   "ci_frozen_favours": "FC"
+  },
+  {
+   "comparison": "s0_G20261115",
+   "delta_natural": 0.001091315979735441,
+   "delta_frozen": 0.0010782342740949247,
+   "sign_natural": 1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": true,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": false,
+   "R2_frozen": false,
+   "R2_frozen_reference": "frozen s0 ORIGINAL",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s1_G20261111",
+   "delta_natural": -0.0005266762392182045,
+   "delta_frozen": -0.001661725052452212,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s1_G20261112",
+   "delta_natural": -0.003677348635330091,
+   "delta_frozen": 0.0017470394625043184,
+   "sign_natural": -1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": true,
+   "R1_natural": false,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": true,
+   "R2_frozen": false,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s1_G20261113",
+   "delta_natural": 0.0029607233652608755,
+   "delta_frozen": 0.00796964750628959,
+   "sign_natural": 1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": true,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": false,
+   "R2_frozen": false,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": "FR"
+  },
+  {
+   "comparison": "s1_G20261114",
+   "delta_natural": 0.008505116411969382,
+   "delta_frozen": 0.0086546829293912,
+   "sign_natural": 1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": true,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": false,
+   "R2_frozen": false,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": "FR",
+   "ci_frozen_favours": "FR"
+  },
+  {
+   "comparison": "s1_G20261115",
+   "delta_natural": -0.003825823680646323,
+   "delta_frozen": -0.005649679224502435,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s2_G20261111",
+   "delta_natural": 0.009934220514541181,
+   "delta_frozen": 0.007779226352507607,
+   "sign_natural": 1,
+   "sign_frozen": 1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": true,
+   "R1_frozen": false,
+   "R1_frozen_vs_natural_M": true,
+   "R2_natural": false,
+   "R2_frozen": false,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": "FR",
+   "ci_frozen_favours": "FR"
+  },
+  {
+   "comparison": "s2_G20261112",
+   "delta_natural": 0.0006963034583176153,
+   "delta_frozen": -0.00034890343777860267,
+   "sign_natural": 1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": true,
+   "R1_natural": true,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": false,
+   "R2_frozen": true,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s2_G20261113",
+   "delta_natural": -0.013548852228240094,
+   "delta_frozen": -0.008970439309701206,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": "FC",
+   "ci_frozen_favours": "FC"
+  },
+  {
+   "comparison": "s2_G20261114",
+   "delta_natural": -0.005040725132783308,
+   "delta_frozen": -0.0011604497384283263,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  },
+  {
+   "comparison": "s2_G20261115",
+   "delta_natural": -0.004531279076493533,
+   "delta_frozen": -0.0016380292042832423,
+   "sign_natural": -1,
+   "sign_frozen": -1,
+   "sign_flipped_by_freezing": false,
+   "R1_natural": false,
+   "R1_frozen": true,
+   "R1_frozen_vs_natural_M": false,
+   "R2_natural": true,
+   "R2_frozen": true,
+   "R2_frozen_reference": "natural ORIGINAL (mixed-regime; frozen unavailable)",
+   "ci_natural_favours": null,
+   "ci_frozen_favours": null
+  }
+ ],
+ "M": {
+  "natural": -0.0012475761622487388,
+  "frozen": 0.0003194884516072232
+ },
+ "original_reference_delta": {
+  "natural": {
+   "0": 0.010056899696323285,
+   "1": 0.0027064026671261843,
+   "2": 0.013069861928583393
+  },
+  "frozen_s0": 0.008738508417842183
+ },
+ "R1": {
+  "definition": "historical decision-rule definition: fraction of the 15 Delta with sign opposite to sign(M), M = mean of seed means, computed within each regime",
+  "natural": 6,
+  "frozen": 8,
+  "frozen_vs_natural_M": 7,
+  "natural_reversals_remaining": [
+   "s0_G20261112",
+   "s0_G20261115",
+   "s1_G20261113",
+   "s1_G20261114",
+   "s2_G20261111"
+  ]
+ },
+ "R2": {
+  "definition": "fp64 mechanism-table definition: Delta[s,g] sign vs the same seed's ORIGINAL-extraction Delta sign; frozen: seed 0 vs frozen ORIGINAL; seeds 1/2 frozen ORIGINAL unavailable -> reported as vs natural ORIGINAL sign, labelled mixed-regime",
+  "natural": 9,
+  "frozen": 8,
+  "frozen_seed0_only": 2,
+  "natural_seed0_only": 3,
+  "natural_reversals_remaining": [
+   "s0_G20261113",
+   "s0_G20261114",
+   "s1_G20261111",
+   "s1_G20261115",
+   "s2_G20261113",
+   "s2_G20261114",
+   "s2_G20261115"
+  ]
+ },
+ "n_sign_flipped_by_freezing": 3,
+ "ci": {
+  "natural_excluding_zero": {
+   "FR": 2,
+   "FC": 2
+  },
+  "frozen_excluding_zero": {
+   "FR": 4,
+   "FC": 2
+  },
+  "mean_width_natural": 0.0019035000404911532,
+  "mean_width_frozen": 0.0015928851781689692,
+  "s0_ORIGINAL": {
+   "natural": {
+    "point": 0.001084549887765185,
+    "ci95": [
+     0.00020197562408030834,
+     0.0020038672419037335
+    ],
+    "width": 0.0018018916178234251,
+    "n_boot": 5000,
+    "seed": 20261109,
+    "favours": "FR"
+   },
+   "frozen": {
+    "point": 0.0009422176150932771,
+    "ci95": [
+     0.00024508922321033746,
+     0.0016632830138977206
+    ],
+    "width": 0.001418193790687383,
+    "n_boot": 5000,
+    "seed": 20261109,
+    "favours": "FR"
+   }
+  },
+  "note": "window CIs condition on one fixed weight pair (evaluation-text uncertainty); they do not sample grouping (execution) variability"
+ }
+}

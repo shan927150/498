@@ -1,0 +1,293 @@
+{
+ "study": "GPTQ integer-code sensitivity: dense spatial structure (A) and MoE Family D integer codes (C)",
+ "dense": {
+  "source": "runs_dense_grouping_scope",
+  "layers": [
+   1,
+   9,
+   19,
+   27
+  ],
+  "primary_pairs": [
+   [
+    "G20261111",
+    "ORIGINAL"
+   ],
+   [
+    "G20261112",
+    "ORIGINAL"
+   ],
+   [
+    "G20261113",
+    "ORIGINAL"
+   ],
+   [
+    "G20261114",
+    "ORIGINAL"
+   ]
+  ],
+  "null_pair": [
+   "G20261115",
+   "ORIGINAL"
+  ],
+  "secondary_pairs": [
+   [
+    "G20261111",
+    "G20261112"
+   ],
+   [
+    "G20261111",
+    "G20261113"
+   ],
+   [
+    "G20261111",
+    "G20261114"
+   ],
+   [
+    "G20261112",
+    "G20261113"
+   ],
+   [
+    "G20261112",
+    "G20261114"
+   ],
+   [
+    "G20261113",
+    "G20261114"
+   ]
+  ],
+  "pair_convention": "(variant, reference); G20261115 == ORIGINAL bitwise, so pairs with G20261115 other than the null are not separate comparisons (no double counting)",
+  "distinct_comparisons": "4 primary + 6 secondary = 10 distinct weight-set pairs"
+ },
+ "moe": {
+  "strategy": "FR s0",
+  "configs": [
+   "G20261111",
+   "G20261112",
+   "G20261113",
+   "G20261114",
+   "G20261115",
+   "ORIGINAL"
+  ],
+  "primary_pairs": [
+   [
+    "G20261111",
+    "ORIGINAL"
+   ],
+   [
+    "G20261112",
+    "ORIGINAL"
+   ],
+   [
+    "G20261113",
+    "ORIGINAL"
+   ],
+   [
+    "G20261114",
+    "ORIGINAL"
+   ],
+   [
+    "G20261115",
+    "ORIGINAL"
+   ]
+  ],
+  "secondary_pairs": [
+   [
+    "G20261111",
+    "G20261112"
+   ],
+   [
+    "G20261111",
+    "G20261113"
+   ],
+   [
+    "G20261111",
+    "G20261114"
+   ],
+   [
+    "G20261111",
+    "G20261115"
+   ],
+   [
+    "G20261112",
+    "G20261113"
+   ],
+   [
+    "G20261112",
+    "G20261114"
+   ],
+   [
+    "G20261112",
+    "G20261115"
+   ],
+   [
+    "G20261113",
+    "G20261114"
+   ],
+   [
+    "G20261113",
+    "G20261115"
+   ],
+   [
+    "G20261114",
+    "G20261115"
+   ]
+  ],
+  "experts_manifest_sha256": "fea983563fb67342e7efd603f451904ed66f5d425116df61297884dac9653c27",
+  "experts": [
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    30
+   ],
+   [
+    1,
+    37
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    1,
+    28
+   ],
+   [
+    8,
+    0
+   ],
+   [
+    8,
+    30
+   ],
+   [
+    8,
+    21
+   ],
+   [
+    8,
+    32
+   ],
+   [
+    8,
+    52
+   ],
+   [
+    16,
+    0
+   ],
+   [
+    16,
+    30
+   ],
+   [
+    16,
+    1
+   ],
+   [
+    16,
+    47
+   ],
+   [
+    16,
+    9
+   ],
+   [
+    23,
+    0
+   ],
+   [
+    23,
+    30
+   ],
+   [
+    23,
+    26
+   ],
+   [
+    23,
+    12
+   ],
+   [
+    23,
+    56
+   ]
+  ],
+  "replay": "Profiler(model, L, K=4).run(calibration cache, FR chosen ids [remapped to cache rows for groupings]) -> quant_eval.quantize_from_acc(..., infos) -> unchanged gptq_quantize with read-only info capture -> W_q.to(bf16) must equal the historical BF16 weights bitwise, else BLOCKED",
+  "model_load": "MOE_LOAD_LAYERS=1,8,16,23 (layer-wise replay on cached pristine inputs)"
+ },
+ "alignment": {
+  "coordinates": "original (output row, input column); q stored in original column order",
+  "execution_position": "pos[perm[p]] = p; group = pos // 128 (== lazy-batch block, blocksize 128)",
+  "dequant": "FP32 scale*(q-zero) with element grid S[r,j]=scale[group[j],r] (solver convention, verified), then .to(bfloat16) (installation cast)",
+  "separate": [
+   "code index",
+   "scale / zero",
+   "group assignment",
+   "zero-relative level q-zero",
+   "FP32 dequantized",
+   "BF16 installed"
+  ]
+ },
+ "spatial": {
+  "mask": "F[r,j] = q_a[r,j] != q_b[r,j] in original coordinates",
+  "orders": {
+   "original": "original column order, segments = contiguous 128-column blocks",
+   "ref_exec": "columns reordered by the REFERENCE's act-order, segments = its 128-position groups/blocks",
+   "var_exec": "columns reordered by the VARIANT's act-order"
+  },
+  "statistics": [
+   "p",
+   "E_d = P(F_{j+d}|F_j)/P(F_{j+d}) within segments, d in 1,2,4,...,64",
+   "cross-segment lag-128 pairs",
+   "all-flip windows L=2,3,4,8 within segment",
+   "runs, max run",
+   "inter-flip distance histogram (row, execution order)",
+   "row dispersion vs binomial",
+   "row-flip-rate strata (tertiles of rows with >=2 flips): lag-1 pairs / analytic segment-null expectation",
+   "segment-edge flips (first/last 8 positions)",
+   "flip rate in columns that changed group vs not"
+  ],
+  "null": "per (row, segment) flip counts preserved; positions uniform within the segment; torch.Generator seeds 20261201 + index; 1000 permutations for each primary dense (pair, layer, projection, order), 200 for secondary dense pairs and MoE primary pairs; analytic expectations k(k-1)(128-d)/(128*127) (segment null) and row-only null reported alongside raw E_d",
+  "first_flip_alignment": "not performed (optional; would need a matched null)"
+ },
+ "criteria": {
+  "cell": "primary dense cell = (pair, layer, projection, execution order in {ref_exec, var_exec})",
+  "clustered_cell": "E_1 obs > null 99.5 % quantile AND E_1 obs / null mean >= 1.25",
+  "boundary_cell": "segment-edge (first or last 8) flips > null 99.5 % quantile AND >= 1.25 x null mean",
+  "classification": {
+   "INCONCLUSIVE": "> 50 % of primary cells have < 200 flips",
+   "SPATIAL-CLUSTERING-SUPPORTED": ">= 75 % of primary cells clustered in BOTH execution orders and >= 50 % in every projection type",
+   "SPATIAL-CLUSTERING-NOT-DETECTED": "<= 10 % of primary cells clustered in both execution orders and < 50 % boundary cells",
+   "MIXED-SPATIAL-STRUCTURE": "otherwise (incl. projection- or layer-dependent clustering, or boundary concentration without general clustering)"
+  },
+  "code_comparison": {
+   "metric": "R_q = MoE element-weighted code-flip rate / dense element-weighted code-flip rate, matched 'grouping vs ORIGINAL' comparisons (dense 4 non-null, MoE 5), overall and per projection",
+   "rule": {
+    "A-SIMILAR-CODE-DISAGREEMENT": "R_q <= 3 overall and in every projection",
+    "B-MUCH-LARGER-MOE-CODE-DISAGREEMENT": "R_q > 3 overall and in every projection",
+    "C-PROJECTION-DEPENDENT": "otherwise"
+   },
+   "caveat": "sampled 20/240 MoE experts; Hessian perturbation magnitudes and tokens per dimension differ"
+  },
+  "causal": "no error-feedback causality from spatial association; fixed-act-order replay is a controlled check only"
+ },
+ "optional": {
+  "fixed_actorder": "dense: variant Hessian with the ORIGINAL permutation for every tensor of the 4 primary pairs; MoE: the 20 experts x 5 groupings; parity: override with the natural permutation reproduces saved weights bitwise; 200-permutation null in the (shared) execution order",
+  "feedback_test": "not performed: no safe solver variant without substantial changes (design documented)"
+ },
+ "code_sha256": {
+  "moe_calib/code_spatial.py": "ebc0b587527575c022171c8879c8d875e91b75303d03ef477ab41e50b3a9b5b1",
+  "moe_calib/dense_gptq.py": "f030e490a5b5972903063246491bf8adb78501173baa34aaba2c1023169b2f4c",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "diagnostics/integer_code_mechanism.py": "9097185255755dddf402ba8edda9bb51d5c51b281ee58b6183b0725d5d40f138"
+ },
+ "protocol_sha256": "1e59c47e286b861d648d9b524bf4c0c364c25df770c6cd7d529a58bca00ddcb9",
+ "created": "2026-11-14 20:34:50"
+}

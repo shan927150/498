@@ -1,0 +1,308 @@
+{
+ "confirm": {
+  "HYBRID_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -2.941970216311579e-07,
+     "median_window_rel_diff": -0.0003600406105447536,
+     "frac_windows_improved": 0.546875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -4.845802899360989e-05
+    },
+    "16": {
+     "mean_window_ratio_diff": -0.00021797448287104316,
+     "median_window_rel_diff": -0.03407675749061633,
+     "frac_windows_improved": 1.0,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.03078674278004172
+    }
+   },
+   "mean_rel_diff": -0.015344702239382306,
+   "boot_ci95": [
+    -0.016023324993125424,
+    -0.0146821863446355
+   ],
+   "boot_frac_a_better": 1.0,
+   "frac_windows_improved_both_layers_pooled": 0.7734375
+  },
+  "HYBRID_vs_AGQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -7.292363207823617e-06,
+     "median_window_rel_diff": -0.001292159842573612,
+     "frac_windows_improved": 0.5859375,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.0009396677076852052
+    },
+    "16": {
+     "mean_window_ratio_diff": 1.9832460211672355e-06,
+     "median_window_rel_diff": 0.0003602862139687853,
+     "frac_windows_improved": 0.4140625,
+     "frac_windows_equal": 0.0,
+     "rel_diff": 0.0003561688527419718
+    }
+   },
+   "mean_rel_diff": -0.00030535524671344226,
+   "boot_ci95": [
+    -0.0006330104072622025,
+    1.4471494175115833e-05
+   ],
+   "boot_frac_a_better": 0.967,
+   "frac_windows_improved_both_layers_pooled": 0.5
+  },
+  "HYBRID_vs_LAYERWISE": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -2.941970216311579e-07,
+     "median_window_rel_diff": -0.0003600406105447536,
+     "frac_windows_improved": 0.546875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -4.845802899360989e-05
+    },
+    "16": {
+     "mean_window_ratio_diff": 1.9832460211672355e-06,
+     "median_window_rel_diff": 0.0003602862139687853,
+     "frac_windows_improved": 0.4140625,
+     "frac_windows_equal": 0.0,
+     "rel_diff": 0.0003561688527419718
+    }
+   },
+   "mean_rel_diff": 0.00014969713218254444,
+   "boot_ci95": [
+    -0.00020729687947460928,
+    0.0005067329249139261
+   ],
+   "boot_frac_a_better": 0.2075,
+   "frac_windows_improved_both_layers_pooled": 0.48046875
+  },
+  "LAYERWISE_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": 0.0,
+     "median_window_rel_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "rel_diff": 0.0
+    },
+    "16": {
+     "mean_window_ratio_diff": -0.0002199577288922104,
+     "median_window_rel_diff": -0.03445577800132693,
+     "frac_windows_improved": 1.0,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.03113182344694283
+    }
+   },
+   "mean_rel_diff": -0.015492080251579646,
+   "boot_ci95": [
+    -0.01605235771293384,
+    -0.014889843569899468
+   ],
+   "boot_frac_a_better": 1.0,
+   "frac_windows_improved_both_layers_pooled": 0.5
+  },
+  "LAYERWISE_vs_AGQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -6.998166186192459e-06,
+     "median_window_rel_diff": -0.0012672682508927612,
+     "frac_windows_improved": 0.58203125,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.0008912528670488673
+    },
+    "16": {
+     "mean_window_ratio_diff": 0.0,
+     "median_window_rel_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "rel_diff": 0.0
+    }
+   },
+   "mean_rel_diff": -0.00045498426905572087,
+   "boot_ci95": [
+    -0.0008978343322439791,
+    -3.2018520553625246e-06
+   ],
+   "boot_frac_a_better": 0.975,
+   "frac_windows_improved_both_layers_pooled": 0.291015625
+  },
+  "AGQ_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": 6.998166186192459e-06,
+     "median_window_rel_diff": 0.0012688762766161848,
+     "frac_windows_improved": 0.41796875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": 0.0008920479073037967
+    },
+    "16": {
+     "mean_window_ratio_diff": -0.0002199577288922104,
+     "median_window_rel_diff": -0.03445577800132693,
+     "frac_windows_improved": 1.0,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.03113182344694283
+    }
+   },
+   "mean_rel_diff": -0.015043940738904735,
+   "boot_ci95": [
+    -0.015790712027250284,
+    -0.01435078322497607
+   ],
+   "boot_frac_a_better": 1.0,
+   "frac_windows_improved_both_layers_pooled": 0.708984375
+  },
+  "note": "descriptive: windows are not independent draws of the deployment distribution; bootstrap 2000 reps, seed 20261113"
+ },
+ "oldtest": {
+  "HYBRID_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -6.336654615847072e-07,
+     "median_window_rel_diff": 0.00021032000716487753,
+     "frac_windows_improved": 0.484375,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.00012712215890681131
+    },
+    "16": {
+     "mean_window_ratio_diff": -0.00021942645473792098,
+     "median_window_rel_diff": -0.035169992657533324,
+     "frac_windows_improved": 0.9921875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.030850211440366402
+    }
+   },
+   "mean_rel_diff": -0.015399703443044819,
+   "boot_ci95": [
+    -0.016322706862754492,
+    -0.014453779452345779
+   ],
+   "boot_frac_a_better": 1.0,
+   "frac_windows_improved_both_layers_pooled": 0.73828125
+  },
+  "HYBRID_vs_AGQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -6.1176224863237946e-06,
+     "median_window_rel_diff": -0.0004985777735511069,
+     "frac_windows_improved": 0.6015625,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.0007844849947924631
+    },
+    "16": {
+     "mean_window_ratio_diff": 6.704096611547222e-07,
+     "median_window_rel_diff": 5.932557603587618e-05,
+     "frac_windows_improved": 0.46875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": 7.929198856792405e-05
+    }
+   },
+   "mean_rel_diff": -0.0003620222217576422,
+   "boot_ci95": [
+    -0.0007637279406363592,
+    7.041120062744822e-05
+   ],
+   "boot_frac_a_better": 0.9465,
+   "frac_windows_improved_both_layers_pooled": 0.53515625
+  },
+  "HYBRID_vs_LAYERWISE": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -6.336654615847072e-07,
+     "median_window_rel_diff": 0.00021032000716487753,
+     "frac_windows_improved": 0.484375,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.00012712215890681131
+    },
+    "16": {
+     "mean_window_ratio_diff": 6.704096611547222e-07,
+     "median_window_rel_diff": 5.932557603587618e-05,
+     "frac_windows_improved": 0.46875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": 7.929198856792405e-05
+    }
+   },
+   "mean_rel_diff": -2.6133598570038612e-05,
+   "boot_ci95": [
+    -0.00047616397209151025,
+    0.0004433009898870114
+   ],
+   "boot_frac_a_better": 0.546,
+   "frac_windows_improved_both_layers_pooled": 0.4765625
+  },
+  "LAYERWISE_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": 0.0,
+     "median_window_rel_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "rel_diff": 0.0
+    },
+    "16": {
+     "mean_window_ratio_diff": -0.00022009686439907573,
+     "median_window_rel_diff": -0.03560581932604948,
+     "frac_windows_improved": 0.9921875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.030927051161547186
+    }
+   },
+   "mean_rel_diff": -0.015373971621677567,
+   "boot_ci95": [
+    -0.0162410258648958,
+    -0.014458375922857319
+   ],
+   "boot_frac_a_better": 1.0,
+   "frac_windows_improved_both_layers_pooled": 0.49609375
+  },
+  "LAYERWISE_vs_AGQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": -5.483957024739087e-06,
+     "median_window_rel_diff": -0.0010447142439757935,
+     "frac_windows_improved": 0.5859375,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.0006574464118928972
+    },
+    "16": {
+     "mean_window_ratio_diff": 0.0,
+     "median_window_rel_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "rel_diff": 0.0
+    }
+   },
+   "mean_rel_diff": -0.00033589740139545234,
+   "boot_ci95": [
+    -0.0008330317020776397,
+    0.00017738107771329522
+   ],
+   "boot_frac_a_better": 0.901,
+   "frac_windows_improved_both_layers_pooled": 0.29296875
+  },
+  "AGQ_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "mean_window_ratio_diff": 5.483957024739087e-06,
+     "median_window_rel_diff": 0.00104581010775184,
+     "frac_windows_improved": 0.4140625,
+     "frac_windows_equal": 0.0,
+     "rel_diff": 0.0006578789320362243
+    },
+    "16": {
+     "mean_window_ratio_diff": -0.00022009686439907573,
+     "median_window_rel_diff": -0.03560581932604948,
+     "frac_windows_improved": 0.9921875,
+     "frac_windows_equal": 0.0,
+     "rel_diff": -0.030927051161547186
+    }
+   },
+   "mean_rel_diff": -0.015043127167606576,
+   "boot_ci95": [
+    -0.01604103916116911,
+    -0.014024102598796351
+   ],
+   "boot_frac_a_better": 1.0,
+   "frac_windows_improved_both_layers_pooled": 0.703125
+  },
+  "note": "descriptive: windows are not independent draws of the deployment distribution; bootstrap 2000 reps, seed 20261113"
+ }
+}

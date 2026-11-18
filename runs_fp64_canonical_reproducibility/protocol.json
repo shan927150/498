@@ -1,0 +1,115 @@
+{
+ "study": "FP64 canonical GPTQ + numerical reproducibility synthesis",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (partial-model GPTQ: routed experts of layers 1/8/16/23; everything else BF16)",
+ "strategies": {
+  "FR": {
+   "ids_hash": "ec355fb8d866e4ff",
+   "selection_sha256": "ec355fb8d866e4ff5ae3386b4c165460442988dc307cac2fced7fca3b0fa620c"
+  },
+  "FC": {
+   "ids_hash": "0353229b6d3090db",
+   "selection_sha256": "0353229b6d3090db8e16664425b8869e09b777c5fa5fd702a25d64fce22a862c"
+  }
+ },
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true
+ },
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "activation_extraction": "ORIGINAL (frozen order-null input manifest)",
+ "routing": "ORIGINAL R_O forced, asserted equal to natural top-k for every token",
+ "act_order": "ORIGINAL P_O as explicit override (runs_actorder_ablation/original_actorder.pt); natural argsort of the canonical Hessian recorded and compared, never used",
+ "hessian_accumulation": {
+  "contributions": "outer_s = Xf.T @ Xf, FP32 GEMM per (sequence, expert, projection), unchanged",
+  "blocks": "original positional blocks (i*4)//128 of the ORIGINAL replay order",
+  "canonical": "per-block FP64 accumulation of the FP32 contributions, blocks summed in FP64 (H64[K,d,d].sum(0)), cast ONCE to FP32; no normalization; damping unchanged (solver-internal)",
+  "reconstruction": "HN.Fp64Accumulator (the historical control's class) replayed for orders O0/20261121/20261122",
+  "gptq_input": "stored canonical FP32 Hessian served by LoadedHessianAccumulator inside the unchanged E3 path"
+ },
+ "order_invariance": {
+  "orders": [
+   "O0",
+   "O20261121",
+   "O20261122"
+  ],
+  "require": "FP64 sum and FP32 cast bitwise identical across the three orders for all 480 Hessians per strategy; FP32 path == stored preflight Hessians; identical token counts per block; finite and symmetric",
+  "claim_scope": "tested orders only; not a universal invariance claim"
+ },
+ "evaluation": {
+  "windows_sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "batch": 8,
+  "metric": "PPL = exp(sum NLL / scored targets), EP.layerwise_nll, BF16, natural inference routing",
+  "repeat": "two evaluations per configuration, per-window NLL must be identical"
+ },
+ "regression": {
+  "pathway": "loaded-accumulator pathway serving ORIGINAL FP32 Hessians must reproduce the frozen OO weights bitwise (FR)",
+  "expected": {
+   "FR": 9.267851290916612,
+   "FC": 9.277908190612935
+  },
+  "order_null_expected": {
+   "FR": {
+    "O20261121": 9.26779117414566,
+    "O20261122": 9.267245471458848,
+    "O20261123": 9.270494646766538,
+    "O20261124": 9.27144383165981,
+    "O20261125": 9.269601427608782
+   },
+   "FC": {
+    "O20261121": 9.275570572922728,
+    "O20261122": 9.279571497761173,
+    "O20261123": 9.277078024877852,
+    "O20261124": 9.276058299035872,
+    "O20261125": 9.27845032330451
+   }
+  }
+ },
+ "determinism": "FR canonical quantized twice in fresh processes: weights, reconstruction, PPL and per-window NLL bitwise equal",
+ "estimands": {
+  "canonical": "Delta_FP64 = PPL(FC, S, G0) - PPL(FR, S, G0), one deterministic configuration G0 (no interval)",
+  "order_null": "five FP32 accumulation orders (reference distribution of the same pathway; not pooled with other mechanisms)",
+  "execution_marginal": "E_{S,G}[PPL(FC,S,G) - PPL(FR,S,G)] over 3 allocation seeds x 5 groupings (existing cross-seed grouping study, ORIGINAL excluded); also the paired mean-NLL version",
+  "window_conditional": "paired per-window bootstrap for fixed weights (existing results), conditional on G"
+ },
+ "decision": {
+  "canonical": {
+   "VALIDATED": "all mandatory checks pass, canonical Hessians order-invariant under the tested orders, both configurations quantize, FR repeat bitwise reproducible",
+   "NOT_ORDER_INVARIANT": "canonical Hessians or weights differ across tested orders / repeats",
+   "BLOCKED": "historical artifacts fail validation or a mandatory check fails",
+   "note": "independent of which strategy wins"
+  },
+  "execution": {
+   "MATERIAL": "matched execution variants (existing studies) change the sign of FC-FR, or the FC-FR range across matched variants >= 2 x |the reference FC-FR|, while repeated evaluation of identical weights is deterministic",
+   "LIMITED": "otherwise",
+   "note": "decided from the existing studies only; the FP64 result is not used"
+  }
+ },
+ "reporting_rules": [
+  "exact stored values, no rounded table values",
+  "no pooling across mechanisms",
+  "no additive variance decomposition",
+  "FP64 point is one deterministic reference, not an estimate of the grouping mean",
+  "no significance claims from 5 permutations or 3 seeds"
+ ],
+ "code_sha256": {
+  "moe_calib/fp64_canonical.py": "f9dacf82daf4eccc7993825af70eb98e4022e71e131d4ce8cd99f60d72b73c18",
+  "diagnostics/fp64_canonical_gptq.py": "6caa5328563d24bb71c39eb5e7acc1100f9b3edfa57002ecb8d030316639c332",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/hessian_order_null.py": "e1242a0863bb901bb4a84cb7a3d335aec7894498dac183a0b7d9fd17f667d127",
+  "diagnostics/hessian_order_null.py": "9bcaa8b3eeda8817e5dc77bf1128280fa8c7a18344ba053e911e61c79b10915b",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684"
+ },
+ "created": "2026-11-13 06:47:58"
+}

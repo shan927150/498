@@ -1,0 +1,402 @@
+{
+ "baselines": {
+  "FR_s0": {
+   "ids_hash": "ec355fb8d866e4ff",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_random_B128_b4_d1_s0_warm-71f4c159.json",
+   "conf_src": "runs_aggregate_constraint/eval/FR_s0.json",
+   "ppl_src": "runs_partial_ppl/ppl_FR_s0.json"
+  },
+  "FR_s1": {
+   "ids_hash": "e36d91e6b151320b",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_random_B128_b4_d1_s1_warm-1d2b3965.json",
+   "conf_src": "runs_aggregate_constraint/eval/FR_s1.json",
+   "ppl_src": "runs_partial_ppl/ppl_FR_s1.json"
+  },
+  "FR_s2": {
+   "ids_hash": "cf1f867af56f29d1",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_random_B128_b4_d1_s2_warm-ba99ad01.json",
+   "conf_src": "runs_aggregate_constraint/eval/FR_s2.json",
+   "ppl_src": "runs_partial_ppl/ppl_FR_s2.json"
+  },
+  "TR_s0": {
+   "ids_hash": "cc3f2c76225a8a3a",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_random_B128_b4_d1_s0_pool-typical_half_warm-71f4c159.json",
+   "conf_src": "runs_aggregate_constraint/eval/TR_s0.json",
+   "ppl_src": "runs_partial_ppl/ppl_TR_s0.json"
+  },
+  "TR_s1": {
+   "ids_hash": "adf3bf99c91d7adc",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_random_B128_b4_d1_s1_pool-typical_half_warm-1d2b3965.json",
+   "conf_src": "runs_aggregate_constraint/eval/TR_s1.json",
+   "ppl_src": "runs_partial_ppl/ppl_TR_s1.json"
+  },
+  "TR_s2": {
+   "ids_hash": "f04aaf80fedf8619",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_random_B128_b4_d1_s2_pool-typical_half_warm-ba99ad01.json",
+   "conf_src": "runs_aggregate_constraint/eval/TR_s2.json",
+   "ppl_src": "runs_partial_ppl/ppl_TR_s2.json"
+  },
+  "TC_s0": {
+   "ids_hash": "98136bed400c7b0f",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s0_pool-typical_half_warm-71f4c159.json",
+   "conf_src": "runs_aggregate_constraint/eval/TC_s0.json",
+   "ppl_src": "runs_partial_ppl/ppl_TC_s0.json"
+  },
+  "TC_s1": {
+   "ids_hash": "516df64fac74a71d",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s1_pool-typical_half_warm-1d2b3965.json",
+   "conf_src": "runs_aggregate_constraint/eval/TC_s1.json",
+   "ppl_src": "runs_partial_ppl/ppl_TC_s1.json"
+  },
+  "TC_s2": {
+   "ids_hash": "8f2fd731358713a7",
+   "K": 4,
+   "checks": {
+    "manifest_valid": true,
+    "source_sha256": true,
+    "chosen_matches": true,
+    "hash": true,
+    "n128": true,
+    "warm": true,
+    "warm_hash": true,
+    "pool": true,
+    "no_leak": true,
+    "K": true,
+    "conf_same_ids": true,
+    "ppl_same_ids": true
+   },
+   "test_src": "runs_typicality_matched/e3_coverage_lp_B128_b4_d1_s2_pool-typical_half_warm-ba99ad01.json",
+   "conf_src": "runs_aggregate_constraint/eval/TC_s2.json",
+   "ppl_src": "runs_partial_ppl/ppl_TC_s2.json"
+  }
+ },
+ "warm_starts": {
+  "0": {
+   "ids": [
+    1820,
+    820,
+    1633,
+    1897,
+    887,
+    77,
+    571,
+    1072,
+    1023,
+    851,
+    1978,
+    1715,
+    1792,
+    672,
+    998,
+    763,
+    1215,
+    1900,
+    1936,
+    508,
+    1064,
+    316,
+    616,
+    1616,
+    200,
+    1311,
+    1745,
+    558,
+    1940,
+    1105,
+    1528,
+    1757
+   ],
+   "hash": "71f4c1599ef18971"
+  },
+  "1": {
+   "ids": [
+    300,
+    1181,
+    1823,
+    1747,
+    1655,
+    141,
+    568,
+    273,
+    1036,
+    1647,
+    944,
+    978,
+    1398,
+    810,
+    1718,
+    494,
+    200,
+    1024,
+    58,
+    1901,
+    1798,
+    826,
+    912,
+    1288,
+    1648,
+    1658,
+    11,
+    1482,
+    933,
+    582,
+    1560,
+    526
+   ],
+   "hash": "1d2b3965567279e4"
+  },
+  "2": {
+   "ids": [
+    1843,
+    1827,
+    133,
+    189,
+    179,
+    766,
+    1798,
+    422,
+    1586,
+    1757,
+    1431,
+    1837,
+    681,
+    558,
+    1283,
+    495,
+    65,
+    1210,
+    1454,
+    376,
+    908,
+    1379,
+    839,
+    1748,
+    1561,
+    1842,
+    1070,
+    801,
+    1134,
+    928,
+    1063,
+    584
+   ],
+   "hash": "ba99ad010c44de11"
+  }
+ },
+ "fingerprints": {
+  "pool_token_sha256": "82ac987d2da3b34d64952ba4237ffd531a4796f7128063656da8bf70a87d1d7a",
+  "test_token_sha256": "0352e6dc32892b9056078b7719b42b2a83ac6892b5def1becde515fe20306a5e",
+  "tune_token_sha256": "684e7677c4e5844a7391c3201273caf163167120cf41ef9748d8c5afae6cfd10",
+  "ocache_files": {
+   "1": {
+    "bytes": 4731176442,
+    "mtime": 1792296231.6921775
+   },
+   "8": {
+    "bytes": 4731176442,
+    "mtime": 1792296342.0803795
+   },
+   "16": {
+    "bytes": 4731176513,
+    "mtime": 1792296464.2349622
+   },
+   "23": {
+    "bytes": 4731176513,
+    "mtime": 1792296578.055218
+   }
+  },
+  "confirmation_fingerprint": "da4ff9fb5b29e90a4761091f39b8e6294ff298b2b8334a01b8e2c3b7ae60a05e",
+  "confirmation_matches_locked": true,
+  "confirmation_layer_sha256_locked": {
+   "1": "5737cf84a044f5167d7fc68f8c4acfbe1cc12c5c37a6d15743cc5cc64f4f04c0",
+   "8": "95edff89fa68a4a5c3c461f91b1987ce360a9b3bb3d47369b3dbf5cfdecceeac",
+   "16": "4cb284475f7b5e5576cefcb8a85b4c93d1cce516242b2fd8e133768f579312ff",
+   "23": "bbca204c40c2e4aecb4db65bd7a4d1190926c87955082806df1515229ccfd75c"
+  },
+  "routing_profile_sha256": "f0bb65eddb4c44c0143b3d70d3ae49aa8b1bfc00e6835c08b88549e60a9ecfc7",
+  "typicality_pools": null,
+  "confirmation_layer_sha256_now": {
+   "1": "5737cf84a044f5167d7fc68f8c4acfbe1cc12c5c37a6d15743cc5cc64f4f04c0",
+   "8": "95edff89fa68a4a5c3c461f91b1987ce360a9b3bb3d47369b3dbf5cfdecceeac",
+   "16": "4cb284475f7b5e5576cefcb8a85b4c93d1cce516242b2fd8e133768f579312ff",
+   "23": "bbca204c40c2e4aecb4db65bd7a4d1190926c87955082806df1515229ccfd75c"
+  },
+  "confirmation_cache_unchanged": true
+ },
+ "estimate": {
+  "sketch_storage_gb": {
+   "per_layer": 1.9968,
+   "total": 7.9872,
+   "note": "fp32 svech sketches, disk (torch.save, mmap load); per-seq counts negligible"
+  },
+  "full_dim_pool_reference_gb": 5.92969728,
+  "sketch_pass": {
+   "layer_replays": 8000,
+   "full_forward_equiv_seqs": 333.3333333333333,
+   "full_forward_equiv_s": 59.49659043170036,
+   "peak_gpu_gb_est": "~1.2 GB layer + 1.5 GB full-dim pool Hessians (60 experts) + buffers ~ 3-4 GB",
+   "peak_cpu_gb_est": "~2 GB sketch tensor + partial model ~5 GB"
+  },
+  "selection": {
+   "terms": 480,
+   "stacked_tensor_gb": 7.9872,
+   "device": "GPU (fp32 storage)",
+   "per_update_matvec_gmac": 1.9968,
+   "greedy_updates": 96,
+   "swap_matvecs_per_pass": 96,
+   "max_passes": 5,
+   "peak_gpu_gb_est": "~8 GB sketches + ~1.5 GB fp64 work"
+  },
+  "pool_tokens_per_expert": {
+   "min": 51392,
+   "max": 93877
+  },
+  "stage_a": {
+   "new_configs": [
+    "SC_s0",
+    "SC_s1",
+    "SC_s2"
+   ],
+   "validation_reruns": [
+    "FR_s0",
+    "TR_s1",
+    "TC_s2"
+   ],
+   "per_config_s_est": "quantize+test ~270 s, PPL ~45 s, confirmation re-quantize ~400 s",
+   "peak_cpu_gb_est": "~64-68 GB (full model + snapshots; cap 72 GB -> strictly one process at a time)"
+  },
+  "stage_b": {
+   "configs": 60,
+   "caches": 15,
+   "per_config_s_est": "~330 s (quantize ~270 + PPL ~45)",
+   "cache_gb_est": "~3.4 GB per (seed, grouping) for a ~410-row union x 4 layers"
+  },
+  "existing_costs": {
+   "pool_cache_s": 385.89488554000854,
+   "forward_s_per_seq": 0.1784897712951011,
+   "routing_profile_s": 357.0
+  }
+ },
+ "seconds": 17.478599548339844,
+ "created": "2026-11-16 08:56:51"
+}

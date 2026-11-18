@@ -1,0 +1,57 @@
+{
+ "decision": {
+  "verdict": "WEAK-COLLAPSE (B)",
+  "R_SD": 0.9147106999145924,
+  "R1_natural": 6,
+  "R1_frozen": 8,
+  "R2_natural": 9,
+  "R2_frozen": 8,
+  "parity_ok": true,
+  "rules": {
+   "BLOCKED": "any mandatory parity (A-F) fails",
+   "STRONG-COLLAPSE (A)": "R_SD <= 0.5 AND frozen R1 reversal count <= half the natural R1 count",
+   "WEAK-COLLAPSE (B)": "R_SD >= 0.9 AND frozen R1 count > half the natural R1 count",
+   "PARTIAL-COLLAPSE (C)": "otherwise",
+   "note": "R_SD <= 0.5 is a descriptive screening threshold (as Family A), not a significance test; no additive variance decomposition"
+  },
+  "protocol_sha256": "ca444093eb0bf1a728e3ba5f36395b9420b33644e7a7ce1aff32a2cad8afca97"
+ },
+ "R_SD": 0.9147106999145924,
+ "pooled_sd": {
+  "natural": 0.006871891170852839,
+  "frozen": 0.006285792382627708
+ },
+ "mean_delta": {
+  "natural": -0.0012475761622487388,
+  "frozen": 0.0003194884516072232
+ },
+ "R1": {
+  "definition": "historical decision-rule definition: fraction of the 15 Delta with sign opposite to sign(M), M = mean of seed means, computed within each regime",
+  "natural": 6,
+  "frozen": 8,
+  "frozen_vs_natural_M": 7,
+  "natural_reversals_remaining": [
+   "s0_G20261112",
+   "s0_G20261115",
+   "s1_G20261113",
+   "s1_G20261114",
+   "s2_G20261111"
+  ]
+ },
+ "R2": {
+  "natural": 9,
+  "frozen": 8,
+  "frozen_seed0_only": 2,
+  "natural_seed0_only": 3,
+  "natural_reversals_remaining": [
+   "s0_G20261113",
+   "s0_G20261114",
+   "s1_G20261111",
+   "s1_G20261115",
+   "s2_G20261113",
+   "s2_G20261114",
+   "s2_G20261115"
+  ]
+ },
+ "correctness_all_pass": true
+}

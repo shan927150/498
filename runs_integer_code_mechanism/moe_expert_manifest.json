@@ -1,0 +1,147 @@
+{
+ "rule": "per layer 1/8/16/23: experts 0 and 30 (historical diagnostic check experts, prespecified, not outcome-based) + the min-, median- (lower) and max-token expert among the other 58 by historical FR s0 ORIGINAL routed-token counts (runs_multigroup_robustness CTRL_FR_ORIGINAL per_expert.tokens)",
+ "experts": [
+  {
+   "layer": 1,
+   "expert": 0,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 4539.0
+  },
+  {
+   "layer": 1,
+   "expert": 30,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 4719.0
+  },
+  {
+   "layer": 1,
+   "expert": 37,
+   "role": "stratum_min_tokens",
+   "tokens_FR_ORIGINAL": 3800.0
+  },
+  {
+   "layer": 1,
+   "expert": 8,
+   "role": "stratum_median_tokens",
+   "tokens_FR_ORIGINAL": 4340.0
+  },
+  {
+   "layer": 1,
+   "expert": 28,
+   "role": "stratum_max_tokens",
+   "tokens_FR_ORIGINAL": 5075.0
+  },
+  {
+   "layer": 8,
+   "expert": 0,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 4659.0
+  },
+  {
+   "layer": 8,
+   "expert": 30,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 3968.0
+  },
+  {
+   "layer": 8,
+   "expert": 21,
+   "role": "stratum_min_tokens",
+   "tokens_FR_ORIGINAL": 3347.0
+  },
+  {
+   "layer": 8,
+   "expert": 32,
+   "role": "stratum_median_tokens",
+   "tokens_FR_ORIGINAL": 4423.0
+  },
+  {
+   "layer": 8,
+   "expert": 52,
+   "role": "stratum_max_tokens",
+   "tokens_FR_ORIGINAL": 5093.0
+  },
+  {
+   "layer": 16,
+   "expert": 0,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 4909.0
+  },
+  {
+   "layer": 16,
+   "expert": 30,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 5439.0
+  },
+  {
+   "layer": 16,
+   "expert": 1,
+   "role": "stratum_min_tokens",
+   "tokens_FR_ORIGINAL": 3264.0
+  },
+  {
+   "layer": 16,
+   "expert": 47,
+   "role": "stratum_median_tokens",
+   "tokens_FR_ORIGINAL": 4244.0
+  },
+  {
+   "layer": 16,
+   "expert": 9,
+   "role": "stratum_max_tokens",
+   "tokens_FR_ORIGINAL": 5564.0
+  },
+  {
+   "layer": 23,
+   "expert": 0,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 4570.0
+  },
+  {
+   "layer": 23,
+   "expert": 30,
+   "role": "diagnostic_check (EP.CHECK_EXPERTS / frozen_routing.DIAG_EXPERTS)",
+   "tokens_FR_ORIGINAL": 4013.0
+  },
+  {
+   "layer": 23,
+   "expert": 26,
+   "role": "stratum_min_tokens",
+   "tokens_FR_ORIGINAL": 3027.0
+  },
+  {
+   "layer": 23,
+   "expert": 12,
+   "role": "stratum_median_tokens",
+   "tokens_FR_ORIGINAL": 4196.0
+  },
+  {
+   "layer": 23,
+   "expert": 56,
+   "role": "stratum_max_tokens",
+   "tokens_FR_ORIGINAL": 6430.0
+  }
+ ],
+ "n": 20,
+ "coverage": "20 / 240 routed experts",
+ "dims": {
+  "gate_proj": [
+   1408,
+   2048
+  ],
+  "up_proj": [
+   1408,
+   2048
+  ],
+  "down_proj": [
+   2048,
+   1408
+  ]
+ },
+ "all_expert_tokens": {
+  "min": 3027.0,
+  "median": 4313.5,
+  "max": 6430.0
+ },
+ "note": "the 16 'diagnostic Hessians' historically = these 8 check experts x {gu, down}"
+}

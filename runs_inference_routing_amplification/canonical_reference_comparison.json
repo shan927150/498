@@ -1,0 +1,35 @@
+{
+ "ORIGINAL": {
+  "FR_natural": 9.267851290916612,
+  "FC_natural": 9.277908190612935,
+  "FR_frozen": 9.270037129567681,
+  "FC_frozen": 9.278775637985524,
+  "delta_natural": 0.010056899696323285,
+  "delta_frozen": 0.008738508417842183,
+  "FR_historical": 9.267851290916612,
+  "FC_historical": 9.277908190612935,
+  "FR_frac_set_changed": 0.08955129235982895,
+  "FC_frac_set_changed": 0.08790143579244614,
+  "delta_natural_minus_frozen": 0.0013183912784811014,
+  "sign_preserved": true,
+  "delta_frozen_within_primary_frozen_range": true
+ },
+ "FP64": {
+  "FR_natural": 9.271421461854468,
+  "FC_natural": 9.278550816989844,
+  "FR_frozen": 9.268393121944062,
+  "FC_frozen": 9.27792432317638,
+  "delta_natural": 0.007129355135376159,
+  "delta_frozen": 0.009531201232318764,
+  "FR_historical": 9.271421461854468,
+  "FC_historical": 9.278550816989844,
+  "FR_frac_set_changed": 0.08943748474121094,
+  "FC_frac_set_changed": 0.08750470727682114,
+  "delta_natural_minus_frozen": -0.002401846096942606,
+  "sign_preserved": true,
+  "delta_frozen_within_primary_frozen_range": true
+ },
+ "ORIGINAL_vs_FP64_delta_gap_natural": 0.0029275445609471262,
+ "ORIGINAL_vs_FP64_delta_gap_frozen": -0.000792692814476581,
+ "note": "descriptive; excluded from the 5-order SD; does not redefine the canonical estimand"
+}

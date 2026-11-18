@@ -1,0 +1,106 @@
+{
+ "A_bf16": {
+  "record_vs_plain": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "layer_hashes_equal": true,
+  "ppl_record": 9.237089824789335,
+  "ppl_plain": 9.237089824789335,
+  "passed": true
+ },
+ "B_bf16_self_routing": {
+  "per_window": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "token_nll_bitwise": true,
+  "layer_hashes_equal": true,
+  "final_hidden_equal": true,
+  "natural_choice_under_forcing_equal": true,
+  "forced_probs_equal_natural_topk": true,
+  "dispatch_equal": true,
+  "forced_calls_per_layer": [
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16
+  ],
+  "passed": true
+ },
+ "A_quant": {
+  "config": "FR_O20261121",
+  "record_vs_plain": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "plain_vs_historical": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "layer_hashes_equal": true,
+  "passed": true
+ },
+ "C_quant_self_routing": {
+  "config": "FR_O20261121",
+  "per_window": {
+   "bitwise": true,
+   "max_abs_diff": 0.0
+  },
+  "token_nll_bitwise": true,
+  "layer_hashes_equal": true,
+  "final_hidden_equal": true,
+  "selections_equal": true,
+  "router_probs_equal": true,
+  "forced_probs_equal_natural_topk": true,
+  "dispatch_equal": true,
+  "ppl_equal": true,
+  "forced_calls_per_layer": [
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16
+  ],
+  "passed": true
+ }
+}

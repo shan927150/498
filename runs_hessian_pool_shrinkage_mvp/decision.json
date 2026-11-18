@@ -1,0 +1,38 @@
+{
+ "verdict": "POOL-SHRINKAGE-MISMATCH-ONLY",
+ "recommendation": "C",
+ "stage1": "POOL-PRIOR-PROMISING",
+ "per_budget_criteria": {
+  "16": {
+   "c1_min_improvement": false,
+   "c2_beats_identity": false,
+   "c3_competitive_with_tuned": false,
+   "c4_experts_improved": true,
+   "c5_no_tail_regression": true,
+   "c6_both_layers": true
+  },
+  "32": {
+   "c1_min_improvement": false,
+   "c2_beats_identity": false,
+   "c3_competitive_with_tuned": false,
+   "c4_experts_improved": true,
+   "c5_no_tail_regression": true,
+   "c6_both_layers": true
+  }
+ },
+ "c7_subset_ok": true,
+ "c8_correctness_ok": true,
+ "c9_cost_ok": true,
+ "rules": {
+  "s1_min_rel_improvement": 0.03,
+  "s1_min_experts": 8,
+  "s1_layer_max_regression": 0.01,
+  "s2_min_rel_improvement": 0.01,
+  "s2_tuned_tolerance": 0.005,
+  "s2_min_experts": 8,
+  "s2_max_expert_regression": 0.05,
+  "s2_cost_max_overhead": 0.05
+ },
+ "recommendation_A_executed": false,
+ "created": "2026-11-13 06:15:40"
+}

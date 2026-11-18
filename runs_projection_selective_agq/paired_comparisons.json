@@ -1,0 +1,616 @@
+{
+ "confirm": {
+  "SELECTED_vs_LAYERWISE": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.002301315892645901,
+     "mean_window_ratio_diff": -1.494590487457262e-05,
+     "frac_windows_improved": 0.63671875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003056301394662979,
+      -0.0015766354020498676
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0,
+     "mean_window_ratio_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "boot_ci95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_rel_diff": -0.0011743081672364625,
+   "boot_ci95": [
+    -0.0015602351289841683,
+    -0.0008007696566774336
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "SELECTED_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": -0.003190517705307539,
+     "mean_window_ratio_diff": -2.1944071060765093e-05,
+     "frac_windows_improved": 0.84765625,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003684131207485349,
+      -0.0027466668709067374
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0,
+     "mean_window_ratio_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "boot_ci95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_rel_diff": -0.001628758144549067,
+   "boot_ci95": [
+    -0.0018954913683252815,
+    -0.0013919697673162154
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "SELECTED_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.002301315892645901,
+     "mean_window_ratio_diff": -1.494590487457262e-05,
+     "frac_windows_improved": 0.63671875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003056301394662979,
+      -0.0015766354020498676
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.031131823446942833,
+     "mean_window_ratio_diff": -0.00021995772889221043,
+     "frac_windows_improved": 1.0,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.032853739296952136,
+      -0.029357931377194463
+     ]
+    }
+   },
+   "mean_rel_diff": -0.016648195942449196,
+   "boot_ci95": [
+    -0.01732499835675942,
+    -0.015976683875720626
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "LAYERWISE_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GPTQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": -0.000891252867048944,
+     "mean_window_ratio_diff": -6.998166186192472e-06,
+     "frac_windows_improved": 0.58203125,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.001741107912305879,
+      -6.322303357153681e-06
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0,
+     "mean_window_ratio_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "boot_ci95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_rel_diff": -0.00045498426905572087,
+   "boot_ci95": [
+    -0.0008978343322439791,
+    -3.2018520553625246e-06
+   ],
+   "boot_frac_a_better": 0.975
+  },
+  "GU_AGQ_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.002301315892645901,
+     "mean_window_ratio_diff": -1.494590487457262e-05,
+     "frac_windows_improved": 0.63671875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003056301394662979,
+      -0.0015766354020498676
+     ]
+    },
+    "16": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.03028643808252426,
+     "mean_window_ratio_diff": -0.00021443287887638911,
+     "frac_windows_improved": 1.0,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.031674258679006126,
+      -0.02889842010930546
+     ]
+    }
+   },
+   "mean_rel_diff": -0.01622750815551629,
+   "boot_ci95": [
+    -0.01679670580951043,
+    -0.015678439427181952
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "GU_AGQ_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": -0.003190517705307539,
+     "mean_window_ratio_diff": -2.1944071060765093e-05,
+     "frac_windows_improved": 0.84765625,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003684131207485349,
+      -0.0027466668709067374
+     ]
+    },
+    "16": {
+     "configs": [
+      "GU_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0008725494188757449,
+     "mean_window_ratio_diff": 5.5248500158213135e-06,
+     "frac_windows_improved": 0.32421875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.0002466130398354373,
+      0.0014922388096392904
+     ]
+    }
+   },
+   "mean_rel_diff": -0.0012016448911431183,
+   "boot_ci95": [
+    -0.0016205071653032828,
+    -0.0007911386623439647
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "DOWN_AGQ_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "DOWN_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": 0.0034193809163489135,
+     "mean_window_ratio_diff": 2.377632903443678e-05,
+     "frac_windows_improved": 0.12890625,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.002986223969745966,
+      0.0038393806389821353
+     ]
+    },
+    "16": {
+     "configs": [
+      "DOWN_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.003521155194175507,
+     "mean_window_ratio_diff": -2.4896440113267974e-05,
+     "frac_windows_improved": 0.8828125,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.004171205533418923,
+      -0.0028724998134671653
+     ]
+    }
+   },
+   "mean_rel_diff": -3.4427133040726684e-05,
+   "boot_ci95": [
+    -0.00040276544606423315,
+    0.0003251126148396803
+   ],
+   "boot_frac_a_better": 0.581
+  },
+  "DOWN_AGQ_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "DOWN_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.002525080516254741,
+     "mean_window_ratio_diff": 1.6778162848244303e-05,
+     "frac_windows_improved": 0.359375,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.0017497342315312147,
+      0.003318007850242586
+     ]
+    },
+    "16": {
+     "configs": [
+      "DOWN_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.028497858553882753,
+     "mean_window_ratio_diff": 0.00019506128877894242,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.027147616178856877,
+      0.029801683383256065
+     ]
+    }
+   },
+   "mean_rel_diff": 0.015238764678623331,
+   "boot_ci95": [
+    0.014670266963274033,
+    0.01578921626059416
+   ],
+   "boot_frac_a_better": 0.0
+  },
+  "note": "descriptive window bootstrap (2000 reps, seed 20261113); windows are not calibration seeds"
+ },
+ "oldtest": {
+  "SELECTED_vs_LAYERWISE": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.0025423959052250345,
+     "mean_window_ratio_diff": -1.6703590973440414e-05,
+     "frac_windows_improved": 0.71875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.0035626800688854736,
+      -0.0015510332267296603
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0,
+     "mean_window_ratio_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "boot_ci95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_rel_diff": -0.001298523305329436,
+   "boot_ci95": [
+    -0.0018369184888502655,
+    -0.0007886496267463237
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "SELECTED_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": -0.003198170828052536,
+     "mean_window_ratio_diff": -2.2187547998179508e-05,
+     "frac_windows_improved": 0.828125,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003851292656150092,
+      -0.0026387340237464256
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0,
+     "mean_window_ratio_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "boot_ci95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_rel_diff": -0.0016339845361209766,
+   "boot_ci95": [
+    -0.001960732995557554,
+    -0.0013450687764566319
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "SELECTED_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.0025423959052250345,
+     "mean_window_ratio_diff": -1.6703590973440414e-05,
+     "frac_windows_improved": 0.71875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.0035626800688854736,
+      -0.0015510332267296603
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.03092705116154717,
+     "mean_window_ratio_diff": -0.00022009686439907573,
+     "frac_windows_improved": 0.9921875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.03311745442051761,
+      -0.02855299096528881
+     ]
+    }
+   },
+   "mean_rel_diff": -0.01665253146656078,
+   "boot_ci95": [
+    -0.01768951698804321,
+    -0.015582681359768908
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "LAYERWISE_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GPTQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": -0.000657446411893003,
+     "mean_window_ratio_diff": -5.483957024739096e-06,
+     "frac_windows_improved": 0.5859375,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.0016315401368593825,
+      0.0003532061683475336
+     ]
+    },
+    "16": {
+     "configs": [
+      "FULL_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0,
+     "mean_window_ratio_diff": 0.0,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 1.0,
+     "boot_ci95": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "mean_rel_diff": -0.00033589740139545234,
+   "boot_ci95": [
+    -0.0008332012289306638,
+    0.0001796002530470088
+   ],
+   "boot_frac_a_better": 0.902
+  },
+  "GU_AGQ_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.0025423959052250345,
+     "mean_window_ratio_diff": -1.6703590973440414e-05,
+     "frac_windows_improved": 0.71875,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.0035626800688854736,
+      -0.0015510332267296603
+     ]
+    },
+    "16": {
+     "configs": [
+      "GU_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.03046069116386665,
+     "mean_window_ratio_diff": -0.00021679854683369696,
+     "frac_windows_improved": 1.0,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.03212254343250261,
+      -0.028781476035275016
+     ]
+    }
+   },
+   "mean_rel_diff": -0.016420701883702288,
+   "boot_ci95": [
+    -0.017178050323320402,
+    -0.015628555030445825
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "GU_AGQ_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "GU_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": -0.003198170828052536,
+     "mean_window_ratio_diff": -2.2187547998179508e-05,
+     "frac_windows_improved": 0.828125,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.003851292656150092,
+      -0.0026387340237464256
+     ]
+    },
+    "16": {
+     "configs": [
+      "GU_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.000481243438112173,
+     "mean_window_ratio_diff": 3.2983175653787846e-06,
+     "frac_windows_improved": 0.34375,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.0004263944979947487,
+      0.0013308002609809496
+     ]
+    }
+   },
+   "mean_rel_diff": -0.001398614248088129,
+   "boot_ci95": [
+    -0.0018889314213992056,
+    -0.000933452143832894
+   ],
+   "boot_frac_a_better": 1.0
+  },
+  "DOWN_AGQ_vs_GPTQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "DOWN_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": 0.0034835126084067254,
+     "mean_window_ratio_diff": 2.4184059238438e-05,
+     "frac_windows_improved": 0.140625,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.002917940137534152,
+      0.004079696180572502
+     ]
+    },
+    "16": {
+     "configs": [
+      "DOWN_AGQ",
+      "GPTQ"
+     ],
+     "rel_diff": -0.0032678496457177394,
+     "mean_window_ratio_diff": -2.355644772923174e-05,
+     "frac_windows_improved": 0.8515625,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      -0.004346031658275471,
+      -0.0021839150189722767
+     ]
+    }
+   },
+   "mean_rel_diff": 0.00012738107292983492,
+   "boot_ci95": [
+    -0.00045545539973648063,
+    0.0007233931734876212
+   ],
+   "boot_frac_a_better": 0.3425
+  },
+  "DOWN_AGQ_vs_FULL_AGQ": {
+   "layers": {
+    "8": {
+     "configs": [
+      "DOWN_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.0028237759736485413,
+     "mean_window_ratio_diff": 1.8700102213698904e-05,
+     "frac_windows_improved": 0.3359375,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.001846094081770864,
+      0.003828755328628357
+     ]
+    },
+    "16": {
+     "configs": [
+      "DOWN_AGQ",
+      "FULL_AGQ"
+     ],
+     "rel_diff": 0.02854191890195905,
+     "mean_window_ratio_diff": 0.00019654041666984399,
+     "frac_windows_improved": 0.0,
+     "frac_windows_equal": 0.0,
+     "boot_ci95": [
+      0.026770191496866172,
+      0.030261127020435392
+     ]
+    }
+   },
+   "mean_rel_diff": 0.015402205577703422,
+   "boot_ci95": [
+    0.014687912404541535,
+    0.01611071708814234
+   ],
+   "boot_frac_a_better": 0.0
+  },
+  "note": "descriptive window bootstrap (2000 reps, seed 20261113); windows are not calibration seeds"
+ }
+}

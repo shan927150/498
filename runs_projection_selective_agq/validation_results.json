@@ -1,0 +1,301 @@
+{
+ "split": "tune",
+ "rows": [
+  2000,
+  2128
+ ],
+ "layers": {
+  "8": {
+   "E_layer": {
+    "GPTQ": 0.007115236692270128,
+    "GU_AGQ": 0.007095938756486313,
+    "DOWN_AGQ": 0.0071379027150895655,
+    "FULL_AGQ": 0.007116386972828147
+   },
+   "native": {
+    "GPTQ": 0.0071358244350524565,
+    "GU_AGQ": 0.007116771486894546,
+    "DOWN_AGQ": 0.00715858710444087,
+    "FULL_AGQ": 0.007137288293454159
+   },
+   "rel_vs_gptq": {
+    "GPTQ": 0.0,
+    "GU_AGQ": -0.0027121987108003993,
+    "DOWN_AGQ": 0.003185561324201832,
+    "FULL_AGQ": 0.00016166441227013738
+   },
+   "rel_vs_full_agq": {
+    "GPTQ": -0.000161638281112421,
+    "GU_AGQ": -0.002873398596775171,
+    "DOWN_AGQ": 0.0030234081344325888,
+    "FULL_AGQ": 0.0
+   },
+   "rel_vs_best_uniform": {
+    "GPTQ": 0.0,
+    "GU_AGQ": -0.0027121987108003993,
+    "DOWN_AGQ": 0.003185561324201832,
+    "FULL_AGQ": 0.00016166441227013738
+   },
+   "frac_windows_improved_vs_best_uniform": {
+    "GPTQ": 0.0,
+    "GU_AGQ": 0.6953125,
+    "DOWN_AGQ": 0.1796875,
+    "FULL_AGQ": 0.4296875
+   },
+   "lowest": "GU_AGQ",
+   "meta": {
+    "split": "tune",
+    "layer": 8,
+    "n_seqs": 128,
+    "lean_s": 75.13510775566101,
+    "native_s": 12.530774593353271,
+    "pristine_restored": true,
+    "install_matches_config": true,
+    "nontarget_unchanged_during_install": true,
+    "reinstall_bitwise_identical": true,
+    "accumulator_check": {
+     "GPTQ": {
+      "accumulator": 0.0071152366922701315,
+      "lean": 0.007115236692270128,
+      "abs_diff": 3.469446951953614e-18,
+      "per_seq_equal": true
+     },
+     "GU_AGQ": {
+      "accumulator": 0.007095938756486312,
+      "lean": 0.007095938756486313,
+      "abs_diff": 8.673617379884035e-19,
+      "per_seq_equal": true
+     },
+     "DOWN_AGQ": {
+      "accumulator": 0.007137902715089567,
+      "lean": 0.0071379027150895655,
+      "abs_diff": 1.734723475976807e-18,
+      "per_seq_equal": true
+     },
+     "FULL_AGQ": {
+      "accumulator": 0.007116386972828148,
+      "lean": 0.007116386972828147,
+      "abs_diff": 8.673617379884035e-19,
+      "per_seq_equal": true
+     }
+    },
+    "decomposition_identity_max_rel": 2.7644654166669055e-16,
+    "decomposition_vs_err_max_rel": 2.9502374925798825e-11,
+    "candidate_load_s": 2.543710947036743,
+    "total_s": 103.8543529510498
+   }
+  },
+  "16": {
+   "E_layer": {
+    "GPTQ": 0.007145263332788199,
+    "GU_AGQ": 0.006930765850814545,
+    "DOWN_AGQ": 0.007121990003773428,
+    "FULL_AGQ": 0.006926336838070509
+   },
+   "native": {
+    "GPTQ": 0.007172260448121453,
+    "GU_AGQ": 0.00695759245782258,
+    "DOWN_AGQ": 0.007148920457102319,
+    "FULL_AGQ": 0.006953191021673552
+   },
+   "rel_vs_gptq": {
+    "GPTQ": 0.0,
+    "GU_AGQ": -0.030019534897946638,
+    "DOWN_AGQ": -0.0032571688307097553,
+    "FULL_AGQ": -0.03063938787435301
+   },
+   "rel_vs_full_agq": {
+    "GPTQ": 0.031607832514636544,
+    "GU_AGQ": 0.0006394451854683267,
+    "DOWN_AGQ": 0.028247711637053825,
+    "FULL_AGQ": 0.0
+   },
+   "rel_vs_best_uniform": {
+    "GPTQ": 0.031607832514636544,
+    "GU_AGQ": 0.0006394451854683267,
+    "DOWN_AGQ": 0.028247711637053825,
+    "FULL_AGQ": 0.0
+   },
+   "frac_windows_improved_vs_best_uniform": {
+    "GPTQ": 0.015625,
+    "GU_AGQ": 0.328125,
+    "DOWN_AGQ": 0.0,
+    "FULL_AGQ": 0.0
+   },
+   "lowest": "FULL_AGQ",
+   "meta": {
+    "split": "tune",
+    "layer": 16,
+    "n_seqs": 128,
+    "lean_s": 74.92049956321716,
+    "native_s": 12.417807340621948,
+    "pristine_restored": true,
+    "install_matches_config": true,
+    "nontarget_unchanged_during_install": true,
+    "reinstall_bitwise_identical": true,
+    "accumulator_check": {
+     "GPTQ": {
+      "accumulator": 0.007145263332788198,
+      "lean": 0.007145263332788199,
+      "abs_diff": 8.673617379884035e-19,
+      "per_seq_equal": true
+     },
+     "GU_AGQ": {
+      "accumulator": 0.0069307658508145475,
+      "lean": 0.006930765850814545,
+      "abs_diff": 2.6020852139652106e-18,
+      "per_seq_equal": true
+     },
+     "DOWN_AGQ": {
+      "accumulator": 0.007121990003773424,
+      "lean": 0.007121990003773428,
+      "abs_diff": 3.469446951953614e-18,
+      "per_seq_equal": true
+     },
+     "FULL_AGQ": {
+      "accumulator": 0.006926336838070506,
+      "lean": 0.006926336838070509,
+      "abs_diff": 2.6020852139652106e-18,
+      "per_seq_equal": true
+     }
+    },
+    "decomposition_identity_max_rel": 1.8168482573037162e-16,
+    "decomposition_vs_err_max_rel": 2.193138222229147e-11,
+    "candidate_load_s": 2.7055654525756836,
+    "total_s": 96.34833097457886
+   }
+  }
+ },
+ "summary": {
+  "layers": {
+   "8": {
+    "E_layer": {
+     "GPTQ": 0.007115236692270128,
+     "GU_AGQ": 0.007095938756486313,
+     "DOWN_AGQ": 0.0071379027150895655,
+     "FULL_AGQ": 0.007116386972828147
+    },
+    "native": {
+     "GPTQ": 0.0071358244350524565,
+     "GU_AGQ": 0.007116771486894546,
+     "DOWN_AGQ": 0.00715858710444087,
+     "FULL_AGQ": 0.007137288293454159
+    },
+    "selected": "GU_AGQ",
+    "selected_E": 0.007095938756486313,
+    "layerwise": "GPTQ",
+    "layerwise_E": 0.007115236692270128,
+    "best_uniform": 0.007115236692270128,
+    "rel_vs_gptq": {
+     "GPTQ": 0.0,
+     "GU_AGQ": -0.0027121987108003993,
+     "DOWN_AGQ": 0.003185561324201832,
+     "FULL_AGQ": 0.00016166441227013738
+    },
+    "rel_vs_full_agq": {
+     "GPTQ": -0.000161638281112421,
+     "GU_AGQ": -0.002873398596775171,
+     "DOWN_AGQ": 0.0030234081344325888,
+     "FULL_AGQ": 0.0
+    },
+    "rel_vs_best_uniform": {
+     "GPTQ": 0.0,
+     "GU_AGQ": -0.0027121987108003993,
+     "DOWN_AGQ": 0.003185561324201832,
+     "FULL_AGQ": 0.00016166441227013738
+    },
+    "selected_rel": {
+     "vs_gptq": -0.0027121987108003993,
+     "vs_full_agq": -0.002873398596775171,
+     "vs_layerwise": -0.0027121987108003993,
+     "vs_best_uniform": -0.0027121987108003993
+    },
+    "ranking_fp32": [
+     "GU_AGQ",
+     "GPTQ",
+     "FULL_AGQ",
+     "DOWN_AGQ"
+    ],
+    "ranking_native": [
+     "GU_AGQ",
+     "GPTQ",
+     "FULL_AGQ",
+     "DOWN_AGQ"
+    ],
+    "native_ranking_agrees": true
+   },
+   "16": {
+    "E_layer": {
+     "GPTQ": 0.007145263332788199,
+     "GU_AGQ": 0.006930765850814545,
+     "DOWN_AGQ": 0.007121990003773428,
+     "FULL_AGQ": 0.006926336838070509
+    },
+    "native": {
+     "GPTQ": 0.007172260448121453,
+     "GU_AGQ": 0.00695759245782258,
+     "DOWN_AGQ": 0.007148920457102319,
+     "FULL_AGQ": 0.006953191021673552
+    },
+    "selected": "FULL_AGQ",
+    "selected_E": 0.006926336838070509,
+    "layerwise": "FULL_AGQ",
+    "layerwise_E": 0.006926336838070509,
+    "best_uniform": 0.006926336838070509,
+    "rel_vs_gptq": {
+     "GPTQ": 0.0,
+     "GU_AGQ": -0.030019534897946638,
+     "DOWN_AGQ": -0.0032571688307097553,
+     "FULL_AGQ": -0.03063938787435301
+    },
+    "rel_vs_full_agq": {
+     "GPTQ": 0.031607832514636544,
+     "GU_AGQ": 0.0006394451854683267,
+     "DOWN_AGQ": 0.028247711637053825,
+     "FULL_AGQ": 0.0
+    },
+    "rel_vs_best_uniform": {
+     "GPTQ": 0.031607832514636544,
+     "GU_AGQ": 0.0006394451854683267,
+     "DOWN_AGQ": 0.028247711637053825,
+     "FULL_AGQ": 0.0
+    },
+    "selected_rel": {
+     "vs_gptq": -0.03063938787435301,
+     "vs_full_agq": 0.0,
+     "vs_layerwise": 0.0,
+     "vs_best_uniform": 0.0
+    },
+    "ranking_fp32": [
+     "FULL_AGQ",
+     "GU_AGQ",
+     "DOWN_AGQ",
+     "GPTQ"
+    ],
+    "ranking_native": [
+     "FULL_AGQ",
+     "GU_AGQ",
+     "DOWN_AGQ",
+     "GPTQ"
+    ],
+    "native_ranking_agrees": true
+   }
+  },
+  "mean": {
+   "GPTQ": 0.007130250012529163,
+   "GU_AGQ": 0.007013352303650429,
+   "DOWN_AGQ": 0.007129946359431497,
+   "FULL_AGQ": 0.007021361905449328,
+   "SELECTED": 0.007011137797278411,
+   "LAYERWISE": 0.007020786765170319
+  },
+  "mean_rel": {
+   "selected_vs_gptq": -0.016705194774580163,
+   "selected_vs_full_agq": -0.0014561431683192665,
+   "selected_vs_layerwise": -0.0013743428214877795,
+   "layerwise_vs_full_agq": -8.191292326956959e-05,
+   "layerwise_vs_gptq": -0.015351950796465341
+  },
+  "scope": "2-layer (L8, L16) mean; not comparable to 4-layer historical means"
+ }
+}

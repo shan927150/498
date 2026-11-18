@@ -1,0 +1,13 @@
+{
+ "file": "/home/kaixuan6/moe_cache_calibration_domain/routing_profile_v2.npz",
+ "sha256": "e27f6191a2f94c8d9ebb886afdee695672075472b1b60616f308bfd65a46136c",
+ "seconds": 319.7654433250427,
+ "model_load_s": 15.084562063217163,
+ "tokens_per_seq_per_layer_equal_topk_x_T": true,
+ "pool_tokens_per_expert": {
+  "min": 18495,
+  "max": 261052
+ },
+ "experts_without_pool_tokens": 0,
+ "created": "2026-11-17 05:22:42"
+}

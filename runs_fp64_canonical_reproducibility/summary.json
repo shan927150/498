@@ -1,0 +1,313 @@
+{
+ "decision": {
+  "canonical_verdict": "CANONICAL-VALIDATED",
+  "execution_verdict": "EXECUTION-VARIABILITY-MATERIAL",
+  "execution_inputs": {
+   "sign_changes_within_seed": true,
+   "order_null_range_over_abs_delta_OO": 0.7667928645128542,
+   "n_seeds_with_sign_change": 3
+  },
+  "fp64_not_used_for_execution_verdict": true,
+  "created": "2026-11-13 08:08:04"
+ },
+ "fp64": {
+  "FR": 9.271421461854468,
+  "FC": 9.278550816989844,
+  "delta": 0.007129355135376159,
+  "delta_mean_nll": 0.0007686648129965334
+ },
+ "order_null": {
+  "table": [
+   {
+    "policy": "Original FP32",
+    "FR": 9.267851290916612,
+    "FC": 9.277908190612935,
+    "delta": 0.010056899696323285
+   },
+   {
+    "policy": "FP32 order 20261121",
+    "FR": 9.26779117414566,
+    "FC": 9.275570572922728,
+    "delta": 0.00777939877706757
+   },
+   {
+    "policy": "FP32 order 20261122",
+    "FR": 9.267245471458848,
+    "FC": 9.279571497761173,
+    "delta": 0.012326026302325488
+   },
+   {
+    "policy": "FP32 order 20261123",
+    "FR": 9.270494646766538,
+    "FC": 9.277078024877852,
+    "delta": 0.00658337811131382
+   },
+   {
+    "policy": "FP32 order 20261124",
+    "FR": 9.27144383165981,
+    "FC": 9.276058299035872,
+    "delta": 0.004614467376063303
+   },
+   {
+    "policy": "FP32 order 20261125",
+    "FR": 9.269601427608782,
+    "FC": 9.27845032330451,
+    "delta": 0.008848895695727776
+   },
+   {
+    "policy": "FP64 canonical",
+    "FR": 9.271421461854468,
+    "FC": 9.278550816989844,
+    "delta": 0.007129355135376159
+   }
+  ],
+  "q1_delta_inside_order_range": true,
+  "q1_delta_inside_range_incl_OO": true,
+  "q1_FR_inside_range": true,
+  "q1_FC_inside_range": true,
+  "order_range_delta": [
+   0.004614467376063303,
+   0.012326026302325488
+  ],
+  "order_range_FR": [
+   9.267245471458848,
+   9.27144383165981
+  ],
+  "order_range_FC": [
+   9.275570572922728,
+   9.279571497761173
+  ],
+  "q2_ranking_preserved": true,
+  "q3_vs_original": {
+   "FR": 0.003570170937855721,
+   "FC": 0.0006426263769085949,
+   "delta": -0.0029275445609471262
+  },
+  "q4_vs_order_mean": {
+   "FR": 0.0021061515265401454,
+   "FC": 0.001205073409416002,
+   "delta": -0.0009010781171234321
+  },
+  "order_sd": {
+   "FR": 0.0017755650255737018,
+   "FC": 0.0016624150852699087,
+   "delta": 0.002870009154129667
+  },
+  "q4_in_order_sd_units": {
+   "FR": 1.1861866483091081,
+   "FC": 0.7248932111442835,
+   "delta": -0.3139634993243375
+  },
+  "q5": "FP64 accumulation removes the accumulation-ORDER variability by construction (bitwise identical Hessians for the tested orders), so repeated canonical runs give one value; it does not reduce, and cannot measure, variability from any other execution choice",
+  "interpretation": "the canonical point is one deterministic configuration; its distance from the order mean is not an estimation error"
+ },
+ "weights": {
+  "FR": {
+   "n": 2076180480,
+   "n_differ": 145392,
+   "d2": 0.4409455780405551,
+   "o2": 661637.4353637695,
+   "frac_differ": 7.002859404592804e-05,
+   "rel_l2": 0.0008163613986367311,
+   "n_identical": 267,
+   "n_experts_changed": 234
+  },
+  "FC": {
+   "n": 2076180480,
+   "n_differ": 140009,
+   "d2": 0.43241748586297035,
+   "o2": 661644.6162719727,
+   "frac_differ": 6.743585220491043e-05,
+   "rel_l2": 0.0008084240634267625,
+   "n_identical": 240,
+   "n_experts_changed": 226
+  }
+ },
+ "quantizer": {
+  "FR": {
+   "n_projections": 24,
+   "frac_scale_differ": 0.23281953051143014,
+   "median_scale_rel_diff": 0.0,
+   "max_scale_rel_diff": 0.011333324946463108,
+   "frac_zero_differ": 1.8495502445148304e-06,
+   "n_codes_differ": 593,
+   "frac_codes_differ": 8.56861923680161e-06,
+   "bf16_changed_elements": 5562,
+   "bf16_changed_with_same_code": 5048,
+   "frac_bf16_changes_with_same_code": 0.9075871988493348
+  },
+  "FC": {
+   "n_projections": 24,
+   "frac_scale_differ": 0.23851059439281622,
+   "median_scale_rel_diff": 0.0,
+   "max_scale_rel_diff": 0.01204371452331543,
+   "frac_zero_differ": 0.0,
+   "n_codes_differ": 237,
+   "frac_codes_differ": 3.424557772549716e-06,
+   "bf16_changed_elements": 2712,
+   "bf16_changed_with_same_code": 2475,
+   "frac_bf16_changes_with_same_code": 0.9126106194690266
+  }
+ },
+ "recon": {
+  "FR": {
+   "recon": 0.00460954531302766,
+   "recon_OO": 0.004609548874536215,
+   "rel_change": -7.72637117432542e-07,
+   "n_experts_changed": 240,
+   "per_expert_median_abs_rel": 3.6192404204759534e-06,
+   "per_expert_max_abs_rel": 3.0072918550942786e-05
+  },
+  "FC": {
+   "recon": 0.004727046833953272,
+   "recon_OO": 0.004727047496005081,
+   "rel_change": -1.4005609397839737e-07,
+   "n_experts_changed": 240,
+   "per_expert_median_abs_rel": 4.856469908336406e-06,
+   "per_expert_max_abs_rel": 4.837953827684572e-05
+  },
+  "FC_penalty_over_FR": {
+   "canonical": 0.025490913516681424,
+   "OO": 0.025490264810499097
+  }
+ },
+ "ppl_level": {
+  "FR": {
+   "abs_ppl_diff_vs_OO": 0.003570170937855721,
+   "n_windows_differ": 128,
+   "mean_abs_window_nll_diff": 1.132063196073121,
+   "max_abs_window_nll_diff": 6.64687712741943,
+   "exceeds_deterministic_repeatability": true,
+   "repeatability_abs_diff": 0.0
+  },
+  "FC": {
+   "abs_ppl_diff_vs_OO": 0.0006426263769085949,
+   "n_windows_differ": 128,
+   "mean_abs_window_nll_diff": 1.1195334895546,
+   "max_abs_window_nll_diff": 4.50488135910382,
+   "exceeds_deterministic_repeatability": true,
+   "repeatability_abs_diff": 0.0
+  }
+ },
+ "hessian_level": {
+  "FR": {
+   "frac_elements_differ_from_original": 0.6841577841896171,
+   "rel_fro_vs_original_median": 7.064819738644782e-08,
+   "rel_fro_vs_original_max": 1.2566046227278702e-07,
+   "trace_rel_diff_max_abs": 8.340473708785758e-08,
+   "natural_perm_equal_PO": 384,
+   "original_natural_perm_equal_PO": 480,
+   "n_hessians_with_group_change_without_override": 1,
+   "natural_frac_columns_changed_group_max": 0.0009765625,
+   "factorization_diag_subset": {
+    "n": 16,
+    "rel_damped_median": 6.095573012912835e-08,
+    "rel_hinv_factor_median": 2.9661441387946777e-07,
+    "rel_hinv_factor_max": 5.83824785854656e-07
+   }
+  },
+  "FC": {
+   "frac_elements_differ_from_original": 0.7048494603758254,
+   "rel_fro_vs_original_median": 7.541099824521689e-08,
+   "rel_fro_vs_original_max": 1.5100464844225704e-07,
+   "trace_rel_diff_max_abs": 9.887338211905702e-08,
+   "natural_perm_equal_PO": 390,
+   "original_natural_perm_equal_PO": 480,
+   "n_hessians_with_group_change_without_override": 0,
+   "natural_frac_columns_changed_group_max": 0.0,
+   "factorization_diag_subset": {
+    "n": 16,
+    "rel_damped_median": 6.76094294550175e-08,
+    "rel_hinv_factor_median": 3.364046315369316e-07,
+    "rel_hinv_factor_max": 5.990345387341232e-07
+   }
+  }
+ },
+ "cross_seed": {
+  "per_seed_mean": {
+   "0": -0.0019318602382217165,
+   "1": 0.0006871982444071279,
+   "2": -0.0024980664929316275
+  },
+  "per_seed_sd": {
+   "0": 0.006364178643728711,
+   "1": 0.0051763618636375954,
+   "2": 0.008623872264796209
+  },
+  "pooled_within_sd": 0.006871891170852839,
+  "overall_mean": -0.0012475761622487388,
+  "overall_median": -0.003677348635330091,
+  "n_fc_worse": 6,
+  "n_fc_better": 9,
+  "opposite_sign_fraction": 0.4,
+  "sd_between_seed_means": 0.0016993120326196942,
+  "hierarchical_bootstrap": {
+   "point": -0.0012475761622487388,
+   "ci95": [
+    -0.004777081840922672,
+    0.0021549580959289542
+   ],
+   "frac_boot_positive": 0.24345,
+   "n_boot": 20000,
+   "seed": 20261120,
+   "n_seeds": 3,
+   "k": 5,
+   "n_distinct_seed_resamples": 10,
+   "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+  },
+  "matches_historical": {
+   "mean": true,
+   "pooled_sd": true,
+   "interval": true
+  },
+  "mean_nll_estimand": {
+   "per_seed_mean": {
+    "0": -0.00020833385957343963,
+    "1": 7.409864067309258e-05,
+    "2": -0.0002692509807510568
+   },
+   "overall_mean": -0.0001344953998838013,
+   "pooled_within_sd": 0.0007411740146692263,
+   "hierarchical_bootstrap": {
+    "point": -0.0001344953998838013,
+    "ci95": [
+     -0.0005151127986423128,
+     0.00023247108727963658
+    ],
+    "frac_boot_positive": 0.2435,
+    "n_boot": 20000,
+    "seed": 20261120,
+    "n_seeds": 3,
+    "k": 5,
+    "n_distinct_seed_resamples": 10,
+    "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+   },
+   "n_fc_worse": 6
+  },
+  "original_policy": {
+   "delta_ppl_by_seed": [
+    0.010056899696323285,
+    0.0027064026671261843,
+    0.013069861928583393
+   ],
+   "window_boot_ci_ppl": [
+    [
+     0.0015435080538038996,
+     0.01864258863308432
+    ],
+    [
+     -0.006471007840881615,
+     0.01162271700119692
+    ],
+    [
+     0.003908026556633448,
+     0.021530638749968568
+    ]
+   ],
+   "note": "ORIGINAL extraction (batch-8 cache_inputs.py) is a different policy; never pooled"
+  },
+  "historical_decision": "GROUPING-VARIATION-DOMINATES",
+  "caveat": "3 allocation seeds -> 10 distinct outer resamples; the interval is descriptive and unstable"
+ },
+ "correctness": true
+}

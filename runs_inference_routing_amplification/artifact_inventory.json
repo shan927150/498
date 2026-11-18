@@ -1,0 +1,1061 @@
+{
+ "checkpoint": {
+  "model": "Qwen/Qwen1.5-MoE-A2.7B",
+  "snapshot": "1a758c50ecb6350748b9ce0a99d2352fd9fc11c9"
+ },
+ "configs": {
+  "FR_O20261121": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "primary",
+    "order": 20261121,
+    "result": "runs_hessian_order_null/results/FR_O20261121.json"
+   },
+   "result_sha256": "7b0f9e3c4522f6ccdce1e628c8fbafc0de1d4a68c49dde2e720b3db9155ccfcb",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261121",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261121/L1.pt",
+     "sha256": "a3469c8e626f1f17eb01c0d304ac95ee3f5be7a3a6bfdd6c43982f1771beec78",
+     "expected_sha256": "a3469c8e626f1f17eb01c0d304ac95ee3f5be7a3a6bfdd6c43982f1771beec78",
+     "sha256_match": true,
+     "layer_sha256": "c1a682d61afe3d8cd101c969a3b7fe26b1e5fd38db041633920a9638d0954d09",
+     "expected_layer_sha256": "c1a682d61afe3d8cd101c969a3b7fe26b1e5fd38db041633920a9638d0954d09",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261121/L8.pt",
+     "sha256": "397d39aa07b6c4849925ef5e054340e0f2a72c921e7245c1ce234161e66afa7e",
+     "expected_sha256": "397d39aa07b6c4849925ef5e054340e0f2a72c921e7245c1ce234161e66afa7e",
+     "sha256_match": true,
+     "layer_sha256": "67b9442209825039634779c90e3d74e4f1ed68ce5422e05d23a076c3dc001c8c",
+     "expected_layer_sha256": "67b9442209825039634779c90e3d74e4f1ed68ce5422e05d23a076c3dc001c8c",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261121/L16.pt",
+     "sha256": "8c0df5f063583c81ebd9b9be1022c5c045ac20eec82f238bcf7ce0ce59b27f30",
+     "expected_sha256": "8c0df5f063583c81ebd9b9be1022c5c045ac20eec82f238bcf7ce0ce59b27f30",
+     "sha256_match": true,
+     "layer_sha256": "8387d10e3dc6d1d360e985b48f63c29d3e3a3f3f31406b04cccb5800d2115213",
+     "expected_layer_sha256": "8387d10e3dc6d1d360e985b48f63c29d3e3a3f3f31406b04cccb5800d2115213",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261121/L23.pt",
+     "sha256": "a6b93477a651e5e2823b6940db8e8cf57a1eca38604ecca05023ffb3a6a338a2",
+     "expected_sha256": "a6b93477a651e5e2823b6940db8e8cf57a1eca38604ecca05023ffb3a6a338a2",
+     "sha256_match": true,
+     "layer_sha256": "f14babb6f812068ac50ed82a555056b2b390541a88d8f3b1832ac0867bf1bf82",
+     "expected_layer_sha256": "f14babb6f812068ac50ed82a555056b2b390541a88d8f3b1832ac0867bf1bf82",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "3f3fa62f331253ee96d5df90df3da591fb3deaf6038bb5a238f3c2b6a7295fcb",
+   "valid": true,
+   "audit_s": 89.6990966796875
+  },
+  "FC_O20261121": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "primary",
+    "order": 20261121,
+    "result": "runs_hessian_order_null/results/FC_O20261121.json"
+   },
+   "result_sha256": "711a70c6a0720cf2ace5a818ba13548cd3b9ed8a9dd28d0fb2661cbd099c181b",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261121",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261121/L1.pt",
+     "sha256": "3278bea91b37b44195d85090f802212f7b2518023713b0de583a0657f3dd20b0",
+     "expected_sha256": "3278bea91b37b44195d85090f802212f7b2518023713b0de583a0657f3dd20b0",
+     "sha256_match": true,
+     "layer_sha256": "51bcb7a4c4bc7f7e6df72d94c61b0fec60d2aad6cf781bbd425312bd9e269cd3",
+     "expected_layer_sha256": "51bcb7a4c4bc7f7e6df72d94c61b0fec60d2aad6cf781bbd425312bd9e269cd3",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261121/L8.pt",
+     "sha256": "5235841acbe4211b9197e0ac17126a34a51bc5f244b571870929f672fb030bf3",
+     "expected_sha256": "5235841acbe4211b9197e0ac17126a34a51bc5f244b571870929f672fb030bf3",
+     "sha256_match": true,
+     "layer_sha256": "c964f12cba3a8d83b5537cad1e77c4f13048487c29b31a3990bdb533f303bbca",
+     "expected_layer_sha256": "c964f12cba3a8d83b5537cad1e77c4f13048487c29b31a3990bdb533f303bbca",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261121/L16.pt",
+     "sha256": "883a73ccfc02cd4afc5ba24519964d88b575047bc7ee18f23c0f7a5f16ac47ac",
+     "expected_sha256": "883a73ccfc02cd4afc5ba24519964d88b575047bc7ee18f23c0f7a5f16ac47ac",
+     "sha256_match": true,
+     "layer_sha256": "760f0067e8da666585e1c1ee29af1bd0a3b45fbdec26693e9027b0320c598bde",
+     "expected_layer_sha256": "760f0067e8da666585e1c1ee29af1bd0a3b45fbdec26693e9027b0320c598bde",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261121/L23.pt",
+     "sha256": "f5129e5c82c6a62ca3d2a3e94a48a495019b35bfeaf876643cc29263bb4027fd",
+     "expected_sha256": "f5129e5c82c6a62ca3d2a3e94a48a495019b35bfeaf876643cc29263bb4027fd",
+     "sha256_match": true,
+     "layer_sha256": "116e27ca4cc76684d6d3fdbdfbe96fad2c48a56a4323e10f7a72aa6175627d8c",
+     "expected_layer_sha256": "116e27ca4cc76684d6d3fdbdfbe96fad2c48a56a4323e10f7a72aa6175627d8c",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "32ab8b26889adc5d3c1df0fe230df8dac9d01793ebdb692bc6ba84efd91dd61e",
+   "valid": true,
+   "audit_s": 72.65760660171509
+  },
+  "FR_O20261122": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "primary",
+    "order": 20261122,
+    "result": "runs_hessian_order_null/results/FR_O20261122.json"
+   },
+   "result_sha256": "ee9541e2d0a39fcdc7c9f412efe8aa69b0ed6573867ab84ac0a2618265689642",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261122",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261122/L1.pt",
+     "sha256": "7c633315ced81a8b64ade2d6982865e7fd34da549278cec7d3253477e731bd00",
+     "expected_sha256": "7c633315ced81a8b64ade2d6982865e7fd34da549278cec7d3253477e731bd00",
+     "sha256_match": true,
+     "layer_sha256": "d7354c8d3fc2cba4d0386552f419e2b723221d949c8c5e3b0e5c272e147986f4",
+     "expected_layer_sha256": "d7354c8d3fc2cba4d0386552f419e2b723221d949c8c5e3b0e5c272e147986f4",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261122/L8.pt",
+     "sha256": "d4201f191610702248886a41e4f146e53deab97d62151e8e0980812a6e809395",
+     "expected_sha256": "d4201f191610702248886a41e4f146e53deab97d62151e8e0980812a6e809395",
+     "sha256_match": true,
+     "layer_sha256": "4642125fcc1100157f8121a4c5f9099cf7af0eca80565fd60cabe1c52bfd9798",
+     "expected_layer_sha256": "4642125fcc1100157f8121a4c5f9099cf7af0eca80565fd60cabe1c52bfd9798",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261122/L16.pt",
+     "sha256": "998abc533b6d7701312d8863c8ec17766e5eebbb5a839182af0e231c47d11e36",
+     "expected_sha256": "998abc533b6d7701312d8863c8ec17766e5eebbb5a839182af0e231c47d11e36",
+     "sha256_match": true,
+     "layer_sha256": "34ff8bf958d05be4df50253e3b67d5ff169c760bfd89e3bde9de2627183f6a38",
+     "expected_layer_sha256": "34ff8bf958d05be4df50253e3b67d5ff169c760bfd89e3bde9de2627183f6a38",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261122/L23.pt",
+     "sha256": "8683d222c05121f165504ff3048a5bbd8f9fd9361191e52b9b22c534ea06ef68",
+     "expected_sha256": "8683d222c05121f165504ff3048a5bbd8f9fd9361191e52b9b22c534ea06ef68",
+     "sha256_match": true,
+     "layer_sha256": "518953e1ba081db31ddd5399d2a0d3fa18df3a35cc77131be9a8a1fbc9fd24cc",
+     "expected_layer_sha256": "518953e1ba081db31ddd5399d2a0d3fa18df3a35cc77131be9a8a1fbc9fd24cc",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "160b97688a460b0ecf4168fbf4bf4cb67f4435952e764b031473a1bebf4101f4",
+   "valid": true,
+   "audit_s": 73.60796356201172
+  },
+  "FC_O20261122": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "primary",
+    "order": 20261122,
+    "result": "runs_hessian_order_null/results/FC_O20261122.json"
+   },
+   "result_sha256": "513f347b56e35e302ae3085f0679f085b75c1719f3120ce6c0fc3264bae257c2",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261122",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261122/L1.pt",
+     "sha256": "a5fe7252737f67c659ea2eebc0ea8484828f5eb1a2cb511b7832edc581691409",
+     "expected_sha256": "a5fe7252737f67c659ea2eebc0ea8484828f5eb1a2cb511b7832edc581691409",
+     "sha256_match": true,
+     "layer_sha256": "570115ed9b9229f2b00d20b4b7a93df5a2eabce040d19a6b56e9a7f1f25760d1",
+     "expected_layer_sha256": "570115ed9b9229f2b00d20b4b7a93df5a2eabce040d19a6b56e9a7f1f25760d1",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261122/L8.pt",
+     "sha256": "5b75cc9816dcac6509de70233392742342fffcb277ea1bd8b359075e4428b87c",
+     "expected_sha256": "5b75cc9816dcac6509de70233392742342fffcb277ea1bd8b359075e4428b87c",
+     "sha256_match": true,
+     "layer_sha256": "90a826811dbd6929939c12988a057a6a11736a90e3c91947c0ff28976b917dff",
+     "expected_layer_sha256": "90a826811dbd6929939c12988a057a6a11736a90e3c91947c0ff28976b917dff",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261122/L16.pt",
+     "sha256": "b6945cf9ede8619f687c42bf6168433ef1c0d5f2fc2784821d6e2264df81f8fe",
+     "expected_sha256": "b6945cf9ede8619f687c42bf6168433ef1c0d5f2fc2784821d6e2264df81f8fe",
+     "sha256_match": true,
+     "layer_sha256": "79633be0229053c02fe7cc161b3b4196ef987a8ceba61967fb914b5c0ce077e9",
+     "expected_layer_sha256": "79633be0229053c02fe7cc161b3b4196ef987a8ceba61967fb914b5c0ce077e9",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261122/L23.pt",
+     "sha256": "22bf95a5f46decf7a3df0f383d52bd7394dc7fd53faf7b15e41353bcfb3adf15",
+     "expected_sha256": "22bf95a5f46decf7a3df0f383d52bd7394dc7fd53faf7b15e41353bcfb3adf15",
+     "sha256_match": true,
+     "layer_sha256": "6617ed09d05fef8f8980b9f5ac5ae1a2c7403afe7645d4922a954cebeca3fa93",
+     "expected_layer_sha256": "6617ed09d05fef8f8980b9f5ac5ae1a2c7403afe7645d4922a954cebeca3fa93",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "e46231003133e4bfb677e23fe7c1e6cc30ce1943a96af9757b0a63ee1eef0135",
+   "valid": true,
+   "audit_s": 71.30060815811157
+  },
+  "FR_O20261123": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "primary",
+    "order": 20261123,
+    "result": "runs_hessian_order_null/results/FR_O20261123.json"
+   },
+   "result_sha256": "9011f0fef3c92099fdb7e5b83058f14673ab9c78766e7f0caca90ce4b37389fa",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261123",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261123/L1.pt",
+     "sha256": "dca57d6f71de32802db4ef7593042e5d9d0a9bdcdaba8509512bba5d4dba130f",
+     "expected_sha256": "dca57d6f71de32802db4ef7593042e5d9d0a9bdcdaba8509512bba5d4dba130f",
+     "sha256_match": true,
+     "layer_sha256": "15537fc03fa2be19576e2da5fd6b44f0c89a99d6d295d513054e080a74f9541b",
+     "expected_layer_sha256": "15537fc03fa2be19576e2da5fd6b44f0c89a99d6d295d513054e080a74f9541b",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261123/L8.pt",
+     "sha256": "baf190d12a101ee6ce320dd084adb822c3bd6f8bb83787eb8e115c91f49eede1",
+     "expected_sha256": "baf190d12a101ee6ce320dd084adb822c3bd6f8bb83787eb8e115c91f49eede1",
+     "sha256_match": true,
+     "layer_sha256": "96c14dfe0fd252900087efeea273ec8ab5857b29c7f5fc1dcdc9d04d8cdfb91f",
+     "expected_layer_sha256": "96c14dfe0fd252900087efeea273ec8ab5857b29c7f5fc1dcdc9d04d8cdfb91f",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261123/L16.pt",
+     "sha256": "e68c48ba6f1807502ead6d903976eba28143545ed03c2e34126ca0ed9b984279",
+     "expected_sha256": "e68c48ba6f1807502ead6d903976eba28143545ed03c2e34126ca0ed9b984279",
+     "sha256_match": true,
+     "layer_sha256": "d428e2119ed02383eb95f0cdf5d8c5498973a7457db1f8d359519acd155f0e83",
+     "expected_layer_sha256": "d428e2119ed02383eb95f0cdf5d8c5498973a7457db1f8d359519acd155f0e83",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261123/L23.pt",
+     "sha256": "daee82304c8823fb2dd38904d9f67f9a63c9eaa6c6224a1f6d578866f239342f",
+     "expected_sha256": "daee82304c8823fb2dd38904d9f67f9a63c9eaa6c6224a1f6d578866f239342f",
+     "sha256_match": true,
+     "layer_sha256": "da956c6eb04975d90c9297a68d9f2aca000a7f4ebe3393623e65280664b97462",
+     "expected_layer_sha256": "da956c6eb04975d90c9297a68d9f2aca000a7f4ebe3393623e65280664b97462",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "e288dcf03eb883d0b5f4a68e3f3424386fe3f32dfb29d2a746c00d9622afc084",
+   "valid": true,
+   "audit_s": 81.0277795791626
+  },
+  "FC_O20261123": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "primary",
+    "order": 20261123,
+    "result": "runs_hessian_order_null/results/FC_O20261123.json"
+   },
+   "result_sha256": "0106a847ab49d2c7b24429799833447fc601c0ffeac2406fb6a719a89bc13b5c",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261123",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261123/L1.pt",
+     "sha256": "d2e38cbad44d896765843efe926cdf9ac6906624c099a35cd4f1b3ce3aa4f898",
+     "expected_sha256": "d2e38cbad44d896765843efe926cdf9ac6906624c099a35cd4f1b3ce3aa4f898",
+     "sha256_match": true,
+     "layer_sha256": "eecdd654e1b9a37efac0cf3f8943020b88405bcc117963c04b6ddabca7afc55b",
+     "expected_layer_sha256": "eecdd654e1b9a37efac0cf3f8943020b88405bcc117963c04b6ddabca7afc55b",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261123/L8.pt",
+     "sha256": "de04835b57a449100ef5ebcea781fa4faba4896e5527d6e9d8ee7f8c14c4b58a",
+     "expected_sha256": "de04835b57a449100ef5ebcea781fa4faba4896e5527d6e9d8ee7f8c14c4b58a",
+     "sha256_match": true,
+     "layer_sha256": "79c3ae389e6be2fbc5659f3c83842d29e685c2afcaf8fec95dd117ba7c075157",
+     "expected_layer_sha256": "79c3ae389e6be2fbc5659f3c83842d29e685c2afcaf8fec95dd117ba7c075157",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261123/L16.pt",
+     "sha256": "eda9f55a82cfbb7a24d337d906e3fbf9b233d3eda62d270406c8f7f045c28935",
+     "expected_sha256": "eda9f55a82cfbb7a24d337d906e3fbf9b233d3eda62d270406c8f7f045c28935",
+     "sha256_match": true,
+     "layer_sha256": "8fcaf450cf4dbfb141e157ce22997074d8f1f07e3dfb0db4d71395cf608d0bee",
+     "expected_layer_sha256": "8fcaf450cf4dbfb141e157ce22997074d8f1f07e3dfb0db4d71395cf608d0bee",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261123/L23.pt",
+     "sha256": "4cf2eb6eaf5ea89db16662c19a409b412df14e50efe1de51a876e6dd769b51d3",
+     "expected_sha256": "4cf2eb6eaf5ea89db16662c19a409b412df14e50efe1de51a876e6dd769b51d3",
+     "sha256_match": true,
+     "layer_sha256": "816bd9fc868ddd54c0213a930a17a4794ca8cb0a6c64a250aa81f2ce27276257",
+     "expected_layer_sha256": "816bd9fc868ddd54c0213a930a17a4794ca8cb0a6c64a250aa81f2ce27276257",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "fd9755d0837b90bb1ecf71cfede1627085c4b8f858ed64a010ea62f6f0d30d05",
+   "valid": true,
+   "audit_s": 84.68619585037231
+  },
+  "FR_O20261124": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "primary",
+    "order": 20261124,
+    "result": "runs_hessian_order_null/results/FR_O20261124.json"
+   },
+   "result_sha256": "72cebb0a77d15dd43947b8ab34b58c2b4e92bd319da0a0ff6bc28cc402d9d9e5",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261124",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261124/L1.pt",
+     "sha256": "752896986196dbf5a375806601dedb79f310f06bfb5ee3f0807c53c6a4a83b54",
+     "expected_sha256": "752896986196dbf5a375806601dedb79f310f06bfb5ee3f0807c53c6a4a83b54",
+     "sha256_match": true,
+     "layer_sha256": "de6d980049c3e03728bb42a4900617ee6aea6307a63c2b0ebe35835d542885aa",
+     "expected_layer_sha256": "de6d980049c3e03728bb42a4900617ee6aea6307a63c2b0ebe35835d542885aa",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261124/L8.pt",
+     "sha256": "89793b30f8fa8d4f809c4436b924c5ecd99be903681f2e593536889e85b63e63",
+     "expected_sha256": "89793b30f8fa8d4f809c4436b924c5ecd99be903681f2e593536889e85b63e63",
+     "sha256_match": true,
+     "layer_sha256": "652cd92b11daf41691c38d7785f30c8f573b607ab1f3149240c38b31bb3cc6ca",
+     "expected_layer_sha256": "652cd92b11daf41691c38d7785f30c8f573b607ab1f3149240c38b31bb3cc6ca",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261124/L16.pt",
+     "sha256": "44ceb09ee76676a4ceb2ef0c54053256d33168c7a48055e862299650bd423c98",
+     "expected_sha256": "44ceb09ee76676a4ceb2ef0c54053256d33168c7a48055e862299650bd423c98",
+     "sha256_match": true,
+     "layer_sha256": "593160673d83998000a08d8782a00bcb70f5b443b1cd428f5a55c5e037112926",
+     "expected_layer_sha256": "593160673d83998000a08d8782a00bcb70f5b443b1cd428f5a55c5e037112926",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261124/L23.pt",
+     "sha256": "c896bb3ed0f41de7b79fc7c6babea95d613668dbe228acce7b62a71d5db23e1e",
+     "expected_sha256": "c896bb3ed0f41de7b79fc7c6babea95d613668dbe228acce7b62a71d5db23e1e",
+     "sha256_match": true,
+     "layer_sha256": "7196aa33d15adcf2fca64d099d4e8e390669f65071ef1ed28da4bfbc263365b9",
+     "expected_layer_sha256": "7196aa33d15adcf2fca64d099d4e8e390669f65071ef1ed28da4bfbc263365b9",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "c924cb3242704710ad151e2f3a1f679808788310705a3fc79d3e94de4a473e55",
+   "valid": true,
+   "audit_s": 83.69693851470947
+  },
+  "FC_O20261124": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "primary",
+    "order": 20261124,
+    "result": "runs_hessian_order_null/results/FC_O20261124.json"
+   },
+   "result_sha256": "fae5290cc8a32b99214dbc5eec7348c8e8f5ea81f364c5b40460dae094a81749",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261124",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261124/L1.pt",
+     "sha256": "68afc2185ea98cf5040fdca4af437d57f291a14d65eb9fcc28b564fbe47688d6",
+     "expected_sha256": "68afc2185ea98cf5040fdca4af437d57f291a14d65eb9fcc28b564fbe47688d6",
+     "sha256_match": true,
+     "layer_sha256": "8f61ce68272b6ff76425ae7a2468c8790f44d2543aeba1b544d6098a3f281c73",
+     "expected_layer_sha256": "8f61ce68272b6ff76425ae7a2468c8790f44d2543aeba1b544d6098a3f281c73",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261124/L8.pt",
+     "sha256": "a1178d9845d979c535861817f6909ddc701835a025716c776f45fca8ef0ab875",
+     "expected_sha256": "a1178d9845d979c535861817f6909ddc701835a025716c776f45fca8ef0ab875",
+     "sha256_match": true,
+     "layer_sha256": "606e83b0b37639c9e9a7f9f5c192b295a047a9d5bc0244210e9da7421953254b",
+     "expected_layer_sha256": "606e83b0b37639c9e9a7f9f5c192b295a047a9d5bc0244210e9da7421953254b",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261124/L16.pt",
+     "sha256": "172763ccd6b438431ca75684272476711c5492762023364bda668a7305a2fd41",
+     "expected_sha256": "172763ccd6b438431ca75684272476711c5492762023364bda668a7305a2fd41",
+     "sha256_match": true,
+     "layer_sha256": "bd3c97839b25cb9580ff3386d7233618c4a6db2a5108756be0567d8a2c6fabd5",
+     "expected_layer_sha256": "bd3c97839b25cb9580ff3386d7233618c4a6db2a5108756be0567d8a2c6fabd5",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261124/L23.pt",
+     "sha256": "eb7536beb8e689ce1e8745863a190330d84144add1342687888578d665d66468",
+     "expected_sha256": "eb7536beb8e689ce1e8745863a190330d84144add1342687888578d665d66468",
+     "sha256_match": true,
+     "layer_sha256": "af70560caf969d27c85ac96ec657ce700fdf3f1926493ffdd7a60685092b561f",
+     "expected_layer_sha256": "af70560caf969d27c85ac96ec657ce700fdf3f1926493ffdd7a60685092b561f",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "e24651d1703085124814ff35a1526d55ecdb6ea65fd1e46527c2b684a1bf5e6d",
+   "valid": true,
+   "audit_s": 83.78772282600403
+  },
+  "FR_O20261125": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "primary",
+    "order": 20261125,
+    "result": "runs_hessian_order_null/results/FR_O20261125.json"
+   },
+   "result_sha256": "164e286ca8c6b492a8fe396b72c5f7c9abcc2199f469aabe9d51739d9b56d564",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261125",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261125/L1.pt",
+     "sha256": "fbca55b3f18dc5a7d0543f8cd13d63f542a20cb64b97a5699fe7af11e3b7c3b4",
+     "expected_sha256": "fbca55b3f18dc5a7d0543f8cd13d63f542a20cb64b97a5699fe7af11e3b7c3b4",
+     "sha256_match": true,
+     "layer_sha256": "fdf5f37b37778e54338c5068d15c111446c44ac06e227f83fdb437456bd301ce",
+     "expected_layer_sha256": "fdf5f37b37778e54338c5068d15c111446c44ac06e227f83fdb437456bd301ce",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261125/L8.pt",
+     "sha256": "8c2f6de1b55f3d617811e6c726204e673f799111ea5c0464bf8e8f4e0ed7e60a",
+     "expected_sha256": "8c2f6de1b55f3d617811e6c726204e673f799111ea5c0464bf8e8f4e0ed7e60a",
+     "sha256_match": true,
+     "layer_sha256": "63aa398168ec4c6d9e273b5c6dbd5fb59a53dcefc179edd9a6f7d5dc91df239c",
+     "expected_layer_sha256": "63aa398168ec4c6d9e273b5c6dbd5fb59a53dcefc179edd9a6f7d5dc91df239c",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261125/L16.pt",
+     "sha256": "887cf0979e5872a8fa0edee1ee572567d98a1b22f5d8d0f1e0263384bd50b466",
+     "expected_sha256": "887cf0979e5872a8fa0edee1ee572567d98a1b22f5d8d0f1e0263384bd50b466",
+     "sha256_match": true,
+     "layer_sha256": "efb1681b051e794bbb66b147c3f65312ffd05b25780bcad63fd73697764f3d12",
+     "expected_layer_sha256": "efb1681b051e794bbb66b147c3f65312ffd05b25780bcad63fd73697764f3d12",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FR_O20261125/L23.pt",
+     "sha256": "7e7af45b0c3d65abf369dc5d69b5104c7b0a3b8b64b23fd64ea0c62997115616",
+     "expected_sha256": "7e7af45b0c3d65abf369dc5d69b5104c7b0a3b8b64b23fd64ea0c62997115616",
+     "sha256_match": true,
+     "layer_sha256": "331c3037390721e57a855dbb14fea97f3f4b06a1c46bfa96accfa4522c4f7849",
+     "expected_layer_sha256": "331c3037390721e57a855dbb14fea97f3f4b06a1c46bfa96accfa4522c4f7849",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "64ee1c245421068e66348ccafc75aeaf83c7564fa3ee72211e1131d3cd2c6540",
+   "valid": true,
+   "audit_s": 85.59612560272217
+  },
+  "FC_O20261125": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "primary",
+    "order": 20261125,
+    "result": "runs_hessian_order_null/results/FC_O20261125.json"
+   },
+   "result_sha256": "b202ef9eae01ef969755a86478fcf8092b313977aa13e490b6d69c8d9f933493",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "order_seed": true,
+    "not_repeat": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261125",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261125/L1.pt",
+     "sha256": "c529ab7d5f2bd2006580f404172b5e43adcc8659457d4170635d007c1860e09c",
+     "expected_sha256": "c529ab7d5f2bd2006580f404172b5e43adcc8659457d4170635d007c1860e09c",
+     "sha256_match": true,
+     "layer_sha256": "b959cf101736ccc73e7a53c4a9f4c341890aaab498b56c4bad6e85a4fc526a6c",
+     "expected_layer_sha256": "b959cf101736ccc73e7a53c4a9f4c341890aaab498b56c4bad6e85a4fc526a6c",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261125/L8.pt",
+     "sha256": "7dfb299766127f108cf2f90e86e7b8e75b89a471bea15535e6158909362acb7e",
+     "expected_sha256": "7dfb299766127f108cf2f90e86e7b8e75b89a471bea15535e6158909362acb7e",
+     "sha256_match": true,
+     "layer_sha256": "2a6915e3411627df910ca339f2b1ecf77a1de553bce2b6efec7b29df3750f404",
+     "expected_layer_sha256": "2a6915e3411627df910ca339f2b1ecf77a1de553bce2b6efec7b29df3750f404",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261125/L16.pt",
+     "sha256": "d9fd8a0fa5834adedbf906d3c7408ac5179eb0ce47beeae7e474baca5380f2f3",
+     "expected_sha256": "d9fd8a0fa5834adedbf906d3c7408ac5179eb0ce47beeae7e474baca5380f2f3",
+     "sha256_match": true,
+     "layer_sha256": "eaeaed9022c9e4ca2754ee86896adab27f56f0c527ebd0b813015cd334c0f738",
+     "expected_layer_sha256": "eaeaed9022c9e4ca2754ee86896adab27f56f0c527ebd0b813015cd334c0f738",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_hessian_order_null/weights/FC_O20261125/L23.pt",
+     "sha256": "e1ffa689e4da1daa88d676bd487fc63728b2ef00dbdf08dd57cd9f524a23e5bd",
+     "expected_sha256": "e1ffa689e4da1daa88d676bd487fc63728b2ef00dbdf08dd57cd9f524a23e5bd",
+     "sha256_match": true,
+     "layer_sha256": "9c6eb259728affcdf91e6c0002980392017d724fa2f9816ce28af913b4ea4c3f",
+     "expected_layer_sha256": "9c6eb259728affcdf91e6c0002980392017d724fa2f9816ce28af913b4ea4c3f",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "ae52419984f0bf1387a93a69b3247c8b4132c69e5926daa054e744e46d0c2974",
+   "valid": true,
+   "audit_s": 85.65659475326538
+  },
+  "FR_ORIGINAL": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "reference_original",
+    "order": null,
+    "result": "runs_multigroup_robustness/results/CTRL_FR_ORIGINAL.json",
+    "also": "runs_hessian_order_null/baseline_regression/FR.json"
+   },
+   "result_sha256": "578cd1aa870c02e9312b529b8a94ddeb6b572bc36f9c5202e719fc3ff425909b",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "gptq_settings": true,
+    "selection_ids_hash": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true,
+    "order_null_O0_regression_identical_weights": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL/L1.pt",
+     "sha256": "5e36ed92af6dc3bb333160462049a8122f3a46d5d5c048725a0cb088b90c0055",
+     "expected_sha256": "5e36ed92af6dc3bb333160462049a8122f3a46d5d5c048725a0cb088b90c0055",
+     "sha256_match": true,
+     "layer_sha256": "2cae329c5bf8184911be299a1ccc54c53e8efaf1dea568bfc4f5752611d10beb",
+     "expected_layer_sha256": "2cae329c5bf8184911be299a1ccc54c53e8efaf1dea568bfc4f5752611d10beb",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL/L8.pt",
+     "sha256": "84e8dd20dadb1cae9d41dbf44efe3cf5ae285bc549cb3c50c16226389f40c9ae",
+     "expected_sha256": "84e8dd20dadb1cae9d41dbf44efe3cf5ae285bc549cb3c50c16226389f40c9ae",
+     "sha256_match": true,
+     "layer_sha256": "91df9d87fd74141580588886ab1da8635c1255de1657d21a2c264b13d4bf0c0e",
+     "expected_layer_sha256": "91df9d87fd74141580588886ab1da8635c1255de1657d21a2c264b13d4bf0c0e",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL/L16.pt",
+     "sha256": "da41b4356e2684062967c140df9e7b3efa0c8cdc0ea8c85c61dedf4cd3984f85",
+     "expected_sha256": "da41b4356e2684062967c140df9e7b3efa0c8cdc0ea8c85c61dedf4cd3984f85",
+     "sha256_match": true,
+     "layer_sha256": "2d41bb0339deb542f09b4cfbc944b7443137852900b357989ef3a85a25f3d98b",
+     "expected_layer_sha256": "2d41bb0339deb542f09b4cfbc944b7443137852900b357989ef3a85a25f3d98b",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FR_ORIGINAL/L23.pt",
+     "sha256": "39fa9c14c74b3f4699db9d93dc5dc4b20475bfeeef5d4aaa2eb3d08c958f3392",
+     "expected_sha256": "39fa9c14c74b3f4699db9d93dc5dc4b20475bfeeef5d4aaa2eb3d08c958f3392",
+     "sha256_match": true,
+     "layer_sha256": "065917994f6e91c90ec907dfeb2186e5ee0e2cc3aa1f189c6776067bea7ec45e",
+     "expected_layer_sha256": "065917994f6e91c90ec907dfeb2186e5ee0e2cc3aa1f189c6776067bea7ec45e",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "0abe191c4bcbca24cbfe8877139461f51352186f6daf0d3a5c64b214c74da066",
+   "valid": true,
+   "audit_s": 84.36086821556091
+  },
+  "FR_FP64": {
+   "spec": {
+    "strategy": "FR",
+    "kind": "reference_fp64",
+    "order": null,
+    "result": "runs_fp64_canonical_reproducibility/results/FR_s0_FP64_CANONICAL.json"
+   },
+   "result_sha256": "a5441b3e76ba220b67a6b10755d658a561850f1885ce65de0b59711fb69dc6bc",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FR_s0_FP64_CANONICAL",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FR_s0_FP64_CANONICAL/L1.pt",
+     "sha256": "8b6366b938dc381b7d8ec034b770b38d8f1c282d833fd3b1128a078bc834902d",
+     "expected_sha256": "8b6366b938dc381b7d8ec034b770b38d8f1c282d833fd3b1128a078bc834902d",
+     "sha256_match": true,
+     "layer_sha256": "d475b9079c5a0d9c08097f73ff691ba7a865defec565d0bad62726a1c81d2ba2",
+     "expected_layer_sha256": "d475b9079c5a0d9c08097f73ff691ba7a865defec565d0bad62726a1c81d2ba2",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FR_s0_FP64_CANONICAL/L8.pt",
+     "sha256": "f89b73d10a62bdbc928cf8d8ec5e661b05131f95e33e06b21318585709900816",
+     "expected_sha256": "f89b73d10a62bdbc928cf8d8ec5e661b05131f95e33e06b21318585709900816",
+     "sha256_match": true,
+     "layer_sha256": "8544ff8777ea54d5f44c14310a828465e37568247aec85a48c8c44b6c9de3c14",
+     "expected_layer_sha256": "8544ff8777ea54d5f44c14310a828465e37568247aec85a48c8c44b6c9de3c14",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FR_s0_FP64_CANONICAL/L16.pt",
+     "sha256": "c5f0c073947df8e61306fd4eb6375dff263eadb7a8c7a1dfafb3edca52363bab",
+     "expected_sha256": "c5f0c073947df8e61306fd4eb6375dff263eadb7a8c7a1dfafb3edca52363bab",
+     "sha256_match": true,
+     "layer_sha256": "398ce0d6499db6210c92be0b5c4c27e5760f7c818b2a48937f1a58dd9a7926ae",
+     "expected_layer_sha256": "398ce0d6499db6210c92be0b5c4c27e5760f7c818b2a48937f1a58dd9a7926ae",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FR_s0_FP64_CANONICAL/L23.pt",
+     "sha256": "ed59fc7cba644fae4ee95171a689ecfd1e6567fe9096742919506870120a53db",
+     "expected_sha256": "ed59fc7cba644fae4ee95171a689ecfd1e6567fe9096742919506870120a53db",
+     "sha256_match": true,
+     "layer_sha256": "15fbf9858919edcbe371466dadd32fbb0c0bd99b0efc14872c4a51d216024294",
+     "expected_layer_sha256": "15fbf9858919edcbe371466dadd32fbb0c0bd99b0efc14872c4a51d216024294",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "a4c2eb171567fe9c1a21e9a00c2d52808800e1f7e6249fb3b75e11ceb1389106",
+   "valid": true,
+   "audit_s": 84.67466759681702
+  },
+  "FC_ORIGINAL": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "reference_original",
+    "order": null,
+    "result": "runs_multigroup_robustness/results/CTRL_FC_ORIGINAL.json",
+    "also": "runs_hessian_order_null/baseline_regression/FC.json"
+   },
+   "result_sha256": "94b37aa055ba32fd5be61cbe0b566567bb68ad66d73f7335d49684a34242ee17",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "gptq_settings": true,
+    "selection_ids_hash": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true,
+    "order_null_O0_regression_identical_weights": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FC_ORIGINAL",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FC_ORIGINAL/L1.pt",
+     "sha256": "6e20f4c5f1600be33f6b19af934dab3f9bf61737e98715ae5218e328fd3f04c3",
+     "expected_sha256": "6e20f4c5f1600be33f6b19af934dab3f9bf61737e98715ae5218e328fd3f04c3",
+     "sha256_match": true,
+     "layer_sha256": "6ccb14b278412c50a6bb00a33a2be7a928f5239f5c8386879cadacb5a225509c",
+     "expected_layer_sha256": "6ccb14b278412c50a6bb00a33a2be7a928f5239f5c8386879cadacb5a225509c",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FC_ORIGINAL/L8.pt",
+     "sha256": "9bf5503ffb8745cef32a0ae08eb5b720d6b9a2ca96985e8292ad7fcfc025421c",
+     "expected_sha256": "9bf5503ffb8745cef32a0ae08eb5b720d6b9a2ca96985e8292ad7fcfc025421c",
+     "sha256_match": true,
+     "layer_sha256": "d3088429ec3baafe4d103349fc57461f7cbe9d3108843f866d7e8e828dd4e9f8",
+     "expected_layer_sha256": "d3088429ec3baafe4d103349fc57461f7cbe9d3108843f866d7e8e828dd4e9f8",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FC_ORIGINAL/L16.pt",
+     "sha256": "5688b6e454757eac54e9392e3273f0d10ed70cebb550c0cefe26026a35438cbd",
+     "expected_sha256": "5688b6e454757eac54e9392e3273f0d10ed70cebb550c0cefe26026a35438cbd",
+     "sha256_match": true,
+     "layer_sha256": "0d48675413c2bce2af4657c3019f31ebad71629751a7e4728abcad90e716bfad",
+     "expected_layer_sha256": "0d48675413c2bce2af4657c3019f31ebad71629751a7e4728abcad90e716bfad",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_multigroup_robustness/weights/CTRL_FC_ORIGINAL/L23.pt",
+     "sha256": "931e1a35b5a355b226de6b502b59059167dead95649e3b53e25ed394b2a53986",
+     "expected_sha256": "931e1a35b5a355b226de6b502b59059167dead95649e3b53e25ed394b2a53986",
+     "sha256_match": true,
+     "layer_sha256": "0d0c9fc2c14827bf4f23c5d82f4c0fbd9a43151d85a602e83366b22111e05741",
+     "expected_layer_sha256": "0d0c9fc2c14827bf4f23c5d82f4c0fbd9a43151d85a602e83366b22111e05741",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "d2592c3274f4ae2ffad1dbb5773bd5d95916ee835f6e8d81a9787a34601b2ae4",
+   "valid": true,
+   "audit_s": 84.58436012268066
+  },
+  "FC_FP64": {
+   "spec": {
+    "strategy": "FC",
+    "kind": "reference_fp64",
+    "order": null,
+    "result": "runs_fp64_canonical_reproducibility/results/FC_s0_FP64_CANONICAL.json"
+   },
+   "result_sha256": "6a18502ae49951c4c51a398b4ce409e0921c804ad07d70b949eac2a154b2be2a",
+   "checks": {
+    "result_exists": true,
+    "result_valid_flag": true,
+    "n_quantized_experts_240": true,
+    "n_projection_tensors_720": true,
+    "rtn_fallbacks_0": true,
+    "strategy": true,
+    "selection_same_rows_as_seed0": true,
+    "file_sha256_all_match": true,
+    "layer_sha256_all_match": true,
+    "keys_complete_240_experts": true,
+    "installed_weights_sha256_match": true,
+    "n_tensors_720": true,
+    "shapes_ok_720": true,
+    "dtype_bf16_720": true,
+    "finite_720": true,
+    "all_720_differ_from_bf16_checkpoint": true
+   },
+   "weights_dir": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FC_s0_FP64_CANONICAL",
+   "files": {
+    "1": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FC_s0_FP64_CANONICAL/L1.pt",
+     "sha256": "01afbd598e69f91fa1369d8dc9c570b0714933262aeb31abe74f8bfb839ad924",
+     "expected_sha256": "01afbd598e69f91fa1369d8dc9c570b0714933262aeb31abe74f8bfb839ad924",
+     "sha256_match": true,
+     "layer_sha256": "06060bf9e27128af0021ac2b3541366f8ce7df2e016e52484ced79a6b8d64e69",
+     "expected_layer_sha256": "06060bf9e27128af0021ac2b3541366f8ce7df2e016e52484ced79a6b8d64e69",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "8": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FC_s0_FP64_CANONICAL/L8.pt",
+     "sha256": "299886055be00e8a19919026725ebbc349397c2cb23a052dc096f393a798f167",
+     "expected_sha256": "299886055be00e8a19919026725ebbc349397c2cb23a052dc096f393a798f167",
+     "sha256_match": true,
+     "layer_sha256": "2299aeada1b684c416261242190ab626e70f47a845f1b5a632f1f4310b855d92",
+     "expected_layer_sha256": "2299aeada1b684c416261242190ab626e70f47a845f1b5a632f1f4310b855d92",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "16": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FC_s0_FP64_CANONICAL/L16.pt",
+     "sha256": "a69ab8e35dd8d24c59765b4ee574ab417be47fa6ee4d86e5c94d760e2e066ba8",
+     "expected_sha256": "a69ab8e35dd8d24c59765b4ee574ab417be47fa6ee4d86e5c94d760e2e066ba8",
+     "sha256_match": true,
+     "layer_sha256": "2d5a921de226127fb4621432299c1bc64a38455b64e8796568b39fa8467b866f",
+     "expected_layer_sha256": "2d5a921de226127fb4621432299c1bc64a38455b64e8796568b39fa8467b866f",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    },
+    "23": {
+     "path": "/home/kaixuan6/moe_cache_fp64_canonical/weights/FC_s0_FP64_CANONICAL/L23.pt",
+     "sha256": "e940aa2b47e39eea9ba539fe33a92b526728629478eb0c2df60e7997f87c1248",
+     "expected_sha256": "e940aa2b47e39eea9ba539fe33a92b526728629478eb0c2df60e7997f87c1248",
+     "sha256_match": true,
+     "layer_sha256": "759b09d96350e1eff4f320649f57aee28fc3c474bb36373d37349e1b6e2c1a89",
+     "expected_layer_sha256": "759b09d96350e1eff4f320649f57aee28fc3c474bb36373d37349e1b6e2c1a89",
+     "layer_sha256_match": true,
+     "keys_complete": true
+    }
+   },
+   "installed_weights_sha256": "dd17255cc2e882808804e3070d07b5ab7f29fcc546e31485daca1ed365e9e06a",
+   "valid": true,
+   "audit_s": 85.23371291160583
+  }
+ },
+ "all_valid": true,
+ "n_configs": 14,
+ "missing": [],
+ "regenerated_weights": 0,
+ "created": "2026-11-14 03:10:19"
+}

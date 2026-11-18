@@ -1,0 +1,84 @@
+{
+ "hessian_reconstruction": {
+  "FR": {
+   "replay_s_3orders": 294.4281322956085,
+   "wall_s": 462.3465552330017,
+   "peak_gpu_gb": 6.938876928,
+   "peak_rss_gb": 26.883648
+  },
+  "FC": {
+   "replay_s_3orders": 291.08692240715027,
+   "wall_s": 447.79429841041565,
+   "peak_gpu_gb": 6.940620288,
+   "peak_rss_gb": 26.85956
+  }
+ },
+ "accumulation_timing": {
+  "layer": 8,
+  "experts": "0-14",
+  "keys": 30,
+  "seconds": {
+   "none": [
+    5.14138126373291,
+    4.427721738815308,
+    4.46781325340271
+   ],
+   "fp32": [
+    4.961840629577637,
+    4.787832260131836,
+    4.9715094566345215
+   ],
+   "fp64": [
+    5.6962034702301025,
+    5.515050172805786,
+    5.620017051696777
+   ]
+  },
+  "median": {
+   "none": 4.46781325340271,
+   "fp32": 4.961840629577637,
+   "fp64": 5.620017051696777
+  },
+  "note": "one layer, 15 experts x (gu, down), 128 sequences, original order; 'none' = same replay with hooks but no accumulation for these keys; FP32 = original arithmetic, FP64 = canonical"
+ },
+ "fp64_overhead": {
+  "fp32_minus_none": 0.49402737617492676,
+  "fp64_minus_none": 1.1522037982940674,
+  "ratio_fp64_over_fp32_accumulation": 2.3322671047405508
+ },
+ "quantization": {
+  "FR": {
+   "quantize_s": 419.96481704711914,
+   "gptq_s": 369.27236557006836,
+   "peak_gpu_gb": 2.483177472,
+   "peak_cpu_gb": 46.748688,
+   "eval_s": [
+    38.92454385757446,
+    21.68745446205139
+   ]
+  },
+  "FC": {
+   "quantize_s": 430.4427399635315,
+   "gptq_s": 366.79009675979614,
+   "peak_gpu_gb": 2.483177472,
+   "peak_cpu_gb": 46.762788,
+   "eval_s": [
+    49.96536374092102,
+    23.084682941436768
+   ]
+  }
+ },
+ "storage_bytes": {
+  "canonical_hessians": {
+   "FR": 11859723185,
+   "FC": 11859723185
+  },
+  "weights": {
+   "FR_s0_FP64_CANONICAL": 4152536576,
+   "FC_s0_FP64_CANONICAL": 4152536576,
+   "FR_s0_FP64_CANONICAL_repeat": 4152536576,
+   "FR_FP32_LOADED_REGRESSION": 4152536576
+  }
+ },
+ "deployment_note": "a deployed canonical policy needs FP64 block buffers (2x FP32 memory: ~5.9 GB -> ~11.9 GB per layer at K=4, or chunking) and one cast; the MVP's 3-order replays, stored FP32+FP64 copies and repeat solves are experimental overhead"
+}

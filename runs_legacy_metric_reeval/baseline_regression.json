@@ -1,0 +1,273 @@
+{
+ "fr_s0_newcache": {
+  "weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "weights_sha256_hist": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "weights_exact": true,
+  "recon": 0.0046094692935882,
+  "recon_hist": 0.0046094692935882,
+  "recon_exact": true,
+  "per_expert_exact": true,
+  "ppl": 9.269003962169808,
+  "ppl_hist": 9.269003962169808,
+  "ppl_exact": true,
+  "valid": true,
+  "note": "FR s0 re-quantized from the NEW cache (rows re-captured at batch 1) with the CURRENT code",
+  "passed": true
+ },
+ "agq_q0_layer_output": {
+  "reference": "runs_agq_only_validation/results/eval_FR_s0.json (GPTQ arm = same FR_s0 weights)",
+  "per_layer": {
+   "1": 0.0003019003819479191,
+   "8": 0.007173198373874861,
+   "16": 0.007090592442089353,
+   "23": 0.0003007534316592194
+  },
+  "per_layer_reference": {
+   "1": 0.00030190038194791895,
+   "8": 0.00717319837387486,
+   "16": 0.007090592442089351,
+   "23": 0.00030075343165921934
+  },
+  "per_layer_exact": {
+   "1": false,
+   "8": false,
+   "16": false,
+   "23": false
+  },
+  "max_rel_diff": 5.386887052725927e-16,
+  "mean": 0.0037166111573928382,
+  "mean_reference": 0.0037166111573928374,
+  "native_per_layer": {
+   "1": 0.0003183006115761424,
+   "8": 0.007193882220529875,
+   "16": 0.007118244195892469,
+   "23": 0.0003056143300719576
+  },
+  "native_reference": {
+   "1": 0.0003183006115761424,
+   "8": 0.007193882220529877,
+   "16": 0.0071182441958924725,
+   "23": 0.00030561433007195756
+  },
+  "native_max_rel_diff": 4.874020694535362e-16,
+  "passed": true
+ },
+ "expert_reconstruction": {
+  "note": "historical E3 used the solver's fp32 W_q; the installed (and evaluated) weights are their BF16 rounding, so equality is not expected; tolerance fixed at 0.5 % relative per configuration and every historical paired sign preserved",
+  "tolerance_rel": 0.005,
+  "configs": {
+   "FR_s0": {
+    "recomputed_installed_bf16": 0.004611044859336636,
+    "historical_solver_fp32": 0.0046094692935882,
+    "rel_diff": 0.00034181066150649656,
+    "per_expert_max_abs_rel_diff": 0.016920864376982852,
+    "per_expert_spearman": 0.9999973957881211
+   },
+   "FR_s1": {
+    "recomputed_installed_bf16": 0.0046275143033091826,
+    "historical_solver_fp32": 0.004625934030334249,
+    "rel_diff": 0.0003416116538997488,
+    "per_expert_max_abs_rel_diff": 0.017204276612278552,
+    "per_expert_spearman": 0.9999982638587475
+   },
+   "FR_s2": {
+    "recomputed_installed_bf16": 0.004611993219950906,
+    "historical_solver_fp32": 0.004610399983864865,
+    "rel_diff": 0.00034557437350698795,
+    "per_expert_max_abs_rel_diff": 0.017288334742229537,
+    "per_expert_spearman": 0.9999999999999998
+   },
+   "TR_s0": {
+    "recomputed_installed_bf16": 0.004613549877020021,
+    "historical_solver_fp32": 0.004611982636422466,
+    "rel_diff": 0.00033981927537582327,
+    "per_expert_max_abs_rel_diff": 0.017260992022647758,
+    "per_expert_spearman": 0.9999965277174949
+   },
+   "TR_s1": {
+    "recomputed_installed_bf16": 0.0046015737882814664,
+    "historical_solver_fp32": 0.004600008608227841,
+    "rel_diff": 0.00034025589665755466,
+    "per_expert_max_abs_rel_diff": 0.017077073781660096,
+    "per_expert_spearman": 0.9999982638587475
+   },
+   "TR_s2": {
+    "recomputed_installed_bf16": 0.004606676920615023,
+    "historical_solver_fp32": 0.004605122155966141,
+    "rel_diff": 0.0003376163750332018,
+    "per_expert_max_abs_rel_diff": 0.017161396452450513,
+    "per_expert_spearman": 0.9999982638587475
+   },
+   "FC_s0": {
+    "recomputed_installed_bf16": 0.004728535843099427,
+    "historical_solver_fp32": 0.0047269603364303685,
+    "rel_diff": 0.00033330228242368226,
+    "per_expert_max_abs_rel_diff": 0.017076531176504893,
+    "per_expert_spearman": 0.9999973957881211
+   },
+   "FC_s1": {
+    "recomputed_installed_bf16": 0.004729295196261333,
+    "historical_solver_fp32": 0.0047277182467330104,
+    "rel_diff": 0.0003335540415109413,
+    "per_expert_max_abs_rel_diff": 0.017122784973620367,
+    "per_expert_spearman": 0.9999991319293736
+   },
+   "FC_s2": {
+    "recomputed_installed_bf16": 0.004736729633514228,
+    "historical_solver_fp32": 0.004735151293752469,
+    "rel_diff": 0.0003333240405309654,
+    "per_expert_max_abs_rel_diff": 0.017207898019188195,
+    "per_expert_spearman": 0.9999991319293736
+   },
+   "EBSS": {
+    "recomputed_installed_bf16": 0.0059721878053259295,
+    "historical_solver_fp32": 0.005970665149213848,
+    "rel_diff": 0.00025502286161235274,
+    "per_expert_max_abs_rel_diff": 0.020218508691670464,
+    "per_expert_spearman": 0.9999982638587475
+   },
+   "C4R16_s0": {
+    "recomputed_installed_bf16": 0.005383372691775812,
+    "historical_solver_fp32": 0.0053817881215029425,
+    "rel_diff": 0.00029443193174743523,
+    "per_expert_max_abs_rel_diff": 0.016474876846424697,
+    "per_expert_spearman": 0.9999999999999998
+   },
+   "C4R16_s1": {
+    "recomputed_installed_bf16": 0.005396575934937264,
+    "historical_solver_fp32": 0.005394993762483961,
+    "rel_diff": 0.00029326678082645556,
+    "per_expert_max_abs_rel_diff": 0.016397795580212805,
+    "per_expert_spearman": 0.9999999999999998
+   },
+   "C4R16_s2": {
+    "recomputed_installed_bf16": 0.005382992274001069,
+    "historical_solver_fp32": 0.005381452384591753,
+    "rel_diff": 0.00028614754888944995,
+    "per_expert_max_abs_rel_diff": 0.016341395806704608,
+    "per_expert_spearman": 0.9999973957881211
+   },
+   "RS_PO16": {
+    "recomputed_installed_bf16": 0.0061042055645265225,
+    "historical_solver_fp32": 0.006102680778179296,
+    "rel_diff": 0.0002498551706453675,
+    "per_expert_max_abs_rel_diff": 0.01874390463391266,
+    "per_expert_spearman": 0.9999991319293736
+   },
+   "RS_EBSS16": {
+    "recomputed_installed_bf16": 0.006108695021646477,
+    "historical_solver_fp32": 0.006107183149112938,
+    "rel_diff": 0.0002475564424097857,
+    "per_expert_max_abs_rel_diff": 0.01867016883088497,
+    "per_expert_spearman": 0.9999991319293736
+   },
+   "PX_PO16": {
+    "recomputed_installed_bf16": 0.005719069079378843,
+    "historical_solver_fp32": 0.005717505125656861,
+    "rel_diff": 0.00027353779097877994,
+    "per_expert_max_abs_rel_diff": 0.01783200518619729,
+    "per_expert_spearman": 0.9999939235056162
+   },
+   "PX_EBSS16": {
+    "recomputed_installed_bf16": 0.0056969637297435965,
+    "historical_solver_fp32": 0.0056954130578128785,
+    "rel_diff": 0.0002722668075129005,
+    "per_expert_max_abs_rel_diff": 0.017781752147177383,
+    "per_expert_spearman": 0.9999991319293736
+   },
+   "TC_s0": {
+    "recomputed_installed_bf16": 0.00461706646474852,
+    "historical_solver_fp32": 0.004615500755284641,
+    "rel_diff": 0.00033922851428110296,
+    "per_expert_max_abs_rel_diff": 0.016998230748566077,
+    "per_expert_spearman": 0.9999973957881211
+   },
+   "TC_s1": {
+    "recomputed_installed_bf16": 0.004610939447150829,
+    "historical_solver_fp32": 0.004609362323626287,
+    "rel_diff": 0.00034215655307856155,
+    "per_expert_max_abs_rel_diff": 0.01721081439123991,
+    "per_expert_spearman": 0.9999973957881211
+   },
+   "TC_s2": {
+    "recomputed_installed_bf16": 0.004615698844996559,
+    "historical_solver_fp32": 0.004614122882578101,
+    "rel_diff": 0.00034155189589964456,
+    "per_expert_max_abs_rel_diff": 0.017228420400942697,
+    "per_expert_spearman": 0.9999991319293736
+   }
+  },
+  "max_abs_rel_diff": 0.00034557437350698795,
+  "paired_differences": [
+   {
+    "method": "FC_s0",
+    "ref": "FR_s0",
+    "hist": 0.02548906074840305,
+    "recomputed": 0.025480338480093224
+   },
+   {
+    "method": "TR_s0",
+    "ref": "FR_s0",
+    "hist": 0.0005452564436781011,
+    "recomputed": 0.0005432646525467525
+   },
+   {
+    "method": "EBSS",
+    "ref": "FR_s0",
+    "hist": 0.295304246308589,
+    "recomputed": 0.29519186811492304
+   },
+   {
+    "method": "FC_s1",
+    "ref": "FR_s1",
+    "hist": 0.022002954588482754,
+    "recomputed": 0.021994722496992854
+   },
+   {
+    "method": "TR_s1",
+    "ref": "FR_s1",
+    "hist": -0.005604364856135723,
+    "recomputed": -0.005605712554830095
+   },
+   {
+    "method": "EBSS",
+    "ref": "FR_s1",
+    "hist": 0.29069396797741076,
+    "recomputed": 0.29058224651086595
+   },
+   {
+    "method": "FC_s2",
+    "ref": "FR_s2",
+    "hist": 0.027058673938096446,
+    "recomputed": 0.027046096473804137
+   },
+   {
+    "method": "TR_s2",
+    "ref": "FR_s2",
+    "hist": -0.0011447657290463006,
+    "recomputed": -0.0011527118714929644
+   },
+   {
+    "method": "EBSS",
+    "ref": "FR_s2",
+    "hist": 0.29504276637808824,
+    "recomputed": 0.2949255388084684
+   }
+  ],
+  "paired_signs_preserved": true,
+  "passed": true
+ },
+ "tc_capture": {
+  "n_rows": 343,
+  "n_shared_with_historical_b1": 242,
+  "shared_rows_bitwise_equal": {
+   "1": true,
+   "8": true,
+   "16": true,
+   "23": true
+  },
+  "shared_rows_routing_equal": true,
+  "passed": true
+ },
+ "passed": true
+}

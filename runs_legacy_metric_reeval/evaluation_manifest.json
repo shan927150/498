@@ -1,0 +1,335 @@
+{
+ "primary_split": "confirm",
+ "splits": {
+  "confirm": {
+   "cache": "/home/kaixuan6/moe_cache_confirmation",
+   "rows": [
+    0,
+    256
+   ],
+   "role": "PRIMARY",
+   "note": "locked document-disjoint confirmation split (runs_aggregate_constraint); never used for selection; previously used once to score expert reconstruction of FR/TR/TC/FC built from the batch-8 historical cache, never for MoE-output error",
+   "n_sequences": 256,
+   "tokens_per_layer": 131072,
+   "methods": [
+    "C4R16_s0",
+    "C4R16_s1",
+    "C4R16_s2",
+    "EBSS",
+    "FC_s0",
+    "FC_s1",
+    "FC_s2",
+    "FR_s0",
+    "FR_s1",
+    "FR_s2",
+    "PX_EBSS16",
+    "PX_PO16",
+    "RS_EBSS16",
+    "RS_PO16",
+    "TC_s0",
+    "TC_s1",
+    "TC_s2",
+    "TR_s0",
+    "TR_s1",
+    "TR_s2"
+   ],
+   "universe_size": {
+    "1": 60,
+    "8": 60,
+    "16": 60,
+    "23": 60
+   },
+   "evaluation_runs": {
+    "1": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "TC_s0",
+       "TC_s1",
+       "TC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 761.6085658073425,
+      "peak_gpu_gb": 11.949045248
+     }
+    ],
+    "8": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "TC_s0",
+       "TC_s1",
+       "TC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 758.0767502784729,
+      "peak_gpu_gb": 11.951693312
+     }
+    ],
+    "16": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "TC_s0",
+       "TC_s1",
+       "TC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 739.8344099521637,
+      "peak_gpu_gb": 11.939109888
+     }
+    ],
+    "23": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "TC_s0",
+       "TC_s1",
+       "TC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 758.6685445308685,
+      "peak_gpu_gb": 11.979675648
+     }
+    ]
+   }
+  },
+  "oldtest": {
+   "cache": "/home/kaixuan6/moe_cache",
+   "rows": [
+    2128,
+    2256
+   ],
+   "role": "SECONDARY / regression",
+   "note": "historical E3 test rows 2128-2255; inspected in many prior studies; exploratory",
+   "n_sequences": 128,
+   "tokens_per_layer": 65536,
+   "methods": [
+    "C4R16_s0",
+    "C4R16_s1",
+    "C4R16_s2",
+    "EBSS",
+    "FC_s0",
+    "FC_s1",
+    "FC_s2",
+    "FR_s0",
+    "FR_s1",
+    "FR_s2",
+    "PX_EBSS16",
+    "PX_PO16",
+    "RS_EBSS16",
+    "RS_PO16",
+    "TC_s0",
+    "TC_s1",
+    "TC_s2",
+    "TR_s0",
+    "TR_s1",
+    "TR_s2"
+   ],
+   "universe_size": {
+    "1": 60,
+    "8": 60,
+    "16": 60,
+    "23": 60
+   },
+   "evaluation_runs": {
+    "1": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 905.3669948577881,
+      "peak_gpu_gb": 9.246490112
+     },
+     {
+      "methods": [
+       "TC_s0",
+       "TC_s1",
+       "TC_s2"
+      ],
+      "seconds": 122.14823889732361,
+      "peak_gpu_gb": 9.246490112
+     }
+    ],
+    "8": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 1148.2149057388306,
+      "peak_gpu_gb": 9.241687552
+     },
+     {
+      "methods": [
+       "TC_s0",
+       "TC_s1",
+       "TC_s2"
+      ],
+      "seconds": 110.10686731338501,
+      "peak_gpu_gb": 9.241687552
+     }
+    ],
+    "16": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 837.7047202587128,
+      "peak_gpu_gb": 9.236274176
+     },
+     {
+      "methods": [
+       "TC_s0",
+       "TC_s1",
+       "TC_s2"
+      ],
+      "seconds": 114.28881525993347,
+      "peak_gpu_gb": 9.23608576
+     }
+    ],
+    "23": [
+     {
+      "methods": [
+       "FR_s0",
+       "FR_s1",
+       "FR_s2",
+       "TR_s0",
+       "TR_s1",
+       "TR_s2",
+       "FC_s0",
+       "FC_s1",
+       "FC_s2",
+       "EBSS",
+       "C4R16_s0",
+       "C4R16_s1",
+       "C4R16_s2",
+       "RS_PO16",
+       "RS_EBSS16",
+       "PX_PO16",
+       "PX_EBSS16"
+      ],
+      "seconds": 843.5611479282379,
+      "peak_gpu_gb": 9.249739776
+     },
+     {
+      "methods": [
+       "TC_s0",
+       "TC_s1",
+       "TC_s2"
+      ],
+      "seconds": 224.56034111976624,
+      "peak_gpu_gb": 9.251083264
+     }
+    ]
+   }
+  }
+ }
+}

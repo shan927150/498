@@ -1,0 +1,31 @@
+{
+ "checks": {
+  "01_chronological_prefixes": true,
+  "02_pooled_uses_actual_moe_input": true,
+  "03_pooled_counts_each_token_once": true,
+  "04_expert_hessians_natural_routing": true,
+  "05_calibration_tune_disjoint": true,
+  "06_alpha0_reproduces_hessian": true,
+  "07_alpha0_reproduces_gptq_bitwise": true,
+  "08_pooled_trace_preserved": true,
+  "09_identity_trace_preserved": true,
+  "10_finite_symmetric": true,
+  "11_no_negative_eigenvalues": true,
+  "12_gptq_solver_unchanged": true,
+  "13_down_unchanged_ABC": true,
+  "14_tuned_damping_documented": true,
+  "15_bf16_weights_restored": true,
+  "16_no_test_data_in_alpha_selection": true,
+  "17_router_and_experts_match": true,
+  "18_no_rtn_fallback": true,
+  "19_gpu_memory_within_20gb": true,
+  "20_historical_files_unchanged": true,
+  "21_all_tests_pass": true
+ },
+ "passed": true,
+ "notes": {
+  "07": "alpha=0 path through shrink() == standard weights bitwise at the eligible budgets; standard B128 == historical FR s0 weights bitwise; standard B32/B64/B128 E3 == early-stop logs bitwise",
+  "15": "evaluation never installs weights (fp32 copies); layer digests checked before/after",
+  "17": "layer outputs (and therefore routing) bitwise identical with and without the pooled hook"
+ }
+}

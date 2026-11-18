@@ -1,0 +1,74 @@
+{
+ "primary_split": "confirm",
+ "verdict": "FIXED-GU-BLOCKED",
+ "recommendation": "B",
+ "detail": {
+  "verdict": "FIXED-GU-BLOCKED",
+  "criteria": {},
+  "recommendation": "B"
+ },
+ "rules": {
+  "tau_rel": 0.005,
+  "max_layer_regression_rel": 0.005,
+  "cost_ratio_max": 1.1
+ },
+ "direct_single_pass_implemented": false,
+ "post_hoc_if_check16_primary_pair_only": {
+  "verdict": "FIXED-GU-SMALL-GAIN",
+  "recommendation": "C",
+  "detail": {
+   "verdict": "FIXED-GU-SMALL-GAIN",
+   "recommendation": "C",
+   "criteria": {
+    "1_mean_delta_le_minus_tau": false,
+    "2_all_seeds_improve": true,
+    "3_no_layer_regression_gt_threshold": false,
+    "4_oldtest_direction_agrees": true,
+    "5_correctness": true,
+    "6_cost_ratio_ok": true
+   },
+   "mean_delta_confirm": -0.000958078056369761,
+   "mean_delta_oldtest": -0.001289167889926555,
+   "median_delta_confirm": -0.0009246119526957551,
+   "seed_spread": 0.0006056833334897349,
+   "seeds_improved": 3,
+   "unstable": false,
+   "layer_rel_seedavg": {
+    "1": 0.012026796260805828,
+    "8": -0.0034689493450142193,
+    "16": 0.0008985332889472607,
+    "23": 0.003505258236573035
+   },
+   "cost_ratio": 1.0
+  },
+  "note": "NOT the frozen verdict; check 16 failed only on near-tied non-primary pairs in one old-test cell (s0 L1)"
+ },
+ "native_disagreements": [
+  {
+   "split": "oldtest",
+   "seed": 0,
+   "layer": 1,
+   "pair": [
+    "GPTQ",
+    "GU_AGQ"
+   ],
+   "fp32_rel_gap": -0.0017164073210323176,
+   "native_rel_gap": 0.005807826019283732,
+   "native_over_fp32_error": 0.054323315268453465
+  },
+  {
+   "split": "oldtest",
+   "seed": 0,
+   "layer": 1,
+   "pair": [
+    "DOWN_AGQ",
+    "FULL_AGQ"
+   ],
+   "fp32_rel_gap": -0.0010787737067194188,
+   "native_rel_gap": 0.004837363473500692,
+   "native_over_fp32_error": 0.05451516643035159
+  }
+ ],
+ "direct_single_pass_reason": "only built if FIXED-GU-PROMISING (frozen)",
+ "decided": "2026-11-13 04:32:39"
+}

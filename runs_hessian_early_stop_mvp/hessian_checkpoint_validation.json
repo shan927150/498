@@ -1,0 +1,29 @@
+{
+ "per_layer": {
+  "1": {
+   "max_rel_split": 6.760113535619894e-08,
+   "counts_match": true,
+   "B128_weights_equal_historical": true,
+   "B128_recon_equal_historical": true
+  },
+  "8": {
+   "max_rel_split": 6.179188716259887e-08,
+   "counts_match": true,
+   "B128_weights_equal_historical": true,
+   "B128_recon_equal_historical": true
+  },
+  "16": {
+   "max_rel_split": 5.057210827885683e-08,
+   "counts_match": true,
+   "B128_weights_equal_historical": true,
+   "B128_recon_equal_historical": true
+  },
+  "23": {
+   "max_rel_split": 7.78095525788558e-08,
+   "counts_match": true,
+   "B128_weights_equal_historical": true,
+   "B128_recon_equal_historical": true
+  }
+ },
+ "passed": true
+}

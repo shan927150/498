@@ -1,0 +1,26 @@
+{
+ "layer": 23,
+ "n_alignment_checks": 120000,
+ "expected_checks": 120000,
+ "outputs_identical_with_hooks": true,
+ "counts_equal_routing_cache": true,
+ "sketch_vs_projected_full_hessian_max_rel": 1.1350244173592215e-06,
+ "sketch_reproduces_direct_accumulation": true,
+ "weights_unchanged": true,
+ "sketch_finite": true,
+ "all_experts_have_pool_tokens": true,
+ "pool_tokens": {
+  "min": 18495,
+  "max": 261052
+ },
+ "seconds": 131.41927313804626,
+ "s_per_seq": 0.06570963656902314,
+ "peak_gpu_gb": 3.314797056,
+ "peak_rss_gb": 15.79988,
+ "sketch_file_gb": 1.997282045,
+ "hfull_file_gb": 1.482460491,
+ "model_load_s": 8.138504266738892,
+ "sketch_sha256": "eb73f310fe1b2d71e3e75645e64256bc0a4cb441ebb337ef4344d063375ef8ac",
+ "created": "2026-11-17 05:33:31",
+ "passed": true
+}

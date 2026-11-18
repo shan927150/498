@@ -1,0 +1,29 @@
+{
+ "layers": {
+  "8": {
+   "val_E_layer_gptq": 0.007115236692270128,
+   "val_E_layer_agq": 0.007116386972828147,
+   "rel_agq_vs_gptq": 0.00016166441227013738,
+   "choice": "GPTQ",
+   "z_all": 0,
+   "installed_config_hash": "dee823c60b974f0a8798540a76ccfb0e884d8c406e37675407b7373e880116af",
+   "val_native_gptq": 0.0071358244350524565,
+   "val_native_agq": 0.007137288293454159,
+   "native_choice_agrees": true
+  },
+  "16": {
+   "val_E_layer_gptq": 0.007145263332788199,
+   "val_E_layer_agq": 0.006926336838070509,
+   "rel_agq_vs_gptq": -0.03063938787435301,
+   "choice": "AGQ",
+   "z_all": 1,
+   "installed_config_hash": "dd7bca3048b73421a14cd8cdccfc12365f194d6a9742b7c8207f284bfabd7c7a",
+   "val_native_gptq": 0.007172260448121453,
+   "val_native_agq": 0.006953191021673552,
+   "native_choice_agrees": true
+  }
+ },
+ "rule": "per layer, all-AGQ iff tuning-split E_layer(AGQ) < E_layer(GPTQ)",
+ "split": "tune",
+ "frozen_at": "2026-11-13 02:10:26"
+}

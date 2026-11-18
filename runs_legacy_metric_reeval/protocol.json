@@ -1,0 +1,144 @@
+{
+ "experiment": "Legacy metric re-evaluation: expert reconstruction vs actual aggregated MoE-layer output error",
+ "nature": "retrospective, evaluation-only metric audit; not a new calibration method",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B (BF16)",
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "gptq": {
+  "bits": 4,
+  "group_size": 128,
+  "percdamp": 1.0,
+  "act_order": true,
+  "hessian_weighting": "none (q=0)",
+  "capture": "CANONICAL-B1 (each calibration sequence forwarded alone, BF16, non-sequential)"
+ },
+ "methods": {
+  "primary_B128": [
+   "FR_s0",
+   "FR_s1",
+   "FR_s2",
+   "TR_s0",
+   "TR_s1",
+   "TR_s2",
+   "FC_s0",
+   "FC_s1",
+   "FC_s2",
+   "TC_s0",
+   "TC_s1",
+   "TC_s2"
+  ],
+  "secondary_B128_EBSS": [
+   "EBSS"
+  ],
+  "exploratory_B16": [
+   "C4R16_s0",
+   "C4R16_s1",
+   "C4R16_s2",
+   "RS_PO16",
+   "RS_EBSS16",
+   "PX_PO16",
+   "PX_EBSS16"
+  ],
+  "not_evaluated": [
+   "Coverage-LP-Repr (no saved weights; would need new capture + quantization)"
+  ]
+ },
+ "comparisons": {
+  "main": "FC_sN vs FR_sN (paired by seed)",
+  "secondary": "TC_sN vs TR_sN (paired by seed)",
+  "additional": "TR_sN vs FR_sN (paired by seed)",
+  "ebss": "EBSS vs FR_s0/s1/s2 and vs TR_s0/s1/s2 (one released set; three comparisons are NOT replications)",
+  "b16_exploratory": "PX_EBSS16, PX_PO16, RS_EBSS16, RS_PO16 vs C4R16_s0 (matched) and vs C4R16 seed range; never ranked with B=128"
+ },
+ "evaluation": {
+  "primary_split": "confirm",
+  "secondary_split": "oldtest",
+  "splits": {
+   "confirm": {
+    "cache": "/home/kaixuan6/moe_cache_confirmation",
+    "rows": [
+     0,
+     256
+    ],
+    "role": "PRIMARY",
+    "note": "locked document-disjoint confirmation split (runs_aggregate_constraint); never used for selection; previously used once to score expert reconstruction of FR/TR/TC/FC built from the batch-8 historical cache, never for MoE-output error"
+   },
+   "oldtest": {
+    "cache": "/home/kaixuan6/moe_cache",
+    "rows": [
+     2128,
+     2256
+    ],
+    "role": "SECONDARY / regression",
+    "note": "historical E3 test rows 2128-2255; inspected in many prior studies; exploratory"
+   }
+  },
+  "inputs": "frozen BF16 layer inputs of each split's cache (identical for every method); routing, top-4, coefficients and shared expert from the BF16 model, never from a quantized model",
+  "primary_metric": "E_layer per layer = sum_x ||y_BF16 - y_q||^2 / (sum_x ||y_BF16||^2 + 1e-30), fp32 expert math, float64 sums, shared expert included in y, frozen routing (the AGQ-only validation's LayerEvalAccumulator definition)",
+  "aggregate": "MEAN of the four per-layer ratios (AGQ-only convention); a pooled ratio is stored in json for reference only and is not used for any decision",
+  "relative_difference": "Delta = (E^method - E^ref) / E^ref of the 4-layer mean (negative = method better)",
+  "secondary_metric": "E_expert = production E3 score (quant_eval.per_seq_rel_errors on Profiler held-out inputs, mean over sequences per expert, mean over 240 experts) on the INSTALLED BF16 weights (the weights the layer metric uses); historical E3 (solver fp32 W_q, oldtest) is reported alongside",
+  "native_check": "actual Qwen2MoeSparseMoeBlock BF16 forward with installed weights (secondary)",
+  "decomposition": "||dy||^2 = D + C, D = sum_k ||c_k dE_k||^2, C = 2 sum_{a<b} <c_a dE_a, c_b dE_b>; each divided by the same layer denominator",
+  "uncertainty": "seed-level paired effects (3 seeds); descriptive paired window bootstrap (2000 reps, windows resampled jointly across layers and methods). Experts and tokens are NOT treated as independent replicates."
+ },
+ "decision_rule": {
+  "tau_rel": 0.005,
+  "legacy_direction": "from E_expert on the same split: 'penalty' if mean Delta_expert >= +tau and Delta_expert > 0 on >= 2/3 seeds; 'gain' mirror; otherwise 'tie'",
+  "when_legacy_penalty": {
+   "METRIC-RANKING-REVERSAL (B)": "Delta_layer <= -tau on every paired seed",
+   "LEGACY-NEGATIVE-CONFIRMED (A)": "Delta_layer > 0 on >= 2/3 seeds, no seed <= -tau, and mean Delta_layer >= max(tau, 0.5 * mean Delta_expert)",
+   "METRIC-ALIGNED-BUT-SMALL (D)": "Delta_layer > 0 on >= 2/3 seeds, no seed <= -tau, but mean Delta_layer < max(tau, 0.5 * mean Delta_expert)",
+   "MIXED-OR-LAYER-SPECIFIC (C)": "otherwise"
+  },
+  "when_legacy_tie_or_gain": {
+   "NEW-METRIC-GAIN": "Delta_layer <= -tau on every paired seed",
+   "NEW-METRIC-PENALTY": "Delta_layer >= +tau on every paired seed",
+   "NO-ROBUST-DIFFERENCE": "otherwise"
+  },
+  "layer_specific_flag": "a layer whose Delta_layer has the opposite sign to the 4-layer mean on every paired seed with |Delta| >= tau is reported as a layer-specific reversal",
+  "evaluation_blocked": "EVALUATION-BLOCKED (E) if any correctness gate fails or required weights are missing",
+  "single_set": "EBSS / B16 single sets are classified with the same rule over their comparisons but labelled 'one calibration set, not replicated'",
+  "decision_split": "classifications on the PRIMARY split decide; secondary-split disagreement is reported",
+  "final_recommendation": {
+   "A": "FC-vs-FR is B, or TC-vs-TR is NEW-METRIC-GAIN / B",
+   "B": "FC-vs-FR is A or D, TC-vs-TR is not a gain, and EBSS-vs-FR is not a gain",
+   "C": "otherwise"
+  }
+ },
+ "regression": {
+  "fr_s0_weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+  "fr_s0_recon": 0.0046094692935882,
+  "agq_q0_layer_output_FR_s0_oldtest": 0.0037166111573928374,
+  "note": "historical references used only as regression checks after confirming identical universe"
+ },
+ "hard_constraints": [
+  "no new calibration data",
+  "no new selection",
+  "no EBSS regeneration",
+  "no AGQ / c^2",
+  "no GPTQ / damping change",
+  "no full-depth quantization",
+  "no new PPL experiment (quant_config's built-in PPL validity check runs for TC and is reported only as a byproduct)",
+  "historical artifacts not overwritten"
+ ],
+ "code_sha256": {
+  "diagnostics/legacy_metric_reeval.py": "f145e8f0398f5d6895846e23073e590dcdf8c9d249da2b41554a107a5e4a8caf",
+  "moe_calib/agq.py": "d058f5d5a630c9a7779a1b1c9781b15bcfb04d1e8af926bb79553693b39549d9",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5",
+  "diagnostics/official_ebss_validation.py": "f0d34732d4c547e077756e6fe1ea79b5fbd1723dbaf0124e75832c98e253e448",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684"
+ },
+ "frozen_before_any_new_output_error_result": true,
+ "created": "2026-11-12 04:19:59"
+}

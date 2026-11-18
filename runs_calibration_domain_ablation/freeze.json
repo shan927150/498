@@ -1,0 +1,32 @@
+{
+ "experiment_code_sha256": {
+  "moe_calib/calibration_domain.py": "f79826a950c3ca9e6c0fd49160586279e5cef15787041fdb95bacc47b1445e73",
+  "diagnostics/calibration_domain_ablation.py": "22e21d3128d6bb3afad149b776e7078b156850cbb2d4cbc54a385f6844c92402"
+ },
+ "frozen_code_sha256": {
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/quant_eval.py": "bb53d0ec988113160a864a2b1d65baa934f75a5cf9d1e91657dace094a0358b2",
+  "moe_calib/profiler.py": "560a8d0a20a753bf6603077cf2d74321fb3b68acdb4c4419d3dad9b061bf070d",
+  "moe_calib/hessian.py": "df43dfec819250be73e84211c02cded20028d2a7d68a0a5de14df5b3bbdecdc7",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "e3_allocation.py": "1b38673cc23c0375da7da2cc8020f1f3a202a31e06a0c777a70a5657a73d53b5",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "moe_calib/shared_covariance_selection.py": "58fb2f469a9df60d0d30a131109b26afc23f4d2381b7d7a349f65a3abef91a82",
+  "moe_calib/expertwise_calibration.py": "696157fe8f2b5c606c5824db50d5b42d1c4e4d1ba8ec680c4814140ba984d186",
+  "diagnostics/shared_covariance_e3.py": "8b19607651f69c813194b382e8a712d1cb4183f3eeb493ad39c4dbcf3ab64dab",
+  "moe_calib/multigroup_robustness.py": "12fab4bc5db630cd4874937f8016bea21348ca27b79e7b6894e4ef330d6577b2",
+  "diagnostics/batch_sensitivity.py": "85029a49a9fb9c2de10e64c979de913c5328a1fc5fa10653f045afdb0eae1ac5",
+  "moe_calib/loss_alignment.py": "75392cfc2d6839b2c8e920682db06a9c6c62d952173e9e9c860a68f63b7d09a0",
+  "configs/frozen_b4.json": "52f729148b5acf93e39e90ce980f3e563a02d87488252a5561a73bd8504e8a50"
+ },
+ "selection_manifest_sha256": "fd25231d3742fbff08761a70c0485009d36092c2afa3675dca7a05a23ee54fa7",
+ "selection_hashes": {
+  "C4-FR": "ec355fb8d866e4ff",
+  "C4-SC": "f9aa555b0e341562",
+  "WT-FR": "1f9e71589c56a670",
+  "WT-SC": "bbca7a1f30789cf8"
+ },
+ "note": "frozen after WT selection, BEFORE any WT quantization / evaluation",
+ "created": "2026-11-17 05:34:19"
+}

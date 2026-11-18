@@ -1,0 +1,86 @@
+{
+ "per_seed_mean": {
+  "0": -0.0019318602382217165,
+  "1": 0.0006871982444071279,
+  "2": -0.0024980664929316275
+ },
+ "per_seed_sd": {
+  "0": 0.006364178643728711,
+  "1": 0.0051763618636375954,
+  "2": 0.008623872264796209
+ },
+ "pooled_within_sd": 0.006871891170852839,
+ "overall_mean": -0.0012475761622487388,
+ "overall_median": -0.003677348635330091,
+ "n_fc_worse": 6,
+ "n_fc_better": 9,
+ "opposite_sign_fraction": 0.4,
+ "sd_between_seed_means": 0.0016993120326196942,
+ "hierarchical_bootstrap": {
+  "point": -0.0012475761622487388,
+  "ci95": [
+   -0.004777081840922672,
+   0.0021549580959289542
+  ],
+  "frac_boot_positive": 0.24345,
+  "n_boot": 20000,
+  "seed": 20261120,
+  "n_seeds": 3,
+  "k": 5,
+  "n_distinct_seed_resamples": 10,
+  "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+ },
+ "matches_historical": {
+  "mean": true,
+  "pooled_sd": true,
+  "interval": true
+ },
+ "mean_nll_estimand": {
+  "per_seed_mean": {
+   "0": -0.00020833385957343963,
+   "1": 7.409864067309258e-05,
+   "2": -0.0002692509807510568
+  },
+  "overall_mean": -0.0001344953998838013,
+  "pooled_within_sd": 0.0007411740146692263,
+  "hierarchical_bootstrap": {
+   "point": -0.0001344953998838013,
+   "ci95": [
+    -0.0005151127986423128,
+    0.00023247108727963658
+   ],
+   "frac_boot_positive": 0.2435,
+   "n_boot": 20000,
+   "seed": 20261120,
+   "n_seeds": 3,
+   "k": 5,
+   "n_distinct_seed_resamples": 10,
+   "note": "only 3 allocation seeds: the outer resampling has very few distinct configurations (10); the interval is unstable and descriptive, not population-level inference"
+  },
+  "n_fc_worse": 6
+ },
+ "original_policy": {
+  "delta_ppl_by_seed": [
+   0.010056899696323285,
+   0.0027064026671261843,
+   0.013069861928583393
+  ],
+  "window_boot_ci_ppl": [
+   [
+    0.0015435080538038996,
+    0.01864258863308432
+   ],
+   [
+    -0.006471007840881615,
+    0.01162271700119692
+   ],
+   [
+    0.003908026556633448,
+    0.021530638749968568
+   ]
+  ],
+  "note": "ORIGINAL extraction (batch-8 cache_inputs.py) is a different policy; never pooled"
+ },
+ "historical_decision": "GROUPING-VARIATION-DOMINATES",
+ "caveat": "3 allocation seeds -> 10 distinct outer resamples; the interval is descriptive and unstable"
+}

@@ -1,0 +1,837 @@
+{
+ "created": "2026-11-13 03:27:45",
+ "layers": [
+  1,
+  8,
+  16,
+  23
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "seeds_detail": {
+  "0": {
+   "candidates": {
+    "GPTQ": {
+     "result_json": "runs_ebss_official_validation/results/FR_s0.json",
+     "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0",
+     "gptq": {
+      "bits": 4,
+      "group_size": 128,
+      "percdamp": 1.0,
+      "act_order": true
+     },
+     "hessian_weighting": "none",
+     "policy": "CANONICAL-B1",
+     "valid": true,
+     "rtn_fallbacks": 0,
+     "installed_weights_sha256": "ecfdb234c1cf3b3283d9434739572c5ce890522f8e68a380c5296b07e22776a1",
+     "cache_rows_sha256": "6884517b6063a9bf2a99562ef9c124245f18c6224e483fcfbcb8536a0e352602"
+    },
+    "AGQ": {
+     "result_json": "runs_agq_only_validation/results/AGQ_FR_s0.json",
+     "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0",
+     "gptq": {
+      "bits": 4,
+      "group_size": 128,
+      "percdamp": 1.0,
+      "act_order": true
+     },
+     "hessian_weighting": "router_affinity",
+     "policy": "CANONICAL-B1",
+     "valid": true,
+     "rtn_fallbacks": 0,
+     "installed_weights_sha256": "5b12f96a5249c9fab2fe37ccd4c5ace80c08acc72895630f82e80c474d7ab209",
+     "cache_rows_sha256": "6884517b6063a9bf2a99562ef9c124245f18c6224e483fcfbcb8536a0e352602"
+    }
+   },
+   "layers": {
+    "1": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0/L1.pt",
+      "exists": true,
+      "file_sha256": "f67effb8673a950b235383ab6a83f46b3313cb6e685c09d9bd4b5985680c0dcd",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0/L1.pt",
+      "exists": true,
+      "file_sha256": "9b89cdffefdec86ef82447c11ed8b958b94e06a3fec4c81061bd293ef4c4ee36",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "8": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0/L8.pt",
+      "exists": true,
+      "file_sha256": "0e2f6f0eff1c40e6fbffa48a9156f69961c89442f07cf157c7dfb21764c09e46",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0/L8.pt",
+      "exists": true,
+      "file_sha256": "e2881ac657b5bfa2d55b3a9d692c09edbc1e552ecea8b530a4e4bc3bdcbf45c5",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "16": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0/L16.pt",
+      "exists": true,
+      "file_sha256": "b7344106c2cffdc5f4235f6de1142e1e7d932c72cff568a62365b93e936f0519",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0/L16.pt",
+      "exists": true,
+      "file_sha256": "ad61cda0d357392aa411f6fe0d383c626c6f62e6fc98ecafacc299a4134b173b",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "23": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s0/L23.pt",
+      "exists": true,
+      "file_sha256": "8847521e9a7e97434f4c0418fda53b8d3b48c272432f080aa5588ad6a3d42f42",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s0/L23.pt",
+      "exists": true,
+      "file_sha256": "bb34352321fd47febb29ff5cf3716f366a4d335035cdf652f700aae99e97bad7",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    }
+   },
+   "same_calibration_rows": true,
+   "calibration_ids_hash": "ec355fb8d866e4ff",
+   "same_gptq_config": true
+  },
+  "1": {
+   "candidates": {
+    "GPTQ": {
+     "result_json": "runs_ebss_official_validation/results/FR_s1.json",
+     "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1",
+     "gptq": {
+      "bits": 4,
+      "group_size": 128,
+      "percdamp": 1.0,
+      "act_order": true
+     },
+     "hessian_weighting": "none",
+     "policy": "CANONICAL-B1",
+     "valid": true,
+     "rtn_fallbacks": 0,
+     "installed_weights_sha256": "277117a9fcac690166350c1c902910e4437474ed536edbdd16a60bb2592ea6af",
+     "cache_rows_sha256": "a8010f087f9cbd14f656c924a20aee4575a1925ed5d13e501bb26f0d501be222"
+    },
+    "AGQ": {
+     "result_json": "runs_agq_only_validation/results/AGQ_FR_s1.json",
+     "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s1",
+     "gptq": {
+      "bits": 4,
+      "group_size": 128,
+      "percdamp": 1.0,
+      "act_order": true
+     },
+     "hessian_weighting": "router_affinity",
+     "policy": "CANONICAL-B1",
+     "valid": true,
+     "rtn_fallbacks": 0,
+     "installed_weights_sha256": "829cc56c14e2a68fd0c3c524a778f6791d1b21ae2e2f1ac80f2b36a3af2f2e1c",
+     "cache_rows_sha256": "a8010f087f9cbd14f656c924a20aee4575a1925ed5d13e501bb26f0d501be222"
+    }
+   },
+   "layers": {
+    "1": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1/L1.pt",
+      "exists": true,
+      "file_sha256": "f4fdf8fc583d1502619fbf08ed7e8355ee35fb54b3503288bacabef59508090d",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s1/L1.pt",
+      "exists": true,
+      "file_sha256": "547a9ac1e04b1cf73558c4ec28a829514b4362a2ac15c49dbcabe55ddd8a4416",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "8": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1/L8.pt",
+      "exists": true,
+      "file_sha256": "2f2fd1a0e91e34f8ecef1601f44e97b0320fe1b347c4a6e2ccc135c827c4c516",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s1/L8.pt",
+      "exists": true,
+      "file_sha256": "3a7017ce01a7a8dccc0ce98f4dcc25ad06d649cea7018eb58992fd7fef858801",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "16": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1/L16.pt",
+      "exists": true,
+      "file_sha256": "18e114a1d5a6c6b3671ef5544f043e9eca2ab540e3cc335e5bb3563aabad8abb",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s1/L16.pt",
+      "exists": true,
+      "file_sha256": "f057ee744ee5916945ca78575622df2c00fcc779cc9c4f7eebe06f5eacf774e6",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "23": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s1/L23.pt",
+      "exists": true,
+      "file_sha256": "0e45c54555def34f39ec0ed32b83088ecbe3d6677b8439767ea738b2ceeebc08",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s1/L23.pt",
+      "exists": true,
+      "file_sha256": "6f7dc24607637b6450faf2c54c3cd1b1636b63f499c7bfe12d028532b6a8b06c",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    }
+   },
+   "same_calibration_rows": true,
+   "calibration_ids_hash": "e36d91e6b151320b",
+   "same_gptq_config": true
+  },
+  "2": {
+   "candidates": {
+    "GPTQ": {
+     "result_json": "runs_ebss_official_validation/results/FR_s2.json",
+     "weights_dir": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2",
+     "gptq": {
+      "bits": 4,
+      "group_size": 128,
+      "percdamp": 1.0,
+      "act_order": true
+     },
+     "hessian_weighting": "none",
+     "policy": "CANONICAL-B1",
+     "valid": true,
+     "rtn_fallbacks": 0,
+     "installed_weights_sha256": "8f18b500e156ce6cbd26bd6dd08ce1874b5280caed58515d2b567c86e4b691e3",
+     "cache_rows_sha256": "c3571c0ed14bf18f2f10716798b70a5aacb5aa2d3bb16cc935e32fdb91c10ba9"
+    },
+    "AGQ": {
+     "result_json": "runs_agq_only_validation/results/AGQ_FR_s2.json",
+     "weights_dir": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s2",
+     "gptq": {
+      "bits": 4,
+      "group_size": 128,
+      "percdamp": 1.0,
+      "act_order": true
+     },
+     "hessian_weighting": "router_affinity",
+     "policy": "CANONICAL-B1",
+     "valid": true,
+     "rtn_fallbacks": 0,
+     "installed_weights_sha256": "78f17cfca9c7f8d5f8cdcb4dc89c6954c64048e394962670255f2690f3ca9030",
+     "cache_rows_sha256": "c3571c0ed14bf18f2f10716798b70a5aacb5aa2d3bb16cc935e32fdb91c10ba9"
+    }
+   },
+   "layers": {
+    "1": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2/L1.pt",
+      "exists": true,
+      "file_sha256": "28e93aa2b7ad49dbf603216381b3bd02cc5d14eb3c5bb9942821c23401914978",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s2/L1.pt",
+      "exists": true,
+      "file_sha256": "e266cdc10cdd98687e8eee2c7bdc9a0ee7d17b87ef1dc34a25d358399cd8ed4b",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "8": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2/L8.pt",
+      "exists": true,
+      "file_sha256": "4cfc6bd2699c31069d0a736ae3d50e8ec9c8676fc8a3e788aa72137744bec0ce",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s2/L8.pt",
+      "exists": true,
+      "file_sha256": "2d172e0b6fee20e7e5863cb8c3d643d396e9c41e263e62cfe283a3a31e417d62",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "16": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2/L16.pt",
+      "exists": true,
+      "file_sha256": "93417c533569e7fd597b2b3f382e46418a66d5ef6dee5ca98224fc604bf24e08",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s2/L16.pt",
+      "exists": true,
+      "file_sha256": "1951f415aeb36bf545b63b2b0d838d6f3ae875e708dc75efa8a496d7cd043fac",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    },
+    "23": {
+     "GPTQ": {
+      "path": "/home/kaixuan6/moe_cache_ebss_official_validation/weights/FR_s2/L23.pt",
+      "exists": true,
+      "file_sha256": "368974294f0c0e426675d12dcf8a78d9d3a5bbba2c01949e2331f04efb486fbc",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "AGQ": {
+      "path": "/home/kaixuan6/moe_cache_agq_only/weights/AGQ_FR_s2/L23.pt",
+      "exists": true,
+      "file_sha256": "16360245f6b7db16b24bb633650aab6a77eb63d55f7d4b8a89774f9d05ff6bc1",
+      "file_sha256_matches_record": true,
+      "missing": [],
+      "n_experts": 60,
+      "n_tensors": 180,
+      "shapes": {
+       "gate_proj": [
+        1408,
+        2048
+       ],
+       "up_proj": [
+        1408,
+        2048
+       ],
+       "down_proj": [
+        2048,
+        1408
+       ]
+      },
+      "shapes_uniform": true,
+      "all_bf16": true,
+      "all_finite": true,
+      "valid": true
+     },
+     "valid": true,
+     "candidates_differ_all_experts": true
+    }
+   },
+   "same_calibration_rows": true,
+   "calibration_ids_hash": "cf1f867af56f29d1",
+   "same_gptq_config": true
+  }
+ },
+ "all_valid": true,
+ "new_gptq_solves_required": 0
+}

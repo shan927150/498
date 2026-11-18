@@ -1,0 +1,44 @@
+{
+ "k0_natural_equals_historical_ORIGINAL": true,
+ "k0_fixed_equals_natural": true,
+ "k0_hessians_equal_historical": true,
+ "k0_ppl_per_window_equals_historical": true,
+ "hist|G20261111": {
+  "hessians": true,
+  "perms": true,
+  "codes": true,
+  "weights": true,
+  "ppl": true
+ },
+ "hist|G20261112": {
+  "hessians": true,
+  "perms": true,
+  "codes": true,
+  "weights": true,
+  "ppl": true
+ },
+ "hist|G20261113": {
+  "hessians": true,
+  "perms": true,
+  "codes": true,
+  "weights": true,
+  "ppl": true
+ },
+ "hist|G20261114": {
+  "hessians": true,
+  "perms": true,
+  "codes": true,
+  "weights": true,
+  "ppl": true
+ },
+ "end_070950": {
+  "bf16_reeval_bitwise": true,
+  "untouched_unchanged": true,
+  "targets_pristine": true
+ },
+ "end_084721": {
+  "bf16_reeval_bitwise": true,
+  "untouched_unchanged": true,
+  "targets_pristine": true
+ }
+}
