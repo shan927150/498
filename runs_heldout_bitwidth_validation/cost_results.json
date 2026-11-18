@@ -1,0 +1,50 @@
+{
+ "stage_seconds": {
+  "dense": 1751.8670120239258,
+  "dense3": 527.3723711967468,
+  "moe": 5383.880134344101
+ },
+ "dense3_gptq_s": {
+  "G20261111": 22.0948703289032,
+  "G20261112": 19.841023206710815,
+  "G20261113": 17.783319234848022,
+  "G20261114": 19.742811918258667,
+  "G20261115": 20.11973738670349,
+  "ORIGINAL": 19.160983562469482
+ },
+ "moe_install_s_median": 83.92414498329163,
+ "moe_config_s_median": 156.33873653411865,
+ "moe_peak_cpu_gb": 50.79148,
+ "dense_eval_s_median": 6.89410924911499,
+ "moe_eval_s_median": 26.901341676712036,
+ "end_checks": {
+  "dense": {
+   "bf16_wikitext_bitwise": true,
+   "bf16_heldout_bitwise": true,
+   "targets_pristine": true,
+   "untouched_unchanged": true,
+   "peak_cpu_gb": 9.228196,
+   "peak_gpu_gb": 1.456059392,
+   "at": "2026-11-18 00:22:24"
+  },
+  "moe": {
+   "after_parity": true,
+   "end@2026-11-18 02:04:59": {
+    "untouched_unchanged": true,
+    "n_untouched": 3964,
+    "targets_pristine": true,
+    "bf16_wikitext_bitwise": true,
+    "bf16_heldout_bitwise": true,
+    "light_non_target_unchanged": true,
+    "peak_cpu_gb": 50.79148,
+    "peak_gpu_gb": 3.32256256
+   }
+  }
+ },
+ "gptq_solves": {
+  "new_3bit": 10,
+  "bits4_parity_resolves": 6,
+  "historical_4bit_reruns_used_as_results": 0
+ },
+ "storage_gb": 3.037601145
+}

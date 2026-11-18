@@ -1,0 +1,103 @@
+{
+ "protocol_sha256": "f523b03478e2a5ace6c39ef783310c84f0e10faa4ec160613f107136c1fb2e5e",
+ "dense_bf16": {
+  "wikitext_parity_bitwise": true,
+  "heldout_repeat_bitwise": true,
+  "heldout_tokens": true
+ },
+ "moe_bf16": {
+  "wikitext_parity_bitwise": true,
+  "heldout_repeat_bitwise": true
+ },
+ "dense4_wikitext_parity": {
+  "G20261111": true,
+  "G20261112": true,
+  "G20261113": true,
+  "G20261114": true,
+  "G20261115": true,
+  "ORIGINAL": true
+ },
+ "dose_wikitext_parity": {
+  "b1_k001_r0|natural": true,
+  "b1_k001_r0|fixed": true,
+  "b1_k064_r7|natural": true,
+  "b1_k064_r7|fixed": true
+ },
+ "refmatrix_wikitext_parity": {
+  "G20261111|G20261111": true,
+  "G20261111|G20261112": true,
+  "G20261111|G20261113": true,
+  "G20261111|G20261114": true,
+  "G20261111|G20261115": true,
+  "G20261112|G20261111": true,
+  "G20261112|G20261112": true,
+  "G20261112|G20261113": true,
+  "G20261112|G20261114": true,
+  "G20261112|G20261115": true,
+  "G20261113|G20261111": true,
+  "G20261113|G20261112": true,
+  "G20261113|G20261113": true,
+  "G20261113|G20261114": true,
+  "G20261113|G20261115": true,
+  "G20261114|G20261111": true,
+  "G20261114|G20261112": true,
+  "G20261114|G20261113": true,
+  "G20261114|G20261114": true,
+  "G20261114|G20261115": true,
+  "G20261115|G20261111": true,
+  "G20261115|G20261112": true,
+  "G20261115|G20261113": true,
+  "G20261115|G20261114": true,
+  "G20261115|G20261115": true
+ },
+ "moe_wikitext_parity": {
+  "FR_s0_G20261111": true,
+  "FC_s2_G20261111": true,
+  "FR_ORIGINAL": true
+ },
+ "repeat_eval_bitwise": {
+  "dense4": true,
+  "dense3": true,
+  "moe": true,
+  "dose_subset": true
+ },
+ "all_configs_valid": {
+  "dense4": true,
+  "dense3": true,
+  "dose": true,
+  "refmatrix": true,
+  "moe": true
+ },
+ "end_checks": {
+  "dense": {
+   "bf16_wikitext_bitwise": true,
+   "bf16_heldout_bitwise": true,
+   "targets_pristine": true,
+   "untouched_unchanged": true,
+   "peak_cpu_gb": 9.228196,
+   "peak_gpu_gb": 1.456059392,
+   "at": "2026-11-18 00:22:24"
+  },
+  "moe": {
+   "after_parity": true,
+   "end@2026-11-18 02:04:59": {
+    "untouched_unchanged": true,
+    "n_untouched": 3964,
+    "targets_pristine": true,
+    "bf16_wikitext_bitwise": true,
+    "bf16_heldout_bitwise": true,
+    "light_non_target_unchanged": true,
+    "peak_cpu_gb": 50.79148,
+    "peak_gpu_gb": 3.32256256
+   }
+  },
+  "dense3": {
+   "bf16_wikitext_bitwise": true,
+   "targets_pristine": true,
+   "untouched_unchanged": true,
+   "peak_cpu_gb": 9.483756,
+   "at": "2026-11-18 00:32:00"
+  }
+ },
+ "passed": true
+}

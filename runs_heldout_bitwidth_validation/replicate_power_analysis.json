@@ -1,0 +1,140 @@
+{
+ "formula": "n = ((z_0.975 + z_0.80) s / delta)^2, alpha 0.05 two-sided, power 0.8 (normal approximation; ignores t-correction, so small n are optimistic)",
+ "z_sum": 2.8015852181129683,
+ "deltas": [
+  0.0025,
+  0.005,
+  0.01
+ ],
+ "rows": [
+  {
+   "design": "paired FC-FR, MoE Family D (empirical paired SD)",
+   "dataset": "WikiText-2",
+   "s_used": 0.006871891170852839,
+   "s_definition": "pooled within-seed SD of Delta = PPL(FC)-PPL(FR) over groupings",
+   "n_by_delta": {
+    "0.0025": 60,
+    "0.005": 15,
+    "0.01": 4
+   },
+   "n_meaning": "paired execution replicates"
+  },
+  {
+   "design": "paired FC-FR, MoE Family D (empirical paired SD)",
+   "dataset": "C4-val held-out",
+   "s_used": 0.003364183852586522,
+   "s_definition": "pooled within-seed SD of Delta = PPL(FC)-PPL(FR) over groupings",
+   "n_by_delta": {
+    "0.0025": 15,
+    "0.005": 4,
+    "0.01": 1
+   },
+   "n_meaning": "paired execution replicates"
+  },
+  {
+   "design": "independent arms, dense 4-bit single-method SD (ASSUMES independent arm executions)",
+   "dataset": "WikiText-2",
+   "s_used": 0.007114096937579993,
+   "single_method_sd": 0.005030426186581264,
+   "s_definition": "sqrt(2) x SD(PPL) over the 5 groupings (1 calibration seed)",
+   "n_by_delta": {
+    "0.0025": 64,
+    "0.005": 16,
+    "0.01": 4
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, dense 4-bit single-method SD (ASSUMES independent arm executions)",
+   "dataset": "C4-val held-out",
+   "s_used": 0.002211369797142559,
+   "single_method_sd": 0.0015636745792706234,
+   "s_definition": "sqrt(2) x SD(PPL) over the 5 groupings (1 calibration seed)",
+   "n_by_delta": {
+    "0.0025": 7,
+    "0.005": 2,
+    "0.01": 1
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, dense 3-bit single-method SD (ASSUMES independent arm executions)",
+   "dataset": "WikiText-2",
+   "s_used": 0.0158442760830567,
+   "single_method_sd": 0.011203595061321223,
+   "s_definition": "sqrt(2) x SD(PPL) over the 5 groupings (1 calibration seed)",
+   "n_by_delta": {
+    "0.0025": 316,
+    "0.005": 79,
+    "0.01": 20
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, dense 3-bit single-method SD (ASSUMES independent arm executions)",
+   "dataset": "C4-val held-out",
+   "s_used": 0.0024508435732407186,
+   "single_method_sd": 0.001733008110265981,
+   "s_definition": "sqrt(2) x SD(PPL) over the 5 groupings (1 calibration seed)",
+   "n_by_delta": {
+    "0.0025": 8,
+    "0.005": 2,
+    "0.01": 1
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, MoE FR single-method pooled SD (ASSUMES independence)",
+   "dataset": "WikiText-2",
+   "s_used": 0.007351395267415061,
+   "single_method_sd": 0.005198221444771882,
+   "s_definition": "sqrt(2) x pooled within-seed SD(PPL)",
+   "n_by_delta": {
+    "0.0025": 68,
+    "0.005": 17,
+    "0.01": 5
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, MoE FR single-method pooled SD (ASSUMES independence)",
+   "dataset": "C4-val held-out",
+   "s_used": 0.002952500097383045,
+   "single_method_sd": 0.002087732840313493,
+   "s_definition": "sqrt(2) x pooled within-seed SD(PPL)",
+   "n_by_delta": {
+    "0.0025": 11,
+    "0.005": 3,
+    "0.01": 1
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, MoE FC single-method pooled SD (ASSUMES independence)",
+   "dataset": "WikiText-2",
+   "s_used": 0.0053906588325001855,
+   "single_method_sd": 0.003811771415524038,
+   "s_definition": "sqrt(2) x pooled within-seed SD(PPL)",
+   "n_by_delta": {
+    "0.0025": 37,
+    "0.005": 10,
+    "0.01": 3
+   },
+   "n_meaning": "replicates per arm"
+  },
+  {
+   "design": "independent arms, MoE FC single-method pooled SD (ASSUMES independence)",
+   "dataset": "C4-val held-out",
+   "s_used": 0.0026799090862053487,
+   "single_method_sd": 0.0018949818878192459,
+   "s_definition": "sqrt(2) x pooled within-seed SD(PPL)",
+   "n_by_delta": {
+    "0.0025": 10,
+    "0.005": 3,
+    "0.01": 1
+   },
+   "n_meaning": "replicates per arm"
+  }
+ ],
+ "caveat": "planning estimates conditional on this numerical stack, these models and the assumed variance; not universal requirements. The 3-bit dense study has one calibration strategy, so it cannot give a paired FR/FC SD."
+}

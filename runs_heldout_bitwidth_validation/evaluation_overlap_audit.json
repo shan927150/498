@@ -1,0 +1,109 @@
+{
+ "historical_token_sources": {
+  "moe_cache/ids.pt": {
+   "sha256": "080447863bb43a007dd69713a1185dce5f46063229cdcab05f5b2e63d5db0744",
+   "n_rows": 2256,
+   "n_tokens": 1155072
+  },
+  "moe_cache_calibration_domain/wt_pool/ids.pt": {
+   "sha256": "cc13cdff39e1ee03aa32cefe51882c407059de91d9648944ff3b00ad972d0b2c",
+   "n_rows": 2001,
+   "n_tokens": 1026000
+  },
+  "moe_cache_confirmation/ids.pt": {
+   "sha256": "915fd4c2fd4836be234977dec8cac95a9c1a0ffb5f97465782781034e63e6842",
+   "n_rows": 256,
+   "n_tokens": 131072
+  },
+  "moe_cache_ebss_balance_fidelity/ids.pt": {
+   "sha256": "33e07e56eed481815a408a378a771810d8ddf33e53441fd3f687b07009418ac3",
+   "n_rows": 48,
+   "n_tokens": 24576
+  },
+  "moe_cache_ebss_generation_pilot/ids.pt": {
+   "sha256": "3cefff0aec7cbe1bdea0c24e24fd39b645fbf401fdcd7750caef4307ee7e2609",
+   "n_rows": 80,
+   "n_tokens": 40960
+  },
+  "moe_cache_ebss_official_validation/ids.pt": {
+   "sha256": "73520e2d1839a943bbe20366e494778bfba2ee25e3ec3de86205f6c9452acb75",
+   "n_rows": 874,
+   "n_tokens": 447488
+  },
+  "moe_cache_ebss_prefix_rescue/ids.pt": {
+   "sha256": "c5e55959a7f32c81f5921e4d2d6c736d2964f1656d8d68a0089758c5a1db210e",
+   "n_rows": 80,
+   "n_tokens": 40960
+  },
+  "moe_cache_legacy_metric_reeval/ids.pt": {
+   "sha256": "2a2309e247ba07be61552f187e10d42e6bbf46bb42abf9586660b20230b5bf74",
+   "n_rows": 343,
+   "n_tokens": 175616
+  },
+  "moe_cache_smoke/ids.pt": {
+   "sha256": "d3b878aa3bd59304a3ccb3d9ef813effea707600634b969389920c4985dd6861",
+   "n_rows": 96,
+   "n_tokens": 49152
+  },
+  "498/runs_partial_ppl/windows.pt": {
+   "sha256": "4b7d17bec2af5a48d277e72f2fc0b5fed9a0c17e2efd9060e253fc8c3c1eb080",
+   "n_rows": 128,
+   "n_tokens": 65536
+  },
+  "498/runs_ebss_official_validation/official_data/tokens_all.pt": {
+   "sha256": "cb1db791ed7f9096a9f497d89c30dd07a5187e20cd8ce49b391d9c065b4ef2b7",
+   "n_rows": 600,
+   "n_tokens": 684847
+  },
+  "498/runs_ebss_official_validation/official_data/ebss_windows.pt": {
+   "sha256": "e17ddb1fcfd36776e7e55f12d04eba138e9e1207f77fed667a3ec27288edd8f3",
+   "n_rows": 128,
+   "n_tokens": 65536
+  },
+  "498/runs_ebss_balance_fidelity/logs/generated_ALG1_RATE.pt": {
+   "sha256": "2c6e4781a9f588269371eca4b0b715a7a0726df4679254317c1c4b64c8735e3c",
+   "n_rows": 17,
+   "n_tokens": 8208
+  },
+  "498/runs_ebss_balance_fidelity/logs/generated_ALG1_SHARE.pt": {
+   "sha256": "41cfeffca55bab2bb71d0db7a7486d9bdef55b0866d61987dee783ec74a7135f",
+   "n_rows": 17,
+   "n_tokens": 8208
+  },
+  "498/runs_ebss_generation_pilot/logs/generated_ebss.pt": {
+   "sha256": "0bd680a0406c8989fca5c3aa9e65bee7f53d50f560e46ef8e654558141e17aca",
+   "n_rows": 17,
+   "n_tokens": 8208
+  },
+  "498/runs_ebss_generation_pilot/logs/generated_po.pt": {
+   "sha256": "3012d474a31eac14f372dc0d769a1699c73d0ed32cdda80538e7e5f398ceb77e",
+   "n_rows": 17,
+   "n_tokens": 8208
+  }
+ },
+ "n_historical_ngrams": 2536317,
+ "ngram": 13,
+ "selected_windows_sharing_any_ngram_with_history": 0,
+ "selected_windows_exactly_in_history": 0,
+ "selected_docs_text_in_c4_train_shard": 0,
+ "selected_docs_url_in_c4_train_shard": 0,
+ "c4_train_shard": {
+  "file": "en/c4-train.00000-of-01024.json.gz",
+  "file_sha256": "8ef8d75b0e045dec4aa5123a671b4564466b0707086a7ed1ba8721626dfffbc9",
+  "n_documents": 356317
+ },
+ "wikitext2_eval_windows": {
+  "sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+  "shared_ngrams_with_heldout": 0
+ },
+ "within_heldout_near_duplicate_pairs": [],
+ "n_unique_documents": 128,
+ "n_unique_urls": 128,
+ "n_unique_text_sha": 128,
+ "usage_audit": {
+  "code_search": "grep of all *.py: load_dataset calls are C4 data_files={'train': c4-train.00000-of-01024} (moe_calib/data_utils.py, diagnostics/build_confirmation_split.py) and wikitext-2-raw-v1 (test: evaluation; train/validation: calibration_domain_ablation); no C4 validation access",
+  "hf_cache": "before this study the local HF cache held only en/c4-train.00000-of-01024.json.gz for allenai/c4; c4-validation.00000-of-00008 was first downloaded by this study (symlink mtime)",
+  "reports": "no update_*.md / runs_*/ summary reports a C4-validation evaluation or selection"
+ },
+ "passed": true
+}

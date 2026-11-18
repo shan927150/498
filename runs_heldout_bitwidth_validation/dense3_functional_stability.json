@@ -1,0 +1,156 @@
+{
+ "definition": "OPTIONAL (protocol section 14, run after the 3-bit PPL results showed a change in relative variability):\n3-bit vs 4-bit functional disagreement of the dense grouping variants, with the historical pooled full-MLP norm.\n\nR_func,b(g) = sqrt( sum_L ||f_b,g(X) - f_b,ORIG(X)||^2 / sum_L ||f_b,ORIG(X) - f_BF16(X)||^2 )\nX = the saved BF16 MLP inputs on the WikiText-2 evaluation windows (runs_actorder_functional_stability act/dense; not\ncalibration data). Reuses diagnostics/dense_dose_response.functional_one / func_cache unchanged (FP32, TF32 off,\nFP64 accumulation). Integer-code disagreement is compared WITHIN each bit-width only.\n",
+ "bits": {
+  "4": {
+   "quant_error_rel": 0.04492243189256777,
+   "configs": {
+    "G20261111": {
+     "R_func": 0.15276485171888066,
+     "E_mlp_rel_bf16": 0.006862568646919631,
+     "code_disagreement_vs_original": 0.013205028715587798,
+     "bf16_elements_changed": 0.0819256858220176,
+     "per_layer_R_func": {
+      "1": 0.02622662874701563,
+      "9": 0.410537013593121,
+      "19": 0.26670883933137046,
+      "27": 0.12954507883219266
+     }
+    },
+    "G20261112": {
+     "R_func": 0.1572457685305181,
+     "E_mlp_rel_bf16": 0.007063862327206676,
+     "code_disagreement_vs_original": 0.012062672206333705,
+     "bf16_elements_changed": 0.06676406860351562,
+     "per_layer_R_func": {
+      "1": 0.07675146865984214,
+      "9": 0.36401671365395344,
+      "19": 0.22147380493422475,
+      "27": 0.14496492807069405
+     }
+    },
+    "G20261113": {
+     "R_func": 0.1428873706058349,
+     "E_mlp_rel_bf16": 0.006418848174348708,
+     "code_disagreement_vs_original": 0.010098793393089658,
+     "bf16_elements_changed": 0.06210421607607887,
+     "per_layer_R_func": {
+      "1": 0.06697284895066744,
+      "9": 0.34794497920458045,
+      "19": 0.23737164570154073,
+      "27": 0.1251557188562023
+     }
+    },
+    "G20261114": {
+     "R_func": 0.15332458386329262,
+     "E_mlp_rel_bf16": 0.006887713176055058,
+     "code_disagreement_vs_original": 0.011857175070141989,
+     "bf16_elements_changed": 0.06643191140795511,
+     "per_layer_R_func": {
+      "1": 0.07012333694375104,
+      "9": 0.35801982855504716,
+      "19": 0.215881827566563,
+      "27": 0.14135350501105798
+     }
+    },
+    "G20261115": {
+     "R_func": 0.0,
+     "E_mlp_rel_bf16": 0.0,
+     "code_disagreement_vs_original": 0.0,
+     "bf16_elements_changed": 0.0,
+     "per_layer_R_func": {
+      "1": 0.0,
+      "9": 0.0,
+      "19": 0.0,
+      "27": 0.0
+     }
+    }
+   },
+   "mean_R_func_4_perturbations": 0.15155564367963156,
+   "rms_R_func_4_perturbations": 0.15164807972485667,
+   "mean_E_mlp_4_perturbations": 0.0068082480811325185,
+   "mean_code_disagreement_4_perturbations": 0.011805917346288287,
+   "null_G20261115_R_func": 0.0
+  },
+  "3": {
+   "quant_error_rel": 0.10400136911219215,
+   "configs": {
+    "G20261111": {
+     "R_func": 0.13819232358958056,
+     "E_mlp_rel_bf16": 0.014372190854111466,
+     "code_disagreement_vs_original": 0.011272920880998884,
+     "bf16_elements_changed": 0.10075465611049107,
+     "per_layer_R_func": {
+      "1": 0.022076449392968572,
+      "9": 0.38886247363662513,
+      "19": 0.2608021609685622,
+      "27": 0.12702060707084334
+     }
+    },
+    "G20261112": {
+     "R_func": 0.140670931418744,
+     "E_mlp_rel_bf16": 0.014629969461836666,
+     "code_disagreement_vs_original": 0.009972605629572792,
+     "bf16_elements_changed": 0.08202015104747953,
+     "per_layer_R_func": {
+      "1": 0.03587107484385945,
+      "9": 0.34908494954670194,
+      "19": 0.22049340497038414,
+      "27": 0.1394554391710482
+     }
+    },
+    "G20261113": {
+     "R_func": 0.12872280365499292,
+     "E_mlp_rel_bf16": 0.013387347816079156,
+     "code_disagreement_vs_original": 0.008742934938461061,
+     "bf16_elements_changed": 0.07647364782908606,
+     "per_layer_R_func": {
+      "1": 0.030981004028104758,
+      "9": 0.3376885444177634,
+      "19": 0.2370832214241165,
+      "27": 0.12109219958637607
+     }
+    },
+    "G20261114": {
+     "R_func": 0.14106679576528974,
+     "E_mlp_rel_bf16": 0.014671139895860125,
+     "code_disagreement_vs_original": 0.009819127642919147,
+     "bf16_elements_changed": 0.08307291666666666,
+     "per_layer_R_func": {
+      "1": 0.034954301112513846,
+      "9": 0.344494549075582,
+      "19": 0.21186645146207272,
+      "27": 0.14154128304752553
+     }
+    },
+    "G20261115": {
+     "R_func": 0.0,
+     "E_mlp_rel_bf16": 0.0,
+     "code_disagreement_vs_original": 0.0,
+     "bf16_elements_changed": 0.0,
+     "per_layer_R_func": {
+      "1": 0.0,
+      "9": 0.0,
+      "19": 0.0,
+      "27": 0.0
+     }
+    }
+   },
+   "mean_R_func_4_perturbations": 0.1371632136071518,
+   "rms_R_func_4_perturbations": 0.13725417142439802,
+   "mean_E_mlp_4_perturbations": 0.014265162006971853,
+   "mean_code_disagreement_4_perturbations": 0.00995189727298797,
+   "null_G20261115_R_func": 0.0
+  }
+ },
+ "comparison": {
+  "quant_error_ratio_3_over_4": 2.315132211918357,
+  "E_mlp_ratio_3_over_4": 2.095276470095801,
+  "R_func_ratio_3_over_4": 0.9050834779670518,
+  "consistency_4bit_G20261111": {
+   "E_mlp_here": 0.006862568646919631,
+   "E_mlp_historical": 0.006862568646919631
+  },
+  "note": "code disagreement is compared within a bit-width only (3- and 4-bit code labels are not comparable)"
+ },
+ "seconds": 252.18911504745483
+}

@@ -1,0 +1,276 @@
+{
+ "study": "Held-out evaluation validation (C4 validation) and dense 3-bit GPTQ execution sensitivity",
+ "datasets": {
+  "A_wikitext2": {
+   "windows": "runs_partial_ppl/windows.pt",
+   "sha256": "e646cf7ce463f3de40a75d149ea489099fac23568ce50128cba317233b9ccb8f",
+   "role": "historical evaluation set (adaptively used); untouched; parity + 3-bit evaluation"
+  },
+  "B_heldout": {
+   "windows": "moe_cache_heldout_bitwidth/heldout_windows.pt",
+   "sha256": "e105f9744de169f53ec8229572511962e734ec6f8a4820ba47d27881baa6f064",
+   "source": "C4 (allenai/c4) English, VALIDATION split, shard en/c4-validation.00000-of-00008.json.gz",
+   "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+   "selection_seed": 20261117,
+   "role": "new independent evaluation set; frozen before any model evaluation on it"
+  }
+ },
+ "evaluator": {
+  "fn": "diagnostics/eval_partial_ppl.layerwise_nll (unchanged)",
+  "n_windows": 128,
+  "seqlen": 512,
+  "scored_targets": 65408,
+  "batch": 8,
+  "attn": "eager",
+  "dtype": "bfloat16",
+  "ppl": "exp(total NLL / 65408); log PPL = total NLL / 65408 (same aggregate)"
+ },
+ "included": {
+  "moe": {
+   "configs": [
+    "FR_s0_G20261111",
+    "FC_s0_G20261111",
+    "FR_s0_G20261112",
+    "FC_s0_G20261112",
+    "FR_s0_G20261113",
+    "FC_s0_G20261113",
+    "FR_s0_G20261114",
+    "FC_s0_G20261114",
+    "FR_s0_G20261115",
+    "FC_s0_G20261115",
+    "FR_s1_G20261111",
+    "FC_s1_G20261111",
+    "FR_s1_G20261112",
+    "FC_s1_G20261112",
+    "FR_s1_G20261113",
+    "FC_s1_G20261113",
+    "FR_s1_G20261114",
+    "FC_s1_G20261114",
+    "FR_s1_G20261115",
+    "FC_s1_G20261115",
+    "FR_s2_G20261111",
+    "FC_s2_G20261111",
+    "FR_s2_G20261112",
+    "FC_s2_G20261112",
+    "FR_s2_G20261113",
+    "FC_s2_G20261113",
+    "FR_s2_G20261114",
+    "FC_s2_G20261114",
+    "FR_s2_G20261115",
+    "FC_s2_G20261115"
+   ],
+   "references": [
+    "FR_ORIGINAL",
+    "FC_ORIGINAL"
+   ],
+   "model": "Qwen/Qwen1.5-MoE-A2.7B",
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "inference_routing": "natural (historical); frozen routing NOT run",
+   "structure": "3 allocation seeds x 5 groupings x {FR, FC}; FR/FC paired by (seed, grouping); groupings nested in seeds; seed-0 ORIGINAL pair descriptive only (seed-1/2 ORIGINAL weights never stored -> no held-out ORIGINAL reference for those seeds)"
+  },
+  "dense4": {
+   "configs": [
+    "G20261111",
+    "G20261112",
+    "G20261113",
+    "G20261114",
+    "G20261115",
+    "ORIGINAL"
+   ],
+   "model": "Qwen/Qwen2.5-1.5B",
+   "layers": [
+    1,
+    9,
+    19,
+    27
+   ],
+   "gptq": {
+    "bits": 4,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "statistics_over": [
+    "G20261111",
+    "G20261112",
+    "G20261113",
+    "G20261114",
+    "G20261115"
+   ],
+   "reference": "ORIGINAL (descriptive; bitwise = G20261115)"
+  },
+  "dose": {
+   "configs": [
+    "b1_k000",
+    "b1_k001_r0",
+    "b1_k001_r1",
+    "b1_k001_r2",
+    "b1_k001_r3",
+    "b1_k001_r4",
+    "b1_k001_r5",
+    "b1_k001_r6",
+    "b1_k001_r7",
+    "b1_k004_r0",
+    "b1_k004_r1",
+    "b1_k004_r2",
+    "b1_k004_r3",
+    "b1_k004_r4",
+    "b1_k004_r5",
+    "b1_k004_r6",
+    "b1_k004_r7",
+    "b1_k016_r0",
+    "b1_k016_r1",
+    "b1_k016_r2",
+    "b1_k016_r3",
+    "b1_k016_r4",
+    "b1_k016_r5",
+    "b1_k016_r6",
+    "b1_k016_r7",
+    "b1_k064_r0",
+    "b1_k064_r1",
+    "b1_k064_r2",
+    "b1_k064_r3",
+    "b1_k064_r4",
+    "b1_k064_r5",
+    "b1_k064_r6",
+    "b1_k064_r7"
+   ],
+   "policies": [
+    "natural",
+    "fixed"
+   ],
+   "family": "b1 (batch-1) k in {1,4,16,64} x 8 replicates + k=0",
+   "primary_policy": "natural",
+   "replicate_ids": "preserved from runs_dense_dose_response"
+  },
+  "refmatrix": {
+   "optional": true,
+   "configs": [
+    "G20261111|G20261111",
+    "G20261111|G20261112",
+    "G20261111|G20261113",
+    "G20261111|G20261114",
+    "G20261111|G20261115",
+    "G20261112|G20261111",
+    "G20261112|G20261112",
+    "G20261112|G20261113",
+    "G20261112|G20261114",
+    "G20261112|G20261115",
+    "G20261113|G20261111",
+    "G20261113|G20261112",
+    "G20261113|G20261113",
+    "G20261113|G20261114",
+    "G20261113|G20261115",
+    "G20261114|G20261111",
+    "G20261114|G20261112",
+    "G20261114|G20261113",
+    "G20261114|G20261114",
+    "G20261114|G20261115",
+    "G20261115|G20261111",
+    "G20261115|G20261112",
+    "G20261115|G20261113",
+    "G20261115|G20261114",
+    "G20261115|G20261115"
+   ],
+   "note": "pi_i (reference permutation) x H_j; held-out used only to re-evaluate, never to select"
+  },
+  "dense3": {
+   "configs": [
+    "G20261111",
+    "G20261112",
+    "G20261113",
+    "G20261114",
+    "G20261115",
+    "ORIGINAL"
+   ],
+   "gptq": {
+    "bits": 3,
+    "group_size": 128,
+    "percdamp": 1.0,
+    "act_order": true
+   },
+   "hessians": "runs_dense_grouping_scope saved Hessians (sha256-verified)",
+   "solver": "moe_calib.dense_gptq.quantize_layer -> moe_calib.gptq.quantize_expert, bits=3 (maxq 7, same asymmetric min/max grid, g128, percdamp 1.0, natural act-order, lazy-batch 128)",
+   "datasets": [
+    "A_wikitext2",
+    "B_heldout"
+   ]
+  }
+ },
+ "metrics": {
+  "moe_primary": "Delta[s,g] = PPL(FC,s,g) - PPL(FR,s,g) (positive = FR better); pooled within-seed SD(Delta) = sqrt(mean_s SD_s^2), ddof 1 (moe_calib.cross_seed_grouping.variance_summary); R_dataset = SD_heldout / SD_WikiText2 (historical 0.006872, recomputed from stored per-window NLL)",
+  "moe_secondary": [
+   "seed means, seed SDs, FR / FC pooled within-seed PPL SDs",
+   "counts of positive / negative Delta",
+   "R1 reversals (sign opposite to sign of M = mean of seed means, within each dataset)",
+   "R2 (seed 0 only on held-out: sign vs seed-0 ORIGINAL Delta on the SAME dataset)",
+   "cross-dataset sign agreement of the 15 Delta (descriptive)",
+   "hierarchical bootstrap of mean Delta (CS.hierarchical_bootstrap, n 20000, seed 20261120)",
+   "historical decision rule CS.decide on each dataset",
+   "paired mean-NLL Delta (nats/token) and its pooled within-seed SD; ratio of NLL-scale SDs",
+   "window-level paired bootstrap CI per pair (full_depth_pilot.paired_bootstrap, conditional on weights)",
+   "rank of the seed-0 ORIGINAL FR / FC PPL among the 5 seed-0 grouping variants"
+  ],
+  "dense_primary": "over the 5 groupings (ddof 1): S = SD(PPL), SD(log PPL); Q = mean PPL - PPL_BF16 (same dataset); R = S / Q; R_log = SD(log PPL) / (mean log PPL - log PPL_BF16); max pairwise diff; per-window NLL differences",
+  "dose": "per dose k: s_k = SD_r(PPL) over 8 replicates (ddof 1); Q0 = PPL(k=0 = ORIGINAL) - PPL_BF16 on the same dataset; R_PPL,k = s_k / Q0; replicate IDs paired across datasets; chi-square 95% CI for s_k",
+  "refmatrix": "mean PPL per reference permutation over 5 Hessians; within-reference SD; between-reference range; rank of pi_ORIGINAL (=pi_G20261115)",
+  "bitwidth": "Q_b, S_b, R_b = S_b/Q_b, R_b_log on each dataset; R_relative = R3/R4; S3/S4; Q3/Q4; per-grouping deviations from the bit-specific mean and their Pearson / Spearman correlation (n = 5, descriptive)",
+  "unstable_ratio_rule": "a penalty-normalized ratio is reported as UNDEFINED if Q <= 0 and as UNSTABLE if Q < 2 x its window-bootstrap SE (Q not distinguishable from 0)"
+ },
+ "uncertainty": {
+  "sd_ci": "chi-square (n-1 df) 95% CI for single SDs; F(n1-1, n2-1) 95% CI for SD ratios with independent samples; for paired 3-bit vs 4-bit ratios a grouping-paired bootstrap (resample the 5 groupings jointly across bit-widths, 20000 draws, seed 20261117) is reported as a sensitivity interval",
+  "window_bootstrap": "joint window resampling (2000 draws, seed 20261117) of all configurations of one dataset -> conditional-on-weights uncertainty of Q, S, R (evaluation-text uncertainty only)",
+  "moe": "nested seed / grouping structure respected (pooled within-seed SD; hierarchical bootstrap; no flat-15 inference)",
+  "power": "n ~ ((z_.975 + z_.8) s / delta)^2 for delta in {0.0025, 0.005, 0.01}; paired-design s = measured pooled within-seed SD(Delta) (MoE, both datasets); independent-arm illustration s = sqrt(2) x single-method SD (dense 4/3-bit, MoE FR/FC) with the independence assumption stated"
+ },
+ "historical_comparisons": {
+  "moe_wikitext": "recomputed from the stored historical natural per-window NLL (bitwise re-verified on the parity subset); expected pooled SD(Delta) 0.006872",
+  "dense4_wikitext": "runs_dense_grouping_scope results (re-evaluated bitwise for all 6): SD 0.00503, SD log 3.99e-4, Q 0.1007 (ORIGINAL-based) / 0.0954 (5-grouping mean based)",
+  "dose_wikitext": "runs_dense_dose_response results (stored per-window NLL)"
+ },
+ "decision_criteria": {
+  "note": "No equivalence thresholds; outcomes are classified descriptively with exact ratios and intervals. Classification labels (A1/A2/A3, B1-B4) are assigned by these prespecified rules:",
+  "A": "A3 if held-out MoE pooled SD(Delta) CI (chi-square) upper bound < 0.5 x WikiText point AND dense4 held-out S chi-square CI upper bound < 0.5 x WikiText point; A1 if both ratios (held-out / WikiText, MoE R_dataset and dense S ratio and dense R ratio) lie inside the corresponding F-type 95% band around 1 (i.e. not distinguishable from equal); A2 otherwise",
+  "B": "on each dataset compute S3/S4 and Q3/Q4 and the paired-bootstrap interval of R3/R4: B1 if the R3/R4 interval contains 1; B2 if its upper bound < 1; B3 if its lower bound > 1; B4 if the two datasets give different labels",
+  "BLOCKED": "any mandatory integrity / parity check fails -> results reported as blocked for that component"
+ },
+ "correctness": {
+  "all": "target tensor counts/shapes/dtype/finiteness; weight hashes vs historical manifests; pristine start and bitwise restore; non-targets unchanged; repeated evaluation bitwise (every dense4, dense3, MoE config; dose subset k000 + parity configs)",
+  "parity": "WikiText-2 per-window NLL bitwise equal to history: BF16 (both models), dense4 all 6, dose ['b1_k001_r0', 'b1_k064_r7'] (both policies), refmatrix all 25, MoE ['FR_s0_G20261111', 'FC_s2_G20261111', 'FR_ORIGINAL']",
+  "dense3": [
+   "codes in [0, 7]",
+   "scale*(q-zero) reproduces the FP32 solver output bitwise",
+   "installed BF16 == bf16(solver output)",
+   "deterministic in-process + fresh-process re-solve of G20261111",
+   "bits=4 re-solve reproduces all 6 historical weight sets and codes bitwise",
+   "G20261115 and ORIGINAL 3-bit weights / codes / per-window NLL bitwise identical",
+   "only the 12 target tensors change"
+  ],
+  "moe_non_target": "full non-target digest (14 B parameters) at start / after parity / at end; per config: gate digests + quantized-layer non-expert parameters + embeddings/head/final norm (restore only writes targets, so an end-of-run full-digest match bounds every intermediate config)"
+ },
+ "constraints": [
+  "no historical artifact modified",
+  "no historical 4-bit GPTQ re-run except the bits=4 parity re-solve (compared, never used as a result)",
+  "no calibration Hessian regenerated",
+  "held-out results never used to choose numerical settings",
+  "production GPTQ defaults unchanged"
+ ],
+ "code_sha256": {
+  "diagnostics/heldout_bitwidth_validation.py": "9482c5f11bdf797882e6bc62df1cf271b8dc9e25ee6281ddc0569977bd042d3d",
+  "moe_calib/gptq.py": "58e40d1c0e9f2d4fd39d22e4a12b83c9828763a37be25eea544f9db03d6fd39d",
+  "moe_calib/dense_gptq.py": "f030e490a5b5972903063246491bf8adb78501173baa34aaba2c1023169b2f4c",
+  "moe_calib/actorder_policy.py": "c9aebb5d65e677b52d6e635131dd564d7930b59d30812fa86c06fbda4f997f2a",
+  "moe_calib/model_utils.py": "f1541192935dc622a64fc5dc2958a39a314b172dd0590624a6e1cf45bb3dbb5e",
+  "moe_calib/partial_model_quant.py": "a222d82d3b54a95eac43047a55c1e2f137ce102dc00495772c04292adf4e1bc4",
+  "diagnostics/eval_partial_ppl.py": "5175ba969d43d3c9007f13e90952c091760af14b2fa141c762c7b66cc40c8684",
+  "diagnostics/dense_grouping_scope.py": "23a4292468df8dd2b49e7f39d4c127c0677f304dd70c73f833e0b9a8fb4a5356",
+  "diagnostics/inference_routing_amplification.py": "c6cfaaf9d20a4f20aeb8e0e8b6f1b24e94a950a9354521d0409034c9a1608ec8"
+ },
+ "protocol_sha256": "f523b03478e2a5ace6c39ef783310c84f0e10faa4ec160613f107136c1fb2e5e",
+ "created": "2026-11-17 23:52:25"
+}

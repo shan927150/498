@@ -1,0 +1,309 @@
+{
+ "per_config": {
+  "G20261111": {
+   "installed_equals_given": true,
+   "n_target_tensors_12": true,
+   "all_targets_differ_from_bf16": true,
+   "finite": true,
+   "shapes_ok": true,
+   "untouched_unchanged": true,
+   "installed_unchanged_during_eval": true,
+   "restored": true,
+   "codes_exact": true,
+   "codes_in_range": true,
+   "zero_in_range": true,
+   "scales_positive": true,
+   "solver_finite": true,
+   "bf16_cast_equals_solver": true,
+   "bits4_parity": true,
+   "wikitext_repeat_bitwise": true,
+   "heldout_repeat_bitwise": true,
+   "repeat_solve_bitwise": true
+  },
+  "G20261112": {
+   "installed_equals_given": true,
+   "n_target_tensors_12": true,
+   "all_targets_differ_from_bf16": true,
+   "finite": true,
+   "shapes_ok": true,
+   "untouched_unchanged": true,
+   "installed_unchanged_during_eval": true,
+   "restored": true,
+   "codes_exact": true,
+   "codes_in_range": true,
+   "zero_in_range": true,
+   "scales_positive": true,
+   "solver_finite": true,
+   "bf16_cast_equals_solver": true,
+   "bits4_parity": true,
+   "wikitext_repeat_bitwise": true,
+   "heldout_repeat_bitwise": true
+  },
+  "G20261113": {
+   "installed_equals_given": true,
+   "n_target_tensors_12": true,
+   "all_targets_differ_from_bf16": true,
+   "finite": true,
+   "shapes_ok": true,
+   "untouched_unchanged": true,
+   "installed_unchanged_during_eval": true,
+   "restored": true,
+   "codes_exact": true,
+   "codes_in_range": true,
+   "zero_in_range": true,
+   "scales_positive": true,
+   "solver_finite": true,
+   "bf16_cast_equals_solver": true,
+   "bits4_parity": true,
+   "wikitext_repeat_bitwise": true,
+   "heldout_repeat_bitwise": true
+  },
+  "G20261114": {
+   "installed_equals_given": true,
+   "n_target_tensors_12": true,
+   "all_targets_differ_from_bf16": true,
+   "finite": true,
+   "shapes_ok": true,
+   "untouched_unchanged": true,
+   "installed_unchanged_during_eval": true,
+   "restored": true,
+   "codes_exact": true,
+   "codes_in_range": true,
+   "zero_in_range": true,
+   "scales_positive": true,
+   "solver_finite": true,
+   "bf16_cast_equals_solver": true,
+   "bits4_parity": true,
+   "wikitext_repeat_bitwise": true,
+   "heldout_repeat_bitwise": true
+  },
+  "G20261115": {
+   "installed_equals_given": true,
+   "n_target_tensors_12": true,
+   "all_targets_differ_from_bf16": true,
+   "finite": true,
+   "shapes_ok": true,
+   "untouched_unchanged": true,
+   "installed_unchanged_during_eval": true,
+   "restored": true,
+   "codes_exact": true,
+   "codes_in_range": true,
+   "zero_in_range": true,
+   "scales_positive": true,
+   "solver_finite": true,
+   "bf16_cast_equals_solver": true,
+   "bits4_parity": true,
+   "wikitext_repeat_bitwise": true,
+   "heldout_repeat_bitwise": true
+  },
+  "ORIGINAL": {
+   "installed_equals_given": true,
+   "n_target_tensors_12": true,
+   "all_targets_differ_from_bf16": true,
+   "finite": true,
+   "shapes_ok": true,
+   "untouched_unchanged": true,
+   "installed_unchanged_during_eval": true,
+   "restored": true,
+   "codes_exact": true,
+   "codes_in_range": true,
+   "zero_in_range": true,
+   "scales_positive": true,
+   "solver_finite": true,
+   "bf16_cast_equals_solver": true,
+   "bits4_parity": true,
+   "wikitext_repeat_bitwise": true,
+   "heldout_repeat_bitwise": true
+  }
+ },
+ "null_control": {
+  "per_layer": {
+   "1": {
+    "weights": true,
+    "codes": true,
+    "scale_zero": true
+   },
+   "9": {
+    "weights": true,
+    "codes": true,
+    "scale_zero": true
+   },
+   "19": {
+    "weights": true,
+    "codes": true,
+    "scale_zero": true
+   },
+   "27": {
+    "weights": true,
+    "codes": true,
+    "scale_zero": true
+   }
+  },
+  "per_window_wikitext": true,
+  "per_window_heldout": true,
+  "installed_digest": true,
+  "passed": true
+ },
+ "fresh_process_repeat": {
+  "1": {
+   "weights_bitwise": true,
+   "codes_bitwise": true
+  },
+  "9": {
+   "weights_bitwise": true,
+   "codes_bitwise": true
+  },
+  "19": {
+   "weights_bitwise": true,
+   "codes_bitwise": true
+  },
+  "27": {
+   "weights_bitwise": true,
+   "codes_bitwise": true
+  },
+  "passed": true,
+  "config": "G20261111"
+ },
+ "bits4_parity": {
+  "G20261111": {
+   "1": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "9": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "19": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "27": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   }
+  },
+  "G20261112": {
+   "1": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "9": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "19": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "27": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   }
+  },
+  "G20261113": {
+   "1": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "9": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "19": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "27": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   }
+  },
+  "G20261114": {
+   "1": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "9": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "19": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "27": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   }
+  },
+  "G20261115": {
+   "1": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "9": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "19": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "27": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   }
+  },
+  "ORIGINAL": {
+   "1": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "9": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "19": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   },
+   "27": {
+    "weights_bitwise": true,
+    "codes_bitwise": true,
+    "perm_bitwise": true
+   }
+  }
+ },
+ "end": {
+  "bf16_wikitext_bitwise": true,
+  "targets_pristine": true,
+  "untouched_unchanged": true,
+  "peak_cpu_gb": 9.483756,
+  "at": "2026-11-18 00:32:00"
+ },
+ "passed": true
+}
