@@ -1,0 +1,17 @@
+[
+ {
+  "id": "none",
+  "statement": "No deviation from runs_h5/protocol.json (sha256 84a0745b...). Items below are a sanctioned refactor and descriptive additions."
+ },
+ {
+  "id": "R1-refactor",
+  "kind": "refactor sanctioned by task section 0 (numerics unchanged)",
+  "change": "diagnostics/theorem1_check.py: m_matrix(Hp, nu) now returns m_from_A(damped(Hp, nu)); m_from_A(A) holds the unchanged Cholesky chain (needed by R4, whose A_-f uses the full-prefix lambda)",
+  "verification": "tests/test_theorem1.py 40/40 pass; first eval unit (seed 1, L16, B16): R_ideal at the 12 Part B nu for 60 experts x 2 groups equals runs_theorem1_check/raw_grid.jsonl bitwise (max rel 0.0); E1/E2 of the grid extension untouched"
+ },
+ {
+  "id": "A1",
+  "kind": "descriptive additions",
+  "what": "overall gain vs R0 (sum over prefixes) with CI; R_ideal-scored capture for the primary fold too (in protocol); Part K group medians of every statistic; tests/test_h5_rules.py (21 tests: CV = brute-force leave-one-block-out refit <= 1e-10 incl. dead column and empty block, PCHIP vectorization, law fitting)"
+ }
+]

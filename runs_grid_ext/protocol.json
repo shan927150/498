@@ -1,0 +1,146 @@
+{
+ "name": "damping_grid_extension",
+ "frozen_utc": "2026-11-19T15:37:07Z",
+ "follows": "update_theorem1_check.md (T1-PASS-BOTH), runs_theorem1_check/ (read only)",
+ "solver": "moe_calib/gptq.py gptq_quantize (FROZEN, sha256 prefix 58e40d1c), 4-bit g128 act-order",
+ "split": "tuning split only; test / confirmation splits, configs/frozen_b4.json and existing outputs untouched",
+ "reuse": "all math and data paths imported from diagnostics/theorem1_check.py: solver_coords, m_matrix, col_quad, sweep_curve (argmin + parabola refinement), b2_cell, layer_context (Sigma = tuning X^T X / n_tune fp64, RTN, B2 selection), prefix_hessians (nested low_data_diag.hessians running sums), damping_threshold.tune_err_groups",
+ "precision": "fp64 for H_hat, S, M, R (H_hat fp32 accumulator cast to fp64 exactly as Part B); Cholesky failure -> cell recorded as failed, no jitter",
+ "E1": {
+  "seeds": [
+   0,
+   1
+  ],
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "prefixes": [
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "experts": "all 60",
+  "groups": [
+   "gu",
+   "down"
+  ],
+  "nu_grid": [
+   0.01,
+   0.01333521432163324,
+   0.01778279410038923,
+   0.023713737056616554,
+   0.03,
+   0.03162277660168379,
+   0.042169650342858224,
+   0.05,
+   0.05623413251903491,
+   0.07498942093324558,
+   0.1,
+   0.1333521432163324,
+   0.1778279410038923,
+   0.2,
+   0.23713737056616552,
+   0.3,
+   0.31622776601683794,
+   0.4216965034285822,
+   0.5,
+   0.5623413251903491,
+   0.7498942093324559,
+   1.0,
+   1.333521432163324,
+   1.5,
+   1.7782794100389228,
+   2.0,
+   2.371373705661655,
+   3.0,
+   3.1622776601683795,
+   4.216965034285822,
+   5.0,
+   5.623413251903491,
+   7.498942093324558,
+   10.0,
+   13.33521432163324,
+   17.78279410038923,
+   23.71373705661655,
+   31.622776601683793,
+   42.169650342858226,
+   56.23413251903491,
+   74.98942093324558,
+   100.0
+  ],
+  "nu_grid_def": "sorted union of logspace(-2, 2, 33) and the Part B grid [0.01, 0.03, 0.05, 0.1, 0.2, 0.3, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0] (duplicates within 1e-9 relative merged) = 42 points",
+  "per_cell": "full R_ideal curve over nu_grid; nu* = argmin over nu_grid refined by the vertex of the parabola in log nu through the argmin and its two grid neighbours, R_ideal re-evaluated at the vertex and kept only if not above the grid minimum (theorem1_check.sweep_curve); edge flag if argmin is the first (1e-2) or last (1e2) grid point; R(1.0), R(5.0) read from the curve. Cells whose curve is constant (no tokens) are flagged 'flat' and excluded from per-expert nu* statistics",
+  "invariant": "first (seed, layer) processed: R_ideal at the 12 Part B grid points equals runs_theorem1_check/raw_grid.jsonl R_ideal for every expert and group to <= 1e-6 relative; abort otherwise",
+  "output": "runs_grid_ext/raw_e1.jsonl"
+ },
+ "E2": {
+  "experts": "B2 set of theorem1_check (12 per layer: ranks {0-3}, {28-31}, {56-59} of seed-0 B32 routed tokens, ascending, ties to lower id); recomputed and asserted equal to runs_theorem1_check/grid_events.jsonl",
+  "nu": [
+   5.0,
+   7.0,
+   10.0,
+   15.0,
+   20.0,
+   30.0,
+   50.0
+  ],
+  "prefixes": {
+   "gu": [
+    16,
+    32
+   ],
+   "down": [
+    16,
+    32,
+    64,
+    128,
+    256
+   ]
+  },
+  "per_cell": "theorem1_check.b2_cell (R_ideal, R_w, e_meas, e_rtn, clamp_frac_W / clamp_frac_work, gaps) + tune_err_groups(W, Q, T)[g] / rtn_err[g] where Q = GPTQ for group g and the FP weights for the other group (tune_err_groups' per-group value depends only on that group's projections)",
+  "anchor": "nu = 5.0 re-measured: tune_err_groups[g], e_meas and R_ideal must equal the stored Part B values (runs_theorem1_check/raw_grid.jsonl, b2 cell) to <= 1e-6 relative; abort otherwise",
+  "merged_grid": [
+   0.01,
+   0.03,
+   0.05,
+   0.1,
+   0.2,
+   0.3,
+   0.5,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   5.0,
+   7.0,
+   10.0,
+   15.0,
+   20.0,
+   30.0,
+   50.0
+  ],
+  "merged": "per (seed, layer, prefix, expert, group) cell: Part B's 12 stored points (nu <= 5.0) + the 6 new points = 18; measured ratio and R_ideal over the 18 points",
+  "output": "runs_grid_ext/raw_e2.jsonl"
+ },
+ "report": {
+  "Q1": "per (prefix, group): budget-level nu* = vertex (log nu) of the parabola through the argmin of the expert-mean R_ideal curve (mean over all (seed, layer, expert) cells with a finite curve) and its two grid neighbours (grid point if the argmin is at an edge); interior = argmin not at the first/last grid point; 95% CI by bootstrap over clusters (layer, expert) [both seeds in one cluster], 2000 resamples, numpy default_rng(0); shown with the old Part B grid argmin (T1 report) and the Part C power law exp(a) (d/n)^b (runs_theorem1_check/report.json T4, n<d or n>d fit by the side of the prefix's median n/d, median over all cells of tokens/d_g)",
+  "Q2": "down, B2 cells over the 18-point merged grid: measured argmin vs predicted (R_ideal) argmin, Spearman, argmin agreement within +-1 merged-grid step; gate = frac agreement >= 0.70 AND median Spearman >= 0.8 (same as T1); clamp fractions vs nu; gu (prefixes 16, 32) reported the same way, not gated",
+  "Q3": "per (prefix, group): predicted excess = Rbar(nu0)/Rbar(nu*) - 1 for nu0 in {5.0, 1.0} on the expert-mean curve (Rbar(nu*) = parabola value at the vertex), and per-cell median of R(nu0)/R(nu*) - 1; measured excess on B2 cells = mean measured curve at nu0 / its minimum over the merged grid - 1 (12-point grid for gu at prefixes >= 64), plus per-cell median; 'good enough' = excess < 1%",
+  "Q4": "nu*_down / nu*_gu: budget-level per prefix; per cell matched by (seed, layer, prefix, expert), both nu* interior and non-flat: median, IQR; trend = OLS slope of log ratio on log(tokens) with cluster bootstrap CI (clusters (layer, expert)) and per-prefix medians",
+  "Q5": "per (prefix, group) distribution of per-cell nu*: median, IQR, 5th / 95th percentiles, fraction at the 1e2 edge and at the 1e-2 edge; edge experts listed and compared with the T1 outlier experts {1: [0, 42, 33], 23: [57, 26, 25]}",
+  "verdict": {
+   "labels": {
+    "EXT-INTERIOR-CONFIRMED": "every (prefix, group) budget-level nu* interior AND measured down gate passes",
+    "EXT-INTERIOR-PREDICTED-ONLY": "every budget-level nu* interior, measured down gate fails",
+    "EXT-EDGE": "some budget-level nu* at a grid edge (named)"
+   },
+   "order": "EXT-EDGE takes precedence"
+  }
+ },
+ "cost": "checkpoint after each (seed, layer); wall-clock estimate printed after the first (seed, layer); expected E1 1-2 GPU-h, E2 less"
+}

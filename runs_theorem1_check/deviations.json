@@ -1,0 +1,30 @@
+[
+ {
+  "id": "D1",
+  "when": "2026-11-19, after ~15 min of Part B (seed 0, L1, prefixes 16-32), before any analysis beyond a report dry-run",
+  "frozen_text": "B2: 12 per layer: ... take ranks [0, 1], [29, 30], [58, 59]",
+  "issue": "the rank list yields 6 experts per layer, contradicting '12 per layer' (and the B1 fallback '24 = B2's 12 + 12 more')",
+  "resolution": "B2 = ranks {0,1,2,3} (low), {28,29,30,31} (median), {56,57,58,59} (high) of seed-0 B32 tokens, ascending, ties to lower id = 12 per layer; superset of the frozen ranks",
+  "data": "the partial 6-expert run was stopped and archived unchanged in runs_theorem1_check/aborted_b2_6experts/; the full grid was rerun from scratch"
+ },
+ {
+  "id": "D2",
+  "issue": "frozen gap_R2 formula 'R_w / (mean(col_err2) * tr(M^T S M)) - 1' is ambiguous for gu (two projections sharing M and S)",
+  "resolution": "mean(col_err2) taken per projection and summed over gate+up, i.e. base = (sum col_err2 / d) * tr(M^T S M); fixed in code before the first recorded run (a GPU smoke test showed the per-column-pooled mean gives a spurious +1.0)"
+ },
+ {
+  "id": "D3",
+  "issue": "Part C data: tune_holdout caps each sequence at 128 routed tokens and stores fp16, which would break the frozen Part C Hessian invariant (identical token counts)",
+  "resolution": "a hook collector (theorem1_check.RoutedCollector) on the same gate_proj / down_proj pre-hooks the Profiler uses, keeping ALL routed tokens in model dtype (bf16) for the 3 selected experts only; validated by the frozen invariant against low_data_diag.hessians. Already stated in protocol.json part_C.data"
+ },
+ {
+  "id": "D4",
+  "issue": "unit-test tolerance u = M Delta <= 1e-6 relative cannot hold for the fp32 production solver: u = W - Q carries fp32 cancellation (~eps |W|/|u|, observed 1.1e-6)",
+  "resolution": "the unmodified gptq.py code is additionally run in fp64 through a dtype proxy (tests/test_theorem1.py::_F64Torch): identity holds to ~1e-15 there; the fp32 run is checked at 1e-5"
+ },
+ {
+  "id": "N1",
+  "kind": "protocol-sanctioned decision (not a deviation)",
+  "decision": "Part C seed 1 added: seed 0 sweep took 0.43 h (6.4 min/layer), well within budget; expert selection unchanged (seed-0 B32 ranks 0/29/59), data = seed 1's 256 nested_order ids"
+ }
+]

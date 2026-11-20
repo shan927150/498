@@ -1,0 +1,13 @@
+{"partb_bitwise": "pass", "layer": 16, "n": 16, "max_rel": 0.0}
+{"ldquant_bitwise": "pass", "layer": 16, "n": 16, "experts": [0, 1, 2]}
+{"checkpoint": true, "layer": 16, "n": 16, "sec": 679.2746961116791, "sec_r4": 234.49533200263977, "sec_quant": 422.36795830726624}
+{"r4_mode": "60", "est_total_sec": 6792.746961116791, "est_r4_sec": 2344.9533200263977, "first_unit_sec": 679.2746961116791}
+{"checkpoint": true, "layer": 16, "n": 32, "sec": 657.6876955032349, "sec_r4": 237.86291575431824, "sec_quant": 419.82438111305237}
+{"checkpoint": true, "layer": 16, "n": 64, "sec": 622.479564666748, "sec_r4": 244.46755957603455, "sec_quant": 378.0115923881531}
+{"checkpoint": true, "layer": 16, "n": 128, "sec": 665.0364165306091, "sec_r4": 255.68562507629395, "sec_quant": 409.35036396980286}
+{"checkpoint": true, "layer": 16, "n": 256, "sec": 692.5006194114685, "sec_r4": 284.8050365447998, "sec_quant": 407.69487619400024}
+{"checkpoint": true, "layer": 23, "n": 16, "sec": 651.7037923336029, "sec_r4": 233.73365998268127, "sec_quant": 417.9693922996521}
+{"checkpoint": true, "layer": 23, "n": 32, "sec": 653.5283591747284, "sec_r4": 236.34547901153564, "sec_quant": 417.18221282958984}
+{"checkpoint": true, "layer": 23, "n": 64, "sec": 612.4681119918823, "sec_r4": 241.95060420036316, "sec_quant": 370.5170352458954}
+{"checkpoint": true, "layer": 23, "n": 128, "sec": 670.4271211624146, "sec_r4": 254.57041454315186, "sec_quant": 415.8559923171997}
+{"checkpoint": true, "layer": 23, "n": 256, "sec": 705.4437761306763, "sec_r4": 283.96127462387085, "sec_quant": 421.4818983078003}

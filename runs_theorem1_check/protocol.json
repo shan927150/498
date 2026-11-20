@@ -1,0 +1,170 @@
+{
+ "name": "theorem1_check",
+ "frozen_utc": "2026-11-19T07:03:37Z",
+ "theory": "Chen & Yeh 2026, 'How Much Should GPTQ Damp?', Theorem 1",
+ "solver": "moe_calib/gptq.py gptq_quantize (FROZEN), 4-bit, g128, act-order, blocksize 128",
+ "model": "Qwen/Qwen1.5-MoE-A2.7B",
+ "d_in": {
+  "gu": 2048,
+  "down": 1408
+ },
+ "split": "tuning split only (rows P..P+tune-1); test / confirmation splits never touched",
+ "sigma": "S per (layer, expert, group) = X^T X / n_tune in fp64, unweighted, X = the expert's tuning activations from prep_tune(tune_holdout(model, L, cache, sp['tune']), L, e) (first 128 routed tokens per sequence, the rows tune_err_groups uses)",
+ "hessian": "H_hat = running sum of low_data_diag.hessians over nested_order(pool, seed) prefixes (exactly damping_threshold.py), fp32 accumulator cast to fp64; dead-column fix and act-order perm replicated from gptq.py (perm taken from info['perm'] whenever the solver was run)",
+ "metrics": {
+  "R_ideal": "tr(M^T S M) / tr(S), computed as sum(M * (S @ M)) in fp64, M = (diag(U)^-1 U)^T, U = upper chol(cholesky_inverse(chol(H_hat + nu*mean(diag) I)))",
+  "R_w": "sum over projections of the group of sum_t col_err2_t * m_t^T S m_t",
+  "e_meas": "sum over projections of the group of sum_r u_r^T S u_r, u = W(dead cols zeroed as in the solver) - Q; e_true (unfixed W) also recorded",
+  "gap_R1": "e_meas / R_w - 1",
+  "gap_R2": "R_w / (mean(col_err2) * tr(M^T S M)) - 1",
+  "clamp_frac": "fraction of weights whose round(w/scale + zero) falls outside [0, 15] on the fitted grid (info scale/zero): clamp_frac_W uses the original W; clamp_frac_work uses the working weights Q + Delta with Delta = M^-1 u",
+  "measured_ratio": "tune_err_groups(W, Q_gptq, T)[g] / tune_err_groups(W, Q_rtn, T)[g] (existing metric)",
+  "cholesky_failure": "cell recorded as failed; no jitter ever added"
+ },
+ "part_B": {
+  "seeds": [
+   0,
+   1
+  ],
+  "layers": [
+   1,
+   8,
+   16,
+   23
+  ],
+  "prefixes": [
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "nu_grid": [
+   0.01,
+   0.03,
+   0.05,
+   0.1,
+   0.2,
+   0.3,
+   0.5,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   5.0
+  ],
+  "B1": {
+   "experts": "all 60 (fallback to 24 if > 6 GPU-hours estimated: B2's 12 + ranks [9, 10, 19, 20, 39, 40, 49, 50, 14, 15, 44, 45])",
+   "groups": [
+    "gu",
+    "down"
+   ],
+   "record": [
+    "R_ideal(nu)",
+    "tokens"
+   ]
+  },
+  "B2": {
+   "experts": "12 per layer: sort experts by seed-0 B32 routed tokens ascending, ties to the lower id, take ranks [0, 1], [29, 30], [58, 59]",
+   "record": [
+    "R_ideal",
+    "R_w",
+    "e_meas",
+    "e_meas RTN",
+    "tune_err_groups GPTQ and RTN",
+    "clamp fractions",
+    "delta_recon_relerr (in-situ u = M Delta check)"
+   ]
+  },
+  "reproducibility": "on the first layer processed, recomputed tune_err_groups for the B2 experts must match runs_diag/damping_threshold_raw.jsonl (per group, nu in its grid) and runs_diag/damping_selection_raw.jsonl ('all', nu in {0.01,0.03,0.05,0.1}) to <= 1e-6 relative; abort otherwise",
+  "output": "runs_theorem1_check/raw_grid.jsonl"
+ },
+ "part_C": {
+  "seed": 0,
+  "seed1": "only if the time estimate allows (decided after seed 0, recorded)",
+  "experts": "per layer the experts at ranks 0, 29, 59 of seed-0 B32 routed tokens (ascending, ties to lower id)",
+  "data": "per-sequence routed activations (all routed tokens, model dtype, selected experts only) over the seed's 256 nested_order calibration ids",
+  "invariant": "H_hat from these activations for the prefix-32 ids equals low_data_diag.hessians up to a scalar (relative Frobenius diff <= 1e-5 after trace normalization), identical token counts; asserted for 3 experts x 2 groups per layer",
+  "subsets": "random subsets of whole sequences drawn without replacement from the 256 ids; for group g and target rho in [0.15, 0.25, 0.35, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.45, 1.6, 2.0, 2.5, 3.5, 5.0], k = clip(round(rho * d_g / mean tokens per sequence), 1, 256); 5 draws per size via random.Random(SWEEP_SALT + seed*1e6 + layer*1e4 + expert*10 + group_index).sample; if k == 256 only one draw (all draws identical); realized n recorded",
+  "nu_fine": [
+   0.001,
+   0.0015317404637020797,
+   0.0023462288481422623,
+   0.003593813663804626,
+   0.005504789807854967,
+   0.008431909292866252,
+   0.01291549665014884,
+   0.019783188827841643,
+   0.030302710828663964,
+   0.046415888336127774,
+   0.07109709432312432,
+   0.10890229622637294,
+   0.1668100537200059,
+   0.2555097090352507,
+   0.3913745601980384,
+   0.5994842503189409,
+   0.9182542835656282,
+   1.4065272421052364,
+   2.154434690031882,
+   3.300034791125282,
+   5.0547968211912355,
+   7.742636826811269,
+   11.859710123376681,
+   18.16599788375325,
+   27.825594022071257,
+   42.62158829015325,
+   65.28521141127847,
+   100.0
+  ],
+  "nu_curve": [
+   0.01,
+   0.1,
+   1.0
+  ],
+  "nu_star": "argmin of R_ideal over nu_fine, refined by the vertex of a parabola in log nu through the 3 points around the argmin, R_ideal evaluated at the refined value; edge argmin flagged, not refined",
+  "nu_GS": "d / (n^(1/3) * min(n, d)^(2/3))",
+  "anchors": {
+   "group": "down",
+   "rho": [
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0,
+    1.1,
+    1.2,
+    1.3
+   ],
+   "nu": [
+    0.01,
+    1.0
+   ],
+   "record": [
+    "e_meas",
+    "e_meas RTN",
+    "tune_err_groups['down'] GPTQ and RTN"
+   ]
+  },
+  "output": "runs_theorem1_check/raw_sweep.jsonl"
+ },
+ "report": {
+  "T1": "per group (gu, down), cell = (seed, layer, n, expert) of B1 with at least one tuning sequence: Spearman over the nu grid between R_ideal(nu) and the measured GPTQ/RTN tune_err_groups ratio; argmin agreement = |index(argmin R_ideal) - index(argmin measured)| <= 1 on the grid. PRIMARY grid = the 10 nu values measured for all 60 experts in runs_diag/damping_threshold_raw.jsonl (0.03 and 0.05 have no per-group measurement there); SECONDARY = full 12-nu grid on B2 cells (measured here). Summaries by group x prefix.",
+  "verdict": {
+   "per_group_pass": "frac argmin agreement >= 0.70 AND median Spearman >= 0.8 (primary T1)",
+   "labels": {
+    "T1-PASS-BOTH": "both pass",
+    "T1-PASS-GU-ONLY": "only gu",
+    "T1-PASS-DOWN-ONLY": "only down",
+    "T1-FAIL": "neither"
+   }
+  },
+  "T2": "B2 medians / IQRs of gap_R1 and gap_R2 by group x nu, and clamp fractions (descriptive)",
+  "T3": "R_ideal at nu=0.01 binned by tokens/d_in with damping_threshold.RATIO_BINS (min 20 points per bin as in the original), side by side with the observed ratios of damping_threshold_report.md section 2; Part C per-expert peak n/d of R_ideal(0.01) (median, IQR) with down anchors overlaid (descriptive)",
+  "T4": "Part C nu* vs n/d with nu_GS and adaptive_damping.md per-budget optima; OLS fit log nu* = a + b log(d/n) separately for n<d and n>d over refined interior nu*, 95% CI of b by bootstrap over experts (2000 resamples, seed 0) (descriptive)"
+ },
+ "constraints": [
+  "fp64 for S, H_hat, M, R",
+  "no edits to moe_calib/gptq.py, configs/frozen_b4.json or existing runs",
+  "no caching of full-layer activations for all experts x 256 sequences"
+ ]
+}

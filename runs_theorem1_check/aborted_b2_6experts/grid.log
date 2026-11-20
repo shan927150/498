@@ -1,0 +1,16 @@
+[t1-grid] seed=0 L=1 n=16 nu=0.01: R_ideal med gu=1.1879 down=2.0330 | B2 down gapR1 med=-0.004 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=0.03: R_ideal med gu=1.0420 down=1.7002 | B2 down gapR1 med=-0.002 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=0.05: R_ideal med gu=0.9811 down=1.5594 | B2 down gapR1 med=-0.001 | b1 1.9s b2 7.1s
+[t1-grid] seed=0 L=1 n=16 nu=0.1: R_ideal med gu=0.8986 down=1.3909 | B2 down gapR1 med=-0.000 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=0.2: R_ideal med gu=0.8297 down=1.2437 | B2 down gapR1 med=-0.002 | b1 2.0s b2 7.1s
+[t1-grid] seed=0 L=1 n=16 nu=0.3: R_ideal med gu=0.7978 down=1.1727 | B2 down gapR1 med=+0.000 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=0.5: R_ideal med gu=0.7642 down=1.0968 | B2 down gapR1 med=-0.000 | b1 1.9s b2 7.1s
+[t1-grid] seed=0 L=1 n=16 nu=1.0: R_ideal med gu=0.7362 down=1.0206 | B2 down gapR1 med=-0.000 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=1.5: R_ideal med gu=0.7298 down=0.9931 | B2 down gapR1 med=-0.000 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=2.0: R_ideal med gu=0.7294 down=0.9783 | B2 down gapR1 med=-0.000 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=16 nu=3.0: R_ideal med gu=0.7341 down=0.9651 | B2 down gapR1 med=-0.001 | b1 1.9s b2 7.1s
+[t1-grid] seed=0 L=1 n=16 nu=5.0: R_ideal med gu=0.7489 down=0.9589 | B2 down gapR1 med=-0.001 | b1 1.9s b2 7.1s
+[t1-grid] seed=0 L=1 n=32 nu=0.01: R_ideal med gu=1.2167 down=2.3632 | B2 down gapR1 med=-0.001 | b1 1.9s b2 7.0s
+[t1-grid] seed=0 L=1 n=32 nu=0.03: R_ideal med gu=1.0050 down=1.8289 | B2 down gapR1 med=-0.001 | b1 1.9s b2 7.2s
+[t1-grid] seed=0 L=1 n=32 nu=0.05: R_ideal med gu=0.9210 down=1.6167 | B2 down gapR1 med=-0.001 | b1 1.9s b2 7.0s
+[t1-grid] seed=0 L=1 n=32 nu=0.1: R_ideal med gu=0.8271 down=1.3669 | B2 down gapR1 med=+0.000 | b1 1.9s b2 7.1s

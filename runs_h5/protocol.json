@@ -1,0 +1,114 @@
+{
+ "name": "h5_rules",
+ "frozen_utc": "2026-11-19T20:11:09Z",
+ "follows": [
+  "update_theorem1_check.md (T1-PASS-BOTH)",
+  "update_damping_grid_extension.md (EXT-INTERIOR-CONFIRMED)",
+  "runs_diag/adaptive_damping.md"
+ ],
+ "solver": "moe_calib/gptq.py gptq_quantize (FROZEN, sha256 prefix 58e40d1c), 4-bit g128 act-order; per-group damping: gate_proj/up_proj with nu_gu on H_gu, down_proj with nu_down on H_down, one gptq_quantize call per projection with its own percdamp (asserted bitwise equal to low_data_diag.quant when nu_gu = nu_down on 3 experts of the first eval unit)",
+ "split": {
+  "fit_primary": {
+   "seed": 0,
+   "layers": [
+    1,
+    8
+   ]
+  },
+  "eval_primary": {
+   "seed": 1,
+   "layers": [
+    16,
+    23
+   ]
+  },
+  "fit_swapped": {
+   "seed": 1,
+   "layers": [
+    16,
+    23
+   ]
+  },
+  "eval_swapped": {
+   "seed": 0,
+   "layers": [
+    1,
+    8
+   ]
+  },
+  "note": "tuning split only; all 60 experts; prefixes 16-256; no rule sees eval-set errors, eval Sigma or eval nu* except the oracle R5; the swapped fold is scored with R_ideal only (no GPTQ, no R4)"
+ },
+ "data": {
+  "e1": "per-cell R_ideal curves on the 42-point grid, R_star and nu_star from runs_grid_ext/raw_e1.jsonl (not recomputed); n_e,g = routed calibration tokens of the expert at that (seed, layer, prefix) (raw_e1 'tokens', identical for gu and down); ntilde = median of n_e over the layer's 60 experts",
+  "measured_fit": "runs_diag/damping_threshold_raw.jsonl (10 nu) + damping_selection_raw.jsonl (0.03, 0.05), 'all' metric"
+ },
+ "rules": {
+  "R0": "nu_gu = nu_down = 1.0",
+  "R1": "per prefix one shared nu: argmin over the 12 Part B nu of the fit-set expert-mean measured 'all' (experts finite at all 12 nu); no refinement",
+  "R1g": "per (prefix, group): parabola-refined argmin (log nu) of the fit-set expert-mean R_ideal curve (report_damping_grid_extension.vertex)",
+  "R2": "nu = c_g (d_g / ntilde)^(2/3)",
+  "R2f": "nu = c_g (d_g / ntilde)^b_g",
+  "R3": "nu = c'_g (d_g / n_e)^(2/3)",
+  "R3f": "nu = c'_g (d_g / n_e)^b'_g",
+  "R4": "per (expert, group, prefix) unit CV: the prefix's nested-order sequences split into 8 contiguous blocks of n/8 sequences; G_f = fp64 Gram of the expert's routed calibration inputs in block f (theorem1_check.RoutedCollector, bf16 rows, all routed tokens, experts collected in chunks of 15); A_-f = (G - G_f) + n lambda I with lambda = nu mean(diag(G/n)) of the FULL prefix, in the act-order permutation (from the solver's fp32 H) and dead-column handling of the full prefix; M_-f via theorem1_check.m_from_A; CV(nu) = (1/n) sum_f tr(M_-f^T G_f M_-f); folds with 0 routed tokens skipped and counted; selection = argmin over logspace(-2, 2, 15) refined by the parabola vertex in log nu (CV re-evaluated, kept only if not above the grid minimum); sum of block tokens asserted equal to the Profiler's token count",
+  "R5": "oracle: per (expert, group) nu_star of raw_e1 (eval-set Sigma, 42-point grid, parabola refined)",
+  "clip": "every rule's nu clipped to [1e-2, 1e2]"
+ },
+ "fitting": {
+  "objective": "R2/R2f/R3/R3f minimize the mean over fit-set cells (seed, layer, prefix, expert) of R_ideal(nu_rule)/R_ideal(nu*) - 1, R_ideal(nu) by PCHIP interpolation of the cell's 42-point curve in log nu, R_ideal(nu*) = raw_e1 R_star; fitted per group",
+  "optimizer": "fixed exponent: grid of 241 log c in [log 1e-3, log 1e3] then bounded Brent refine; free exponent: grid 61 log c x 31 b in [0, 1.5] then Nelder-Mead",
+  "ci": "cluster bootstrap over (layer, expert), 2000 resamples (multiplicity weights), numpy default_rng(0), local refit from the point estimate; R1: bootstrap percentiles of the argmin; R1g: of the vertex"
+ },
+ "r4_cost": "estimate printed after the first (layer, prefix); if the projected R4 time over the 10 eval units exceeds 4 GPU-h, R4 is restricted for the remaining units to 24 experts per layer (ranks [0, 1, 2, 3, 28, 29, 30, 31, 56, 57, 58, 59, 9, 10, 19, 20, 39, 40, 49, 50, 14, 15, 44, 45] of seed-0 B32 tokens) and all rules are also reported on that subset",
+ "evaluation": {
+  "measured": "every eval (layer, prefix, expert): quantize with each rule's (nu_gu, nu_down) - GPTQ run once per distinct nu per group - and record tune_err_groups (all, gu, down) + RTN",
+  "E_rule": "expert-mean measured 'all' over the eval set per prefix (experts finite for every rule)",
+  "gain": "(E_R0 - E_rule) / E_R0 in %, paired cluster bootstrap over (layer, expert), 2000 resamples, default_rng(0) (same resamples for all rules and prefixes)",
+  "capture": "per prefix (E_R0 - E_rule)/(E_R0 - E_R5); overall = sum_prefix (E_R0 - E_rule) / sum_prefix (E_R0 - E_R5); CI from the same bootstrap",
+  "per_group": "same with the 'gu' and 'down' metrics",
+  "r4_minus_r3": "(E_R4 - E_R3)/E_R0 per prefix and overall, paired bootstrap CI",
+  "invariants": [
+   "R0 measured tune_err_groups equals runs_diag/damping_threshold_raw.jsonl at nu=1.0 for every eval expert (<= 1e-6 relative)",
+   "per-group quantizer with nu_gu = nu_down = 1.0 equals low_data_diag.quant bitwise (3 experts, first unit)",
+   "first unit: R_ideal at the 12 Part B nu for all 60 experts x 2 groups equals runs_theorem1_check/raw_grid.jsonl bitwise (refactor check of m_from_A)"
+  ]
+ },
+ "verdict": {
+  "order": [
+   "R2",
+   "R3",
+   "R4"
+  ],
+  "pass_rule": "overall oracle capture (measured 'all') >= 0.80 AND gain vs R0 95% CI lower bound > 0 at both B16 and B32",
+  "labels": {
+   "H5-PASS-R2": "R2 passes",
+   "H5-PASS-R3": "R2 fails, R3 passes",
+   "H5-PASS-R4": "R2 and R3 fail, R4 passes",
+   "H5-FAIL": "none pass"
+  }
+ },
+ "secondary": {
+  "swapped": "fit on seed 1 layers {16, 23}, score on seed 0 layers {1, 8} with interpolated R_ideal: E_rule = mean R_ideal(nu_rule) per (prefix, group); capture as above, per group and pooled (mean over both groups' cells); rules R0, R1g, R2, R2f, R3, R3f, R5. The same R_ideal-scored table is reported for the primary fold (all rules) for comparison",
+  "exponents": "b_g, b'_g 95% CI vs 2/3",
+  "transfer": "c_g, c'_g of both folds with CIs"
+ },
+ "part_K": {
+  "data": "tuning-split activations X = prep_tune(tune_holdout(...))[g] rows (fp16 -> fp64), per (layer, expert, group), layers {1, 8, 16, 23}, all 60 experts; cells with < 64 tuning rows dropped",
+  "kappa_coord": "median over coordinates with E[x_j^2] > 0 of E[x_j^4] / E[x_j^2]^2",
+  "kappa_dir": "mean over 64 fixed random unit directions (torch.Generator seed 20261119, standard normal normalized, one set per d) of E[(x.v)^4] / E[(x.v)^2]^2",
+  "kappa_top": "eigenvalue-weighted mean over the top-16 eigenvectors of Sigma = X^T X / n of E[(x.v)^4] / E[(x.v)^2]^2",
+  "spectrum": "erank(Sigma)/d (exp entropy) and participation ratio/d via damping_threshold.spectrum_stats",
+  "regression": "y = log nu* per raw_e1 cell (all seeds, layers, prefixes, both groups; edge cells and tokens = 0 dropped); OLS; M0: log(d/n_e) + 1[down]; M1: M0 + log kappa (each variant); M2: M0 + log(erank/d); M3: M0 + log kappa_best + log(erank/d); kappa_best = variant with the highest overall R^2 in M1; report the 1[down] coefficient with cluster-bootstrap 95% CI (2000, clusters (layer, expert), default_rng(0)), overall R^2, within-down R^2 and within-gu R^2 (1 - SSE_g / SST_g of the joint fit)",
+  "verdict": {
+   "K-TAILS": "M1 (kappa_best) shrinks |group coef| by >= 50% vs M0 AND raises within-down R^2 by >= 0.10",
+   "K-SPECTRUM": "same two conditions for M2",
+   "K-BOTH": "both",
+   "K-NEITHER": "neither"
+  }
+ },
+ "constraints": [
+  "fp64 Gram / H_hat / Sigma / M / R / CV; Cholesky failure recorded, never jittered",
+  "no edits to moe_calib/gptq.py, configs/frozen_b4.json or existing outputs; writes only runs_h5/",
+  "resumable, checkpoint per (layer, prefix)"
+ ]
+}

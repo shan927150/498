@@ -1,0 +1,17 @@
+[
+ {
+  "id": "none",
+  "statement": "No deviation from runs_grid_ext/protocol.json (sha256 6270e27d...). Everything below is a sanctioned change or an addition that does not affect the verdict."
+ },
+ {
+  "id": "R1",
+  "kind": "refactor sanctioned by task section 0 (numerics unchanged)",
+  "change": "diagnostics/theorem1_check.py: per-layer setup of cmd_grid moved into layer_context(); nested-prefix Hessian accumulation moved into the generator prefix_hessians(); sweep_curve() gained optional nus / curve / gs arguments whose defaults reproduce Part C exactly. cmd_grid / cmd_sweep call the helpers.",
+  "verification": "tests/test_theorem1.py 40/40 pass after the refactor; E1 invariant (R_ideal at the 12 Part B grid points for all 60 experts x 2 groups x 5 prefixes, seed 0 L1) max relative difference 0.0; E2 anchor (nu = 5.0: tune_err_groups, e_meas, R_ideal vs stored Part B, 2016 comparisons over all seeds / layers / prefixes) max relative difference 0.0"
+ },
+ {
+  "id": "A1",
+  "kind": "addition (descriptive)",
+  "what": "E1 invariant vs runs_theorem1_check/raw_grid.jsonl (in the frozen protocol, beyond the task text); Q5 also reports the 1e-2 edge; Q2 also reports Spearman vs e_meas/e_rtn"
+ }
+]
